@@ -15,55 +15,107 @@
   "artillery-team",
   "cadian-recon-squad",
   "catachan-heavy-weapons-squad",
-  "tempestus-aquilons"
+  "tempestus-aquilons",
+  "aegis-defence-line",
+  "armoured-sentinels",
+  "attilan-rough-riders",
+  "baneblade",
+  "banehammer",
+  "banesword",
+  "basilisk",
+  "bullgryn-squad",
+  "cadian-castellan",
+  "cadian-command-squad",
+  "cadian-heavy-weapons-squad",
+  "catachan-command-squad",
+  "catachan-jungle-fighters",
+  "chimera",
+  "commissar",
+  "commissar-yarrick",
+  "death-korps-of-krieg",
+  "death-riders",
+  "deathstrike",
+  "doomhammer",
+  "field-ordnance-battery",
+  "gaunts-ghosts",
+  "hellhammer",
+  "hellhound",
+  "hydra",
+  "kasrkin",
+  "krieg-command-squad",
+  "leman-russ-battle-tank",
+  "leman-russ-commander",
+  "leman-russ-demolisher",
+  "leman-russ-eradicator",
+  "leman-russ-executioner",
+  "leman-russ-exterminator",
+  "leman-russ-punisher",
+  "leman-russ-vanquisher",
+  "lord-solar-leontus",
+  "manticore",
+  "militarum-tempestus-command-squad",
+  "ministorum-priest",
+  "nork-deddog",
+  "ogryn-bodyguard",
+  "ogryn-squad",
+  "primaris-psyker",
+  "ratlings",
+  "rogal-dorn-battle-tank",
+  "rogal-dorn-commander",
+  "scout-sentinels",
+  "shadowsword",
+  "sly-marbo",
+  "stormlord",
+  "stormsword",
+  "taurox",
+  "taurox-prime",
+  "tech-priest-enginseer",
+  "tempestus-scions",
+  "ursula-creed",
+  "valkyrie",
+  "wyvern"
  ],
  "units": {
   "lord-solar-leontus": [
    {
     "models": 1,
-    "points": 130
+    "points": 120
    }
   ],
   "ursula-creed": [
    {
     "models": 1,
-    "points": 65
+    "points": 85
    }
   ],
   "commissar-yarrick": [
    {
     "models": 1,
-    "points": 75
+    "points": 110
    }
   ],
   "cadian-castellan": [
    {
     "models": 1,
-    "points": 45
+    "points": 55
    }
   ],
   "cadian-command-squad": [
    {
     "models": 5,
-    "points": 65
+    "points": 60
    }
   ],
   "catachan-command-squad": [
    {
     "models": 5,
-    "points": 65
+    "points": 60
    }
   ],
   "krieg-command-squad": [
    {
-    "models": 5,
-    "points": 65
-   }
-  ],
-  "tempestus-command-squad": [
-   {
-    "models": 5,
-    "points": 70
+    "models": 6,
+    "points": 60
    }
   ],
   "commissar": [
@@ -75,7 +127,7 @@
   "ministorum-priest": [
    {
     "models": 1,
-    "points": 50
+    "points": 35
    }
   ],
   "primaris-psyker": [
@@ -93,13 +145,13 @@
   "leman-russ-commander": [
    {
     "models": 1,
-    "points": 200
+    "points": 195
    }
   ],
   "rogal-dorn-commander": [
    {
     "models": 1,
-    "points": 255
+    "points": 290
    }
   ],
   "cadian-shock-troops": [
@@ -115,37 +167,37 @@
   "catachan-jungle-fighters": [
    {
     "models": 10,
-    "points": 65
+    "points": 70
    },
    {
     "models": 20,
-    "points": 130
+    "points": 135
    }
   ],
   "death-korps-of-krieg": [
    {
     "models": 10,
-    "points": 65
+    "points": 70
    },
    {
     "models": 20,
-    "points": 130
+    "points": 135
    }
   ],
   "kasrkin": [
    {
     "models": 10,
-    "points": 110
+    "points": 105
    }
   ],
   "tempestus-scions": [
    {
     "models": 5,
-    "points": 50
+    "points": 75
    },
    {
     "models": 10,
-    "points": 100
+    "points": 150
    }
   ],
   "ratlings": [
@@ -155,7 +207,7 @@
    },
    {
     "models": 10,
-    "points": 120
+    "points": 100
    }
   ],
   "ogryn-squad": [
@@ -165,17 +217,17 @@
    },
    {
     "models": 6,
-    "points": 130
+    "points": 120
    }
   ],
   "bullgryn-squad": [
    {
     "models": 3,
-    "points": 75
+    "points": 90
    },
    {
     "models": 6,
-    "points": 150
+    "points": 200
    }
   ],
   "scout-sentinels": [
@@ -185,7 +237,7 @@
    },
    {
     "models": 2,
-    "points": 110
+    "points": 100
    }
   ],
   "armoured-sentinels": [
@@ -195,55 +247,55 @@
    },
    {
     "models": 2,
-    "points": 130
+    "points": 120
    }
   ],
   "leman-russ-battle-tank": [
    {
     "models": 1,
-    "points": 180
+    "points": 160
    }
   ],
   "leman-russ-demolisher": [
    {
     "models": 1,
-    "points": 185
+    "points": 160
    }
   ],
   "leman-russ-vanquisher": [
    {
     "models": 1,
-    "points": 165
+    "points": 130
    }
   ],
   "rogal-dorn-battle-tank": [
    {
     "models": 1,
-    "points": 240
+    "points": 260
    }
   ],
   "hellhound": [
    {
     "models": 1,
-    "points": 125
+    "points": 115
    }
   ],
   "basilisk": [
    {
     "models": 1,
-    "points": 140
+    "points": 115
    }
   ],
   "manticore": [
    {
     "models": 1,
-    "points": 165
+    "points": 150
    }
   ],
   "wyvern": [
    {
     "models": 1,
-    "points": 105
+    "points": 95
    }
   ],
   "hydra": [
@@ -267,105 +319,89 @@
   "valkyrie": [
    {
     "models": 1,
-    "points": 190
+    "points": 170
    }
   ],
   "baneblade": [
    {
     "models": 1,
-    "points": 480
+    "points": 415
    }
   ],
   "shadowsword": [
    {
     "models": 1,
-    "points": 445
+    "points": 375
    }
   ],
   "banehammer": [
    {
     "models": 1,
-    "points": 490
+    "points": 385
    }
   ],
   "banesword": [
    {
     "models": 1,
-    "points": 515
+    "points": 415
    }
   ],
   "doomhammer": [
    {
     "models": 1,
-    "points": 455
+    "points": 380
    }
   ],
   "hellhammer": [
    {
     "models": 1,
-    "points": 510
+    "points": 385
    }
   ],
   "stormlord": [
    {
     "models": 1,
-    "points": 460
+    "points": 395
    }
   ],
   "stormsword": [
    {
     "models": 1,
-    "points": 520
+    "points": 430
    }
   ],
   "gaunts-ghosts": [
    {
     "models": 6,
-    "points": 115
+    "points": 95
    }
   ],
   "nork-deddog": [
    {
     "models": 1,
-    "points": 70
+    "points": 60
    }
   ],
   "sly-marbo": [
    {
     "models": 1,
-    "points": 75
-   }
-  ],
-  "death-rider-squadron": [
-   {
-    "models": 5,
-    "points": 70
-   },
-   {
-    "models": 10,
-    "points": 140
+    "points": 55
    }
   ],
   "attilan-rough-riders": [
    {
     "models": 5,
-    "points": 80
+    "points": 60
    },
    {
     "models": 10,
-    "points": 160
+    "points": 120
    }
   ],
   "field-ordnance-battery": [
    {
     "models": 2,
-    "points": 100
-   }
-  ],
-  "heavy-weapons-squad": [
-   {
-    "models": 3,
-    "points": 60
+    "points": 90
    }
   ],
   "ogryn-bodyguard": [
@@ -377,25 +413,25 @@
   "leman-russ-eradicator": [
    {
     "models": 1,
-    "points": 180
+    "points": 145
    }
   ],
   "leman-russ-executioner": [
    {
     "models": 1,
-    "points": 195
+    "points": 145
    }
   ],
   "leman-russ-exterminator": [
    {
     "models": 1,
-    "points": 200
+    "points": 160
    }
   ],
   "leman-russ-punisher": [
    {
     "models": 1,
-    "points": 180
+    "points": 130
    }
   ],
   "aegis-defence-line": [
@@ -407,13 +443,13 @@
   "deathstrike": [
    {
     "models": 1,
-    "points": 135
+    "points": 125
    }
   ],
   "taurox-prime": [
    {
     "models": 1,
-    "points": 90
+    "points": 75
    }
   ],
   "commissar-graves": [
@@ -489,6 +525,28 @@
     "models": 10,
     "points": 95
    }
+  ],
+  "cadian-heavy-weapons-squad": [
+   {
+    "models": 3,
+    "points": 65
+   }
+  ],
+  "death-riders": [
+   {
+    "models": 5,
+    "points": 60
+   },
+   {
+    "models": 10,
+    "points": 110
+   }
+  ],
+  "militarum-tempestus-command-squad": [
+   {
+    "models": 5,
+    "points": 85
+   }
   ]
  },
  "enhancements": {
@@ -532,21 +590,327 @@
   "priority-drop-beacon": 25
  },
  "unitsExtraCopies": {
-  "centaur-rsv": [
-   {
-    "models": 1,
-    "points": 75
-   }
-  ],
-  "krieg-combat-engineers": [
-   {
-    "models": 5,
-    "points": 75
-   },
-   {
-    "models": 10,
-    "points": 105
-   }
-  ]
+  "centaur-rsv": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 75
+    }
+   ]
+  },
+  "krieg-combat-engineers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 75
+    },
+    {
+     "models": 10,
+     "points": 105
+    }
+   ]
+  },
+  "attilan-rough-riders": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 65
+    },
+    {
+     "models": 10,
+     "points": 125
+    }
+   ]
+  },
+  "baneblade": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 450
+    }
+   ]
+  },
+  "banehammer": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 420
+    }
+   ]
+  },
+  "banesword": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 450
+    }
+   ]
+  },
+  "basilisk": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 145
+    }
+   ]
+  },
+  "bullgryn-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 120
+    },
+    {
+     "models": 6,
+     "points": 230
+    }
+   ]
+  },
+  "chimera": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 85
+    }
+   ]
+  },
+  "deathstrike": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 145
+    }
+   ]
+  },
+  "doomhammer": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 410
+    }
+   ]
+  },
+  "hellhammer": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 415
+    }
+   ]
+  },
+  "hellhound": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 125
+    }
+   ]
+  },
+  "kasrkin": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 10,
+     "points": 120
+    }
+   ]
+  },
+  "leman-russ-battle-tank": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 175
+    }
+   ]
+  },
+  "leman-russ-commander": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 210
+    }
+   ]
+  },
+  "leman-russ-demolisher": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 175
+    }
+   ]
+  },
+  "leman-russ-eradicator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 160
+    }
+   ]
+  },
+  "leman-russ-executioner": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 160
+    }
+   ]
+  },
+  "leman-russ-exterminator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 175
+    }
+   ]
+  },
+  "leman-russ-punisher": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 145
+    }
+   ]
+  },
+  "leman-russ-vanquisher": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 145
+    }
+   ]
+  },
+  "manticore": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 180
+    }
+   ]
+  },
+  "militarum-tempestus-command-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 95
+    }
+   ]
+  },
+  "rogal-dorn-battle-tank": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 275
+    }
+   ]
+  },
+  "rogal-dorn-commander": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 305
+    }
+   ]
+  },
+  "shadowsword": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 405
+    }
+   ]
+  },
+  "stormlord": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 430
+    }
+   ]
+  },
+  "stormsword": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 465
+    }
+   ]
+  },
+  "taurox": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 75
+    }
+   ]
+  },
+  "taurox-prime": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 85
+    }
+   ]
+  },
+  "tempestus-scions": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 160
+    }
+   ]
+  },
+  "valkyrie": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 180
+    }
+   ]
+  },
+  "wyvern": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 125
+    }
+   ]
+  }
  }
 }

@@ -15,7 +15,7 @@
       "sizeIdx": 0,
       "wargear": {},
       "enhancement": null,
-      "warlord": false,
+      "warlord": true,
       "attachedTo": null
     },
     {
@@ -23,13 +23,13 @@
       "unitId": "krieg-command-squad",
       "sizeIdx": 0,
       "wargear": {
-        "special": {
-          "meltagun": 1,
-          "plasma-gun": 0,
-          "flamer": 1
-        }
+        "o1": "",
+        "o2": "",
+        "o3": 0,
+        "o4": "",
+        "o5": ""
       },
-      "enhancement": "flash-grenades",
+      "enhancement": null,
       "warlord": false,
       "attachedTo": null
     },
@@ -38,11 +38,12 @@
       "unitId": "death-korps-of-krieg",
       "sizeIdx": 0,
       "wargear": {
-        "special": {
-          "plasma-gun": 1,
-          "grenade-launcher": 1
-        },
-        "o2": "plasma-gun"
+        "o1": {},
+        "o2": 0,
+        "o3": 0,
+        "o4": {},
+        "o5": {},
+        "o6": {}
       },
       "enhancement": null,
       "warlord": false,
@@ -53,9 +54,11 @@
       "unitId": "leman-russ-commander",
       "sizeIdx": 0,
       "wargear": {
-        "turret": "demolisher-cannon",
-        "hull": "lascannon",
-        "sponsons": "heavy-bolter"
+        "o1": "",
+        "o2": "",
+        "o3": "",
+        "o4": "",
+        "o5": 0
       },
       "enhancement": null,
       "warlord": false,
@@ -66,7 +69,11 @@
       "unitId": "krieg-command-squad",
       "sizeIdx": 0,
       "wargear": {
-        "special": {}
+        "o1": "",
+        "o2": "",
+        "o3": 1,
+        "o4": "",
+        "o5": ""
       },
       "enhancement": null,
       "warlord": false,
@@ -75,5 +82,5 @@
   ],
   "created": 1792949113548,
   "file": "armies/astra-militarum-2000-ohgb2rpw.json",
-  "updated": 1792955153158
+  "updated": 1792967561295
 }

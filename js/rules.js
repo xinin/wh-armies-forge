@@ -10,10 +10,11 @@ export function battleSizeOf(list, edition) {
 // Position of this unit among the copies of the same datasheet in the list (0-based).
 export const copyIndex = (ru, list) => list.units.filter(u => u.unitId === ru.unitId).findIndex(u => u.uid === ru.uid);
 
-// Is this copy paying the 11th-edition "3rd+ unit" cost?
+// Is this copy paying the 11th-edition extra cost ("YOUR 3RD+ UNIT COSTS", sometimes from the 2nd)?
 export function isExtraCopy(ru, data, list) {
-  const size = data.unitsById.get(ru.unitId)?.sizes[ru.sizeIdx];
-  return Boolean(list && size?.extraPoints != null && copyIndex(ru, list) >= 2);
+  const def = data.unitsById.get(ru.unitId);
+  const size = def?.sizes[ru.sizeIdx];
+  return Boolean(list && size?.extraPoints != null && def.extraFrom && copyIndex(ru, list) >= def.extraFrom - 1);
 }
 
 export function unitPoints(ru, data, list = null) {
@@ -30,10 +31,14 @@ export const detachmentPointsUsed = (list, data) =>
   list.detachments.reduce((sum, id) => sum + (data.detachmentsById.get(id)?.cost ?? 0), 0);
 
 // Max count for a 'pool' or 'toggle' option, scaling with model count when `per` is set.
+// How many models can take a pool/toggle option at this unit size (0 when the size doesn't allow it).
 export function optionMax(opt, models) {
-  const max = opt.max ?? 1;
-  return opt.per ? Math.floor(models / opt.per) * max : max;
+  if (opt.minModels && models < opt.minModels) return 0;
+  return opt.maxBySize?.[models] ?? 1;
 }
+
+// Footnote limits such as "you cannot select the same weapon more than once (twice with 20 models)".
+export const optionMaxEach = (opt, models) => opt.maxEachBySize?.[models] ?? Infinity;
 
 function canBeCharacter(def, list, data) {
   if (hasKw(def, 'CHARACTER')) return true;

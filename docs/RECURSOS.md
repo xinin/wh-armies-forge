@@ -55,9 +55,8 @@ Cada datasheet es un PDF de 2 páginas con formato de la **10ª edición (codex 
 | Regla de ejército y destacamentos (resumen) | Wahapedia (facción) | `data/factions/<f>/faction.json` |
 | Texto completo de reglas de destacamento y mejoras | Wahapedia (facción) | `data/factions/<f>/rules.json` |
 | Estratagemas de destacamento | Wahapedia (facción) | `data/factions/<f>/stratagems.json` |
-| Datasheets de Astra Militarum (59) | PDF de Drive (10ª) | `data/factions/astra-militarum/units.json` |
-| Datasheets nuevos de la 11ª (11) | Wahapedia (datasheets) | `units.json`, con `"source": "wahapedia..."` |
-| Puntos | Wahapedia (11ª, verificados) · MFM v1.1 y estimaciones (sin verificar) | `data/factions/<f>/points.json` |
+| Datasheets de todas las facciones (11ª) | Wahapedia (datasheets) | `data/factions/<f>/units.json` |
+| Puntos (y sobrecoste por copias) | Wahapedia (11ª, verificados) | `data/factions/<f>/points.json` |
 | Fotos de unidades | Tienda de Warhammer | `data/factions/<f>/images.json` (URLs) |
 | Iconos (arma a distancia, cuerpo a cuerpo, flecha de perfil, Strategic Ploy, Battle Tactic, emblema AM) | Vectores de los PDF (datasheet e Index) | `js/icons.js` |
 | Emblema de cada facción (opcional) | Vectores del PDF de la facción | `data/factions/<f>/emblem.svg` |
@@ -78,18 +77,22 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 |---|---|---|
 | `bootstrap_faction.py` | Crea la carpeta de una facción nueva: regla de ejército, destacamentos, mejoras y ficheros vacíos. La registra en `index.json` | Wahapedia (facción) |
 | `import_wahapedia_datasheets.py` | Importa datasheets de la 11ª (`--all` para todos los oficiales; Legends y FW van a `excluded`) con sus puntos | Wahapedia (datasheets) |
+| `wargear.py` | Motor de equipo: modelos por tipo y tamaño, equipo por defecto con cantidades y opciones de equipo como selectores | (usado por el importador) |
+| `audit_units.py` | Compara cada unidad importada con su datasheet y avisa de armas, habilidades u opciones mal leídas | Caché de Wahapedia |
+| `translations.py` | Lista los textos de juego sin traducir (`pending`) y guarda las traducciones (`apply`) en los `i18n.es.json` | Datos importados |
+| `wahapedia_fetch.py` | Descarga con caché local (`.cache/wahapedia/`) para los importadores | Wahapedia |
 | `import_wahapedia_rules.py` | Textos completos de reglas y mejoras, estratagemas de destacamento y Core | Wahapedia |
 | `store_images.py` | Abre la tienda en Chrome, recoge los productos y asigna fotos a las unidades | warhammer.com |
 | `download_drive_folder.py` | Descarga una carpeta pública de Drive | Google Drive |
-| `import_datasheets.py` | Importa datasheets desde los PDF (formato 10ª) | PDF de Drive |
+| `import_datasheets.py` | **Obsoleto**: importaba datasheets desde los PDF (formato 10ª). Ya no se usa para los datos; sus utilidades (`role_of`, `slug`) las usan los demás scripts | PDF de Drive |
 | `pdf_vector_icon.py` | Convierte dibujos vectoriales de un PDF en SVG (iconos y emblemas) | PDF de Drive |
 
 `server.py` (en la raíz) es el servidor local: sirve la app, guarda los ejércitos en `armies/*.json` y las URLs de imágenes en `images.json`.
 
 ## Estado y salvedades de los datos
 
-- **Edición**: reglas de reclutamiento, destacamentos, mejoras y estratagemas son de la 11ª. 59 datasheets de Astra Militarum siguen con datos de la 10ª (PDF); las 11 añadidas desde Wahapedia ya son de la 11ª.
-- **Puntos**: solo están verificados los que vienen de Wahapedia (11ª) y los de las mejoras; el resto lleva `*` en la app.
+- **Edición**: todo es de la 11ª, sacado de Wahapedia: reglas de reclutamiento, destacamentos, mejoras, estratagemas y los datasheets de todas las facciones. Los PDF de Drive solo se usan para los iconos, el emblema y las ilustraciones.
+- **Puntos**: los de la 11ª de cada datasheet de Wahapedia, todos verificados. Conviene contrastarlos con el MFM vigente cuando salga uno nuevo.
 - **Onslaught**: sus valores en `11th.json` están sin confirmar.
 - **Excluido**: Forge World, Warhammer Legends y Boarding Actions.
-- **Idioma**: los textos de reglas están en inglés; la interfaz, en español e inglés.
+- **Idioma**: la interfaz y todo el contenido de juego están en español e inglés. Los textos se importan en inglés y la traducción al español es propia, no oficial, con la terminología de GW. Las palabras clave en mayúsculas se dejan en inglés.

@@ -81,10 +81,6 @@
      ]
     }
    ],
-   "loadout": [
-    "mechanicus-pistol",
-    "control-stave"
-   ],
    "abilities": [
     {
      "name": {
@@ -125,8 +121,17 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "control-stave": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "control-stave",
+    "mechanicus-pistol"
    ]
   },
   {
@@ -268,11 +273,6 @@
      ]
     }
    ],
-   "loadout": [
-    "macrostubber",
-    "volkite-blaster",
-    "omnissian-axe"
-   ],
    "abilities": [
     {
      "name": {
@@ -321,38 +321,82 @@
      "skitarii-vanguard"
     ]
    },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "macrostubber": 1,
+      "volkite-blaster": 1,
+      "omnissian-axe": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Macrostubber",
+      "es": "Macrostubber"
+     },
      "type": "swap",
-     "default": "macrostubber",
+     "replaces": [
+      {
+       "item": "macrostubber",
+       "n": 1
+      }
+     ],
      "choices": [
-      "macrostubber",
+      "",
       "phosphor-serpenta"
      ],
-     "label": {
-      "en": "Replace Macrostubber",
-      "es": "Sustituir Macrostubber"
+     "packages": {
+      "phosphor-serpenta": [
+       {
+        "item": "phosphor-serpenta",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "phosphor-serpenta": "Phosphor serpenta",
+      "": "Macrostubber"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Volkite blaster",
+      "es": "Volkite blaster"
+     },
      "type": "swap",
-     "default": "volkite-blaster",
+     "replaces": [
+      {
+       "item": "volkite-blaster",
+       "n": 1
+      }
+     ],
      "choices": [
-      "volkite-blaster",
+      "",
       "eradication-ray"
      ],
-     "label": {
-      "en": "Replace Volkite blaster",
-      "es": "Sustituir Volkite blaster"
+     "packages": {
+      "eradication-ray": [
+       {
+        "item": "eradication-ray",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "eradication-ray": "Eradication ray",
+      "": "Volkite blaster"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "macrostubber",
+    "omnissian-axe",
+    "volkite-blaster"
    ]
   },
   {
@@ -441,10 +485,6 @@
      ]
     }
    ],
-   "loadout": [
-    "magnarail-lance",
-    "omnissian-staff"
-   ],
    "abilities": [
     {
      "name": {
@@ -489,25 +529,50 @@
      "skitarii-vanguard"
     ]
    },
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "magnarail-lance",
-     "choices": [
-      "magnarail-lance",
-      "transonic-cannon"
-     ],
-     "label": {
-      "en": "Replace Magnarail lance",
-      "es": "Sustituir Magnarail lance"
+     "models": 1,
+     "loadout": {
+      "magnarail-lance": 1,
+      "omnissian-staff": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Magnarail lance",
+      "es": "Magnarail lance"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "magnarail-lance",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "transonic-cannon"
+     ],
+     "packages": {
+      "transonic-cannon": [
+       {
+        "item": "transonic-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "transonic-cannon": "Transonic cannon",
+      "": "Magnarail lance"
+     }
     }
+   ],
+   "loadout": [
+    "magnarail-lance",
+    "omnissian-staff"
    ]
   },
   {
@@ -689,10 +754,6 @@
      ]
     }
    ],
-   "loadout": [
-    "galvanic-rifle",
-    "close-combat-weapon"
-   ],
    "abilities": [
     {
      "name": {
@@ -710,6 +771,24 @@
     "Doctrina Imperatives"
    ],
    "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Rangers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Enhanced data-tether"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Omnispex"
+     },
+     "text": {
+      "en": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+     }
+    }
+   ],
    "wargearOptions": [
     {
      "text": "The Skitarii Ranger Alpha can be equipped with 1 Alpha combat weapon.",
@@ -739,6 +818,9 @@
      ]
     }
    ],
+   "wargearNotes": [
+    "* That model’s galvanic rifle cannot be replaced."
+   ],
    "composition": [
     "1 Skitarii Ranger Alpha",
     "9 Skitarii Rangers"
@@ -747,73 +829,203 @@
     "Every model is equipped with: galvanic rifle; close combat weapon."
    ],
    "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "galvanic-rifle": 10,
+      "close-combat-weapon": 10
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
-     "type": "toggle",
-     "gives": "alpha-combat-weapon",
      "label": {
-      "en": "Add Alpha combat weapon",
-      "es": "Añadir Alpha combat weapon"
+      "en": "Skitarii Ranger Alpha: add Alpha combat weapon",
+      "es": "Skitarii Ranger Alpha: añadir Alpha combat weapon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "alpha-combat-weapon",
+     "packages": {
+      "alpha-combat-weapon": [
+       {
+        "item": "alpha-combat-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Skitarii Ranger Alpha",
+     "labels": {
+      "alpha-combat-weapon": "Alpha combat weapon"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Skitarii Ranger Alpha: Galvanic rifle",
+      "es": "Skitarii Ranger Alpha: Galvanic rifle"
+     },
      "type": "swap",
-     "default": "galvanic-rifle",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
      "choices": [
-      "galvanic-rifle",
+      "",
       "mechanicus-pistol"
      ],
-     "label": {
-      "en": "Replace Galvanic rifle",
-      "es": "Sustituir Galvanic rifle"
+     "packages": {
+      "mechanicus-pistol": [
+       {
+        "item": "mechanicus-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger Alpha",
+     "labels": {
+      "mechanicus-pistol": "Mechanicus pistol",
+      "": "Galvanic rifle"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "Skitarii Ranger: Galvanic rifle",
+      "es": "Skitarii Ranger: Galvanic rifle"
+     },
      "type": "swap",
-     "default": "galvanic-rifle",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
      "choices": [
-      "galvanic-rifle",
+      "",
       "arc-rifle"
      ],
-     "label": {
-      "en": "Replace Galvanic rifle",
-      "es": "Sustituir Galvanic rifle"
+     "packages": {
+      "arc-rifle": [
+       {
+        "item": "arc-rifle",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "arc-rifle": "Arc rifle",
+      "": "Galvanic rifle"
      }
     },
     {
      "id": "o4",
+     "label": {
+      "en": "Skitarii Ranger: Galvanic rifle",
+      "es": "Skitarii Ranger: Galvanic rifle"
+     },
      "type": "swap",
-     "default": "galvanic-rifle",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
      "choices": [
-      "galvanic-rifle",
+      "",
       "plasma-caliver"
      ],
-     "label": {
-      "en": "Replace Galvanic rifle",
-      "es": "Sustituir Galvanic rifle"
+     "packages": {
+      "plasma-caliver": [
+       {
+        "item": "plasma-caliver",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "plasma-caliver": "Plasma caliver",
+      "": "Galvanic rifle"
      }
     },
     {
      "id": "o5",
+     "label": {
+      "en": "Skitarii Ranger: Galvanic rifle",
+      "es": "Skitarii Ranger: Galvanic rifle"
+     },
      "type": "swap",
-     "default": "galvanic-rifle",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
      "choices": [
-      "galvanic-rifle",
+      "",
       "transuranic-arquebus"
      ],
+     "packages": {
+      "transuranic-arquebus": [
+       {
+        "item": "transuranic-arquebus",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "transuranic-arquebus": "Transuranic arquebus",
+      "": "Galvanic rifle"
+     }
+    },
+    {
+     "id": "o6",
      "label": {
-      "en": "Replace Galvanic rifle",
-      "es": "Sustituir Galvanic rifle"
+      "en": "Skitarii Ranger: optional",
+      "es": "Skitarii Ranger: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "gear:enhanced-data-tether",
+      "gear:omnispex"
+     ],
+     "packages": {
+      "gear:enhanced-data-tether": [
+       {
+        "item": "gear:enhanced-data-tether",
+        "n": 1
+       }
+      ],
+      "gear:omnispex": [
+       {
+        "item": "gear:omnispex",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "gear:enhanced-data-tether": "Enhanced data tether",
+      "gear:omnispex": "Omnispex",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 10
-    }
+   "loadout": [
+    "close-combat-weapon",
+    "galvanic-rifle"
    ]
   },
   {
@@ -997,10 +1209,6 @@
      ]
     }
    ],
-   "loadout": [
-    "radium-carbine",
-    "close-combat-weapon"
-   ],
    "abilities": [
     {
      "name": {
@@ -1016,6 +1224,24 @@
     "Doctrina Imperatives"
    ],
    "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Vanguard",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Enhanced data-tether"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Omnispex"
+     },
+     "text": {
+      "en": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+     }
+    }
+   ],
    "wargearOptions": [
     {
      "text": "The Skitarii Vanguard Alpha can be equipped with 1 Alpha combat weapon.",
@@ -1045,6 +1271,9 @@
      ]
     }
    ],
+   "wargearNotes": [
+    "* That model’s radium carbine cannot be replaced."
+   ],
    "composition": [
     "1 Skitarii Vanguard Alpha",
     "9 Skitarii Vanguard"
@@ -1053,73 +1282,203 @@
     "Every model is equipped with: radium carbine; close combat weapon."
    ],
    "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "radium-carbine": 10,
+      "close-combat-weapon": 10
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
-     "type": "toggle",
-     "gives": "alpha-combat-weapon",
      "label": {
-      "en": "Add Alpha combat weapon",
-      "es": "Añadir Alpha combat weapon"
+      "en": "Skitarii Vanguard Alpha: add Alpha combat weapon",
+      "es": "Skitarii Vanguard Alpha: añadir Alpha combat weapon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "alpha-combat-weapon",
+     "packages": {
+      "alpha-combat-weapon": [
+       {
+        "item": "alpha-combat-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Skitarii Vanguard Alpha",
+     "labels": {
+      "alpha-combat-weapon": "Alpha combat weapon"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Skitarii Vanguard Alpha: Radium carbine",
+      "es": "Skitarii Vanguard Alpha: Radium carbine"
+     },
      "type": "swap",
-     "default": "radium-carbine",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
      "choices": [
-      "radium-carbine",
+      "",
       "mechanicus-pistol"
      ],
-     "label": {
-      "en": "Replace Radium carbine",
-      "es": "Sustituir Radium carbine"
+     "packages": {
+      "mechanicus-pistol": [
+       {
+        "item": "mechanicus-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard Alpha",
+     "labels": {
+      "mechanicus-pistol": "Mechanicus pistol",
+      "": "Radium carbine"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "Skitarii Vanguard: Radium carbine",
+      "es": "Skitarii Vanguard: Radium carbine"
+     },
      "type": "swap",
-     "default": "radium-carbine",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
      "choices": [
-      "radium-carbine",
+      "",
       "arc-rifle"
      ],
-     "label": {
-      "en": "Replace Radium carbine",
-      "es": "Sustituir Radium carbine"
+     "packages": {
+      "arc-rifle": [
+       {
+        "item": "arc-rifle",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "arc-rifle": "Arc rifle",
+      "": "Radium carbine"
      }
     },
     {
      "id": "o4",
+     "label": {
+      "en": "Skitarii Vanguard: Radium carbine",
+      "es": "Skitarii Vanguard: Radium carbine"
+     },
      "type": "swap",
-     "default": "radium-carbine",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
      "choices": [
-      "radium-carbine",
+      "",
       "plasma-caliver"
      ],
-     "label": {
-      "en": "Replace Radium carbine",
-      "es": "Sustituir Radium carbine"
+     "packages": {
+      "plasma-caliver": [
+       {
+        "item": "plasma-caliver",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "plasma-caliver": "Plasma caliver",
+      "": "Radium carbine"
      }
     },
     {
      "id": "o5",
+     "label": {
+      "en": "Skitarii Vanguard: Radium carbine",
+      "es": "Skitarii Vanguard: Radium carbine"
+     },
      "type": "swap",
-     "default": "radium-carbine",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
      "choices": [
-      "radium-carbine",
+      "",
       "transuranic-arquebus"
      ],
+     "packages": {
+      "transuranic-arquebus": [
+       {
+        "item": "transuranic-arquebus",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "transuranic-arquebus": "Transuranic arquebus",
+      "": "Radium carbine"
+     }
+    },
+    {
+     "id": "o6",
      "label": {
-      "en": "Replace Radium carbine",
-      "es": "Sustituir Radium carbine"
+      "en": "Skitarii Vanguard: optional",
+      "es": "Skitarii Vanguard: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "gear:enhanced-data-tether",
+      "gear:omnispex"
+     ],
+     "packages": {
+      "gear:enhanced-data-tether": [
+       {
+        "item": "gear:enhanced-data-tether",
+        "n": 1
+       }
+      ],
+      "gear:omnispex": [
+       {
+        "item": "gear:omnispex",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "gear:enhanced-data-tether": "Enhanced data tether",
+      "gear:omnispex": "Omnispex",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 10
-    }
+   "loadout": [
+    "close-combat-weapon",
+    "radium-carbine"
    ]
   },
   {
@@ -1224,11 +1583,6 @@
      ]
     }
    ],
-   "loadout": [
-    "armiger-autocannon",
-    "questoris-heavy-stubber",
-    "armoured-feet"
-   ],
    "abilities": [
     {
      "name": {
@@ -1267,25 +1621,52 @@
     "This model is equipped with: 2 Armiger autocannons; Questoris heavy stubber; armoured feet."
    ],
    "role": "vehicle",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "questoris-heavy-stubber",
-     "choices": [
-      "questoris-heavy-stubber",
-      "meltagun"
-     ],
-     "label": {
-      "en": "Replace Questoris heavy stubber",
-      "es": "Sustituir Questoris heavy stubber"
+     "models": 1,
+     "loadout": {
+      "armiger-autocannon": 2,
+      "questoris-heavy-stubber": 1,
+      "armoured-feet": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Questoris heavy stubber",
+      "es": "Questoris heavy stubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "questoris-heavy-stubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "meltagun"
+     ],
+     "packages": {
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "meltagun": "Meltagun",
+      "": "Questoris heavy stubber"
+     }
     }
+   ],
+   "loadout": [
+    "armiger-autocannon",
+    "armoured-feet",
+    "questoris-heavy-stubber"
    ]
   },
   {
@@ -1407,11 +1788,6 @@
      ]
     }
    ],
-   "loadout": [
-    "questoris-heavy-stubber",
-    "thermal-spear",
-    "reaper-chain-cleaver"
-   ],
    "abilities": [
     {
      "name": {
@@ -1450,25 +1826,52 @@
     "This model is equipped with: Questoris heavy stubber; thermal spear; reaper chain-cleaver."
    ],
    "role": "vehicle",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "questoris-heavy-stubber",
-     "choices": [
-      "questoris-heavy-stubber",
-      "meltagun"
-     ],
-     "label": {
-      "en": "Replace Questoris heavy stubber",
-      "es": "Sustituir Questoris heavy stubber"
+     "models": 1,
+     "loadout": {
+      "questoris-heavy-stubber": 1,
+      "thermal-spear": 1,
+      "reaper-chain-cleaver": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Questoris heavy stubber",
+      "es": "Questoris heavy stubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "questoris-heavy-stubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "meltagun"
+     ],
+     "packages": {
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "meltagun": "Meltagun",
+      "": "Questoris heavy stubber"
+     }
     }
+   ],
+   "loadout": [
+    "questoris-heavy-stubber",
+    "reaper-chain-cleaver",
+    "thermal-spear"
    ]
   },
   {
@@ -1597,11 +2000,6 @@
      ]
     }
    ],
-   "loadout": [
-    "las-impulsor",
-    "questoris-multi-laser",
-    "freedoms-hand"
-   ],
    "abilities": [
     {
      "name": {
@@ -1645,8 +2043,19 @@
    "role": "titanic",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "las-impulsor": 1,
+      "questoris-multi-laser": 1,
+      "freedoms-hand": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "freedoms-hand",
+    "las-impulsor",
+    "questoris-multi-laser"
    ]
   },
   {
@@ -1817,14 +2226,6 @@
      ]
     }
    ],
-   "loadout": [
-    "plasma-decimator",
-    "shieldbreaker-missile-launcher",
-    "twin-meltagun",
-    "twin-siegebreaker-cannon",
-    "volcano-lance",
-    "titanic-feet"
-   ],
    "abilities": [
     {
      "name": {
@@ -1874,8 +2275,64 @@
    "role": "titanic",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "plasma-decimator": 1,
+      "shieldbreaker-missile-launcher": 2,
+      "twin-meltagun": 2,
+      "twin-siegebreaker-cannon": 1,
+      "volcano-lance": 1,
+      "titanic-feet": 1
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "2× Shieldbreaker missile launcher + Twin siegebreaker cannon",
+      "es": "2× Shieldbreaker missile launcher + Twin siegebreaker cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "shieldbreaker-missile-launcher",
+       "n": 2
+      },
+      {
+       "item": "twin-siegebreaker-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "shieldbreaker-missile-launcher+2xtwin-siegebreaker-cannon"
+     ],
+     "packages": {
+      "shieldbreaker-missile-launcher+2xtwin-siegebreaker-cannon": [
+       {
+        "item": "shieldbreaker-missile-launcher",
+        "n": 1
+       },
+       {
+        "item": "twin-siegebreaker-cannon",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "shieldbreaker-missile-launcher+2xtwin-siegebreaker-cannon": "Shieldbreaker missile launcher + 2× Twin siegebreaker cannon",
+      "": "2× Shieldbreaker missile launcher + Twin siegebreaker cannon"
+     }
+    }
+   ],
+   "loadout": [
+    "plasma-decimator",
+    "shieldbreaker-missile-launcher",
+    "titanic-feet",
+    "twin-meltagun",
+    "twin-siegebreaker-cannon",
+    "volcano-lance"
    ]
   },
   {
@@ -2106,13 +2563,6 @@
      ]
     }
    ],
-   "loadout": [
-    "avenger-gatling-cannon",
-    "heavy-flamer",
-    "meltagun",
-    "thermal-cannon",
-    "titanic-feet"
-   ],
    "abilities": [
     {
      "name": {
@@ -2174,40 +2624,131 @@
     "This model is equipped with: avenger gatling cannon; heavy flamer; meltagun; thermal cannon; titanic feet."
    ],
    "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "avenger-gatling-cannon": 1,
+      "heavy-flamer": 1,
+      "meltagun": 1,
+      "thermal-cannon": 1,
+      "titanic-feet": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Meltagun",
+      "es": "Meltagun"
+     },
      "type": "swap",
-     "default": "meltagun",
+     "replaces": [
+      {
+       "item": "meltagun",
+       "n": 1
+      }
+     ],
      "choices": [
-      "meltagun",
+      "",
       "questoris-heavy-stubber"
      ],
+     "packages": {
+      "questoris-heavy-stubber": [
+       {
+        "item": "questoris-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "questoris-heavy-stubber": "Questoris heavy stubber",
+      "": "Meltagun"
+     }
+    },
+    {
+     "id": "o2",
      "label": {
-      "en": "Replace Meltagun",
-      "es": "Sustituir Meltagun"
+      "en": "Thermal cannon",
+      "es": "Thermal cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "thermal-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "rapid-fire-battle-cannon+questoris-heavy-stubber"
+     ],
+     "packages": {
+      "rapid-fire-battle-cannon+questoris-heavy-stubber": [
+       {
+        "item": "rapid-fire-battle-cannon",
+        "n": 1
+       },
+       {
+        "item": "questoris-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "rapid-fire-battle-cannon+questoris-heavy-stubber": "Rapid-fire battle cannon + Questoris heavy stubber",
+      "": "Thermal cannon"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
      "type": "swap",
-     "default": "",
+     "replaces": [],
      "choices": [
       "",
       "ironstorm-missile-pod",
       "stormspear-rocket-pod",
       "twin-icarus-autocannon"
      ],
-     "label": {
-      "en": "Optional weapon",
-      "es": "Arma opcional"
+     "packages": {
+      "ironstorm-missile-pod": [
+       {
+        "item": "ironstorm-missile-pod",
+        "n": 1
+       }
+      ],
+      "stormspear-rocket-pod": [
+       {
+        "item": "stormspear-rocket-pod",
+        "n": 1
+       }
+      ],
+      "twin-icarus-autocannon": [
+       {
+        "item": "twin-icarus-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ironstorm-missile-pod": "Ironstorm missile pod",
+      "stormspear-rocket-pod": "Stormspear rocket pod",
+      "twin-icarus-autocannon": "Twin Icarus autocannon",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "avenger-gatling-cannon",
+    "heavy-flamer",
+    "meltagun",
+    "thermal-cannon",
+    "titanic-feet"
    ]
   },
   {
@@ -2358,13 +2899,6 @@
      ]
     }
    ],
-   "loadout": [
-    "conversion-beam-obliterator",
-    "plasma-executor",
-    "twin-incendine-combustor",
-    "phosphor-blaster",
-    "titanic-feet"
-   ],
    "abilities": [
     {
      "name": {
@@ -2408,8 +2942,23 @@
    "role": "titanic",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "conversion-beam-obliterator": 1,
+      "plasma-executor": 1,
+      "twin-incendine-combustor": 1,
+      "phosphor-blaster": 1,
+      "titanic-feet": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "conversion-beam-obliterator",
+    "phosphor-blaster",
+    "plasma-executor",
+    "titanic-feet",
+    "twin-incendine-combustor"
    ]
   },
   {
@@ -2592,12 +3141,6 @@
      ]
     }
    ],
-   "loadout": [
-    "chastiser-gatling-cannon",
-    "frag-bombard",
-    "questoris-heavy-stubber",
-    "titanic-feet"
-   ],
    "abilities": [
     {
      "name": {
@@ -2656,6 +3199,9 @@
      ]
     }
    ],
+   "wargearNotes": [
+    "* A model cannot be equipped with more than one bellatus reaper chainsword or more than one thundershock spear."
+   ],
    "composition": [
     "1 Knight Destrier"
    ],
@@ -2663,40 +3209,100 @@
     "This model is equipped with: 1 chastiser gatling cannon; 1 frag bombard; 1 Questoris heavy stubber; 1 titanic feet."
    ],
    "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "chastiser-gatling-cannon": 1,
+      "frag-bombard": 1,
+      "questoris-heavy-stubber": 1,
+      "titanic-feet": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Chastiser gatling cannon",
+      "es": "Chastiser gatling cannon"
+     },
      "type": "swap",
-     "default": "chastiser-gatling-cannon",
+     "replaces": [
+      {
+       "item": "chastiser-gatling-cannon",
+       "n": 1
+      }
+     ],
      "choices": [
-      "chastiser-gatling-cannon",
+      "",
       "bellatus-reaper-chainsword",
       "thundershock-spear"
      ],
-     "label": {
-      "en": "Replace Chastiser gatling cannon",
-      "es": "Sustituir Chastiser gatling cannon"
+     "packages": {
+      "bellatus-reaper-chainsword": [
+       {
+        "item": "bellatus-reaper-chainsword",
+        "n": 1
+       }
+      ],
+      "thundershock-spear": [
+       {
+        "item": "thundershock-spear",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "bellatus-reaper-chainsword": "Bellatus reaper chainsword",
+      "thundershock-spear": "Thundershock spear",
+      "": "Chastiser gatling cannon"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Frag bombard",
+      "es": "Frag bombard"
+     },
      "type": "swap",
-     "default": "frag-bombard",
+     "replaces": [
+      {
+       "item": "frag-bombard",
+       "n": 1
+      }
+     ],
      "choices": [
-      "frag-bombard",
+      "",
       "bellatus-reaper-chainsword",
       "thundershock-spear"
      ],
-     "label": {
-      "en": "Replace Frag bombard",
-      "es": "Sustituir Frag bombard"
+     "packages": {
+      "bellatus-reaper-chainsword": [
+       {
+        "item": "bellatus-reaper-chainsword",
+        "n": 1
+       }
+      ],
+      "thundershock-spear": [
+       {
+        "item": "thundershock-spear",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "bellatus-reaper-chainsword": "Bellatus reaper chainsword",
+      "thundershock-spear": "Thundershock spear",
+      "": "Frag bombard"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "chastiser-gatling-cannon",
+    "frag-bombard",
+    "questoris-heavy-stubber",
+    "titanic-feet"
    ]
   },
   {
@@ -2915,11 +3521,6 @@
      ]
     }
    ],
-   "loadout": [
-    "meltagun",
-    "thermal-cannon",
-    "reaper-chainsword"
-   ],
    "abilities": [
     {
      "name": {
@@ -2979,53 +3580,123 @@
     "This model is equipped with: meltagun; thermal cannon; reaper chainsword."
    ],
    "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "meltagun": 1,
+      "thermal-cannon": 1,
+      "reaper-chainsword": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Meltagun",
+      "es": "Meltagun"
+     },
      "type": "swap",
-     "default": "meltagun",
+     "replaces": [
+      {
+       "item": "meltagun",
+       "n": 1
+      }
+     ],
      "choices": [
-      "meltagun",
+      "",
       "questoris-heavy-stubber"
      ],
-     "label": {
-      "en": "Replace Meltagun",
-      "es": "Sustituir Meltagun"
+     "packages": {
+      "questoris-heavy-stubber": [
+       {
+        "item": "questoris-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "questoris-heavy-stubber": "Questoris heavy stubber",
+      "": "Meltagun"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Reaper chainsword",
+      "es": "Reaper chainsword"
+     },
      "type": "swap",
-     "default": "reaper-chainsword",
+     "replaces": [
+      {
+       "item": "reaper-chainsword",
+       "n": 1
+      }
+     ],
      "choices": [
-      "reaper-chainsword",
+      "",
       "thunderstrike-gauntlet"
      ],
-     "label": {
-      "en": "Replace Reaper chainsword",
-      "es": "Sustituir Reaper chainsword"
+     "packages": {
+      "thunderstrike-gauntlet": [
+       {
+        "item": "thunderstrike-gauntlet",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "thunderstrike-gauntlet": "Thunderstrike gauntlet",
+      "": "Reaper chainsword"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
      "type": "swap",
-     "default": "",
+     "replaces": [],
      "choices": [
       "",
       "ironstorm-missile-pod",
       "stormspear-rocket-pod",
       "twin-icarus-autocannon"
      ],
-     "label": {
-      "en": "Optional weapon",
-      "es": "Arma opcional"
+     "packages": {
+      "ironstorm-missile-pod": [
+       {
+        "item": "ironstorm-missile-pod",
+        "n": 1
+       }
+      ],
+      "stormspear-rocket-pod": [
+       {
+        "item": "stormspear-rocket-pod",
+        "n": 1
+       }
+      ],
+      "twin-icarus-autocannon": [
+       {
+        "item": "twin-icarus-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ironstorm-missile-pod": "Ironstorm missile pod",
+      "stormspear-rocket-pod": "Stormspear rocket pod",
+      "twin-icarus-autocannon": "Twin Icarus autocannon",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "meltagun",
+    "reaper-chainsword",
+    "thermal-cannon"
    ]
   },
   {
@@ -3231,11 +3902,6 @@
      ]
     }
    ],
-   "loadout": [
-    "meltagun",
-    "thunderstrike-gauntlet",
-    "reaper-chainsword"
-   ],
    "abilities": [
     {
      "name": {
@@ -3291,40 +3957,93 @@
     "This model is equipped with: meltagun; thunderstrike gauntlet; reaper chainsword."
    ],
    "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "meltagun": 1,
+      "thunderstrike-gauntlet": 1,
+      "reaper-chainsword": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Meltagun",
+      "es": "Meltagun"
+     },
      "type": "swap",
-     "default": "meltagun",
+     "replaces": [
+      {
+       "item": "meltagun",
+       "n": 1
+      }
+     ],
      "choices": [
-      "meltagun",
+      "",
       "questoris-heavy-stubber"
      ],
-     "label": {
-      "en": "Replace Meltagun",
-      "es": "Sustituir Meltagun"
+     "packages": {
+      "questoris-heavy-stubber": [
+       {
+        "item": "questoris-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "questoris-heavy-stubber": "Questoris heavy stubber",
+      "": "Meltagun"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
      "type": "swap",
-     "default": "",
+     "replaces": [],
      "choices": [
       "",
       "ironstorm-missile-pod",
       "stormspear-rocket-pod",
       "twin-icarus-autocannon"
      ],
-     "label": {
-      "en": "Optional weapon",
-      "es": "Arma opcional"
+     "packages": {
+      "ironstorm-missile-pod": [
+       {
+        "item": "ironstorm-missile-pod",
+        "n": 1
+       }
+      ],
+      "stormspear-rocket-pod": [
+       {
+        "item": "stormspear-rocket-pod",
+        "n": 1
+       }
+      ],
+      "twin-icarus-autocannon": [
+       {
+        "item": "twin-icarus-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ironstorm-missile-pod": "Ironstorm missile pod",
+      "stormspear-rocket-pod": "Stormspear rocket pod",
+      "twin-icarus-autocannon": "Twin Icarus autocannon",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "meltagun",
+    "reaper-chainsword",
+    "thunderstrike-gauntlet"
    ]
   },
   {
@@ -3543,11 +4262,6 @@
      ]
     }
    ],
-   "loadout": [
-    "meltagun",
-    "questoris-heavy-stubber",
-    "reaper-chainsword"
-   ],
    "abilities": [
     {
      "name": {
@@ -3607,53 +4321,125 @@
     "This model is equipped with: meltagun; Questoris heavy stubber; rapid-fire battlecannon; reaper chainsword."
    ],
    "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "meltagun": 1,
+      "questoris-heavy-stubber": 1,
+      "rapid-fire-battle-cannon": 1,
+      "reaper-chainsword": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Meltagun",
+      "es": "Meltagun"
+     },
      "type": "swap",
-     "default": "meltagun",
+     "replaces": [
+      {
+       "item": "meltagun",
+       "n": 1
+      }
+     ],
      "choices": [
-      "meltagun",
+      "",
       "questoris-heavy-stubber"
      ],
-     "label": {
-      "en": "Replace Meltagun",
-      "es": "Sustituir Meltagun"
+     "packages": {
+      "questoris-heavy-stubber": [
+       {
+        "item": "questoris-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "questoris-heavy-stubber": "Questoris heavy stubber",
+      "": "Meltagun"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Reaper chainsword",
+      "es": "Reaper chainsword"
+     },
      "type": "swap",
-     "default": "reaper-chainsword",
+     "replaces": [
+      {
+       "item": "reaper-chainsword",
+       "n": 1
+      }
+     ],
      "choices": [
-      "reaper-chainsword",
+      "",
       "thunderstrike-gauntlet"
      ],
-     "label": {
-      "en": "Replace Reaper chainsword",
-      "es": "Sustituir Reaper chainsword"
+     "packages": {
+      "thunderstrike-gauntlet": [
+       {
+        "item": "thunderstrike-gauntlet",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "thunderstrike-gauntlet": "Thunderstrike gauntlet",
+      "": "Reaper chainsword"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
      "type": "swap",
-     "default": "",
+     "replaces": [],
      "choices": [
       "",
       "ironstorm-missile-pod",
       "stormspear-rocket-pod",
       "twin-icarus-autocannon"
      ],
-     "label": {
-      "en": "Optional weapon",
-      "es": "Arma opcional"
+     "packages": {
+      "ironstorm-missile-pod": [
+       {
+        "item": "ironstorm-missile-pod",
+        "n": 1
+       }
+      ],
+      "stormspear-rocket-pod": [
+       {
+        "item": "stormspear-rocket-pod",
+        "n": 1
+       }
+      ],
+      "twin-icarus-autocannon": [
+       {
+        "item": "twin-icarus-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ironstorm-missile-pod": "Ironstorm missile pod",
+      "stormspear-rocket-pod": "Stormspear rocket pod",
+      "twin-icarus-autocannon": "Twin Icarus autocannon",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "meltagun",
+    "questoris-heavy-stubber",
+    "rapid-fire-battle-cannon",
+    "reaper-chainsword"
    ]
   },
   {
@@ -3906,11 +4692,6 @@
      ]
     }
    ],
-   "loadout": [
-    "las-impulsor",
-    "questoris-multi-laser",
-    "reaper-chainsword"
-   ],
    "abilities": [
     {
      "name": {
@@ -3973,54 +4754,131 @@
     "This model is equipped with: las-impulsor; Questoris multi-laser; reaper chainsword."
    ],
    "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "las-impulsor": 1,
+      "questoris-multi-laser": 1,
+      "reaper-chainsword": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Questoris multi-laser",
+      "es": "Questoris multi-laser"
+     },
      "type": "swap",
-     "default": "questoris-multi-laser",
+     "replaces": [
+      {
+       "item": "questoris-multi-laser",
+       "n": 1
+      }
+     ],
      "choices": [
-      "questoris-multi-laser",
+      "",
       "meltagun",
       "questoris-heavy-stubber"
      ],
-     "label": {
-      "en": "Replace Questoris multi-laser",
-      "es": "Sustituir Questoris multi-laser"
+     "packages": {
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "questoris-heavy-stubber": [
+       {
+        "item": "questoris-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "meltagun": "Meltagun",
+      "questoris-heavy-stubber": "Questoris heavy stubber",
+      "": "Questoris multi-laser"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Reaper chainsword",
+      "es": "Reaper chainsword"
+     },
      "type": "swap",
-     "default": "reaper-chainsword",
+     "replaces": [
+      {
+       "item": "reaper-chainsword",
+       "n": 1
+      }
+     ],
      "choices": [
-      "reaper-chainsword",
+      "",
       "thunderstrike-gauntlet"
      ],
-     "label": {
-      "en": "Replace Reaper chainsword",
-      "es": "Sustituir Reaper chainsword"
+     "packages": {
+      "thunderstrike-gauntlet": [
+       {
+        "item": "thunderstrike-gauntlet",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "thunderstrike-gauntlet": "Thunderstrike gauntlet",
+      "": "Reaper chainsword"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
      "type": "swap",
-     "default": "",
+     "replaces": [],
      "choices": [
       "",
       "ironstorm-missile-pod",
       "stormspear-rocket-pod",
       "twin-icarus-autocannon"
      ],
-     "label": {
-      "en": "Optional weapon",
-      "es": "Arma opcional"
+     "packages": {
+      "ironstorm-missile-pod": [
+       {
+        "item": "ironstorm-missile-pod",
+        "n": 1
+       }
+      ],
+      "stormspear-rocket-pod": [
+       {
+        "item": "stormspear-rocket-pod",
+        "n": 1
+       }
+      ],
+      "twin-icarus-autocannon": [
+       {
+        "item": "twin-icarus-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ironstorm-missile-pod": "Ironstorm missile pod",
+      "stormspear-rocket-pod": "Stormspear rocket pod",
+      "twin-icarus-autocannon": "Twin Icarus autocannon",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "las-impulsor",
+    "questoris-multi-laser",
+    "reaper-chainsword"
    ]
   },
   {
@@ -4175,14 +5033,6 @@
      ]
     }
    ],
-   "loadout": [
-    "conflagration-cannon",
-    "shieldbreaker-missile-launcher",
-    "thundercoil-harpoon",
-    "twin-meltagun",
-    "twin-siegebreaker-cannon",
-    "titanic-feet"
-   ],
    "abilities": [
     {
      "name": {
@@ -4232,8 +5082,64 @@
    "role": "titanic",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "conflagration-cannon": 1,
+      "shieldbreaker-missile-launcher": 2,
+      "thundercoil-harpoon": 1,
+      "twin-meltagun": 2,
+      "twin-siegebreaker-cannon": 1,
+      "titanic-feet": 1
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "2× Shieldbreaker missile launcher + Twin siegebreaker cannon",
+      "es": "2× Shieldbreaker missile launcher + Twin siegebreaker cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "shieldbreaker-missile-launcher",
+       "n": 2
+      },
+      {
+       "item": "twin-siegebreaker-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "shieldbreaker-missile-launcher+2xtwin-siegebreaker-cannon"
+     ],
+     "packages": {
+      "shieldbreaker-missile-launcher+2xtwin-siegebreaker-cannon": [
+       {
+        "item": "shieldbreaker-missile-launcher",
+        "n": 1
+       },
+       {
+        "item": "twin-siegebreaker-cannon",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "shieldbreaker-missile-launcher+2xtwin-siegebreaker-cannon": "Shieldbreaker missile launcher + 2× Twin siegebreaker cannon",
+      "": "2× Shieldbreaker missile launcher + Twin siegebreaker cannon"
+     }
+    }
+   ],
+   "loadout": [
+    "conflagration-cannon",
+    "shieldbreaker-missile-launcher",
+    "thundercoil-harpoon",
+    "titanic-feet",
+    "twin-meltagun",
+    "twin-siegebreaker-cannon"
    ]
   },
   {
@@ -4470,12 +5376,6 @@
      ]
     }
    ],
-   "loadout": [
-    "avenger-gatling-cannon",
-    "heavy-flamer",
-    "meltagun",
-    "reaper-chainsword"
-   ],
    "abilities": [
     {
      "name": {
@@ -4535,53 +5435,125 @@
     "This model is equipped with: avenger gatling cannon; heavy flamer; meltagun; reaper chainsword."
    ],
    "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "avenger-gatling-cannon": 1,
+      "heavy-flamer": 1,
+      "meltagun": 1,
+      "reaper-chainsword": 1
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "Meltagun",
+      "es": "Meltagun"
+     },
      "type": "swap",
-     "default": "meltagun",
+     "replaces": [
+      {
+       "item": "meltagun",
+       "n": 1
+      }
+     ],
      "choices": [
-      "meltagun",
+      "",
       "questoris-heavy-stubber"
      ],
-     "label": {
-      "en": "Replace Meltagun",
-      "es": "Sustituir Meltagun"
+     "packages": {
+      "questoris-heavy-stubber": [
+       {
+        "item": "questoris-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "questoris-heavy-stubber": "Questoris heavy stubber",
+      "": "Meltagun"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "Reaper chainsword",
+      "es": "Reaper chainsword"
+     },
      "type": "swap",
-     "default": "reaper-chainsword",
+     "replaces": [
+      {
+       "item": "reaper-chainsword",
+       "n": 1
+      }
+     ],
      "choices": [
-      "reaper-chainsword",
+      "",
       "thunderstrike-gauntlet"
      ],
-     "label": {
-      "en": "Replace Reaper chainsword",
-      "es": "Sustituir Reaper chainsword"
+     "packages": {
+      "thunderstrike-gauntlet": [
+       {
+        "item": "thunderstrike-gauntlet",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "thunderstrike-gauntlet": "Thunderstrike gauntlet",
+      "": "Reaper chainsword"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
      "type": "swap",
-     "default": "",
+     "replaces": [],
      "choices": [
       "",
       "ironstorm-missile-pod",
       "stormspear-rocket-pod",
       "twin-icarus-autocannon"
      ],
-     "label": {
-      "en": "Optional weapon",
-      "es": "Arma opcional"
+     "packages": {
+      "ironstorm-missile-pod": [
+       {
+        "item": "ironstorm-missile-pod",
+        "n": 1
+       }
+      ],
+      "stormspear-rocket-pod": [
+       {
+        "item": "stormspear-rocket-pod",
+        "n": 1
+       }
+      ],
+      "twin-icarus-autocannon": [
+       {
+        "item": "twin-icarus-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ironstorm-missile-pod": "Ironstorm missile pod",
+      "stormspear-rocket-pod": "Stormspear rocket pod",
+      "twin-icarus-autocannon": "Twin Icarus autocannon",
+      "": "—"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    }
+   "loadout": [
+    "avenger-gatling-cannon",
+    "heavy-flamer",
+    "meltagun",
+    "reaper-chainsword"
    ]
   }
  ]

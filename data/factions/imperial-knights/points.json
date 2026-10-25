@@ -162,65 +162,95 @@
   "ancestral-overbleed": 10
  },
  "unitsExtraCopies": {
-  "knight-castellan": [
-   {
-    "models": 1,
-    "points": 450
-   }
-  ],
-  "knight-crusader": [
-   {
-    "models": 1,
-    "points": 415
-   }
-  ],
-  "knight-defender": [
-   {
-    "models": 1,
-    "points": 405
-   }
-  ],
-  "knight-destrier": [
-   {
-    "models": 1,
-    "points": 280
-   }
-  ],
-  "knight-errant": [
-   {
-    "models": 1,
-    "points": 370
-   }
-  ],
-  "knight-gallant": [
-   {
-    "models": 1,
-    "points": 370
-   }
-  ],
-  "knight-paladin": [
-   {
-    "models": 1,
-    "points": 390
-   }
-  ],
-  "knight-preceptor": [
-   {
-    "models": 1,
-    "points": 380
-   }
-  ],
-  "knight-valiant": [
-   {
-    "models": 1,
-    "points": 405
-   }
-  ],
-  "knight-warden": [
-   {
-    "models": 1,
-    "points": 380
-   }
-  ]
+  "knight-castellan": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 450
+    }
+   ]
+  },
+  "knight-crusader": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 415
+    }
+   ]
+  },
+  "knight-defender": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 405
+    }
+   ]
+  },
+  "knight-destrier": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 280
+    }
+   ]
+  },
+  "knight-errant": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 370
+    }
+   ]
+  },
+  "knight-gallant": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 370
+    }
+   ]
+  },
+  "knight-paladin": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 390
+    }
+   ]
+  },
+  "knight-preceptor": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 380
+    }
+   ]
+  },
+  "knight-valiant": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 405
+    }
+   ]
+  },
+  "knight-warden": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 380
+    }
+   ]
+  }
  }
 }

@@ -23,6 +23,7 @@ Es una web estática, sin dependencias ni paso de build.
 - Validación en vivo: límite de puntos, DP, límite de unidades (×2 para Battleline y Dedicated Transport), Héroes Épicos, número de mejoras, mejoras repetidas, una mejora por unidad combinada, líderes válidos y Señor de la Guerra.
 - Home con tus ejércitos guardados (puntos, validez, destacamentos y miniaturas) y un formulario para crear listas nuevas.
 - **Vista de ejército** (`#/list/<id>/view`): todas las unidades con su equipo, atributos, mejoras y habilidades; los destacamentos con su regla, mejoras (y quién las lleva) y estratagemas; la regla de ejército y las estratagemas generales. Se puede imprimir.
+- **Español e inglés**: el botón ES/EN cambia la interfaz y todo el contenido de juego (datasheets, armas, habilidades, equipo, reglas, mejoras y estratagemas). Las palabras clave en mayúsculas se quedan en inglés.
 - Cada cambio se guarda automáticamente en `armies/*.json`. Desde la home puedes duplicar, exportar, importar o borrar listas, y desde el editor copiar la lista como texto.
 
 ## Aspecto oficial
@@ -43,6 +44,8 @@ data/
     units.json                       datasheets (perfiles, palabras clave, equipo, líderes)
     weapons.json                     perfiles de armas
     points.json                      ← PUNTOS: lo único que cambia con cada MFM
+    i18n.es.json                     traducción al español de los textos de la facción
+  editions/11th.i18n.es.json         estratagemas Core, textos compartidos y glosario de reglas en español
 i18n/es.json, i18n/en.json           textos de la interfaz
 js/                                  código de la app (no contiene datos de juego)
 ```
@@ -54,27 +57,23 @@ Cuando hayas comprobado una unidad, añade su id a `verified` y desaparecerá el
 
 ### Añadir una unidad
 
-1. Añade el datasheet en `units.json`. Los textos van como `{ "en": "...", "es": "..." }`.
-2. Añade sus puntos en `points.json` → `units.<id>`.
-3. Si usa armas nuevas, añádelas a `weapons.json`.
-
-Campos útiles:
-- `leader.canLead`: ids de las unidades que puede liderar.
-- `bodyguard`: `{ "maxLeaders": 2, "maxWithKeyword": { "COMMAND SQUAD": 1 } }`.
-- `wargear`: opciones de tipo `swap` (sustituir un arma), `pool` (hasta `max` armas cada `per` modelos) y `toggle`.
-- Imagen: la URL de la foto va en `images.json` (no en `units.json`). Sin imagen se muestra el emblema de la facción.
-
-### Importar datasheets desde PDF
-
-`tools/import_datasheets.py` lee los datasheets en PDF (uno por unidad, formato de 10ª) y regenera `units.json`. Saca perfiles, armas, habilidades, opciones de equipo (las interactivas se generan solas), composición, líderes y transporte. No extrae fotos: las imágenes van siempre por URL.
+Las unidades se importan de Wahapedia, no se escriben a mano:
 
 ```sh
-/usr/bin/python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
-.venv/bin/python tools/import_datasheets.py <carpeta-pdfs> astra-militarum \
-  --points PointsV1.1.pdf --skip "Infantry Squad,Platoon Command Squad"
+.venv/bin/python tools/import_wahapedia_datasheets.py astra-militarum Lord-Marshal-Dreir
+.venv/bin/python tools/audit_units.py astra-militarum
 ```
 
-El importador conserva lo editado a mano: nombres en español, `bodyguard` y `orders`. Las unidades sin PDF no se tocan. Con `--points`, las unidades nuevas sin entrada en `points.json` toman los puntos de ese MFM.
+Campos de cada unidad en `units.json` (los genera el importador):
+- `weapons`: armas del datasheet con sus perfiles; `wargearAbilities`: habilidades ligadas a equipo.
+- `sizes[].loadout`: equipo por defecto con cantidades para cada tamaño (`{"lascannon": 3, "gear:vox-caster": 1}`).
+- `wargear`: opciones de equipo (`swap`, `pool`, `toggle`) con lo que sustituyen (`replaces`), lo que da cada elección (`packages`) y su máximo por tamaño (`maxBySize`). Descrito en `tools/wargear.py`.
+- `leader.canLead`: ids de las unidades que puede liderar; `bodyguard`: límite de líderes (`{ "maxLeaders": 2, "maxWithKeyword": { "COMMAND SQUAD": 1 } }`).
+- Imagen: la URL de la foto va en `images.json`, no en `units.json`. Sin imagen se muestra el emblema de la facción.
+
+### Importar datasheets desde PDF (obsoleto)
+
+`tools/import_datasheets.py` importaba los datasheets en PDF de la 10ª. Ya no se usa: todos los datasheets salen de Wahapedia (11ª). Se mantiene porque otros scripts usan sus utilidades.
 
 ### Datasheets de la 11ª desde Wahapedia
 
@@ -111,12 +110,12 @@ Sigue [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md): crear la facción desde Wa
 
 ## Estado de los datos
 
-- **Facciones**: Astra Militarum (completa) y Adeptus Custodes (27 datasheets, reglas, estratagemas, emblema y fotos de la tienda, de la 11ª) y Tiránidos (50 datasheets, 10 destacamentos, emblema y 47 fotos). El objetivo es cargar todas las facciones siguiendo [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md).
+- **Facciones**: Astra Militarum (completa) y Adeptus Custodes (27 datasheets, reglas, estratagemas, emblema y fotos de la tienda, de la 11ª) Tiránidos (50 datasheets, 10 destacamentos, emblema y 47 fotos) y Caballeros Imperiales (18 datasheets, 8 destacamentos, emblema y 17 fotos). El objetivo es cargar todas las facciones siguiendo [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md).
 
-- Datasheets: 70 unidades oficiales. 59 vienen de los PDF de la carpeta compartida (formato de la 10ª, codex 2023) y 11 de Wahapedia (11ª): Commissar Graves (vehículo y a pie), Lord Marshal Dreir, Centaur RSV, Hippogriff AFV, Krieg Combat Engineers, Krieg Heavy Weapons Squad, Artillery Team, Cadian Recon Squad, Catachan Heavy Weapons Squad y Tempestus Aquilons. Los textos de reglas están en inglés. Las de Forge World y Warhammer Legends están excluidas (lista `excluded` en `units.json`) y el importador no las vuelve a meter.
+- Datasheets: 165 unidades oficiales de la 11ª sacadas de Wahapedia (70 de Astra Militarum, 27 de Custodes, 50 de Tiránidos y 18 de Caballeros Imperiales), auditadas con `tools/audit_units.py` (0 errores). Todos los textos de juego están en inglés y en español (traducción propia, no oficial; ver `tools/translations.py`). Las de Forge World y Warhammer Legends están excluidas (lista `excluded` en `units.json`) y el importador no las vuelve a meter.
 - Imágenes: fotos de producto de la tienda de warhammer.com (URLs en `images.json`), sin ficheros locales.
 - Reglas de reclutamiento, destacamentos y mejoras: 11ª edición (Wahapedia, pack de facción 11 / 2.8.1, octubre 2026).
-- Puntos de unidades: solo **Cadian Shock Troops** está verificado con la 11ª. El resto son estimaciones (las unidades nuevas toman el MFM 1.1 de 2023) y hay que contrastarlas con el MFM actual.
+- Puntos de unidades: los de la 11ª de cada datasheet de Wahapedia, todos verificados (sin `*`), incluido el sobrecoste por copias.
 - Los valores de Onslaught en `11th.json` no están confirmados.
 
 Herramienta no oficial. Warhammer 40,000 es marca de Games Workshop.

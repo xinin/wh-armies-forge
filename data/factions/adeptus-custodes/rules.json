@@ -19,7 +19,7 @@
     },
     "emperors-light": {
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model has the following weapon:\nMELEE WEAPONS\nRANGE\nA\nWS\nS\nAP\nD\nEmperor's Light EXTRA ATTACKS\nEmperor's Light EXTRA ATTACKSMelee\n3\n2+\n5\n-2\n2"
+      "en": "ADEPTUS CUSTODES model only. This model has the following weapon:\nMELEE WEAPONS\nRANGE\nA\nWS\nS\nAP\nD\nEmperor's Light EXTRA ATTACKS\nEmperor's Light EXTRA ATTACKS Melee\n3\n2+\n5\n-2\n2"
      },
      "points": 15
     },
@@ -31,7 +31,7 @@
     },
     "eagles-eye": {
      "text": {
-      "en": "ADEPTUS CUSTODES model only.\nThis model has +1 W.\n(Once per battle, per army) When attacks are allocated to this model, you can use this ability. If you do, this model has 3+ InSv.\n<h2"
+      "en": "ADEPTUS CUSTODES model only.\nThis model has +1 W.\n(Once per battle, per army) When attacks are allocated to this model, you can use this ability. If you do, this model has 3+ InSv."
      },
      "points": 30
     }
@@ -55,7 +55,7 @@
     },
     "pareldors-caducatrix": {
      "text": {
-      "en": "ADEPTUS CUSTODES model only. (Once per battle, per army) At the start of any phase, this model heals D3+3 wounds.\n<h2"
+      "en": "ADEPTUS CUSTODES model only. (Once per battle, per army) At the start of any phase, this model heals D3+3 wounds."
      },
      "points": 30
     }
@@ -79,7 +79,7 @@
     },
     "auric-exemplar": {
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model’s melee attacks have [Cleave 1].\n<h2"
+      "en": "ADEPTUS CUSTODES model only. This model’s melee attacks have [Cleave 1]."
      },
      "points": 15
     }
@@ -103,7 +103,7 @@
     },
     "radiant-mantle": {
      "text": {
-      "en": "ADEPTUS CUSTODES INFANTRY model only. Attacks that target this unit have -1 to hit rolls.\n<h2"
+      "en": "ADEPTUS CUSTODES INFANTRY model only. Attacks that target this unit have -1 to hit rolls."
      },
      "points": 40
     }
@@ -127,7 +127,7 @@
     },
     "auriferous-orb": {
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model has the following weapon:\nRANGED WEAPONS\nRANGE\nA\nBS\nS\nAP\nD\nAuriferous Orb ANTI-non-MONSTER/VEHICLE 2+ BLINDING LIGHT DEVASTATING WOUNDS\nAuriferous Orb ANTI-non-MONSTER/VEHICLE 2+ BLINDING LIGHT DEVASTATING WOUNDS12\"\n3\n2+\n1\n0\n1\n[BLINDING LIGHT]: In your Shooting phase, when this unit has shot, select one enemy unit hit by this unit’s Auriferous Orb weapon. That enemy unit’s attacks have -1 to hit rolls until the start of your next turn.\n<h2"
+      "en": "ADEPTUS CUSTODES model only. This model has the following weapon:\nRANGED WEAPONS\nRANGE\nA\nBS\nS\nAP\nD\nAuriferous Orb ANTI-non-MONSTER/VEHICLE 2+ BLINDING LIGHT DEVASTATING WOUNDS\nAuriferous Orb ANTI-non-MONSTER/VEHICLE 2+ BLINDING LIGHT DEVASTATING WOUNDS 12\"\n3\n2+\n1\n0\n1\n[BLINDING LIGHT]: In your Shooting phase, when this unit has shot, select one enemy unit hit by this unit’s Auriferous Orb weapon. That enemy unit’s attacks have -1 to hit rolls until the start of your next turn."
      },
      "points": 20
     }
@@ -151,7 +151,7 @@
     },
     "genalchemic-warding": {
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model has Feel No Pain 5+.\n<h2"
+      "en": "ADEPTUS CUSTODES model only. This model has Feel No Pain 5+."
      },
      "points": 30
     }
@@ -175,7 +175,7 @@
     },
     "auric-eagle": {
      "text": {
-      "en": "ADEPTUS CUSTODES INFANTRY/MOUNTED unit only (excluding TERMINATOR units). This unit has +1 to advance rolls and charge rolls.\n<h2"
+      "en": "ADEPTUS CUSTODES INFANTRY/MOUNTED unit only (excluding TERMINATOR units). This unit has +1 to advance rolls and charge rolls."
      },
      "points": 15
     }
@@ -199,7 +199,7 @@
     },
     "celeritous-sentries": {
      "text": {
-      "en": "TRUSTED SENTINEL unit only. (Once per phase, per unit) You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do:\nThat use is -1 CP.\nThat use does not prevent any uses of that stratagem on other units this phase.\n<h2"
+      "en": "TRUSTED SENTINEL unit only. (Once per phase, per unit) You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do:\nThat use is -1 CP.\nThat use does not prevent any uses of that stratagem on other units this phase."
      },
      "points": 15
     }
@@ -229,7 +229,7 @@
     },
     "inspirational-exemplar": {
      "text": {
-      "en": "ADEPTUS CUSTODES INFANTRY model only. (Once per battle round, per army) At the start of any phase, you can select one friendly battle-shocked ADEPTUS CUSTODES unit within 9\" of this model. That unit is no longer battle-shocked.\n<h2"
+      "en": "ADEPTUS CUSTODES INFANTRY model only. (Once per battle round, per army) At the start of any phase, you can select one friendly battle-shocked ADEPTUS CUSTODES unit within 9\" of this model. That unit is no longer battle-shocked."
      },
      "points": 10
     }
@@ -253,7 +253,7 @@
     },
     "leonine-ferocity": {
      "text": {
-      "en": "SHIELD-CAPTAIN IN ALLARUS TERMINATOR ARMOUR model only. (Once per phase, per army) You can target this unit with the Rapid Ingress stratagem, regardless of any other uses of that stratagem this phase. If you do:\nThat use is -1 CP.\nThat use does not prevent any uses of that stratagem on other units this phase.\n<h2"
+      "en": "SHIELD-CAPTAIN IN ALLARUS TERMINATOR ARMOUR model only. (Once per phase, per army) You can target this unit with the Rapid Ingress stratagem, regardless of any other uses of that stratagem this phase. If you do:\nThat use is -1 CP.\nThat use does not prevent any uses of that stratagem on other units this phase."
      },
      "points": 20
     }
@@ -277,7 +277,7 @@
     },
     "augury-uplink-one-per-army": {
      "text": {
-      "en": "ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.\n<h2"
+      "en": "ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+."
      },
      "points": 30
     }
@@ -301,7 +301,7 @@
     },
     "combat-deployment": {
      "text": {
-      "en": "GRAV-ASSAULT TRANSPORT model only. When a friendly ADEPTUS CUSTODES unit is selected to make a disembark move from this unit, until the end of the turn:\nThat unit can re-roll charge rolls.\nEnemy units cannot target that unit with snap shooting attacks.\n<h2"
+      "en": "GRAV-ASSAULT TRANSPORT model only. When a friendly ADEPTUS CUSTODES unit is selected to make a disembark move from this unit, until the end of the turn:\nThat unit can re-roll charge rolls.\nEnemy units cannot target that unit with snap shooting attacks."
      },
      "points": 20
     }
@@ -325,7 +325,7 @@
     },
     "huntress-eye": {
      "text": {
-      "en": "ANATHEMA PSYKANA model only. In your Movement phase, you can select one visible enemy unit within 12\" of this unit. That unit makes a battle-shock roll, with -1 to that battle-shock roll.\n<h2"
+      "en": "ANATHEMA PSYKANA model only. In your Movement phase, you can select one visible enemy unit within 12\" of this unit. That unit makes a battle-shock roll, with -1 to that battle-shock roll."
      },
      "points": 10
     }

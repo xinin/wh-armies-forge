@@ -43,7 +43,7 @@
      "en": "Artillery Support"
     },
     "text": {
-     "en": "At the start of the battle round, select one of the following types of artillery support.\nCreeping Barrage: Roll one D6 for each enemy unit that is more than 12\" from every model from your army that is on the battlefield: On a 5+, until the end of the battle round, that unit is shaken. While a unit is shaken, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it. The maximum number of units that can be shaken by this rule in each battle round depends on the battle size, as shown below.\nIncendiary Bombardment: Select a number of enemy units more than 12\" from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are scattered. While a unit is scattered, it cannot have the Benefit of Cover. The maximum number of units you can select in this way depends on the battle size, as shown below.\nSmoke Shells: Select a number of units from your army. Until the end of the battle round, those units have the Stealth ability. The maximum number of units you can select in this way depends on the battle size, as shown below.\nBATTLE SIZEMAXIMUM NUMBER OF UNITS\nIncursion2\nStrike Force3\nOnslaught4\nErrata\nShow\nSiege Regiment Detachment, Artillery Support Detachment Rule, Creeping Barrage\nChange to:\n‘Roll one D6 for each enemy unit that is more than 12\" from every model from your army that is on the battlefield: On a 5+, until the end of the battle round, that unit is shaken. While a unit is shaken, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it. The maximum number of units that can be shaken by this rule in each battle round depends on the battle size, as shown below.’"
+     "en": "At the start of the battle round, select one of the following types of artillery support.\nCreeping Barrage: Roll one D6 for each enemy unit that is more than 12\" from every model from your army that is on the battlefield: On a 5+, until the end of the battle round, that unit is shaken. While a unit is shaken, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it. The maximum number of units that can be shaken by this rule in each battle round depends on the battle size, as shown below.\nIncendiary Bombardment: Select a number of enemy units more than 12\" from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are scattered. While a unit is scattered, it cannot have the Benefit of Cover. The maximum number of units you can select in this way depends on the battle size, as shown below.\nSmoke Shells: Select a number of units from your army. Until the end of the battle round, those units have the Stealth ability. The maximum number of units you can select in this way depends on the battle size, as shown below.\nBATTLE SIZE MAXIMUM NUMBER OF UNITS\nIncursion 2\nStrike Force 3\nOnslaught 4"
     }
    },
    "enhancements": {
@@ -67,7 +67,7 @@
     },
     "stalwarts-honours": {
      "text": {
-      "en": "OFFICER model only. While the bearer is leading a unit, when that unit is issued an Order, it is also affected by the Take Cover! Order.\n<h2"
+      "en": "OFFICER model only. While the bearer is leading a unit, when that unit is issued an Order, it is also affected by the Take Cover! Order."
      },
      "points": 15
     }
@@ -103,7 +103,7 @@
     },
     "vanguard-honours": {
      "text": {
-      "en": "INFANTRY OFFICER model only. The bearer’s unit can disembark from a TRANSPORT after it has Advanced. If it does, it makes a shock disembark move (Core Rules, 18.07) for that disembarkation.\n<h2"
+      "en": "INFANTRY OFFICER model only. The bearer’s unit can disembark from a TRANSPORT after it has Advanced. If it does, it makes a shock disembark move (Core Rules, 18.07) for that disembarkation."
      },
      "points": 15
     }
@@ -139,7 +139,7 @@
     },
     "veteran-crew": {
      "text": {
-      "en": "VEHICLE OFFICER model only. Each time a model in the bearer’s unit makes a ranged attack, re-roll a Hit roll of 1.\n<h2"
+      "en": "VEHICLE OFFICER model only. Each time a model in the bearer’s unit makes a ranged attack, re-roll a Hit roll of 1."
      },
      "points": 20
     }
@@ -151,7 +151,7 @@
      "en": "Masters of Camouflage"
     },
     "text": {
-     "en": "Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth.\nErrata\nShow\nRecon Element Detachment, Masters of Camouflage Detachment Rule\nChange to:\n‘Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth.’"
+     "en": "Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth."
     }
    },
    "enhancements": {
@@ -211,7 +211,7 @@
     },
     "laud-hailer": {
      "text": {
-      "en": "ASTRA MILITARUM OFFICER model only. Each time you select a unit for this OFFICER model to issue an Order to, that unit can be within 12\" instead of within 6\".\n<h2"
+      "en": "ASTRA MILITARUM OFFICER model only. Each time you select a unit for this OFFICER model to issue an Order to, that unit can be within 12\" instead of within 6\"."
      },
      "points": 10
     }
@@ -247,7 +247,7 @@
     },
     "assault-hatches": {
      "text": {
-      "en": "ASTRA MILITARUM TITANIC CHARACTER TRANSPORT model only. Each time a unit disembarks from the bearer after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation.\n<h2"
+      "en": "ASTRA MILITARUM TITANIC CHARACTER TRANSPORT model only. Each time a unit disembarks from the bearer after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation."
      },
      "points": 25
     }
@@ -259,7 +259,7 @@
      "en": "Squadron Command"
     },
     "text": {
-     "en": "Add SQUADRON to the list of units each OFFICER unit from your army can issue Orders to. Add the Order below to those listed in the Voice of Command ability.\nON MY SIGNAL\nThis Order can only be issued to ARMOURED SKIRMISHER units (see below). Each time an enemy unit ends a Normal or Advance move within 8\" of this unit, this unit can make a Normal move of up to D6\". Each unit can only move in this way once per turn.\nKEYWORDS\nASTRA MILITARUM SQUADRON units from your army have the ARMOURED SKIRMISHER keyword (excluding ARTILLERY units and units containing one or more models with a Wounds characteristic of 13 or higher).\nErrata\nShow\nArmoured Infantry Detachment, Squadron Command detachment rule, On My Signal order\nChange 9” to: 8”"
+     "en": "Add SQUADRON to the list of units each OFFICER unit from your army can issue Orders to. Add the Order below to those listed in the Voice of Command ability.\nON MY SIGNAL\nThis Order can only be issued to ARMOURED SKIRMISHER units (see below). Each time an enemy unit ends a Normal or Advance move within 8\" of this unit, this unit can make a Normal move of up to D6\". Each unit can only move in this way once per turn.\nKEYWORDS\nASTRA MILITARUM SQUADRON units from your army have the ARMOURED SKIRMISHER keyword (excluding ARTILLERY units and units containing one or more models with a Wounds characteristic of 13 or higher)."
     }
    },
    "enhancements": {
@@ -283,7 +283,7 @@
     },
     "grand-strategist-ai": {
      "text": {
-      "en": "OFFICER model only. After both players have deployed their armies, if the bearer’s unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to two units with the REGIMENT or SQUADRON keywords from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.\n<h2"
+      "en": "OFFICER model only. After both players have deployed their armies, if the bearer’s unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to two units with the REGIMENT or SQUADRON keywords from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
      },
      "points": 25
     }
@@ -307,7 +307,7 @@
     },
     "exemplar-of-duty": {
      "text": {
-      "en": "LEADER: BULLGRYN SQUAD, OGRYN SQUAD\nCOMMISSAR model only. This model has Feel No Pain 4+.\n<h2"
+      "en": "LEADER: BULLGRYN SQUAD, OGRYN SQUAD\nCOMMISSAR model only. This model has Feel No Pain 4+."
      },
      "points": 10
     }
@@ -331,7 +331,7 @@
     },
     "recon-star": {
      "text": {
-      "en": "ASTRA MILITARUM INFANTRY PLATOON unit only. In your first Movement phase, this unit can make an ingress move.\n<h2"
+      "en": "ASTRA MILITARUM INFANTRY PLATOON unit only. In your first Movement phase, this unit can make an ingress move."
      },
      "points": 10
     }
@@ -355,7 +355,7 @@
     },
     "priority-drop-beacon": {
      "text": {
-      "en": "MILITARUM TEMPESTUS OFFICER model only. In your first Movement phase, this unit can make an ingress move.\n<h2"
+      "en": "MILITARUM TEMPESTUS OFFICER model only. In your first Movement phase, this unit can make an ingress move."
      },
      "points": 25
     }

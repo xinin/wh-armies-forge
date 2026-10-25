@@ -2,7 +2,7 @@
 
 Proceso para añadir un ejército nuevo (por ejemplo Adeptus Custodes) con datos de la 11ª edición. Se ha probado de principio a fin con Adeptus Custodes: 27 datasheets oficiales, 13 destacamentos con sus estratagemas, emblema y 26 fotos de la tienda.
 
-Tiempo aproximado: 10–15 minutos, la mayor parte esperando a las descargas y revisando.
+Tiempo aproximado: 10–15 minutos, la mayor parte esperando a las descargas y revisando, más la traducción al español (paso 6).
 
 ## 0. Preparación (solo la primera vez)
 
@@ -31,12 +31,12 @@ Crea `data/factions/adeptus-custodes/` con:
 - `faction.json`: regla de ejército, destacamentos (coste en DP, regla resumida) y mejoras con sus requisitos;
 - `units.json`, `weapons.json`, `points.json` (con los puntos de las mejoras) e `images.json`.
 
-Además la añade a `data/factions/index.json`. `--color` es el color de la facción en las tarjetas de la home.
+Además la añade a `data/factions/index.json`. `--color` es el color de la facción en las tarjetas de la home. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
 
 **Revisa `faction.json`:**
 - **`requires` de cada mejora**: palabras clave que debe tener la unidad, deducidas del texto «X model only». Si sale `[]`, cualquier personaje (no Héroe Épico) puede llevarla. Corrige los casos dudosos. Ejemplo: `[["INFANTRY", "OFFICER"]]` exige las dos palabras clave; `[["A"], ["B"]]` significa A **o** B.
 - **`type: "upgrade"`**: se marca solo en las mejoras etiquetadas como UPGRADE. Pueden llevarlas unidades que no son personajes y no cuentan para el límite de mejoras.
-- **Nombres en español**: pon `name.es` en la facción y en los destacamentos que quieras traducir.
+- **Nombres en español**: no hace falta tocarlos aquí; todos los textos se traducen en el paso 6.
 - **Mecánicas propias de la facción**: la regla de ejército solo se muestra como texto. Las órdenes de Astra Militarum (`armyRule.orders`) son un caso especial escrito a mano; otras facciones no lo necesitan.
 
 ## 2. Importar los datasheets
@@ -47,31 +47,75 @@ Primero mira la clasificación:
 .venv/bin/python tools/import_wahapedia_datasheets.py adeptus-custodes --list
 ```
 
-Recorre todos los datasheets enlazados desde la página de la facción y clasifica cada uno según su propia página: **CORE** (oficiales), **LEGENDS** o **FW** (Forge World), mirando el logo del datasheet. Tarda medio segundo por página. Después importa todas las oficiales:
+Recorre todos los datasheets enlazados desde la página de la facción y clasifica cada uno según su propia página: **CORE** (oficiales), **LEGENDS** o **FW** (Forge World), mirando el logo del datasheet. Las páginas se guardan en una caché local (`.cache/wahapedia/`, fuera de git), así que solo se descargan la primera vez. Usa `--refresh` para volver a bajarlas, por ejemplo tras una errata. Después importa todas las oficiales:
 
 ```sh
 .venv/bin/python tools/import_wahapedia_datasheets.py adeptus-custodes --all
 ```
 
 Por cada unidad guarda:
-- perfiles, armas (con sus perfiles y reglas) y equipo por defecto;
-- habilidades (CORE, de facción, propias y de equipo), regla de dañado y órdenes;
-- opciones de equipo: como texto, y además como selectores cuando el patrón es reconocible;
+- perfiles, armas (con sus perfiles y reglas), habilidades (CORE, de facción, propias y de equipo), regla de dañado y órdenes;
 - composición, a quién lidera y límite de líderes;
-- **puntos de la 11ª**, que se marcan como verificados. Si el datasheet tiene el sobrecoste de la 3.ª copia, va a `points.json` → `unitsExtraCopies`.
+- **puntos de la 11ª**, que se marcan como verificados. Si el datasheet tiene sobrecoste por copias ("YOUR 3RD+ UNIT COSTS", a veces desde la 2.ª), va a `points.json` → `unitsExtraCopies` (`{from, sizes}`);
+- **equipo con cantidades** (`tools/wargear.py`):
+  - cuántos modelos de cada tipo tiene la unidad en cada tamaño ("1 Tempestor + 4-9 Tempestus Scions");
+  - el equipo por defecto contado ("Every Heavy Weapons Gunner is equipped with: lascannon…" → 3× lascannon). Lo que no es un arma (vox, estandarte, medi-pack) se guarda como equipo, y su habilidad de equipo solo se muestra si la unidad lo lleva;
+  - las opciones de equipo convertidas en selectores. Entiende estos patrones:
+    - sustituir el arma de un modelo ("This model's…", "The Sergeant's…", "One Trooper can replace…");
+    - "Any number of <modelos> can each…": cada modelo elige, hasta el número de esos modelos;
+    - "For every 10 models, up to 2…" y "Up to N…";
+    - "All models in this unit can each…": todos a la vez;
+    - "If this unit contains 10 models, …": solo con ese tamaño;
+    - añadidos ("can be equipped with");
+    - paquetes de varias armas ("autopistol and trench club → flamer and close combat weapon");
+    - notas al pie con límite por arma ("no more than once… twice with 20 models");
+    - alternativas excluyentes ("You can select one of the following options").
 
-Las unidades de Legends y Forge World se apuntan en `units.json` → `excluded` y nunca se importan.
+Con `--all`, una facción se reemplaza entera: las unidades que ya no son datasheets de la facción se eliminan de `units.json` y `points.json`. Las de Legends y Forge World se apuntan en `units.json` → `excluded` y nunca se importan. Los identificadores son el nombre del datasheet en minúsculas con guiones (`cadian-heavy-weapons-squad`). No se usan alias: si GW renombra una unidad, actualiza su clave en `images.json` (las listas guardadas que la usaran la pierden al abrirse).
 
-**Revisa la salida.** Cada línea muestra el rol, los perfiles, las armas, las opciones de equipo (convertidas a selector / total), a quién lidera y los puntos.
-- **`lead=None` en un personaje**: el nombre de la unidad a la que lidera no coincide con el nuestro. Añade el alias en `by_name.update({...})` dentro de `import_wahapedia_datasheets.py` y vuelve a ejecutar.
-- **`skip X: could not parse`**: la página tiene un formato distinto. Ábrela en Wahapedia y ajusta el parser o crea esa unidad a mano.
-- **Rol incorrecto**: se calcula a partir de las palabras clave, en este orden: FORTIFICATION, CHARACTER, BATTLELINE, AIRCRAFT, TITANIC, TRANSPORT, VEHICLE, MOUNTED y, si no, infantry.
+**Revisa la salida.** Al final aparecen líneas `CHECK <unidad>` con lo que no se ha podido interpretar: opciones de equipo que no encajan en ningún patrón y unidades a las que lidera que no existen en la facción. Las unidades de Legends y Forge World excluidas no se avisan.
+- **Rol incorrecto**: se calcula a partir de las palabras clave, en este orden: FORTIFICATION, TITANIC, CHARACTER, BATTLELINE, AIRCRAFT, TRANSPORT, MONSTER, VEHICLE, MOUNTED y, si no, infantry. TITANIC va antes que CHARACTER para que los Caballeros Imperiales, que son personajes titánicos, salgan en «Titánicos»; las mejoras y el Señor de la Guerra dependen de las palabras clave, no del rol.
+- **Datasheets que no se pueden reclutar** (p. ej. Sir Hekhtur, que solo se usa cuando muere el Canis Rex): salen sin puntos. Añade su id a `excluded.ids` y quítalos de `units`.
 
 Para añadir o actualizar unidades sueltas más adelante:
 
 ```sh
 .venv/bin/python tools/import_wahapedia_datasheets.py adeptus-custodes Blade-Champion Trajann-Valoris
 ```
+
+### 2b. Auditar (obligatorio)
+
+```sh
+.venv/bin/python tools/audit_units.py adeptus-custodes
+```
+
+Compara cada unidad importada con su datasheet de la caché y termina con «N errors, M warnings». Comprueba:
+
+| Comprobación | Qué detecta |
+|---|---|
+| `weapons` | Perfiles de arma de la tabla que no se han importado |
+| `abilities` | Bloques de habilidad (también de equipo) que no se han importado |
+| `composition` | Tipos de modelo que no cuadran con el tamaño de la unidad |
+| `loadout` | Equipo por defecto que no se reconoce como arma: nombre escrito distinto o equipo sin habilidad |
+| `reachable` | Armas del datasheet que no están en el equipo por defecto ni en ninguna opción, es decir, opciones o equipo mal leídos |
+| `options` | Opciones de equipo que no se han convertido en selector |
+| `replaces` | Opciones que sustituyen algo que la unidad nunca lleva |
+| `data` | Sin perfiles, palabras clave o puntos, o líderes hacia unidades inexistentes |
+
+Hay que dejarlo en **0 errores**. Los errores son fallos de lectura y casi siempre se corrigen en el parser, no en los datos: así el arreglo sirve para todas las facciones. Casos que han aparecido y ya están resueltos:
+- nombres con «and» o comas ("monstrous bonesword and lash whip");
+- variantes de escritura ("Militarum multi-laser" / "multi-laser", "battlecannon" / "battle cannon");
+- listas de equipo sin punto final o partidas por un salto de línea;
+- "1 of the following";
+- guiones no separables ("hot‑shot");
+- llamadas a nota pegadas al texto ("following*:");
+- "equipped with: nothing";
+- notas entre corchetes dentro de una opción ("1 medi-pack [that model's hot-shot lasgun cannot be replaced]"), que se leían como un objeto de equipo;
+- plurales con un calificativo delante ("2 additional heavy stubbers" / "heavy stubber").
+
+La auditoría no ve los nombres de equipo raros que sí se ven en la app: revisa también la lista de comprobación del paso 7 en los dos idiomas.
+
+Si aparece un patrón nuevo, añádelo en `tools/wargear.py` (opciones y equipo) o en `tools/import_wahapedia_datasheets.py` (lectura de la página), reimporta y vuelve a auditar **todas** las facciones (`tools/audit_units.py` sin argumentos), para no romper las anteriores.
 
 ## 3. Reglas completas y estratagemas
 
@@ -84,7 +128,7 @@ Genera:
 - `stratagems.json`: estratagemas por destacamento;
 - `data/editions/11th-stratagems.json`: las Core, comunes a todas las facciones.
 
-Todo se ve en la **vista de ejército**. Comprueba que cada destacamento muestre `enhancements` y `stratagems`. Si alguno sale a 0, su nombre en Wahapedia no coincide con el de `faction.json`.
+Los textos completos se ven en la **vista de ejército** y en el desplegable de cada destacamento del editor; los resúmenes de `faction.json` solo se usan si falta el texto completo. Los bloques «Errata/FAQ» de Wahapedia se descartan, porque el texto principal ya viene corregido. Comprueba que cada destacamento muestre `enhancements` y `stratagems`. Si alguno sale a 0, su nombre en Wahapedia no coincide con el de `faction.json`.
 
 ## 4. Fotos de la tienda
 
@@ -104,6 +148,7 @@ Todo se ve en la **vista de ejército**. Comprueba que cada destacamento muestre
 - **Coincidencias dudosas**: comprueba sobre todo las unidades con nombres genéricos (p. ej. "Heavy Weapons Squad").
 - Con `--products <facción>-products.json` puedes repetir el emparejamiento sin volver a abrir la tienda (por ejemplo, tras importar unidades nuevas).
 - Usa la tienda en **inglés** (`en-GB`): con nombres en español se emparejan muchas menos.
+- Algunas unidades se venden en la sección de **otra facción** (p. ej. los Skitarii de los Caballeros Imperiales están en Adeptus Mechanicus). Vuelve a ejecutar el script con la URL de esa sección: solo rellena las unidades que aún no tienen imagen.
 
 ## 5. Emblema de la facción (opcional)
 
@@ -122,7 +167,29 @@ El id de la carpeta es la última parte del enlace de Drive. Si el resultado no 
 
 La app usa el emblema en la cabecera, los títulos, las fichas, los placeholders de unidades sin foto y la tarjeta de la home.
 
-## 6. Comprobar en la app
+## 6. Traducir al español
+
+Los textos de juego se importan en inglés. La app los traduce con diccionarios:
+
+- `data/factions/<facción>/i18n.es.json`: textos de la facción (nombres, habilidades, opciones de equipo, reglas, mejoras y estratagemas).
+- `data/editions/11th.i18n.es.json`: estratagemas Core, textos que comparten dos o más facciones y el glosario `terms` de reglas con valor («Rapid Fire 2» → «Fuego Rápido 2»).
+
+```sh
+python3 tools/translations.py pending                 # .cache/translations/<facción>.tsv: textos sin traducir, numerados
+# escribe .cache/translations/<facción>.es.txt con una línea por texto: "<número><TAB><traducción>" (saltos de línea como \n)
+python3 tools/translations.py apply .cache/translations/<facción>.tsv .cache/translations/<facción>.es.txt
+python3 tools/translations.py pending                 # debe quedar en 0
+```
+
+- Usa la terminología de GW en español (acobardamiento, alcance de combate, Despliegue Rápido, No Hay Dolor…) y la misma traducción para el mismo término en toda la facción.
+- Las palabras clave en mayúsculas (INFANTRY, OFFICER…) se quedan en inglés, igual que los nombres propios.
+- Las habilidades de armas entre corchetes se traducen como en el glosario: `[IMPACTOS LETALES]`, `[IGNORA COBERTURA]`.
+- Si aparece una palabra clave de arma o una habilidad básica nueva, añádela a `terms` en `11th.i18n.es.json`, no a la lista de textos.
+- Los nombres de destacamento que ya tengan `name.es` en `faction.json` deben traducirse igual cuando aparecen como origen de una estratagema.
+
+La traducción no es oficial. Un texto sin traducir se muestra en inglés, así que tras cada reimportación basta con repetir `pending` y traducir lo nuevo.
+
+## 7. Comprobar en la app
 
 ```sh
 ./serve.sh
@@ -134,15 +201,18 @@ La app usa el emblema en la cabecera, los títulos, las fichas, los placeholders
 - [ ] Al elegir un destacamento, sus mejoras aparecen solo en los personajes que cumplen el requisito.
 - [ ] En la **vista de ejército** se ven la regla del destacamento, las mejoras, las estratagemas y las Core.
 - [ ] Una tercera copia de una unidad con sobrecoste sale marcada como «3.ª+ copia» con el precio más alto.
+- [ ] En una unidad con opciones por modelo (p. ej. una escuadra de armas pesadas), cada modelo puede elegir arma y la tabla muestra las cantidades.
+- [ ] Con **ES** no queda texto de juego en inglés (salvo palabras clave en mayúsculas y nombres propios), y con **EN** todo sale en inglés.
 - [ ] La consola del navegador no muestra errores.
 
 ## Mantenimiento
 
 | Cuando… | Haz… |
 |---|---|
-| Sale un MFM nuevo | Edita `points.json` o reimporta los datasheets afectados (`import_wahapedia_datasheets.py <facción> <Datasheet>…`) |
-| GW publica erratas de reglas o estratagemas | `import_wahapedia_rules.py <facción>` |
+| Sale un MFM nuevo | Reimporta la facción con `--all --refresh` (los puntos vienen en cada datasheet) y audita, o edita `points.json` a mano |
+| GW publica erratas de reglas o estratagemas | `import_wahapedia_rules.py <facción>` y `import_wahapedia_datasheets.py <facción> --all --refresh`, y después `audit_units.py` |
 | Sale una unidad nueva | `import_wahapedia_datasheets.py <facción> <Datasheet>` y `store_images.py … --products <lista guardada>`, o la URL a mano |
+| Has reimportado algo | `translations.py pending`, traduce lo que salga y `apply` |
 | Quieres excluir una unidad | Añade su id a `units.json` → `excluded.ids` y bórrala de `units`, `points.json` e `images.json` |
 
 ## Problemas conocidos
@@ -150,5 +220,5 @@ La app usa el emblema en la cabecera, los títulos, las fichas, los placeholders
 - **Pillow no se instala**: estás usando PyPy. Crea el entorno con `/usr/bin/python3`.
 - **`202` o "Human Verification" en la tienda**: es la protección anti-bots. Usa `store_images.py`, que abre una ventana visible, y no Chrome headless.
 - **Wahapedia cambia su HTML**: los importadores dependen de sus clases CSS (ver [RECURSOS.md](RECURSOS.md)). Si fallan tras un cambio, hay que ajustar las expresiones regulares.
-- **Opciones de equipo complejas** (paquetes de varias armas, equipo que no es arma): se ven como texto en la ficha, pero no tienen selector.
-- **Traducciones**: los textos de reglas se importan en inglés.
+- **Listas guardadas tras reimportar**: al abrir una lista, la app quita las unidades que ya no existen y las elecciones de equipo que han dejado de ser válidas, y guarda el resultado.
+- **Traducciones**: los textos de reglas se importan en inglés y se traducen con `translations.py` (paso 6). Si Wahapedia cambia un texto, su traducción deja de encajar y vuelve a salir en `pending`.

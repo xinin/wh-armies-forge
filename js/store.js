@@ -154,7 +154,7 @@ export function deleteList(id) {
 export function newRosterUnit(unitDef) {
   const wargear = {};
   for (const opt of unitDef.wargear ?? []) {
-    if (opt.type === 'swap') wargear[opt.id] = opt.default ?? opt.choices[0];
+    if (opt.type === 'swap') wargear[opt.id] = '';
     else if (opt.type === 'pool') wargear[opt.id] = {};
     else if (opt.type === 'toggle') wargear[opt.id] = 0;
   }

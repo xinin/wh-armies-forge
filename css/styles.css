@@ -259,7 +259,7 @@ body[data-view=home] { overflow-y: auto; }
 /* Per-unit datasheet: stats, equipped weapons, abilities */
 .head-tools { display: inline-flex; gap: 8px; align-items: center; }
 .sheet { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
-.mini-stats { width: auto; border-collapse: separate; border-spacing: 3px 0; font-size: 12px; }
+.mini-stats { width: auto; border-collapse: separate; border-spacing: 3px 3px; font-size: 12px; }
 .mini-stats th { font-size: 9px; padding: 0 4px 2px; color: var(--muted); letter-spacing: .06em; }
 .mini-stats td { border: 0; background: #15181d; border: 1px solid var(--line); border-radius: 5px; min-width: 36px; padding: 3px 6px; font-size: 14px; font-weight: 700; color: var(--text); }
 .mini-stats td.sname { background: none; border: 0; font-size: 11px; font-weight: 500; color: var(--muted); text-align: left; min-width: 0; }
@@ -499,7 +499,7 @@ a.btn { text-decoration: none; color: var(--text); }
 }
 .ds-banner-text { position: relative; z-index: 2; max-width: 62%; }
 .ds-banner h2 { font-family: var(--display); font-weight: 700; text-transform: uppercase; color: #fff; font-size: clamp(24px, 4vw, 34px); letter-spacing: .02em; margin: 0 0 10px; line-height: 1; }
-.ds-stats { display: flex; gap: 8px; align-items: flex-end; flex-wrap: wrap; margin-top: 6px; }
+.ds-stats { display: flex; gap: 8px; align-items: flex-start; flex-wrap: wrap; margin-top: 6px; }
 .ds-stat { display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .ds-stat span { font-family: var(--display); font-weight: 700; font-size: 11px; color: #fff; letter-spacing: .05em; }
 .ds-stat b {
@@ -722,3 +722,17 @@ body[data-view=overview] { overflow-y: auto; }
 .ft-emblem .gw-icon { width: 96px; height: 80px; color: color-mix(in srgb, var(--faction) 55%, #f2efe4); filter: drop-shadow(0 3px 6px rgba(0,0,0,.5)); }
 .ft-name { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: 17px; text-align: center; }
 .ft-meta { font-size: 12px; color: var(--muted); }
+
+.wg-row.off { opacity: .5; }
+.wg-row.pool small { color: var(--muted); }
+
+/* Invulnerable save: second row right under SV */
+.mini-stats tr.inv-row td.blank { background: none !important; border: 0 !important; box-shadow: none !important; }
+.mini-stats td.inv { position: relative; padding-top: 9px; }
+.mini-stats td.inv { padding-top: 11px; }
+.mini-stats td.inv small { position: absolute; top: 2px; left: 0; right: 0; font-size: 9px; line-height: 1; letter-spacing: .1em; font-weight: 700; color: #5a4507; }
+.ds-stat > .ds-stat.inv { margin-top: 4px; }
+.ds-stat > .ds-stat.inv b { min-width: 42px; height: 34px; font-size: 18px; }
+.ds-stat > .ds-stat.inv span { font-size: 10px; }
+/* Weapon quantity column */
+.mini-weapons th.qty, .mini-weapons td.qty { color: var(--gold-2); font-weight: 700; white-space: nowrap; }

@@ -7,7 +7,7 @@ import {
 import { renderHome, renderHomeHeader, renderFactionPicker } from './home.js';
 import { setFactionEmblem } from './icons.js';
 import { renderOverview, renderOverviewHeader } from './overview.js';
-import { validate, canAttach, isLeader, battleSizeOf, optionMax } from './rules.js';
+import { validate, canAttach, isLeader, battleSizeOf, optionMax, optionMaxEach } from './rules.js';
 import {
   renderHeader, renderCatalog, renderCatalogItems, renderRoster, renderSidebar, renderModal, listToText, sheetState,
 } from './render.js';
@@ -89,6 +89,15 @@ async function loadForActive() {
   const entry = index.factions.find(f => f.id === list.factionId) ?? index.factions[0];
   [edition, data] = await Promise.all([loadEdition(list.edition ?? entry.edition), loadFaction(entry)]);
   setFactionEmblem(data.emblem);
+  // datasheets may have been re-imported since the list was saved: drop units that no longer exist
+  // and wargear choices that are no longer valid (saved straight away)
+  if (list.units.some(u => !data.unitsById.has(u.unitId)) || list.units.some(u => clampWargear(structuredClone(u)))) {
+    update(() => {
+      list.units = list.units.filter(u => data.unitsById.has(u.unitId));
+      list.units.forEach(u => { if (u.attachedTo && !list.units.some(b => b.uid === u.attachedTo)) u.attachedTo = null; });
+      list.units.forEach(u => clampWargear(u));
+    });
+  }
 }
 
 function renderSaveStatus() {
@@ -391,25 +400,37 @@ async function onChange(e) {
 }
 
 // Keep pool/toggle counts within the limits for the current unit size.
+// Keep the wargear choices of a unit valid for its datasheet and size: unknown options/choices are dropped,
+// counts are capped (the value just edited is kept, the others are trimmed first). Returns true if anything changed.
 function clampWargear(ru, lastChanged) {
   const def = data.unitsById.get(ru.unitId);
-  const models = def.sizes[ru.sizeIdx].models;
+  if (!def) return false;
+  const models = def.sizes[ru.sizeIdx]?.models ?? def.sizes[0].models;
+  const before = JSON.stringify(ru.wargear ?? {});
+  const next = {};
   for (const opt of def.wargear ?? []) {
+    const v = ru.wargear?.[opt.id];
     const max = optionMax(opt, models);
-    if (opt.type === 'toggle') ru.wargear[opt.id] = Math.min(ru.wargear[opt.id] ?? 0, max);
-    if (opt.type === 'pool') {
-      const pool = ru.wargear[opt.id] ?? {};
+    if (opt.type === 'swap') {
+      next[opt.id] = opt.choices.includes(v) && !(opt.minModels && models < opt.minModels) ? v : '';
+    } else if (opt.type === 'toggle') {
+      next[opt.id] = Math.min(Number(v) || 0, opt.scope === 'all' ? 1 : max);
+    } else if (opt.type === 'pool') {
+      const each = optionMaxEach(opt, models);
+      const pool = {};
+      for (const c of opt.choices) if (v?.[c] > 0) pool[c] = Math.min(Number(v[c]), each);
       let total = Object.values(pool).reduce((a, b) => a + b, 0);
-      // trim the other weapons first, so the one just edited keeps its value
-      const keys = Object.keys(pool).sort((a, b) => (a === lastChanged) - (b === lastChanged));
-      for (const k of keys) {
+      for (const k of Object.keys(pool).sort((a, b) => (a === lastChanged) - (b === lastChanged))) {
         if (total <= max) break;
         const cut = Math.min(pool[k], total - max);
         pool[k] -= cut;
         total -= cut;
       }
+      next[opt.id] = pool;
     }
   }
+  ru.wargear = next;
+  return JSON.stringify(next) !== before;
 }
 
 /* ---------- Drag & drop ---------- */

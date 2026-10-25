@@ -1,10 +1,10 @@
 // HTML-string renderers. Interactive elements carry data-action; main.js handles them by delegation.
-import { t, tr, getLang, LANGS } from './i18n.js';
+import { t, tr, trs, getLang, LANGS } from './i18n.js';
 import { unitImg, imgFrame, ROLE_COLORS } from './images.js';
 import { icon } from './icons.js';
 import {
   battleSizeOf, unitPoints, listPoints, detachmentPointsUsed, availableEnhancements,
-  isLeader, leadersOf, canAttach, optionMax, hasKw, bodyguardLimits, isExtraCopy,
+  isLeader, leadersOf, canAttach, optionMax, optionMaxEach, hasKw, bodyguardLimits, isExtraCopy,
 } from './rules.js';
 
 export const ROLES = ['character', 'battleline', 'infantry', 'mounted', 'monster', 'vehicle', 'transport', 'aircraft', 'titanic', 'fortification'];
@@ -171,7 +171,7 @@ function renderUnitCore(ru, def, list, data, edition, customImages, attached) {
       <div class="ru-title">
         <span class="ru-name" data-action="details" data-unit="${def.id}">${esc(tr(def.name))}</span>
         ${ru.warlord ? `<span class="tag warlord">${icon('emblem')}${t('unit.warlord')}</span>` : ''}
-        ${isExtraCopy(ru, data, list) ? `<span class="tag extra-copy" title="${t('unit.extraCopyHelp')}">${t('unit.extraCopy')}</span>` : ''}
+        ${isExtraCopy(ru, data, list) ? `<span class="tag extra-copy" title="${t('unit.extraCopyHelp', { n: def.extraFrom })}">${t('unit.extraCopy', { n: def.extraFrom })}</span>` : ''}
         <span class="ru-pts">${unitPoints(ru, data, list)} ${t('points')}</span>
       </div>
       <div class="ru-controls">
@@ -198,67 +198,116 @@ function renderUnitCore(ru, def, list, data, edition, customImages, attached) {
   ${renderSheet(ru, def, data)}`;
 }
 
-// Effective weapons after swaps / pools / toggles: [{ id, name, count, changed }]
-export function loadoutOf(ru, def, data) {
-  const items = [];
-  const swapped = new Map();
-  const add = (id, count, changed) => items.push({ id, name: `${count > 1 ? count + '× ' : ''}${weaponName(def, id)}`, count, changed });
-  for (const opt of def.wargear ?? []) {
-    const v = ru.wargear?.[opt.id] ?? opt.default;
-    if (opt.type === 'swap' && v !== opt.default) {
-      swapped.set(opt.default, v);
-      if (!opt.default && v) add(v, 1, true);
-    }
-  }
-  for (const w of def.loadout) {
-    if (swapped.has(w)) { const v = swapped.get(w); if (v) add(v, 1, true); }
-    else add(w, 1, false);
-  }
-  for (const opt of def.wargear ?? []) {
-    const v = ru.wargear?.[opt.id];
-    if (opt.type === 'pool') for (const [w, n] of Object.entries(v ?? {})) if (n > 0) add(w, n, true);
-    if (opt.type === 'toggle' && v > 0) {
-      if (opt.gives) add(opt.gives, v, true);
-      else items.push({ id: null, name: `${v > 1 ? v + '× ' : ''}${tr(opt.label).replace(/\s*\(.*\)/, '')}`, count: v, changed: true });
-    }
-  }
-  return items;
+const slugify = str => String(str).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+// Name of a loadout item: a weapon of the datasheet, or gear ("gear:vox-caster" → its wargear ability name).
+function itemName(def, id) {
+  if (!id.startsWith('gear:')) return weaponName(def, id);
+  // gear ids are singular ("servo-scribe"), the wargear ability may be plural ("Servo-scribes")
+  const singular = s => s.split('-').map(w => w.replace(/s$/, '')).join('-');
+  const g = id.slice(5);
+  const ability = (def.wargearAbilities ?? []).find(a => singular(slugify(a.name.en)) === singular(g));
+  return ability ? tr(ability.name) : g.replace(/-/g, ' ').replace(/^./, c => c.toUpperCase());
 }
 
+// Labels of wargear options, built in the current language from the option data.
+const packageLabel = (def, items) => {
+  const net = {};
+  for (const x of items) net[x.item] = (net[x.item] ?? 0) + x.n;
+  return Object.entries(net).filter(([i, n]) => n > 0 && !(/-(melee|ranged)$/.test(i) && def.weaponMap.has(i.replace(/-(melee|ranged)$/, ''))))
+    .map(([i, n]) => `${n > 1 ? n + '× ' : ''}${itemName(def, i)}`).join(' + ');
+};
+
+function choiceLabel(def, opt, key) {
+  if (key === '') return opt.replaces?.length ? packageLabel(def, opt.replaces) : '—';
+  return packageLabel(def, opt.packages?.[key] ?? []) || key;
+}
+
+function optionLabel(def, opt) {
+  const owner = opt.owner ? `${trs(opt.owner)}: ` : '';
+  const replaced = packageLabel(def, opt.replaces ?? []);
+  let label;
+  if (opt.type === 'toggle') label = `${owner}${t('wg.add')} ${choiceLabel(def, opt, opt.gives)}`;
+  else if (opt.type === 'pool') label = `${owner}${t('wg.replace')} ${replaced}`;
+  else if (opt.exclusive) label = t('wg.chooseOne');
+  else label = `${owner}${replaced || t('wg.optional')}`;
+  label = label.charAt(0).toUpperCase() + label.slice(1);
+  return opt.scope === 'all' ? `${label} (${t('wg.allModels')})` : label;
+}
+
+/* Effective equipment of a unit: the default loadout of its size (with counts) after the chosen options.
+   Per-model options are applied first, "all models" swaps last on what is left. → [{ id, name, count, changed, gear }] */
+export function loadoutOf(ru, def, data) {
+  const size = def.sizes[ru.sizeIdx] ?? def.sizes[0];
+  const models = size?.models ?? 1;
+  const base = size?.loadout ?? {};
+  const counts = { ...base };
+  const add = (item, n) => { counts[item] = Math.max(0, (counts[item] ?? 0) + n); };
+  const apply = (opt, key, times) => {
+    if (!times) return;
+    for (const r of opt.replaces ?? []) add(r.item, -r.n * times);
+    for (const x of opt.packages?.[key] ?? []) add(x.item, x.n * times);
+  };
+  const available = opt => (opt.replaces?.length
+    ? Math.min(...opt.replaces.map(r => Math.floor((counts[r.item] ?? 0) / r.n)))
+    : models);
+  const options = (def.wargear ?? []).filter(o => !(o.minModels && models < o.minModels));
+  for (const opt of [...options.filter(o => o.scope !== 'all'), ...options.filter(o => o.scope === 'all')]) {
+    const v = ru.wargear?.[opt.id];
+    if (opt.type === 'swap' && v) apply(opt, v, opt.scope === 'all' ? available(opt) : 1);
+    if (opt.type === 'pool') for (const [key, n] of Object.entries(v ?? {})) apply(opt, key, Number(n) || 0);
+    if (opt.type === 'toggle' && v) apply(opt, opt.gives, opt.scope === 'all' ? available(opt) : Number(v));
+  }
+  return Object.entries(counts).filter(([, n]) => n > 0).map(([id, count]) => ({
+    id, count, gear: id.startsWith('gear:'), changed: count !== (base[id] ?? 0),
+    name: `${count > 1 ? count + '× ' : ''}${itemName(def, id)}`,
+  }));
+}
+
+// Characteristics; the invulnerable save goes in a second row right under SV.
 export function statRows(def) {
   const named = def.stats.length > 1;
-  return `<table class="mini-stats"><tr>${named ? '<th></th>' : ''}<th>M</th><th>T</th><th>SV</th><th>W</th><th>LD</th><th>OC</th>${def.stats.some(s => s.inv) ? '<th>INV</th>' : ''}</tr>
-    ${def.stats.map(s => `<tr>${named ? `<td class="sname">${esc(tr(s.name))}</td>` : ''}<td>${s.M}</td><td>${s.T}</td><td>${s.Sv}</td><td>${s.W}</td><td>${s.Ld}</td><td>${s.OC}</td>${def.stats.some(x => x.inv) ? `<td class="inv">${s.inv ?? '–'}</td>` : ''}</tr>`).join('')}
+  const cols = ['M', 'T', 'Sv', 'W', 'Ld', 'OC'];
+  return `<table class="mini-stats"><tr>${named ? '<th></th>' : ''}${cols.map(c => `<th>${t('stat.' + c)}</th>`).join('')}</tr>
+    ${def.stats.map(s => `<tr>${named ? `<td class="sname">${esc(tr(s.name))}</td>` : ''}${cols.map(c => `<td>${s[c]}</td>`).join('')}</tr>
+      ${s.inv ? `<tr class="inv-row">${named ? '<td class="blank"></td>' : ''}<td class="blank"></td><td class="blank"></td><td class="inv"><small>${t('stat.inv')}</small>${s.inv}</td><td class="blank" colspan="3"></td></tr>` : ''}`).join('')}
   </table>`;
 }
 
 export function weaponTable(ru, def, data) {
   const items = loadoutOf(ru, def, data);
-  // merge duplicates (e.g. default lasguns + nothing else), keep the "changed" flag
-  const rows = new Map();
-  for (const i of items) {
-    if (!i.id || !def.weaponMap.get(i.id)) continue;
-    const r = rows.get(i.id);
-    if (r) { r.count += i.count; r.changed ||= i.changed; } else rows.set(i.id, { ...i });
-  }
-  const section = type => [...rows.values()].filter(r => def.weaponMap.get(r.id).type === type).flatMap(r => {
+  const section = type => items.filter(i => def.weaponMap.get(i.id)?.type === type).flatMap(r => {
     const w = def.weaponMap.get(r.id);
     return w.profiles.map((p, k) => `<tr class="${r.changed ? 'changed' : ''} ${k ? 'subprofile' : ''}">
-      <td class="wname">${w.profiles.length > 1 ? icon('profileArrow', 'parrow') : ''}${k ? '' : `${r.count > 1 ? `<b>${r.count}×</b> ` : ''}${esc(tr(w.name))}`}${p.mode ? ` <small>(${esc(tr(p.mode))})</small>` : ''}${p.keywords.length ? `<div class="wkw">${p.keywords.map(esc).join(', ')}</div>` : ''}</td>
+      <td class="wname">${w.profiles.length > 1 ? icon('profileArrow', 'parrow') : ''}${k ? '' : esc(tr(w.name))}${p.mode ? ` <small>(${esc(tr(p.mode))})</small>` : ''}${p.keywords.length ? `<div class="wkw">${p.keywords.map(k => esc(trs(k))).join(', ')}</div>` : ''}</td>
+      <td class="qty">${k ? '' : `${r.count}×`}</td>
       <td>${esc(p.range === 'Melee' ? '—' : p.range)}</td><td>${esc(p.A)}</td><td>${esc(p.skill)}</td><td>${esc(p.S)}</td><td>${esc(p.AP)}</td><td>${esc(p.D)}</td></tr>`);
   }).join('');
   const ranged = section('ranged'), melee = section('melee');
-  const head = (label, skill, ic) => `<tr class="whead"><th class="wname">${icon(ic)}${label}</th><th>${t('stats.rangeShort')}</th><th>A</th><th>${skill}</th><th>S</th><th>AP</th><th>D</th></tr>`;
-  const other = items.filter(i => !i.id || !def.weaponMap.get(i.id));
+  const head = (label, skill, ic) => `<tr class="whead"><th class="wname">${icon(ic)}${label}</th><th class="qty">${t('stats.qty')}</th><th>${t('stats.rangeShort')}</th><th>${t('stat.A')}</th><th>${t('stat.' + skill)}</th><th>${t('stat.S')}</th><th>${t('stat.AP')}</th><th>${t('stat.D')}</th></tr>`;
+  const other = items.filter(i => !def.weaponMap.get(i.id));
   return `<div class="table-wrap"><table class="mini-weapons">
       ${ranged ? head(t('unit.ranged'), 'BS', 'ranged') + ranged : ''}${melee ? head(t('unit.melee'), 'WS', 'melee') + melee : ''}
     </table></div>
-    ${other.length ? `<div class="loadout">${other.map(i => `<span class="weapon changed">${esc(i.name)}</span>`).join('')}</div>` : ''}`;
+    ${other.length ? `<div class="loadout">${other.map(i => `<span class="weapon ${i.changed ? 'changed' : ''}">${esc(i.name)}</span>`).join('')}</div>` : ''}`;
 }
 
-export function abilitiesBlock(def) {
-  const tags = [...(def.core ?? []).map(c => `<span class="tag core">${esc(c)}</span>`), ...(def.factionAbilities ?? []).map(f => `<span class="tag faction">${esc(f)}</span>`)];
-  const list = [...(def.abilities ?? []), ...(def.wargearAbilities ?? [])];
+// Wargear abilities tied to a piece of gear (vox-caster, medi-pack…) only show when the unit carries it.
+function shownWargearAbilities(ru, def, data) {
+  const possible = new Set([
+    ...def.sizes.flatMap(s => Object.keys(s.loadout ?? {})),
+    ...(def.wargear ?? []).flatMap(o => Object.values(o.packages ?? {}).flat().map(x => x.item)),
+  ].filter(i => i.startsWith('gear:')).map(i => i.slice(5)));
+  const carried = ru ? new Set(loadoutOf(ru, def, data).filter(i => i.gear).map(i => i.id.slice(5))) : possible;
+  return (def.wargearAbilities ?? []).filter(a => {
+    const g = slugify(a.name.en);
+    return !possible.has(g) || carried.has(g);
+  });
+}
+
+export function abilitiesBlock(def, ru = null, data = null) {
+  const tags = [...(def.core ?? []).map(c => `<span class="tag core">${esc(trs(c))}</span>`), ...(def.factionAbilities ?? []).map(f => `<span class="tag faction">${esc(trs(f))}</span>`)];
+  const list = [...(def.abilities ?? []), ...shownWargearAbilities(ru, def, data)];
   if (def.damaged) list.push({ name: { en: `${t('unit.damaged')} (${tr(def.damaged.name)})` }, text: def.damaged.text });
   if (!tags.length && !list.length) return '';
   return `<div class="mini-abilities">
@@ -275,7 +324,7 @@ function renderSheet(ru, def, data) {
     <details class="sheet-more" data-sheet="${ru.uid}" ${open ? 'open' : ''}>
       <summary>${t('unit.sheet')}</summary>
       ${weaponTable(ru, def, data)}
-      ${abilitiesBlock(def)}
+      ${abilitiesBlock(def, ru, data)}
     </details>
   </div>`;
 }
@@ -283,23 +332,28 @@ function renderSheet(ru, def, data) {
 function renderWargear(ru, def, data) {
   const models = def.sizes[ru.sizeIdx]?.models ?? 1;
   const rows = def.wargear.map(opt => {
-    const v = ru.wargear?.[opt.id] ?? opt.default;
+    const label = esc(optionLabel(def, opt));
+    if (opt.minModels && models < opt.minModels) {
+      return `<div class="wg-row off"><span>${label}</span><small>${t('wargear.minModels', { n: opt.minModels })}</small></div>`;
+    }
+    const v = ru.wargear?.[opt.id];
     if (opt.type === 'swap') {
-      return `<label class="wg-row"><span>${esc(tr(opt.label))}</span>
+      return `<label class="wg-row"><span>${label}</span>
         <select data-action="wg-swap" data-uid="${ru.uid}" data-opt="${opt.id}">
-          ${opt.choices.map(c => `<option value="${c}" ${c === v ? 'selected' : ''}>${c ? esc(weaponName(def, c)) : t('unit.none')}</option>`).join('')}
+          ${opt.choices.map(c => `<option value="${esc(c)}" ${c === (v ?? '') ? 'selected' : ''}>${esc(choiceLabel(def, opt, c))}</option>`).join('')}
         </select></label>`;
     }
     const max = optionMax(opt, models);
     if (opt.type === 'pool') {
       const used = Object.values(v ?? {}).reduce((a, b) => a + b, 0);
-      return `<div class="wg-row pool"><span>${esc(tr(opt.label))} <b class="${used > max ? 'bad' : ''}">${used}/${max}</b></span>
-        <div class="pool-items">${opt.choices.map(c => `<label class="stepper">${esc(weaponName(def, c))}
-          <input type="number" min="0" max="${max}" value="${v?.[c] ?? 0}" data-action="wg-pool" data-uid="${ru.uid}" data-opt="${opt.id}" data-weapon="${c}"></label>`).join('')}
-        </div></div>`;
+      const each = Math.min(max, optionMaxEach(opt, models));
+      return `<div class="wg-row pool"><span>${label} <b class="${used > max ? 'bad' : ''}">${used}/${max}</b></span>
+        <div class="pool-items">${opt.choices.map(c => `<label class="stepper">${esc(choiceLabel(def, opt, c))}
+          <input type="number" min="0" max="${each}" value="${v?.[c] ?? 0}" data-action="wg-pool" data-uid="${ru.uid}" data-opt="${opt.id}" data-weapon="${esc(c)}"></label>`).join('')}
+        </div>${Number.isFinite(optionMaxEach(opt, models)) ? `<small>${t('wargear.maxEach', { n: each })}</small>` : ''}</div>`;
     }
-    return `<label class="wg-row"><span>${esc(tr(opt.label))}</span>
-      ${max > 1
+    return `<label class="wg-row"><span>${label}</span>
+      ${max > 1 && opt.scope !== 'all'
         ? `<input type="number" min="0" max="${max}" value="${v ?? 0}" data-action="wg-toggle" data-uid="${ru.uid}" data-opt="${opt.id}">`
         : `<input type="checkbox" ${v ? 'checked' : ''} data-action="wg-toggle" data-uid="${ru.uid}" data-opt="${opt.id}">`}
     </label>`;
@@ -336,10 +390,10 @@ export function renderSidebar(list, data, edition, issues) {
             <span class="det-cost">${d.cost} DP</span>
           </button>
           <details><summary>${esc(tr(d.rule.name))}</summary>
-            <p>${esc(tr(d.rule.text))}</p>
+            ${esc(tr(d.rule.full ?? d.rule.text)).split('\n').map(l => `<p>${l}</p>`).join('')}
             <ul class="enh-list">${d.enhancements.map(e => {
               const enh = data.enhancements.get(e.id);
-              return `<li><b>${esc(tr(e.name))}</b> <span class="muted">${enh.points} ${t('points')}${enh.type === 'upgrade' ? ' · ' + t('unit.upgrade') : ''}</span><br><small>${esc(tr(e.text))}</small></li>`;
+              return `<li><b>${esc(tr(e.name))}</b> <span class="muted">${enh.points} ${t('points')}${enh.type === 'upgrade' ? ' · ' + t('unit.upgrade') : ''}</span><br><small>${esc(tr(e.full ?? e.text)).replace(/\n/g, '<br>')}</small></li>`;
             }).join('')}</ul>
           </details>
         </div>`;
@@ -361,7 +415,7 @@ export function renderSidebar(list, data, edition, issues) {
 
 function weaponRows(weapons, type) {
   return weapons.filter(w => w.type === type).flatMap(w => w.profiles.map((p, k) => `
-      <tr class="${k ? 'subprofile' : ''}"><td class="wname">${w.profiles.length > 1 ? icon('profileArrow', 'parrow') : ''}${esc(tr(w.name))}${p.mode ? ` <small>– ${esc(tr(p.mode))}</small>` : ''}${p.keywords.length ? ` <span class="wkw">[${p.keywords.map(esc).join(', ')}]</span>` : ''}</td>
+      <tr class="${k ? 'subprofile' : ''}"><td class="wname">${w.profiles.length > 1 ? icon('profileArrow', 'parrow') : ''}${esc(tr(w.name))}${p.mode ? ` <small>– ${esc(tr(p.mode))}</small>` : ''}${p.keywords.length ? ` <span class="wkw">[${p.keywords.map(k => esc(trs(k))).join(', ')}]</span>` : ''}</td>
       <td>${esc(p.range)}</td><td>${esc(p.A)}</td><td>${esc(p.skill)}</td><td>${esc(p.S)}</td><td>${esc(p.AP)}</td><td>${esc(p.D)}</td></tr>`)).join('');
 }
 
@@ -372,8 +426,8 @@ export function renderModal(def, data, customImages) {
   const weapons = [...def.weaponMap.values()];
   const ranged = weaponRows(weapons, 'ranged');
   const melee = weaponRows(weapons, 'melee');
-  const head = (label, ic, skill) => `<tr class="whead"><th>${icon(ic)}${label}</th><th>${t('stats.range')}</th><th>A</th><th>${skill}</th><th>S</th><th>AP</th><th>D</th></tr>`;
-  const tags = [...(def.core ?? []).map(c => `<span class="tag core">${esc(c)}</span>`), ...(def.factionAbilities ?? []).map(f => `<span class="tag faction">${esc(f)}</span>`)];
+  const head = (label, ic, skill) => `<tr class="whead"><th>${icon(ic)}${label}</th><th>${t('stats.range')}</th><th>${t('stat.A')}</th><th>${t('stat.' + skill)}</th><th>${t('stat.S')}</th><th>${t('stat.AP')}</th><th>${t('stat.D')}</th></tr>`;
+  const tags = [...(def.core ?? []).map(c => `<span class="tag core">${esc(trs(c))}</span>`), ...(def.factionAbilities ?? []).map(f => `<span class="tag faction">${esc(trs(f))}</span>`)];
   const named = def.stats.length > 1;
   return `
   <div class="modal-card datasheet" role="dialog" aria-modal="true" aria-label="${esc(tr(def.name))}" style="--role:${ROLE_COLORS[def.role]}">
@@ -382,8 +436,8 @@ export function renderModal(def, data, customImages) {
       <div class="ds-banner-text">
         <h2>${esc(tr(def.name))}</h2>
         ${def.stats.map(s => `<div class="ds-stats">
-          ${['M', 'T', 'Sv', 'W', 'Ld', 'OC'].map(k => `<div class="ds-stat"><span>${k.toUpperCase()}</span><b>${s[k]}</b></div>`).join('')}
-          ${s.inv ? `<div class="ds-stat inv"><span>INV</span><b>${s.inv}</b></div>` : ''}
+          ${['M', 'T', 'Sv', 'W', 'Ld', 'OC'].map(k => `<div class="ds-stat"><span>${t('stat.' + k)}</span><b>${s[k]}</b>${k === 'Sv' && s.inv
+            ? `<div class="ds-stat inv"><b>${s.inv}</b><span>${t('stat.inv')}</span></div>` : ''}</div>`).join('')}
           ${named ? `<div class="ds-stat-name">${esc(tr(s.name))}</div>` : ''}
         </div>`).join('')}
       </div>
@@ -397,12 +451,12 @@ export function renderModal(def, data, customImages) {
     ${def.abilities?.length ? `${dsHead(t('unit.abilities'))}${abilityList(def.abilities)}` : ''}
     ${def.wargearAbilities?.length ? `${dsHead(t('unit.wargearAbilities'))}${abilityList(def.wargearAbilities)}` : ''}
     ${def.damaged ? `${dsHead(`${t('unit.damaged')}: ${esc(tr(def.damaged.name))}`)}<p>${esc(tr(def.damaged.text))}</p>` : ''}
-    ${def.wargearOptions?.length ? `${dsHead(t('unit.wargearOptions'))}<ul class="wg-text">${def.wargearOptions.map(o => `<li>${esc(o.text)}${o.choices.length ? `<ul>${o.choices.map(c => `<li>${esc(c)}</li>`).join('')}</ul>` : ''}</li>`).join('')}</ul>` : ''}
+    ${def.wargearOptions?.length ? `${dsHead(t('unit.wargearOptions'))}<ul class="wg-text">${def.wargearOptions.map(o => `<li>${esc(trs(o.text))}${o.choices.length ? `<ul>${o.choices.map(c => `<li>${esc(trs(c))}</li>`).join('')}</ul>` : ''}</li>`).join('')}</ul>` : ''}
     ${def.composition?.length || def.equipped?.length ? `${dsHead(t('unit.composition'))}
-      ${def.composition?.length ? `<p>${def.composition.map(esc).join(' · ')}</p>` : ''}
-      ${(def.equipped ?? []).map(e => `<p class="muted">${esc(e)}</p>`).join('')}` : ''}
+      ${def.composition?.length ? `<p>${def.composition.map(c => esc(trs(c))).join(' · ')}</p>` : ''}
+      ${(def.equipped ?? []).map(e => `<p class="muted">${esc(trs(e))}</p>`).join('')}` : ''}
     ${def.leader ? `${dsHead(t('unit.leads'))}<p>${def.leader.canLead.map(id => esc(tr(data.unitsById.get(id)?.name) || id)).join(', ')}</p>` : ''}
-    ${def.attachRule ? `<p class="muted">${esc(def.attachRule)}</p>` : ''}
+    ${def.attachRule ? `<p class="muted">${esc(trs(def.attachRule))}</p>` : ''}
     ${def.transport ? `${dsHead(t('unit.transport'))}<p>${esc(tr(def.transport))}</p>` : ''}
     ${def.lore ? `<blockquote class="lore">${esc(tr(def.lore))}</blockquote>` : ''}
     </div>

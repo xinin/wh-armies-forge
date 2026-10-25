@@ -3,3 +3,4 @@
 # temporary files of the import tools
 *-products.json
 pdfs/
+.cache/

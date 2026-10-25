@@ -91,9 +91,6 @@
      ]
     }
    ],
-   "loadout": [
-    "vaultswords"
-   ],
    "abilities": [
     {
      "name": {
@@ -137,8 +134,15 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "vaultswords": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "vaultswords"
    ]
   },
   {
@@ -250,9 +254,6 @@
      ]
     }
    ],
-   "loadout": [
-    "executioner-greatblade"
-   ],
    "abilities": [
     {
      "name": {
@@ -281,12 +282,11 @@
    "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Centura",
    "wargearOptions": [
     {
-     "text": "This model’s Executioner Greatblade can be replaced with one of the following:1 Master-crafted Boltgun and 1 Gun Stock",
-     "choices": []
-    },
-    {
-     "text": "1 Master-crafted Flamer and 1 Gun Stock",
-     "choices": []
+     "text": "This model’s Executioner Greatblade can be replaced with one of the following:",
+     "choices": [
+      "1 Master-crafted Boltgun and 1 Gun Stock",
+      "1 Master-crafted Flamer and 1 Gun Stock"
+     ]
     }
    ],
    "composition": [
@@ -298,8 +298,62 @@
    "role": "character",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "executioner-greatblade": 1
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Executioner Greatblade",
+      "es": "Executioner Greatblade"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "executioner-greatblade",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "master-crafted-boltgun+gun-stock",
+      "master-crafted-flamer+gun-stock"
+     ],
+     "packages": {
+      "master-crafted-boltgun+gun-stock": [
+       {
+        "item": "master-crafted-boltgun",
+        "n": 1
+       },
+       {
+        "item": "gun-stock",
+        "n": 1
+       }
+      ],
+      "master-crafted-flamer+gun-stock": [
+       {
+        "item": "master-crafted-flamer",
+        "n": 1
+       },
+       {
+        "item": "gun-stock",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "master-crafted-boltgun+gun-stock": "Master-crafted Boltgun + Gun Stock",
+      "master-crafted-flamer+gun-stock": "Master-crafted Flamer + Gun Stock",
+      "": "Executioner Greatblade"
+     }
+    }
+   ],
+   "loadout": [
+    "executioner-greatblade"
    ]
   },
   {
@@ -468,10 +522,6 @@
      ]
     }
    ],
-   "loadout": [
-    "pyrithite-spear",
-    "pyrithite-spear-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -500,18 +550,27 @@
     "Martial Ka’tah"
    ],
    "source": "wahapedia.ru/wh40k11ed/factions/.../Shield-Captain",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Praesidium Shield"
+     },
+     "text": {
+      "en": "Attacks allocated to this model have -1 D."
+     }
+    }
+   ],
    "wargearOptions": [
     {
      "text": "This model’s Pyrithite Spear can be replaced with 1 Eternity-pattern Paragon Blade.",
      "choices": []
     },
     {
-     "text": "This model’s Pyrithite Spear and Praesidium Shield can be replaced with one of the following:Castellan Axe",
-     "choices": []
-    },
-    {
-     "text": "Guardian Spear",
-     "choices": []
+     "text": "This model’s Pyrithite Spear and Praesidium Shield can be replaced with one of the following:",
+     "choices": [
+      "Castellan Axe",
+      "Guardian Spear"
+     ]
     }
    ],
    "composition": [
@@ -528,25 +587,110 @@
      "sentinel-guard-sodality"
     ]
    },
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "pyrithite-spear",
-     "choices": [
-      "pyrithite-spear",
-      "eternity-pattern-paragon-blade"
-     ],
-     "label": {
-      "en": "Replace Pyrithite Spear",
-      "es": "Sustituir Pyrithite Spear"
+     "models": 1,
+     "loadout": {
+      "gear:praesidium-shield": 1,
+      "pyrithite-spear": 1,
+      "pyrithite-spear-melee": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Pyrithite Spear + Pyrithite Spear",
+      "es": "Pyrithite Spear + Pyrithite Spear"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "pyrithite-spear",
+       "n": 1
+      },
+      {
+       "item": "pyrithite-spear-melee",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "eternity-pattern-paragon-blade"
+     ],
+     "packages": {
+      "eternity-pattern-paragon-blade": [
+       {
+        "item": "eternity-pattern-paragon-blade",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "eternity-pattern-paragon-blade": "Eternity-pattern Paragon Blade",
+      "": "Pyrithite Spear + Pyrithite Spear"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Pyrithite Spear + Pyrithite Spear + Praesidium shield",
+      "es": "Pyrithite Spear + Pyrithite Spear + Praesidium shield"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "pyrithite-spear",
+       "n": 1
+      },
+      {
+       "item": "pyrithite-spear-melee",
+       "n": 1
+      },
+      {
+       "item": "gear:praesidium-shield",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "castellan-axe+castellan-axe-melee",
+      "guardian-spear+guardian-spear-melee"
+     ],
+     "packages": {
+      "castellan-axe+castellan-axe-melee": [
+       {
+        "item": "castellan-axe",
+        "n": 1
+       },
+       {
+        "item": "castellan-axe-melee",
+        "n": 1
+       }
+      ],
+      "guardian-spear+guardian-spear-melee": [
+       {
+        "item": "guardian-spear",
+        "n": 1
+       },
+       {
+        "item": "guardian-spear-melee",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "castellan-axe+castellan-axe-melee": "Castellan Axe + Castellan Axe",
+      "guardian-spear+guardian-spear-melee": "Guardian Spear + Guardian Spear",
+      "": "Pyrithite Spear + Pyrithite Spear + Praesidium shield"
+     }
     }
+   ],
+   "loadout": [
+    "gear:praesidium-shield",
+    "pyrithite-spear",
+    "pyrithite-spear-melee"
    ]
   },
   {
@@ -676,11 +820,6 @@
      ]
     }
    ],
-   "loadout": [
-    "balistus-grenade-launcher",
-    "guardian-spear",
-    "guardian-spear-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -729,25 +868,60 @@
      "aquilon-terminators-with-solarite-power-talons"
     ]
    },
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "guardian-spear",
-     "choices": [
-      "guardian-spear",
-      "castellan-axe"
-     ],
-     "label": {
-      "en": "Replace Guardian Spear",
-      "es": "Sustituir Guardian Spear"
+     "models": 1,
+     "loadout": {
+      "balistus-grenade-launcher": 1,
+      "guardian-spear": 1,
+      "guardian-spear-melee": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Guardian Spear + Guardian Spear",
+      "es": "Guardian Spear + Guardian Spear"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "guardian-spear",
+       "n": 1
+      },
+      {
+       "item": "guardian-spear-melee",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "castellan-axe+castellan-axe-melee"
+     ],
+     "packages": {
+      "castellan-axe+castellan-axe-melee": [
+       {
+        "item": "castellan-axe",
+        "n": 1
+       },
+       {
+        "item": "castellan-axe-melee",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "castellan-axe+castellan-axe-melee": "Castellan Axe + Castellan Axe",
+      "": "Guardian Spear + Guardian Spear"
+     }
     }
+   ],
+   "loadout": [
+    "balistus-grenade-launcher",
+    "guardian-spear",
+    "guardian-spear-melee"
    ]
   },
   {
@@ -835,10 +1009,6 @@
      ]
     }
    ],
-   "loadout": [
-    "interceptor-lance",
-    "salvo-launcher"
-   ],
    "abilities": [
     {
      "name": {
@@ -886,25 +1056,50 @@
      "vertus-praetors"
     ]
    },
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "salvo-launcher",
-     "choices": [
-      "salvo-launcher",
-      "hurricane-bolter"
-     ],
-     "label": {
-      "en": "Replace Salvo Launcher",
-      "es": "Sustituir Salvo Launcher"
+     "models": 1,
+     "loadout": {
+      "interceptor-lance": 1,
+      "salvo-launcher": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Salvo Launcher",
+      "es": "Salvo Launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "salvo-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hurricane-bolter"
+     ],
+     "packages": {
+      "hurricane-bolter": [
+       {
+        "item": "hurricane-bolter",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hurricane-bolter": "Hurricane Bolter",
+      "": "Salvo Launcher"
+     }
     }
+   ],
+   "loadout": [
+    "interceptor-lance",
+    "salvo-launcher"
    ]
   },
   {
@@ -973,10 +1168,6 @@
      ]
     }
    ],
-   "loadout": [
-    "eagles-scream",
-    "watchers-axe"
-   ],
    "abilities": [
     {
      "name": {
@@ -1025,8 +1216,17 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "eagles-scream": 1,
+      "watchers-axe": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "eagles-scream",
+    "watchers-axe"
    ]
   },
   {
@@ -1093,10 +1293,6 @@
      ]
     }
    ],
-   "loadout": [
-    "guardian-spear",
-    "guardian-spear-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -1115,6 +1311,16 @@
     "Martial Ka’tah"
    ],
    "source": "wahapedia.ru/wh40k11ed/factions/.../Custodian-Guard-Sodality",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Vexilla"
+     },
+     "text": {
+      "en": "This unit has +1 OC. This unit can ignore modifiers to this unit’s Ld."
+     }
+    }
+   ],
    "wargearOptions": [
     {
      "text": "1 model can be equipped with 1 Vexilla.",
@@ -1130,8 +1336,42 @@
    "role": "battleline",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "guardian-spear": 3,
+      "guardian-spear-melee": 3
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Vexilla",
+      "es": "añadir Vexilla"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:vexilla",
+     "packages": {
+      "gear:vexilla": [
+       {
+        "item": "gear:vexilla",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1
+     },
+     "labels": {
+      "gear:vexilla": "Vexilla"
+     }
+    }
+   ],
+   "loadout": [
+    "guardian-spear",
+    "guardian-spear-melee"
    ]
   },
   {
@@ -1198,10 +1438,6 @@
      ]
     }
    ],
-   "loadout": [
-    "sentinel-blade",
-    "sentinel-blade-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -1220,6 +1456,24 @@
     "Martial Ka’tah"
    ],
    "source": "wahapedia.ru/wh40k11ed/factions/.../Sentinel-Guard-Sodality",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Praesidium Shield"
+     },
+     "text": {
+      "en": "Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
+     }
+    },
+    {
+     "name": {
+      "en": "Vexilla"
+     },
+     "text": {
+      "en": "This unit has +1 OC. This unit can ignore modifiers to this unit’s Ld."
+     }
+    }
+   ],
    "wargearOptions": [
     {
      "text": "1 model can be equipped with 1 Vexilla.",
@@ -1235,8 +1489,44 @@
    "role": "battleline",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "gear:praesidium-shield": 3,
+      "sentinel-blade": 3,
+      "sentinel-blade-melee": 3
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Vexilla",
+      "es": "añadir Vexilla"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:vexilla",
+     "packages": {
+      "gear:vexilla": [
+       {
+        "item": "gear:vexilla",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1
+     },
+     "labels": {
+      "gear:vexilla": "Vexilla"
+     }
+    }
+   ],
+   "loadout": [
+    "gear:praesidium-shield",
+    "sentinel-blade",
+    "sentinel-blade-melee"
    ]
   },
   {
@@ -1362,11 +1652,6 @@
      ]
     }
    ],
-   "loadout": [
-    "balistus-grenade-launcher",
-    "guardian-spear",
-    "guardian-spear-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -1385,6 +1670,16 @@
     "Martial Ka’tah"
    ],
    "source": "wahapedia.ru/wh40k11ed/factions/.../Allarus-Custodians",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Vexilla"
+     },
+     "text": {
+      "en": "This unit has +1 OC. This unit can ignore modifiers to this unit’s Ld."
+     }
+    }
+   ],
    "wargearOptions": [
     {
      "text": "1 model can be equipped with 1 Vexilla.",
@@ -1404,11 +1699,92 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 2
+     "models": 2,
+     "loadout": {
+      "balistus-grenade-launcher": 2,
+      "guardian-spear": 2,
+      "guardian-spear-melee": 2
+     }
     },
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "balistus-grenade-launcher": 3,
+      "guardian-spear": 3,
+      "guardian-spear-melee": 3
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Vexilla",
+      "es": "añadir Vexilla"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:vexilla",
+     "packages": {
+      "gear:vexilla": [
+       {
+        "item": "gear:vexilla",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "2": 1,
+      "3": 1
+     },
+     "labels": {
+      "gear:vexilla": "Vexilla"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Guardian Spear + Guardian Spear (all models)",
+      "es": "Guardian Spear + Guardian Spear (todos los modelos)"
+     },
+     "type": "swap",
+     "scope": "all",
+     "replaces": [
+      {
+       "item": "guardian-spear",
+       "n": 1
+      },
+      {
+       "item": "guardian-spear-melee",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "castellan-axe+castellan-axe-melee"
+     ],
+     "packages": {
+      "castellan-axe+castellan-axe-melee": [
+       {
+        "item": "castellan-axe",
+        "n": 1
+       },
+       {
+        "item": "castellan-axe-melee",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "castellan-axe+castellan-axe-melee": "Castellan Axe + Castellan Axe",
+      "": "Guardian Spear + Guardian Spear"
+     }
+    }
+   ],
+   "loadout": [
+    "balistus-grenade-launcher",
+    "guardian-spear",
+    "guardian-spear-melee"
    ]
   },
   {
@@ -1471,10 +1847,6 @@
      ]
     }
    ],
-   "loadout": [
-    "adrathic-combi-destructor",
-    "solarite-power-gauntlet"
-   ],
    "abilities": [
     {
      "name": {
@@ -1502,8 +1874,17 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "adrathic-combi-destructor": 3,
+      "solarite-power-gauntlet": 3
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "adrathic-combi-destructor",
+    "solarite-power-gauntlet"
    ]
   },
   {
@@ -1591,10 +1972,6 @@
      ]
     }
    ],
-   "loadout": [
-    "lastrum-storm-bolter",
-    "solarite-power-talon"
-   ],
    "abilities": [
     {
      "name": {
@@ -1628,8 +2005,49 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "lastrum-storm-bolter": 3,
+      "solarite-power-talon": 3
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Lastrum Storm Bolter (all models)",
+      "es": "Lastrum Storm Bolter (todos los modelos)"
+     },
+     "type": "swap",
+     "scope": "all",
+     "replaces": [
+      {
+       "item": "lastrum-storm-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "infernus-firepike"
+     ],
+     "packages": {
+      "infernus-firepike": [
+       {
+        "item": "infernus-firepike",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "infernus-firepike": "Infernus Firepike",
+      "": "Lastrum Storm Bolter"
+     }
+    }
+   ],
+   "loadout": [
+    "lastrum-storm-bolter",
+    "solarite-power-talon"
    ]
   },
   {
@@ -1734,10 +2152,6 @@
      ]
     }
    ],
-   "loadout": [
-    "guardian-spear",
-    "guardian-spear-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -1756,6 +2170,16 @@
     "Martial Ka’tah"
    ],
    "source": "wahapedia.ru/wh40k11ed/factions/.../Custodian-Wardens",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Vexilla"
+     },
+     "text": {
+      "en": "This unit has +1 OC. This unit can ignore modifiers to this unit’s Ld."
+     }
+    }
+   ],
    "wargearOptions": [
     {
      "text": "All models in this unit can each have their Guardian Spear replaced with 1 Castellan Axe.",
@@ -1775,11 +2199,89 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 2
+     "models": 2,
+     "loadout": {
+      "guardian-spear": 2,
+      "guardian-spear-melee": 2
+     }
     },
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "guardian-spear": 3,
+      "guardian-spear-melee": 3
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Guardian Spear + Guardian Spear (all models)",
+      "es": "Guardian Spear + Guardian Spear (todos los modelos)"
+     },
+     "type": "swap",
+     "scope": "all",
+     "replaces": [
+      {
+       "item": "guardian-spear",
+       "n": 1
+      },
+      {
+       "item": "guardian-spear-melee",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "castellan-axe+castellan-axe-melee"
+     ],
+     "packages": {
+      "castellan-axe+castellan-axe-melee": [
+       {
+        "item": "castellan-axe",
+        "n": 1
+       },
+       {
+        "item": "castellan-axe-melee",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "castellan-axe+castellan-axe-melee": "Castellan Axe + Castellan Axe",
+      "": "Guardian Spear + Guardian Spear"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Vexilla",
+      "es": "añadir Vexilla"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:vexilla",
+     "packages": {
+      "gear:vexilla": [
+       {
+        "item": "gear:vexilla",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "2": 1,
+      "3": 1
+     },
+     "labels": {
+      "gear:vexilla": "Vexilla"
+     }
+    }
+   ],
+   "loadout": [
+    "guardian-spear",
+    "guardian-spear-melee"
    ]
   },
   {
@@ -1844,10 +2346,6 @@
      ]
     }
    ],
-   "loadout": [
-    "boltgun",
-    "gun-stock"
-   ],
    "abilities": [
     {
      "name": {
@@ -1872,17 +2370,38 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 4
+     "models": 4,
+     "loadout": {
+      "boltgun": 4,
+      "gun-stock": 4
+     }
     },
     {
-     "models": 5
+     "models": 5,
+     "loadout": {
+      "boltgun": 5,
+      "gun-stock": 5
+     }
     },
     {
-     "models": 9
+     "models": 9,
+     "loadout": {
+      "boltgun": 9,
+      "gun-stock": 9
+     }
     },
     {
-     "models": 10
+     "models": 10,
+     "loadout": {
+      "boltgun": 10,
+      "gun-stock": 10
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "boltgun",
+    "gun-stock"
    ]
   },
   {
@@ -1953,10 +2472,6 @@
      ]
     }
    ],
-   "loadout": [
-    "kinetic-destroyer",
-    "tarsus-buckler"
-   ],
    "abilities": [
     {
      "name": {
@@ -2000,8 +2515,17 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "kinetic-destroyer": 3,
+      "tarsus-buckler": 3
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "kinetic-destroyer",
+    "tarsus-buckler"
    ]
   },
   {
@@ -2071,10 +2595,6 @@
      ]
     }
    ],
-   "loadout": [
-    "verutum-lance",
-    "verutum-lance-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -2118,8 +2638,17 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "verutum-lance": 3,
+      "verutum-lance-melee": 3
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "verutum-lance",
+    "verutum-lance-melee"
    ]
   },
   {
@@ -2165,9 +2694,6 @@
      ]
     }
    ],
-   "loadout": [
-    "executioner-greatblade"
-   ],
    "abilities": [
     {
      "name": {
@@ -2192,17 +2718,33 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 4
+     "models": 4,
+     "loadout": {
+      "executioner-greatblade": 4
+     }
     },
     {
-     "models": 5
+     "models": 5,
+     "loadout": {
+      "executioner-greatblade": 5
+     }
     },
     {
-     "models": 9
+     "models": 9,
+     "loadout": {
+      "executioner-greatblade": 9
+     }
     },
     {
-     "models": 10
+     "models": 10,
+     "loadout": {
+      "executioner-greatblade": 10
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "executioner-greatblade"
    ]
   },
   {
@@ -2268,10 +2810,6 @@
      ]
     }
    ],
-   "loadout": [
-    "flamer",
-    "gun-stock"
-   ],
    "abilities": [
     {
      "name": {
@@ -2298,17 +2836,38 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 4
+     "models": 4,
+     "loadout": {
+      "flamer": 4,
+      "gun-stock": 4
+     }
     },
     {
-     "models": 5
+     "models": 5,
+     "loadout": {
+      "flamer": 5,
+      "gun-stock": 5
+     }
     },
     {
-     "models": 9
+     "models": 9,
+     "loadout": {
+      "flamer": 9,
+      "gun-stock": 9
+     }
     },
     {
-     "models": 10
+     "models": 10,
+     "loadout": {
+      "flamer": 10,
+      "gun-stock": 10
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "flamer",
+    "gun-stock"
    ]
   },
   {
@@ -2434,10 +2993,6 @@
      ]
     }
    ],
-   "loadout": [
-    "lastrum-bolt-cannon",
-    "solarite-power-lance"
-   ],
    "abilities": [
     {
      "name": {
@@ -2458,16 +3013,12 @@
    "source": "wahapedia.ru/wh40k11ed/factions/.../Gyrfalcon-Jetbike-Sodality",
    "wargearOptions": [
     {
-     "text": "All models in this unit can each have their Lastrum Bolt Cannon replaced with one of the following:1 Adrathic Devastator",
-     "choices": []
-    },
-    {
-     "text": "1 Arachnus Volley Cannon",
-     "choices": []
-    },
-    {
-     "text": "1 Twin Corvae Las-pulser",
-     "choices": []
+     "text": "All models in this unit can each have their Lastrum Bolt Cannon replaced with one of the following:",
+     "choices": [
+      "1 Adrathic Devastator",
+      "1 Arachnus Volley Cannon",
+      "1 Twin Corvae Las-pulser"
+     ]
     }
    ],
    "composition": [
@@ -2479,8 +3030,65 @@
    "role": "mounted",
    "sizes": [
     {
-     "models": 2
+     "models": 2,
+     "loadout": {
+      "lastrum-bolt-cannon": 2,
+      "solarite-power-lance": 2
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Lastrum Bolt Cannon (all models)",
+      "es": "Lastrum Bolt Cannon (todos los modelos)"
+     },
+     "type": "swap",
+     "scope": "all",
+     "replaces": [
+      {
+       "item": "lastrum-bolt-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "adrathic-devastator",
+      "arachnus-volley-cannon",
+      "twin-corvae-las-pulser"
+     ],
+     "packages": {
+      "adrathic-devastator": [
+       {
+        "item": "adrathic-devastator",
+        "n": 1
+       }
+      ],
+      "arachnus-volley-cannon": [
+       {
+        "item": "arachnus-volley-cannon",
+        "n": 1
+       }
+      ],
+      "twin-corvae-las-pulser": [
+       {
+        "item": "twin-corvae-las-pulser",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "adrathic-devastator": "Adrathic Devastator",
+      "arachnus-volley-cannon": "Arachnus Volley Cannon",
+      "twin-corvae-las-pulser": "Twin Corvae Las-pulser",
+      "": "Lastrum Bolt Cannon"
+     }
+    }
+   ],
+   "loadout": [
+    "lastrum-bolt-cannon",
+    "solarite-power-lance"
    ]
   },
   {
@@ -2566,10 +3174,6 @@
      ]
     }
    ],
-   "loadout": [
-    "interceptor-lance",
-    "salvo-launcher"
-   ],
    "abilities": [
     {
      "name": {
@@ -2603,11 +3207,56 @@
    "role": "mounted",
    "sizes": [
     {
-     "models": 2
+     "models": 2,
+     "loadout": {
+      "interceptor-lance": 2,
+      "salvo-launcher": 2
+     }
     },
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "interceptor-lance": 3,
+      "salvo-launcher": 3
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Salvo Launcher (all models)",
+      "es": "Salvo Launcher (todos los modelos)"
+     },
+     "type": "swap",
+     "scope": "all",
+     "replaces": [
+      {
+       "item": "salvo-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hurricane-bolter"
+     ],
+     "packages": {
+      "hurricane-bolter": [
+       {
+        "item": "hurricane-bolter",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hurricane-bolter": "Hurricane Bolter",
+      "": "Salvo Launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "interceptor-lance",
+    "salvo-launcher"
    ]
   },
   {
@@ -2718,11 +3367,6 @@
      ]
     }
    ],
-   "loadout": [
-    "arachnus-blaze-carronade",
-    "armoured-hull",
-    "twin-lastrum-bolt-cannon"
-   ],
    "abilities": [
     {
      "name": {
@@ -2755,25 +3399,52 @@
     "This model is equipped with: 1 Arachnus Blaze Carronade; 1 Armoured Hull; 1 Twin Lastrum Bolt Cannon."
    ],
    "role": "vehicle",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "twin-lastrum-bolt-cannon",
-     "choices": [
-      "twin-lastrum-bolt-cannon",
-      "twin-neutronium-cascade-projectors"
-     ],
-     "label": {
-      "en": "Replace Twin Lastrum Bolt Cannon",
-      "es": "Sustituir Twin Lastrum Bolt Cannon"
+     "models": 1,
+     "loadout": {
+      "arachnus-blaze-carronade": 1,
+      "armoured-hull": 1,
+      "twin-lastrum-bolt-cannon": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Twin Lastrum Bolt Cannon",
+      "es": "Twin Lastrum Bolt Cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "twin-lastrum-bolt-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "twin-neutronium-cascade-projectors"
+     ],
+     "packages": {
+      "twin-neutronium-cascade-projectors": [
+       {
+        "item": "twin-neutronium-cascade-projectors",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "twin-neutronium-cascade-projectors": "Twin Neutronium Cascade Projectors",
+      "": "Twin Lastrum Bolt Cannon"
+     }
     }
+   ],
+   "loadout": [
+    "arachnus-blaze-carronade",
+    "armoured-hull",
+    "twin-lastrum-bolt-cannon"
    ]
   },
   {
@@ -2884,11 +3555,6 @@
      ]
     }
    ],
-   "loadout": [
-    "armoured-hull",
-    "iliastus-accelerator-cannon",
-    "twin-lastrum-bolt-cannon"
-   ],
    "abilities": [
     {
      "name": {
@@ -2921,25 +3587,52 @@
     "This model is equipped with: 1 Armoured Hull; 1 Iliastus Accelerator Cannon; 1 Twin Lastrum Bolt Cannon."
    ],
    "role": "vehicle",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "twin-lastrum-bolt-cannon",
-     "choices": [
-      "twin-lastrum-bolt-cannon",
-      "twin-neutronium-cascade-projectors"
-     ],
-     "label": {
-      "en": "Replace Twin Lastrum Bolt Cannon",
-      "es": "Sustituir Twin Lastrum Bolt Cannon"
+     "models": 1,
+     "loadout": {
+      "armoured-hull": 1,
+      "iliastus-accelerator-cannon": 1,
+      "twin-lastrum-bolt-cannon": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Twin Lastrum Bolt Cannon",
+      "es": "Twin Lastrum Bolt Cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "twin-lastrum-bolt-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "twin-neutronium-cascade-projectors"
+     ],
+     "packages": {
+      "twin-neutronium-cascade-projectors": [
+       {
+        "item": "twin-neutronium-cascade-projectors",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "twin-neutronium-cascade-projectors": "Twin Neutronium Cascade Projectors",
+      "": "Twin Lastrum Bolt Cannon"
+     }
     }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "iliastus-accelerator-cannon",
+    "twin-lastrum-bolt-cannon"
    ]
   },
   {
@@ -3065,11 +3758,6 @@
      ]
     }
    ],
-   "loadout": [
-    "dreadspear",
-    "dreadspear-melee",
-    "lastrum-storm-bolter"
-   ],
    "abilities": [
     {
      "name": {
@@ -3091,12 +3779,11 @@
    "source": "wahapedia.ru/wh40k11ed/factions/.../Contemptor-Achillus-Dreadnought",
    "wargearOptions": [
     {
-     "text": "This model’s 2 Lastrum Storm Bolter can be replaced with one of the following:2 Adrathic Combi-destructor",
-     "choices": []
-    },
-    {
-     "text": "2 Twin Infernus Incinerator",
-     "choices": []
+     "text": "This model’s 2 Lastrum Storm Bolter can be replaced with one of the following:",
+     "choices": [
+      "2 Adrathic Combi-destructor",
+      "2 Twin Infernus Incinerator"
+     ]
     }
    ],
    "composition": [
@@ -3108,8 +3795,58 @@
    "role": "vehicle",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "dreadspear": 1,
+      "dreadspear-melee": 1,
+      "lastrum-storm-bolter": 2
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "2× Lastrum Storm Bolter",
+      "es": "2× Lastrum Storm Bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "lastrum-storm-bolter",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "",
+      "2xadrathic-combi-destructor",
+      "2xtwin-infernus-incinerator"
+     ],
+     "packages": {
+      "2xadrathic-combi-destructor": [
+       {
+        "item": "adrathic-combi-destructor",
+        "n": 2
+       }
+      ],
+      "2xtwin-infernus-incinerator": [
+       {
+        "item": "twin-infernus-incinerator",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xadrathic-combi-destructor": "2× Adrathic Combi-destructor",
+      "2xtwin-infernus-incinerator": "2× Twin Infernus Incinerator",
+      "": "2× Lastrum Storm Bolter"
+     }
+    }
+   ],
+   "loadout": [
+    "dreadspear",
+    "dreadspear-melee",
+    "lastrum-storm-bolter"
    ]
   },
   {
@@ -3179,10 +3916,6 @@
      ]
     }
    ],
-   "loadout": [
-    "warblade",
-    "warblade-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -3211,8 +3944,17 @@
    "role": "vehicle",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "warblade": 1,
+      "warblade-melee": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "warblade",
+    "warblade-melee"
    ]
   },
   {
@@ -3300,10 +4042,6 @@
      ]
     }
    ],
-   "loadout": [
-    "armoured-hull",
-    "twin-arachnus-blaze-cannon"
-   ],
    "abilities": [
     {
      "name": {
@@ -3335,25 +4073,50 @@
     "This model is equipped with: 1 Armoured Hull; 1 Twin Arachnus Blaze Cannon."
    ],
    "role": "vehicle",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "twin-arachnus-blaze-cannon",
-     "choices": [
-      "twin-arachnus-blaze-cannon",
-      "twin-iliastus-accelerator-fusil"
-     ],
-     "label": {
-      "en": "Replace Twin Arachnus Blaze Cannon",
-      "es": "Sustituir Twin Arachnus Blaze Cannon"
+     "models": 1,
+     "loadout": {
+      "armoured-hull": 1,
+      "twin-arachnus-blaze-cannon": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Twin Arachnus Blaze Cannon",
+      "es": "Twin Arachnus Blaze Cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "twin-arachnus-blaze-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "twin-iliastus-accelerator-fusil"
+     ],
+     "packages": {
+      "twin-iliastus-accelerator-fusil": [
+       {
+        "item": "twin-iliastus-accelerator-fusil",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "twin-iliastus-accelerator-fusil": "Twin Iliastus Accelerator Fusil",
+      "": "Twin Arachnus Blaze Cannon"
+     }
     }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "twin-arachnus-blaze-cannon"
    ]
   },
   {
@@ -3520,11 +4283,6 @@
      ]
     }
    ],
-   "loadout": [
-    "dual-caestus-fists",
-    "spiculus-bolt-launcher",
-    "twin-neutronium-cascade-projectors"
-   ],
    "abilities": [
     {
      "name": {
@@ -3546,16 +4304,12 @@
    "source": "wahapedia.ru/wh40k11ed/factions/.../Telemon-Heavy-Dreadnought",
    "wargearOptions": [
     {
-     "text": "This model’s Dual Caestus Fists and 2 Twin Neutronium Cascade Projectors can be replaced with one of the following:1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors",
-     "choices": []
-    },
-    {
-     "text": "1 Arachnus Storm Cannon, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors",
-     "choices": []
-    },
-    {
-     "text": "1 Caestus Fist, 1 Iliastus Accelerator Culverin and 1 Twin Neutronium Cascade Projectors",
-     "choices": []
+     "text": "This model’s Dual Caestus Fists and 2 Twin Neutronium Cascade Projectors can be replaced with one of the following:",
+     "choices": [
+      "1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors",
+      "1 Arachnus Storm Cannon, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors",
+      "1 Caestus Fist, 1 Iliastus Accelerator Culverin and 1 Twin Neutronium Cascade Projectors"
+     ]
     }
    ],
    "composition": [
@@ -3567,8 +4321,94 @@
    "role": "vehicle",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "dual-caestus-fists": 1,
+      "spiculus-bolt-launcher": 1,
+      "twin-neutronium-cascade-projectors": 2
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Dual Caestus Fists + 2× Twin Neutronium Cascade Projectors",
+      "es": "Dual Caestus Fists + 2× Twin Neutronium Cascade Projectors"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "dual-caestus-fists",
+       "n": 1
+      },
+      {
+       "item": "twin-neutronium-cascade-projectors",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "",
+      "adrathic-desolator+caestus-fist+twin-neutronium-cascade-projectors",
+      "arachnus-storm-cannon+caestus-fist+twin-neutronium-cascade-projectors",
+      "caestus-fist+iliastus-accelerator-culverin+twin-neutronium-cascade-projectors"
+     ],
+     "packages": {
+      "adrathic-desolator+caestus-fist+twin-neutronium-cascade-projectors": [
+       {
+        "item": "adrathic-desolator",
+        "n": 1
+       },
+       {
+        "item": "caestus-fist",
+        "n": 1
+       },
+       {
+        "item": "twin-neutronium-cascade-projectors",
+        "n": 1
+       }
+      ],
+      "arachnus-storm-cannon+caestus-fist+twin-neutronium-cascade-projectors": [
+       {
+        "item": "arachnus-storm-cannon",
+        "n": 1
+       },
+       {
+        "item": "caestus-fist",
+        "n": 1
+       },
+       {
+        "item": "twin-neutronium-cascade-projectors",
+        "n": 1
+       }
+      ],
+      "caestus-fist+iliastus-accelerator-culverin+twin-neutronium-cascade-projectors": [
+       {
+        "item": "caestus-fist",
+        "n": 1
+       },
+       {
+        "item": "iliastus-accelerator-culverin",
+        "n": 1
+       },
+       {
+        "item": "twin-neutronium-cascade-projectors",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "adrathic-desolator+caestus-fist+twin-neutronium-cascade-projectors": "Adrathic Desolator + Caestus Fist + Twin Neutronium Cascade Projectors",
+      "arachnus-storm-cannon+caestus-fist+twin-neutronium-cascade-projectors": "Arachnus Storm Cannon + Caestus Fist + Twin Neutronium Cascade Projectors",
+      "caestus-fist+iliastus-accelerator-culverin+twin-neutronium-cascade-projectors": "Caestus Fist + Iliastus Accelerator Culverin + Twin Neutronium Cascade Projectors",
+      "": "Dual Caestus Fists + 2× Twin Neutronium Cascade Projectors"
+     }
+    }
+   ],
+   "loadout": [
+    "dual-caestus-fists",
+    "spiculus-bolt-launcher",
+    "twin-neutronium-cascade-projectors"
    ]
   },
   {
@@ -3655,10 +4495,6 @@
      ]
     }
    ],
-   "loadout": [
-    "armoured-tracks",
-    "storm-bolter"
-   ],
    "abilities": [
     {
      "name": {
@@ -3693,21 +4529,44 @@
     "en": "This model has a transport capacity of 12 ANATHEMA PSYKANA INFANTRY models."
    },
    "role": "transport",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "toggle",
-     "gives": "hunter-killer-missile",
-     "label": {
-      "en": "Add Hunter-killer Missile",
-      "es": "Añadir Hunter-killer Missile"
+     "models": 1,
+     "loadout": {
+      "armoured-tracks": 1,
+      "storm-bolter": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "add Hunter-killer Missile",
+      "es": "añadir Hunter-killer Missile"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "hunter-killer-missile",
+     "packages": {
+      "hunter-killer-missile": [
+       {
+        "item": "hunter-killer-missile",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "hunter-killer-missile": "Hunter-killer Missile"
+     }
     }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "storm-bolter"
    ]
   },
   {
@@ -3818,11 +4677,6 @@
      ]
     }
    ],
-   "loadout": [
-    "armoured-hull",
-    "twin-arachnus-blaze-cannon",
-    "twin-lastrum-bolt-cannon"
-   ],
    "abilities": [
     {
      "name": {
@@ -3866,25 +4720,52 @@
     "en": "This model has a transport capacity of 8 ADEPTUS CUSTODES INFANTRY models. It cannot transport JUMP PACK models."
    },
    "role": "transport",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "twin-lastrum-bolt-cannon",
-     "choices": [
-      "twin-lastrum-bolt-cannon",
-      "twin-neutronium-cascade-projectors"
-     ],
-     "label": {
-      "en": "Replace Twin Lastrum Bolt Cannon",
-      "es": "Sustituir Twin Lastrum Bolt Cannon"
+     "models": 1,
+     "loadout": {
+      "armoured-hull": 1,
+      "twin-arachnus-blaze-cannon": 1,
+      "twin-lastrum-bolt-cannon": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Twin Lastrum Bolt Cannon",
+      "es": "Twin Lastrum Bolt Cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "twin-lastrum-bolt-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "twin-neutronium-cascade-projectors"
+     ],
+     "packages": {
+      "twin-neutronium-cascade-projectors": [
+       {
+        "item": "twin-neutronium-cascade-projectors",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "twin-neutronium-cascade-projectors": "Twin Neutronium Cascade Projectors",
+      "": "Twin Lastrum Bolt Cannon"
+     }
     }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "twin-arachnus-blaze-cannon",
+    "twin-lastrum-bolt-cannon"
    ]
   }
  ]

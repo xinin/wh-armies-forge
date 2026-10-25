@@ -62,9 +62,6 @@
      ]
     }
    ],
-   "loadout": [
-    "broodlord-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -106,8 +103,15 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "broodlord-claws-and-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "broodlord-claws-and-talons"
    ]
   },
   {
@@ -157,9 +161,6 @@
      ]
     }
    ],
-   "loadout": [
-    "lictor-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -197,8 +198,15 @@
    "role": "character",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "lictor-claws-and-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lictor-claws-and-talons"
    ]
   },
   {
@@ -308,10 +316,6 @@
      ]
     }
    ],
-   "loadout": [
-    "monstrous-bonesword-and-lash-whip",
-    "monstrous-scything-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -356,6 +360,9 @@
      ]
     }
    ],
+   "wargearNotes": [
+    "*This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon. This model cannot be equipped with more than 1 heavy venom cannon, and it cannot be equipped with more than 1 stranglethorn cannon."
+   ],
    "composition": [
     "1 Hive Tyrant"
    ],
@@ -368,26 +375,104 @@
      "tyrant-guard"
     ]
    },
-   "wargear": [
+   "sizes": [
     {
-     "id": "o2",
-     "type": "swap",
-     "default": "monstrous-scything-talons",
-     "choices": [
-      "monstrous-scything-talons",
-      "heavy-venom-cannon",
-      "stranglethorn-cannon"
-     ],
-     "label": {
-      "en": "Replace Monstrous scything talons",
-      "es": "Sustituir Monstrous scything talons"
+     "models": 1,
+     "loadout": {
+      "monstrous-bonesword-and-lash-whip": 1,
+      "monstrous-scything-talons": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Monstrous bonesword and lash whip",
+      "es": "Monstrous bonesword and lash whip"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "monstrous-bonesword-and-lash-whip",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "heavy-venom-cannon",
+      "stranglethorn-cannon",
+      "monstrous-scything-talons"
+     ],
+     "packages": {
+      "heavy-venom-cannon": [
+       {
+        "item": "heavy-venom-cannon",
+        "n": 1
+       }
+      ],
+      "stranglethorn-cannon": [
+       {
+        "item": "stranglethorn-cannon",
+        "n": 1
+       }
+      ],
+      "monstrous-scything-talons": [
+       {
+        "item": "monstrous-scything-talons",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "heavy-venom-cannon": "Heavy venom cannon",
+      "stranglethorn-cannon": "Stranglethorn cannon",
+      "monstrous-scything-talons": "Monstrous scything talons",
+      "": "Monstrous bonesword and lash whip"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Monstrous scything talons",
+      "es": "Monstrous scything talons"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "monstrous-scything-talons",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "heavy-venom-cannon",
+      "stranglethorn-cannon"
+     ],
+     "packages": {
+      "heavy-venom-cannon": [
+       {
+        "item": "heavy-venom-cannon",
+        "n": 1
+       }
+      ],
+      "stranglethorn-cannon": [
+       {
+        "item": "stranglethorn-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "heavy-venom-cannon": "Heavy venom cannon",
+      "stranglethorn-cannon": "Stranglethorn cannon",
+      "": "Monstrous scything talons"
+     }
     }
+   ],
+   "loadout": [
+    "monstrous-bonesword-and-lash-whip",
+    "monstrous-scything-talons"
    ]
   },
   {
@@ -458,10 +543,6 @@
      ]
     }
    ],
-   "loadout": [
-    "psychic-scream",
-    "neurotyrant-claws-and-lashes"
-   ],
    "abilities": [
     {
      "name": {
@@ -512,8 +593,17 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "psychic-scream": 1,
+      "neurotyrant-claws-and-lashes": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "neurotyrant-claws-and-lashes",
+    "psychic-scream"
    ]
   },
   {
@@ -574,9 +664,6 @@
      ]
     }
    ],
-   "loadout": [
-    "old-one-eyes-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -617,8 +704,15 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "old-one-eyes-claws-and-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "old-one-eyes-claws-and-talons"
    ]
   },
   {
@@ -687,10 +781,6 @@
      ]
     }
    ],
-   "loadout": [
-    "barbed-ovipositor",
-    "clawed-limbs"
-   ],
    "abilities": [
     {
      "name": {
@@ -728,8 +818,17 @@
    "role": "character",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "barbed-ovipositor": 1,
+      "clawed-limbs": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "barbed-ovipositor",
+    "clawed-limbs"
    ]
   },
   {
@@ -827,10 +926,6 @@
      ]
     }
    ],
-   "loadout": [
-    "stinger-salvoes",
-    "massive-scything-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -878,25 +973,50 @@
     "This model is equipped with: stinger salvoes; massive scything talons."
    ],
    "role": "character",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "massive-scything-talons",
-     "choices": [
-      "massive-scything-talons",
-      "massive-crushing-claws"
-     ],
-     "label": {
-      "en": "Replace Massive scything talons",
-      "es": "Sustituir Massive scything talons"
+     "models": 1,
+     "loadout": {
+      "stinger-salvoes": 1,
+      "massive-scything-talons": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Massive scything talons",
+      "es": "Massive scything talons"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "massive-scything-talons",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "massive-crushing-claws"
+     ],
+     "packages": {
+      "massive-crushing-claws": [
+       {
+        "item": "massive-crushing-claws",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "massive-crushing-claws": "Massive crushing claws",
+      "": "Massive scything talons"
+     }
     }
+   ],
+   "loadout": [
+    "massive-scything-talons",
+    "stinger-salvoes"
    ]
   },
   {
@@ -967,7 +1087,6 @@
      ]
     }
    ],
-   "loadout": [],
    "abilities": [
     {
      "name": {
@@ -1002,8 +1121,17 @@
    "role": "character",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "scything-talons": 1,
+      "gaping-maw": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "gaping-maw",
+    "scything-talons"
    ]
   },
   {
@@ -1076,10 +1204,6 @@
      ]
     }
    ],
-   "loadout": [
-    "synaptic-pulse",
-    "bone-sabres"
-   ],
    "abilities": [
     {
      "name": {
@@ -1129,8 +1253,17 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "synaptic-pulse": 1,
+      "bone-sabres": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bone-sabres",
+    "synaptic-pulse"
    ]
   },
   {
@@ -1214,11 +1347,6 @@
      ]
     }
    ],
-   "loadout": [
-    "rending-claw",
-    "lash-whip",
-    "scything-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -1262,8 +1390,19 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "rending-claw": 1,
+      "lash-whip": 1,
+      "scything-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lash-whip",
+    "rending-claw",
+    "scything-talons"
    ]
   },
   {
@@ -1394,10 +1533,6 @@
      ]
     }
    ],
-   "loadout": [
-    "monstrous-bonesword-and-lash-whip",
-    "tyrant-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -1444,8 +1579,64 @@
    "role": "character",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "monstrous-bonesword-and-lash-whip": 1,
+      "tyrant-talons": 1
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Monstrous bonesword and lash whip",
+      "es": "Monstrous bonesword and lash whip"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "monstrous-bonesword-and-lash-whip",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "heavy-venom-cannon",
+      "stranglethorn-cannon",
+      "monstrous-scything-talons"
+     ],
+     "packages": {
+      "heavy-venom-cannon": [
+       {
+        "item": "heavy-venom-cannon",
+        "n": 1
+       }
+      ],
+      "stranglethorn-cannon": [
+       {
+        "item": "stranglethorn-cannon",
+        "n": 1
+       }
+      ],
+      "monstrous-scything-talons": [
+       {
+        "item": "monstrous-scything-talons",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "heavy-venom-cannon": "Heavy venom cannon",
+      "stranglethorn-cannon": "Stranglethorn cannon",
+      "monstrous-scything-talons": "Monstrous scything talons",
+      "": "Monstrous bonesword and lash whip"
+     }
+    }
+   ],
+   "loadout": [
+    "monstrous-bonesword-and-lash-whip",
+    "tyrant-talons"
    ]
   },
   {
@@ -1493,9 +1684,6 @@
      ]
     }
    ],
-   "loadout": [
-    "prime-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -1539,8 +1727,15 @@
    },
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "prime-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "prime-talons"
    ]
   },
   {
@@ -1608,10 +1803,6 @@
      ]
     }
    ],
-   "loadout": [
-    "fleshborer",
-    "blinding-venom"
-   ],
    "abilities": [
     {
      "name": {
@@ -1638,11 +1829,24 @@
    "role": "battleline",
    "sizes": [
     {
-     "models": 10
+     "models": 10,
+     "loadout": {
+      "fleshborer": 10,
+      "blinding-venom": 10
+     }
     },
     {
-     "models": 20
+     "models": 20,
+     "loadout": {
+      "fleshborer": 20,
+      "blinding-venom": 20
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blinding-venom",
+    "fleshborer"
    ]
   },
   {
@@ -1688,9 +1892,6 @@
      ]
     }
    ],
-   "loadout": [
-    "hormagaunt-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -1715,11 +1916,21 @@
    "role": "battleline",
    "sizes": [
     {
-     "models": 10
+     "models": 10,
+     "loadout": {
+      "hormagaunt-talons": 10
+     }
     },
     {
-     "models": 20
+     "models": 20,
+     "loadout": {
+      "hormagaunt-talons": 20
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hormagaunt-talons"
    ]
   },
   {
@@ -1888,10 +2099,6 @@
      ]
     }
    ],
-   "loadout": [
-    "fleshborer",
-    "chitinous-claws-and-teeth"
-   ],
    "abilities": [
     {
      "name": {
@@ -1936,54 +2143,185 @@
     "Every model is equipped with: fleshborer; chitinous claws and teeth."
    ],
    "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "fleshborer": 10,
+      "chitinous-claws-and-teeth": 10
+     }
+    },
+    {
+     "models": 20,
+     "loadout": {
+      "fleshborer": 20,
+      "chitinous-claws-and-teeth": 20
+     }
+    }
+   ],
    "wargear": [
     {
+     "id": "o1",
+     "label": {
+      "en": "Fleshborer (all models)",
+      "es": "Fleshborer (todos los modelos)"
+     },
+     "type": "swap",
+     "scope": "all",
+     "replaces": [
+      {
+       "item": "fleshborer",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "termagant-devourer"
+     ],
+     "packages": {
+      "termagant-devourer": [
+       {
+        "item": "termagant-devourer",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "termagant-devourer": "Termagant devourer",
+      "": "Fleshborer"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Fleshborer (all models)",
+      "es": "Fleshborer (todos los modelos)"
+     },
+     "type": "swap",
+     "scope": "all",
+     "replaces": [
+      {
+       "item": "fleshborer",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "termagant-spinefists"
+     ],
+     "packages": {
+      "termagant-spinefists": [
+       {
+        "item": "termagant-spinefists",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "termagant-spinefists": "Termagant spinefists",
+      "": "Fleshborer"
+     }
+    },
+    {
      "id": "o3",
+     "label": {
+      "en": "replace Fleshborer",
+      "es": "sustituir Fleshborer"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 10,
+     "replaces": [
+      {
+       "item": "fleshborer",
+       "n": 1
+      }
+     ],
      "choices": [
       "shardlauncher"
      ],
-     "label": {
-      "en": "Up to 1 per 10 models",
-      "es": "Hasta 1 cada 10 modelos"
+     "packages": {
+      "shardlauncher": [
+       {
+        "item": "shardlauncher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 2
+     },
+     "labels": {
+      "shardlauncher": "Shardlauncher"
      }
     },
     {
      "id": "o4",
+     "label": {
+      "en": "replace Fleshborer",
+      "es": "sustituir Fleshborer"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 10,
+     "replaces": [
+      {
+       "item": "fleshborer",
+       "n": 1
+      }
+     ],
      "choices": [
       "spike-rifle"
      ],
-     "label": {
-      "en": "Up to 1 per 10 models",
-      "es": "Hasta 1 cada 10 modelos"
+     "packages": {
+      "spike-rifle": [
+       {
+        "item": "spike-rifle",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 2
+     },
+     "labels": {
+      "spike-rifle": "Spike rifle"
      }
     },
     {
      "id": "o5",
+     "label": {
+      "en": "replace Fleshborer",
+      "es": "sustituir Fleshborer"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 10,
+     "replaces": [
+      {
+       "item": "fleshborer",
+       "n": 1
+      }
+     ],
      "choices": [
       "strangleweb"
      ],
-     "label": {
-      "en": "Up to 1 per 10 models",
-      "es": "Hasta 1 cada 10 modelos"
+     "packages": {
+      "strangleweb": [
+       {
+        "item": "strangleweb",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 2
+     },
+     "labels": {
+      "strangleweb": "Strangleweb"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 10
-    },
-    {
-     "models": 20
-    }
+   "loadout": [
+    "chitinous-claws-and-teeth",
+    "fleshborer"
    ]
   },
   {
@@ -2048,10 +2386,6 @@
      ]
     }
    ],
-   "loadout": [
-    "barblauncher",
-    "chitinous-claws-and-teeth"
-   ],
    "abilities": [
     {
      "name": {
@@ -2076,11 +2410,24 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 5
+     "models": 5,
+     "loadout": {
+      "barblauncher": 5,
+      "chitinous-claws-and-teeth": 5
+     }
     },
     {
-     "models": 10
+     "models": 10,
+     "loadout": {
+      "barblauncher": 10,
+      "chitinous-claws-and-teeth": 10
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "barblauncher",
+    "chitinous-claws-and-teeth"
    ]
   },
   {
@@ -2147,10 +2494,6 @@
      ]
     }
    ],
-   "loadout": [
-    "spore-mine-launcher",
-    "chitin-barbed-limbs"
-   ],
    "abilities": [
     {
      "name": {
@@ -2177,14 +2520,31 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "spore-mine-launcher": 1,
+      "chitin-barbed-limbs": 1
+     }
     },
     {
-     "models": 2
+     "models": 2,
+     "loadout": {
+      "spore-mine-launcher": 2,
+      "chitin-barbed-limbs": 2
+     }
     },
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "spore-mine-launcher": 3,
+      "chitin-barbed-limbs": 3
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "chitin-barbed-limbs",
+    "spore-mine-launcher"
    ]
   },
   {
@@ -2230,9 +2590,6 @@
      ]
     }
    ],
-   "loadout": [
-    "genestealer-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -2259,11 +2616,21 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 5
+     "models": 5,
+     "loadout": {
+      "genestealer-claws-and-talons": 5
+     }
     },
     {
-     "models": 10
+     "models": 10,
+     "loadout": {
+      "genestealer-claws-and-talons": 10
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "genestealer-claws-and-talons"
    ]
   },
   {
@@ -2348,10 +2715,6 @@
      ]
     }
    ],
-   "loadout": [
-    "shockcannon",
-    "chitinous-claws-and-teeth"
-   ],
    "abilities": [
     {
      "name": {
@@ -2380,29 +2743,59 @@
     "Every model is equipped with: shockcannon; chitinous claws and teeth."
    ],
    "role": "infantry",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "pool",
-     "max": 1,
-     "per": 1,
-     "replaces": "shockcannon",
-     "choices": [
-      "impaler-cannon"
-     ],
-     "label": {
-      "en": "Replace Shockcannon (any number)",
-      "es": "Sustituir Shockcannon (cualquier número)"
+     "models": 3,
+     "loadout": {
+      "shockcannon": 3,
+      "chitinous-claws-and-teeth": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "shockcannon": 6,
+      "chitinous-claws-and-teeth": 6
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 3
-    },
-    {
-     "models": 6
+     "id": "o1",
+     "label": {
+      "en": "replace Shockcannon",
+      "es": "sustituir Shockcannon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "shockcannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "impaler-cannon"
+     ],
+     "packages": {
+      "impaler-cannon": [
+       {
+        "item": "impaler-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "impaler-cannon": "Impaler cannon"
+     }
     }
+   ],
+   "loadout": [
+    "chitinous-claws-and-teeth",
+    "shockcannon"
    ]
   },
   {
@@ -2495,11 +2888,6 @@
      ]
     }
    ],
-   "loadout": [
-    "prime-claws-and-talons",
-    "ravener-heavy-claws-and-talons",
-    "venom-bolt"
-   ],
    "abilities": [
     {
      "name": {
@@ -2544,8 +2932,19 @@
    },
    "sizes": [
     {
-     "models": 5
+     "models": 5,
+     "loadout": {
+      "prime-claws-and-talons": 1,
+      "ravener-heavy-claws-and-talons": 4,
+      "venom-bolt": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "prime-claws-and-talons",
+    "ravener-heavy-claws-and-talons",
+    "venom-bolt"
    ]
   },
   {
@@ -2592,9 +2991,6 @@
      ]
     }
    ],
-   "loadout": [
-    "lictor-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -2632,8 +3028,15 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "lictor-claws-and-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lictor-claws-and-talons"
    ]
   },
   {
@@ -2659,7 +3062,6 @@
     }
    ],
    "weapons": [],
-   "loadout": [],
    "abilities": [
     {
      "name": {
@@ -2694,12 +3096,16 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {}
     },
     {
-     "models": 2
+     "models": 2,
+     "loadout": {}
     }
-   ]
+   ],
+   "wargear": [],
+   "loadout": []
   },
   {
    "id": "neurogaunts",
@@ -2743,9 +3149,6 @@
      ]
     }
    ],
-   "loadout": [
-    "chitinous-claws-and-teeth"
-   ],
    "abilities": [
     {
      "name": {
@@ -2771,14 +3174,27 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 11
+     "models": 11,
+     "loadout": {
+      "chitinous-claws-and-teeth": 11
+     }
     },
     {
-     "models": 21
+     "models": 21,
+     "loadout": {
+      "chitinous-claws-and-teeth": 21
+     }
     },
     {
-     "models": 22
+     "models": 22,
+     "loadout": {
+      "chitinous-claws-and-teeth": 22
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "chitinous-claws-and-teeth"
    ]
   },
   {
@@ -2827,9 +3243,6 @@
      ]
     }
    ],
-   "loadout": [
-    "piercing-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -2875,8 +3288,15 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "piercing-claws-and-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "piercing-claws-and-talons"
    ]
   },
   {
@@ -2943,10 +3363,6 @@
      ]
     }
    ],
-   "loadout": [
-    "flamespurt",
-    "chitin-barbed-limbs"
-   ],
    "abilities": [
     {
      "name": {
@@ -2973,14 +3389,31 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "flamespurt": 1,
+      "chitin-barbed-limbs": 1
+     }
     },
     {
-     "models": 2
+     "models": 2,
+     "loadout": {
+      "flamespurt": 2,
+      "chitin-barbed-limbs": 2
+     }
     },
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "flamespurt": 3,
+      "chitin-barbed-limbs": 3
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "chitin-barbed-limbs",
+    "flamespurt"
    ]
   },
   {
@@ -3028,9 +3461,6 @@
      ]
     }
    ],
-   "loadout": [
-    "ravener-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -3057,8 +3487,15 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 5
+     "models": 5,
+     "loadout": {
+      "ravener-claws-and-talons": 5
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "ravener-claws-and-talons"
    ]
   },
   {
@@ -3125,9 +3562,6 @@
      ]
     }
    ],
-   "loadout": [
-    "chitinous-claws-and-teeth"
-   ],
    "abilities": [
     {
      "name": {
@@ -3158,27 +3592,57 @@
     "Every model is equipped with: chitinous claws and teeth."
    ],
    "role": "infantry",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "toggle",
-     "gives": "spinemaws",
-     "label": {
-      "en": "Add Spinemaws",
-      "es": "Añadir Spinemaws"
+     "models": 1,
+     "loadout": {
+      "chitinous-claws-and-teeth": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "chitinous-claws-and-teeth": 2
+     }
+    },
+    {
+     "models": 3,
+     "loadout": {
+      "chitinous-claws-and-teeth": 3
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
-    },
-    {
-     "models": 2
-    },
-    {
-     "models": 3
+     "id": "o1",
+     "label": {
+      "en": "add Spinemaws (all models)",
+      "es": "añadir Spinemaws (todos los modelos)"
+     },
+     "type": "toggle",
+     "scope": "all",
+     "gives": "spinemaws",
+     "packages": {
+      "spinemaws": [
+       {
+        "item": "spinemaws",
+        "n": 1
+       }
+      ]
+     },
+     "replaces": [],
+     "maxBySize": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+     },
+     "labels": {
+      "spinemaws": "Spinemaws"
+     }
     }
+   ],
+   "loadout": [
+    "chitinous-claws-and-teeth"
    ]
   },
   {
@@ -3204,7 +3668,6 @@
     }
    ],
    "weapons": [],
-   "loadout": [],
    "abilities": [
     {
      "name": {
@@ -3239,12 +3702,16 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {}
     },
     {
-     "models": 6
+     "models": 6,
+     "loadout": {}
     }
-   ]
+   ],
+   "wargear": [],
+   "loadout": []
   },
   {
    "id": "tyranid-warriors-with-melee-bio-weapons",
@@ -3290,9 +3757,6 @@
      ]
     }
    ],
-   "loadout": [
-    "tyranid-warrior-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -3319,11 +3783,21 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "tyranid-warrior-claws-and-talons": 3
+     }
     },
     {
-     "models": 6
+     "models": 6,
+     "loadout": {
+      "tyranid-warrior-claws-and-talons": 6
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "tyranid-warrior-claws-and-talons"
    ]
   },
   {
@@ -3466,10 +3940,6 @@
      ]
     }
    ],
-   "loadout": [
-    "devourer",
-    "tyranid-warrior-claws-and-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -3511,56 +3981,131 @@
     "Every model is equipped with: devourer; Tyranid Warrior claws and talons."
    ],
    "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "devourer": 3,
+      "tyranid-warrior-claws-and-talons": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "devourer": 6,
+      "tyranid-warrior-claws-and-talons": 6
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "replace Devourer",
+      "es": "sustituir Devourer"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 1,
-     "replaces": "devourer",
+     "replaces": [
+      {
+       "item": "devourer",
+       "n": 1
+      }
+     ],
      "choices": [
       "deathspitter",
       "spinefists"
      ],
-     "label": {
-      "en": "Replace Devourer (any number)",
-      "es": "Sustituir Devourer (cualquier número)"
+     "packages": {
+      "deathspitter": [
+       {
+        "item": "deathspitter",
+        "n": 1
+       }
+      ],
+      "spinefists": [
+       {
+        "item": "spinefists",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "deathspitter": "Deathspitter",
+      "spinefists": "Spinefists"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "replace Devourer",
+      "es": "sustituir Devourer"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 3,
+     "replaces": [
+      {
+       "item": "devourer",
+       "n": 1
+      }
+     ],
      "choices": [
       "barbed-strangler"
      ],
-     "label": {
-      "en": "Up to 1 per 3 models",
-      "es": "Hasta 1 cada 3 modelos"
+     "packages": {
+      "barbed-strangler": [
+       {
+        "item": "barbed-strangler",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 2
+     },
+     "labels": {
+      "barbed-strangler": "Barbed strangler"
      }
     },
     {
      "id": "o3",
+     "label": {
+      "en": "replace Devourer",
+      "es": "sustituir Devourer"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 3,
+     "replaces": [
+      {
+       "item": "devourer",
+       "n": 1
+      }
+     ],
      "choices": [
       "venom-cannon"
      ],
-     "label": {
-      "en": "Up to 1 per 3 models",
-      "es": "Hasta 1 cada 3 modelos"
+     "packages": {
+      "venom-cannon": [
+       {
+        "item": "venom-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 2
+     },
+     "labels": {
+      "venom-cannon": "Venom cannon"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 3
-    },
-    {
-     "models": 6
-    }
+   "loadout": [
+    "devourer",
+    "tyranid-warrior-claws-and-talons"
    ]
   },
   {
@@ -3642,9 +4187,6 @@
      ]
     }
    ],
-   "loadout": [
-    "scything-talons-and-rending-claws"
-   ],
    "abilities": [
     {
      "name": {
@@ -3678,11 +4220,62 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "scything-talons-and-rending-claws": 3
+     }
     },
     {
-     "models": 6
+     "models": 6,
+     "loadout": {
+      "scything-talons-and-rending-claws": 6
+     }
     }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Scything talons and rending claws",
+      "es": "sustituir Scything talons and rending claws"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "scything-talons-and-rending-claws",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "bone-cleaver-lash-whip-and-rending-claws",
+      "crushing-claws-and-rending-claws"
+     ],
+     "packages": {
+      "bone-cleaver-lash-whip-and-rending-claws": [
+       {
+        "item": "bone-cleaver-lash-whip-and-rending-claws",
+        "n": 1
+       }
+      ],
+      "crushing-claws-and-rending-claws": [
+       {
+        "item": "crushing-claws-and-rending-claws",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "bone-cleaver-lash-whip-and-rending-claws": "Bone cleaver, lash whip and rending claws",
+      "crushing-claws-and-rending-claws": "Crushing claws and rending claws"
+     }
+    }
+   ],
+   "loadout": [
+    "scything-talons-and-rending-claws"
    ]
   },
   {
@@ -3729,9 +4322,6 @@
      ]
     }
    ],
-   "loadout": [
-    "toxic-lashes"
-   ],
    "abilities": [
     {
      "name": {
@@ -3758,11 +4348,21 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "toxic-lashes": 3
+     }
     },
     {
-     "models": 6
+     "models": 6,
+     "loadout": {
+      "toxic-lashes": 6
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "toxic-lashes"
    ]
   },
   {
@@ -3808,9 +4408,6 @@
      ]
     }
    ],
-   "loadout": [
-    "leapers-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -3839,11 +4436,21 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "leapers-talons": 3
+     }
     },
     {
-     "models": 6
+     "models": 6,
+     "loadout": {
+      "leapers-talons": 6
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "leapers-talons"
    ]
   },
   {
@@ -3930,10 +4537,6 @@
      ]
     }
    ],
-   "loadout": [
-    "warp-blast",
-    "chitinous-claws-and-teeth"
-   ],
    "abilities": [
     {
      "name": {
@@ -3968,11 +4571,24 @@
    "role": "infantry",
    "sizes": [
     {
-     "models": 3
+     "models": 3,
+     "loadout": {
+      "warp-blast": 3,
+      "chitinous-claws-and-teeth": 3
+     }
     },
     {
-     "models": 6
+     "models": 6,
+     "loadout": {
+      "warp-blast": 6,
+      "chitinous-claws-and-teeth": 6
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "chitinous-claws-and-teeth",
+    "warp-blast"
    ]
   },
   {
@@ -4189,11 +4805,6 @@
      ]
     }
    ],
-   "loadout": [
-    "carnifex-scything-talons",
-    "carnifex-extra-scything-talons",
-    "chitinous-claws-and-teeth"
-   ],
    "abilities": [
     {
      "name": {
@@ -4246,13 +4857,38 @@
     "Every model is equipped with: Carnifex scything talons; Carnifex extra scything talons; chitinous claws and teeth."
    ],
    "role": "monster",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "carnifex-scything-talons": 1,
+      "carnifex-extra-scything-talons": 1,
+      "chitinous-claws-and-teeth": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "carnifex-scything-talons": 2,
+      "carnifex-extra-scything-talons": 2,
+      "chitinous-claws-and-teeth": 2
+     }
+    }
+   ],
    "wargear": [
     {
      "id": "o1",
+     "label": {
+      "en": "replace Carnifex extra scything talons",
+      "es": "sustituir Carnifex extra scything talons"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 1,
-     "replaces": "carnifex-extra-scything-talons",
+     "replaces": [
+      {
+       "item": "carnifex-extra-scything-talons",
+       "n": 1
+      }
+     ],
      "choices": [
       "deathspitters-with-slimer-maggots",
       "devourers-with-brainleech-worms",
@@ -4260,57 +4896,153 @@
       "stranglethorn-cannon",
       "carnifex-crushing-claws"
      ],
-     "label": {
-      "en": "Replace Carnifex extra scything talons (any number)",
-      "es": "Sustituir Carnifex extra scything talons (cualquier número)"
+     "packages": {
+      "deathspitters-with-slimer-maggots": [
+       {
+        "item": "deathspitters-with-slimer-maggots",
+        "n": 1
+       }
+      ],
+      "devourers-with-brainleech-worms": [
+       {
+        "item": "devourers-with-brainleech-worms",
+        "n": 1
+       }
+      ],
+      "heavy-venom-cannon": [
+       {
+        "item": "heavy-venom-cannon",
+        "n": 1
+       }
+      ],
+      "stranglethorn-cannon": [
+       {
+        "item": "stranglethorn-cannon",
+        "n": 1
+       }
+      ],
+      "carnifex-crushing-claws": [
+       {
+        "item": "carnifex-crushing-claws",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2
+     },
+     "labels": {
+      "deathspitters-with-slimer-maggots": "Deathspitters with slimer maggots",
+      "devourers-with-brainleech-worms": "Devourers with brainleech worms",
+      "heavy-venom-cannon": "Heavy venom cannon",
+      "stranglethorn-cannon": "Stranglethorn cannon",
+      "carnifex-crushing-claws": "Carnifex crushing claws"
      }
     },
     {
      "id": "o2",
+     "label": {
+      "en": "replace Carnifex scything talons",
+      "es": "sustituir Carnifex scything talons"
+     },
      "type": "pool",
-     "max": 1,
-     "per": 1,
-     "replaces": "carnifex-scything-talons",
+     "replaces": [
+      {
+       "item": "carnifex-scything-talons",
+       "n": 1
+      }
+     ],
      "choices": [
       "deathspitters-with-slimer-maggots",
       "devourers-with-brainleech-worms",
       "carnifex-crushing-claws"
      ],
-     "label": {
-      "en": "Replace Carnifex scything talons (any number)",
-      "es": "Sustituir Carnifex scything talons (cualquier número)"
+     "packages": {
+      "deathspitters-with-slimer-maggots": [
+       {
+        "item": "deathspitters-with-slimer-maggots",
+        "n": 1
+       }
+      ],
+      "devourers-with-brainleech-worms": [
+       {
+        "item": "devourers-with-brainleech-worms",
+        "n": 1
+       }
+      ],
+      "carnifex-crushing-claws": [
+       {
+        "item": "carnifex-crushing-claws",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2
+     },
+     "labels": {
+      "deathspitters-with-slimer-maggots": "Deathspitters with slimer maggots",
+      "devourers-with-brainleech-worms": "Devourers with brainleech worms",
+      "carnifex-crushing-claws": "Carnifex crushing claws"
      }
     },
     {
      "id": "o3",
-     "type": "toggle",
-     "gives": "bio-plasma",
-     "max": 1,
-     "per": 1,
      "label": {
-      "en": "Add Bio-plasma",
-      "es": "Añadir Bio-plasma"
+      "en": "add Bio-plasma",
+      "es": "añadir Bio-plasma"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "bio-plasma",
+     "packages": {
+      "bio-plasma": [
+       {
+        "item": "bio-plasma",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2
+     },
+     "labels": {
+      "bio-plasma": "Bio-plasma"
      }
     },
     {
      "id": "o4",
-     "type": "toggle",
-     "gives": "spine-banks",
-     "max": 1,
-     "per": 1,
      "label": {
-      "en": "Add Spine banks",
-      "es": "Añadir Spine banks"
+      "en": "add Spine banks",
+      "es": "añadir Spine banks"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "spine-banks",
+     "packages": {
+      "spine-banks": [
+       {
+        "item": "spine-banks",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2
+     },
+     "labels": {
+      "spine-banks": "Spine banks"
      }
     }
    ],
-   "sizes": [
-    {
-     "models": 1
-    },
-    {
-     "models": 2
-    }
+   "loadout": [
+    "carnifex-extra-scything-talons",
+    "carnifex-scything-talons",
+    "chitinous-claws-and-teeth"
    ]
   },
   {
@@ -4375,10 +5107,6 @@
      ]
     }
    ],
-   "loadout": [
-    "bio-plasmic-cannon",
-    "powerful-limbs"
-   ],
    "abilities": [
     {
      "name": {
@@ -4413,8 +5141,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "bio-plasmic-cannon": 1,
+      "powerful-limbs": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bio-plasmic-cannon",
+    "powerful-limbs"
    ]
   },
   {
@@ -4499,11 +5236,6 @@
      ]
     }
    ],
-   "loadout": [
-    "grasping-tongue",
-    "ravenous-maw",
-    "shovelling-claws"
-   ],
    "abilities": [
     {
      "name": {
@@ -4538,8 +5270,19 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "grasping-tongue": 1,
+      "ravenous-maw": 1,
+      "shovelling-claws": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "grasping-tongue",
+    "ravenous-maw",
+    "shovelling-claws"
    ]
   },
   {
@@ -4622,10 +5365,6 @@
      ]
     }
    ],
-   "loadout": [
-    "psychic-overload",
-    "massive-scything-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -4661,8 +5400,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "psychic-overload": 1,
+      "massive-scything-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "massive-scything-talons",
+    "psychic-overload"
    ]
   },
   {
@@ -4730,10 +5478,6 @@
      ]
     }
    ],
-   "loadout": [
-    "distensible-jaw",
-    "mawloc-scything-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -4768,8 +5512,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "distensible-jaw": 1,
+      "mawloc-scything-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "distensible-jaw",
+    "mawloc-scything-talons"
    ]
   },
   {
@@ -4853,11 +5606,6 @@
      ]
     }
    ],
-   "loadout": [
-    "toxinjector-harpoon",
-    "toxinjector-harpoon-melee",
-    "monstrous-scything-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -4901,8 +5649,19 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "toxinjector-harpoon": 1,
+      "toxinjector-harpoon-melee": 1,
+      "monstrous-scything-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "monstrous-scything-talons",
+    "toxinjector-harpoon",
+    "toxinjector-harpoon-melee"
    ]
   },
   {
@@ -5023,11 +5782,6 @@
      ]
     }
    ],
-   "loadout": [
-    "psychic-tendril",
-    "monstrous-scything-talons",
-    "monstrous-rending-claws"
-   ],
    "abilities": [
     {
      "name": {
@@ -5071,8 +5825,19 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "psychic-tendril": 1,
+      "monstrous-scything-talons": 1,
+      "monstrous-rending-claws": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "monstrous-rending-claws",
+    "monstrous-scything-talons",
+    "psychic-tendril"
    ]
   },
   {
@@ -5142,10 +5907,6 @@
      ]
     }
    ],
-   "loadout": [
-    "psychoclastic-torrent",
-    "talons-and-betentacled-maw"
-   ],
    "abilities": [
     {
      "name": {
@@ -5181,8 +5942,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "psychoclastic-torrent": 1,
+      "talons-and-betentacled-maw": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "psychoclastic-torrent",
+    "talons-and-betentacled-maw"
    ]
   },
   {
@@ -5247,10 +6017,6 @@
      ]
     }
    ],
-   "loadout": [
-    "bio-plasmic-scream",
-    "screamer-killer-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -5277,8 +6043,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "bio-plasmic-scream": 1,
+      "screamer-killer-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bio-plasmic-scream",
+    "screamer-killer-talons"
    ]
   },
   {
@@ -5340,10 +6115,6 @@
      ]
     }
    ],
-   "loadout": [
-    "sporocyst-bio-weapons",
-    "flensing-whips"
-   ],
    "abilities": [
     {
      "name": {
@@ -5378,8 +6149,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "sporocyst-bio-weapons": 1,
+      "flensing-whips": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "flensing-whips",
+    "sporocyst-bio-weapons"
    ]
   },
   {
@@ -5446,10 +6226,6 @@
      ]
     }
    ],
-   "loadout": [
-    "massive-toxic-lashes",
-    "massive-toxic-lashes-melee"
-   ],
    "abilities": [
     {
      "name": {
@@ -5484,8 +6260,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "massive-toxic-lashes": 1,
+      "massive-toxic-lashes-melee": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "massive-toxic-lashes",
+    "massive-toxic-lashes-melee"
    ]
   },
   {
@@ -5551,10 +6336,6 @@
      ]
     }
    ],
-   "loadout": [
-    "bio-electric-pulse",
-    "trygon-scything-talons"
-   ],
    "abilities": [
     {
      "name": {
@@ -5589,8 +6370,17 @@
    "role": "monster",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "bio-electric-pulse": 1,
+      "trygon-scything-talons": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bio-electric-pulse",
+    "trygon-scything-talons"
    ]
   },
   {
@@ -5715,11 +6505,6 @@
      ]
     }
    ],
-   "loadout": [
-    "fleshborer-hive",
-    "stinger-salvoes",
-    "powerful-limbs"
-   ],
    "abilities": [
     {
      "name": {
@@ -5761,26 +6546,60 @@
     "This model is equipped with: fleshborer hive; stinger salvoes; powerful limbs."
    ],
    "role": "monster",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "fleshborer-hive",
-     "choices": [
-      "fleshborer-hive",
-      "acid-spray",
-      "rupture-cannon"
-     ],
-     "label": {
-      "en": "Replace Fleshborer hive",
-      "es": "Sustituir Fleshborer hive"
+     "models": 1,
+     "loadout": {
+      "fleshborer-hive": 1,
+      "stinger-salvoes": 1,
+      "powerful-limbs": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Fleshborer hive",
+      "es": "Fleshborer hive"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "fleshborer-hive",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "acid-spray",
+      "rupture-cannon"
+     ],
+     "packages": {
+      "acid-spray": [
+       {
+        "item": "acid-spray",
+        "n": 1
+       }
+      ],
+      "rupture-cannon": [
+       {
+        "item": "rupture-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "acid-spray": "Acid spray",
+      "rupture-cannon": "Rupture cannon",
+      "": "Fleshborer hive"
+     }
     }
+   ],
+   "loadout": [
+    "fleshborer-hive",
+    "powerful-limbs",
+    "stinger-salvoes"
    ]
   },
   {
@@ -5847,10 +6666,6 @@
      ]
     }
    ],
-   "loadout": [
-    "tyrannocyte-bio-weapons",
-    "flensing-whips"
-   ],
    "abilities": [
     {
      "name": {
@@ -5881,8 +6696,17 @@
    "role": "transport",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "tyrannocyte-bio-weapons": 1,
+      "flensing-whips": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "flensing-whips",
+    "tyrannocyte-bio-weapons"
    ]
   },
   {
@@ -5989,11 +6813,6 @@
      ]
     }
    ],
-   "loadout": [
-    "stinger-salvoes",
-    "twin-stranglethorn-cannon",
-    "scything-wings"
-   ],
    "abilities": [
     {
      "name": {
@@ -6032,25 +6851,52 @@
     "This model is equipped with: stinger salvoes; twin stranglethorn cannon; scything wings."
    ],
    "role": "aircraft",
-   "wargear": [
+   "sizes": [
     {
-     "id": "o1",
-     "type": "swap",
-     "default": "twin-stranglethorn-cannon",
-     "choices": [
-      "twin-stranglethorn-cannon",
-      "twin-heavy-venom-cannon"
-     ],
-     "label": {
-      "en": "Replace Twin stranglethorn cannon",
-      "es": "Sustituir Twin stranglethorn cannon"
+     "models": 1,
+     "loadout": {
+      "stinger-salvoes": 1,
+      "twin-stranglethorn-cannon": 1,
+      "scything-wings": 1
      }
     }
    ],
-   "sizes": [
+   "wargear": [
     {
-     "models": 1
+     "id": "o1",
+     "label": {
+      "en": "Twin stranglethorn cannon",
+      "es": "Twin stranglethorn cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "twin-stranglethorn-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "twin-heavy-venom-cannon"
+     ],
+     "packages": {
+      "twin-heavy-venom-cannon": [
+       {
+        "item": "twin-heavy-venom-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "twin-heavy-venom-cannon": "Twin heavy venom cannon",
+      "": "Twin stranglethorn cannon"
+     }
     }
+   ],
+   "loadout": [
+    "scything-wings",
+    "stinger-salvoes",
+    "twin-stranglethorn-cannon"
    ]
   },
   {
@@ -6177,13 +7023,6 @@
      ]
     }
    ],
-   "loadout": [
-    "drool-cannon",
-    "stinger-salvoes",
-    "tentaclids",
-    "scything-wings",
-    "thorax-spur"
-   ],
    "abilities": [
     {
      "name": {
@@ -6218,8 +7057,23 @@
    "role": "aircraft",
    "sizes": [
     {
-     "models": 1
+     "models": 1,
+     "loadout": {
+      "drool-cannon": 1,
+      "stinger-salvoes": 1,
+      "tentaclids": 1,
+      "scything-wings": 1,
+      "thorax-spur": 1
+     }
     }
+   ],
+   "wargear": [],
+   "loadout": [
+    "drool-cannon",
+    "scything-wings",
+    "stinger-salvoes",
+    "tentaclids",
+    "thorax-spur"
    ]
   }
  ]

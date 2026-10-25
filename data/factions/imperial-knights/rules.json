@@ -7,7 +7,7 @@
      "en": "Bold Gallantry"
     },
     "text": {
-     "en": "Each time an IMPERIAL KNIGHTS unit from your army Advances, until the end of the turn, ranged weapons equipped by IMPERIAL KNIGHTS models from your army have the [ASSAULT] ability.\nErrata\nShow\nValourstrike Lance Detachment, Bold Gallantry Detachment Rule\nChange to:\n‘Each time an IMPERIAL KNIGHTS unit from your army Advances, until the end of the turn, ranged weapons equipped by IMPERIAL KNIGHTS models from your army have the [ASSAULT] ability.’"
+     "en": "Each time an IMPERIAL KNIGHTS unit from your army Advances, until the end of the turn, ranged weapons equipped by IMPERIAL KNIGHTS models from your army have the [ASSAULT] ability."
     }
    },
    "enhancements": {
@@ -31,7 +31,7 @@
     },
     "bearer-of-the-lancers-sigil": {
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. At the start of your Charge phase, select one other IMPERIAL KNIGHTS model from your army that is within 12\" of and visible to the bearer. Until the end of the phase, you can re-roll Charge rolls made for that selected model.\n<h2"
+      "en": "IMPERIAL KNIGHTS model only. At the start of your Charge phase, select one other IMPERIAL KNIGHTS model from your army that is within 12\" of and visible to the bearer. Until the end of the phase, you can re-roll Charge rolls made for that selected model."
      },
      "points": 25
     }
@@ -43,7 +43,7 @@
      "en": "Dauntless Defenders"
     },
     "text": {
-     "en": "At the start of the first battle round, select two objectives to be your foundations. Place a circular 40mm foundation marker in each one. When you draw a line from any part of one your foundation markers to any part of the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\nWhile an IMPERIAL KNIGHTS unit from your army is on your defensive line, that unit has the following ability:\nAgainst the Horde: Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.\nErrata\nShow\nGate Warden Lance Detachment, Dauntless Defenders Detachment Rule\nChange to:\n‘At the start of the first battle round, select two objectives to be your foundations. Place a circular 40mm foundation marker in each one. When you draw a line from any part of one of your foundation markers to any part of the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\nWhile an IMPERIAL KNIGHTS unit from your army is on your defensive line, that unit has the following ability:\nAgainst the Horde: Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.’"
+     "en": "At the start of the first battle round, select two objectives to be your foundations. Place a circular 40mm foundation marker in each one. When you draw a line from any part of one your foundation markers to any part of the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\nWhile an IMPERIAL KNIGHTS unit from your army is on your defensive line, that unit has the following ability:\nAgainst the Horde: Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
     }
    },
    "enhancements": {
@@ -67,7 +67,7 @@
     },
     "vengeful-tread": {
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. Once per turn, you can target the bearer with the Crushing Impact Stratagem for 0CP.\n<h2"
+      "en": "IMPERIAL KNIGHTS model only. Once per turn, you can target the bearer with the Crushing Impact Stratagem for 0CP."
      },
      "points": 15
     }
@@ -103,7 +103,7 @@
     },
     "crushing-condemnation": {
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. When the bearer is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, the bearer can use this Enhancement. If it does, this Enhancement is expended, then select one enemy unit that is not within Engagement Range of any units from your army and is within 12\" of and visible to the bearer. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.\n<h2"
+      "en": "IMPERIAL KNIGHTS model only. When the bearer is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, the bearer can use this Enhancement. If it does, this Enhancement is expended, then select one enemy unit that is not within Engagement Range of any units from your army and is within 12\" of and visible to the bearer. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
      },
      "points": 10
     }
@@ -139,7 +139,7 @@
     },
     "martial-tuition": {
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. While two or more ARMIGER models arc under the effects of the bearer’s Bondsman ability, once per turn, you can target one of those ARMIGER models with the Counter-offensive Stratagem for 0CP.\n<h2"
+      "en": "IMPERIAL KNIGHTS model only. While two or more ARMIGER models arc under the effects of the bearer’s Bondsman ability, once per turn, you can target one of those ARMIGER models with the Counter-offensive Stratagem for 0CP."
      },
      "points": 15
     }
@@ -175,7 +175,7 @@
     },
     "sanctuary": {
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.\n<h2"
+      "en": "IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save."
      },
      "points": 20
     }
@@ -199,7 +199,7 @@
     },
     "archeotech-autoloaders": {
      "text": {
-      "en": "IMPERIAL KNIGHTS DOMINUS model only. This unit can re-roll rolls to determine the A of a weapon.\n<h2"
+      "en": "IMPERIAL KNIGHTS DOMINUS model only. This unit can re-roll rolls to determine the A of a weapon."
      },
      "points": 25
     }
@@ -223,7 +223,7 @@
     },
     "knight-of-the-opus-machina": {
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that ADEPTUS MECHANICUS unit’s melee attacks have +1 WS and AP.\n<h2"
+      "en": "IMPERIAL KNIGHTS model only. While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that ADEPTUS MECHANICUS unit’s melee attacks have +1 WS and AP."
      },
      "points": 15
     }
@@ -247,7 +247,7 @@
     },
     "ancestral-overbleed": {
      "text": {
-      "en": "ARMIGER unit only. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.\n<h2"
+      "en": "ARMIGER unit only. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP."
      },
      "points": 10
     }

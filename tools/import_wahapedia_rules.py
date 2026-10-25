@@ -14,8 +14,10 @@ import html
 import json
 import re
 import sys
-import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from wahapedia_fetch import fetch  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = 'https://wahapedia.ru/wh40k11ed'
@@ -23,11 +25,6 @@ BASE = 'https://wahapedia.ru/wh40k11ed'
 PHASES = {'str11Any': 'any', 'str11Command': 'command', 'str11Movement': 'movement', 'str11Shooting': 'shooting',
           'str11Charge': 'charge', 'str11Fight': 'fight'}
 TURNS = {'str11Either': 'either', 'str11Your': 'your', 'str11Enemy': 'enemy'}
-
-
-def fetch(url):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (army-forge importer)'})
-    return urllib.request.urlopen(req).read().decode('utf-8')
 
 
 def slug(s):
@@ -42,10 +39,15 @@ def key(s):
 def clean(x):
     x = re.sub(r'<br\s*/?>', '\n', x)
     x = re.sub(r'</(p|div|h\d|li|tr)>', '\n', x)
+    x = re.sub(r'</t[dh]>', ' ', x)
     x = re.sub(r'<[^>]+>', '', x)
     x = html.unescape(x).replace('‑', '-')
     x = re.sub(r'[ \t]+', ' ', x)
     return re.sub(r'\s*\n\s*', '\n', x).strip()
+
+
+def strip_errata(x):
+    return re.split(r'\n(?:Errata|FAQ)\n', x)[0].strip()
 
 
 def strip_fluff(x):
@@ -120,16 +122,15 @@ def main():
         r_pos = re.search(r'id="Detachment-Rules?(-\d+)?"', sec)
         rule_html = sec[r_pos.start():sec.rfind('<h2', 0, e_pos.start())] if r_pos and e_pos else ''
         lines = clean(strip_fluff(rule_html)).split('\n')[1:]  # drop the "Detachment Rule" heading
-        rule = {'name': {'en': lines[0]} if lines else det['rule']['name'], 'text': {'en': '\n'.join(lines[1:]).strip()}}
+        rule = {'name': {'en': lines[0]} if lines else det['rule']['name'], 'text': {'en': strip_errata('\n'.join(lines[1:]))}}
 
         enh = {}
-        ens_html = sec[e_pos.start():s_pos.start()] if e_pos and s_pos else ''
+        ens_html = sec[e_pos.start():sec.rfind('<h2', 0, s_pos.start())] if e_pos and s_pos else ''
         for m in re.finditer(r'<ul class="EnhancementsPts"><li><span>(.*?)</span>\s*<span>(\d+ pts)</span></li></ul>(.*?)(?=<ul class="EnhancementsPts"|\Z)', ens_html, re.S):
             ename = re.sub(r'\(Aura\)|UPGRADE', '', clean(re.sub(r'<span class="EnhUpgrade">.*?</span>', '', m.group(1)))).strip()
             ours = next((e for e in det['enhancements'] if key(e['name']['en']) == key(ename)), None)
             if ours:
-                body = clean(strip_fluff(m.group(3)))
-                body = re.split(r'\n(?:Errata|FAQ)\n', body)[0].strip()
+                body = strip_errata(clean(strip_fluff(m.group(3))))
                 enh[ours['id']] = {'text': {'en': body}, 'points': int(re.sub(r'\D', '', m.group(2)) or 0)}
         rules['detachments'][det['id']] = {'rule': rule, 'enhancements': enh}
         strats[det['id']] = dedupe(parse_stratagems(sec[s_pos.start():] if s_pos else ''))

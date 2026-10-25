@@ -1,6 +1,6 @@
 // "Army overview": read-only view of a finished list — every unit with its wargear and abilities,
 // the chosen detachments (rule, enhancements, stratagems), the army rule and the core stratagems.
-import { t, tr } from './i18n.js';
+import { t, tr, trs } from './i18n.js';
 import { icon } from './icons.js';
 import { unitImg, imgFrame, ROLE_COLORS } from './images.js';
 import { battleSizeOf, listPoints, unitPoints, leadersOf, validate } from './rules.js';
@@ -104,8 +104,8 @@ function unitCard(ru, def, data, customImages, list, extraClass = '') {
     </header>
     ${statRows(def)}
     ${weaponTable(ru, def, data)}
-    ${enh ? `<div class="ov-enh">${icon(enh.type === 'upgrade' ? 'stratPloy' : 'diamond')}<div><b>${esc(tr(enh.name))}</b> <small>(+${enh.points} ${t('points')} · ${esc(tr(data.detachmentsById.get(enh.detachmentId)?.name))})</small><p>${esc(tr(enh.full ?? enh.text))}</p></div></div>` : ''}
-    ${abilitiesBlock(def)}
+    ${enh ? `<div class="ov-enh">${icon(enh.type === 'upgrade' ? 'stratPloy' : 'diamond')}<div><b>${esc(tr(enh.name))}</b> <small>(+${enh.points} ${t('points')} · ${esc(tr(data.detachmentsById.get(enh.detachmentId)?.name))})</small>${para(enh.full ?? enh.text)}</div></div>` : ''}
+    ${abilitiesBlock(def, ru, data)}
   </article>`;
 }
 
@@ -143,7 +143,7 @@ function detachmentBlock(det, list, data) {
         return `<div class="ov-enh-item ${who.length ? 'taken' : ''}">
           <div class="ov-enh-name">${icon(who.length ? 'stratPloy' : 'diamond')}<b>${esc(tr(e.name))}</b><span>${enh.points} ${t('points')}${enh.type === 'upgrade' ? ` · ${t('unit.upgrade')}` : ''}</span></div>
           ${who.length ? `<div class="ov-enh-who">${t('overview.takenBy')}: ${esc(who.join(', '))}</div>` : ''}
-          <p>${esc(tr(e.full ?? e.text))}</p>
+          ${para(e.full ?? e.text)}
         </div>`;
       }).join('')}
     </div>
@@ -159,7 +159,7 @@ function stratCard(s) {
     <header class="strat-head">
       <div class="strat-icon">${icon(kindIcon)}</div>
       <div class="strat-title"><h5>${esc(tr(s.name))}</h5>
-        <div class="strat-type">${esc(s.kind ? `${s.source} – ${s.kind}` : s.source)}</div></div>
+        <div class="strat-type">${esc(s.kind ? `${trs(s.source)} – ${trs(s.kind)}` : trs(s.source))}</div></div>
       <div class="strat-cp">${s.cp}<small>CP</small></div>
     </header>
     <div class="strat-tags">
