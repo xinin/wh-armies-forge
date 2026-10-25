@@ -19,12 +19,13 @@ Es una web estática, sin dependencias ni paso de build.
 - Catálogo de unidades con imagen, filtros por rol y búsqueda. Arrastra una unidad al ejército o pulsa **+**.
 - **Líderes**: arrastra un personaje sobre una unidad y las unidades válidas se iluminan. También puedes usar el desplegable "Unir a…". Arrastrar un líder fuera de la unidad lo separa, y arrastrar una unidad al catálogo la borra.
 - Tamaño de unidad, equipo (cambios de arma y armas especiales por cada 10 modelos), mejoras y Señor de la Guerra.
+- Tamaño de batalla con un deslizador: Incursión (1000), Fuerza de Asalto (2000) o Embestida (3000). El límite de puntos es el del tamaño elegido.
 - Destacamentos con sus Puntos de Destacamento (DP) según el tamaño de batalla.
 - Validación en vivo: límite de puntos, DP, límite de unidades (×2 para Battleline y Dedicated Transport), Héroes Épicos, número de mejoras, mejoras repetidas, una mejora por unidad combinada, líderes válidos y Señor de la Guerra.
 - Home con tus ejércitos guardados (puntos, validez, destacamentos y miniaturas) y un formulario para crear listas nuevas.
 - **Vista de ejército** (`#/list/<id>/view`): todas las unidades con su equipo, atributos, mejoras y habilidades; los destacamentos con su regla, mejoras (y quién las lleva) y estratagemas; la regla de ejército y las estratagemas generales. Se puede imprimir.
 - **Español e inglés**: el botón ES/EN cambia la interfaz y todo el contenido de juego (datasheets, armas, habilidades, equipo, reglas, mejoras y estratagemas). Las palabras clave en mayúsculas se quedan en inglés.
-- Cada cambio se guarda automáticamente en `armies/*.json`. Desde la home puedes duplicar, exportar, importar o borrar listas, y desde el editor copiar la lista como texto.
+- Cada cambio se guarda automáticamente en `armies/*.json`. Desde la home puedes crear, importar, duplicar, exportar o borrar listas.
 
 ## Aspecto oficial
 

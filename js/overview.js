@@ -7,21 +7,25 @@ import { battleSizeOf, listPoints, unitPoints, leadersOf, validate } from './rul
 import { esc, brandHtml, statRows, weaponTable, abilitiesBlock, ROLES } from './render.js';
 import { langToggle } from './home.js';
 
+const panel = (id, tab) => `class="ov-section ${id === tab ? 'active' : ''}" role="tabpanel" aria-labelledby="ov-tab-${id}"`;
+
 const para = text => esc(tr(text)).split('\n').map(l => `<p>${l}</p>`).join('');
 
 export function renderOverviewHeader(list) {
   return `${brandHtml()}
-  <div class="list-switch">
-    <a class="btn" href="#/">← ${t('home.back')}</a>
-    <a class="btn" href="#/list/${list.id}">✎ ${t('overview.edit')}</a>
-  </div>
-  <div class="header-actions">
-    <button class="btn" data-action="print">⎙ ${t('overview.print')}</button>
-    ${langToggle()}
-  </div>`;
+  <div></div>
+  <div class="header-actions">${langToggle()}</div>
+  <nav class="list-switch header-nav tabs">
+    <a class="tab" href="#/">← ${t('home.back')}</a>
+    <a class="tab" href="#/list/${list.id}">✎ ${t('overview.edit')}</a>
+    <button class="tab" data-action="print">⎙ ${t('overview.print')}</button>
+  </nav>`;
 }
 
-export function renderOverview(list, data, edition, customImages) {
+export const OV_TABS = ['units', 'detachments', 'army-rule', 'core'];
+
+// tab: the visible section on screen (printing shows them all)
+export function renderOverview(list, data, edition, customImages, tab) {
   const bs = battleSizeOf(list, edition);
   const pts = listPoints(list, data);
   const errors = validate(list, data, edition).filter(i => i.level === 'error');
@@ -39,7 +43,7 @@ export function renderOverview(list, data, edition, customImages) {
         <div class="ov-kicker">${esc(tr(data.faction.name))} · ${esc(tr(bs.name))}</div>
         <h1>${esc(list.name || t('list.untitled'))}</h1>
         <div class="ov-facts">
-          <span class="ov-fact ${pts > list.pointsLimit ? 'bad' : ''}"><b>${pts}</b> / ${list.pointsLimit} ${t('points')}</span>
+          <span class="ov-fact ${pts > bs.points ? 'bad' : ''}"><b>${pts}</b> / ${bs.points} ${t('points')}</span>
           <span class="ov-fact"><b>${list.units.length}</b> ${t('home.units')} · <b>${models}</b> ${t('unit.models')}</span>
           ${dets.map(d => `<span class="ov-fact det">${icon('stratTactic')}${esc(tr(d.name))}</span>`).join('')}
           ${warlord ? `<span class="ov-fact">${icon('emblem')}${t('unit.warlord')}: <b>${esc(tr(data.unitsById.get(warlord.unitId)?.name))}</b></span>` : ''}
@@ -48,16 +52,14 @@ export function renderOverview(list, data, edition, customImages) {
       </div>
     </section>
 
-    <nav class="ov-nav">
-      <a href="#ov-units" data-action="ov-jump">${t('overview.units')}</a>
-      <a href="#ov-detachments" data-action="ov-jump">${t('detachments')}</a>
-      <a href="#ov-army-rule" data-action="ov-jump">${t('rules.armyRule')}</a>
-      <a href="#ov-core" data-action="ov-jump">${t('overview.coreStratagems')}</a>
+    <nav class="ov-nav tabs" role="tablist">
+      ${OV_TABS.map(id => `<button role="tab" id="ov-tab-${id}" aria-controls="ov-${id}" aria-selected="${id === tab}" class="tab ${id === tab ? 'on' : ''}"
+        data-action="ov-tab" data-tab="${id}">${{ units: t('overview.units'), detachments: t('detachments'), 'army-rule': t('rules.armyRule'), core: t('overview.coreStratagems') }[id]}</button>`).join('')}
     </nav>
 
     ${errors.length ? `<ul class="issues ov-issues">${errors.map(i => `<li class="err">${esc(i.msg)}</li>`).join('')}</ul>` : ''}
 
-    <section id="ov-units" class="ov-section">
+    <section id="ov-units" ${panel('units', tab)}>
       <h2 class="ov-title">${icon('emblemFull')}${t('overview.units')}</h2>
       ${ROLES.map(role => {
         const group = top.filter(u => roleOf(u) === role);
@@ -68,12 +70,12 @@ export function renderOverview(list, data, edition, customImages) {
       ${top.length ? '' : `<p class="muted">${t('roster.empty')}</p>`}
     </section>
 
-    <section id="ov-detachments" class="ov-section">
+    <section id="ov-detachments" ${panel('detachments', tab)}>
       <h2 class="ov-title">${icon('stratTactic')}${t('detachments')}</h2>
       ${dets.length ? dets.map(d => detachmentBlock(d, list, data)).join('') : `<p class="muted">${t('err.noDetachment')}</p>`}
     </section>
 
-    <section id="ov-army-rule" class="ov-section">
+    <section id="ov-army-rule" ${panel('army-rule', tab)}>
       <h2 class="ov-title">${icon('emblem')}${t('rules.armyRule')}: ${esc(tr(data.faction.armyRule.name))}</h2>
       <div class="ov-rule">
         ${para(data.faction.armyRule.text)}
@@ -81,7 +83,7 @@ export function renderOverview(list, data, edition, customImages) {
       </div>
     </section>
 
-    <section id="ov-core" class="ov-section">
+    <section id="ov-core" ${panel('core', tab)}>
       <h2 class="ov-title">${icon('stratPloy')}${t('overview.coreStratagems')}</h2>
       <div class="strat-grid">${(edition.coreStratagems ?? []).map(stratCard).join('') || `<p class="muted">${t('overview.noStratagems')}</p>`}</div>
     </section>

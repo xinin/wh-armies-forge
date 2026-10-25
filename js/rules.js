@@ -113,7 +113,7 @@ export function validate(list, data, edition) {
   const nameOf = ru => tr(data.unitsById.get(ru.unitId)?.name);
 
   const pts = listPoints(list, data);
-  if (pts > list.pointsLimit) err('err.overPoints', { n: pts - list.pointsLimit });
+  if (pts > bs.points) err('err.overPoints', { n: pts - bs.points });
 
   if (!list.detachments.length) err('err.noDetachment');
   const dp = detachmentPointsUsed(list, data);

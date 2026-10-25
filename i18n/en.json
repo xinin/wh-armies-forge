@@ -8,13 +8,10 @@
   "list.duplicate": "Duplicate",
   "list.export": "Export",
   "list.import": "Import",
-  "list.copyText": "Copy as text",
-  "list.copied": "List copied to clipboard",
   "list.imported": "List imported",
   "list.importError": "Could not import file",
   "faction": "Faction",
   "battleSize": "Battle size",
-  "pointsLimit": "Points limit",
   "points": "pts",
   "detachments": "Detachments",
   "detachmentPoints": "Detachment points",
@@ -106,7 +103,6 @@
   "stats.rangeShort": "Rng",
   "home.title": "Your armies",
   "home.subtitle": "Create a new list or continue one of your saved lists.",
-  "home.storageFile": "Lists are saved as JSON files in the folder",
   "home.storageLocal": "No local server: lists are only stored in this browser. Start the app with ./serve.sh to save them as JSON files.",
   "home.saved": "Saved lists",
   "home.empty": "You have no lists yet. Create the first one!",
@@ -152,7 +148,6 @@
   "unit.extraCopy": "copy {n}+",
   "unit.extraCopyHelp": "In 11th edition this unit costs more from copy {n}",
   "picker.title": "Choose a faction",
-  "picker.subtitle": "Pick the army for your new list. You can change the battle size and name afterwards.",
   "picker.detachments": "detachments",
   "role.monster": "Monsters",
   "wargear.minModels": "Only with {n} models",
@@ -175,5 +170,7 @@
   "stat.WS": "WS",
   "stat.S": "S",
   "stat.AP": "AP",
-  "stat.D": "D"
+  "stat.D": "D",
+  "list.nameLabel": "List name",
+  "list.pointsUsed": "Points"
 }

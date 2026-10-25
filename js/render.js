@@ -30,34 +30,43 @@ const weaponName = (def, id) => tr(def.weaponMap.get(id)?.name) || id;
 
 export function renderHeader(state, list, index, data, edition) {
   const pts = listPoints(list, data);
-  const pct = Math.min(100, (pts / list.pointsLimit) * 100);
-  const over = pts > list.pointsLimit;
+  const bs = battleSizeOf(list, edition);
+  const pct = Math.min(100, (pts / bs.points) * 100);
+  const over = pts > bs.points;
+  const sizes = edition.battleSizes;
+  const idx = sizes.indexOf(bs);
   return `
   ${brandHtml()}
-  <div class="list-switch">
-    <a class="btn" href="#/" data-action="go-home">← ${t('home.back')}</a>
-    <span id="save-status" class="save-status"></span>
-  </div>
+  <div></div>
   <div class="header-actions">
-    <a class="btn primary" href="#/list/${list.id}/view">${icon('emblem')}${t('overview.open')}</a>
-    <button class="btn" data-action="copy-text">${t('list.copyText')}</button>
-    <button class="btn" data-action="export" data-id="${list.id}">${t('list.export')}</button>
     <div class="lang-toggle" role="group" aria-label="${t('lang')}">
       ${LANGS.map(l => `<button class="${l === getLang() ? 'on' : ''}" data-action="set-lang" data-lang="${l}">${l.toUpperCase()}</button>`).join('')}
     </div>
   </div>
+  <nav class="list-switch header-nav tabs">
+    <a class="tab" href="#/" data-action="go-home">← ${t('home.back')}</a>
+    <a class="tab" href="#/list/${list.id}/view">${icon('emblem')}${t('overview.open')}</a>
+    <span id="save-status" class="save-status"></span>
+  </nav>
   <div class="list-bar">
-    <input class="list-name" data-action="list-name" value="${esc(list.name)}" placeholder="${t('list.untitled')}">
-    <div class="field"><span>${t('faction')}</span><span class="faction-name">${icon('emblemFull', 'faction-emblem')}${esc(tr(data.faction.name))}</span></div>
-    <label class="field"><span>${t('battleSize')}</span>
-      <select data-action="battle-size">${edition.battleSizes.map(b => `<option value="${b.id}" ${b.id === list.battleSize ? 'selected' : ''}>${esc(tr(b.name))} (${b.points})</option>`).join('')}</select>
-    </label>
-    <label class="field narrow"><span>${t('pointsLimit')}</span>
-      <input type="number" min="100" step="50" data-action="points-limit" value="${list.pointsLimit}">
-    </label>
-    <div class="points-meter ${over ? 'over' : ''}" title="${pts} / ${list.pointsLimit}">
-      <div class="points-num"><strong>${pts}</strong> / ${list.pointsLimit} ${t('points')}</div>
-      <div class="points-track"><div class="points-fill" style="width:${pct}%"></div></div>
+    <div class="field"><span>${t('faction')}</span>
+      <div class="field-body faction-name">${icon('emblemFull', 'faction-emblem')}${esc(tr(data.faction.name))}</div>
+    </div>
+    <div class="field"><span id="bs-label">${t('battleSize')}</span>
+      <div class="field-body bs-body">
+        <input type="range" class="bs-slider" min="0" max="${sizes.length - 1}" step="1" value="${idx}" data-action="battle-size"
+          aria-labelledby="bs-label" aria-valuetext="${esc(tr(bs.name))} (${bs.points})" style="--pct:${idx / (sizes.length - 1) * 100}%">
+        <div class="bs-ticks">${sizes.map(b => `<button class="${b === bs ? 'on' : ''}" data-action="battle-size-pick" data-size="${b.id}">${esc(tr(b.name))}<small>${b.points} ${t('points')}</small></button>`).join('')}</div>
+      </div>
+    </div>
+    <div class="field"><label for="list-name">${t('list.nameLabel')}</label>
+      <div class="field-body"><input id="list-name" class="list-name" data-action="list-name" value="${esc(list.name)}" placeholder="${t('list.untitled')}"></div>
+    </div>
+    <div class="field points-meter ${over ? 'over' : ''}" title="${pts} / ${bs.points}"><span>${t('list.pointsUsed')}</span>
+      <div class="field-body points-body">
+        <div class="points-num"><strong>${pts}</strong> / ${bs.points} ${t('points')}</div>
+        <div class="points-track"><div class="points-fill" style="width:${pct}%"></div></div>
+      </div>
     </div>
   </div>`;
 }
@@ -477,34 +486,4 @@ export function renderModal(def, data, customImages) {
       </label>
     </div>
   </div>`;
-}
-
-/* ---------- Text export ---------- */
-
-export function listToText(list, data, edition) {
-  const bs = battleSizeOf(list, edition);
-  const lines = [
-    `${list.name || t('list.untitled')} — ${listPoints(list, data)}/${list.pointsLimit} ${t('points')}`,
-    `${tr(data.faction.name)} · ${tr(bs.name)} · ${list.detachments.map(id => tr(data.detachmentsById.get(id)?.name)).join(', ')}`,
-    '',
-  ];
-  const describe = (ru, indent) => {
-    const def = data.unitsById.get(ru.unitId);
-    const size = def.sizes[ru.sizeIdx];
-    const enh = ru.enhancement && data.enhancements.get(ru.enhancement);
-    lines.push(`${indent}${tr(def.name)}${size.models > 1 ? ` (${size.models})` : ''} — ${unitPoints(ru, data, list)} ${t('points')}${ru.warlord ? ` [${t('unit.warlord')}]` : ''}`);
-    if (enh) lines.push(`${indent}  ✦ ${tr(enh.name)} (+${enh.points})`);
-    lines.push(`${indent}  • ${loadoutOf(ru, def, data).map(i => i.name).join(', ')}`);
-  };
-  for (const role of ROLES) {
-    const group = list.units.filter(u => !u.attachedTo && data.unitsById.get(u.unitId)?.role === role);
-    if (!group.length) continue;
-    lines.push(t('role.' + role).toUpperCase());
-    for (const ru of group) {
-      describe(ru, '');
-      for (const l of leadersOf(ru.uid, list)) describe(l, `  ↳ `);
-    }
-    lines.push('');
-  }
-  return lines.join('\n');
 }

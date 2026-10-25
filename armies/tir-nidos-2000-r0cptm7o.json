@@ -4,7 +4,6 @@
   "factionId": "tyranids",
   "edition": "11th",
   "battleSize": "strike-force",
-  "pointsLimit": 2000,
   "detachments": [],
   "units": [
     {
@@ -34,7 +33,8 @@
       "unitId": "hive-tyrant",
       "sizeIdx": 0,
       "wargear": {
-        "o2": "monstrous-scything-talons"
+        "o1": "",
+        "o2": ""
       },
       "enhancement": null,
       "warlord": false,
@@ -42,6 +42,6 @@
     }
   ],
   "created": 1792957120804,
-  "updated": 1792957161242,
+  "updated": 1792970225376,
   "file": "armies/tir-nidos-2000-r0cptm7o.json"
 }

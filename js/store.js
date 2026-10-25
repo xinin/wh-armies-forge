@@ -128,14 +128,13 @@ export function getActiveList() {
   return state.lists.find(l => l.id === state.activeId) ?? null;
 }
 
-export function createList({ factionId, edition, battleSize, pointsLimit, name }) {
+export function createList({ factionId, edition, battleSize, name }) {
   const list = {
     id: uid(),
     name,
     factionId,
     edition,
     battleSize,
-    pointsLimit,
     detachments: [],
     units: [],
     created: Date.now(),
@@ -174,7 +173,8 @@ export function cloneRosterUnit(ru) {
 }
 
 export function importList(obj) {
-  const { file, ...rest } = obj;
+  // the points limit comes from the battle size (lists exported by older versions carry their own)
+  const { file, pointsLimit, ...rest } = obj;
   const list = { ...rest, id: uid(), created: Date.now() };
   update(s => { s.lists.push(list); });
   return list;

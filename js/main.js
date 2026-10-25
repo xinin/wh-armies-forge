@@ -6,14 +6,14 @@ import {
 } from './store.js';
 import { renderHome, renderHomeHeader, renderFactionPicker } from './home.js';
 import { setFactionEmblem } from './icons.js';
-import { renderOverview, renderOverviewHeader } from './overview.js';
+import { renderOverview, renderOverviewHeader, OV_TABS } from './overview.js';
 import { validate, canAttach, isLeader, battleSizeOf, optionMax, optionMaxEach } from './rules.js';
 import {
-  renderHeader, renderCatalog, renderCatalogItems, renderRoster, renderSidebar, renderModal, listToText, sheetState,
+  renderHeader, renderCatalog, renderCatalogItems, renderRoster, renderSidebar, renderModal, sheetState,
 } from './render.js';
 
 const $ = sel => document.querySelector(sel);
-const ui = { view: 'home', search: '', role: '', modalUnit: null, tab: 'roster' };
+const ui = { view: 'home', search: '', role: '', modalUnit: null, tab: 'roster', ovTab: OV_TABS[0] };
 let index, edition, data;
 const editions = new Map();
 const factions = new Map();
@@ -63,7 +63,7 @@ function createListFor(factionId) {
   const ed = editions.get(entry.edition);
   const bs = ed.battleSizes.find(b => b.id === 'strike-force') ?? ed.battleSizes[0];
   const list = createList({
-    factionId: entry.id, edition: entry.edition, battleSize: bs.id, pointsLimit: bs.points,
+    factionId: entry.id, edition: entry.edition, battleSize: bs.id,
     name: `${tr(entry.name)} ${bs.points}`,
   });
   closeDialog();
@@ -154,7 +154,7 @@ function renderOverviewView(state) {
   if (!list || !data) return;
   document.title = `${list.name || t('list.untitled')} · ${t('app.title')}`;
   $('#header').innerHTML = renderOverviewHeader(list);
-  $('#overview').innerHTML = renderOverview(list, data, edition, state.customImages);
+  $('#overview').innerHTML = renderOverview(list, data, edition, state.customImages, ui.ovTab);
   renderModalLayer(state);
 }
 
@@ -209,15 +209,6 @@ function askConfirm(message, okLabel) {
     document.addEventListener('keydown', onKey, true);
     el.querySelector('[data-answer="yes"]').focus();
   });
-}
-
-function showText(text) {
-  const el = openDialog(`<textarea class="dialog-text" readonly rows="14"></textarea>
-    <div class="dialog-actions"><button class="btn" data-answer="close">${t('close')}</button></div>`);
-  const ta = el.querySelector('textarea');
-  ta.value = text;
-  ta.select();
-  el.onclick = e => { if (e.target.closest('[data-answer]') || e.target === el) { el.hidden = true; el.innerHTML = ''; } };
 }
 
 function toast(msg) {
@@ -295,10 +286,14 @@ async function onClick(e) {
     case 'open-faction-picker': return openFactionPicker();
     case 'close-picker': return closeDialog();
     case 'pick-faction': return createListFor(el.dataset.id);
-    case 'ov-jump':
-      // in-page anchors must not touch the #/ route
-      e.preventDefault();
-      return document.querySelector(el.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    case 'ov-tab': {
+      // if the tab bar is stuck at the top, show the new tab from its start
+      const stuck = $('.ov-nav').getBoundingClientRect().top <= 1;
+      ui.ovTab = el.dataset.tab;
+      render();
+      if (stuck) document.getElementById(`ov-${ui.ovTab}`)?.scrollIntoView({ block: 'start' });
+      return;
+    }
     case 'add-unit': return addUnit(el.dataset.unit);
     case 'details': ui.modalUnit = el.dataset.unit; return render();
     case 'close-modal': ui.modalUnit = null; return render();
@@ -344,17 +339,12 @@ async function onClick(e) {
       deleteList(target.id);
       return toast(t('list.deleted'));
     }
+    case 'battle-size-pick': return withList(list => { list.battleSize = el.dataset.size; });
     case 'set-lang':
       await loadLang(el.dataset.lang);
       return update(s => { s.lang = el.dataset.lang; });
     case 'image-clear': return update(st => { delete st.customImages[el.dataset.unit]; });
-    case 'export': return exportJson(getState().lists.find(l => l.id === el.dataset.id) ?? getActiveList());
-    case 'copy-text': {
-      const text = listToText(getActiveList(), data, edition);
-      try { await navigator.clipboard.writeText(text); toast(t('list.copied')); }
-      catch { showText(text); }
-      return;
-    }
+    case 'export': return exportJson(getState().lists.find(l => l.id === el.dataset.id));
   }
 }
 
@@ -364,12 +354,7 @@ async function onChange(e) {
   if (!action) return;
   switch (action) {
     case 'list-name': return withList(list => { list.name = el.value.trim(); });
-    case 'battle-size': return withList(list => {
-      const bs = edition.battleSizes.find(b => b.id === el.value);
-      list.battleSize = bs.id;
-      list.pointsLimit = bs.points;
-    });
-    case 'points-limit': return withList(list => { list.pointsLimit = Math.max(0, parseInt(el.value, 10) || 0); });
+    case 'battle-size': return withList(list => { list.battleSize = edition.battleSizes[+el.value].id; });
     case 'size': return withList(list => {
       const ru = findRu(list, uid);
       ru.sizeIdx = +el.value;

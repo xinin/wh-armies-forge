@@ -8,13 +8,10 @@
   "list.duplicate": "Duplicar",
   "list.export": "Exportar",
   "list.import": "Importar",
-  "list.copyText": "Copiar texto",
-  "list.copied": "Lista copiada al portapapeles",
   "list.imported": "Lista importada",
   "list.importError": "No se pudo importar el fichero",
   "faction": "Facción",
   "battleSize": "Tamaño de batalla",
-  "pointsLimit": "Límite de puntos",
   "points": "pts",
   "detachments": "Destacamentos",
   "detachmentPoints": "Puntos de destacamento",
@@ -106,7 +103,6 @@
   "stats.rangeShort": "Alc.",
   "home.title": "Tus ejércitos",
   "home.subtitle": "Crea una lista nueva o continúa con una de las que tienes guardadas.",
-  "home.storageFile": "Las listas se guardan como JSON en la carpeta",
   "home.storageLocal": "Sin servidor local: las listas se guardan solo en este navegador. Arranca la app con ./serve.sh para guardarlas como ficheros JSON.",
   "home.saved": "Listas guardadas",
   "home.empty": "Todavía no tienes ninguna lista. ¡Crea la primera!",
@@ -152,7 +148,6 @@
   "unit.extraCopy": "{n}.ª+ copia",
   "unit.extraCopyHelp": "En la 11ª esta unidad cuesta más a partir de la {n}.ª copia",
   "picker.title": "Elige facción",
-  "picker.subtitle": "Selecciona el ejército para tu nueva lista. El tamaño de batalla y el nombre los puedes cambiar después.",
   "picker.detachments": "destacamentos",
   "role.monster": "Monstruos",
   "wargear.minModels": "Solo con {n} modelos",
@@ -175,5 +170,7 @@
   "stat.WS": "HA",
   "stat.S": "F",
   "stat.AP": "FP",
-  "stat.D": "D"
+  "stat.D": "D",
+  "list.nameLabel": "Nombre de la lista",
+  "list.pointsUsed": "Puntos"
 }
