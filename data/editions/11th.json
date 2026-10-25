@@ -1,0 +1,23 @@
+{
+  "id": "11th",
+  "name": { "en": "Warhammer 40,000 – 11th Edition", "es": "Warhammer 40,000 – 11ª Edición" },
+  "source": "wahapedia.ru/wh40k11ed – Core Rules (June 2026)",
+  "notes": {
+    "en": "Onslaught values are not confirmed yet; adjust here when published.",
+    "es": "Los valores de Onslaught aún no están confirmados; ajústalos aquí cuando se publiquen."
+  },
+  "battleSizes": [
+    { "id": "incursion",    "name": { "en": "Incursion",    "es": "Incursión" },        "points": 1000, "detachmentPoints": 2, "enhancementLimit": 2, "unitLimit": 2 },
+    { "id": "strike-force", "name": { "en": "Strike Force", "es": "Fuerza de Asalto" }, "points": 2000, "detachmentPoints": 3, "enhancementLimit": 4, "unitLimit": 3 },
+    { "id": "onslaught",    "name": { "en": "Onslaught",    "es": "Embestida" },        "points": 3000, "detachmentPoints": 4, "enhancementLimit": 6, "unitLimit": 3, "unconfirmed": true }
+  ],
+  "rules": {
+    "unitLimitMultiplierKeywords": { "BATTLELINE": 2, "DEDICATED TRANSPORT": 2 },
+    "epicHeroLimit": 1,
+    "maxEnhancementsPerUnit": 1,
+    "maxSameUpgrade": 3,
+    "upgradesCountTowardEnhancementLimit": false,
+    "warlordRequired": true,
+    "defaultMaxLeadersPerBodyguard": 1
+  }
+}

@@ -1,0 +1,983 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/",
+ "detachments": {
+  "guardians-of-the-throne": [
+   {
+    "id": "shield-of-honour",
+    "name": {
+     "en": "Shield Of Honour"
+    },
+    "cp": 1,
+    "source": "Guardians of the Throne",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Coming to the aid of beleaguered allies, these Custodians issue challenges to their foes. Few possess the resolve to ignore these bellicose cries, and even those who refuse to respond are left shaken."
+    },
+    "when": {
+     "en": "Start of the Fight phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES INFANTRY/MOUNTED unit."
+    },
+    "effect": {
+     "en": "When an enemy model engaged with your unit selects targets, if that enemy model does not select your unit as the target of all of its attacks, that enemy model’s attacks have: -1 to hit rolls. -1 to wound rolls."
+    }
+   },
+   {
+    "id": "superhuman-focus",
+    "name": {
+     "en": "Superhuman Focus"
+    },
+    "cp": 1,
+    "source": "Guardians of the Throne",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "Ever watchful and alert, these warriors switch seamlessly between martial ka’tah."
+    },
+    "when": {
+     "en": "End of any phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES unit that is not readied."
+    },
+    "effect": {
+     "en": "Your unit is readied."
+    },
+    "restrictions": {
+     "en": "You cannot select the same unit as the target of this Stratagem more than once per battle round."
+    }
+   },
+   {
+    "id": "in-auramite-clad",
+    "name": {
+     "en": "In Auramite Clad"
+    },
+    "cp": 1,
+    "source": "Guardians of the Throne",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Even the most potent of attacks struggle to penetrate the auramite plate of these warriors."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units)."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit have -1 AP until that enemy unit has attacked."
+    }
+   },
+   {
+    "id": "prime-target",
+    "name": {
+     "en": "Prime Target"
+    },
+    "cp": 1,
+    "source": "Guardians of the Throne",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "When a threat to the Golden Throne is identified, the Adeptus Custodes will bend every fibre of their being to ensure its destruction."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly ADEPTUS CUSTODES unit is selected to shoot."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks can: Re-roll one hit roll. Re-roll one wound roll. Re-roll one damage roll."
+    }
+   },
+   {
+    "id": "unlimited-endurance",
+    "name": {
+     "en": "Unlimited Endurance"
+    },
+    "cp": 1,
+    "source": "Guardians of the Throne",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Possessed of great endurance, Custodian sodalities willl pursue their targets to the ends of the galaxy. No matter how hard they might try, none can flee from their wrath."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS CUSTODES unit ends an advance move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Until the end of the turn: Your unit’s ranged attacks have [Assault]. That advance move does not prevent your unit from being eligible to declare a charge."
+    }
+   },
+   {
+    "id": "swift-as-the-eagle",
+    "name": {
+     "en": "Swift As The Eagle"
+    },
+    "cp": 1,
+    "source": "Guardians of the Throne",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "Every Custodian is devastatingly fast on the battlefield, with preternatural reactions to match. The greatest among them are outstanding, even by these lofty standards."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged TRUSTED SENTINEL unit."
+    },
+    "target": {
+     "en": "That TRUSTED SENTINEL unit."
+    },
+    "effect": {
+     "en": "Your unit can make a normal move of up to D3+3\"."
+    }
+   }
+  ],
+  "aquilan-shield": [
+   {
+    "id": "manoeuvre-and-fire",
+    "name": {
+     "en": "Manoeuvre And Fire"
+    },
+    "cp": 1,
+    "source": "Aquilan Shield",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "The Adeptus Custodes never take the pressure off their foes, maintaining punishing fire even as they manoeuvre to new positions."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS CUSTODES unit is selected to make a fall-back move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "That move does not prevent your unit from being eligible to shoot/declare a charge."
+    }
+   },
+   {
+    "id": "tip-of-the-talon",
+    "name": {
+     "en": "Tip Of The Talon"
+    },
+    "cp": 1,
+    "source": "Aquilan Shield",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Fighting at the forefront of the battle, these Custodians hit their victims with perfectly timed volleys the instant before they tear into their ranks."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly ADEPTUS CUSTODES unit is selected to shoot."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks that target an enemy unit within 9\" of your unit have +1 S."
+    }
+   },
+   {
+    "id": "rapid-reactions",
+    "name": {
+     "en": "Rapid Reactions"
+    },
+    "cp": 1,
+    "source": "Aquilan Shield",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "Forcing their outmatched enemies to fall back, Custodians level their guardian spears and cut down fleeing opponents with volleys of bolter fire."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a fall-back move."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES INFANTRY unit that was engaged with that enemy unit at the start of the phase."
+    },
+    "effect": {
+     "en": "Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit."
+    }
+   }
+  ],
+  "dread-host": [
+   {
+    "id": "lightning-wrath",
+    "name": {
+     "en": "Lightning Wrath"
+    },
+    "cp": 1,
+    "source": "Dread Host",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Rushing forward with terrifying speed, Custodian sodalities leave their foes no opportunity to escape."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS CUSTODES unit is selected to make a pile-in move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "When making that pile-in move, your unit can move up to D3+3\"."
+    }
+   },
+   {
+    "id": "golden-light-of-the-moiraides",
+    "name": {
+     "en": "Golden Light Of The Moiraides"
+    },
+    "cp": 2,
+    "source": "Dread Host",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "The Dread Host goes to battle aboard the trio of terrifying pre-Heresy warships known as the Moiraides. These potent vessels teleport their passengers straight into battle amidst an eruption of dazzling golden light."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS CUSTODES unit is selected to make an ingress move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES Unit."
+    },
+    "effect": {
+     "en": "Until the start of your next turn: Attacks that target your unit have -1 to hit rolls. Enemy units cannot target your unit with snap shooting attacks."
+    }
+   },
+   {
+    "id": "preternatural-rapidity",
+    "name": {
+     "en": "Preternatural Rapidity"
+    },
+    "cp": 1,
+    "source": "Dread Host",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "The warriors of the Adeptus Custodes are relentless in their pursuit of the Throneworld’s foes."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS CUSTODES unit ends an advance move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "That advance move does not prevent your unit from being eligible to declare a charge."
+    }
+   }
+  ],
+  "emperors-chosen": [
+   {
+    "id": "in-auramite-clad",
+    "name": {
+     "en": "In Auramite Clad"
+    },
+    "cp": 1,
+    "source": "Emperor's Chosen",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Even the most potent of attacks struggle to penetrate the auramite plate of these warriors."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units)."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit have -1 AP until that enemy unit has attacked."
+    }
+   },
+   {
+    "id": "superhuman-focus",
+    "name": {
+     "en": "Superhuman Focus"
+    },
+    "cp": 1,
+    "source": "Emperor's Chosen",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "Ever watchful and alert, these warriors switch seamlessly between martial ka’tah."
+    },
+    "when": {
+     "en": "End of any phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES unit that is not readied."
+    },
+    "effect": {
+     "en": "Your unit is readied."
+    },
+    "restrictions": {
+     "en": "You cannot select the same unit as the target of this stratagem more than once per battle round."
+    }
+   },
+   {
+    "id": "impenetrable-bastion",
+    "name": {
+     "en": "Impenetrable Bastion"
+    },
+    "cp": 1,
+    "source": "Emperor's Chosen",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "When holding ground, a sodality of Custodians becomes a living fortress whose gilded walls are nigh impossible to breach."
+    },
+    "when": {
+     "en": "End of your Movement phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES unit (excluding MONSTER/VEHICLE units)."
+    },
+    "effect": {
+     "en": "Select one objective your unit is controlling. That objective is secured."
+    }
+   }
+  ],
+  "emissaries-imperatus": [
+   {
+    "id": "bearers-of-his-light",
+    "name": {
+     "en": "Bearers Of His Light"
+    },
+    "cp": 1,
+    "source": "Emissaries Imperatus",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "No matter how far they stray from the Golden Throne, all Custodians carry with them the Emperor’s light, drawing upon His guidance in the midst of battle."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS CUSTODES unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks can ignore modifiers to hit rolls and wound rolls."
+    }
+   },
+   {
+    "id": "slayers-of-nightmares",
+    "name": {
+     "en": "Slayers Of Nightmares"
+    },
+    "cp": 1,
+    "source": "Emissaries Imperatus",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "In an age plagued by monstrous foes, primordial horrors from the darkest void circle Humanity’s dying light. These hideous aberrations the Adeptus Custodes engage without hesitation."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS CUSTODES unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls."
+    }
+   },
+   {
+    "id": "selfless-service",
+    "name": {
+     "en": "Selfless Service"
+    },
+    "cp": 1,
+    "source": "Emissaries Imperatus",
+    "kind": null,
+    "phase": "charge",
+    "turn": "enemy",
+    "legend": {
+     "en": "Any of the Ten Thousand would place themselves in peril to protect a fellow Custodian without a moment’s hesitation."
+    },
+    "when": {
+     "en": "End of your opponent’s Charge phase."
+    },
+    "target": {
+     "en": "One friendly unengaged ADEPTUS CUSTODES unit within 6\" of an enemy unit. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit."
+    },
+    "effect": {
+     "en": "Declare a charge with your unit: When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6\" of your unit and within the maximum distance."
+    }
+   }
+  ],
+  "shadowkeepers": [
+   {
+    "id": "grim-responsibility",
+    "name": {
+     "en": "Grim Responsibility"
+    },
+    "cp": 1,
+    "source": "Shadowkeepers",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "The Shadowkeepers strive to bring the most monstrous and malevolent of the Emperor’s foes to justice, striking them down with ruthless efficiency."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS CUSTODES INFANTRY unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks have [Lethal Hits: Character/Monster]."
+    }
+   },
+   {
+    "id": "no-escape",
+    "name": {
+     "en": "No Escape"
+    },
+    "cp": 2,
+    "source": "Shadowkeepers",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "Those Custodians who have served among the Shadowkeepers pursue their prey with dogged determination and will see them captured or slain."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a fall-back move."
+    },
+    "target": {
+     "en": "One friendly unengaged ADEPTUS CUSTODES INFANTRY unit that is within 6\" of that enemy unit."
+    },
+    "effect": {
+     "en": "Declare a charge with your unit. When selecting charge targets, you can only select enemy units that made a fall-back move this phase and are within the maximum distance."
+    }
+   },
+   {
+    "id": "indomitable-guardians",
+    "name": {
+     "en": "Indomitable Guardians"
+    },
+    "cp": 1,
+    "source": "Shadowkeepers",
+    "kind": null,
+    "phase": "fight",
+    "turn": "enemy",
+    "legend": {
+     "en": "No volume of fire or aggression will pry the Custodians from their objectives. Those who attempt to do so are subjected to the fullest extent of their violent fury."
+    },
+    "when": {
+     "en": "Your opponent’s Fight phase, when an enemy unit has fought."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES unit that is within range of an objective and is eligible to fight."
+    },
+    "effect": {
+     "en": "Your unit has Fights First and must be the next unit you select to fight."
+    }
+   }
+  ],
+  "solar-watch": [
+   {
+    "id": "inexorable",
+    "name": {
+     "en": "Inexorable"
+    },
+    "cp": 1,
+    "source": "Solar Watch",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "No obstacle, physical or otherwise, can halt the advance of the Solar Watch, nor stay their wrath."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS CUSTODES unit is selected to move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Until the end of the turn, your unit can ignore modifiers to your unit’s: M. Advance rolls and charge rolls."
+    }
+   },
+   {
+    "id": "at-spears-length",
+    "name": {
+     "en": "At Spear'S Length"
+    },
+    "cp": 1,
+    "source": "Solar Watch",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Duty to the Golden Throne overrides all else. When called to strike a new target, Custodian sodalities withdraw from the fight in close order, keeping their spears leveled towards their foes and holding them at bay with close-range volleys of bolter fire."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS CUSTODES unit is selected to make a fall-back move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "That fall-back move does not prevent your unit from being eligible to shoot."
+    }
+   },
+   {
+    "id": "gravimetric-grenade",
+    "name": {
+     "en": "Gravimetric Grenade"
+    },
+    "cp": 1,
+    "source": "Solar Watch",
+    "kind": null,
+    "phase": "charge",
+    "turn": "enemy",
+    "legend": {
+     "en": "Carried by many Custodians, these explosive devices detonate on impact, creating a field of gravitic energy that immobilises those caught in the blast radius."
+    },
+    "when": {
+     "en": "Start of your opponent’s Charge phase."
+    },
+    "target": {
+     "en": "One friendly unengaged ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "Select one visible enemy unit within 12\" of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls."
+    }
+   }
+  ],
+  "honoured-companions": [
+   {
+    "id": "emperors-domain",
+    "name": {
+     "en": "Emperor'S Domain"
+    },
+    "cp": 1,
+    "source": "Honoured Companions",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "There are those territories that must remain in the hands of the Imperium and be free of foes, regardless of the cost."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly TRUSTED SENTINEL unit is selected to make a consolidation move."
+    },
+    "target": {
+     "en": "That TRUSTED SENTINEL unit."
+    },
+    "effect": {
+     "en": "You can select the objective consolidation mode for that consolidation move, regardless of that consolidation move’s Before Moving restrictions. This means your unit can move out of engagement range with enemy units, provided it meets the conditions of the objective consolidation mode."
+    }
+   },
+   {
+    "id": "avenge-the-fallen",
+    "name": {
+     "en": "Avenge The Fallen"
+    },
+    "cp": 1,
+    "source": "Honoured Companions",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "The loss of a single Custodian is commemorated by the tolling of the Bell of Lost Souls on Terra, and by their comrades’ bloody vengeance on the battlefield."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly TRUSTED SENTINEL unit that is below starting strength is selected to fight."
+    },
+    "target": {
+     "en": "That TRUSTED SENTINEL unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks (excluding those made by CHARACTER models) have +2 A."
+    }
+   },
+   {
+    "id": "swift-as-the-eagle",
+    "name": {
+     "en": "Swift As The Eagle"
+    },
+    "cp": 1,
+    "source": "Honoured Companions",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "Every Custodian is devastatingly fast on the battlefield, with preternatural reactions to match. The greatest among them are outstanding, even by these lofty standards."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged TRUSTED SENTINEL unit."
+    },
+    "target": {
+     "en": "That TRUSTED SENTINEL unit."
+    },
+    "effect": {
+     "en": "Your unit can make a normal move of up to D3+3\"."
+    }
+   }
+  ],
+  "auric-champions": [
+   {
+    "id": "gilded-champion",
+    "name": {
+     "en": "Gilded Champion"
+    },
+    "cp": 1,
+    "source": "Auric Champions",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "The shining champions of the Adeptus Custodes are looked upon in awe by all who witness their grim arts. Their judgement is without flaw, and their tactical acumen utterly impeccable."
+    },
+    "when": {
+     "en": "Any phase, when a friendly ADEPTUS CUSTODES CHARACTER model has used a (Once per battle, per unit) datasheet ability."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES CHARACTER model."
+    },
+    "effect": {
+     "en": "Your model can use that (Once per battle, per unit) datasheet ability one additional time, but not in the same phase."
+    },
+    "restrictions": {
+     "en": "You cannot use this stratagem on the same ADEPTUS CUSTODES CHARACTER model more than once per battle."
+    }
+   },
+   {
+    "id": "duty-unto-death",
+    "name": {
+     "en": "Duty Unto Death"
+    },
+    "cp": 1,
+    "source": "Auric Champions",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Even as death is certain, the Emperor’s Ten Thousand will not relent, fighting to their last breath in defence of the Golden Throne."
+    },
+    "when": {
+     "en": "Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES unit."
+    },
+    "effect": {
+     "en": "When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if that model is a CHARACTER model: On a 3+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+    }
+   }
+  ],
+  "lions-of-the-emperor": [
+   {
+    "id": "vigil-unending",
+    "name": {
+     "en": "Vigil Unending"
+    },
+    "cp": 2,
+    "source": "Lions of the Emperor",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "So long as their duty remains unfulfilled, the Adeptus Custodes remain defiant in the face of their opponents."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES TERMINATOR unit."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES TERMINATOR unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit have -1 D until that enemy unit has attacked."
+    }
+   },
+   {
+    "id": "unleash-the-lions",
+    "name": {
+     "en": "Unleash The Lions"
+    },
+    "cp": 1,
+    "source": "Lions of the Emperor",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "Terminator-armoured Custodian champions fight alone and unaided, engaging entire formations in unrelenting battle."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES TERMINATOR unit that has 2+ models."
+    },
+    "effect": {
+     "en": "Your unit is split into separate units, each containing one model. These new units each have a starting strength of 1."
+    }
+   },
+   {
+    "id": "fury-of-the-emperor",
+    "name": {
+     "en": "Fury Of The Emperor"
+    },
+    "cp": 1,
+    "source": "Lions of the Emperor",
+    "kind": null,
+    "phase": "charge",
+    "turn": "your",
+    "legend": {
+     "en": "For all their physical might, it is the wrathful fury of the Adeptus Custodes that renders them truly terrifying. This is a gift they owe to the Emperor, who vested them with but a sliver of His terrible fury."
+    },
+    "when": {
+     "en": "Your Charge phase, when a friendly ADEPTUS CUSTODES TERMINATOR unit that made an ingress move this turn is selected to declare a charge."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES TERMINATOR unit."
+    },
+    "effect": {
+     "en": "Your unit has +2 to charge rolls."
+    }
+   }
+  ],
+  "might-of-the-moritoi": [
+   {
+    "id": "honoured-interred",
+    "name": {
+     "en": "Honoured Interred"
+    },
+    "cp": 1,
+    "source": "Might of the Moritoi",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "To fight in the shadow of the Moritoi is inspirational for any Custodian."
+    },
+    "when": {
+     "en": "Your Shooting phase or the Fight phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS CUSTODES DREADNOUGHT unit."
+    },
+    "effect": {
+     "en": "Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1."
+    }
+   },
+   {
+    "id": "unceasing-onslaught",
+    "name": {
+     "en": "Unceasing Onslaught"
+    },
+    "cp": 1,
+    "source": "Might of the Moritoi",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Drawing upon the full extent of their organic and mechanical might, this Dreadnought advances with unrelenting aggression, dispensing death with archeotech weaponry and crushing fist alike."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit ends an advance move."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES DREADNOUGHT unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks have [Assault] until the end of the turn. That move does not prevent your unit from being eligible to declare a charge."
+    }
+   },
+   {
+    "id": "unstoppable-momentum",
+    "name": {
+     "en": "Unstoppable Momentum"
+    },
+    "cp": 1,
+    "source": "Might of the Moritoi",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Few obstacles can impede a Custodian Dreadnought in full flow. Those that do are smashed down to clear a path."
+    },
+    "when": {
+     "en": "Your Movement/Charge phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit is selected to move or declares a charge."
+    },
+    "target": {
+     "en": "That ADEPTUS CUSTODES DREADNOUGHT unit."
+    },
+    "effect": {
+     "en": "Your unit has MOBILE."
+    }
+   }
+  ],
+  "grav-assault-force": [
+   {
+    "id": "victory-before-death",
+    "name": {
+     "en": "Victory Before Death"
+    },
+    "cp": 1,
+    "source": "Grav-Assault Force",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "Scrambling from the burning wreckage of their vehicles, Custodian crews use the last of their strength to claim their assigned objectives before succumbing to their wounds."
+    },
+    "when": {
+     "en": "Any phase, when a friendly GRAV-ASSAULT unit within range of an objective is destroyed."
+    },
+    "target": {
+     "en": "That GRAV-ASSAULT unit. You can target that unit with this stratagem even though it is destroyed."
+    },
+    "effect": {
+     "en": "Select one objective that: Your unit was controlling when it was destroyed. Has no enemy units (excluding AIRCRAFT units) within range of it. That objective is secured."
+    }
+   },
+   {
+    "id": "advanced-stabilisers",
+    "name": {
+     "en": "Advanced Stabilisers"
+    },
+    "cp": 1,
+    "source": "Grav-Assault Force",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Adeptus Custodes grav-vehicles possess highly efficient weapon stabilisation systems, enabling them to fire accurately even when travelling at maximum speed."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot."
+    },
+    "target": {
+     "en": "That GRAV-ASSAULT unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks have [Assault]."
+    }
+   },
+   {
+    "id": "inevitable-annihilation",
+    "name": {
+     "en": "Inevitable Annihilation"
+    },
+    "cp": 1,
+    "source": "Grav-Assault Force",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "The preternatural dexterity and reaction times of Custodian pilots and gunners, paired with the superlative targeting augury and terrifying speed of Adeptus Custodes grav-tanks, conspire to ensure that prey have little hope of escaping their fiery doom."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot."
+    },
+    "target": {
+     "en": "That GRAV-ASSAULT unit."
+    },
+    "effect": {
+     "en": "Your unit can ignore modifiers to your unit’s: BS. Hit rolls."
+    }
+   }
+  ],
+  "null-maiden-vigil": [
+   {
+    "id": "anathema-blademastery",
+    "name": {
+     "en": "Anathema Blademastery"
+    },
+    "cp": 1,
+    "source": "Null Maiden Vigil",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Vigilators train tirelessly in the art of the blade, demonstrating a skill-at-arms as terrifying as their soulless aura."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly VIGILATOR SQUAD unit is selected to fight."
+    },
+    "target": {
+     "en": "That VIGILATOR SQUAD unit."
+    },
+    "effect": {
+     "en": "Your unit’s attacks have: [Sustained Hits 1] Or: [Lethal Hits]."
+    }
+   },
+   {
+    "id": "psy-chaff-volley",
+    "name": {
+     "en": "Psy-Chaff Volley"
+    },
+    "cp": 1,
+    "source": "Null Maiden Vigil",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Prosecutors can fire psy-chaff bolts whose esoteric emissions weaken those targets not slain outright."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly PROSECUTOR SQUAD unit has shot."
+    },
+    "target": {
+     "en": "That PROSECUTOR SQUAD unit."
+    },
+    "effect": {
+     "en": "Select one enemy unit hit by those attacks. That unit is prosecuted until the end of the turn: Attacks that target a prosecuted unit have +1 AP."
+    }
+   },
+   {
+    "id": "purgation-sweep",
+    "name": {
+     "en": "Purgation Sweep"
+    },
+    "cp": 1,
+    "source": "Null Maiden Vigil",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "The role of the Witchseeker on the battlefield is simple: to reduce their intended targets to ash."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly WITCHSEEKER SQUAD unit is selected to shoot."
+    },
+    "target": {
+     "en": "That WITCHSEEKER SQUAD unit."
+    },
+    "effect": {
+     "en": "Your unit’s [Torrent] attacks have: +1 A. Or: If those attacks target a PSYKER/battle-shocked unit, +2 A."
+    }
+   }
+  ]
+ }
+}

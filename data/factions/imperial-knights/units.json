@@ -1,0 +1,4588 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World and Warhammer Legends datasheets, and datasheets that cannot be mustered (Sir Hekhtur): never imported.",
+  "ids": [
+   "acastus-knight-asterius",
+   "acastus-knight-porphyrion",
+   "armiger-moirax",
+   "cerastus-knight-acheron",
+   "cerastus-knight-atrapos",
+   "cerastus-knight-castigator",
+   "cerastus-knight-lancer",
+   "questoris-knight-magaera",
+   "questoris-knight-styrix",
+   "sir-hekhtur"
+  ]
+ },
+ "units": [
+  {
+   "id": "skitarii-marshal",
+   "name": {
+    "en": "Skitarii Marshal",
+    "es": "Skitarii Marshal"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "SKITARII",
+    "MARSHAL"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "control-stave",
+     "name": {
+      "en": "Control stave"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "mechanicus-pistol",
+    "control-stave"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Control Edict"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Servo-skull Uplink"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, you can select one friendly SKITARII unit that is Battle-shocked and within 6\" of this model. That unit is no longer Battle-shocked."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Marshal",
+   "composition": [
+    "1 Skitarii Marshal"
+   ],
+   "equipped": [
+    "This model is equipped with: Mechanicus pistol; control stave."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "tech-priest-dominus",
+   "name": {
+    "en": "Tech-priest Dominus",
+    "es": "Tech-priest Dominus"
+   },
+   "keywords": [
+    "IMPERIUM",
+    "INFANTRY",
+    "CHARACTER",
+    "CULT MECHANICUS",
+    "TECH-PRIEST",
+    "DOMINUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "2+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "eradication-ray",
+     "name": {
+      "en": "Eradication ray"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "dissipated"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "focused"
+       }
+      }
+     ]
+    },
+    {
+     "id": "macrostubber",
+     "name": {
+      "en": "Macrostubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "5",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phosphor-serpenta",
+     "name": {
+      "en": "Phosphor serpenta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "volkite-blaster",
+     "name": {
+      "en": "Volkite blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "omnissian-axe",
+     "name": {
+      "en": "Omnissian axe"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "macrostubber",
+    "volkite-blaster",
+    "omnissian-axe"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Lord of the Machine Cult"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the ELECTRO-PRIESTS keyword, models in that unit have the Feel No Pain 4+ ability instead."
+     }
+    },
+    {
+     "name": {
+      "en": "Data-spike"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, you can select one enemy VEHICLE unit within Engagement Range of this model’s unit and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds and, until the end of the phase, the Weapon Skill characteristic of melee weapons equipped by that enemy unit is worsened by 1."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tech-priest-Dominus",
+   "wargearOptions": [
+    {
+     "text": "This model’s macrostubber can be replaced with 1 phosphor serpenta.",
+     "choices": []
+    },
+    {
+     "text": "This model’s volkite blaster can be replaced with 1 eradication ray.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Tech-Priest Dominus"
+   ],
+   "equipped": [
+    "This model is equipped with: macrostubber; volkite blaster; Omnissian axe."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ]
+   },
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "macrostubber",
+     "choices": [
+      "macrostubber",
+      "phosphor-serpenta"
+     ],
+     "label": {
+      "en": "Replace Macrostubber",
+      "es": "Sustituir Macrostubber"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "volkite-blaster",
+     "choices": [
+      "volkite-blaster",
+      "eradication-ray"
+     ],
+     "label": {
+      "en": "Replace Volkite blaster",
+      "es": "Sustituir Volkite blaster"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "tech-priest-manipulus",
+   "name": {
+    "en": "Tech-priest Manipulus",
+    "es": "Tech-priest Manipulus"
+   },
+   "keywords": [
+    "IMPERIUM",
+    "INFANTRY",
+    "CHARACTER",
+    "CULT MECHANICUS",
+    "TECH-PRIEST",
+    "MANIPULUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "2+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "magnarail-lance",
+     "name": {
+      "en": "Magnarail lance"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "transonic-cannon",
+     "name": {
+      "en": "Transonic cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "omnissian-staff",
+     "name": {
+      "en": "Omnissian staff"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "magnarail-lance",
+    "omnissian-staff"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Galvanic Field"
+     },
+     "text": {
+      "en": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Defend the Divine Work"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, all models in this model’s unit have a 4+ invulnerable save."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tech-priest-Manipulus",
+   "wargearOptions": [
+    {
+     "text": "This model’s magnarail lance can be replaced with 1 transonic cannon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Tech-Priest Manipulus"
+   ],
+   "equipped": [
+    "This model is equipped with: magnarail lance; Omnissian staff."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ]
+   },
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "magnarail-lance",
+     "choices": [
+      "magnarail-lance",
+      "transonic-cannon"
+     ],
+     "label": {
+      "en": "Replace Magnarail lance",
+      "es": "Sustituir Magnarail lance"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "skitarii-rangers",
+   "name": {
+    "en": "Skitarii Rangers",
+    "es": "Skitarii Rangers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "IMPERIUM",
+    "SKITARII",
+    "RANGERS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "arc-rifle",
+     "name": {
+      "en": "Arc rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "galvanic-rifle",
+     "name": {
+      "en": "Galvanic rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "plasma-caliver",
+     "name": {
+      "en": "Plasma caliver"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "transuranic-arquebus",
+     "name": {
+      "en": "Transuranic arquebus"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "alpha-combat-weapon",
+     "name": {
+      "en": "Alpha combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "galvanic-rifle",
+    "close-combat-weapon"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Objective Scouted"
+     },
+     "text": {
+      "en": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Rangers",
+   "wargearOptions": [
+    {
+     "text": "The Skitarii Ranger Alpha can be equipped with 1 Alpha combat weapon.",
+     "choices": []
+    },
+    {
+     "text": "The Skitarii Ranger Alpha’s galvanic rifle can be replaced with 1 Mechanicus pistol.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 arc rifle.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 plasma caliver.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 transuranic arquebus.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger equipped with a galvanic rifle can be equipped with one of the following:",
+     "choices": [
+      "1 enhanced data-tether*",
+      "1 omnispex*"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Skitarii Ranger Alpha",
+    "9 Skitarii Rangers"
+   ],
+   "equipped": [
+    "Every model is equipped with: galvanic rifle; close combat weapon."
+   ],
+   "role": "battleline",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "toggle",
+     "gives": "alpha-combat-weapon",
+     "label": {
+      "en": "Add Alpha combat weapon",
+      "es": "Añadir Alpha combat weapon"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "galvanic-rifle",
+     "choices": [
+      "galvanic-rifle",
+      "mechanicus-pistol"
+     ],
+     "label": {
+      "en": "Replace Galvanic rifle",
+      "es": "Sustituir Galvanic rifle"
+     }
+    },
+    {
+     "id": "o3",
+     "type": "swap",
+     "default": "galvanic-rifle",
+     "choices": [
+      "galvanic-rifle",
+      "arc-rifle"
+     ],
+     "label": {
+      "en": "Replace Galvanic rifle",
+      "es": "Sustituir Galvanic rifle"
+     }
+    },
+    {
+     "id": "o4",
+     "type": "swap",
+     "default": "galvanic-rifle",
+     "choices": [
+      "galvanic-rifle",
+      "plasma-caliver"
+     ],
+     "label": {
+      "en": "Replace Galvanic rifle",
+      "es": "Sustituir Galvanic rifle"
+     }
+    },
+    {
+     "id": "o5",
+     "type": "swap",
+     "default": "galvanic-rifle",
+     "choices": [
+      "galvanic-rifle",
+      "transuranic-arquebus"
+     ],
+     "label": {
+      "en": "Replace Galvanic rifle",
+      "es": "Sustituir Galvanic rifle"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 10
+    }
+   ]
+  },
+  {
+   "id": "skitarii-vanguard",
+   "name": {
+    "en": "Skitarii Vanguard",
+    "es": "Skitarii Vanguard"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "IMPERIUM",
+    "SKITARII",
+    "VANGUARD"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "arc-rifle",
+     "name": {
+      "en": "Arc rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-caliver",
+     "name": {
+      "en": "Plasma caliver"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "radium-carbine",
+     "name": {
+      "en": "Radium carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "transuranic-arquebus",
+     "name": {
+      "en": "Transuranic arquebus"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "alpha-combat-weapon",
+     "name": {
+      "en": "Alpha combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "radium-carbine",
+    "close-combat-weapon"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rad-saturation (Aura)"
+     },
+     "text": {
+      "en": "While an enemy unit (excluding VEHICLE units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that unit."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Vanguard",
+   "wargearOptions": [
+    {
+     "text": "The Skitarii Vanguard Alpha can be equipped with 1 Alpha combat weapon.",
+     "choices": []
+    },
+    {
+     "text": "The Skitarii Vanguard Alpha’s radium carbine can be replaced with 1 Mechanicus pistol.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard’s radium carbine can be replaced with 1 arc rifle.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard’s radium carbine can be replaced with 1 plasma caliver.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard’s radium carbine can be replaced with 1 transuranic arquebus.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard equipped with a radium carbine can be equipped with one of the following:",
+     "choices": [
+      "1 enhanced data-tether*",
+      "1 omnispex*"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Skitarii Vanguard Alpha",
+    "9 Skitarii Vanguard"
+   ],
+   "equipped": [
+    "Every model is equipped with: radium carbine; close combat weapon."
+   ],
+   "role": "battleline",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "toggle",
+     "gives": "alpha-combat-weapon",
+     "label": {
+      "en": "Add Alpha combat weapon",
+      "es": "Añadir Alpha combat weapon"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "radium-carbine",
+     "choices": [
+      "radium-carbine",
+      "mechanicus-pistol"
+     ],
+     "label": {
+      "en": "Replace Radium carbine",
+      "es": "Sustituir Radium carbine"
+     }
+    },
+    {
+     "id": "o3",
+     "type": "swap",
+     "default": "radium-carbine",
+     "choices": [
+      "radium-carbine",
+      "arc-rifle"
+     ],
+     "label": {
+      "en": "Replace Radium carbine",
+      "es": "Sustituir Radium carbine"
+     }
+    },
+    {
+     "id": "o4",
+     "type": "swap",
+     "default": "radium-carbine",
+     "choices": [
+      "radium-carbine",
+      "plasma-caliver"
+     ],
+     "label": {
+      "en": "Replace Radium carbine",
+      "es": "Sustituir Radium carbine"
+     }
+    },
+    {
+     "id": "o5",
+     "type": "swap",
+     "default": "radium-carbine",
+     "choices": [
+      "radium-carbine",
+      "transuranic-arquebus"
+     ],
+     "label": {
+      "en": "Replace Radium carbine",
+      "es": "Sustituir Radium carbine"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 10
+    }
+   ]
+  },
+  {
+   "id": "armiger-helverin",
+   "name": {
+    "en": "Armiger Helverin",
+    "es": "Armiger Helverin"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "ARMIGER",
+    "HELVERIN"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "6",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "armiger-autocannon",
+     "name": {
+      "en": "Armiger autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-feet",
+     "name": {
+      "en": "Armoured feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "armiger-autocannon",
+    "questoris-heavy-stubber",
+    "armoured-feet"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Suppression Protocols"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks made with an Armiger autocannon. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Code Chivalric"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Armiger-Helverin",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Questoris heavy stubber can be replaced with 1 meltagun.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Armiger Helverin"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 Armiger autocannons; Questoris heavy stubber; armoured feet."
+   ],
+   "role": "vehicle",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "questoris-heavy-stubber",
+     "choices": [
+      "questoris-heavy-stubber",
+      "meltagun"
+     ],
+     "label": {
+      "en": "Replace Questoris heavy stubber",
+      "es": "Sustituir Questoris heavy stubber"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "armiger-warglaive",
+   "name": {
+    "en": "Armiger Warglaive",
+    "es": "Armiger Warglaive"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "ARMIGER",
+    "WARGLAIVE"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "6",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "thermal-spear",
+     "name": {
+      "en": "Thermal spear"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chain-cleaver",
+     "name": {
+      "en": "Reaper chain-cleaver"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "questoris-heavy-stubber",
+    "thermal-spear",
+    "reaper-chain-cleaver"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Impetuous Glory"
+     },
+     "text": {
+      "en": "Each time this model makes a Charge move, until the end of the turn, add 1 to the Attacks characteristic of this model’s reaper chain-cleaver - strike profile, and add 2 to the Attacks characteristic of this model’s reaper chain-cleaver - sweep profile."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Code Chivalric"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Armiger-Warglaive",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Questoris heavy stubber can be replaced with 1 meltagun.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Armiger Warglaive"
+   ],
+   "equipped": [
+    "This model is equipped with: Questoris heavy stubber; thermal spear; reaper chain-cleaver."
+   ],
+   "role": "vehicle",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "questoris-heavy-stubber",
+     "choices": [
+      "questoris-heavy-stubber",
+      "meltagun"
+     ],
+     "label": {
+      "en": "Replace Questoris heavy stubber",
+      "es": "Sustituir Questoris heavy stubber"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "canis-rex",
+   "name": {
+    "en": "Canis Rex",
+    "es": "Canis Rex"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "EPIC HERO",
+    "IMPERIUM",
+    "CANIS REX"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "las-impulsor",
+     "name": {
+      "en": "Las-impulsor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-3",
+       "D": "4",
+       "keywords": [
+        "Blast",
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "high intensity"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "2D6",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Blast",
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "low intensity"
+       }
+      }
+     ]
+    },
+    {
+     "id": "questoris-multi-laser",
+     "name": {
+      "en": "Questoris multi-laser"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "freedoms-hand",
+     "name": {
+      "en": "Freedom’s Hand"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "20",
+       "AP": "-3",
+       "D": "9",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "las-impulsor",
+    "questoris-multi-laser",
+    "freedoms-hand"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Legendary Freeblade"
+     },
+     "text": {
+      "en": "Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Chainbreaker"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Canis-Rex",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Canis Rex – EPIC HERO"
+   ],
+   "equipped": [
+    "Canis Rex is equipped with: las-impulsor; Questoris multi-laser; Freedom’s Hand."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-castellan",
+   "name": {
+    "en": "Knight Castellan",
+    "es": "Knight Castellan"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "DOMINUS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT CASTELLAN"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "12",
+     "Sv": "3+",
+     "W": "28",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "plasma-decimator",
+     "name": {
+      "en": "Plasma decimator"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "48\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "shieldbreaker-missile-launcher",
+     "name": {
+      "en": "Shieldbreaker missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-6",
+       "D": "D6+1",
+       "keywords": [
+        "Anti-titanic 4+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-meltagun",
+     "name": {
+      "en": "Twin meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-siegebreaker-cannon",
+     "name": {
+      "en": "Twin siegebreaker cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "volcano-lance",
+     "name": {
+      "en": "Volcano lance"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "18",
+       "AP": "-5",
+       "D": "D6+8",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "titanic-feet",
+     "name": {
+      "en": "Titanic feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "plasma-decimator",
+    "shieldbreaker-missile-launcher",
+    "twin-meltagun",
+    "twin-siegebreaker-cannon",
+    "volcano-lance",
+    "titanic-feet"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ion Aegis (Aura)"
+     },
+     "text": {
+      "en": "While a friendly ARMIGER model is within 6\" of this model, each time a ranged attack targets that model, it has the Benefit of Cover against that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Titan Hunter"
+     },
+     "text": {
+      "en": "Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6+2"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Castellan",
+   "damaged": {
+    "name": {
+     "en": "1-10 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Knight Castellan"
+   ],
+   "equipped": [
+    "This model is equipped with: plasma decimator; 2 shieldbreaker missile launchers; 2 twin meltaguns; twin siegebreaker cannon; volcano lance; titanic feet."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-crusader",
+   "name": {
+    "en": "Knight Crusader",
+    "es": "Knight Crusader"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT CRUSADER"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "avenger-gatling-cannon",
+     "name": {
+      "en": "Avenger gatling cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "18",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ironstorm-missile-pod",
+     "name": {
+      "en": "Ironstorm missile pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rapid-fire-battle-cannon",
+     "name": {
+      "en": "Rapid-fire battle cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Rapid Fire D6+3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormspear-rocket-pod",
+     "name": {
+      "en": "Stormspear rocket pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "thermal-cannon",
+     "name": {
+      "en": "Thermal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2D3",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Blast",
+        "Melta 6"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-icarus-autocannon",
+     "name": {
+      "en": "Twin Icarus autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "titanic-feet",
+     "name": {
+      "en": "Titanic feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "avenger-gatling-cannon",
+    "heavy-flamer",
+    "meltagun",
+    "thermal-cannon",
+    "titanic-feet"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Crusader’s Duty (Bondsman)"
+     },
+     "text": {
+      "en": "While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Punishing Salvoes"
+     },
+     "text": {
+      "en": "In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Crusader",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s meltagun can be replaced with 1 Questoris heavy stubber.",
+     "choices": []
+    },
+    {
+     "text": "This model’s thermal cannon can be replaced with:",
+     "choices": [
+      "1 rapid-fire battle cannon and 1 Questoris heavy stubber"
+     ]
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 ironstorm missile pod",
+      "1 stormspear rocket pod",
+      "1 twin Icarus autocannon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Crusader"
+   ],
+   "equipped": [
+    "This model is equipped with: avenger gatling cannon; heavy flamer; meltagun; thermal cannon; titanic feet."
+   ],
+   "role": "titanic",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "meltagun",
+     "choices": [
+      "meltagun",
+      "questoris-heavy-stubber"
+     ],
+     "label": {
+      "en": "Replace Meltagun",
+      "es": "Sustituir Meltagun"
+     }
+    },
+    {
+     "id": "o3",
+     "type": "swap",
+     "default": "",
+     "choices": [
+      "",
+      "ironstorm-missile-pod",
+      "stormspear-rocket-pod",
+      "twin-icarus-autocannon"
+     ],
+     "label": {
+      "en": "Optional weapon",
+      "es": "Arma opcional"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-defender",
+   "name": {
+    "en": "Knight Defender",
+    "es": "Knight Defender"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT DEFENDER"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "conversion-beam-obliterator",
+     "name": {
+      "en": "Conversion beam obliterator"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "4",
+       "keywords": [
+        "Sustained Hits D3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-executor",
+     "name": {
+      "en": "Plasma executor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "phosphor-blaster",
+     "name": {
+      "en": "Phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-incendine-combustor",
+     "name": {
+      "en": "Twin incendine combustor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "titanic-feet",
+     "name": {
+      "en": "Titanic feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "conversion-beam-obliterator",
+    "plasma-executor",
+    "twin-incendine-combustor",
+    "phosphor-blaster",
+    "titanic-feet"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Defender’s Duty (Bondsman)"
+     },
+     "text": {
+      "en": "While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Selfless Protector"
+     },
+     "text": {
+      "en": "Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Defender",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Knight Defender"
+   ],
+   "equipped": [
+    "This model is equipped with: conversion beam obliterator; plasma executor; twin incendine combustor; phosphor blaster; titanic feet."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-destrier",
+   "name": {
+    "en": "Knight Destrier",
+    "es": "Knight Destrier"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "BELLATUS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT DESTRIER"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "8",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "chastiser-gatling-cannon",
+     "name": {
+      "en": "Chastiser gatling cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "12",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "frag-bombard",
+     "name": {
+      "en": "Frag bombard"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Assault",
+        "Blast",
+        "Rapid Fire D6+3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bellatus-reaper-chainsword",
+     "name": {
+      "en": "Bellatus reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D3+3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "thundershock-spear",
+     "name": {
+      "en": "Thundershock spear"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D3+3",
+       "keywords": [
+        "Lance"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Lance"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "titanic-feet",
+     "name": {
+      "en": "Titanic feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "chastiser-gatling-cannon",
+    "frag-bombard",
+    "questoris-heavy-stubber",
+    "titanic-feet"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ram Jets"
+     },
+     "text": {
+      "en": "Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3\" to the Move characteristic of this model."
+     }
+    },
+    {
+     "name": {
+      "en": "Thundercharge"
+     },
+     "text": {
+      "en": "If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model."
+     }
+    },
+    {
+     "name": {
+      "en": "Saturation Fire"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Destrier",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s chastiser gatling cannon can be replaced with one of the following:",
+     "choices": [
+      "1 bellatus reaper chainsword*",
+      "1 thundershock spear*"
+     ]
+    },
+    {
+     "text": "This model’s frag bombard can be replaced with one of the following:",
+     "choices": [
+      "1 bellatus reaper chainsword*",
+      "1 thundershock spear*"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Destrier"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 chastiser gatling cannon; 1 frag bombard; 1 Questoris heavy stubber; 1 titanic feet."
+   ],
+   "role": "titanic",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "chastiser-gatling-cannon",
+     "choices": [
+      "chastiser-gatling-cannon",
+      "bellatus-reaper-chainsword",
+      "thundershock-spear"
+     ],
+     "label": {
+      "en": "Replace Chastiser gatling cannon",
+      "es": "Sustituir Chastiser gatling cannon"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "frag-bombard",
+     "choices": [
+      "frag-bombard",
+      "bellatus-reaper-chainsword",
+      "thundershock-spear"
+     ],
+     "label": {
+      "en": "Replace Frag bombard",
+      "es": "Sustituir Frag bombard"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-errant",
+   "name": {
+    "en": "Knight Errant",
+    "es": "Knight Errant"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT ERRANT"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ironstorm-missile-pod",
+     "name": {
+      "en": "Ironstorm missile pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormspear-rocket-pod",
+     "name": {
+      "en": "Stormspear rocket pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "thermal-cannon",
+     "name": {
+      "en": "Thermal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2D3",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Blast",
+        "Melta 6"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-icarus-autocannon",
+     "name": {
+      "en": "Twin Icarus autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "thunderstrike-gauntlet",
+     "name": {
+      "en": "Thunderstrike gauntlet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "meltagun",
+    "thermal-cannon",
+    "reaper-chainsword"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Errant’s Duty (Bondsman)"
+     },
+     "text": {
+      "en": "While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Aggressive Assault"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Errant",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s meltagun can be replaced with 1 Questoris heavy stubber.",
+     "choices": []
+    },
+    {
+     "text": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 ironstorm missile pod",
+      "1 stormspear rocket pod",
+      "1 twin Icarus autocannon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Errant"
+   ],
+   "equipped": [
+    "This model is equipped with: meltagun; thermal cannon; reaper chainsword."
+   ],
+   "role": "titanic",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "meltagun",
+     "choices": [
+      "meltagun",
+      "questoris-heavy-stubber"
+     ],
+     "label": {
+      "en": "Replace Meltagun",
+      "es": "Sustituir Meltagun"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "reaper-chainsword",
+     "choices": [
+      "reaper-chainsword",
+      "thunderstrike-gauntlet"
+     ],
+     "label": {
+      "en": "Replace Reaper chainsword",
+      "es": "Sustituir Reaper chainsword"
+     }
+    },
+    {
+     "id": "o3",
+     "type": "swap",
+     "default": "",
+     "choices": [
+      "",
+      "ironstorm-missile-pod",
+      "stormspear-rocket-pod",
+      "twin-icarus-autocannon"
+     ],
+     "label": {
+      "en": "Optional weapon",
+      "es": "Arma opcional"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-gallant",
+   "name": {
+    "en": "Knight Gallant",
+    "es": "Knight Gallant"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT GALLANT"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ironstorm-missile-pod",
+     "name": {
+      "en": "Ironstorm missile pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormspear-rocket-pod",
+     "name": {
+      "en": "Stormspear rocket pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-icarus-autocannon",
+     "name": {
+      "en": "Twin Icarus autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "18",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "thunderstrike-gauntlet",
+     "name": {
+      "en": "Thunderstrike gauntlet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Lethal Hits"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "meltagun",
+    "thunderstrike-gauntlet",
+    "reaper-chainsword"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Gallant’s Duty (Bondsman)"
+     },
+     "text": {
+      "en": "While a model is affected by this ability, you can re-roll Charge rolls made for that model and each time that model makes a melee attack, you can re-roll the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Martial Pride"
+     },
+     "text": {
+      "en": "Each time this unit Consolidates, models in it can move an additional 3\" provided your unit can end that move within Engagement Range of one or more enemy units."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Gallant",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s meltagun can be replaced with 1 Questoris heavy stubber.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 ironstorm missile pod",
+      "1 stormspear rocket pod",
+      "1 twin Icarus autocannon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Gallant"
+   ],
+   "equipped": [
+    "This model is equipped with: meltagun; thunderstrike gauntlet; reaper chainsword."
+   ],
+   "role": "titanic",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "meltagun",
+     "choices": [
+      "meltagun",
+      "questoris-heavy-stubber"
+     ],
+     "label": {
+      "en": "Replace Meltagun",
+      "es": "Sustituir Meltagun"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "",
+     "choices": [
+      "",
+      "ironstorm-missile-pod",
+      "stormspear-rocket-pod",
+      "twin-icarus-autocannon"
+     ],
+     "label": {
+      "en": "Optional weapon",
+      "es": "Arma opcional"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-paladin",
+   "name": {
+    "en": "Knight Paladin",
+    "es": "Knight Paladin"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT PALADIN"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ironstorm-missile-pod",
+     "name": {
+      "en": "Ironstorm missile pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rapid-fire-battle-cannon",
+     "name": {
+      "en": "Rapid-fire battle cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Rapid Fire D6+3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormspear-rocket-pod",
+     "name": {
+      "en": "Stormspear rocket pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-icarus-autocannon",
+     "name": {
+      "en": "Twin Icarus autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "thunderstrike-gauntlet",
+     "name": {
+      "en": "Thunderstrike gauntlet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "meltagun",
+    "questoris-heavy-stubber",
+    "reaper-chainsword"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Paladin’s Duty (Bondsman)"
+     },
+     "text": {
+      "en": "While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Seasoned Noble"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Paladin",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s meltagun can be replaced with 1 Questoris heavy stubber.",
+     "choices": []
+    },
+    {
+     "text": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 ironstorm missile pod",
+      "1 stormspear rocket pod",
+      "1 twin Icarus autocannon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Paladin"
+   ],
+   "equipped": [
+    "This model is equipped with: meltagun; Questoris heavy stubber; rapid-fire battlecannon; reaper chainsword."
+   ],
+   "role": "titanic",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "meltagun",
+     "choices": [
+      "meltagun",
+      "questoris-heavy-stubber"
+     ],
+     "label": {
+      "en": "Replace Meltagun",
+      "es": "Sustituir Meltagun"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "reaper-chainsword",
+     "choices": [
+      "reaper-chainsword",
+      "thunderstrike-gauntlet"
+     ],
+     "label": {
+      "en": "Replace Reaper chainsword",
+      "es": "Sustituir Reaper chainsword"
+     }
+    },
+    {
+     "id": "o3",
+     "type": "swap",
+     "default": "",
+     "choices": [
+      "",
+      "ironstorm-missile-pod",
+      "stormspear-rocket-pod",
+      "twin-icarus-autocannon"
+     ],
+     "label": {
+      "en": "Optional weapon",
+      "es": "Arma opcional"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-preceptor",
+   "name": {
+    "en": "Knight Preceptor",
+    "es": "Knight Preceptor"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT PRECEPTOR"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ironstorm-missile-pod",
+     "name": {
+      "en": "Ironstorm missile pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "las-impulsor",
+     "name": {
+      "en": "Las-impulsor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-3",
+       "D": "4",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "high intensity"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "2D6",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "low intensity"
+       }
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-multi-laser",
+     "name": {
+      "en": "Questoris multi-laser"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormspear-rocket-pod",
+     "name": {
+      "en": "Stormspear rocket pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-icarus-autocannon",
+     "name": {
+      "en": "Twin Icarus autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "thunderstrike-gauntlet",
+     "name": {
+      "en": "Thunderstrike gauntlet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "las-impulsor",
+    "questoris-multi-laser",
+    "reaper-chainsword"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Mentor (Bondsman)"
+     },
+     "text": {
+      "en": "Each time a model affected by this ability makes an attack that targets this model’s quarry, you can re-roll the Wound roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Exemplar of the Code"
+     },
+     "text": {
+      "en": "At the start of the battle, select one unit from your opponent’s army to be this model’s quarry. Each time this model makes an attack that targets its quarry, you can re-roll the Wound roll. Each time this model’s quarry is destroyed, you can select a new unit from your opponent’s army to be its quarry."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Preceptor",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Questoris multi-laser can be replaced with one of the following",
+     "choices": [
+      "1 meltagun",
+      "1 Questoris heavy stubber"
+     ]
+    },
+    {
+     "text": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 ironstorm missile pod",
+      "1 stormspear rocket pod",
+      "1 twin Icarus autocannon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Preceptor"
+   ],
+   "equipped": [
+    "This model is equipped with: las-impulsor; Questoris multi-laser; reaper chainsword."
+   ],
+   "role": "titanic",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "questoris-multi-laser",
+     "choices": [
+      "questoris-multi-laser",
+      "meltagun",
+      "questoris-heavy-stubber"
+     ],
+     "label": {
+      "en": "Replace Questoris multi-laser",
+      "es": "Sustituir Questoris multi-laser"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "reaper-chainsword",
+     "choices": [
+      "reaper-chainsword",
+      "thunderstrike-gauntlet"
+     ],
+     "label": {
+      "en": "Replace Reaper chainsword",
+      "es": "Sustituir Reaper chainsword"
+     }
+    },
+    {
+     "id": "o3",
+     "type": "swap",
+     "default": "",
+     "choices": [
+      "",
+      "ironstorm-missile-pod",
+      "stormspear-rocket-pod",
+      "twin-icarus-autocannon"
+     ],
+     "label": {
+      "en": "Optional weapon",
+      "es": "Arma opcional"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-valiant",
+   "name": {
+    "en": "Knight Valiant",
+    "es": "Knight Valiant"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "DOMINUS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT VALIANT"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "12",
+     "Sv": "3+",
+     "W": "28",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "conflagration-cannon",
+     "name": {
+      "en": "Conflagration cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3D6",
+       "skill": "-",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shieldbreaker-missile-launcher",
+     "name": {
+      "en": "Shieldbreaker missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-6",
+       "D": "D6+1",
+       "keywords": [
+        "Anti-titanic 4+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "thundercoil-harpoon",
+     "name": {
+      "en": "Thundercoil harpoon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "24",
+       "AP": "-6",
+       "D": "10",
+       "keywords": [
+        "Blast",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-meltagun",
+     "name": {
+      "en": "Twin meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-siegebreaker-cannon",
+     "name": {
+      "en": "Twin siegebreaker cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "titanic-feet",
+     "name": {
+      "en": "Titanic feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "conflagration-cannon",
+    "shieldbreaker-missile-launcher",
+    "thundercoil-harpoon",
+    "twin-meltagun",
+    "twin-siegebreaker-cannon",
+    "titanic-feet"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ion Aegis (Aura)"
+     },
+     "text": {
+      "en": "While a friendly ARMIGER model is within 6\" of this model, each time a ranged attack targets that model, it has the Benefit of Cover against that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Thundershock"
+     },
+     "text": {
+      "en": "In your Shooting phase, each time you select a target for this model’s thundercoil harpoon, roll one D6 for the target unit and one D6 for each other enemy unit within 6\" of the target unit. On a 4+, the unit being rolled for is struck by arcing energies; after resolving all of this model’s attacks against the target unit, each unit struck by arcing energies suffers D3 mortal wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6+2"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Valiant",
+   "damaged": {
+    "name": {
+     "en": "1-10 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Knight Valiant"
+   ],
+   "equipped": [
+    "This model is equipped with: conflagration cannon; 2 shieldbreaker missile launchers; thundercoil harpoon; 2 twin meltaguns; twin siegebreaker cannon; titanic feet."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  },
+  {
+   "id": "knight-warden",
+   "name": {
+    "en": "Knight Warden",
+    "es": "Knight Warden"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "QUESTORIS",
+    "CHARACTER",
+    "IMPERIUM",
+    "KNIGHT WARDEN"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "avenger-gatling-cannon",
+     "name": {
+      "en": "Avenger gatling cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "18",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ironstorm-missile-pod",
+     "name": {
+      "en": "Ironstorm missile pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "questoris-heavy-stubber",
+     "name": {
+      "en": "Questoris heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormspear-rocket-pod",
+     "name": {
+      "en": "Stormspear rocket pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-icarus-autocannon",
+     "name": {
+      "en": "Twin Icarus autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "thunderstrike-gauntlet",
+     "name": {
+      "en": "Thunderstrike gauntlet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "loadout": [
+    "avenger-gatling-cannon",
+    "heavy-flamer",
+    "meltagun",
+    "reaper-chainsword"
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Warden’s Duty (Bondsman)"
+     },
+     "text": {
+      "en": "While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Thin Their Ranks"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Code Chivalric",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Warden",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s meltagun can be replaced with 1 Questoris heavy stubber.",
+     "choices": []
+    },
+    {
+     "text": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 ironstorm missile pod",
+      "1 stormspear rocket pod",
+      "1 twin Icarus autocannon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Warden"
+   ],
+   "equipped": [
+    "This model is equipped with: avenger gatling cannon; heavy flamer; meltagun; reaper chainsword."
+   ],
+   "role": "titanic",
+   "wargear": [
+    {
+     "id": "o1",
+     "type": "swap",
+     "default": "meltagun",
+     "choices": [
+      "meltagun",
+      "questoris-heavy-stubber"
+     ],
+     "label": {
+      "en": "Replace Meltagun",
+      "es": "Sustituir Meltagun"
+     }
+    },
+    {
+     "id": "o2",
+     "type": "swap",
+     "default": "reaper-chainsword",
+     "choices": [
+      "reaper-chainsword",
+      "thunderstrike-gauntlet"
+     ],
+     "label": {
+      "en": "Replace Reaper chainsword",
+      "es": "Sustituir Reaper chainsword"
+     }
+    },
+    {
+     "id": "o3",
+     "type": "swap",
+     "default": "",
+     "choices": [
+      "",
+      "ironstorm-missile-pod",
+      "stormspear-rocket-pod",
+      "twin-icarus-autocannon"
+     ],
+     "label": {
+      "en": "Optional weapon",
+      "es": "Arma opcional"
+     }
+    }
+   ],
+   "sizes": [
+    {
+     "models": 1
+    }
+   ]
+  }
+ ]
+}

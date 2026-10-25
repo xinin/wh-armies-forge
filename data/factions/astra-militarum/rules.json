@@ -1,0 +1,365 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/astra-militarum/",
+ "detachments": {
+  "combined-arms": {
+   "rule": {
+    "name": {
+     "en": "Born Soldiers"
+    },
+    "text": {
+     "en": "Each time a model in a REGIMENT unit from your army makes a ranged attack that targets a visible unit (excluding MONSTERS and VEHICLES), that attack has the [LETHAL HITS] ability.\nEach time a model in a SQUADRON unit from your army makes a ranged attack that targets a visible MONSTER or VEHICLE unit, that attack has the [LETHAL HITS] ability."
+    }
+   },
+   "enhancements": {
+    "death-mask-of-ollanius": {
+     "text": {
+      "en": "OFFICER model only. While the bearer’s unit is Battle-shocked, subtract 1 from the Objective Control characteristic of models in that unit, instead of changing it to 0."
+     },
+     "points": 10
+    },
+    "drill-commander": {
+     "text": {
+      "en": "OFFICER model only. While the bearer is leading a unit, each time a model in that unit makes a ranged attack, if that unit Remained Stationary this turn, a Critical Hit is scored on a successful unmodified Hit roll of 5+."
+     },
+     "points": 20
+    },
+    "grand-strategist-ca": {
+     "text": {
+      "en": "OFFICER model only. In your Command phase, the bearer can issue one additional Order."
+     },
+     "points": 15
+    },
+    "reactive-command": {
+     "text": {
+      "en": "OFFICER model only. Each time an enemy unit is set up within 8\" of the bearer’s unit, the bearer can issue one Order. This is not counted towards the number of Orders the bearer can issue in a battle round."
+     },
+     "points": 15
+    }
+   }
+  },
+  "siege-regiment": {
+   "rule": {
+    "name": {
+     "en": "Artillery Support"
+    },
+    "text": {
+     "en": "At the start of the battle round, select one of the following types of artillery support.\nCreeping Barrage: Roll one D6 for each enemy unit that is more than 12\" from every model from your army that is on the battlefield: On a 5+, until the end of the battle round, that unit is shaken. While a unit is shaken, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it. The maximum number of units that can be shaken by this rule in each battle round depends on the battle size, as shown below.\nIncendiary Bombardment: Select a number of enemy units more than 12\" from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are scattered. While a unit is scattered, it cannot have the Benefit of Cover. The maximum number of units you can select in this way depends on the battle size, as shown below.\nSmoke Shells: Select a number of units from your army. Until the end of the battle round, those units have the Stealth ability. The maximum number of units you can select in this way depends on the battle size, as shown below.\nBATTLE SIZEMAXIMUM NUMBER OF UNITS\nIncursion2\nStrike Force3\nOnslaught4\nErrata\nShow\nSiege Regiment Detachment, Artillery Support Detachment Rule, Creeping Barrage\nChange to:\n‘Roll one D6 for each enemy unit that is more than 12\" from every model from your army that is on the battlefield: On a 5+, until the end of the battle round, that unit is shaken. While a unit is shaken, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it. The maximum number of units that can be shaken by this rule in each battle round depends on the battle size, as shown below.’"
+    }
+   },
+   "enhancements": {
+    "eager-advance": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. While the bearer is leading a REGIMENT unit, that unit has the Scouts 6\" ability."
+     },
+     "points": 20
+    },
+    "flash-grenades": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
+     },
+     "points": 20
+    },
+    "legacy-sidearm": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. Add 2 to the Attacks characteristics of the bearers Pistols."
+     },
+     "points": 10
+    },
+    "stalwarts-honours": {
+     "text": {
+      "en": "OFFICER model only. While the bearer is leading a unit, when that unit is issued an Order, it is also affected by the Take Cover! Order.\n<h2"
+     },
+     "points": 15
+    }
+   }
+  },
+  "mechanised-assault": {
+   "rule": {
+    "name": {
+     "en": "Armoured Fist"
+    },
+    "text": {
+     "en": "Each time an ASTRA MILITARUM model from your army makes a ranged attack in a turn in which it disembarked from a TRANSPORT, add 1 to the Wound roll."
+    }
+   },
+   "enhancements": {
+    "bold-leadership": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. If you control an objective marker at the end of your Command phase, and the bearer’s unit (or any TRANSPORT it is embarked within) is within range of that objective marker, that objective marker remains under you control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+     },
+     "points": 25
+    },
+    "sacred-unguents": {
+     "text": {
+      "en": "ASTRA MILITARUM TECH-PRIEST ENGINSEER model only. At the start of your Shooting phase, select one TRANSPORT from your army (excluding AIRCRAFT and TITANIC units) within 3\" of the bearer. Until the end of the phase, each time that TRANSPORT makes an attack, you can re-roll the Hit roll."
+     },
+     "points": 10
+    },
+    "smoke-grenades": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. The bearer’s unit has the Benefit of Cover and the Stealth ability while the bearer’s unit is wholly within 3\" of one or more friendly TRANSPORT models."
+     },
+     "points": 10
+    },
+    "vanguard-honours": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. The bearer’s unit can disembark from a TRANSPORT after it has Advanced. If it does, it makes a shock disembark move (Core Rules, 18.07) for that disembarkation.\n<h2"
+     },
+     "points": 15
+    }
+   }
+  },
+  "hammer-of-the-emperor": {
+   "rule": {
+    "name": {
+     "en": "Iron Tread"
+    },
+    "text": {
+     "en": "Each time a SQUADRON unit from your army Advances, do not make an Advance roll for it; until the end of the phase, add 6\" to the Move characteristic of models in that unit, and when making that Advance move, that unit can move within Engagement Range of enemy models but cannot end that move within Engagement Range of enemy models."
+    }
+   },
+   "enhancements": {
+    "calm-under-fire": {
+     "text": {
+      "en": "VEHICLE OFFICER model only. Once per turn, after the bearer issues an Order to a SQUADRON unit from your army, it can issue the same Order to another SQUADRON unit from your army."
+     },
+     "points": 15
+    },
+    "indomitable-steed": {
+     "text": {
+      "en": "VEHICLE OFFICER model only. The bearer has the Feel No Pain 6+ ability."
+     },
+     "points": 15
+    },
+    "regimental-banner": {
+     "text": {
+      "en": "VEHICLE OFFICER model only. Add 3 to the bearer’s Objective Control characteristic."
+     },
+     "points": 20
+    },
+    "veteran-crew": {
+     "text": {
+      "en": "VEHICLE OFFICER model only. Each time a model in the bearer’s unit makes a ranged attack, re-roll a Hit roll of 1.\n<h2"
+     },
+     "points": 20
+    }
+   }
+  },
+  "recon-element": {
+   "rule": {
+    "name": {
+     "en": "Masters of Camouflage"
+    },
+    "text": {
+     "en": "Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth.\nErrata\nShow\nRecon Element Detachment, Masters of Camouflage Detachment Rule\nChange to:\n‘Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth.’"
+    }
+   },
+   "enhancements": {
+    "guerrilla-honours": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. After both players have deployed their armies, if the bearer is on the battlefield, select up to three other ASTRA MILITARUM INFANTRY units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+     },
+     "points": 25
+    },
+    "scare-gas-grenades": {
+     "text": {
+      "en": "ASTRA MILITARUM INFANTRY model only. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, select one enemy unit within 8\" of the bearer’s unit (excluding MONSTER and VEHICLE units); that unit must take a Battle-shock test."
+     },
+     "points": 5
+    },
+    "survival-gear": {
+     "text": {
+      "en": "ASTRA MILITARUM INFANTRY model only. The bearer has the Scouts 6\" ability."
+     },
+     "points": 5
+    },
+    "tripwires": {
+     "text": {
+      "en": "ASTRA MILITARUM INFANTRY model only. Each time an enemy INFANTRY or MOUNTED unit ends a Normal, Advance, Charge or Fall Back move within 8\" of the bearer’s unit, roll one D6: on a 4+, until the start of your next turn, that enemy unit is stunned. While a unit is stunned, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+     },
+     "points": 20
+    }
+   }
+  },
+  "grizzled-company": {
+   "rule": {
+    "name": {
+     "en": "Ruthless Discipline"
+    },
+    "text": {
+     "en": "Add 1 to the number of Orders each ASTRA MILITARUM OFFICER model from your army can issue, as stated on their datasheet.\nWhile an ASTRA MILITARUM unit from your army is affected by an Order, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
+    }
+   },
+   "enhancements": {
+    "abhuman-detail": {
+     "text": {
+      "en": "LEADER: BULLGRYN SQUAD, OGRYN SQUAD\nCOMMISSAR model only. Add the OGRYN keyword to the list of units this model can issue Orders too (as stated on its datasheet).\nIn the Declare Battle Formations step, the bearer can be attached to an OGRYN SQUAD or BULLGRYN SQUAD unit."
+     },
+     "points": 20
+    },
+    "aquilan-eye": {
+     "text": {
+      "en": "ASTRA MILITARUM OFFICER model only. Each time you select an Order for the bearer to issue, you can select the Order below:\nTarget Weak Spot (Order): Each time a model in this unit makes a ranged attack that targets an enemy unit within 12\", improve the Armour Penetration characteristic of that attack by 1."
+     },
+     "points": 20
+    },
+    "spec-ops-veteran": {
+     "text": {
+      "en": "ASTRA MILITARUM INFANTRY OFFICER model only. Each time you select an Order for the bearer to issue, you can select the Order below:\nMove to the Shadows (Order): Each time a ranged attack targets this unit, until those attacks are resolved, models in this unit have the Stealth ability."
+     },
+     "points": 15
+    },
+    "laud-hailer": {
+     "text": {
+      "en": "ASTRA MILITARUM OFFICER model only. Each time you select a unit for this OFFICER model to issue an Order to, that unit can be within 12\" instead of within 6\".\n<h2"
+     },
+     "points": 10
+    }
+   }
+  },
+  "steel-hammer": {
+   "rule": {
+    "name": {
+     "en": "Ceaseless Cannonade"
+    },
+    "text": {
+     "en": "Each time an ASTRA MILITARUM TITANIC or ASTRA MILITARUM SQUADRON unit from your army is selected to shoot, models in that unit can target enemy units within Engagement Range of that unit (including with Blast weapons), provided no other friendly units are also within Engagement Range of that enemy unit. When doing so, such models do not suffer the penalty to their Hit rolls for being within Engagement Range of one or more enemy units (excluding attacks made with Indirect Fire weapons).\nKEYWORDS\nIn the Muster Armies step, you can select one or more ASTRA MILITARUM TITANIC units from your army to gain the CHARACTER keyword.\nDesigner’s Note: This means that the selected units can be given Enhancements, and one of them can be selected as your WARLORD."
+    }
+   },
+   "enhancements": {
+    "battalion-commander": {
+     "text": {
+      "en": "ASTRA MILITARUM TITANIC CHARACTER model only. The bearer has the Voice of Command ability and the OFFICER keyword, and can issue up to 2 Orders to ASTRA MILITARUM TITANIC and SQUADRON units."
+     },
+     "points": 30
+    },
+    "titan-killer": {
+     "text": {
+      "en": "ASTRA MILITARUM TITANIC CHARACTER model only. Each time the bearer makes a ranged attack, you can re-roll the Damage roll."
+     },
+     "points": 20
+    },
+    "engine-speaker": {
+     "text": {
+      "en": "ASTRA MILITARUM TECH-PRIEST ENGINSEER model only. Each time the bearer uses its Omnissiah’s Blessing ability, until the start of your next Command phase, add 3\" to the Move characteristic of the selected VEHICLE model."
+     },
+     "points": 15
+    },
+    "assault-hatches": {
+     "text": {
+      "en": "ASTRA MILITARUM TITANIC CHARACTER TRANSPORT model only. Each time a unit disembarks from the bearer after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation.\n<h2"
+     },
+     "points": 25
+    }
+   }
+  },
+  "armoured-infantry": {
+   "rule": {
+    "name": {
+     "en": "Squadron Command"
+    },
+    "text": {
+     "en": "Add SQUADRON to the list of units each OFFICER unit from your army can issue Orders to. Add the Order below to those listed in the Voice of Command ability.\nON MY SIGNAL\nThis Order can only be issued to ARMOURED SKIRMISHER units (see below). Each time an enemy unit ends a Normal or Advance move within 8\" of this unit, this unit can make a Normal move of up to D6\". Each unit can only move in this way once per turn.\nKEYWORDS\nASTRA MILITARUM SQUADRON units from your army have the ARMOURED SKIRMISHER keyword (excluding ARTILLERY units and units containing one or more models with a Wounds characteristic of 13 or higher).\nErrata\nShow\nArmoured Infantry Detachment, Squadron Command detachment rule, On My Signal order\nChange 9” to: 8”"
+    }
+   },
+   "enhancements": {
+    "exemplary-officer": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. Each time the bearer issues an Order to its own unit, you can select up to two other PLATOON units within 3\" of the bearer’s unit. That Order is also issued to each of those units."
+     },
+     "points": 20
+    },
+    "master-manoeuvrist": {
+     "text": {
+      "en": "INFANTRY OFFICER model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units and every model in that unit is within 3\" of an ASTRA MILITARUM TRANSPORT from your army, it can embark within that TRANSPORT."
+     },
+     "points": 15
+    },
+    "omnissian-unguents": {
+     "text": {
+      "en": "ASTRA MILITARUM TECH-PRIEST ENGINSEER model only. While a friendly ARMOURED SKIRMISHER unit is within 3\" of the bearer, that unit has the Feel No Pain 5+ ability."
+     },
+     "points": 35
+    },
+    "grand-strategist-ai": {
+     "text": {
+      "en": "OFFICER model only. After both players have deployed their armies, if the bearer’s unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to two units with the REGIMENT or SQUADRON keywords from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.\n<h2"
+     },
+     "points": 25
+    }
+   }
+  },
+  "abhuman-auxiliaries": {
+   "rule": {
+    "name": {
+     "en": "Absolutist Principles"
+    },
+    "text": {
+     "en": "Friendly BULLGRYN SQUAD/OGRYN SQUAD/RATLINGS units have ABHUMAN.\nFriendly COMMISSAR models can:\nIssue the Take Aim! Order.\nIssue 1 Order to a friendly ABHUMAN unit.\nThis detachment has the ABHUMAN tag and cannot be taken with another ABHUMAN detachment."
+    }
+   },
+   "enhancements": {
+    "sharp-eyes": {
+     "text": {
+      "en": "RATLINGS unit only. When this unit is selected to shoot, enemy units have +6\" detection range until this unit has shot."
+     },
+     "points": 10
+    },
+    "exemplar-of-duty": {
+     "text": {
+      "en": "LEADER: BULLGRYN SQUAD, OGRYN SQUAD\nCOMMISSAR model only. This model has Feel No Pain 4+.\n<h2"
+     },
+     "points": 10
+    }
+   }
+  },
+  "designation-force": {
+   "rule": {
+    "name": {
+     "en": "Designated Targets"
+    },
+    "text": {
+     "en": "Friendly SCOUT SENTINEL/ASTRA MILITARUM INFANTRY SMOKE units have the following ability:\nSignal Flares: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is designated:\nWhile a unit is designated, that unit has +3\" detection range.\nThis detachment has the RECON tag and cannot be taken with another RECON detachment."
+    }
+   },
+   "enhancements": {
+    "long-range-scout": {
+     "text": {
+      "en": "SCOUT SENTINEL unit only. This unit has Infiltrators"
+     },
+     "points": 10
+    },
+    "recon-star": {
+     "text": {
+      "en": "ASTRA MILITARUM INFANTRY PLATOON unit only. In your first Movement phase, this unit can make an ingress move.\n<h2"
+     },
+     "points": 10
+    }
+   }
+  },
+  "bridgehead-strike": {
+   "rule": {
+    "name": {
+     "en": "Fire Zone Purge"
+    },
+    "text": {
+     "en": "If a friendly MILITARUM TEMPESTUS OFFICER model is your WARLORD, friendly TEMPESTUS SCIONS units have:\nBATTLELINE.\n+1 OC.\nWhen a friendly MILITARUM TEMPESTUS unit is selected to shoot, if that unit was set up this turn, that unit’s ranged attacks have +1 to hit rolls."
+    }
+   },
+   "enhancements": {
+    "bombast-vox-array": {
+     "text": {
+      "en": "MILITARUM TEMPESTUS OFFICER model only. When this model issues an Order, if this unit has the Master Vox wargear ability, this model can issue that Order to up to three different REGIMENT units, instead of only one."
+     },
+     "points": 15
+    },
+    "priority-drop-beacon": {
+     "text": {
+      "en": "MILITARUM TEMPESTUS OFFICER model only. In your first Movement phase, this unit can make an ingress move.\n<h2"
+     },
+     "points": 25
+    }
+   }
+  }
+ }
+}

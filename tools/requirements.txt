@@ -1,0 +1,7 @@
+# Only needed for the import tools (the app itself has no dependencies).
+# Use CPython (e.g. /usr/bin/python3): Pillow does not build on PyPy.
+#   /usr/bin/python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
+pypdf
+pillow
+pymupdf
+websocket-client

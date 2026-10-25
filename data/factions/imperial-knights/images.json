@@ -1,0 +1,22 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "armiger-helverin": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108015_IKArmigerHelverins01.jpg?fm=webp&w=480&h=495",
+  "armiger-warglaive": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108019_ImperialKnightsArmiger01.jpg?fm=webp&w=480&h=495",
+  "canis-rex": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108106_ImperialKnightPreceptorCanisRex1upd.jpg?fm=webp&w=480&h=495",
+  "knight-castellan": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108016_IKCastellan01.jpg?fm=webp&w=480&h=495",
+  "knight-crusader": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108105_IKKnightQuestorisLEADCrusader.jpg?fm=webp&w=480&h=495",
+  "knight-defender": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108105_IKKnightQuestorisLEADDefender.jpg?fm=webp&w=480&h=495",
+  "knight-destrier": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108123_KnightDestrierALT.jpg?fm=webp&w=480&h=495",
+  "knight-errant": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108105_IKKnightQuestorisLEADErrant.jpg?fm=webp&w=480&h=495",
+  "knight-gallant": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108105_IKKnightQuestorisLEADGallant.jpg?fm=webp&w=480&h=495",
+  "knight-paladin": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108105_IKKnightQuestorisLEADPaladin.jpg?fm=webp&w=480&h=495",
+  "knight-preceptor": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108106_ImperialKnightPreceptorCanisRex1upd.jpg?fm=webp&w=480&h=495",
+  "knight-valiant": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108018_ImperialKnightValiant01.jpg?fm=webp&w=480&h=495",
+  "knight-warden": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108105_IKKnightQuestorisLEADDefender.jpg?fm=webp&w=480&h=495",
+  "skitarii-marshal": "https://www.warhammer.com/app/resources/catalog/product/920x950/99070116003_AMSkitariiMarshalLead.jpg?fm=webp&w=480&h=495",
+  "skitarii-rangers": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116002_SkitariiRangers01.jpg?fm=webp&w=480&h=495",
+  "skitarii-vanguard": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116002_SkitariiVanguard01.jpg?fm=webp&w=480&h=495",
+  "tech-priest-manipulus": "https://www.warhammer.com/app/resources/catalog/product/920x950/99070116002_TechPriestManipulusLead.jpg?fm=webp&w=480&h=495"
+ }
+}

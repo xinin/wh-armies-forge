@@ -1,0 +1,47 @@
+{
+  "id": "r0cptm7o",
+  "name": "Tiránidos 2000",
+  "factionId": "tyranids",
+  "edition": "11th",
+  "battleSize": "strike-force",
+  "pointsLimit": 2000,
+  "detachments": [],
+  "units": [
+    {
+      "uid": "ecxwjq55",
+      "unitId": "tyranid-warriors-with-ranged-bio-weapons",
+      "sizeIdx": 0,
+      "wargear": {
+        "o1": {},
+        "o2": {},
+        "o3": {}
+      },
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": null
+    },
+    {
+      "uid": "47akyim3",
+      "unitId": "tyranid-warriors-with-melee-bio-weapons",
+      "sizeIdx": 0,
+      "wargear": {},
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": null
+    },
+    {
+      "uid": "6lcfl4em",
+      "unitId": "hive-tyrant",
+      "sizeIdx": 0,
+      "wargear": {
+        "o2": "monstrous-scything-talons"
+      },
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": null
+    }
+  ],
+  "created": 1792957120804,
+  "updated": 1792957161242,
+  "file": "armies/tir-nidos-2000-r0cptm7o.json"
+}

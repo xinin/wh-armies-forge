@@ -1,0 +1,31 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "allarus-custodians": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108011_AllarusCustodians01.jpg?fm=webp&w=480&h=495",
+  "aquilon-terminators-with-solarite-power-gauntlets": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043011_CustodesAquilonTerminatorSodality1.jpg?fm=webp&w=480&h=495",
+  "aquilon-terminators-with-solarite-power-talons": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043011_CustodesAquilonTerminatorSodality1.jpg?fm=webp&w=480&h=495",
+  "blade-champion": "https://www.warhammer.com/app/resources/catalog/product/920x950/99070108010_ACBladeChampionLead.jpg?fm=webp&w=480&h=495",
+  "caladius-annihilator-grav-tank": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043020_CustodesCaladiusGravTankAnnihilator1.jpg?fm=webp&w=480&h=495",
+  "caladius-grav-tank": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043019_CustodesCaladiusGravTank1.jpg?fm=webp&w=480&h=495",
+  "contemptor-achillus-dreadnought": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043023_CustodesCustodianDreadnought1.jpg?fm=webp&w=480&h=495",
+  "contemptor-galatus-dreadnought": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043023_CustodesCustodianDreadnought1.jpg?fm=webp&w=480&h=495",
+  "coronus-grav-carrier": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043021_CustodesCoronusGravCarrier1.jpg?fm=webp&w=480&h=495",
+  "custodian-guard-sodality": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043016_CustodesCustodianGuard1.jpg?fm=webp&w=480&h=495",
+  "custodian-wardens": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108013_CustodianWardens01.jpg?fm=webp&w=480&h=495",
+  "gyrfalcon-jetbike-sodality": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043013_THHCustodesGryfalconSodalityEXTRA.jpg?fm=webp&w=480&h=495",
+  "knight-centura": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108007_VigilatorSquad01.jpg?fm=webp&w=480&h=495",
+  "pallas-grav-attack": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043014_CustodesPallasGravAttack1.jpg?fm=webp&w=480&h=495",
+  "prosecutor-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108007_ProsecutorSquad01.jpg?fm=webp&w=480&h=495",
+  "sentinel-guard-sodality": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043022_CustodesSentinelGuard1.jpg?fm=webp&w=480&h=495",
+  "shield-captain": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043018_CustodesShieldCaptain1.jpg?fm=webp&w=480&h=495",
+  "shield-captain-in-allarus-terminator-armour": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108011_AllarusCustodiansCpt01.jpg?fm=webp&w=480&h=495",
+  "shield-captain-on-dawneagle-jetbike": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108014_VertusPraetors03.jpg?fm=webp&w=480&h=495",
+  "telemon-heavy-dreadnought": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043012_CustodesTelemonHeavyDreadnought1.jpg?fm=webp&w=480&h=495",
+  "trajann-valoris": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108012_GeneralTrajannValoris01.jpg?fm=webp&w=480&h=495",
+  "venatari-with-kinetic-destroyers": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043017_CustodesVenatariSodality1.jpg?fm=webp&w=480&h=495",
+  "venatari-with-verutum-lances": "https://www.warhammer.com/app/resources/catalog/product/920x950/99123043017_CustodesVenatariSodality1.jpg?fm=webp&w=480&h=495",
+  "vertus-praetors": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108014_VertusPraetors01.jpg?fm=webp&w=480&h=495",
+  "vigilator-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108007_VigilatorSquad01.jpg?fm=webp&w=480&h=495",
+  "witchseeker-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108007_WitchseekerSquad01.jpg?fm=webp&w=480&h=495"
+ }
+}

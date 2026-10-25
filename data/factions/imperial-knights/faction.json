@@ -1,0 +1,436 @@
+{
+ "id": "imperial-knights",
+ "name": {
+  "en": "Imperial Knights",
+  "es": "Caballeros Imperiales"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/",
+ "armyRule": {
+  "name": {
+   "en": "Code Chivalric"
+  },
+  "text": {
+   "en": "If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below. To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed. To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability. The first time your selected Deed is completed your Oath is fulfilled and, until the end of the…"
+  }
+ },
+ "detachments": [
+  {
+   "id": "freeblade-company",
+   "cost": 3,
+   "name": {
+    "en": "Freeblade Company"
+   },
+   "rule": {
+    "name": {
+     "en": "Knights of Legend"
+    },
+    "text": {
+     "en": "IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "bringer-of-justice",
+     "requires": [],
+     "name": {
+      "en": "Bringer of Justice"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll."
+     }
+    },
+    {
+     "id": "hunters-eye",
+     "requires": [],
+     "name": {
+      "en": "Hunter’s Eye"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
+     }
+    },
+    {
+     "id": "mysterious-guardian",
+     "requires": [],
+     "name": {
+      "en": "Mysterious Guardian"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: Place this unit in strategic reserves.…"
+     }
+    },
+    {
+     "id": "sanctuary",
+     "requires": [],
+     "name": {
+      "en": "Sanctuary"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save. <h2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "questoris-companions",
+   "cost": 3,
+   "name": {
+    "en": "Questoris Companions"
+   },
+   "rule": {
+    "name": {
+     "en": "Heroes of Legend"
+    },
+    "text": {
+     "en": "At the start of your turn, if your current Oath is fulfilled, determine an additional Oath as described here, with the exception that you cannot select a Deed or Quality you have already selected (if you are randomly selecting the Deed and/or Quality and roll any result that you have already selected, select a Deed or…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "herald-of-triumph",
+     "requires": [],
+     "name": {
+      "en": "Herald of Triumph"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. When the bearer ends a Charge move, it can use this Enhancement. If it does, this Enhancement is expended, then each enemy unit within Engagement Range of the bearer must…"
+     }
+    },
+    {
+     "id": "wyrmslayer-divination",
+     "requires": [],
+     "name": {
+      "en": "Wyrmslayer Divination"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. In your Shooting phase, when the bearer is selected to shoot, it can use this Enhancement. If it does, this Enhancement is expended, then until the end of the phase, each…"
+     }
+    },
+    {
+     "id": "pennant-of-silvered-fury",
+     "requires": [],
+     "name": {
+      "en": "Pennant of Silvered Fury"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. When the bearer is selected to fight, it can use this Enhancement. If it does, this Enhancement is expended, then until the end of the phase, melee weapons equipped by…"
+     }
+    },
+    {
+     "id": "crushing-condemnation",
+     "requires": [],
+     "name": {
+      "en": "Crushing Condemnation"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. When the bearer is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, the bearer can use this Enhancement. If it…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "valourstrike-lance",
+   "cost": 2,
+   "name": {
+    "en": "Valourstrike Lance"
+   },
+   "rule": {
+    "name": {
+     "en": "Bold Gallantry"
+    },
+    "text": {
+     "en": "Each time an IMPERIAL KNIGHTS unit from your army Advances, until the end of the turn, ranged weapons equipped by IMPERIAL KNIGHTS models from your army have the [ASSAULT] ability. Errata Show Valourstrike Lance Detachment, Bold Gallantry Detachment Rule Change to: ‘Each time an IMPERIAL KNIGHTS unit from your army…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "bearer-of-the-iron-chalice",
+     "requires": [],
+     "name": {
+      "en": "Bearer of the Iron Chalice"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. At the end of your Movement phase, select one other IMPERIAL KNIGHTS model from your army that is within 12\" of and visible to the bearer. That selected model regains up…"
+     }
+    },
+    {
+     "id": "bearer-of-the-evanescent-ion",
+     "requires": [],
+     "name": {
+      "en": "Bearer of the Evanescent Ion"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. At the end of your Movement phase, select one other IMPERIAL KNIGHTS model from your army that is within 12\" of and visible to the bearer. Until the start of your next…"
+     }
+    },
+    {
+     "id": "bearer-of-the-judicants-helm",
+     "requires": [],
+     "name": {
+      "en": "Bearer of the Judicant’s Helm"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. At the start of your Shooting phase, select one other IMPERIAL KNIGHTS model from your army that is within 12\" of and visible to the bearer. Until the end of the phase,…"
+     }
+    },
+    {
+     "id": "bearer-of-the-lancers-sigil",
+     "requires": [],
+     "name": {
+      "en": "Bearer of the Lancer’s Sigil"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. At the start of your Charge phase, select one other IMPERIAL KNIGHTS model from your army that is within 12\" of and visible to the bearer. Until the end of the phase, you…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "spearhead-at-arms",
+   "cost": 2,
+   "name": {
+    "en": "Spearhead-At-Arms"
+   },
+   "rule": {
+    "name": {
+     "en": "Knightly Teachings"
+    },
+    "text": {
+     "en": "Each time a model from your army uses its Bondsman ability, if no other model from your army has used that Bondsman ability that turn, you can select up to three friendly ARMIGER models (instead of one) within 12\" of that model, or within 15\" of that model while your army is Honoured (you still cannot select a model…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "mentors-pride",
+     "requires": [],
+     "name": {
+      "en": "Mentor’s Pride"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. While two or more ARMIGER models are under the effects of the bearers Bondsman ability, each time each of those ARMIGER models makes an attack, you can re-roll a Hit roll…"
+     }
+    },
+    {
+     "id": "fables-of-nightmare",
+     "requires": [],
+     "name": {
+      "en": "Fables of Nightmare"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. While two or more ARMIGER models are under the effects of the bearer’s Bondsman ability, melee weapons equipped by those ARMIGER models have the [precision] ability."
+     }
+    },
+    {
+     "id": "tales-of-heroism",
+     "requires": [],
+     "name": {
+      "en": "Tales of Heroism"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. While two or more ARMIGER models are under the effects of the bearer’s Bondsman ability, each time one of those ARMIGER models makes a melee attack, you can ignore any or…"
+     }
+    },
+    {
+     "id": "martial-tuition",
+     "requires": [],
+     "name": {
+      "en": "Martial Tuition"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. While two or more ARMIGER models arc under the effects of the bearer’s Bondsman ability, once per turn, you can target one of those ARMIGER models with the…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "gate-warden-lance",
+   "cost": 2,
+   "name": {
+    "en": "Gate Warden Lance"
+   },
+   "rule": {
+    "name": {
+     "en": "Dauntless Defenders"
+    },
+    "text": {
+     "en": "At the start of the first battle round, select two objectives to be your foundations. Place a circular 40mm foundation marker in each one. When you draw a line from any part of one your foundation markers to any part of the other, if any part of a model’s base (or any part of a model’s hull, for a model without a…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "acquisitor-at-arms",
+     "requires": [],
+     "name": {
+      "en": "Acquisitor-at-Arms"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. While the bearer is on your defensive line and there are no enemy units on your defensive line, add the bearers Objective Control characteristic to that of each model…"
+     }
+    },
+    {
+     "id": "purgations-hand",
+     "requires": [],
+     "name": {
+      "en": "Purgation’s Hand"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. Each time the bearer makes a melee attack, if the bearer is on your defensive line, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+     }
+    },
+    {
+     "id": "augury-halo",
+     "requires": [],
+     "name": {
+      "en": "Augury Halo"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. Each time the bearer makes a ranged attack, while the bearer is on your defensive line, weapons equipped by the bearer have the [ignores cover] ability."
+     }
+    },
+    {
+     "id": "vengeful-tread",
+     "requires": [],
+     "name": {
+      "en": "Vengeful Tread"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. Once per turn, you can target the bearer with the Crushing Impact Stratagem for 0CP. <h2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "questor-forgepact",
+   "cost": 1,
+   "name": {
+    "en": "Questor Forgepact"
+   },
+   "rule": {
+    "name": {
+     "en": "Cogbound Alliance"
+    },
+    "text": {
+     "en": "Friendly IMPERIAL KNIGHTS models have the following ability: Assisted Targeting (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that ADEPTUS MECHANICUS unit’s ranged attacks have:+1 BS. [HEAVY]. Friendly TECH-PRIEST models have the following ability: Sacristan Pledge: In your Command…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "magos-questoris",
+     "requires": [
+      [
+       "TECH-PRIEST"
+      ]
+     ],
+     "name": {
+      "en": "Magos Questoris"
+     },
+     "text": {
+      "en": "TECH-PRIEST model only. When using this model’s Sacristan Pledge ability, the selected IMPERIAL KNIGHTS model heals 2 additional wounds."
+     }
+    },
+    {
+     "id": "knight-of-the-opus-machina",
+     "requires": [],
+     "name": {
+      "en": "Knight of the Opus Machina"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS model only. While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that ADEPTUS MECHANICUS unit’s melee attacks have +1 WS and AP. <h2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dominus-foebreakers",
+   "cost": 1,
+   "name": {
+    "en": "Dominus Foebreakers"
+   },
+   "rule": {
+    "name": {
+     "en": "Rain of Devastation"
+    },
+    "text": {
+     "en": "Friendly IMPERIAL KNIGHTS DOMINUS units’ attacks that target a unit in a terrain area have +1 to hit rolls."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "blessed-plate",
+     "requires": [
+      [
+       "DOMINUS"
+      ]
+     ],
+     "name": {
+      "en": "Blessed Plate"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS DOMINUS model only. This model has +1 T."
+     }
+    },
+    {
+     "id": "archeotech-autoloaders",
+     "requires": [
+      [
+       "DOMINUS"
+      ]
+     ],
+     "name": {
+      "en": "Archeotech Autoloaders"
+     },
+     "text": {
+      "en": "IMPERIAL KNIGHTS DOMINUS model only. This unit can re-roll rolls to determine the A of a weapon. <h2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "throne-bonded-outriders",
+   "cost": 1,
+   "name": {
+    "en": "Throne-Bonded Outriders"
+   },
+   "rule": {
+    "name": {
+     "en": "Driven from Their Lairs"
+    },
+    "text": {
+     "en": "While a friendly ARMIGER unit is affected by a Bondsman ability, that unit’s ranged attacks have [IGNORES COVER]. This detachment has the ARMIGERS tag and cannot be taken with another ARMIGERS detachment."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "gyro-optimised-actuators",
+     "requires": [
+      [
+       "ARMIGER"
+      ]
+     ],
+     "name": {
+      "en": "Gyro-Optimised Actuators"
+     },
+     "text": {
+      "en": "ARMIGER unit only. This unit has MOBILE."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "ancestral-overbleed",
+     "requires": [
+      [
+       "ARMIGER"
+      ]
+     ],
+     "name": {
+      "en": "Ancestral Overbleed"
+     },
+     "text": {
+      "en": "ARMIGER unit only. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP. <h2"
+     },
+     "type": "upgrade"
+    }
+   ]
+  }
+ ]
+}

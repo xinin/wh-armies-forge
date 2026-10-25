@@ -1,0 +1,44 @@
+{
+  "factions": [
+    {
+      "id": "astra-militarum",
+      "name": {
+        "en": "Astra Militarum",
+        "es": "Astra Militarum"
+      },
+      "edition": "11th",
+      "path": "astra-militarum",
+      "color": "#6b7d4a"
+    },
+    {
+      "id": "adeptus-custodes",
+      "name": {
+        "en": "Adeptus Custodes",
+        "es": "Adeptus Custodes"
+      },
+      "edition": "11th",
+      "path": "adeptus-custodes",
+      "color": "#b8923a"
+    },
+    {
+      "id": "tyranids",
+      "name": {
+        "en": "Tyranids",
+        "es": "Tiránidos"
+      },
+      "edition": "11th",
+      "path": "tyranids",
+      "color": "#7b3f8c"
+    },
+    {
+      "id": "imperial-knights",
+      "name": {
+        "en": "Imperial Knights",
+        "es": "Caballeros Imperiales"
+      },
+      "edition": "11th",
+      "path": "imperial-knights",
+      "color": "#2c5f8a"
+    }
+  ]
+}

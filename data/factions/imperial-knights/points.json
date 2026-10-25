@@ -1,0 +1,226 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-25",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/",
+ "verified": [
+  "all-enhancements",
+  "armiger-helverin",
+  "armiger-warglaive",
+  "canis-rex",
+  "knight-castellan",
+  "knight-crusader",
+  "knight-defender",
+  "knight-destrier",
+  "knight-errant",
+  "knight-gallant",
+  "knight-paladin",
+  "knight-preceptor",
+  "knight-valiant",
+  "knight-warden",
+  "skitarii-marshal",
+  "skitarii-rangers",
+  "skitarii-vanguard",
+  "tech-priest-dominus",
+  "tech-priest-manipulus"
+ ],
+ "units": {
+  "armiger-helverin": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "armiger-warglaive": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "canis-rex": [
+   {
+    "models": 1,
+    "points": 415
+   }
+  ],
+  "knight-castellan": [
+   {
+    "models": 1,
+    "points": 425
+   }
+  ],
+  "knight-crusader": [
+   {
+    "models": 1,
+    "points": 395
+   }
+  ],
+  "knight-defender": [
+   {
+    "models": 1,
+    "points": 385
+   }
+  ],
+  "knight-destrier": [
+   {
+    "models": 1,
+    "points": 265
+   }
+  ],
+  "knight-errant": [
+   {
+    "models": 1,
+    "points": 355
+   }
+  ],
+  "knight-gallant": [
+   {
+    "models": 1,
+    "points": 355
+   }
+  ],
+  "knight-paladin": [
+   {
+    "models": 1,
+    "points": 375
+   }
+  ],
+  "knight-preceptor": [
+   {
+    "models": 1,
+    "points": 365
+   }
+  ],
+  "knight-valiant": [
+   {
+    "models": 1,
+    "points": 390
+   }
+  ],
+  "knight-warden": [
+   {
+    "models": 1,
+    "points": 365
+   }
+  ],
+  "skitarii-marshal": [
+   {
+    "models": 1,
+    "points": 35
+   }
+  ],
+  "skitarii-rangers": [
+   {
+    "models": 10,
+    "points": 85
+   }
+  ],
+  "skitarii-vanguard": [
+   {
+    "models": 10,
+    "points": 85
+   }
+  ],
+  "tech-priest-dominus": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "tech-priest-manipulus": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ]
+ },
+ "enhancements": {
+  "bringer-of-justice": 30,
+  "hunters-eye": 25,
+  "mysterious-guardian": 35,
+  "sanctuary": 20,
+  "herald-of-triumph": 15,
+  "wyrmslayer-divination": 10,
+  "pennant-of-silvered-fury": 15,
+  "crushing-condemnation": 10,
+  "bearer-of-the-iron-chalice": 20,
+  "bearer-of-the-evanescent-ion": 15,
+  "bearer-of-the-judicants-helm": 25,
+  "bearer-of-the-lancers-sigil": 25,
+  "mentors-pride": 20,
+  "fables-of-nightmare": 10,
+  "tales-of-heroism": 10,
+  "martial-tuition": 15,
+  "acquisitor-at-arms": 15,
+  "purgations-hand": 20,
+  "augury-halo": 20,
+  "vengeful-tread": 15,
+  "magos-questoris": 20,
+  "knight-of-the-opus-machina": 15,
+  "blessed-plate": 30,
+  "archeotech-autoloaders": 25,
+  "gyro-optimised-actuators": 15,
+  "ancestral-overbleed": 10
+ },
+ "unitsExtraCopies": {
+  "knight-castellan": [
+   {
+    "models": 1,
+    "points": 450
+   }
+  ],
+  "knight-crusader": [
+   {
+    "models": 1,
+    "points": 415
+   }
+  ],
+  "knight-defender": [
+   {
+    "models": 1,
+    "points": 405
+   }
+  ],
+  "knight-destrier": [
+   {
+    "models": 1,
+    "points": 280
+   }
+  ],
+  "knight-errant": [
+   {
+    "models": 1,
+    "points": 370
+   }
+  ],
+  "knight-gallant": [
+   {
+    "models": 1,
+    "points": 370
+   }
+  ],
+  "knight-paladin": [
+   {
+    "models": 1,
+    "points": 390
+   }
+  ],
+  "knight-preceptor": [
+   {
+    "models": 1,
+    "points": 380
+   }
+  ],
+  "knight-valiant": [
+   {
+    "models": 1,
+    "points": 405
+   }
+  ],
+  "knight-warden": [
+   {
+    "models": 1,
+    "points": 380
+   }
+  ]
+ }
+}

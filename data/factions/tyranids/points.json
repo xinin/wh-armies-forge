@@ -1,0 +1,590 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-25",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/tyranids/",
+ "verified": [
+  "all-enhancements",
+  "barbgaunts",
+  "biovores",
+  "broodlord",
+  "carnifexes",
+  "deathleaper",
+  "exocrine",
+  "gargoyles",
+  "genestealers",
+  "harpy",
+  "haruspex",
+  "hive-crone",
+  "hive-guard",
+  "hive-tyrant",
+  "hormagaunts",
+  "hyperadapted-raveners",
+  "lictor",
+  "maleceptor",
+  "mawloc",
+  "mucolid-spores",
+  "neurogaunts",
+  "neurolictor",
+  "neurotyrant",
+  "norn-assimilator",
+  "norn-emissary",
+  "old-one-eye",
+  "parasite-of-mortrex",
+  "psychophage",
+  "pyrovores",
+  "raveners",
+  "ripper-swarms",
+  "screamer-killer",
+  "spore-mines",
+  "sporocyst",
+  "termagants",
+  "tervigon",
+  "the-red-terror",
+  "the-swarmlord",
+  "toxicrene",
+  "trygon",
+  "tyranid-prime-with-lash-whip",
+  "tyranid-warriors-with-melee-bio-weapons",
+  "tyranid-warriors-with-ranged-bio-weapons",
+  "tyrannocyte",
+  "tyrannofex",
+  "tyrant-guard",
+  "venomthropes",
+  "von-ryans-leapers",
+  "winged-hive-tyrant",
+  "winged-tyranid-prime",
+  "zoanthropes"
+ ],
+ "units": {
+  "barbgaunts": [
+   {
+    "models": 5,
+    "points": 50
+   },
+   {
+    "models": 10,
+    "points": 100
+   }
+  ],
+  "biovores": [
+   {
+    "models": 1,
+    "points": 60
+   },
+   {
+    "models": 2,
+    "points": 100
+   },
+   {
+    "models": 3,
+    "points": 140
+   }
+  ],
+  "broodlord": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "carnifexes": [
+   {
+    "models": 1,
+    "points": 90
+   },
+   {
+    "models": 2,
+    "points": 180
+   }
+  ],
+  "deathleaper": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "exocrine": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "gargoyles": [
+   {
+    "models": 10,
+    "points": 75
+   },
+   {
+    "models": 20,
+    "points": 150
+   }
+  ],
+  "genestealers": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 140
+   }
+  ],
+  "harpy": [
+   {
+    "models": 1,
+    "points": 185
+   }
+  ],
+  "haruspex": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "hive-crone": [
+   {
+    "models": 1,
+    "points": 170
+   }
+  ],
+  "hive-guard": [
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 160
+   }
+  ],
+  "hive-tyrant": [
+   {
+    "models": 1,
+    "points": 195
+   }
+  ],
+  "hormagaunts": [
+   {
+    "models": 10,
+    "points": 70
+   },
+   {
+    "models": 20,
+    "points": 120
+   }
+  ],
+  "hyperadapted-raveners": [
+   {
+    "models": 5,
+    "points": 165
+   }
+  ],
+  "lictor": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "maleceptor": [
+   {
+    "models": 1,
+    "points": 180
+   }
+  ],
+  "mawloc": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "mucolid-spores": [
+   {
+    "models": 1,
+    "points": 30
+   },
+   {
+    "models": 2,
+    "points": 60
+   }
+  ],
+  "neurogaunts": [
+   {
+    "models": 11,
+    "points": 45
+   },
+   {
+    "models": 21,
+    "points": 90
+   },
+   {
+    "models": 22,
+    "points": 90
+   }
+  ],
+  "neurolictor": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "neurotyrant": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "norn-assimilator": [
+   {
+    "models": 1,
+    "points": 250
+   }
+  ],
+  "norn-emissary": [
+   {
+    "models": 1,
+    "points": 250
+   }
+  ],
+  "old-one-eye": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "parasite-of-mortrex": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "psychophage": [
+   {
+    "models": 1,
+    "points": 110
+   }
+  ],
+  "pyrovores": [
+   {
+    "models": 1,
+    "points": 40
+   },
+   {
+    "models": 2,
+    "points": 70
+   },
+   {
+    "models": 3,
+    "points": 100
+   }
+  ],
+  "raveners": [
+   {
+    "models": 5,
+    "points": 125
+   }
+  ],
+  "ripper-swarms": [
+   {
+    "models": 1,
+    "points": 30
+   },
+   {
+    "models": 2,
+    "points": 40
+   },
+   {
+    "models": 3,
+    "points": 50
+   }
+  ],
+  "screamer-killer": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "spore-mines": [
+   {
+    "models": 3,
+    "points": 55
+   },
+   {
+    "models": 6,
+    "points": 110
+   }
+  ],
+  "sporocyst": [
+   {
+    "models": 1,
+    "points": 145
+   }
+  ],
+  "termagants": [
+   {
+    "models": 10,
+    "points": 55
+   },
+   {
+    "models": 20,
+    "points": 110
+   }
+  ],
+  "tervigon": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "the-red-terror": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "the-swarmlord": [
+   {
+    "models": 1,
+    "points": 210
+   }
+  ],
+  "toxicrene": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "trygon": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "tyranid-prime-with-lash-whip": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "tyranid-warriors-with-melee-bio-weapons": [
+   {
+    "models": 3,
+    "points": 75
+   },
+   {
+    "models": 6,
+    "points": 150
+   }
+  ],
+  "tyranid-warriors-with-ranged-bio-weapons": [
+   {
+    "models": 3,
+    "points": 60
+   },
+   {
+    "models": 6,
+    "points": 120
+   }
+  ],
+  "tyrannocyte": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "tyrannofex": [
+   {
+    "models": 1,
+    "points": 170
+   }
+  ],
+  "tyrant-guard": [
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "venomthropes": [
+   {
+    "models": 3,
+    "points": 55
+   },
+   {
+    "models": 6,
+    "points": 110
+   }
+  ],
+  "von-ryans-leapers": [
+   {
+    "models": 3,
+    "points": 55
+   },
+   {
+    "models": 6,
+    "points": 105
+   }
+  ],
+  "winged-hive-tyrant": [
+   {
+    "models": 1,
+    "points": 185
+   }
+  ],
+  "winged-tyranid-prime": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "zoanthropes": [
+   {
+    "models": 3,
+    "points": 90
+   },
+   {
+    "models": 6,
+    "points": 190
+   }
+  ]
+ },
+ "enhancements": {
+  "alien-cunning": 30,
+  "perfectly-adapted": 15,
+  "synaptic-linchpin": 20,
+  "adaptive-biology": 25,
+  "synaptic-strategy": 15,
+  "tremor-senses": 20,
+  "vanguard-intellect": 15,
+  "trygon-prime": 20,
+  "power-of-the-hive-mind": 10,
+  "psychostatic-disruption": 30,
+  "synaptic-control": 20,
+  "the-dirgeheart-of-kharis": 15,
+  "regenerating-monstrosity": 20,
+  "instinctive-defence": 15,
+  "biophagic-flow": 10,
+  "parasitic-biomorphology": 25,
+  "ominous-presence": 15,
+  "enraged-reserves": 20,
+  "null-nodules": 10,
+  "monstrous-nemesis": 25,
+  "hunting-grounds": 30,
+  "chameleonic": 15,
+  "stalker": 10,
+  "neuronode": 20,
+  "relentless-hunger": 20,
+  "naturalised-camouflage": 30,
+  "piercing-talons": 25,
+  "adrenalised-onslaught": 15,
+  "encircling-horrors": 20,
+  "cryptophotaic-camouflage": 15,
+  "destabilising-predation": 20,
+  "synaptoprescience": 30,
+  "elevated-might": 30,
+  "ocular-adaptation": 20
+ },
+ "unitsExtraCopies": {
+  "exocrine": [
+   {
+    "models": 1,
+    "points": 145
+   }
+  ],
+  "genestealers": [
+   {
+    "models": 5,
+    "points": 85
+   },
+   {
+    "models": 10,
+    "points": 150
+   }
+  ],
+  "haruspex": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "hive-guard": [
+   {
+    "models": 3,
+    "points": 90
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "hyperadapted-raveners": [
+   {
+    "models": 5,
+    "points": 175
+   }
+  ],
+  "maleceptor": [
+   {
+    "models": 1,
+    "points": 190
+   }
+  ],
+  "neurolictor": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "norn-assimilator": [
+   {
+    "models": 1,
+    "points": 270
+   }
+  ],
+  "norn-emissary": [
+   {
+    "models": 1,
+    "points": 270
+   }
+  ],
+  "pyrovores": [
+   {
+    "models": 1,
+    "points": 50
+   },
+   {
+    "models": 2,
+    "points": 80
+   },
+   {
+    "models": 3,
+    "points": 110
+   }
+  ],
+  "raveners": [
+   {
+    "models": 5,
+    "points": 135
+   }
+  ],
+  "screamer-killer": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "tyrannocyte": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "tyrannofex": [
+   {
+    "models": 1,
+    "points": 180
+   }
+  ]
+ }
+}

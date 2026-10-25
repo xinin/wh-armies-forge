@@ -1,0 +1,79 @@
+{
+  "id": "ohgb2rpw",
+  "name": "Astra Militarum 2000",
+  "factionId": "astra-militarum",
+  "edition": "11th",
+  "battleSize": "incursion",
+  "pointsLimit": 1000,
+  "detachments": [
+    "siege-regiment"
+  ],
+  "units": [
+    {
+      "uid": "t71cdrck",
+      "unitId": "commissar-yarrick",
+      "sizeIdx": 0,
+      "wargear": {},
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": null
+    },
+    {
+      "uid": "3gz6qlw5",
+      "unitId": "krieg-command-squad",
+      "sizeIdx": 0,
+      "wargear": {
+        "special": {
+          "meltagun": 1,
+          "plasma-gun": 0,
+          "flamer": 1
+        }
+      },
+      "enhancement": "flash-grenades",
+      "warlord": false,
+      "attachedTo": null
+    },
+    {
+      "uid": "0x3uq954",
+      "unitId": "death-korps-of-krieg",
+      "sizeIdx": 0,
+      "wargear": {
+        "special": {
+          "plasma-gun": 1,
+          "grenade-launcher": 1
+        },
+        "o2": "plasma-gun"
+      },
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": null
+    },
+    {
+      "uid": "66t5vskd",
+      "unitId": "leman-russ-commander",
+      "sizeIdx": 0,
+      "wargear": {
+        "turret": "demolisher-cannon",
+        "hull": "lascannon",
+        "sponsons": "heavy-bolter"
+      },
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": null
+    },
+    {
+      "uid": "kct51hdy",
+      "unitId": "krieg-command-squad",
+      "sizeIdx": 0,
+      "wargear": {
+        "special": {}
+      },
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": "0x3uq954"
+    }
+  ],
+  "created": 1792949113548,
+  "file": "armies/astra-militarum-2000-ohgb2rpw.json",
+  "updated": 1792955153158
+}

@@ -1,0 +1,160 @@
+{
+  "id": "astra-militarum",
+  "name": { "en": "Astra Militarum", "es": "Astra Militarum" },
+  "source": "wahapedia.ru/wh40k11ed/factions/astra-militarum (faction pack 11 / 2.8.1, October 2026)",
+  "armyRule": {
+    "name": { "en": "Voice of Command", "es": "Voz de Mando" },
+    "text": {
+      "en": "OFFICER models issue Orders to units within 6\" in the Command phase and at the end of the phase they disembarked or were set up. A unit can only have one Order at a time; Battle-shocked units cannot receive Orders.",
+      "es": "Los modelos OFFICER dan Órdenes a unidades a 6\" o menos en la fase de Mando y al final de la fase en que desembarcaron o se desplegaron. Una unidad solo puede tener una Orden a la vez; las unidades acobardadas no pueden recibir Órdenes."
+    },
+    "orders": [
+      { "name": { "en": "Move! Move! Move!", "es": "¡Moveos! ¡Moveos! ¡Moveos!" }, "text": { "en": "+3\" Move", "es": "+3\" Movimiento" } },
+      { "name": { "en": "Fix Bayonets!", "es": "¡Calad bayonetas!" }, "text": { "en": "+1 WS in melee", "es": "+1 HA en cuerpo a cuerpo" } },
+      { "name": { "en": "Take Aim!", "es": "¡Apuntad!" }, "text": { "en": "+1 BS for ranged attacks", "es": "+1 HP en ataques a distancia" } },
+      { "name": { "en": "First Rank, Fire! Second Rank, Fire!", "es": "¡Primera fila, fuego! ¡Segunda fila, fuego!" }, "text": { "en": "+1 Attack to Rapid Fire weapons", "es": "+1 Ataque a armas de Fuego Rápido" } },
+      { "name": { "en": "Take Cover!", "es": "¡A cubierto!" }, "text": { "en": "+1 Save (not better than 3+)", "es": "+1 Salvación (no mejor que 3+)" } },
+      { "name": { "en": "Duty and Honour!", "es": "¡Deber y honor!" }, "text": { "en": "+1 Ld and +1 OC", "es": "+1 L y +1 CO" } }
+    ]
+  },
+  "detachments": [
+    {
+      "id": "combined-arms", "cost": 2,
+      "name": { "en": "Combined Arms", "es": "Armas Combinadas" },
+      "rule": { "name": { "en": "Born Soldiers", "es": "Soldados Natos" }, "text": {
+        "en": "REGIMENT ranged attacks vs non-MONSTER/VEHICLE targets and SQUADRON ranged attacks vs MONSTER/VEHICLE targets have [LETHAL HITS].",
+        "es": "Los ataques a distancia de REGIMENT contra objetivos no MONSTER/VEHICLE, y los de SQUADRON contra MONSTER/VEHICLE, tienen [IMPACTOS LETALES]." } },
+      "enhancements": [
+        { "id": "death-mask-of-ollanius", "requires": [["OFFICER"]], "name": { "en": "Death Mask of Ollanius", "es": "Máscara Mortuoria de Ollanius" }, "text": { "en": "While Battle-shocked, bearer's unit OC is reduced by 1 instead of 0.", "es": "Estando acobardada, la CO de la unidad se reduce en 1 en vez de quedar en 0." } },
+        { "id": "drill-commander", "requires": [["OFFICER"]], "name": { "en": "Drill Commander", "es": "Comandante de Instrucción" }, "text": { "en": "If the led unit Remained Stationary, critical hits on 5+.", "es": "Si la unidad liderada se quedó quieta, críticos a 5+." } },
+        { "id": "grand-strategist-ca", "requires": [["OFFICER"]], "name": { "en": "Grand Strategist", "es": "Gran Estratega" }, "text": { "en": "Bearer can issue one extra Order.", "es": "El portador puede dar una Orden adicional." } },
+        { "id": "reactive-command", "requires": [["OFFICER"]], "name": { "en": "Reactive Command", "es": "Mando Reactivo" }, "text": { "en": "Issue an Order when an enemy unit is set up within 8\".", "es": "Da una Orden cuando una unidad enemiga se despliega a 8\" o menos." } }
+      ]
+    },
+    {
+      "id": "siege-regiment", "cost": 2,
+      "name": { "en": "Siege Regiment", "es": "Regimiento de Asedio" },
+      "rule": { "name": { "en": "Artillery Support", "es": "Apoyo de Artillería" }, "text": {
+        "en": "Call in Creeping Barrage, Incendiary Bombardment or Smoke Shells. Max units by battle size: Incursion 2, Strike Force 3, Onslaught 4.",
+        "es": "Solicita Barrera Progresiva, Bombardeo Incendiario o Proyectiles de Humo. Máx. unidades según tamaño: Incursión 2, Fuerza de Asalto 3, Embestida 4." } },
+      "enhancements": [
+        { "id": "eager-advance", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Eager Advance", "es": "Avance Ansioso" }, "text": { "en": "Led REGIMENT unit gains Scouts 6\".", "es": "La unidad REGIMENT liderada gana Exploradores 6\"." } },
+        { "id": "flash-grenades", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Flash Grenades", "es": "Granadas Cegadoras" }, "text": { "en": "Enemies cannot Fire Overwatch at bearer's unit.", "es": "El enemigo no puede hacer Fuego Defensivo contra la unidad del portador." } },
+        { "id": "legacy-sidearm", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Legacy Sidearm", "es": "Arma Corta Legada" }, "text": { "en": "+2 Attacks to bearer's Pistols.", "es": "+2 Ataques a las Pistolas del portador." } },
+        { "id": "stalwarts-honours", "requires": [["OFFICER"]], "name": { "en": "Stalwart's Honours", "es": "Honores del Leal" }, "text": { "en": "Orders issued by bearer also apply Take Cover!.", "es": "Las Órdenes del portador aplican también ¡A cubierto!." } }
+      ]
+    },
+    {
+      "id": "hammer-of-the-emperor", "cost": 2,
+      "name": { "en": "Hammer of the Emperor", "es": "Martillo del Emperador" },
+      "rule": { "name": { "en": "Iron Tread", "es": "Pisada de Hierro" }, "text": {
+        "en": "SQUADRON units that Advance add 6\" instead of rolling and can move within Engagement Range (but not end there).",
+        "es": "Las unidades SQUADRON que avanzan suman 6\" sin tirar y pueden moverse dentro del alcance de combate (sin terminar en él)." } },
+      "enhancements": [
+        { "id": "calm-under-fire", "requires": [["VEHICLE", "OFFICER"]], "name": { "en": "Calm Under Fire", "es": "Calma Bajo el Fuego" }, "text": { "en": "Re-issue an Order to another SQUADRON.", "es": "Repite una Orden a otra SQUADRON." } },
+        { "id": "indomitable-steed", "requires": [["VEHICLE", "OFFICER"]], "name": { "en": "Indomitable Steed", "es": "Corcel Indomable" }, "text": { "en": "Feel No Pain 6+.", "es": "No Hay Dolor 6+." } },
+        { "id": "regimental-banner", "requires": [["VEHICLE", "OFFICER"]], "name": { "en": "Regimental Banner", "es": "Estandarte Regimental" }, "text": { "en": "+3 OC.", "es": "+3 CO." } },
+        { "id": "veteran-crew", "requires": [["VEHICLE", "OFFICER"]], "name": { "en": "Veteran Crew", "es": "Tripulación Veterana" }, "text": { "en": "Re-roll Hit rolls of 1 for bearer's unit.", "es": "Repite tiradas para impactar de 1 de la unidad del portador." } }
+      ]
+    },
+    {
+      "id": "steel-hammer", "cost": 2,
+      "name": { "en": "Steel Hammer", "es": "Martillo de Acero" },
+      "rule": { "name": { "en": "Ceaseless Cannonade", "es": "Cañoneo Incesante" }, "text": {
+        "en": "TITANIC/SQUADRON units can shoot into Engagement Range without hit penalty under conditions. Selected TITANIC units may gain CHARACTER at Muster.",
+        "es": "Las unidades TITANIC/SQUADRON pueden disparar en alcance de combate sin penalización bajo condiciones. Algunas TITANIC pueden ganar CHARACTER al reclutar." } },
+      "titanicCanBeCharacter": true,
+      "enhancements": [
+        { "id": "battalion-commander", "requires": [["TITANIC"]], "name": { "en": "Battalion Commander", "es": "Comandante de Batallón" }, "text": { "en": "Gains Voice of Command and OFFICER; up to 2 Orders.", "es": "Gana Voz de Mando y OFFICER; hasta 2 Órdenes." } },
+        { "id": "titan-killer", "requires": [["TITANIC"]], "name": { "en": "Titan Killer", "es": "Matatitanes" }, "text": { "en": "Re-roll Damage rolls for ranged attacks.", "es": "Repite tiradas de Daño en ataques a distancia." } },
+        { "id": "engine-speaker", "requires": [["TECH-PRIEST ENGINSEER"], ["REGIMENTAL ENGINSEER"]], "name": { "en": "Engine Speaker", "es": "Orador de Máquinas" }, "text": { "en": "+3\" Move to a unit affected by Omnissiah's Blessing.", "es": "+3\" de Movimiento a la unidad con Bendición del Omnissiah." } },
+        { "id": "assault-hatches", "requires": [["TITANIC", "TRANSPORT"]], "name": { "en": "Assault Hatches", "es": "Escotillas de Asalto" }, "text": { "en": "Units can disembark after a Normal move.", "es": "Las unidades pueden desembarcar tras un movimiento Normal." } }
+      ]
+    },
+    {
+      "id": "mechanised-assault", "cost": 2,
+      "name": { "en": "Mechanised Assault", "es": "Asalto Mecanizado" },
+      "rule": { "name": { "en": "Armoured Fist", "es": "Puño Blindado" }, "text": {
+        "en": "+1 to Wound for ranged attacks by ASTRA MILITARUM models in a turn they disembarked from a TRANSPORT.",
+        "es": "+1 para herir en ataques a distancia de modelos ASTRA MILITARUM el turno en que desembarcan de un TRANSPORT." } },
+      "enhancements": [
+        { "id": "bold-leadership", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Bold Leadership", "es": "Liderazgo Audaz" }, "text": { "en": "Objectives remain controlled after the unit leaves.", "es": "Los objetivos siguen controlados al abandonarlos." } },
+        { "id": "sacred-unguents", "requires": [["TECH-PRIEST ENGINSEER"], ["REGIMENTAL ENGINSEER"]], "name": { "en": "Sacred Unguents", "es": "Ungüentos Sagrados" }, "text": { "en": "A TRANSPORT re-rolls Hit rolls of 1.", "es": "Un TRANSPORT repite tiradas para impactar de 1." } },
+        { "id": "smoke-grenades", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Smoke Grenades", "es": "Granadas de Humo" }, "text": { "en": "Benefit of Cover and Stealth near a TRANSPORT.", "es": "Cobertura y Sigilo cerca de un TRANSPORT." } },
+        { "id": "vanguard-honours", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Vanguard Honours", "es": "Honores de Vanguardia" }, "text": { "en": "Can disembark after the transport Advanced.", "es": "Puede desembarcar tras avanzar el transporte." } }
+      ]
+    },
+    {
+      "id": "recon-element", "cost": 2,
+      "name": { "en": "Recon Element", "es": "Elemento de Reconocimiento" },
+      "rule": { "name": { "en": "Masters of Camouflage", "es": "Maestros del Camuflaje" }, "text": {
+        "en": "Friendly ASTRA MILITARUM units (excluding TITANIC) have Stealth.",
+        "es": "Las unidades ASTRA MILITARUM amigas (salvo TITANIC) tienen Sigilo." } },
+      "enhancements": [
+        { "id": "guerrilla-honours", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Guerrilla Honours", "es": "Honores de Guerrilla" }, "text": { "en": "Redeploy up to 3 INFANTRY units into Reserves.", "es": "Redespliega hasta 3 unidades INFANTRY en Reservas." } },
+        { "id": "scare-gas-grenades", "requires": [], "name": { "en": "Scare Gas Grenades", "es": "Granadas de Gas del Miedo" }, "text": { "en": "Once per battle, Battle-shock test on an enemy within 8\".", "es": "Una vez por batalla, chequeo de acobardamiento a un enemigo a 8\"." } },
+        { "id": "survival-gear", "requires": [["INFANTRY"]], "name": { "en": "Survival Gear", "es": "Equipo de Supervivencia" }, "text": { "en": "Scouts 6\".", "es": "Exploradores 6\"." } },
+        { "id": "tripwires", "requires": [], "name": { "en": "Tripwires", "es": "Cables Trampa" }, "text": { "en": "Enemy INFANTRY/MOUNTED ending moves within 8\" may be stunned on 4+.", "es": "INFANTRY/MOUNTED enemigas que acaben a 8\" pueden quedar aturdidas a 4+." } }
+      ]
+    },
+    {
+      "id": "grizzled-company", "cost": 3,
+      "name": { "en": "Grizzled Company", "es": "Compañía Curtida" },
+      "rule": { "name": { "en": "Ruthless Discipline", "es": "Disciplina Implacable" }, "text": {
+        "en": "Each OFFICER can issue +1 Order. Units under an Order re-roll Hit rolls of 1.",
+        "es": "Cada OFFICER da +1 Orden. Las unidades con Orden repiten tiradas para impactar de 1." } },
+      "enhancements": [
+        { "id": "abhuman-detail", "requires": [["COMMISSAR"]], "grantsLead": ["bullgryn-squad", "ogryn-squad"], "name": { "en": "Abhuman Detail", "es": "Destacamento Abhumano" }, "text": { "en": "Bearer can be attached to Bullgryn or Ogryn Squads.", "es": "El portador puede unirse a Bullgryns u Ogretes." } },
+        { "id": "aquilan-eye", "requires": [["OFFICER"]], "name": { "en": "Aquilan Eye", "es": "Ojo Aquilano" }, "text": { "en": "Target Weak Spot Order: +1 AP ranged within 12\".", "es": "Orden Apuntad al Punto Débil: +1 FP a distancia a 12\"." } },
+        { "id": "spec-ops-veteran", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Spec Ops Veteran", "es": "Veterano de Operaciones Especiales" }, "text": { "en": "Move to the Shadows Order.", "es": "Orden Moveos a las Sombras." } },
+        { "id": "laud-hailer", "requires": [["OFFICER"]], "name": { "en": "Laud Hailer", "es": "Megáfono" }, "text": { "en": "Order range 12\".", "es": "Alcance de Órdenes 12\"." } }
+      ]
+    },
+    {
+      "id": "armoured-infantry", "cost": 2,
+      "name": { "en": "Armoured Infantry", "es": "Infantería Blindada" },
+      "rule": { "name": { "en": "Squadron Command", "es": "Mando de Escuadrón" }, "text": {
+        "en": "SQUADRON units can receive Orders, new Order On My Signal, and SQUADRON units gain ARMOURED SKIRMISHER.",
+        "es": "Las SQUADRON pueden recibir Órdenes, nueva Orden ¡A mi señal! y las SQUADRON ganan ARMOURED SKIRMISHER." } },
+      "enhancements": [
+        { "id": "exemplary-officer", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Exemplary Officer", "es": "Oficial Ejemplar" }, "text": { "en": "Share an Order with up to 2 PLATOON units.", "es": "Comparte una Orden con hasta 2 unidades PLATOON." } },
+        { "id": "master-manoeuvrist", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Master Manoeuvrist", "es": "Maestro de Maniobras" }, "text": { "en": "Embark at the end of opponent's Fight phase.", "es": "Embarca al final de la fase de Combate enemiga." } },
+        { "id": "omnissian-unguents", "requires": [["TECH-PRIEST ENGINSEER"], ["REGIMENTAL ENGINSEER"]], "name": { "en": "Omnissian Unguents", "es": "Ungüentos Omnisianos" }, "text": { "en": "Aura: FNP 5+ for ARMOURED SKIRMISHER units within 3\".", "es": "Aura: NHD 5+ a ARMOURED SKIRMISHER a 3\"." } },
+        { "id": "grand-strategist-ai", "requires": [["OFFICER"]], "name": { "en": "Grand Strategist", "es": "Gran Estratega" }, "text": { "en": "Redeploy up to 2 REGIMENT/SQUADRON units into Reserves.", "es": "Redespliega hasta 2 REGIMENT/SQUADRON en Reservas." } }
+      ]
+    },
+    {
+      "id": "abhuman-auxiliaries", "cost": 1,
+      "name": { "en": "Abhuman Auxiliaries", "es": "Auxiliares Abhumanos" },
+      "rule": { "name": { "en": "Absolutist Principles", "es": "Principios Absolutistas" }, "text": {
+        "en": "BULLGRYN, OGRYN SQUAD and RATLINGS gain ABHUMAN. COMMISSARs can issue Take Aim! and 1 Order to ABHUMAN units.",
+        "es": "BULLGRYN, OGRYN SQUAD y RATLINGS ganan ABHUMAN. Los COMMISSAR pueden dar ¡Apuntad! y 1 Orden a ABHUMAN." } },
+      "enhancements": [
+        { "id": "sharp-eyes", "type": "upgrade", "requires": [["RATLINGS"], ["RATLING SNIPERS"]], "name": { "en": "Sharp Eyes", "es": "Ojos Agudos" }, "text": { "en": "+6\" detection range when shooting.", "es": "+6\" de detección al disparar." } },
+        { "id": "exemplar-of-duty", "type": "upgrade", "requires": [["COMMISSAR"]], "grantsLead": ["bullgryn-squad", "ogryn-squad"], "name": { "en": "Exemplar of Duty", "es": "Ejemplo del Deber" }, "text": { "en": "FNP 4+; can lead Bullgryn or Ogryn Squads.", "es": "NHD 4+; puede liderar Bullgryns u Ogretes." } }
+      ]
+    },
+    {
+      "id": "designation-force", "cost": 1,
+      "name": { "en": "Designation Force", "es": "Fuerza de Designación" },
+      "rule": { "name": { "en": "Designated Targets", "es": "Objetivos Designados" }, "text": {
+        "en": "SCOUT SENTINEL or INFANTRY SMOKE units can designate enemies (+3\" detection).",
+        "es": "Las SCOUT SENTINEL o INFANTRY SMOKE pueden designar enemigos (+3\" de detección)." } },
+      "enhancements": [
+        { "id": "long-range-scout", "type": "upgrade", "requires": [["SCOUT SENTINEL"], ["SCOUT SENTINELS"]], "name": { "en": "Long-Range Scout", "es": "Explorador de Largo Alcance" }, "text": { "en": "Infiltrators.", "es": "Infiltradores." } },
+        { "id": "recon-star", "type": "upgrade", "requires": [["INFANTRY", "PLATOON"]], "name": { "en": "Recon Star", "es": "Estrella de Reconocimiento" }, "text": { "en": "Can arrive from Reserves in the first Movement phase.", "es": "Puede llegar desde Reservas en la primera fase de Movimiento." } }
+      ]
+    },
+    {
+      "id": "bridgehead-strike", "cost": 1,
+      "name": { "en": "Bridgehead Strike", "es": "Asalto de Cabeza de Puente" },
+      "rule": { "name": { "en": "Fire Zone Purge", "es": "Purga de Zona de Fuego" }, "text": {
+        "en": "Details pending verification.",
+        "es": "Detalles pendientes de verificar." } },
+      "enhancements": [
+        { "id": "bombast-vox-array", "requires": [["OFFICER"]], "name": { "en": "Bombast-class Vox-array", "es": "Vox-array clase Bombast" }, "text": { "en": "Pending verification.", "es": "Pendiente de verificar." } },
+        { "id": "priority-drop-beacon", "requires": [], "name": { "en": "Priority Drop Beacon", "es": "Baliza de Despliegue Prioritario" }, "text": { "en": "Pending verification.", "es": "Pendiente de verificar." } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+.DS_Store
+.venv/
+# temporary files of the import tools
+*-products.json
+pdfs/

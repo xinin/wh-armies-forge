@@ -1,0 +1,418 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-25",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/",
+ "verified": [
+  "all-enhancements",
+  "allarus-custodians",
+  "anathema-psykana-rhino",
+  "aquilon-terminators-with-solarite-power-gauntlets",
+  "aquilon-terminators-with-solarite-power-talons",
+  "blade-champion",
+  "caladius-annihilator-grav-tank",
+  "caladius-grav-tank",
+  "contemptor-achillus-dreadnought",
+  "contemptor-galatus-dreadnought",
+  "coronus-grav-carrier",
+  "custodian-guard-sodality",
+  "custodian-wardens",
+  "gyrfalcon-jetbike-sodality",
+  "knight-centura",
+  "pallas-grav-attack",
+  "sentinel-guard-sodality",
+  "shield-captain-on-dawneagle-jetbike",
+  "telemon-heavy-dreadnought",
+  "trajann-valoris",
+  "venatari-with-kinetic-destroyers",
+  "venatari-with-verutum-lances",
+  "vertus-praetors",
+  "prosecutor-squad",
+  "shield-captain",
+  "shield-captain-in-allarus-terminator-armour",
+  "vigilator-squad",
+  "witchseeker-squad"
+ ],
+ "units": {
+  "allarus-custodians": [
+   {
+    "models": 2,
+    "points": 180
+   },
+   {
+    "models": 3,
+    "points": 270
+   }
+  ],
+  "anathema-psykana-rhino": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "aquilon-terminators-with-solarite-power-gauntlets": [
+   {
+    "models": 3,
+    "points": 285
+   }
+  ],
+  "aquilon-terminators-with-solarite-power-talons": [
+   {
+    "models": 3,
+    "points": 275
+   }
+  ],
+  "blade-champion": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "caladius-annihilator-grav-tank": [
+   {
+    "models": 1,
+    "points": 250
+   }
+  ],
+  "caladius-grav-tank": [
+   {
+    "models": 1,
+    "points": 230
+   }
+  ],
+  "contemptor-achillus-dreadnought": [
+   {
+    "models": 1,
+    "points": 230
+   }
+  ],
+  "contemptor-galatus-dreadnought": [
+   {
+    "models": 1,
+    "points": 220
+   }
+  ],
+  "coronus-grav-carrier": [
+   {
+    "models": 1,
+    "points": 225
+   }
+  ],
+  "custodian-guard-sodality": [
+   {
+    "models": 3,
+    "points": 240
+   }
+  ],
+  "custodian-wardens": [
+   {
+    "models": 2,
+    "points": 200
+   },
+   {
+    "models": 3,
+    "points": 295
+   }
+  ],
+  "gyrfalcon-jetbike-sodality": [
+   {
+    "models": 2,
+    "points": 260
+   }
+  ],
+  "knight-centura": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ],
+  "pallas-grav-attack": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "sentinel-guard-sodality": [
+   {
+    "models": 3,
+    "points": 240
+   }
+  ],
+  "shield-captain-on-dawneagle-jetbike": [
+   {
+    "models": 1,
+    "points": 205
+   }
+  ],
+  "telemon-heavy-dreadnought": [
+   {
+    "models": 1,
+    "points": 280
+   }
+  ],
+  "trajann-valoris": [
+   {
+    "models": 1,
+    "points": 265
+   }
+  ],
+  "venatari-with-kinetic-destroyers": [
+   {
+    "models": 3,
+    "points": 255
+   }
+  ],
+  "venatari-with-verutum-lances": [
+   {
+    "models": 3,
+    "points": 270
+   }
+  ],
+  "vertus-praetors": [
+   {
+    "models": 2,
+    "points": 220
+   },
+   {
+    "models": 3,
+    "points": 330
+   }
+  ],
+  "prosecutor-squad": [
+   {
+    "models": 4,
+    "points": 45
+   },
+   {
+    "models": 5,
+    "points": 50
+   },
+   {
+    "models": 9,
+    "points": 80
+   },
+   {
+    "models": 10,
+    "points": 90
+   }
+  ],
+  "shield-captain": [
+   {
+    "models": 1,
+    "points": 180
+   }
+  ],
+  "shield-captain-in-allarus-terminator-armour": [
+   {
+    "models": 1,
+    "points": 185
+   }
+  ],
+  "vigilator-squad": [
+   {
+    "models": 4,
+    "points": 50
+   },
+   {
+    "models": 5,
+    "points": 55
+   },
+   {
+    "models": 9,
+    "points": 90
+   },
+   {
+    "models": 10,
+    "points": 100
+   }
+  ],
+  "witchseeker-squad": [
+   {
+    "models": 4,
+    "points": 55
+   },
+   {
+    "models": 5,
+    "points": 60
+   },
+   {
+    "models": 9,
+    "points": 100
+   },
+   {
+    "models": 10,
+    "points": 110
+   }
+  ]
+ },
+ "enhancements": {
+  "bane-of-abominations": 20,
+  "emperors-light": 15,
+  "castellans-mark": 25,
+  "eagles-eye": 30,
+  "lightning-descent": 20,
+  "leonine-ferocity": 20,
+  "oblivion-knight": 15,
+  "huntress-eye": 10,
+  "edge-of-the-blade": 15,
+  "auriferous-orb": 20,
+  "from-the-hall-of-armouries": 15,
+  "radiant-mantle": 40,
+  "shroud-of-the-hidden-blade": 20,
+  "superior-creation": 30,
+  "inspirational-exemplar": 10,
+  "flawless-bladework": 15,
+  "auric-exemplar": 15,
+  "unstoppable-destroyer": 25,
+  "genalchemic-warding": 30,
+  "anti-gravitic-mobility": 15,
+  "combat-deployment": 20,
+  "sally-forth": 30,
+  "auric-eagle": 15,
+  "not-a-shell-wasted": 10,
+  "pareldors-caducatrix": 30,
+  "arae-shrike": 20,
+  "celeritous-sentries": 15,
+  "memento-moritoi-one-per-army": 30,
+  "augury-uplink-one-per-army": 30
+ },
+ "unitsExtraCopies": {
+  "allarus-custodians": [
+   {
+    "models": 2,
+    "points": 210
+   },
+   {
+    "models": 3,
+    "points": 300
+   }
+  ],
+  "anathema-psykana-rhino": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "aquilon-terminators-with-solarite-power-gauntlets": [
+   {
+    "models": 3,
+    "points": 315
+   }
+  ],
+  "aquilon-terminators-with-solarite-power-talons": [
+   {
+    "models": 3,
+    "points": 305
+   }
+  ],
+  "blade-champion": [
+   {
+    "models": 1,
+    "points": 195
+   }
+  ],
+  "caladius-annihilator-grav-tank": [
+   {
+    "models": 1,
+    "points": 280
+   }
+  ],
+  "caladius-grav-tank": [
+   {
+    "models": 1,
+    "points": 260
+   }
+  ],
+  "contemptor-achillus-dreadnought": [
+   {
+    "models": 1,
+    "points": 260
+   }
+  ],
+  "contemptor-galatus-dreadnought": [
+   {
+    "models": 1,
+    "points": 250
+   }
+  ],
+  "coronus-grav-carrier": [
+   {
+    "models": 1,
+    "points": 245
+   }
+  ],
+  "custodian-guard-sodality": [
+   {
+    "models": 3,
+    "points": 270
+   }
+  ],
+  "custodian-wardens": [
+   {
+    "models": 2,
+    "points": 230
+   },
+   {
+    "models": 3,
+    "points": 325
+   }
+  ],
+  "gyrfalcon-jetbike-sodality": [
+   {
+    "models": 2,
+    "points": 280
+   }
+  ],
+  "sentinel-guard-sodality": [
+   {
+    "models": 3,
+    "points": 270
+   }
+  ],
+  "shield-captain-on-dawneagle-jetbike": [
+   {
+    "models": 1,
+    "points": 225
+   }
+  ],
+  "telemon-heavy-dreadnought": [
+   {
+    "models": 1,
+    "points": 310
+   }
+  ],
+  "venatari-with-kinetic-destroyers": [
+   {
+    "models": 3,
+    "points": 280
+   }
+  ],
+  "venatari-with-verutum-lances": [
+   {
+    "models": 3,
+    "points": 300
+   }
+  ],
+  "vertus-praetors": [
+   {
+    "models": 2,
+    "points": 240
+   },
+   {
+    "models": 3,
+    "points": 350
+   }
+  ],
+  "shield-captain": [
+   {
+    "models": 1,
+    "points": 200
+   }
+  ],
+  "shield-captain-in-allarus-terminator-armour": [
+   {
+    "models": 1,
+    "points": 205
+   }
+  ]
+ }
+}
