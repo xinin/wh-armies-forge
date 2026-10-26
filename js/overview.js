@@ -23,6 +23,7 @@ export function renderOverviewHeader(list) {
 }
 
 export const OV_TABS = ['units', 'detachments', 'army-rule', 'core'];
+const TAB_ICONS = { units: 'emblemFull', detachments: 'stratTactic', 'army-rule': 'emblem', core: 'stratPloy' };
 
 // tab: the visible section on screen (printing shows them all)
 export function renderOverview(list, data, edition, customImages, tab) {
@@ -54,13 +55,13 @@ export function renderOverview(list, data, edition, customImages, tab) {
 
     <nav class="ov-nav tabs" role="tablist">
       ${OV_TABS.map(id => `<button role="tab" id="ov-tab-${id}" aria-controls="ov-${id}" aria-selected="${id === tab}" class="tab ${id === tab ? 'on' : ''}"
-        data-action="ov-tab" data-tab="${id}">${{ units: t('overview.units'), detachments: t('detachments'), 'army-rule': t('rules.armyRule'), core: t('overview.coreStratagems') }[id]}</button>`).join('')}
+        data-action="ov-tab" data-tab="${id}">${icon(TAB_ICONS[id])}${{ units: t('overview.units'), detachments: t('detachments'), 'army-rule': t('rules.armyRule'), core: t('overview.coreStratagems') }[id]}</button>`).join('')}
     </nav>
 
     ${errors.length ? `<ul class="issues ov-issues">${errors.map(i => `<li class="err">${esc(i.msg)}</li>`).join('')}</ul>` : ''}
 
     <section id="ov-units" ${panel('units', tab)}>
-      <h2 class="ov-title">${icon('emblemFull')}${t('overview.units')}</h2>
+      <h2 class="ov-title">${icon(TAB_ICONS.units)}${t('overview.units')}</h2>
       ${ROLES.map(role => {
         const group = top.filter(u => roleOf(u) === role);
         if (!group.length) return '';
@@ -71,20 +72,21 @@ export function renderOverview(list, data, edition, customImages, tab) {
     </section>
 
     <section id="ov-detachments" ${panel('detachments', tab)}>
-      <h2 class="ov-title">${icon('stratTactic')}${t('detachments')}</h2>
+      <h2 class="ov-title">${icon(TAB_ICONS.detachments)}${t('detachments')}</h2>
       ${dets.length ? dets.map(d => detachmentBlock(d, list, data)).join('') : `<p class="muted">${t('err.noDetachment')}</p>`}
     </section>
 
     <section id="ov-army-rule" ${panel('army-rule', tab)}>
-      <h2 class="ov-title">${icon('emblem')}${t('rules.armyRule')}: ${esc(tr(data.faction.armyRule.name))}</h2>
+      <h2 class="ov-title">${icon(TAB_ICONS['army-rule'])}${t('rules.armyRule')}</h2>
       <div class="ov-rule">
+        <h4>${esc(tr(data.faction.armyRule.name))}</h4>
         ${para(data.faction.armyRule.text)}
         <div class="ov-orders">${(data.faction.armyRule.orders ?? []).map(o => `<div class="ov-order"><b>${esc(tr(o.name))}</b><span>${esc(tr(o.text))}</span></div>`).join('')}</div>
       </div>
     </section>
 
     <section id="ov-core" ${panel('core', tab)}>
-      <h2 class="ov-title">${icon('stratPloy')}${t('overview.coreStratagems')}</h2>
+      <h2 class="ov-title">${icon(TAB_ICONS.core)}${t('overview.coreStratagems')}</h2>
       <div class="strat-grid">${(edition.coreStratagems ?? []).map(stratCard).join('') || `<p class="muted">${t('overview.noStratagems')}</p>`}</div>
     </section>
   </div>`;

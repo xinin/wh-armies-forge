@@ -487,6 +487,7 @@ body { font-size: 15px; letter-spacing: .01em; }
 }
 .tabs .tab:hover, .tabs .tab:focus-visible { outline: none; filter: brightness(1.25); }
 .tabs .tab:active { filter: brightness(.95); }
+.tabs .tab .gw-icon { width: 18px; height: 18px; }
 .tabs .tab.on { background: linear-gradient(90deg, var(--am-light), var(--am-dark)); }
 /* header menu: back (grey), main action (green), print (bronze) */
 .header-nav .tab:nth-child(2) { background: linear-gradient(90deg, var(--am-light), var(--am-dark)); }
@@ -672,6 +673,8 @@ body[data-view=overview] { overflow-y: auto; }
   background: linear-gradient(90deg, var(--am), var(--am-dark)); padding: 7px 28px 7px 12px; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 100%, 0 100%);
 }
 .ov-title .gw-icon { width: 24px; height: 22px; }
+/* on screen the tab already names the section; the titles only show when printing (all sections at once) */
+.ov-section > .ov-title { display: none; }
 .ov-units { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(460px, 100%), 1fr)); gap: 14px; margin-bottom: 8px; }
 .ov-unit { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--role); border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
 .ov-unit-head { display: flex; gap: 12px; align-items: center; }
@@ -743,6 +746,7 @@ body[data-view=overview] { overflow-y: auto; }
   #overview { padding: 0; }
   .ov-unit, .ov-det, .strat, .ov-hero, .ov-title, .mini-weapons, .mini-stats td, .strat-head { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .ov-section, .ov-section:not(.active) { display: block; break-before: auto; }
+  .ov-section > .ov-title { display: inline-flex; }
 }
 
 .leader-slots { margin-left: 8px; padding: 1px 8px; border-radius: 99px; background: rgba(201,162,39,.15); color: var(--gold-2); letter-spacing: .04em; }
