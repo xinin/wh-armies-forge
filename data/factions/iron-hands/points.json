@@ -1,0 +1,32 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "caanok-var",
+  "iron-father-feirros"
+ ],
+ "units": {
+  "caanok-var": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "iron-father-feirros": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ]
+ },
+ "enhancements": {
+  "target-augury-web": 30,
+  "adept-of-the-omnissiah": 25,
+  "master-of-the-machine-war": 25,
+  "the-flesh-is-weak": 15
+ },
+ "unitsExtraCopies": {},
+ "wargearCosts": {}
+}

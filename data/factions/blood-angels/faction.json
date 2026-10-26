@@ -1,0 +1,166 @@
+{
+ "id": "blood-angels",
+ "name": {
+  "en": "Blood Angels",
+  "es": "Ángeles Sangrientos"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "BLOOD ANGELS",
+  "chapterBit": "2"
+ },
+ "detachments": [
+  {
+   "id": "angelic-inheritors",
+   "cost": 3,
+   "name": {
+    "en": "Angelic Inheritors"
+   },
+   "rule": {
+    "name": {
+     "en": "Legacy of the Angel"
+    },
+    "text": {
+     "en": "Friendly BLOOD ANGELS CHARACTER units: Can re-roll hit rolls of 1. Can re-roll wound rolls of 1. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "prescient-flash",
+     "requires": [],
+     "name": {
+      "en": "Prescient Flash"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit has Scouts 6\"."
+     }
+    },
+    {
+     "id": "blazing-icon",
+     "requires": [],
+     "name": {
+      "en": "Blazing Icon"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. Enemy units cannot target this unit with snap shooting attacks."
+     }
+    },
+    {
+     "id": "ordained-sacrifice",
+     "requires": [],
+     "name": {
+      "en": "Ordained Sacrifice"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. (Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6: On a 2+, set this model back up on the battlefield as close as possible…"
+     }
+    },
+    {
+     "id": "unto-death",
+     "requires": [],
+     "name": {
+      "en": "Unto Death"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. (Once per battle, per army) In your Command phase you can use this ability. If you do, until the end of the turn this unit can: Re-roll advance rolls. Re-roll charge…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "encarmine-speartip",
+   "cost": 1,
+   "name": {
+    "en": "Encarmine Speartip"
+   },
+   "rule": {
+    "name": {
+     "en": "Wrath of Angels"
+    },
+    "text": {
+     "en": "The tactical doctrine is active for SANGUINARY GUARD units in addition to any other combat doctrine. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "shadow-of-abomination",
+     "requires": [
+      [
+       "JUMP",
+       "PACK"
+      ]
+     ],
+     "name": {
+      "en": "Shadow of Abomination"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES JUMP PACK model only. (once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D."
+     }
+    },
+    {
+     "id": "angelic-executioner",
+     "requires": [
+      [
+       "JUMP",
+       "PACK"
+      ]
+     ],
+     "name": {
+      "en": "Angelic Executioner"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have: [LETHAL HITS]. Or: [SUSTAINED HITS 1]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "wrath-of-the-doomed",
+   "cost": 1,
+   "name": {
+    "en": "Wrath of the Doomed"
+   },
+   "rule": {
+    "name": {
+     "en": "Sanguinius' Fury"
+    },
+    "text": {
+     "en": "Friendly DEATH COMPANY units have the following: At the start of each phase, the assault doctrine is active for this unit. The devastator/tactical doctrine cannot be active for this unit. This means that, regardless of any other rules, DEATH COMPANY units can never have an active doctrine other than the assault…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "instinctive-interception",
+     "requires": [
+      [
+       "DEATH",
+       "COMPANY"
+      ]
+     ],
+     "name": {
+      "en": "Instinctive Interception"
+     },
+     "text": {
+      "en": "DEATH COMPANY model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP."
+     }
+    },
+    {
+     "id": "on-the-archtraitors-bridge",
+     "requires": [
+      [
+       "DEATH",
+       "COMPANY"
+      ]
+     ],
+     "name": {
+      "en": "On the Archtraitor's Bridge"
+     },
+     "text": {
+      "en": "DEATH COMPANY model only. This model’s melee attacks have +2 A."
+     }
+    }
+   ]
+  }
+ ]
+}

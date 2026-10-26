@@ -1,0 +1,72 @@
+{
+ "id": "salamanders",
+ "name": {
+  "en": "Salamanders",
+  "es": "Salamandras"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "SALAMANDERS",
+  "chapterBit": "400"
+ },
+ "detachments": [
+  {
+   "id": "forgefathers-seekers",
+   "cost": 2,
+   "name": {
+    "en": "Forgefather’s Seekers"
+   },
+   "rule": {
+    "name": {
+     "en": "Vulkan's Quest"
+    },
+    "text": {
+     "en": "You can select the devastator doctrine one additional time per battle. Friendly ADEPTUS ASTARTES units’ ranged attacks that target a unit within 12\", have +1 S. If your army includes a VULKAN HE’STAN unit, friendly INFERNUS SQUAD units have the following: When this unit is selected to make an advance/fall-back move,…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "forged-in-battle",
+     "requires": [],
+     "name": {
+      "en": "Forged in Battle"
+     },
+     "text": {
+      "en": "Adeptus Astartes model only. This unit can ignore modifiers to: BS. WS. Hit rolls."
+     }
+    },
+    {
+     "id": "adamantine-mantle",
+     "requires": [],
+     "name": {
+      "en": "Adamantine Mantle"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. Attacks allocated to this model have -1 D."
+     }
+    },
+    {
+     "id": "war-tempered-artifice",
+     "requires": [],
+     "name": {
+      "en": "War Tempered Artifice"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks have: +1 S. +1 D."
+     }
+    },
+    {
+     "id": "immolator",
+     "requires": [],
+     "name": {
+      "en": "Immolator"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit’s [TORRENT] weapons have +1 A."
+     }
+    }
+   ]
+  }
+ ]
+}

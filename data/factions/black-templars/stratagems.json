@@ -1,0 +1,287 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "fist-of-the-god-emperor": [
+   {
+    "id": "doctrinal-flexibility",
+    "name": {
+     "en": "Doctrinal Flexibility"
+    },
+    "cp": 1,
+    "source": "Fist of the God-Emperor",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "For all their zealous fury, the Black Templars are Space Marines still, capable of adapting their strategies in the midst of battle to ensure the foe’s destruction."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly CRUSADER SQUAD unit."
+    },
+    "effect": {
+     "en": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase."
+    }
+   },
+   {
+    "id": "angels-defiant",
+    "name": {
+     "en": "Angels Defiant"
+    },
+    "cp": 1,
+    "source": "Fist of the God-Emperor",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "All too aware of their vital role in holding the foe at bay, these battle-brothers refuse to yield to even the most grievous of wounds."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly CRUSADER SQUAD unit."
+    },
+    "target": {
+     "en": "That CRUSADER SQUAD unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls."
+    }
+   },
+   {
+    "id": "avowed-destruction",
+    "name": {
+     "en": "Avowed Destruction"
+    },
+    "cp": 1,
+    "source": "Fist of the God-Emperor",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "The Black Templars will see their oaths upheld at any cost. Any foe with the temerity to impede them in this goal must be put mercilessly to the sword."
+    },
+    "when": {
+     "en": "The Fight phase, when a friendly CRUSADER SQUAD unit is selected to fight."
+    },
+    "target": {
+     "en": "That CRUSADER SQUAD unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks: Have [LETHAL HITS]. Or: Have [SUSTAINED HITS 1]."
+    }
+   }
+  ],
+  "marshals-household": [
+   {
+    "id": "slayers-of-abominations",
+    "name": {
+     "en": "Slayers Of Abominations"
+    },
+    "cp": 1,
+    "source": "Marshal's Household",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "The largest manifestations of the foe's sin are branded unholy abominations, challenges which a crusade's champions gladly meet to drive their sanctified weapons deeply beneath their hides."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly SWORD BRETHREN SQUAD unit is selected to fight."
+    },
+    "target": {
+     "en": "That SWORD BRETHREN SQUAD unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks that target a MONSTER/VEHICLE unit have +2 S."
+    }
+   },
+   {
+    "id": "unsparing-execution",
+    "name": {
+     "en": "Unsparing Execution"
+    },
+    "cp": 1,
+    "source": "Marshal's Household",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "Those who attempt to flee their rightful death only stroke their executioners' hatred all the hotter. None can be spared the God-Emperor's wrath."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly SWORD BRETHREN SQUAD unit."
+    },
+    "target": {
+     "en": "That SWORD BRETHREN SQUAD unit."
+    },
+    "effect": {
+     "en": "When an enemy unit engaged with your unit is selected to make a fall-back move , that enemy unit must use the desperate escape mode, with -1 to those hazard rolls if that enemy unit is battle-shocked."
+    }
+   },
+   {
+    "id": "blade-of-detestation",
+    "name": {
+     "en": "Blade Of Detestation"
+    },
+    "cp": 1,
+    "source": "Marshal's Household",
+    "kind": null,
+    "phase": "charge",
+    "turn": "your",
+    "legend": {
+     "en": "With roared litanies and incendiary hatred, the Sword Brethren plunge into their foe like a white-hot blade, their armoured momentum cracking armour, crushing bones, and trampling the foe underfoot."
+    },
+    "when": {
+     "en": "Your Charge phase, when a friendly SWORD BRETHREN SQUAD unit ends a charge move."
+    },
+    "target": {
+     "en": "That SWORD BRETHREN SQUAD."
+    },
+    "effect": {
+     "en": "Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: For each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+    }
+   }
+  ],
+  "vow-sworn-crusaders": [
+   {
+    "id": "dread-crusaders",
+    "name": {
+     "en": "Dread Crusaders"
+    },
+    "cp": 1,
+    "source": "Vow-sworn Crusaders",
+    "kind": null,
+    "phase": "charge",
+    "turn": "enemy",
+    "legend": {
+     "en": "To face the Emperor’s transhuman crusaders as they chant their litanies of detestation can chill the soul."
+    },
+    "when": {
+     "en": "Your opponent’s Charge phase, when an enemy unit selects charge targets."
+    },
+    "target": {
+     "en": "One ADEPTUS ASTARTES INFANTRY unit that was selected as a charge target by that enemy unit this phase."
+    },
+    "effect": {
+     "en": "That enemy unit must make a battle-shock roll, with -1 to that battle-shock roll."
+    }
+   },
+   {
+    "id": "for-the-emperors-honour",
+    "name": {
+     "en": "For The Emperor'S Honour!"
+    },
+    "cp": 1,
+    "source": "Vow-sworn Crusaders",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Filled with the spirit of Sigismund, his heirs seek out the foe’s dark and unclean champions so that they may be crushed in the sight of their thralls."
+    },
+    "when": {
+     "en": "The Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks have [PRECISION]."
+    }
+   },
+   {
+    "id": "heresy-begets-retribution",
+    "name": {
+     "en": "Heresy Begets Retribution"
+    },
+    "cp": 1,
+    "source": "Vow-sworn Crusaders",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "Where enemies dare threaten the warriors of the God-Emperor or seek to escape their deserved death, there must be swift retribution."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Your unit can make a surge move of up to D6\"."
+    }
+   },
+   {
+    "id": "spoor-of-the-unholy",
+    "name": {
+     "en": "Spoor Of The Unholy"
+    },
+    "cp": 1,
+    "source": "Vow-sworn Crusaders",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Perhaps guided by visions from the Emperor, Black Templars can pick out heresy wherever it lurks."
+    },
+    "when": {
+     "en": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to attack."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit can ignore modifiers to your unit’s: BS and WS. Hit rolls."
+    }
+   },
+   {
+    "id": "pious-enmity",
+    "name": {
+     "en": "Pious Enmity"
+    },
+    "cp": 1,
+    "source": "Vow-sworn Crusaders",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "The warrior priests of a crusade drive Sigismund’s heirs into the heart of battle, daring the greatest abominations to face their spiritual strength."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly CHAPLAIN/JUDICIAR unit is selected to fight."
+    },
+    "target": {
+     "en": "That CHAPLIN/JUDICIAR unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks can re-roll hit rolls of 1. Or: Your unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll hit rolls of 1 and wound rolls of 1."
+    }
+   },
+   {
+    "id": "devout-push",
+    "name": {
+     "en": "Devout Push"
+    },
+    "cp": 1,
+    "source": "Vow-sworn Crusaders",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "With a zealous cry, the Black Templars press forward, using their ceramite-armoured bulk to smash into the foe and overwhelm the enemy’s lines."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to make a pile-in/consolidation move."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "When making that pile-in/consolidation move, your unit can move up to D3+3\"."
+    }
+   }
+  ]
+ }
+}

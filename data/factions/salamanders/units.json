@@ -1,0 +1,407 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World, Warhammer Legends and other Chapters' datasheets: never imported.",
+  "ids": [
+   "aethon-shaan",
+   "arjac-rockfist",
+   "asmodai",
+   "astorath",
+   "astraeus",
+   "azrael",
+   "baal-predator",
+   "belial",
+   "bjorn-the-fell-handed",
+   "blood-angels-captain",
+   "blood-claws",
+   "caanok-var",
+   "captain-titus",
+   "castellan",
+   "cato-sicarius",
+   "centurion-assault-squad",
+   "centurion-devastator-squad",
+   "cerberus",
+   "chaplain-grimaldus",
+   "chief-librarian-mephiston",
+   "chief-librarian-tigurius",
+   "commander-dante",
+   "corvus-blackstar",
+   "crusade-ancient",
+   "crusader-squad",
+   "darnath-lysander",
+   "death-company-captain",
+   "death-company-captain-with-jump-pack",
+   "death-company-dreadnought",
+   "death-company-marines",
+   "death-company-marines-with-jump-packs",
+   "deathwatch-terminator-squad",
+   "deathwatch-veterans",
+   "deathwing-knights",
+   "deathwing-terminator-squad",
+   "decimus-kill-team",
+   "dreadnought",
+   "emperor-s-champion",
+   "execrator",
+   "ezekiel",
+   "falchion",
+   "fenrisian-wolves",
+   "fortis-kill-team",
+   "gladiator-lancer-1",
+   "gladiator-reaper-1",
+   "gladiator-valiant-1",
+   "grey-hunters",
+   "hammerfall-bunker",
+   "high-marshal-helbrecht",
+   "impulsor-1",
+   "indomitor-kill-team",
+   "inner-circle-companions",
+   "iron-father-feirros",
+   "iron-priest",
+   "kaius-konorius",
+   "kayvaan-shrike",
+   "kill-team-cassius",
+   "kor-sarro-khan",
+   "kratos",
+   "land-raider-excelsior",
+   "land-speeder-vengeance",
+   "lazarus",
+   "lemartes",
+   "lion-el-jonson",
+   "logan-grimnar",
+   "marneus-calgar",
+   "marshal",
+   "mastodon",
+   "murderfang",
+   "nephilim-jetfighter",
+   "njal-stormcaller",
+   "predator-annihilator",
+   "predator-destructor",
+   "ragnar-blackmane",
+   "rapier-carrier",
+   "ravenwing-black-knights",
+   "ravenwing-command-squad",
+   "ravenwing-dark-talon",
+   "ravenwing-darkshroud",
+   "razorback",
+   "relic-razorback",
+   "repulsor-1",
+   "repulsor-executioner-1",
+   "rhino-primaris",
+   "roboute-guilliman",
+   "sammael",
+   "sanguinary-guard",
+   "sanguinary-priest",
+   "scout-bike-squad",
+   "sicaran",
+   "spectrus-kill-team",
+   "stormhawk-interceptor",
+   "stormraven-gunship",
+   "stormtalon-gunship",
+   "suboden-khan",
+   "sword-brethren-squad",
+   "talonstrike-kill-team",
+   "tarantula-air-defence-battery",
+   "tarantula-sentry-battery",
+   "terrax-pattern-termite",
+   "the-sanguinor",
+   "thunderhawk-gunship",
+   "thunderwolf-cavalry",
+   "tor-garadon",
+   "typhon",
+   "ulrik-the-slayer",
+   "venerable-dreadnought",
+   "venerable-dreadnought-1",
+   "victrix-honour-guard",
+   "vindicator",
+   "wardens-of-ultramar-1",
+   "watch-captain-artemis",
+   "watch-master",
+   "whirlwind",
+   "wolf-guard-battle-leader",
+   "wolf-guard-headtakers",
+   "wolf-guard-terminators",
+   "wolf-priest",
+   "wolf-scouts-1",
+   "wulfen",
+   "wulfen-dreadnought-1",
+   "wulfen-with-storm-shields"
+  ]
+ },
+ "units": [
+  {
+   "id": "adrax-agatone",
+   "name": {
+    "en": "Adrax Agatone",
+    "es": "Adrax Agatone"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "drakkis",
+     "name": {
+      "en": "Drakkis"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "malleus-noctum",
+     "name": {
+      "en": "Malleus Noctum"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Lord of the Pyroclasts"
+     },
+     "text": {
+      "en": "While an enemy unit is engaged with this unit, that enemy unit has -1 OC."
+     }
+    },
+    {
+     "name": {
+      "en": "Unto the Anvil"
+     },
+     "text": {
+      "en": "This unit’s melee attacks can: Re-roll wound rolls of 1. Or: If the assault doctrine is active for this unit, re-roll wound rolls."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Adrax-Agatone",
+   "composition": [
+    "1 Adrax Agatone model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Drakkis; 1 Malleus Noctum."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "drakkis": 1,
+      "malleus-noctum": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "drakkis",
+    "malleus-noctum"
+   ]
+  },
+  {
+   "id": "vulkan-hestan",
+   "name": {
+    "en": "Vulkan He’stan",
+    "es": "Vulkan He’stan"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gauntlet-of-the-forge",
+     "name": {
+      "en": "Gauntlet of the Forge"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "spear-of-vulkan",
+     "name": {
+      "en": "Spear of Vulkan"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Seeker of the Unfound"
+     },
+     "text": {
+      "en": "The first time this model is set up on the battlefield, select one objective on the battlefield. While this model is within range of that objective, this model has: 10 OC. 5+ Ld. Feel No Pain 4+."
+     }
+    },
+    {
+     "name": {
+      "en": "Forgefather"
+     },
+     "text": {
+      "en": "In your Shooting phase, select one visible enemy unit within 24\" of this model. Friendly ADEPTUS ASTARTES units’ [Melta]/[Torrent] attacks that target that enemy unit have +2 S."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 6+",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Vulkan-He-stan",
+   "composition": [
+    "1 Vulkan He’stan model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Bolt Pistol; 1 Gauntlet of the Forge; 1 Spear of Vulkan."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "eradicator-squad-with-melta-rifles",
+     "infernus-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "gauntlet-of-the-forge": 1,
+      "spear-of-vulkan": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "gauntlet-of-the-forge",
+    "spear-of-vulkan"
+   ]
+  }
+ ]
+}

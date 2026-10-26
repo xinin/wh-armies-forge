@@ -1,0 +1,32 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "korsarro-khan",
+  "suboden-khan"
+ ],
+ "units": {
+  "korsarro-khan": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "suboden-khan": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ]
+ },
+ "enhancements": {
+  "stormseers-wisdom": 15,
+  "chogorian-huntmaster": 20,
+  "hunters-eye": 25,
+  "spearpoint-paragon": 25
+ },
+ "unitsExtraCopies": {},
+ "wargearCosts": {}
+}

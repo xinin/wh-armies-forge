@@ -1,0 +1,41 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "shadowmark-talon": {
+   "rule": {
+    "name": {
+     "en": "Shadow Tactics"
+    },
+    "text": {
+     "en": "Friendly ADEPTUS ASTARTES units have Stealth.\nFriendly PHOBOS/SCOUT SQUAD units have -3\" detection range.\nFriendly AETHON SHAAN units have the following ability:\nUnparalleled Tactician: (Once per battle round, per army) When you use the Into Darkness stratagem, that use is -1CP."
+    }
+   },
+   "enhancements": {
+    "blackwing-shroud": {
+     "text": {
+      "en": "ADEPTUS ASTARTES INFANTRY model only. This unit has Infiltrators."
+     },
+     "points": 25
+    },
+    "umbral-raptor": {
+     "text": {
+      "en": "ADEPTUS ASTARTES INFANTRY model only. This model has:\nFights First.\nLone Operative."
+     },
+     "points": 15
+    },
+    "hunters-instincts": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. In your first Movement phase, this unit can make an ingress move."
+     },
+     "points": 25
+    },
+    "coronal-susurrant": {
+     "text": {
+      "en": "PHOBOS model only. Each enemy unit (excluding MONSTER/VEHICLE units) engaged with this unit cannot be targeted by controlling player stratagems."
+     },
+     "points": 30
+    }
+   }
+  }
+ }
+}

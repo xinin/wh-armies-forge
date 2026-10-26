@@ -1,0 +1,145 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "medusas-wrath": [
+   {
+    "id": "methodical-brutality",
+    "name": {
+     "en": "Methodical Brutality"
+    },
+    "cp": 1,
+    "source": "Medusa's Wrath",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Once a foe is marked for destruction, the Angels of Death must not relent until the target is annihilated."
+    },
+    "when": {
+     "en": "Your Shooting phase or the Fight phase when a friendly ADEPTUS ASTARTES unit is selected to attack."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit’s attacks have [SUSTAINED HITS 1]. SECONDARY EFFECT: If your unit is a VEHICLE unit, have +1 to wound rolls."
+    }
+   },
+   {
+    "id": "spirits-of-iron",
+    "name": {
+     "en": "Spirits Of Iron"
+    },
+    "cp": 1,
+    "source": "Medusa's Wrath",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "These warriors emulate the mechanical monstrosities at whose side they fight, shrugging off wounds both physical and spiritual."
+    },
+    "when": {
+     "en": "Any phase, when a friendly ADEPTUS ASTARTES unit suffers a mortal wound."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit has Feel no pain 5+ against mortal wounds."
+    }
+   },
+   {
+    "id": "vengeful-animus",
+    "name": {
+     "en": "Vengeful Animus"
+    },
+    "cp": 1,
+    "source": "Medusa's Wrath",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "Carefully cogitated binharic prayers can focus a machine spirit’s ire into near-obsessive hatred of its slayers, ensuring that vengeance is meted out even in death."
+    },
+    "when": {
+     "en": "Any phase, when a friendly ADEPTUS ASTARTES VEHICLE unit is destroyed, before rolling for deadly demise."
+    },
+    "target": {
+     "en": "That friendly ADEPTUS ASTARTES VEHICLE unit."
+    },
+    "effect": {
+     "en": "Change any deadly demise rolls made for this unit to an unmodified 6."
+    }
+   },
+   {
+    "id": "ancient-fury",
+    "name": {
+     "en": "Ancient Fury"
+    },
+    "cp": 1,
+    "source": "Medusa's Wrath",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "The heroes entombed within Dreadnoughts have fought across countless war zones throughout their extended existences, perfecting their martial prowess beyond mortal limits."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES DREADNOUGHT unit."
+    },
+    "effect": {
+     "en": "Until the start of your next Command phase, your unit has: +1\" M. +1 T. +1 Ld. +1 OC. +1 to hit rolls."
+    }
+   },
+   {
+    "id": "unbowed-conviction",
+    "name": {
+     "en": "Unbowed Conviction"
+    },
+    "cp": 1,
+    "source": "Medusa's Wrath",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "Space Marines exemplify obdurate tenacity. Even severely injured, they will never abandon their oaths."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES unit that is below starting strength."
+    },
+    "effect": {
+     "en": "Until the start of your next Command phase, your unit can ignore modifiers to your unit’s: BS and WS. Hit rolls and Wound rolls."
+    }
+   },
+   {
+    "id": "power-of-the-machine-spirit",
+    "name": {
+     "en": "Power Of The Machine Spirit"
+    },
+    "cp": 1,
+    "source": "Medusa's Wrath",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "There are many tales of machine spirits wreaking havoc on the foe, even after the crew of their vehicle are slain and critical systems are failing."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged ADEPTUS ASTARTES VEHICLE unit has shot."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES VEHICLE unit."
+    },
+    "effect": {
+     "en": "Your unit shoots using: Snap shooting. Or: If your unit is at half-strength/below half-strength, normal shooting. While doing so your unit can only target that enemy unit."
+    }
+   }
+  ]
+ }
+}

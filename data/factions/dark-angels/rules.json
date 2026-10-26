@@ -1,0 +1,89 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "darkflight-pursuit": {
+   "rule": {
+    "name": {
+     "en": "Black-winged Vigilance"
+    },
+    "text": {
+     "en": "Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER].\nFriendly OUTRIDER SQUAD units have BATTLELINE.\nRestrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "thundercowl-turbines": {
+     "text": {
+      "en": "RAVENWING FLY/RAVENWING MOUNTED unit only. In your first Movement phase, this unit can make an ingress move."
+     },
+     "points": 15
+    },
+    "nightforged-battery": {
+     "text": {
+      "en": "LAND SPEEDER VENGEANCE unit only. This unit can re-roll:\nRolls to determine the A of a weapon.\nHazard rolls."
+     },
+     "points": 10
+    }
+   }
+  },
+  "inner-circle-task-force": {
+   "rule": {
+    "name": {
+     "en": "Vowed Target"
+    },
+    "text": {
+     "en": "In your Command phase, you can use this ability. If you do, select one objective. That objective is your vowed objective until your next Command phase.\nFriendly DEATHWING INFANTRY unit’s attacks that target an enemy unit within range of your vowed objective have +1 to wound rolls.\nRestrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "singular-will": {
+     "text": {
+      "en": "DEATHWING model only. When this unit is selected to make a consolidation move, this unit can move up to D3+3\"."
+     },
+     "points": 20
+    },
+    "champion-of-the-deathwing": {
+     "text": {
+      "en": "DEATHWING model only. This unit’s attacks that target an enemy unit within range of your vowed objective have [SUSTAINED HITS 1]."
+     },
+     "points": 20
+    }
+   }
+  },
+  "wrath-of-the-rock": {
+   "rule": {
+    "name": {
+     "en": "Dutiful Tenacity"
+    },
+    "text": {
+     "en": "Attacks that target friendly ADEPTUS ASTARTES INFANTRY/MOUNTED units with a S greater than that unit’s T have -1 to wound rolls.\nRestrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "tempered-in-battle": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. Friendly ADEPTUS ASTARTES units within 6\" of this model can re-roll leadership rolls."
+     },
+     "points": 10
+    },
+    "lord-of-the-ravenwing": {
+     "text": {
+      "en": "RAVENWING model only. This unit can re-roll charge rolls."
+     },
+     "points": 15
+    },
+    "deathwing-assault": {
+     "text": {
+      "en": "DEATHWING model with the Deep Strike ability only. In your first Movement phase, this unit can make an ingress move."
+     },
+     "points": 15
+    },
+    "ancient-weapons": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks:\nHave +2 S.\nHave +1 AP."
+     },
+     "points": 20
+    }
+   }
+  }
+ }
+}

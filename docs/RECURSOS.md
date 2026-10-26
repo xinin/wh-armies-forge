@@ -9,7 +9,7 @@ Fuentes de datos, webs y recursos usados para construir Forja de Ejércitos, y q
 | Recurso | URL | Para qué lo usamos |
 |---|---|---|
 | Wahapedia: reglas básicas (11ª) | https://wahapedia.ru/wh40k11ed/the-rules/core-rules/ | Reglas de reclutamiento (tamaños de batalla, puntos de destacamento, límites de unidades y mejoras, líderes) y **estratagemas generales (Core)** |
-| Wahapedia: página de facción (11ª) | `https://wahapedia.ru/wh40k11ed/factions/<facción>/`<br>p. ej. [astra-militarum](https://wahapedia.ru/wh40k11ed/factions/astra-militarum/) | Regla de ejército, destacamentos (coste en DP, regla, mejoras, estratagemas) e índice de datasheets con su clasificación (oficial, Legends o Forge World). Los capítulos de Marines (Lobos Espaciales…) salen de la página `space-marines`, filtrando por la máscara de capítulo `data-f="CH:<hex>"` |
+| Wahapedia: página de facción (11ª) | `https://wahapedia.ru/wh40k11ed/factions/<facción>/`<br>p. ej. [astra-militarum](https://wahapedia.ru/wh40k11ed/factions/astra-militarum/) | Regla de ejército, destacamentos (coste en DP, regla, mejoras, estratagemas) e índice de datasheets con su clasificación (oficial, Legends o Forge World). La base de Marines y sus capítulos salen de la página `space-marines`, filtrando por la máscara de capítulo `data-f="CH:<hex>"` |
 | Wahapedia: datasheet (11ª) | `https://wahapedia.ru/wh40k11ed/factions/<facción>/<Datasheet>`<br>p. ej. [Lord-Marshal-Dreir](https://wahapedia.ru/wh40k11ed/factions/astra-militarum/Lord-Marshal-Dreir) | Perfiles, armas, habilidades, equipo, líderes y **puntos de la 11ª**, incluido el sobrecoste a partir de la 3.ª copia |
 | Munitorum Field Manual (MFM) | https://mfm.warhammer-community.com/en | Fuente oficial de puntos; cambia con cada ajuste de balance. Sirve para verificar `points.json` a mano |
 | Tienda de Warhammer | `https://www.warhammer.com/en-GB/shop/warhammer-40000/<grupo>/<facción>`<br>p. ej. [Astra Militarum (es-ES)](https://www.warhammer.com/es-ES/shop/warhammer-40000/armies-of-the-imperium/astra-militarum) | Fotos de producto de cada unidad (`images.json`) |
@@ -75,10 +75,11 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 
 | Script | Qué hace | Fuente |
 |---|---|---|
-| `bootstrap_faction.py` | Crea la carpeta de una facción nueva: regla de ejército, destacamentos, mejoras y ficheros vacíos. La registra en `index.json`. Con `--source space-marines --chapter "Space Wolves"` crea un capítulo | Wahapedia (facción) |
+| `bootstrap_faction.py` | Crea la carpeta de una facción nueva: regla de ejército, destacamentos, mejoras y ficheros vacíos. La registra en `index.json`. Con `--chapter-bit 10` crea la base de Marines y con `--source space-marines --chapter "Space Wolves"` un capítulo de ella | Wahapedia (facción) |
 | `import_wahapedia_datasheets.py` | Importa datasheets de la 11ª (`--all` para todos los oficiales; Legends y FW van a `excluded`) con sus puntos. Con `--check` no escribe nada y lista lo que cambiaría | Wahapedia (datasheets) |
 | `wargear.py` | Motor de equipo: modelos por tipo y tamaño, equipo por defecto con cantidades y opciones de equipo como selectores | (usado por el importador) |
 | `audit_units.py` | Compara cada unidad importada con su datasheet y avisa de armas, habilidades u opciones mal leídas | Caché de Wahapedia |
+| `factions.py` | Combina un capítulo con su facción base, igual que la app (lo usan los demás scripts) | Datos locales |
 | `check_app.py` (+ `check_app.html`) | Abre la app en Chrome headless con una lista de prueba por facción y comprueba cada vista en español e inglés (errores, textos sin traducir, «undefined») | La app |
 | `translations.py` | Lista los textos de juego sin traducir (`pending`) y guarda las traducciones (`apply`) en los `i18n.es.json` | Datos importados |
 | `wahapedia_fetch.py` | Descarga con caché local (`.cache/wahapedia/`) para los importadores | Wahapedia |
@@ -86,6 +87,7 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 | `store_images.py` | Abre la tienda en Chrome, recoge los productos y asigna fotos a las unidades | warhammer.com |
 | `download_drive_folder.py` | Descarga una carpeta pública de Drive | Google Drive |
 | `import_datasheets.py` | **Obsoleto**: importaba datasheets desde los PDF (formato 10ª). Ya no se usa para los datos; sus utilidades (`role_of`, `slug`) las usan los demás scripts | PDF de Drive |
+| `image_to_emblem.py` | Convierte la imagen de un logo de un color en un emblema SVG con el rombo (logos que no están en los PDF) | Imagen del logo |
 | `pdf_vector_icon.py` | Convierte dibujos vectoriales de un PDF en SVG (iconos y emblemas) | PDF de Drive |
 
 `server.py` (en la raíz) es el servidor local: sirve la app, guarda los ejércitos en `armies/*.json` y las URLs de imágenes en `images.json`.

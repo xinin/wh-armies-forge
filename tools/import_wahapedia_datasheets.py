@@ -13,6 +13,8 @@ Points: the first cost tier goes to points.json "units"; the 3rd+ copy tier (11t
 Faction-wide wargear (T'au drones, from the faction page) is copied into the units that can take it.
 Wargear (model counts, default loadout, options) is built by tools/wargear.py. With --all, units that are no
 longer datasheets of the faction are removed. Run tools/audit_units.py afterwards.
+Chapters (index.json "parent", see tools/factions.py): the generic datasheets are read with the Chapter's bit too,
+and only those that come out different from the parent's (points, units they can lead) are kept, as overrides.
 """
 import argparse
 import html
@@ -28,7 +30,7 @@ import wargear  # noqa: E402
 from html.parser import HTMLParser  # noqa: E402
 import wahapedia_fetch  # noqa: E402
 from wahapedia_fetch import fetch  # noqa: E402
-from bootstrap_faction import update_index  # noqa: E402
+import factions  # noqa: E402
 
 BASE = 'https://wahapedia.ru/wh40k11ed/factions'
 
@@ -332,13 +334,15 @@ def main():
     cfg = json.loads((fdir / 'faction.json').read_text()).get('wahapedia', {})
     source, chapter = cfg.get('faction', args.faction), cfg.get('chapter')
     chapter_bit = int(cfg['chapterBit'], 16) if cfg.get('chapterBit') else None
-    allowed = {'ADEPTUS ASTARTES', chapter} if chapter else None
+    # base army or Chapter: only generic datasheets and the Chapter's own
+    allowed = {'ADEPTUS ASTARTES'} | ({chapter} if chapter else set()) if chapter_bit is not None else None
+    parent = factions.entry(args.faction).get('parent')
 
     pages = {}  # slug → html, fetched once
     not_core = []
     if args.all or args.list:
         slugs = datasheet_links(fetch(f'{BASE}/{source}/'), source)
-        tags = {'core': [], 'legends': [], 'fw': []} | ({'other chapters': []} if chapter else {})
+        tags = {'core': [], 'legends': [], 'fw': []} | ({'other chapters': []} if allowed else {})
         for ds in slugs:
             pages[ds] = fetch(f'{BASE}/{source}/{ds}')
             if '<div class="dsOuterFrame datasheet' not in pages[ds]:
@@ -366,6 +370,8 @@ def main():
             ex['_note'] = "Forge World, Warhammer Legends and other Chapters' datasheets: never imported."
         ex['ids'] = sorted(set(ex['ids']) | set(not_core))
     excluded = set(units_file.get('excluded', {}).get('ids', []))
+    # generic datasheets a Chapter cannot use ("Your army cannot include …", see bootstrap_faction.py)
+    denied = json.loads((fdir / 'faction.json').read_text()).get('parentExcludes', {}) if parent else {}
 
     parsed = []
     for ds in args.datasheets:
@@ -382,6 +388,11 @@ def main():
             continue
         if slug(ds) in excluded:  # by datasheet page: "Venerable-Dreadnought" (Legends) ≠ "Venerable-Dreadnought-1"
             print(f'skip {unit["id"]} (excluded)')
+            continue
+        if denied and chapter not in faction_keywords(page) and (
+                unit['id'] in denied.get('units', []) or any(factions.has_keywords(unit, g) for g in denied.get('unitKeywords', []))):
+            print(f'skip {unit["id"]} (not allowed in this Chapter)')
+            excluded.add(unit['id'])
             continue
         parsed.append((unit, targets, costs, extra, gear_costs))
 
@@ -456,6 +467,10 @@ def main():
         print(f'CHECK {uid}: ' + ' | '.join(msgs))
 
     order = ['character', 'battleline', 'infantry', 'mounted', 'monster', 'vehicle', 'transport', 'aircraft', 'titanic', 'fortification']
+    if parent:
+        inherited = drop_inherited(existing, points, factions.raw(parent))
+        print(f'{len(inherited)} generic datasheets inherited from {parent}; overrides: '
+              f'{", ".join(sorted(u for u in existing if u in {p["id"] for p in factions.raw(parent)["units"]})) or "none"}')
     units_file['units'] = sorted(existing.values(), key=lambda u: (order.index(u['role']) if u['role'] in order else 99, u['name']['en']))
     if args.check:
         changes = report_changes(fdir, units_file, points)
@@ -463,7 +478,28 @@ def main():
         sys.exit(1 if changes else 0)
     (fdir / 'units.json').write_text(json.dumps(units_file, ensure_ascii=False, indent=1) + '\n')
     (fdir / 'points.json').write_text(json.dumps(points, ensure_ascii=False, indent=1) + '\n')
-    update_index(args.faction, units=len(units_file['units']))
+    factions.refresh_counts(parent or args.faction)
+
+
+POINT_SECTIONS = ('units', 'unitsExtraCopies', 'wargearCosts')
+
+
+def drop_inherited(existing, points, parent):
+    """A Chapter keeps a generic datasheet only if it differs from the parent's (datasheet or points).
+    Removes the identical ones from `existing` and `points`; returns their ids."""
+    def same(a, b):
+        strip = lambda u: {**u, 'name': u['name']['en']}  # noqa: E731  (the Spanish name lives in i18n)
+        return strip(a) == strip(b)
+    by_id = {u['id']: u for u in parent['units']}
+    inherited = [uid for uid, u in existing.items() if uid in by_id and same(u, by_id[uid]) and
+                 all(points.get(s, {}).get(uid) == parent['points'].get(s, {}).get(uid) for s in POINT_SECTIONS)]
+    for uid in inherited:
+        del existing[uid]
+        for s in POINT_SECTIONS:
+            points.get(s, {}).pop(uid, None)
+        if uid in points.get('verified', []):
+            points['verified'].remove(uid)
+    return inherited
 
 
 def report_changes(fdir, units_file, points):

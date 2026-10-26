@@ -1,0 +1,308 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "ancient",
+  "ancient-in-terminator-armour",
+  "apothecary",
+  "asmodai",
+  "azrael",
+  "belial",
+  "captain",
+  "captain-in-terminator-armour",
+  "captain-on-bike",
+  "chaplain",
+  "chaplain-in-terminator-armour",
+  "chaplain-on-bike",
+  "deathwing-knights",
+  "deathwing-terminator-squad",
+  "ezekiel",
+  "inner-circle-companions",
+  "judiciar",
+  "land-speeder-vengeance",
+  "lazarus",
+  "librarian",
+  "librarian-in-terminator-armour",
+  "lieutenant",
+  "lion-eljonson",
+  "nephilim-jetfighter",
+  "ravenwing-black-knights",
+  "ravenwing-command-squad",
+  "ravenwing-dark-talon",
+  "ravenwing-darkshroud",
+  "sammael"
+ ],
+ "units": {
+  "ancient": [
+   {
+    "models": 1,
+    "points": 40
+   }
+  ],
+  "ancient-in-terminator-armour": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "apothecary": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "asmodai": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "azrael": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "belial": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "captain": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "captain-in-terminator-armour": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "captain-on-bike": [
+   {
+    "models": 1,
+    "points": 110
+   }
+  ],
+  "chaplain": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "chaplain-in-terminator-armour": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "chaplain-on-bike": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "deathwing-knights": [
+   {
+    "models": 5,
+    "points": 255
+   }
+  ],
+  "deathwing-terminator-squad": [
+   {
+    "models": 5,
+    "points": 190
+   },
+   {
+    "models": 10,
+    "points": 380
+   }
+  ],
+  "ezekiel": [
+   {
+    "models": 1,
+    "points": 110
+   }
+  ],
+  "inner-circle-companions": [
+   {
+    "models": 3,
+    "points": 90
+   },
+   {
+    "models": 6,
+    "points": 180
+   }
+  ],
+  "judiciar": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "land-speeder-vengeance": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "lazarus": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "librarian": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "librarian-in-terminator-armour": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "lieutenant": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "lion-eljonson": [
+   {
+    "models": 1,
+    "points": 415
+   }
+  ],
+  "nephilim-jetfighter": [
+   {
+    "models": 1,
+    "points": 200
+   }
+  ],
+  "ravenwing-black-knights": [
+   {
+    "models": 3,
+    "points": 85
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "ravenwing-command-squad": [
+   {
+    "models": 3,
+    "points": 115
+   }
+  ],
+  "ravenwing-dark-talon": [
+   {
+    "models": 1,
+    "points": 190
+   }
+  ],
+  "ravenwing-darkshroud": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "sammael": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ]
+ },
+ "enhancements": {
+  "tempered-in-battle": 10,
+  "lord-of-the-ravenwing": 15,
+  "deathwing-assault": 15,
+  "ancient-weapons": 20,
+  "singular-will": 20,
+  "champion-of-the-deathwing": 20,
+  "thundercowl-turbines": 15,
+  "nightforged-battery": 10
+ },
+ "unitsExtraCopies": {
+  "deathwing-knights": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 275
+    }
+   ]
+  },
+  "deathwing-terminator-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 230
+    },
+    {
+     "models": 10,
+     "points": 420
+    }
+   ]
+  },
+  "inner-circle-companions": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 105
+    },
+    {
+     "models": 6,
+     "points": 195
+    }
+   ]
+  },
+  "land-speeder-vengeance": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 160
+    }
+   ]
+  },
+  "ravenwing-black-knights": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 95
+    },
+    {
+     "models": 6,
+     "points": 180
+    }
+   ]
+  },
+  "ravenwing-command-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 135
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "deathwing-terminator-squad": {
+   "cyclone-missile-launcher": 10
+  }
+ }
+}

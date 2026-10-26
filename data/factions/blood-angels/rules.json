@@ -1,0 +1,89 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "angelic-inheritors": {
+   "rule": {
+    "name": {
+     "en": "Legacy of the Angel"
+    },
+    "text": {
+     "en": "Friendly BLOOD ANGELS CHARACTER units:\nCan re-roll hit rolls of 1.\nCan re-roll wound rolls of 1.\nRestrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "prescient-flash": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit has Scouts 6\"."
+     },
+     "points": 25
+    },
+    "blazing-icon": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. Enemy units cannot target this unit with snap shooting attacks."
+     },
+     "points": 20
+    },
+    "ordained-sacrifice": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. (Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6:\nOn a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged, with 3 wounds remaining."
+     },
+     "points": 25
+    },
+    "unto-death": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. (Once per battle, per army) In your Command phase you can use this ability. If you do, until the end of the turn this unit can:\nRe-roll advance rolls.\nRe-roll charge rolls."
+     },
+     "points": 15
+    }
+   }
+  },
+  "encarmine-speartip": {
+   "rule": {
+    "name": {
+     "en": "Wrath of Angels"
+    },
+    "text": {
+     "en": "The tactical doctrine is active for SANGUINARY GUARD units in addition to any other combat doctrine.\nRestrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "shadow-of-abomination": {
+     "text": {
+      "en": "ADEPTUS ASTARTES JUMP PACK model only. (once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D."
+     },
+     "points": 15
+    },
+    "angelic-executioner": {
+     "text": {
+      "en": "ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have:\n[LETHAL HITS].\nOr: [SUSTAINED HITS 1]"
+     },
+     "points": 20
+    }
+   }
+  },
+  "wrath-of-the-doomed": {
+   "rule": {
+    "name": {
+     "en": "Sanguinius' Fury"
+    },
+    "text": {
+     "en": "Friendly DEATH COMPANY units have the following:\nAt the start of each phase, the assault doctrine is active for this unit.\nThe devastator/tactical doctrine cannot be active for this unit.\nThis means that, regardless of any other rules, DEATH COMPANY units can never have an active doctrine other than the assault doctrine.\nRestrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "instinctive-interception": {
+     "text": {
+      "en": "DEATH COMPANY model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP."
+     },
+     "points": 10
+    },
+    "on-the-archtraitors-bridge": {
+     "text": {
+      "en": "DEATH COMPANY model only. This model’s melee attacks have +2 A."
+     },
+     "points": 20
+    }
+   }
+  }
+ }
+}

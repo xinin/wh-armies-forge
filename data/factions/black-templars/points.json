@@ -1,0 +1,288 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "ancient",
+  "apothecary",
+  "captain",
+  "castellan",
+  "chaplain",
+  "chaplain-grimaldus",
+  "crusade-ancient",
+  "crusader-squad",
+  "emperors-champion",
+  "execrator",
+  "gladiator-lancer",
+  "gladiator-reaper",
+  "gladiator-valiant",
+  "high-marshal-helbrecht",
+  "impulsor",
+  "judiciar",
+  "lieutenant",
+  "marshal",
+  "repulsor",
+  "repulsor-executioner",
+  "sword-brethren-squad",
+  "techmarine"
+ ],
+ "units": {
+  "ancient": [
+   {
+    "models": 1,
+    "points": 40
+   }
+  ],
+  "apothecary": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "captain": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "castellan": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "chaplain": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "chaplain-grimaldus": [
+   {
+    "models": 4,
+    "points": 120
+   }
+  ],
+  "crusade-ancient": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "crusader-squad": [
+   {
+    "models": 10,
+    "points": 160
+   },
+   {
+    "models": 20,
+    "points": 305
+   }
+  ],
+  "emperors-champion": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "execrator": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "gladiator-lancer": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "gladiator-reaper": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "gladiator-valiant": [
+   {
+    "models": 1,
+    "points": 145
+   }
+  ],
+  "high-marshal-helbrecht": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "impulsor": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "judiciar": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "lieutenant": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "marshal": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "repulsor": [
+   {
+    "models": 1,
+    "points": 190
+   }
+  ],
+  "repulsor-executioner": [
+   {
+    "models": 1,
+    "points": 265
+   }
+  ],
+  "sword-brethren-squad": [
+   {
+    "models": 4,
+    "points": 115
+   },
+   {
+    "models": 5,
+    "points": 140
+   },
+   {
+    "models": 9,
+    "points": 250
+   },
+   {
+    "models": 10,
+    "points": 275
+   }
+  ],
+  "techmarine": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ]
+ },
+ "enhancements": {
+  "augury-servo-host": 20,
+  "consecrating-aura": 20,
+  "incendiary-animus": 25,
+  "zealous-vanguard": 25,
+  "fervent-exemplars": 10,
+  "inheritors-of-sigismund": 15,
+  "righteous-fervour": 15,
+  "oathbound-exemplar": 10
+ },
+ "unitsExtraCopies": {
+  "gladiator-lancer": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 185
+    }
+   ]
+  },
+  "gladiator-reaper": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 185
+    }
+   ]
+  },
+  "gladiator-valiant": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 165
+    }
+   ]
+  },
+  "impulsor": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 80
+    }
+   ]
+  },
+  "repulsor": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 210
+    }
+   ]
+  },
+  "repulsor-executioner": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 285
+    }
+   ]
+  },
+  "sword-brethren-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 4,
+     "points": 135
+    },
+    {
+     "models": 5,
+     "points": 160
+    },
+    {
+     "models": 9,
+     "points": 270
+    },
+    {
+     "models": 10,
+     "points": 295
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "gladiator-lancer": {
+   "multi-melta": 10
+  },
+  "gladiator-reaper": {
+   "multi-melta": 10
+  },
+  "gladiator-valiant": {
+   "multi-melta": 10
+  },
+  "impulsor": {
+   "multi-melta": 10,
+   "gear:orbital-comm-array": 10
+  },
+  "repulsor": {
+   "multi-melta": 10
+  },
+  "repulsor-executioner": {
+   "multi-melta": 10
+  }
+ }
+}

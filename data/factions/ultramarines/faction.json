@@ -1,0 +1,76 @@
+{
+ "id": "ultramarines",
+ "name": {
+  "en": "Ultramarines",
+  "es": "Ultramarines"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "ULTRAMARINES",
+  "chapterBit": "1000"
+ },
+ "detachments": [
+  {
+   "id": "blade-of-ultramar",
+   "cost": 3,
+   "name": {
+    "en": "Blade of Ultramar"
+   },
+   "rule": {
+    "name": {
+     "en": "Mastered Doctrines"
+    },
+    "text": {
+     "en": "If your army includes a MARNEUS CALGAR unit, you can select the assault doctrine/devastator doctrine/tactical doctrine each one additional time per battle."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "student-of-the-codex",
+     "requires": [
+      [
+       "CAPTAIN"
+      ]
+     ],
+     "name": {
+      "en": "Student of the Codex"
+     },
+     "text": {
+      "en": "CAPTAIN model only. The tactical doctrine is active for this unit in addition to any other combat doctrine."
+     }
+    },
+    {
+     "id": "armour-of-antoninus",
+     "requires": [],
+     "name": {
+      "en": "Armour of Antoninus"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model has: 2+ Sv. Feel No Pain 5+."
+     }
+    },
+    {
+     "id": "oath-of-macragge",
+     "requires": [],
+     "name": {
+      "en": "Oath of Macragge"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks have: +1 S and AP. Or: If the assault doctrine is active for this unit, +2 S and AP."
+     }
+    },
+    {
+     "id": "veteran-of-behemoth",
+     "requires": [],
+     "name": {
+      "en": "Veteran of Behemoth"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit’s ranged attacks have [Sustained Hits 1]."
+     }
+    }
+   ]
+  }
+ ]
+}

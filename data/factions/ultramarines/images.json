@@ -1,0 +1,13 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "captain-titus": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101459_SpaceMarinesTitusWardens1.jpg?fm=webp&w=480&h=495",
+  "cato-sicarius": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101452_UltramarinesCatoSicarius1.jpg?fm=webp&w=480&h=495",
+  "chief-librarian-tigurius": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101254_UMChiefLibrarian01.jpg?fm=webp&w=480&h=495",
+  "kaius-konorius": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101500_SpaceMarinesKaiusKonorius01.jpg?fm=webp&w=480&h=495",
+  "marneus-calgar": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101450_UltramarinesMarneusCalgarArmourAntilochus1.jpg?fm=webp&w=480&h=495",
+  "roboute-guilliman": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101177_TriumvirateofthePrimarch02.jpg?fm=webp&w=480&h=495",
+  "victrix-honour-guard": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101453_UltramarinesVictrixHonourGuard1.jpg?fm=webp&w=480&h=495",
+  "wardens-of-ultramar": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101459_SpaceMarinesTitusWardens1.jpg?fm=webp&w=480&h=495"
+ }
+}

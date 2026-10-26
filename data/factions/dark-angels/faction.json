@@ -1,0 +1,264 @@
+{
+ "id": "dark-angels",
+ "name": {
+  "en": "Dark Angels",
+  "es": "Ángeles Oscuros"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "extraRules": [
+  {
+   "name": {
+    "en": "The Ravenwing"
+   },
+   "text": {
+    "en": "The following friendly ADEPTUS ASTARTES units have RAVENWING:\nMOUNTED units.\nVEHICLE FLY units."
+   }
+  },
+  {
+   "name": {
+    "en": "The Deathwing"
+   },
+   "text": {
+    "en": "The following friendly ADEPTUS ASTARTES units have DEATHWING:\nTERMINATOR units.\nBLADEGUARD ANCIENT, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD and VANGUARD VETERAN SQUAD WITH JUMP PACKS units.\nLAND RAIDER, LAND RAIDER CRUSADER, LAND RAIDER REDEEMER, REPULSOR and REPULSOR EXECUTIONER units.\nDREADNOUGHT units."
+   }
+  }
+ ],
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "DARK ANGELS",
+  "chapterBit": "20"
+ },
+ "keywordRules": [
+  {
+   "keyword": "RAVENWING",
+   "units": [
+    [
+     "MOUNTED"
+    ],
+    [
+     "VEHICLE",
+     "FLY"
+    ]
+   ]
+  },
+  {
+   "keyword": "DEATHWING",
+   "units": [
+    [
+     "TERMINATOR"
+    ],
+    [
+     "BLADEGUARD",
+     "ANCIENT"
+    ],
+    [
+     "BLADEGUARD",
+     "VETERAN",
+     "SQUAD"
+    ],
+    [
+     "STERNGUARD",
+     "VETERAN",
+     "SQUAD"
+    ],
+    [
+     "VANGUARD",
+     "VETERAN",
+     "SQUAD",
+     "WITH",
+     "JUMP",
+     "PACKS"
+    ],
+    [
+     "LAND",
+     "RAIDER"
+    ],
+    [
+     "LAND",
+     "RAIDER",
+     "CRUSADER"
+    ],
+    [
+     "LAND",
+     "RAIDER",
+     "REDEEMER"
+    ],
+    [
+     "REPULSOR"
+    ],
+    [
+     "REPULSOR",
+     "EXECUTIONER"
+    ],
+    [
+     "DREADNOUGHT"
+    ]
+   ]
+  }
+ ],
+ "detachments": [
+  {
+   "id": "wrath-of-the-rock",
+   "cost": 2,
+   "tags": [
+    "TERMINATOR"
+   ],
+   "name": {
+    "en": "Wrath of the Rock"
+   },
+   "rule": {
+    "name": {
+     "en": "Dutiful Tenacity"
+    },
+    "text": {
+     "en": "Attacks that target friendly ADEPTUS ASTARTES INFANTRY/MOUNTED units with a S greater than that unit’s T have -1 to wound rolls. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "tempered-in-battle",
+     "requires": [],
+     "name": {
+      "en": "Tempered in Battle"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. Friendly ADEPTUS ASTARTES units within 6\" of this model can re-roll leadership rolls."
+     }
+    },
+    {
+     "id": "lord-of-the-ravenwing",
+     "requires": [
+      [
+       "RAVENWING"
+      ]
+     ],
+     "name": {
+      "en": "Lord of the Ravenwing"
+     },
+     "text": {
+      "en": "RAVENWING model only. This unit can re-roll charge rolls."
+     }
+    },
+    {
+     "id": "deathwing-assault",
+     "requires": [],
+     "name": {
+      "en": "Deathwing Assault"
+     },
+     "text": {
+      "en": "DEATHWING model with the Deep Strike ability only. In your first Movement phase, this unit can make an ingress move."
+     }
+    },
+    {
+     "id": "ancient-weapons",
+     "requires": [],
+     "name": {
+      "en": "Ancient Weapons"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks: Have +2 S. Have +1 AP."
+     }
+    }
+   ]
+  },
+  {
+   "id": "inner-circle-task-force",
+   "cost": 1,
+   "name": {
+    "en": "Inner Circle Task Force"
+   },
+   "rule": {
+    "name": {
+     "en": "Vowed Target"
+    },
+    "text": {
+     "en": "In your Command phase, you can use this ability. If you do, select one objective. That objective is your vowed objective until your next Command phase. Friendly DEATHWING INFANTRY unit’s attacks that target an enemy unit within range of your vowed objective have +1 to wound rolls. Restrictions: Your army can include…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "singular-will",
+     "requires": [
+      [
+       "DEATHWING"
+      ]
+     ],
+     "name": {
+      "en": "Singular Will"
+     },
+     "text": {
+      "en": "DEATHWING model only. When this unit is selected to make a consolidation move, this unit can move up to D3+3\"."
+     }
+    },
+    {
+     "id": "champion-of-the-deathwing",
+     "requires": [
+      [
+       "DEATHWING"
+      ]
+     ],
+     "name": {
+      "en": "Champion of the Deathwing"
+     },
+     "text": {
+      "en": "DEATHWING model only. This unit’s attacks that target an enemy unit within range of your vowed objective have [SUSTAINED HITS 1]."
+     }
+    }
+   ]
+  },
+  {
+   "id": "darkflight-pursuit",
+   "cost": 1,
+   "name": {
+    "en": "Darkflight Pursuit"
+   },
+   "rule": {
+    "name": {
+     "en": "Black-winged Vigilance"
+    },
+    "text": {
+     "en": "Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Friendly OUTRIDER SQUAD units have BATTLELINE. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "thundercowl-turbines",
+     "requires": [
+      [
+       "RAVENWING",
+       "FLY"
+      ],
+      [
+       "RAVENWING",
+       "MOUNTED"
+      ]
+     ],
+     "name": {
+      "en": "Thundercowl Turbines"
+     },
+     "text": {
+      "en": "RAVENWING FLY/RAVENWING MOUNTED unit only. In your first Movement phase, this unit can make an ingress move."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "nightforged-battery",
+     "requires": [
+      [
+       "LAND",
+       "SPEEDER",
+       "VENGEANCE"
+      ]
+     ],
+     "name": {
+      "en": "Nightforged Battery"
+     },
+     "text": {
+      "en": "LAND SPEEDER VENGEANCE unit only. This unit can re-roll: Rolls to determine the A of a weapon. Hazard rolls."
+     },
+     "type": "upgrade"
+    }
+   ]
+  }
+ ]
+}

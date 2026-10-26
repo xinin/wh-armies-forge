@@ -1,0 +1,41 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "medusas-wrath": {
+   "rule": {
+    "name": {
+     "en": "Armoured Wrath"
+    },
+    "text": {
+     "en": "Each time a friendly ADEPTUS ASTARTES unit is selected to shoot or selected to fight apply one of the following when resolving those attacks:\nIf that unit is within 6\" of a friendly CANNOK VAR/IRON FATHER FEIRROS unit you can:\nRe-roll one hit roll.\nRe-roll one wound roll.\nRe-roll one damage roll.\nOtherwise you can:\nRe-roll one hit roll.\nOr: Re-roll one wound roll.\nOr: Re-roll one damage roll."
+    }
+   },
+   "enhancements": {
+    "target-augury-web": {
+     "text": {
+      "en": "TECHMARINE model only. In your movement phase, at the start or end of this unit’s move, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this unit. That VEHICLE model’s attacks have [LETHAL HITS] until the start of your next Command phase"
+     },
+     "points": 30
+    },
+    "adept-of-the-omnissiah": {
+     "text": {
+      "en": "TECHMARINE model only. (Once per battle round, per army) When an enemy unit targets a friendly ADEPTUS ASTARTES VEHICLE unit within 6\" of this unit, you can use this ability. If you do, that VEHICLE unit has Feel No Pain 5+ until that enemy unit has attacked."
+     },
+     "points": 25
+    },
+    "master-of-the-machine-war": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES VEHICLE unit within 6\" of this model and then select the devastator doctrine or tactical doctrine. That doctrine is active for that VEHICLE unit until the start of your next Command phase."
+     },
+     "points": 25
+    },
+    "the-flesh-is-weak": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model:\nHas +1 T.\nHas Feel No Pain 5+."
+     },
+     "points": 15
+    }
+   }
+  }
+ }
+}

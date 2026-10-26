@@ -1,0 +1,80 @@
+{
+ "id": "white-scars",
+ "name": {
+  "en": "White Scars",
+  "es": "Cicatrices Blancas"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "WHITE SCARS",
+  "chapterBit": "2000"
+ },
+ "detachments": [
+  {
+   "id": "spearpoint-task-force",
+   "cost": 2,
+   "name": {
+    "en": "Spearpoint Task Force"
+   },
+   "rule": {
+    "name": {
+     "en": "Storm-swift Onslaught"
+    },
+    "text": {
+     "en": "You can select the assault doctrine or tactical doctrine one additional time per battle. Friendly ADEPTUS ASTARTES MOUNTED/SPEEDER units have +1 to advance rolls. Friendly SUBODEN KHAN units have the following ability: Wrath of the First Khan: At the end of the Fight phase, if this unit was eligible to fight this…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "stormseers-wisdom",
+     "requires": [],
+     "name": {
+      "en": "Stormseer's Wisdom"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit can re-roll advance rolls."
+     }
+    },
+    {
+     "id": "chogorian-huntmaster",
+     "requires": [
+      [
+       "MOUNTED"
+      ],
+      [
+       "SPEEDER"
+      ]
+     ],
+     "name": {
+      "en": "Chogorian Huntmaster"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES MOUNTED/SPEEDER unit only. When this unit is selected to make an ingress move, treat the current battle round number as being one higher than it actually is."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "hunters-eye",
+     "requires": [],
+     "name": {
+      "en": "Hunter's Eye"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit’s ranged attacks: Have [IGNORES COVER]. Have [SUSTAINED HITS 1]."
+     }
+    },
+    {
+     "id": "spearpoint-paragon",
+     "requires": [],
+     "name": {
+      "en": "Spearpoint Paragon"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks have: +1 S and AP. Or: If this unit made a charge move this turn, +2 S and AP."
+     }
+    }
+   ]
+  }
+ ]
+}

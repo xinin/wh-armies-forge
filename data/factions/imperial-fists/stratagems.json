@@ -1,0 +1,145 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "ceramite-sentinels": [
+   {
+    "id": "unyielding-might",
+    "name": {
+     "en": "Unyielding Might"
+    },
+    "cp": 1,
+    "source": "Ceramite Sentinels",
+    "kind": null,
+    "phase": "command",
+    "turn": "either",
+    "legend": {
+     "en": "Knowing that this strategically vital site must be secure for the defence lines to hold, Space Marines stand indomitable in the face of the foe."
+    },
+    "when": {
+     "en": "Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES unit that is within range of an objective."
+    },
+    "effect": {
+     "en": "Your unit has +1 OC until the end of the turn."
+    }
+   },
+   {
+    "id": "stand-to-the-end",
+    "name": {
+     "en": "Stand To The End"
+    },
+    "cp": 1,
+    "source": "Ceramite Sentinels",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Aware of how vital it is that the defence line holds, these warriors fight even to their last breath."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit (excluding MONSTER/VEHICLE units)."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. Or: If your unit is entrenched, attacks that target your unit have -1 to wound rolls."
+    }
+   },
+   {
+    "id": "augmented-targeting",
+    "name": {
+     "en": "Augmented Targeting"
+    },
+    "cp": 1,
+    "source": "Ceramite Sentinels",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Auto-sense targeting subroutines specially adapted for defensive fire patterns aid these warriors’ aim."
+    },
+    "when": {
+     "en": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to attack."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit’s attacks have: [LETHAL HITS]. Or: [SUSTAINED HITS 1]. Or: If your unit is entrenched, [LETHAL HITS] and [SUSTAINED HITS 1]."
+    }
+   },
+   {
+    "id": "establish-supremacy",
+    "name": {
+     "en": "Establish Supremacy"
+    },
+    "cp": 1,
+    "source": "Ceramite Sentinels",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Steadfast and determined, the Imperial Fists favour methodical advances, securing and consolidating positions to establish battlefield dominance before turning their attention to the elimination of remaining foes."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly entrenched ADEPTUS ASTARTES INFANTRY unit is selected to make a consolidation move."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "You can select the objective consolidation mode for that consolidation move, regardless of that consolidation move’s Before Moving restrictions. Designer’s Note: This means your unit can move out of engagement range with enemy units, provided it meets the conditions of the objective consolidation mode."
+    }
+   },
+   {
+    "id": "priority-strike",
+    "name": {
+     "en": "Priority Strike"
+    },
+    "cp": 1,
+    "source": "Ceramite Sentinels",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Eliminating key enemy assets is crucial to stalling then reversing the foe’s momentum."
+    },
+    "when": {
+     "en": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY/MOUNTED unit is selected to attack."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit."
+    },
+    "effect": {
+     "en": "Your unit’s attacks that target a MONSTER/VEHICLE unit, have +1 to wound rolls."
+    }
+   },
+   {
+    "id": "evasive-repositioning",
+    "name": {
+     "en": "Evasive Repositioning"
+    },
+    "cp": 1,
+    "source": "Ceramite Sentinels",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "Codex doctrine when conducting an aggressive defence is to swiftly take up new positions whenever the foe finds your range."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, when an enemy unit has shot."
+    },
+    "target": {
+     "en": "One friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED unit that lost a wound as a result of those attacks."
+    },
+    "effect": {
+     "en": "Your unit can make a normal move of up to D6\". Or: If your unit is entrenched, your unit can make a normal move of up to D3+3\". Your unit is not able to embark within a TRANSPORT until the end of the turn."
+    }
+   }
+  ]
+ }
+}

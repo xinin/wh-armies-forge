@@ -50,7 +50,7 @@ La interfaz usa recursos oficiales de Games Workshop, extraídos de los PDF de d
 ```
 data/
   editions/11th.json                 reglas de reclutamiento (tamaños de batalla, límites)
-  factions/index.json                facciones disponibles
+  factions/index.json                facciones disponibles (un capítulo lleva "parent": su facción base)
   factions/astra-militarum/
     faction.json                     regla de ejército, destacamentos y mejoras
     units.json                       datasheets (perfiles, palabras clave, equipo, líderes)
@@ -122,9 +122,9 @@ Sigue [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md): crear la facción desde Wa
 
 ## Estado de los datos
 
-- **Facciones**: Astra Militarum (completa), Adeptus Custodes (27 datasheets, reglas, estratagemas, emblema y fotos de la tienda, de la 11ª), Tiránidos (50 datasheets, 10 destacamentos, emblema y 47 fotos), Caballeros Imperiales (18 datasheets, 8 destacamentos, emblema y 17 fotos) Imperio T'au (39 datasheets, 7 destacamentos, drones, emblema y 38 fotos), Lobos Espaciales (88 datasheets, 19 destacamentos, reglas extra del capítulo, emblema y 83 fotos) y Necrones (51 datasheets, 12 destacamentos, emblema y 41 fotos). El objetivo es cargar todas las facciones siguiendo [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md).
+- **Facciones**: Astra Militarum (completa), Adeptus Custodes (27 datasheets, reglas, estratagemas, emblema y fotos de la tienda, de la 11ª), Tiránidos (50 datasheets, 10 destacamentos, emblema y 47 fotos), Caballeros Imperiales (18 datasheets, 8 destacamentos, emblema y 17 fotos) Imperio T'au (39 datasheets, 7 destacamentos, drones, emblema y 38 fotos), Necrones (51 datasheets, 12 destacamentos, emblema y 41 fotos) y Marines Espaciales: la base (67 datasheets genéricos, 16 destacamentos) y 11 capítulos que añaden lo suyo (Lobos Espaciales, Templarios Negros, Ángeles Sangrientos, Ángeles Oscuros, Deathwatch, Ultramarines, Puños Imperiales, Manos de Hierro, Guardia del Cuervo, Salamandras y Cicatrices Blancas). El objetivo es cargar todas las facciones siguiendo [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md).
 
-- Datasheets: 343 unidades oficiales de la 11ª sacadas de Wahapedia (70 de Astra Militarum, 27 de Custodes, 50 de Tiránidos, 18 de Caballeros Imperiales, 39 del Imperio T'au, 88 de Lobos Espaciales y 51 de Necrones), auditadas con `tools/audit_units.py` (0 errores). Todos los textos de juego están en inglés y en español (traducción propia, no oficial; ver `tools/translations.py`). Las de Forge World y Warhammer Legends están excluidas (lista `excluded` en `units.json`) y el importador no las vuelve a meter.
+- Datasheets: 416 unidades oficiales de la 11ª sacadas de Wahapedia (70 de Astra Militarum, 27 de Custodes, 50 de Tiránidos, 18 de Caballeros Imperiales, 39 del Imperio T'au, 51 de Necrones y 161 de Marines Espaciales: 67 genéricos y 94 de capítulos), auditadas con `tools/audit_units.py` (0 errores). Todos los textos de juego están en inglés y en español (traducción propia, no oficial; ver `tools/translations.py`). Las de Forge World y Warhammer Legends están excluidas (lista `excluded` en `units.json`) y el importador no las vuelve a meter.
 - Imágenes: fotos de producto de la tienda de warhammer.com (URLs en `images.json`), sin ficheros locales.
 - Reglas de reclutamiento, destacamentos y mejoras: 11ª edición (Wahapedia, pack de facción 11 / 2.8.1, octubre 2026).
 - Puntos de unidades: los de la 11ª de cada datasheet de Wahapedia, todos verificados (sin `*`), incluido el sobrecoste por copias y los costes de equipo («per Lascannon: 5»), que se cobran por cada pieza que lleva la unidad.

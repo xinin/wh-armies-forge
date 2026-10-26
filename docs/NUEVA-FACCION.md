@@ -24,40 +24,34 @@ El identificador de Wahapedia es también el `id` de la facción en la app y el 
 ## 1. Crear la facción
 
 ```sh
-python3 tools/bootstrap_faction.py adeptus-custodes --color "#b8923a"
+python3 tools/bootstrap_faction.py adeptus-custodes --alliance imperium --color "#b8923a"
 ```
 
 Crea `data/factions/adeptus-custodes/` con:
 - `faction.json`: regla de ejército, destacamentos (coste en DP, regla resumida) y mejoras con sus requisitos;
 - `units.json`, `weapons.json`, `points.json` (con los puntos de las mejoras) e `images.json`.
 
-Además la añade a `data/factions/index.json`. `--color` es el color de la facción en las tarjetas de la home. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
+Además la añade a `data/factions/index.json`. `--alliance` (`imperium`, `chaos` o `xenos`) es el grupo en el que sale en **Nueva lista**, como en la tienda de Warhammer; los capítulos usan el de su base. `--color` es el color de la facción en las tarjetas de la home. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
 
-### Capítulos de Marines Espaciales
+### Marines Espaciales y sus capítulos
 
-Los capítulos con datasheets propios (Lobos Espaciales, Ángeles Oscuros, Ángeles Sangrientos…) no tienen página propia en Wahapedia: están dentro de `space-marines`. Se cargan como una facción aparte:
+Wahapedia tiene a todos los Marines en una sola página (`space-marines`) y marca cada regla, destacamento, fila de puntos o unidad a la que puede unirse un personaje con los capítulos a los que se aplica (`data-f="CH:<hex>"`, un bit por capítulo). En la app hay una facción base y un capítulo por cada grupo del filtro de la página:
 
 ```sh
-python3 tools/bootstrap_faction.py space-wolves --source space-marines --chapter "Space Wolves" --color "#5b7a99"
+python3 tools/bootstrap_faction.py space-marines --chapter-bit 10 --color "#2b5797"        # la base
+python3 tools/bootstrap_faction.py blood-angels --source space-marines --chapter "Blood Angels" --color "#a3141b"
+python3 tools/bootstrap_faction.py deathwatch --source space-marines --chapter "Deathwatch" --chapter-bit 40 --color "#3c3f46"
 ```
 
-- `--chapter` es el nombre tal cual aparece en el filtro de capítulos de la página. Wahapedia marca cada fila con una máscara (`data-f="CH:<hex>"`) y el script toma el bit de ese capítulo.
-- Solo entran los destacamentos y mejoras genéricos y los del capítulo; los de otros capítulos se descartan.
-- La primera regla de ejército (Combat Doctrines) va a `armyRule`. Las demás (Librarius, Curse of the Wulfen…) van a `extraRules` y se ven en el editor y en la pestaña «Regla de ejército».
-- Guarda en `faction.json` → `wahapedia` (`faction`, `chapter`, `chapterBit`). Los demás importadores lo leen de ahí, así que el resto de pasos se ejecutan igual, con el id de la facción (`space-wolves`).
-- Los datasheets de otros capítulos se reconocen por sus palabras clave de facción y no se importan. En los datasheets genéricos, las filas solo para otros capítulos (puntos, a quién lidera) se quitan antes de leer la página (`only_chapter`).
+- **La base** (`--chapter-bit 10`: lo que la página enseña sin elegir capítulo) tiene los datasheets, destacamentos y reglas de ejército genéricos.
+- **Un capítulo** (`index.json` → `"parent": "space-marines"`) solo guarda lo suyo: sus datasheets, destacamentos, reglas, fotos, emblema y traducciones. La app y las herramientas lo combinan con la base al cargarlo (`mergeChapter` en `js/data.js` y `tools/factions.py`, que explica las reglas).
+- El bit de un capítulo sale de su cabecera en el filtro de la página. Si la cabecera cubre varios capítulos (Deathwatch), se da con `--chapter-bit`.
+- `bootstrap_faction.py` también apunta lo que el capítulo no puede usar de la base (`parentExcludes`). Sale de las máscaras (los Templarios Negros no tienen Librarius) y de sus reglas de ejército: «Your army cannot include any ADEPTUS ASTARTES PSYKER models», «… the following datasheets …», «… the following ADEPTUS ASTARTES units …». También apunta las palabras clave que dan sus reglas (`keywordRules`: DEATHWING y RAVENWING de los Ángeles Oscuros). **Revisa** que salgan bien en `faction.json`.
+- Al importar los datasheets de un capítulo se leen también los genéricos con su bit. Solo se guardan los que salen distintos de los de la base: personajes que además pueden unirse a unidades del capítulo, o la versión propia de un datasheet (los Gladiator de los Templarios). El resto se hereda.
+- Los datasheets que el capítulo no puede usar no se importan, y la auditoría no los da por perdidos.
+- Las fotos de un capítulo se buscan solo para sus unidades propias. Usa la lista de productos de la sección general de Marines (`--products space-marines-products.json`) y, si faltan, la de la sección del capítulo.
+- Los capítulos del Codex (Ultramarines, Puños Imperiales…) usan en sus PDF el emblema genérico. Su emblema propio se saca de una imagen del logo con `tools/image_to_emblem.py` (ver paso 5); sin `emblem.svg`, un capítulo hereda el de la base.
 - Las unidades de otras facciones que permite una regla (los aliados de Deathwatch Support) no entran.
-
-**Revisa `faction.json`:**
-- **`requires` de cada mejora**: palabras clave que debe tener la unidad, deducidas del texto «X model only». Si sale `[]`, cualquier personaje (no Héroe Épico) puede llevarla. Corrige los casos dudosos. Ejemplo: `[["INFANTRY", "OFFICER"]]` exige las dos palabras clave; `[["A"], ["B"]]` significa A **o** B (en el texto, «A/B unit only»). También entiende nombres de datasheet en minúsculas («Kroot War Shaper model only») y las exclusiones «(excluding KROOT SHAPER models)», que van a `excludes`. Una palabra en plural («STEALTH BATTLESUITS») encaja con la palabra clave en singular.
-- **Letras que parecen latinas**: Wahapedia a veces mezcla letras cirílicas («Kauyоn» con una о cirílica). Los importadores las convierten a latinas; si un destacamento sale con `warning: no section`, mira si es esto.
-- **`type: "upgrade"`**: se marca solo en las mejoras etiquetadas como UPGRADE. Pueden llevarlas unidades que no son personajes y no cuentan para el límite de mejoras.
-- **`tags`**: etiquetas del destacamento, sacadas de la marca «UNIQUE: …» de Wahapedia sobre su título. Un ejército solo puede llevar un destacamento de cada etiqueta (los seis de Custodes son SHIELD HOST); el panel bloquea los demás y la validación avisa.
-- **`grantsLead`**: una mejora con «SUPPORT: OPHYDIAN DESTROYERS, …» (o «LEADER: …») deja al portador unirse también a esas unidades.
-- **`unitAbilities`**: si un destacamento lista habilidades con puntos bajo un título propio en vez de «Enhancements» (Pantheon of Woe: «Necrodermal Binding Abilities»), no son mejoras: cada datasheet nombrado las recibe solo y cuesta más (`points.json` → `unitAbilities`). Comprueba en la regla del destacamento que sea así.
-- **Requisitos con «o»** («OVERLORD or CATACOMB COMMAND BARGE model only») salen como alternativas. Las exclusiones solo cuentan justo detrás de «only»; un «(excluding TITANIC units)» más adelante habla de las unidades afectadas, no del portador.
-- **Nombres en español**: no hace falta tocarlos aquí; todos los textos se traducen en el paso 6.
-- **Mecánicas propias de la facción**: la regla de ejército solo se muestra como texto. Las órdenes de Astra Militarum (`armyRule.orders`) son un caso especial escrito a mano; otras facciones no lo necesitan.
 
 ## 2. Importar los datasheets
 
@@ -195,7 +189,7 @@ Los textos completos se ven en la **vista de ejército** y en el desplegable de 
 - **Coincidencias dudosas**: comprueba sobre todo las unidades con nombres genéricos (p. ej. "Heavy Weapons Squad").
 - Con `--products <facción>-products.json` puedes repetir el emparejamiento sin volver a abrir la tienda (por ejemplo, tras importar unidades nuevas).
 - Usa la tienda en **inglés** (`en-GB`): con nombres en español se emparejan muchas menos.
-- Para un capítulo, usa su propia sección (`…/shop/warhammer-40000/space-marines/space-wolves`). La de Marines genéricos sirve después para las unidades comunes que falten.
+- Para un capítulo, primero `--products space-marines-products.json` (la sección general de Marines trae casi todo) y después su propia sección (`…/shop/warhammer-40000/space-marines/blood-angels`) para lo que falte.
 - Algunas unidades se venden en la sección de **otra facción** (p. ej. los Skitarii de los Caballeros Imperiales están en Adeptus Mechanicus). Vuelve a ejecutar el script con la URL de esa sección: solo rellena las unidades que aún no tienen imagen.
 
 ## 5. Emblema de la facción (opcional)
@@ -212,6 +206,14 @@ python3 tools/download_drive_folder.py <id-de-la-carpeta-de-drive> pdfs/adeptus-
 ```
 
 El id de la carpeta es la última parte del enlace de Drive. Si el resultado no es el emblema, usa `--list` para ver los dibujos de la página con sus coordenadas y elige por `--ids`.
+
+Si el logo no está en los PDF, parte de una imagen de un solo color (logo oscuro sobre fondo claro o al revés):
+
+```sh
+.venv/bin/python tools/image_to_emblem.py logo.png data/factions/salamanders/emblem.svg [--size 0.62] [--detail 1.2]
+```
+
+Calca el contorno, lo simplifica y lo coloca dentro del rombo de los demás emblemas.
 
 La app usa el emblema en la cabecera, los títulos, las fichas, los placeholders de unidades sin foto y la tarjeta de la home.
 

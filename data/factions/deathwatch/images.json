@@ -1,0 +1,15 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "corvus-blackstar": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120109002_CorvusBlackstar01.jpg?fm=webp&w=480&h=495",
+  "deathwatch-terminator-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101398_SMTermSquad2.jpg?fm=webp&w=480&h=495",
+  "deathwatch-veterans": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108119_KTDeathwatch01.jpg?fm=webp&w=480&h=495",
+  "decimus-kill-team": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120108119_KTDeathwatch01.jpg?fm=webp&w=480&h=495",
+  "fortis-kill-team": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101496_SpaceMarinesIntercessorSquad01.jpg?fm=webp&w=480&h=495",
+  "indomitor-kill-team": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101288_SMHeavyIntercessorsLead.jpg?fm=webp&w=480&h=495",
+  "spectrus-kill-team": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101263_SMPrimarisInfiltrators01.jpg?fm=webp&w=480&h=495",
+  "talonstrike-kill-team": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101193_PrimarisInceptors01.jpg?fm=webp&w=480&h=495",
+  "watch-captain-artemis": "https://www.warhammer.com/app/resources/catalog/product/920x950/99070109002_CPTArtemisMTO2.jpg?fm=webp&w=480&h=495",
+  "watch-master": "https://www.warhammer.com/app/resources/catalog/product/920x950/99070109003_DeathwatchWatchmaster01.jpg?fm=webp&w=480&h=495"
+ }
+}

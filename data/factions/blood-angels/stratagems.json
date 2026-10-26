@@ -1,0 +1,287 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "angelic-inheritors": [
+   {
+    "id": "focused-fury",
+    "name": {
+     "en": "Focused Fury"
+    },
+    "cp": 1,
+    "source": "Angelic Inheritors",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Keeping the beast within under tight control, the Blood Angels nonetheless tap into that inner rage and shackle it to their precisely aimed blows."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks: Have [LETHAL HITS]. Or: If your unit is a CHARACTER unit, have [LETHAL HITS], [LANCE]."
+    }
+   },
+   {
+    "id": "strike-now-for-glory",
+    "name": {
+     "en": "Strike Now For Glory"
+    },
+    "cp": 1,
+    "source": "Angelic Inheritors",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Knowing instinctively that the pivotal moment has arrived, these battle-brothers aim and hammer their foes with unrelenting volleys."
+    },
+    "when": {
+     "en": "Your Shooting phase when a friendly ADEPTUS ASTARTES unit is selected to attack."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks have [SUSTAINED HITS 1]."
+    }
+   },
+   {
+    "id": "instant-of-grace",
+    "name": {
+     "en": "Instant Of Grace"
+    },
+    "cp": 1,
+    "source": "Angelic Inheritors",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "In this most desperate moment of need, a lone battle-brother rises to the challenge as a true inheritor of the Angel’s legacy."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Your unit has CHARACTER until the start of your next Command phase."
+    }
+   },
+   {
+    "id": "measured-strategist",
+    "name": {
+     "en": "Measured Strategist"
+    },
+    "cp": 1,
+    "source": "Angelic Inheritors",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "Stern and level-headed, this Blood Angels commander is a beacon of composure amidst the tempest of his brothers’ fury, providing much-needed tactical guidance for his impetuous battle-brothers."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES CHARACTER unit."
+    },
+    "effect": {
+     "en": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase."
+    }
+   },
+   {
+    "id": "unto-the-burning-skies",
+    "name": {
+     "en": "Unto The Burning Skies"
+    },
+    "cp": 1,
+    "source": "Angelic Inheritors",
+    "kind": null,
+    "phase": "fight",
+    "turn": "enemy",
+    "legend": {
+     "en": "In the face of encroaching doom, as the world seems to burn around them, these scions of Sanguinius leap high into the tormented heavens, ready to strike down with vengeful fury upon the enemy teeming below."
+    },
+    "when": {
+     "en": "End of your opponent’s Fight phase."
+    },
+    "target": {
+     "en": "One friendly THE SANGUINOR/unengaged ADEPTUS ASTARTES JUMP PACK unit."
+    },
+    "effect": {
+     "en": "Place your unit in strategic reserves."
+    }
+   },
+   {
+    "id": "in-the-shadow-of-great-wings",
+    "name": {
+     "en": "In The Shadow Of Great Wings"
+    },
+    "cp": 1,
+    "source": "Angelic Inheritors",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "The enemy are engulfed in a soul-deep shadow for just a moment, as though mighty wings have spread above them and marred their vision with occluding darkness."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES CHARACTER unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES CHARACTER unit."
+    },
+    "effect": {
+     "en": "Your unit has: Stealth. -3\" detection range."
+    }
+   }
+  ],
+  "encarmine-speartip": [
+   {
+    "id": "judgement-of-the-golden-host",
+    "name": {
+     "en": "Judgement Of The Golden Host"
+    },
+    "cp": 1,
+    "source": "Encarmine Speartip",
+    "kind": null,
+    "phase": "charge",
+    "turn": "your",
+    "legend": {
+     "en": "The meteoric impact of the Sanguinary Guard is an unavoidable judgement on those who have incurred the Chapter's wrath."
+    },
+    "when": {
+     "en": "Your Charge phase, when a friendly SANGUINARY GUARD unit form your army ends a charge move."
+    },
+    "target": {
+     "en": "That SANGUINARY GUARD unit."
+    },
+    "effect": {
+     "en": "Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: For each 3+, that enemy unit suffers 1 mortal wound."
+    }
+   },
+   {
+    "id": "inexorable-valour",
+    "name": {
+     "en": "Inexorable Valour"
+    },
+    "cp": 1,
+    "source": "Encarmine Speartip",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "Ever reaching for the heights of exemplary valour instilled in their forebears by Sanguinius, the golden host seize every opportunity to claim positions from which to strike anew."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall-back move, if that SANGUINARY GUARD unit is unengaged."
+    },
+    "target": {
+     "en": "That SANGUINARY GUARD unit."
+    },
+    "effect": {
+     "en": "Your unit can make a normal move of up to D3+3\"."
+    }
+   },
+   {
+    "id": "blinding-blurs-of-vengeance",
+    "name": {
+     "en": "Blinding Blurs Of Vengeance"
+    },
+    "cp": 1,
+    "source": "Encarmine Speartip",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "When they power forward in rapid leaps, the glare emitted by their jump packs' nacelles reflecting from the mirrored gleam of their armour, the Sanguinary Guard seem to glow with a blinding radiance few can look upon."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit."
+    },
+    "target": {
+     "en": "That SANGUINARY GUARD unit."
+    },
+    "effect": {
+     "en": "Your unit has: Stealth. -3\" detection range."
+    }
+   }
+  ],
+  "wrath-of-the-doomed": [
+   {
+    "id": "death-begets-vengeance",
+    "name": {
+     "en": "Death Begets Vengeance"
+    },
+    "cp": 1,
+    "source": "Wrath of the Doomed",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "With their perceptions twisted, the battle-brothers of the Death Company transmute loss into the worst of ancient betrayals and seek only to sever such treachery from existence."
+    },
+    "when": {
+     "en": "Any phase, when a friendly DEATH COMPANY unit is destroyed by an enemy unit."
+    },
+    "target": {
+     "en": "That enemy unit."
+    },
+    "effect": {
+     "en": "That enemy unit is hated until the end of the battle: While a unit is hated, friendly DEATH COMPANY units’ attacks that target that unit have +1 to wound rolls."
+    }
+   },
+   {
+    "id": "no-barrier-to-retribution",
+    "name": {
+     "en": "No Barrier To Retribution"
+    },
+    "cp": 1,
+    "source": "Wrath of the Doomed",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Knowing in what remains of his mind that his is a sorrow-filled mission of galactic consequence, this ancient interred warrior permits nothing to stand in his way."
+    },
+    "when": {
+     "en": "Your Movement or your Charge phase, when a friendly DEATH COMPANY DREADNOUGHT unit is selected to make a normal/advance/charge move."
+    },
+    "target": {
+     "en": "That DEATH COMPANY DREADNOUGHT unit."
+    },
+    "effect": {
+     "en": "Your unit has MOBILE."
+    }
+   },
+   {
+    "id": "rage-fuelled-response",
+    "name": {
+     "en": "Rage-Fuelled Response"
+    },
+    "cp": 1,
+    "source": "Wrath of the Doomed",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "They may no longer recognise the foe before them, but the Lost Brethren are sane enough to identify an attack and capable of responding with a violent surge and a howl of wrath."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged DEATH COMPANY unit has shot."
+    },
+    "target": {
+     "en": "That DEATH COMPANY unit."
+    },
+    "effect": {
+     "en": "Your unit can make a surge move of up to D6\"."
+    }
+   }
+  ]
+ }
+}

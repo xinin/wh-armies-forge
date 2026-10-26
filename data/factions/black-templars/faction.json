@@ -1,0 +1,206 @@
+{
+ "id": "black-templars",
+ "name": {
+  "en": "Black Templars",
+  "es": "Templarios Negros"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "extraRules": [
+  {
+   "name": {
+    "en": "Heirs of Sigismund"
+   },
+   "text": {
+    "en": "Your army cannot include any ADEPTUS ASTARTES PSYKER models.\nYour army cannot include the following datasheets from Codex: Space Marines: GLADIATOR LANCER; GLADIATOR REAPER; GLADIATOR VALIANT; IMPULSOR; REPULSOR; REPULSOR EXECUTIONER."
+   }
+  }
+ ],
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "BLACK TEMPLARS",
+  "chapterBit": "8"
+ },
+ "parentExcludes": {
+  "rules": [
+   "Librarius",
+   "Special Move Types"
+  ],
+  "unitKeywords": [
+   [
+    "PSYKER"
+   ]
+  ],
+  "units": [
+   "gladiator-lancer",
+   "gladiator-reaper",
+   "gladiator-valiant",
+   "impulsor",
+   "repulsor",
+   "repulsor-executioner"
+  ]
+ },
+ "detachments": [
+  {
+   "id": "vow-sworn-crusaders",
+   "cost": 2,
+   "name": {
+    "en": "Vow-sworn Crusaders"
+   },
+   "rule": {
+    "name": {
+     "en": "Templar Vows"
+    },
+    "text": {
+     "en": "At the start of the first battle round, you can select one Vow listed below. That Vow is active for friendly ADEPTUS ASTARTES units until the end of the battle. Abhor the Witch, Destroy the Witch This unit’s melee attacks that target a PSYKER unit: Have [PRECISION]. Have [LANCE]. Accept Any Challenge, No Matter the…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "augury-servo-host",
+     "requires": [],
+     "name": {
+      "en": "Augury Servo-host"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That enemy unit cannot have the benefit of cover."
+     }
+    },
+    {
+     "id": "consecrating-aura",
+     "requires": [],
+     "name": {
+      "en": "Consecrating Aura"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit has 5+ InSv."
+     }
+    },
+    {
+     "id": "incendiary-animus",
+     "requires": [
+      [
+       "CHAPLAIN"
+      ],
+      [
+       "JUDICIAR"
+      ]
+     ],
+     "name": {
+      "en": "Incendiary Animus"
+     },
+     "text": {
+      "en": "CHAPLAIN/JUDICIAR model only. This unit’s melee attacks have +1 S."
+     }
+    },
+    {
+     "id": "zealous-vanguard",
+     "requires": [],
+     "name": {
+      "en": "Zealous Vanguard"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit has Scouts 6\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "marshals-household",
+   "cost": 1,
+   "name": {
+    "en": "Marshal’s Household"
+   },
+   "rule": {
+    "name": {
+     "en": "Faith-fuelled Resolve"
+    },
+    "text": {
+     "en": "In the Fight phase, if a friendly SWORD BRETHREN SQUAD unit is within range of an objective, that unit’s melee attacks have +1 A. Restrictions: Your army can include BLACK TEMPLARS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "fervent-exemplars",
+     "requires": [
+      [
+       "SWORD",
+       "BRETHREN",
+       "SQUAD"
+      ]
+     ],
+     "name": {
+      "en": "Fervent Exemplars"
+     },
+     "text": {
+      "en": "SWORD BRETHREN SQUAD unit only. This unit has +1 to charge rolls."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "inheritors-of-sigismund",
+     "requires": [
+      [
+       "SWORD",
+       "BRETHREN",
+       "SQUAD"
+      ]
+     ],
+     "name": {
+      "en": "Inheritors of Sigismund"
+     },
+     "text": {
+      "en": "SWORD BRETHREN SQUAD unit only. This unit has Fights First."
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "fist-of-the-god-emperor",
+   "cost": 1,
+   "name": {
+    "en": "Fist of the God-Emperor"
+   },
+   "rule": {
+    "name": {
+     "en": "Purge and Sanctify"
+    },
+    "text": {
+     "en": "Each time a friendly CRUSADER SQUAD unit makes a surge move, instead of selecting a surge target, you can select the closest objective to that unit. When that unit makes that surge move, each model in that unit must end that surge move as close as possible to that objective instead. Restrictions: Your army can include…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "righteous-fervour",
+     "requires": [
+      [
+       "CRUSADER",
+       "SQUAD"
+      ]
+     ],
+     "name": {
+      "en": "Righteous Fervour"
+     },
+     "text": {
+      "en": "CRUSADER SQUAD unit only. This unit can re-roll Advance rolls."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "oathbound-exemplar",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Oathbound Exemplar"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES INFANTRY unit only. When this unit is selected to make an advance/fall-back move, that advance/fall-back move does not prevent this unit from being eligible to start an action."
+     }
+    }
+   ]
+  }
+ ]
+}

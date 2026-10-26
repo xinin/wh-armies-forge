@@ -1,0 +1,87 @@
+{
+ "id": "raven-guard",
+ "name": {
+  "en": "Raven Guard",
+  "es": "Guardia del Cuervo"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "RAVEN GUARD",
+  "chapterBit": "200"
+ },
+ "detachments": [
+  {
+   "id": "shadowmark-talon",
+   "cost": 2,
+   "tags": [
+    "PHOBOS"
+   ],
+   "name": {
+    "en": "Shadowmark Talon"
+   },
+   "rule": {
+    "name": {
+     "en": "Shadow Tactics"
+    },
+    "text": {
+     "en": "Friendly ADEPTUS ASTARTES units have Stealth. Friendly PHOBOS/SCOUT SQUAD units have -3\" detection range. Friendly AETHON SHAAN units have the following ability: Unparalleled Tactician: (Once per battle round, per army) When you use the Into Darkness stratagem, that use is -1CP."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "blackwing-shroud",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Blackwing Shroud"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES INFANTRY model only. This unit has Infiltrators."
+     }
+    },
+    {
+     "id": "umbral-raptor",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Umbral Raptor"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES INFANTRY model only. This model has: Fights First. Lone Operative."
+     }
+    },
+    {
+     "id": "hunters-instincts",
+     "requires": [],
+     "name": {
+      "en": "Hunter's Instincts"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. In your first Movement phase, this unit can make an ingress move."
+     }
+    },
+    {
+     "id": "coronal-susurrant",
+     "requires": [
+      [
+       "PHOBOS"
+      ]
+     ],
+     "name": {
+      "en": "Coronal Susurrant"
+     },
+     "text": {
+      "en": "PHOBOS model only. Each enemy unit (excluding MONSTER/VEHICLE units) engaged with this unit cannot be targeted by controlling player stratagems."
+     }
+    }
+   ]
+  }
+ ]
+}

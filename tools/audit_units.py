@@ -23,6 +23,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import factions as fx  # noqa: E402
 import wargear  # noqa: E402
 from import_wahapedia_datasheets import BASE, only_chapter, parse, sections, slug  # noqa: E402
 from wahapedia_fetch import fetch  # noqa: E402
@@ -114,23 +115,29 @@ def audit_unit(unit, faction, points, all_ids, excluded=frozenset()):
 
 
 def main():
-    factions = sys.argv[1:] or sorted(p.name for p in (ROOT / 'data' / 'factions').iterdir() if p.is_dir())
-    index = {f['id']: f for f in json.loads((ROOT / 'data' / 'factions' / 'index.json').read_text())['factions']}
+    index = {f['id']: f for f in fx.index()}
     total_e = total_w = 0
-    for faction in factions:
+    for faction in sys.argv[1:] or list(index):
         fdir = ROOT / 'data' / 'factions' / faction
         units_file = json.loads((fdir / 'units.json').read_text())
-        units = units_file['units']
+        units = units_file['units']  # a Chapter's own datasheets (the parent's are audited with the parent)
         excluded = set(units_file.get('excluded', {}).get('ids', []))
-        points = json.loads((fdir / 'points.json').read_text())
-        all_ids = {u['id'] for u in units}
+        merged = fx.load(faction)
+        points = merged['points']
+        all_ids = {u['id'] for u in merged['units']}
+        parent = index[faction].get('parent')
+        if parent:  # generic datasheets the Chapter cannot use are not missing leader targets
+            excluded |= {u['id'] for u in fx.raw(parent)['units']} - all_ids
         print(f'== {faction} ({len(units)} units)')
         # the faction picker shows these counts from index.json
-        detachments = len(json.loads((fdir / 'faction.json').read_text())['detachments'])
+        counts = (len(merged['units']), len(merged['faction']['detachments']))
         entry = index.get(faction, {})
-        if (entry.get('units'), entry.get('detachments')) != (len(units), detachments):
+        if not parent and entry.get('alliance') not in ('imperium', 'chaos', 'xenos'):
+            print('  ERROR index.json: no "alliance" (imperium/chaos/xenos) for the faction picker')
+            total_e += 1
+        if (entry.get('units'), entry.get('detachments')) != counts:
             print(f'  ERROR index.json: {entry.get("units")} units / {entry.get("detachments")} detachments, '
-                  f'the faction has {len(units)} / {detachments}')
+                  f'the faction has {counts[0]} / {counts[1]}')
             total_e += 1
         for u in units:
             errors, warns = audit_unit(u, faction, points, all_ids, excluded)

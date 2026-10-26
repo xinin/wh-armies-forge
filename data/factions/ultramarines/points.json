@@ -1,0 +1,103 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "captain",
+  "captain-titus",
+  "cato-sicarius",
+  "chief-librarian-tigurius",
+  "kaius-konorius",
+  "marneus-calgar",
+  "roboute-guilliman",
+  "victrix-honour-guard",
+  "wardens-of-ultramar"
+ ],
+ "units": {
+  "captain": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "captain-titus": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "cato-sicarius": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "chief-librarian-tigurius": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "kaius-konorius": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "marneus-calgar": [
+   {
+    "models": 1,
+    "points": 180
+   }
+  ],
+  "roboute-guilliman": [
+   {
+    "models": 1,
+    "points": 415
+   }
+  ],
+  "victrix-honour-guard": [
+   {
+    "models": 3,
+    "points": 120
+   },
+   {
+    "models": 6,
+    "points": 250
+   }
+  ],
+  "wardens-of-ultramar": [
+   {
+    "models": 6,
+    "points": 115
+   }
+  ]
+ },
+ "enhancements": {
+  "student-of-the-codex": 20,
+  "armour-of-antoninus": 15,
+  "oath-of-macragge": 20,
+  "veteran-of-behemoth": 20
+ },
+ "unitsExtraCopies": {
+  "victrix-honour-guard": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 150
+    },
+    {
+     "models": 6,
+     "points": 280
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "victrix-honour-guard": {
+   "gear:banner-of-macragge": 15
+  }
+ }
+}

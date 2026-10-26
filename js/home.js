@@ -111,21 +111,35 @@ function listCard(list, ctx, customImages) {
   </article>`;
 }
 
-// Pop-up to pick the faction of a new list: one tile per faction with its emblem and colour.
+const ALLIANCES = ['imperium', 'chaos', 'xenos'];
+
+// Pop-up to pick the faction of a new list: the factions grouped by alliance (index.json "alliance", as the
+// Warhammer store does), each tile with its emblem and colour; the Chapters of a faction (index.json "parent")
+// in their own block after it.
 // emblems: faction id → inline SVG (or null); the unit/detachment counts come from index.json.
 export function renderFactionPicker(index, emblems) {
+  const byName = (a, b) => tr(a.name).localeCompare(tr(b.name), getLang());
+  const chaptersOf = p => index.factions.filter(c => c.parent === p.id).sort(byName);
+  const tile = f => `<button class="faction-tile" data-action="pick-faction" data-id="${f.id}" style="--faction:${f.color ?? '#6b7d4a'}">
+          <span class="ft-emblem">${factionEmblem({ emblem: emblems.get(f.id) })}</span>
+          <span class="ft-name">${esc(tr(f.name))}</span>
+          <span class="ft-meta">${f.units} ${t('home.units')} · ${f.detachments} ${t('picker.detachments')}</span>
+        </button>`;
   return `
   <div class="dialog-card picker" role="dialog" aria-modal="true" aria-labelledby="picker-title">
     <header class="picker-head">
       <h2 id="picker-title">${icon('emblemFull', 'head-icon')}${t('picker.title')}</h2>
       <button class="btn icon" data-action="close-picker" aria-label="${t('close')}">✕</button>
     </header>
-    <div class="faction-grid">
-      ${index.factions.map(f => `<button class="faction-tile" data-action="pick-faction" data-id="${f.id}" style="--faction:${f.color ?? '#6b7d4a'}">
-          <span class="ft-emblem">${factionEmblem({ emblem: emblems.get(f.id) })}</span>
-          <span class="ft-name">${esc(tr(f.name))}</span>
-          <span class="ft-meta">${f.units} ${t('home.units')} · ${f.detachments} ${t('picker.detachments')}</span>
-        </button>`).join('')}
-    </div>
+    ${ALLIANCES.map(alliance => {
+      const factions = index.factions.filter(f => !f.parent && f.alliance === alliance).sort(byName);
+      return factions.length ? `<section class="picker-alliance">
+        <h3 class="picker-alliance-head">${t('alliance.' + alliance)}</h3>
+        <div class="faction-grid">${factions.map(tile).join('')}</div>
+        ${factions.filter(p => chaptersOf(p).length).map(p => `
+          <h4 class="picker-sub">${esc(t('picker.chapters', { name: tr(p.name) }))}</h4>
+          <div class="faction-grid">${chaptersOf(p).map(tile).join('')}</div>`).join('')}
+      </section>` : '';
+    }).join('')}
   </div>`;
 }

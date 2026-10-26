@@ -77,6 +77,7 @@ function createListFor(factionId) {
 
 async function openFactionPicker() {
   const emblems = new Map(await Promise.all(index.factions.map(async f => [f.id, await loadEmblem(f)])));
+  for (const f of index.factions) if (!emblems.get(f.id) && f.parent) emblems.set(f.id, emblems.get(f.parent)); // a Chapter without its own
   const el = $('#dialog');
   el.innerHTML = renderFactionPicker(index, emblems);
   el.hidden = false;

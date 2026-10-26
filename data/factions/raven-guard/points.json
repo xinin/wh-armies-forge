@@ -1,0 +1,32 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "aethon-shaan",
+  "kayvaan-shrike"
+ ],
+ "units": {
+  "aethon-shaan": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ],
+  "kayvaan-shrike": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ]
+ },
+ "enhancements": {
+  "blackwing-shroud": 25,
+  "umbral-raptor": 15,
+  "hunters-instincts": 25,
+  "coronal-susurrant": 30
+ },
+ "unitsExtraCopies": {},
+ "wargearCosts": {}
+}

@@ -1,0 +1,8529 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World, Warhammer Legends and other Chapters' datasheets: never imported.",
+  "ids": [
+   "adrax-agatone",
+   "aethon-shaan",
+   "arjac-rockfist",
+   "asmodai",
+   "astorath",
+   "astraeus",
+   "azrael",
+   "baal-predator",
+   "belial",
+   "bjorn-the-fell-handed",
+   "blood-angels-captain",
+   "blood-claws",
+   "caanok-var",
+   "captain-titus",
+   "castellan",
+   "cato-sicarius",
+   "centurion-assault-squad",
+   "centurion-devastator-squad",
+   "cerberus",
+   "chaplain-grimaldus",
+   "chief-librarian-mephiston",
+   "chief-librarian-tigurius",
+   "commander-dante",
+   "crusade-ancient",
+   "crusader-squad",
+   "darnath-lysander",
+   "death-company-captain",
+   "death-company-captain-with-jump-pack",
+   "death-company-dreadnought",
+   "death-company-marines",
+   "death-company-marines-with-jump-packs",
+   "deathwing-knights",
+   "deathwing-terminator-squad",
+   "dreadnought",
+   "emperor-s-champion",
+   "execrator",
+   "ezekiel",
+   "falchion",
+   "fenrisian-wolves",
+   "gladiator-lancer-1",
+   "gladiator-reaper-1",
+   "gladiator-valiant-1",
+   "grey-hunters",
+   "hammerfall-bunker",
+   "high-marshal-helbrecht",
+   "impulsor-1",
+   "inner-circle-companions",
+   "iron-father-feirros",
+   "iron-priest",
+   "kaius-konorius",
+   "kayvaan-shrike",
+   "kill-team-cassius",
+   "kor-sarro-khan",
+   "kratos",
+   "land-raider-excelsior",
+   "land-speeder-vengeance",
+   "lazarus",
+   "lemartes",
+   "lion-el-jonson",
+   "logan-grimnar",
+   "marneus-calgar",
+   "marshal",
+   "mastodon",
+   "murderfang",
+   "nephilim-jetfighter",
+   "njal-stormcaller",
+   "predator-annihilator",
+   "predator-destructor",
+   "ragnar-blackmane",
+   "rapier-carrier",
+   "ravenwing-black-knights",
+   "ravenwing-command-squad",
+   "ravenwing-dark-talon",
+   "ravenwing-darkshroud",
+   "razorback",
+   "relic-razorback",
+   "repulsor-1",
+   "repulsor-executioner-1",
+   "rhino-primaris",
+   "roboute-guilliman",
+   "sammael",
+   "sanguinary-guard",
+   "sanguinary-priest",
+   "scout-bike-squad",
+   "sicaran",
+   "stormhawk-interceptor",
+   "stormraven-gunship",
+   "stormtalon-gunship",
+   "suboden-khan",
+   "sword-brethren-squad",
+   "tarantula-air-defence-battery",
+   "tarantula-sentry-battery",
+   "terrax-pattern-termite",
+   "the-sanguinor",
+   "thunderhawk-gunship",
+   "thunderwolf-cavalry",
+   "tor-garadon",
+   "typhon",
+   "ulrik-the-slayer",
+   "venerable-dreadnought",
+   "venerable-dreadnought-1",
+   "victrix-honour-guard",
+   "vindicator",
+   "vulkan-he-stan",
+   "wardens-of-ultramar-1",
+   "whirlwind",
+   "wolf-guard-battle-leader",
+   "wolf-guard-headtakers",
+   "wolf-guard-terminators",
+   "wolf-priest",
+   "wolf-scouts-1",
+   "wulfen",
+   "wulfen-dreadnought-1",
+   "wulfen-with-storm-shields"
+  ]
+ },
+ "units": [
+  {
+   "id": "ancient",
+   "name": {
+    "en": "Ancient",
+    "es": "Ancient"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-rifle",
+     "name": {
+      "en": "Bolt Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 1",
+        "Heavy"
+       ],
+       "mode": {
+        "en": "Focused Fire"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1",
+        "Assault"
+       ],
+       "mode": {
+        "en": "Saturation"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ceramite-fists",
+     "name": {
+      "en": "Ceramite Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Raise the Banner"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, if this unit is controlling an objective, that objective is secured."
+     }
+    },
+    {
+     "name": {
+      "en": "Honour of the Company"
+     },
+     "text": {
+      "en": "This unit has +1 OC."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Ancient",
+   "wargearOptions": [
+    {
+     "text": "This model’s Bolt Rifle can be replaced with 1 Power Weapon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Ancient model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Bolt Pistol; 1 Bolt Rifle; 1 Ceramite Fists."
+   ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad",
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "bolt-rifle": 1,
+      "ceramite-fists": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Bolt Rifle",
+      "es": "Bolt Rifle"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "power-weapon"
+     ],
+     "packages": {
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "power-weapon": "Power Weapon",
+      "": "Bolt Rifle"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "bolt-rifle",
+    "ceramite-fists"
+   ]
+  },
+  {
+   "id": "ancient-in-terminator-armour",
+   "name": {
+    "en": "Ancient In Terminator Armour",
+    "es": "Ancient In Terminator Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "ANCIENT",
+    "CHARACTER",
+    "IMPERIUM",
+    "TERMINATOR",
+    "DEATHWING"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-power-weapon",
+     "name": {
+      "en": "Master-crafted Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Raise the Banner"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, if this unit is controlling an objective, that objective is secured."
+     }
+    },
+    {
+     "name": {
+      "en": "Never Shall the Standard Fall"
+     },
+     "text": {
+      "en": "While this unit is within range of an objective, attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Support"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Ancient-In-Terminator-Armour",
+   "composition": [
+    "1 Ancient in Terminator Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Master-crafted Power Weapon; 1 Storm Bolter."
+   ],
+   "leader": {
+    "canLead": [
+     "deathwatch-terminator-squad"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "master-crafted-power-weapon": 1,
+      "storm-bolter": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "master-crafted-power-weapon",
+    "storm-bolter"
+   ]
+  },
+  {
+   "id": "apothecary",
+   "name": {
+    "en": "Apothecary",
+    "es": "Apothecary"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "absolvor-bolt-pistol",
+     "name": {
+      "en": "Absolvor Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reductor-pistol",
+     "name": {
+      "en": "Reductor Pistol"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-4",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "servo-armature",
+     "name": {
+      "en": "Servo-armature"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Narthecium"
+     },
+     "text": {
+      "en": "In your Command phase, this unit heals D3+1 wounds."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Apothecary",
+   "composition": [
+    "1 Apothecary model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Reductor Pistol; 1 Servo-armature."
+   ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad",
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "absolvor-bolt-pistol": 1,
+      "reductor-pistol": 1,
+      "servo-armature": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "absolvor-bolt-pistol",
+    "reductor-pistol",
+    "servo-armature"
+   ]
+  },
+  {
+   "id": "apothecary-biologis",
+   "name": {
+    "en": "Apothecary Biologis",
+    "es": "Apothecary Biologis"
+   },
+   "keywords": [
+    "INFANTRY",
+    "APOTHECARY",
+    "CHARACTER",
+    "GRAVIS",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "absolvor-bolt-pistol",
+     "name": {
+      "en": "Absolvor Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "servo-armature",
+     "name": {
+      "en": "Servo-armature"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Vivispectral Analysis Targeting"
+     },
+     "text": {
+      "en": "This unit’s attacks have [Lethal Hits: non-Vehicle]."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Apothecary-Biologis",
+   "composition": [
+    "1 Apothecary Biologis model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Servo-armature."
+   ],
+   "leader": {
+    "canLead": [
+     "aggressor-squad",
+     "eradicator-squad-with-heavy-bolters",
+     "eradicator-squad-with-melta-rifles",
+     "heavy-intercessor-squad",
+     "indomitor-kill-team"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "absolvor-bolt-pistol": 1,
+      "servo-armature": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "absolvor-bolt-pistol",
+    "servo-armature"
+   ]
+  },
+  {
+   "id": "captain",
+   "name": {
+    "en": "Captain",
+    "es": "Captain"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-bolt-pistol",
+     "name": {
+      "en": "Heavy Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-bolter",
+     "name": {
+      "en": "Master-crafted Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 1",
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "neo-volkite-pistol",
+     "name": {
+      "en": "Neo-volkite Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Close-quarters",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-power-weapon",
+     "name": {
+      "en": "Master-crafted Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Strategic Acumen"
+     },
+     "text": {
+      "en": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Finest Hour (Once per battle, per unit)"
+     },
+     "text": {
+      "en": "In the Fight phase, when this unit is selected to fight, you can use this ability. If you do, this model’s melee attacks have: +3 A. [Devastating Wounds]."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Captain",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Relic Shield"
+     },
+     "text": {
+      "en": "This model has +1 W."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s Master-crafted Bolter and Heavy Bolt Pistol can be replaced with one of the following:",
+     "choices": [
+      "1 Neo-volkite Pistol",
+      "1 Plasma Pistol"
+     ]
+    },
+    {
+     "text": "This model’s Master-crafted Bolter can be replaced with 1 Relic Shield (this model’s Master-crafted Power Weapon cannot be replaced).",
+     "choices": []
+    },
+    {
+     "text": "This model’s Master-crafted Power Weapon can be replaced with 1 Power Fist.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Captain model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Heavy Bolt Pistol; 1 Master-crafted Bolter; 1 Master-crafted Power Weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad",
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "heavy-bolt-pistol": 1,
+      "master-crafted-bolter": 1,
+      "master-crafted-power-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Master-crafted Bolter + Heavy Bolt Pistol",
+      "es": "Master-crafted Bolter + Heavy Bolt Pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "master-crafted-bolter",
+       "n": 1
+      },
+      {
+       "item": "heavy-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "neo-volkite-pistol",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "neo-volkite-pistol": [
+       {
+        "item": "neo-volkite-pistol",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "neo-volkite-pistol": "Neo-volkite Pistol",
+      "plasma-pistol": "Plasma Pistol",
+      "": "Master-crafted Bolter + Heavy Bolt Pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Master-crafted Bolter",
+      "es": "Master-crafted Bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "master-crafted-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:relic-shield"
+     ],
+     "packages": {
+      "gear:relic-shield": [
+       {
+        "item": "gear:relic-shield",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "gear:relic-shield": "Relic shield",
+      "": "Master-crafted Bolter"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Master-crafted Power Weapon",
+      "es": "Master-crafted Power Weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "master-crafted-power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "power-fist"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "power-fist": "Power Fist",
+      "": "Master-crafted Power Weapon"
+     }
+    }
+   ],
+   "loadout": [
+    "heavy-bolt-pistol",
+    "master-crafted-bolter",
+    "master-crafted-power-weapon"
+   ]
+  },
+  {
+   "id": "captain-in-gravis-armour",
+   "name": {
+    "en": "Captain In Gravis Armour",
+    "es": "Captain In Gravis Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "GRAVIS",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "boltstorm-gauntlet",
+     "name": {
+      "en": "Boltstorm Gauntlet"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-heavy-bolt-rifle",
+     "name": {
+      "en": "Master-crafted Heavy Bolt Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Heavy",
+        "Assault",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltstorm-gauntlet-melee",
+     "name": {
+      "en": "Boltstorm Gauntlet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-power-weapon",
+     "name": {
+      "en": "Master-crafted Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "relic-blade",
+     "name": {
+      "en": "Relic Blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "relic-chainsword",
+     "name": {
+      "en": "Relic Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "relic-power-fist",
+     "name": {
+      "en": "Relic Power Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Strategic Acumen"
+     },
+     "text": {
+      "en": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Refuse to Yield"
+     },
+     "text": {
+      "en": "Attacks allocated to this model have -1 D."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Captain-In-Gravis-Armour",
+   "wargearOptions": [
+    {
+     "text": "This model’s Master-crafted Heavy Bolt Rifle and Master-crafted Power Weapon can be replaced with one of the following:",
+     "choices": [
+      "1 Boltstorm Gauntlet and 1 Relic Blade",
+      "1 Boltstorm Gauntlet and 1 Relic Chainsword",
+      "1 Boltstorm Gauntlet and 1 Relic Power Fist"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Captain in Gravis Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Master-crafted Heavy Bolt Rifle; 1 Master-crafted Power Weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "aggressor-squad",
+     "eradicator-squad-with-heavy-bolters",
+     "eradicator-squad-with-melta-rifles",
+     "heavy-intercessor-squad",
+     "indomitor-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "master-crafted-heavy-bolt-rifle": 1,
+      "master-crafted-power-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Master-crafted Heavy Bolt Rifle + Master-crafted Power Weapon",
+      "es": "Master-crafted Heavy Bolt Rifle + Master-crafted Power Weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "master-crafted-heavy-bolt-rifle",
+       "n": 1
+      },
+      {
+       "item": "master-crafted-power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-blade",
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-chainsword",
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-power-fist"
+     ],
+     "packages": {
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-blade": [
+       {
+        "item": "boltstorm-gauntlet",
+        "n": 1
+       },
+       {
+        "item": "boltstorm-gauntlet-melee",
+        "n": 1
+       },
+       {
+        "item": "relic-blade",
+        "n": 1
+       }
+      ],
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-chainsword": [
+       {
+        "item": "boltstorm-gauntlet",
+        "n": 1
+       },
+       {
+        "item": "boltstorm-gauntlet-melee",
+        "n": 1
+       },
+       {
+        "item": "relic-chainsword",
+        "n": 1
+       }
+      ],
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-power-fist": [
+       {
+        "item": "boltstorm-gauntlet",
+        "n": 1
+       },
+       {
+        "item": "boltstorm-gauntlet-melee",
+        "n": 1
+       },
+       {
+        "item": "relic-power-fist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-blade": "Boltstorm Gauntlet + Boltstorm Gauntlet + Relic Blade",
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-chainsword": "Boltstorm Gauntlet + Boltstorm Gauntlet + Relic Chainsword",
+      "boltstorm-gauntlet+boltstorm-gauntlet-melee+relic-power-fist": "Boltstorm Gauntlet + Boltstorm Gauntlet + Relic Power Fist",
+      "": "Master-crafted Heavy Bolt Rifle + Master-crafted Power Weapon"
+     }
+    }
+   ],
+   "loadout": [
+    "master-crafted-heavy-bolt-rifle",
+    "master-crafted-power-weapon"
+   ]
+  },
+  {
+   "id": "captain-in-phobos-armour",
+   "name": {
+    "en": "Captain In Phobos Armour",
+    "es": "Captain In Phobos Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "PHOBOS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "instigator-bolt-carbine",
+     "name": {
+      "en": "Instigator Bolt Carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combat-knife",
+     "name": {
+      "en": "Combat Knife"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Precision",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Strategic Acumen"
+     },
+     "text": {
+      "en": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Tactical Fluidity (Once per battle round, per unit)"
+     },
+     "text": {
+      "en": "In your Shooting phase, when this unit has shot, if this unit is unengaged, this unit can make a normal move of up to D6\". Or: At the end of your opponent’s Fight phase if this unit is engaged, this unit can make a fall-back move of up to 6\"."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Infiltrators",
+    "Leader",
+    "Scouts 6\"",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Captain-In-Phobos-Armour",
+   "composition": [
+    "1 Captain in Phobos Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Bolt Pistol; 1 Combat Knife; 1 Instigator Bolt Carbine."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "eliminator-squad",
+     "incursor-squad",
+     "infiltrator-squad",
+     "reiver-squad",
+     "spectrus-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "combat-knife": 1,
+      "instigator-bolt-carbine": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "combat-knife",
+    "instigator-bolt-carbine"
+   ]
+  },
+  {
+   "id": "captain-in-terminator-armour",
+   "name": {
+    "en": "Captain In Terminator Armour",
+    "es": "Captain In Terminator Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "IMPERIUM",
+    "TERMINATOR",
+    "DEATHWING"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Blast 1"
+       ],
+       "mode": {
+        "en": "Infernus"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "Purgatus"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-3",
+       "D": "D3+2",
+       "keywords": [
+        "Melta 2"
+       ],
+       "mode": {
+        "en": "Damnatus"
+       }
+      }
+     ]
+    },
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "relic-fist",
+     "name": {
+      "en": "Relic Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "relic-weapon",
+     "name": {
+      "en": "Relic Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Strategic Acumen"
+     },
+     "text": {
+      "en": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Unstoppable Valour"
+     },
+     "text": {
+      "en": "You can re-roll charge rolls for this unit."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Captain-In-Terminator-Armour",
+   "wargearOptions": [
+    {
+     "text": "This model’s Relic Weapon can be replaced with 1 Relic Fist.",
+     "choices": []
+    },
+    {
+     "text": "This model’s Storm Bolter can be replaced with 1 Combi-weapon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Captain in Terminator Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Relic Weapon; 1 Storm Bolter."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "deathwatch-terminator-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "relic-weapon": 1,
+      "storm-bolter": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Relic Weapon",
+      "es": "Relic Weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "relic-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "relic-fist"
+     ],
+     "packages": {
+      "relic-fist": [
+       {
+        "item": "relic-fist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "relic-fist": "Relic Fist",
+      "": "Relic Weapon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Storm Bolter",
+      "es": "Storm Bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "storm-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "combi-weapon": "Combi-weapon",
+      "": "Storm Bolter"
+     }
+    }
+   ],
+   "loadout": [
+    "relic-weapon",
+    "storm-bolter"
+   ]
+  },
+  {
+   "id": "captain-with-jump-pack",
+   "name": {
+    "en": "Captain With Jump Pack",
+    "es": "Captain With Jump Pack"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "FLY",
+    "IMPERIUM",
+    "JUMP PACK",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hand-flamer",
+     "name": {
+      "en": "Hand Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "9\"",
+       "A": "3",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Close-quarters",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolt-pistol",
+     "name": {
+      "en": "Heavy Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "relic-weapon",
+     "name": {
+      "en": "Relic Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "thunder-hammer",
+     "name": {
+      "en": "Thunder Hammer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Strategic Acumen"
+     },
+     "text": {
+      "en": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Angel’s Wrath"
+     },
+     "text": {
+      "en": "This unit has +1 to advance rolls and charge rolls."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Captain-With-Jump-Pack",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Relic Shield"
+     },
+     "text": {
+      "en": "This model has +1 W."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s Heavy Bolt Pistol can be replaced with one of the following:",
+     "choices": [
+      "1 Hand Flamer",
+      "1 Plasma Pistol"
+     ]
+    },
+    {
+     "text": "This model’s Chainsword can be replaced with one of the following:",
+     "choices": [
+      "1 Power Fist",
+      "1 Relic Weapon"
+     ]
+    },
+    {
+     "text": "This model’s Heavy Bolt Pistol and Chainsword can be replaced with one of the following:",
+     "choices": [
+      "1 Thunder Hammer and 1 Relic Shield",
+      "1 Chainsword and 1 Relic Shield"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Captain with Jump Pack model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Chainsword; 1 Heavy Bolt Pistol."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessors-with-jump-packs",
+     "vanguard-veteran-squad-with-jump-packs",
+     "talonstrike-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "chainsword": 1,
+      "heavy-bolt-pistol": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Heavy Bolt Pistol",
+      "es": "Heavy Bolt Pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hand-flamer",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "hand-flamer": [
+       {
+        "item": "hand-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hand-flamer": "Hand Flamer",
+      "plasma-pistol": "Plasma Pistol",
+      "": "Heavy Bolt Pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Chainsword",
+      "es": "Chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "power-fist",
+      "relic-weapon"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ],
+      "relic-weapon": [
+       {
+        "item": "relic-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "power-fist": "Power Fist",
+      "relic-weapon": "Relic Weapon",
+      "": "Chainsword"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Heavy Bolt Pistol + Chainsword",
+      "es": "Heavy Bolt Pistol + Chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-bolt-pistol",
+       "n": 1
+      },
+      {
+       "item": "chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "thunder-hammer+gear:relic-shield",
+      "chainsword+gear:relic-shield"
+     ],
+     "packages": {
+      "thunder-hammer+gear:relic-shield": [
+       {
+        "item": "thunder-hammer",
+        "n": 1
+       },
+       {
+        "item": "gear:relic-shield",
+        "n": 1
+       }
+      ],
+      "chainsword+gear:relic-shield": [
+       {
+        "item": "chainsword",
+        "n": 1
+       },
+       {
+        "item": "gear:relic-shield",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "thunder-hammer+gear:relic-shield": "Thunder Hammer + Relic shield",
+      "chainsword+gear:relic-shield": "Chainsword + Relic shield",
+      "": "Heavy Bolt Pistol + Chainsword"
+     }
+    }
+   ],
+   "loadout": [
+    "chainsword",
+    "heavy-bolt-pistol"
+   ]
+  },
+  {
+   "id": "chaplain",
+   "name": {
+    "en": "Chaplain",
+    "es": "Chaplain"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "5+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "absolvor-bolt-pistol",
+     "name": {
+      "en": "Absolvor Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "crozius-arcanum",
+     "name": {
+      "en": "Crozius Arcanum"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Cleave 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Litany of Hate"
+     },
+     "text": {
+      "en": "This unit’s melee attacks have [Lance]."
+     }
+    },
+    {
+     "name": {
+      "en": "Spiritual Leader (Once per battle round, per unit)"
+     },
+     "text": {
+      "en": "At the start of any phase, you can select one friendly battle-shocked ADEPTUS ASTARTES unit within 6\" of this model. That unit is no longer battle-shocked."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaplain",
+   "composition": [
+    "1 Chaplain model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Crozius Arcanum."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad",
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "absolvor-bolt-pistol": 1,
+      "crozius-arcanum": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "absolvor-bolt-pistol",
+    "crozius-arcanum"
+   ]
+  },
+  {
+   "id": "chaplain-in-terminator-armour",
+   "name": {
+    "en": "Chaplain In Terminator Armour",
+    "es": "Chaplain In Terminator Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAPLAIN",
+    "CHARACTER",
+    "IMPERIUM",
+    "TERMINATOR",
+    "DEATHWING"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "5+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "crozius-arcanum",
+     "name": {
+      "en": "Crozius Arcanum"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Cleave 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Litany of Hate"
+     },
+     "text": {
+      "en": "This unit’s melee attacks have [Lance]."
+     }
+    },
+    {
+     "name": {
+      "en": "Zealous Fortitude"
+     },
+     "text": {
+      "en": "This unit has Feel No Pain 4+ against mortal wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaplain-In-Terminator-Armour",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Relic Shield"
+     },
+     "text": {
+      "en": "This model has +1 W."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s Storm Bolter can be replaced with 1 Relic Shield.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaplain in Terminator Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Crozius Arcanum; 1 Storm Bolter."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "deathwatch-terminator-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "crozius-arcanum": 1,
+      "storm-bolter": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Storm Bolter",
+      "es": "Storm Bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "storm-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:relic-shield"
+     ],
+     "packages": {
+      "gear:relic-shield": [
+       {
+        "item": "gear:relic-shield",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "gear:relic-shield": "Relic shield",
+      "": "Storm Bolter"
+     }
+    }
+   ],
+   "loadout": [
+    "crozius-arcanum",
+    "storm-bolter"
+   ]
+  },
+  {
+   "id": "chaplain-with-jump-pack",
+   "name": {
+    "en": "Chaplain With Jump Pack",
+    "es": "Chaplain With Jump Pack"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAPLAIN",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "FLY",
+    "IMPERIUM",
+    "JUMP PACK",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "5+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "absolvor-bolt-pistol",
+     "name": {
+      "en": "Absolvor Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "crozius-arcanum",
+     "name": {
+      "en": "Crozius Arcanum"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Cleave 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Litany of Hate"
+     },
+     "text": {
+      "en": "This unit’s melee attacks have [Lance]."
+     }
+    },
+    {
+     "name": {
+      "en": "Exhortation of Rage"
+     },
+     "text": {
+      "en": "While this unit is at or below half-strength, this unit’s melee attacks can re-roll wound rolls."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaplain-With-Jump-Pack",
+   "composition": [
+    "1 Chaplain with Jump Pack model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Crozius Arcanum."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessors-with-jump-packs",
+     "vanguard-veteran-squad-with-jump-packs",
+     "talonstrike-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "absolvor-bolt-pistol": 1,
+      "crozius-arcanum": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "absolvor-bolt-pistol",
+    "crozius-arcanum"
+   ]
+  },
+  {
+   "id": "judiciar",
+   "name": {
+    "en": "Judiciar",
+    "es": "Judiciar"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "absolvor-bolt-pistol",
+     "name": {
+      "en": "Absolvor Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "executioner-relic-blade",
+     "name": {
+      "en": "Executioner Relic Blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Precision",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Tempormortis"
+     },
+     "text": {
+      "en": "This unit has Fights First."
+     }
+    }
+   ],
+   "core": [
+    "Fights First",
+    "Support"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Judiciar",
+   "composition": [
+    "1 Judiciar model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Executioner Relic Blade."
+   ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad",
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "absolvor-bolt-pistol": 1,
+      "executioner-relic-blade": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "absolvor-bolt-pistol",
+    "executioner-relic-blade"
+   ]
+  },
+  {
+   "id": "librarian",
+   "name": {
+    "en": "Librarian",
+    "es": "Librarian"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "PSYKER",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "smite",
+     "name": {
+      "en": "Smite"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3+3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "Focused Witchfire"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "Witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Librarian (psyker level 1)"
+     },
+     "text": {
+      "en": "This model has the psychic abilities listed in the Psychic Abilities section."
+     }
+    },
+    {
+     "name": {
+      "en": "Psychic Hood (Psychic)"
+     },
+     "text": {
+      "en": "This unit has Feel No Pain 4+ against psychic attacks."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Librarius"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Librarian",
+   "composition": [
+    "1 Librarian model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Bolt Pistol; 1 Force Weapon; 1 Smite."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad",
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "force-weapon": 1,
+      "smite": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "force-weapon",
+    "smite"
+   ]
+  },
+  {
+   "id": "librarian-in-phobos-armour",
+   "name": {
+    "en": "Librarian In Phobos Armour",
+    "es": "Librarian In Phobos Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "PHOBOS",
+    "PSYKER"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "smite",
+     "name": {
+      "en": "Smite"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3+3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "Focused Witchfire"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "Witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Librarian (psyker level 1)"
+     },
+     "text": {
+      "en": "This model has the psychic abilities listed in the Psychic Abilities section."
+     }
+    },
+    {
+     "name": {
+      "en": "Psychic Hood (Psychic)"
+     },
+     "text": {
+      "en": "This unit has Feel No Pain 4+ against psychic attacks."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Infiltrators",
+    "Leader",
+    "Scouts 6\"",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Librarius"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Librarian-In-Phobos-Armour",
+   "composition": [
+    "1 Librarian in Phobos Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Bolt Pistol; 1 Force Weapon; 1 Smite."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "eliminator-squad",
+     "incursor-squad",
+     "infiltrator-squad",
+     "reiver-squad",
+     "spectrus-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "force-weapon": 1,
+      "smite": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "force-weapon",
+    "smite"
+   ]
+  },
+  {
+   "id": "librarian-in-terminator-armour",
+   "name": {
+    "en": "Librarian In Terminator Armour",
+    "es": "Librarian In Terminator Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "PSYKER",
+    "TERMINATOR",
+    "DEATHWING"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "smite",
+     "name": {
+      "en": "Smite"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3+3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "Focused Witchfire"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "Witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Librarian (psyker level 1)"
+     },
+     "text": {
+      "en": "This model has the psychic abilities listed in the Psychic Abilities section."
+     }
+    },
+    {
+     "name": {
+      "en": "Psychic Hood (Psychic)"
+     },
+     "text": {
+      "en": "This unit has Feel No Pain 4+ against psychic attacks."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Librarius"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Librarian-In-Terminator-Armour",
+   "composition": [
+    "1 Librarian in Terminator Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Force Weapon; 1 Smite; 1 Storm Bolter."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "deathwatch-terminator-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "force-weapon": 1,
+      "smite": 1,
+      "storm-bolter": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "force-weapon",
+    "smite",
+    "storm-bolter"
+   ]
+  },
+  {
+   "id": "lieutenant",
+   "name": {
+    "en": "Lieutenant",
+    "es": "Lieutenant"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolt-pistol",
+     "name": {
+      "en": "Heavy Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-bolter",
+     "name": {
+      "en": "Master-crafted Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "neo-volkite-pistol",
+     "name": {
+      "en": "Neo-volkite Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Close-quarters",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Close-quarters",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ceramite-fists",
+     "name": {
+      "en": "Ceramite Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-power-weapon",
+     "name": {
+      "en": "Master-crafted Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Demi-company Commander (Once per turn, per unit)"
+     },
+     "text": {
+      "en": "When a friendly CAPTAIN unit uses its Strategic Acumen ability, you can use this ability. If you do, the selected combat doctrine is active for this unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Tactical Precision"
+     },
+     "text": {
+      "en": "This unit’s attacks have [Lethal Hits: non-MONSTER/VEHICLE]."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lieutenant",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Storm Shield"
+     },
+     "text": {
+      "en": "This model has a 4+ InSv."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s Master-crafted Bolter and Bolt Pistol can be replaced with 1 Neo-volkite Pistol and 1 Master-crafted Power Weapon.",
+     "choices": []
+    },
+    {
+     "text": "If this model is equipped with 1 Neo-volkite Pistol, it can be equipped with 1 Storm Shield (this model’s 1 Neo-volkite Pistol cannot be replaced).",
+     "choices": []
+    },
+    {
+     "text": "This model’s Bolt Pistol can be replaced with 1 Heavy Bolt Pistol.",
+     "choices": []
+    },
+    {
+     "text": "This model’s Master-crafted Bolter can be replaced with one of the following:",
+     "choices": [
+      "1 Master-crafted Power Weapon",
+      "1 Plasma Pistol",
+      "1 Power Fist"
+     ]
+    },
+    {
+     "text": "This model’s Ceramite Fists can be replaced with one of the following:",
+     "choices": [
+      "1 Master-crafted Power Weapon",
+      "1 Power Fist"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Lieutenant model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Bolt Pistol; 1 Ceramite Fists; 1 Master-crafted Bolter."
+   ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad",
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "ceramite-fists": 1,
+      "master-crafted-bolter": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Master-crafted Bolter + Bolt Pistol",
+      "es": "Master-crafted Bolter + Bolt Pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "master-crafted-bolter",
+       "n": 1
+      },
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "neo-volkite-pistol+master-crafted-power-weapon"
+     ],
+     "packages": {
+      "neo-volkite-pistol+master-crafted-power-weapon": [
+       {
+        "item": "neo-volkite-pistol",
+        "n": 1
+       },
+       {
+        "item": "master-crafted-power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "neo-volkite-pistol+master-crafted-power-weapon": "Neo-volkite Pistol + Master-crafted Power Weapon",
+      "": "Master-crafted Bolter + Bolt Pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Storm shield",
+      "es": "añadir Storm shield"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:storm-shield",
+     "packages": {
+      "gear:storm-shield": [
+       {
+        "item": "gear:storm-shield",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "needs": [
+      {
+       "item": "neo-volkite-pistol",
+       "n": 1
+      }
+     ],
+     "labels": {
+      "gear:storm-shield": "Storm shield"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Bolt Pistol",
+      "es": "Bolt Pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "heavy-bolt-pistol"
+     ],
+     "packages": {
+      "heavy-bolt-pistol": [
+       {
+        "item": "heavy-bolt-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "heavy-bolt-pistol": "Heavy Bolt Pistol",
+      "": "Bolt Pistol"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Master-crafted Bolter",
+      "es": "Master-crafted Bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "master-crafted-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "master-crafted-power-weapon",
+      "plasma-pistol",
+      "power-fist"
+     ],
+     "packages": {
+      "master-crafted-power-weapon": [
+       {
+        "item": "master-crafted-power-weapon",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ],
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "master-crafted-power-weapon": "Master-crafted Power Weapon",
+      "plasma-pistol": "Plasma Pistol",
+      "power-fist": "Power Fist",
+      "": "Master-crafted Bolter"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Ceramite Fists",
+      "es": "Ceramite Fists"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "ceramite-fists",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "master-crafted-power-weapon",
+      "power-fist"
+     ],
+     "packages": {
+      "master-crafted-power-weapon": [
+       {
+        "item": "master-crafted-power-weapon",
+        "n": 1
+       }
+      ],
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "master-crafted-power-weapon": "Master-crafted Power Weapon",
+      "power-fist": "Power Fist",
+      "": "Ceramite Fists"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "ceramite-fists",
+    "master-crafted-bolter"
+   ]
+  },
+  {
+   "id": "lieutenant-in-phobos-armour",
+   "name": {
+    "en": "Lieutenant In Phobos Armour",
+    "es": "Lieutenant In Phobos Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "PHOBOS",
+    "SMOKE"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "master-crafted-bolt-carbine",
+     "name": {
+      "en": "Master-crafted bolt carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "4",
+       "AP": "0",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "special-issue-bolt-pistol",
+     "name": {
+      "en": "Special-issue Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Precision",
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "monomolecular-combat-blades",
+     "name": {
+      "en": "Monomolecular Combat Blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1",
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Demi-company Commander (Once per turn, per unit)"
+     },
+     "text": {
+      "en": "When a friendly CAPTAIN unit uses its Strategic Acumen ability, you can use this ability. If you do, the selected combat doctrine is active for this unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Tactical Precision"
+     },
+     "text": {
+      "en": "This unit’s attacks have [Lethal Hits: non-MONSTER/VEHICLE]."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Infiltrators",
+    "Scouts 6\"",
+    "Support"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lieutenant-In-Phobos-Armour",
+   "wargearOptions": [
+    {
+     "text": "This model’s Special-issue Bolt Pistol can be replaced with 1 Master-crafted Bolt Carbine.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Lieutenant in Phobos Armour model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Monomolecular Combat Blades; 1 Special-issue Bolt Pistol."
+   ],
+   "leader": {
+    "canLead": [
+     "eliminator-squad",
+     "incursor-squad",
+     "infiltrator-squad",
+     "reiver-squad",
+     "spectrus-kill-team"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "monomolecular-combat-blades": 1,
+      "special-issue-bolt-pistol": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Special-issue Bolt Pistol",
+      "es": "Special-issue Bolt Pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "special-issue-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "master-crafted-bolt-carbine"
+     ],
+     "packages": {
+      "master-crafted-bolt-carbine": [
+       {
+        "item": "master-crafted-bolt-carbine",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "master-crafted-bolt-carbine": "Master-crafted bolt carbine",
+      "": "Special-issue Bolt Pistol"
+     }
+    }
+   ],
+   "loadout": [
+    "monomolecular-combat-blades",
+    "special-issue-bolt-pistol"
+   ]
+  },
+  {
+   "id": "techmarine",
+   "name": {
+    "en": "Techmarine",
+    "es": "Techmarine"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "2+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "forge-bolter",
+     "name": {
+      "en": "Forge Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grav-pistol",
+     "name": {
+      "en": "Grav-pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "2",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Anti-vehicle 2+",
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "omnissian-power-axe-and-servo-arm",
+     "name": {
+      "en": "Omnissian Power Axe and Servo-arm"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Techmarine"
+     },
+     "text": {
+      "en": "While this model is within 3\" of a friendly ADEPTUS ASTARTES VEHICLE unit, this model has Lone Operative."
+     }
+    },
+    {
+     "name": {
+      "en": "Blessings of the Omnissiah"
+     },
+     "text": {
+      "en": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this model: That VEHICLE model heals D3 wounds. That VEHICLE model’s attacks can ignore modifiers to hit rolls and wound rolls until the start of your next Movement phase."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Techmarine",
+   "composition": [
+    "1 Techmarine model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Forge Bolter; 1 Grav-pistol; 1 Omnissian Power Axe and Servo-arm."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "desolation-squad",
+     "intercessor-squad",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "forge-bolter": 1,
+      "grav-pistol": 1,
+      "omnissian-power-axe-and-servo-arm": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "forge-bolter",
+    "grav-pistol",
+    "omnissian-power-axe-and-servo-arm"
+   ]
+  },
+  {
+   "id": "watch-captain-artemis",
+   "name": {
+    "en": "Watch Captain Artemis",
+    "es": "Watch Captain Artemis"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "KILL TEAM",
+    "EXPLOSIVES",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hellfire-extremis",
+     "name": {
+      "en": "Hellfire Extremis"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Ignores Cover",
+        "Devastating Wounds",
+        "Anti-infantry 4+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-power-weapon",
+     "name": {
+      "en": "Master-crafted Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Unstoppable Champion (Once per battle, per army)"
+     },
+     "text": {
+      "en": "At the end of a phase in which this model is destroyed, roll one D6: On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged with 3 wounds remaining."
+     }
+    },
+    {
+     "name": {
+      "en": "Tactical Instinct"
+     },
+     "text": {
+      "en": "This unit’s attacks have [Sustained Hits 1]."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 6+",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Watch-Captain-Artemis",
+   "composition": [
+    "1 Watch Captain Artemis model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Hellfire Extremis; 1 Master-crafted Power Weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hellfire-extremis": 1,
+      "master-crafted-power-weapon": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hellfire-extremis",
+    "master-crafted-power-weapon"
+   ]
+  },
+  {
+   "id": "watch-master",
+   "name": {
+    "en": "Watch Master",
+    "es": "Watch Master"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "KILL TEAM",
+    "EXPLOSIVES",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "vigil-spear",
+     "name": {
+      "en": "Vigil Spear"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "vigil-spear-melee",
+     "name": {
+      "en": "Vigil Spear"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lance"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Strategic Knowledge"
+     },
+     "text": {
+      "en": "This unit’s ranged attacks have [ASSAULT]. When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge."
+     }
+    },
+    {
+     "name": {
+      "en": "Watch Master"
+     },
+     "text": {
+      "en": "This model’s attacks that target a CHARACTER unit can: Re-roll hit rolls of 1. Re-roll wound rolls of 1."
+     }
+    },
+    {
+     "name": {
+      "en": "Purgatus Quarry"
+     },
+     "text": {
+      "en": "At the start of the first battle round, select up to one enemy unit to be this unit’s hunted: This unit’s attacks that target this unit’s hunted unit can re-roll wound rolls of 1. Each time this unit’s hunted is destroyed, select up to one enemy unit to be this unit’s hunted."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Transhuman Strategist",
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Watch-Master",
+   "composition": [
+    "1 Watch Master model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Vigil Spear."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "deathwatch-veterans",
+     "decimus-kill-team",
+     "fortis-kill-team"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "vigil-spear": 1,
+      "vigil-spear-melee": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "vigil-spear",
+    "vigil-spear-melee"
+   ]
+  },
+  {
+   "id": "deathwatch-veterans",
+   "name": {
+    "en": "Deathwatch Veterans",
+    "es": "Deathwatch Veterans"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "KILL TEAM",
+    "EXPLOSIVES",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "6+",
+     "OC": "2",
+     "name": {
+      "en": "Deathwatch Veteran(⌀32mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "D3+2",
+       "keywords": [],
+       "mode": {
+        "en": "Damnatus"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast 1",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "Infernus"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Melta 2"
+       ],
+       "mode": {
+        "en": "Purgatus"
+       }
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-shotgun",
+     "name": {
+      "en": "Deathwatch Shotgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "frag-cannon",
+     "name": {
+      "en": "Frag Cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Lethal Hits",
+        "Rapid Fire 1",
+        "Blast 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "infernus-heavy-bolter",
+     "name": {
+      "en": "Infernus Heavy Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Rapid Fire 2",
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "Bolt"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Blast 1"
+       ],
+       "mode": {
+        "en": "Infernus"
+       }
+      }
+     ]
+    },
+    {
+     "id": "stalker-pattern-boltgun",
+     "name": {
+      "en": "Stalker-pattern Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "black-shield-blades",
+     "name": {
+      "en": "Black Shield Blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-thunder-hammer",
+     "name": {
+      "en": "Heavy Thunder Hammer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "knives-and-fists",
+     "name": {
+      "en": "Knives and Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "xenophase-blade",
+     "name": {
+      "en": "Xenophase Blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Death to the Alien"
+     },
+     "text": {
+      "en": "This unit’s attacks can: Re-roll hit rolls of 1. Or: If the target of those attacks does not have IMPERIUM/CHAOS, re-roll hit rolls."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Deathwatch-Veterans",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Storm Shield"
+     },
+     "text": {
+      "en": "This model has a 4+ InSv."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Watch Sergeant can have their Boltgun replaced with 1 Combi-weapon.",
+     "choices": []
+    },
+    {
+     "text": "The Watch Sergeant can have their Power Weapon replaced with 1 Xenophase Blade.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Stalker-pattern Boltgun and 1 Knives and Fists.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Infernus Heavy Bolter and 1 Knives and Fists.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, up to 2 Deathwatch Veteran models can each have their Boltgun and Power Weapon replaced with 1 Deathwatch Shotgun and 1 Knives and Fists.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, up to 2 Deathwatch Veteran models can each have their Boltgun and Power Weapon replaced with 1 Heavy Thunder Hammer.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Frag Cannon and 1 Knives and Fists.",
+     "choices": []
+    },
+    {
+     "text": "1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Black Shield Blades.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, up to 2 Deathwatch Veteran models can each have their Boltgun and Power Weapon replaced with one of the following: 1 Boltgun and 1 Storm Shield, 1 Power Weapon and 1 Storm Shield",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Watch Sergeant model",
+    "4-9 Deathwatch Veteran models"
+   ],
+   "equipped": [
+    "Every model is equipped with: 1 Boltgun; 1 Power Weapon."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "boltgun": 5,
+      "power-weapon": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "boltgun": 10,
+      "power-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Watch Sergeant: Boltgun",
+      "es": "Watch Sergeant: Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Watch Sergeant",
+     "labels": {
+      "combi-weapon": "Combi-weapon",
+      "": "Boltgun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Watch Sergeant: Power Weapon",
+      "es": "Watch Sergeant: Power Weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "xenophase-blade"
+     ],
+     "packages": {
+      "xenophase-blade": [
+       {
+        "item": "xenophase-blade",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Watch Sergeant",
+     "labels": {
+      "xenophase-blade": "Xenophase Blade",
+      "": "Power Weapon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Deathwatch Veteran model: replace Boltgun + Power Weapon",
+      "es": "Deathwatch Veteran model: sustituir Boltgun + Power Weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "stalker-pattern-boltgun+knives-and-fists"
+     ],
+     "packages": {
+      "stalker-pattern-boltgun+knives-and-fists": [
+       {
+        "item": "stalker-pattern-boltgun",
+        "n": 1
+       },
+       {
+        "item": "knives-and-fists",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Deathwatch Veteran model",
+     "labels": {
+      "stalker-pattern-boltgun+knives-and-fists": "Stalker-pattern Boltgun + Knives and Fists"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Deathwatch Veteran model: replace Boltgun + Power Weapon",
+      "es": "Deathwatch Veteran model: sustituir Boltgun + Power Weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "infernus-heavy-bolter+knives-and-fists"
+     ],
+     "packages": {
+      "infernus-heavy-bolter+knives-and-fists": [
+       {
+        "item": "infernus-heavy-bolter",
+        "n": 1
+       },
+       {
+        "item": "knives-and-fists",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Deathwatch Veteran model",
+     "labels": {
+      "infernus-heavy-bolter+knives-and-fists": "Infernus Heavy Bolter + Knives and Fists"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Deathwatch Veteran models: replace Boltgun + Power Weapon",
+      "es": "Deathwatch Veteran models: sustituir Boltgun + Power Weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "deathwatch-shotgun+knives-and-fists"
+     ],
+     "packages": {
+      "deathwatch-shotgun+knives-and-fists": [
+       {
+        "item": "deathwatch-shotgun",
+        "n": 1
+       },
+       {
+        "item": "knives-and-fists",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 2,
+      "10": 4
+     },
+     "owner": "Deathwatch Veteran models",
+     "labels": {
+      "deathwatch-shotgun+knives-and-fists": "Deathwatch Shotgun + Knives and Fists"
+     }
+    },
+    {
+     "id": "o6",
+     "label": {
+      "en": "Deathwatch Veteran models: replace Boltgun + Power Weapon",
+      "es": "Deathwatch Veteran models: sustituir Boltgun + Power Weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "heavy-thunder-hammer"
+     ],
+     "packages": {
+      "heavy-thunder-hammer": [
+       {
+        "item": "heavy-thunder-hammer",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 2,
+      "10": 4
+     },
+     "owner": "Deathwatch Veteran models",
+     "labels": {
+      "heavy-thunder-hammer": "Heavy Thunder Hammer"
+     }
+    },
+    {
+     "id": "o7",
+     "label": {
+      "en": "Deathwatch Veteran model: replace Boltgun + Power Weapon",
+      "es": "Deathwatch Veteran model: sustituir Boltgun + Power Weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "frag-cannon+knives-and-fists"
+     ],
+     "packages": {
+      "frag-cannon+knives-and-fists": [
+       {
+        "item": "frag-cannon",
+        "n": 1
+       },
+       {
+        "item": "knives-and-fists",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Deathwatch Veteran model",
+     "labels": {
+      "frag-cannon+knives-and-fists": "Frag Cannon + Knives and Fists"
+     }
+    },
+    {
+     "id": "o8",
+     "label": {
+      "en": "Deathwatch Veteran model: Boltgun + Power Weapon",
+      "es": "Deathwatch Veteran model: Boltgun + Power Weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "black-shield-blades"
+     ],
+     "packages": {
+      "black-shield-blades": [
+       {
+        "item": "black-shield-blades",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Deathwatch Veteran model",
+     "labels": {
+      "black-shield-blades": "Black Shield Blades",
+      "": "Boltgun + Power Weapon"
+     }
+    },
+    {
+     "id": "o9",
+     "label": {
+      "en": "Deathwatch Veteran models: replace Boltgun + Power Weapon",
+      "es": "Deathwatch Veteran models: sustituir Boltgun + Power Weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "boltgun+gear:storm-shield",
+      "power-weapon+gear:storm-shield"
+     ],
+     "packages": {
+      "boltgun+gear:storm-shield": [
+       {
+        "item": "boltgun",
+        "n": 1
+       },
+       {
+        "item": "gear:storm-shield",
+        "n": 1
+       }
+      ],
+      "power-weapon+gear:storm-shield": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       },
+       {
+        "item": "gear:storm-shield",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 2,
+      "10": 4
+     },
+     "owner": "Deathwatch Veteran models",
+     "labels": {
+      "boltgun+gear:storm-shield": "Boltgun + Storm shield",
+      "power-weapon+gear:storm-shield": "Power Weapon + Storm shield"
+     }
+    }
+   ],
+   "loadout": [
+    "boltgun",
+    "power-weapon"
+   ]
+  },
+  {
+   "id": "decimus-kill-team",
+   "name": {
+    "en": "Decimus Kill Team",
+    "es": "Decimus Kill Team"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "KILL TEAM",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS",
+    "GRAVIS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "2",
+     "name": {
+      "en": "Deathwatch Veteran With Heavy Thunder Hammer and Bolt Pistol(⌀32mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-marksman-bolt-carbine",
+     "name": {
+      "en": "Deathwatch Marksman Bolt Carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits",
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "frag-cannon",
+     "name": {
+      "en": "Frag Cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits",
+        "Blast 1",
+        "Heavy",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grenade-launcher",
+     "name": {
+      "en": "Grenade Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast 1"
+       ],
+       "mode": {
+        "en": "Frag"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "Krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "hellstorm-bolt-rifle",
+     "name": {
+      "en": "Hellstorm Bolt Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits",
+        "Assault",
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "infernus-heavy-bolter",
+     "name": {
+      "en": "Infernus Heavy Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 2",
+        "Heavy",
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "Bolt"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast 1",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "Infernus"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-incinerator",
+     "name": {
+      "en": "Plasma Incinerator"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Assault",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Rapid Fire 1",
+        "Assault"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Close-quarters",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "special-issue-bolt-pistol",
+     "name": {
+      "en": "Special-issue Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters",
+        "Precision",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stalker-bolt-rifle",
+     "name": {
+      "en": "Stalker Bolt Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Precision",
+        "Heavy",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-thunder-hammer",
+     "name": {
+      "en": "Heavy Thunder Hammer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "knives-and-fists",
+     "name": {
+      "en": "Knives and Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "xenophase-blade",
+     "name": {
+      "en": "Xenophase Blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Death to the Alien"
+     },
+     "text": {
+      "en": "This unit’s attacks can: Re-roll hit rolls of 1. Or: If the target of those attacks does not have IMPERIUM/CHAOS, re-roll hit rolls."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Decimus-Kill-Team",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Storm Shield"
+     },
+     "text": {
+      "en": "This model has a 4+ InSv."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "For every 5 models in this unit, 1 Gravis Veteran model can have their Infernus Heavy Bolter replaced with one of the following: 1 Frag Cannon, 1 Hellstorm Bolt Rifle and 1 Grenade Launcher",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol model can have their Heavy Thunder Hammer replaced with 1 Power Weapon and 1 Storm Shield.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Deathwatch Veteran with Stalker Bolt Rifle, Bolt Pistol and Knives and Fist model can have their Stalker Bolt Rifle replaced with 1 Plasma Incinerator.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Deathwatch Veteran with Xenophase Blade and Special-issue Bolt Pistol model",
+    "1 Kill Team Sergeant model",
+    "1-2 Deathwatch Veteran with Deathwatch Marksman Bolt Carbine, Special-issue Bolt Pistol and Knives and Fists models",
+    "1-2 Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol models",
+    "1-2 Deathwatch Veteran with Stalker Bolt Rifle, Bolt Pistol and Knives and Fists models",
+    "1-2 Gravis Veteran models"
+   ],
+   "equipped": [
+    "The Deathwatch Veteran with Xenophase Blade and Special-issue Bolt Pistol is equipped with: 1 Special-issue Bolt Pistol; 1 Xenophase Blade.",
+    "The Kill Team Sergeant is equipped with: 1 Plasma Pistol; 1 Power Weapon.",
+    "Every Deathwatch Veteran with Deathwatch Marksman Bolt Carbine, Special-issue Bolt Pistol and Knives and Fists is equipped with: 1 Deathwatch Marksman Bolt Carbine; 1 Knives and Fists; 1 Special-issue Bolt Pistol.",
+    "Every Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol is equipped with: 1 Bolt Pistol; 1 Heavy Thunder Hammer.",
+    "Every Deathwatch Veteran with Stalker Bolt Rifle, Bolt Pistol and Knives and Fists is equipped with: 1 Bolt Pistol; 1 Knives and Fists; 1 Stalker Bolt Rifle.",
+    "Every Gravis Veteran is equipped with: 1 Bolt Pistol; 1 Infernus Heavy Bolter; 1 Knives and Fists."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "special-issue-bolt-pistol": 2,
+      "xenophase-blade": 1,
+      "plasma-pistol": 1,
+      "power-weapon": 1,
+      "deathwatch-marksman-bolt-carbine": 1,
+      "knives-and-fists": 2,
+      "bolt-pistol": 2,
+      "heavy-thunder-hammer": 1,
+      "stalker-bolt-rifle": 1
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "special-issue-bolt-pistol": 3,
+      "xenophase-blade": 1,
+      "plasma-pistol": 1,
+      "power-weapon": 1,
+      "deathwatch-marksman-bolt-carbine": 2,
+      "knives-and-fists": 6,
+      "bolt-pistol": 6,
+      "heavy-thunder-hammer": 2,
+      "stalker-bolt-rifle": 2,
+      "infernus-heavy-bolter": 2
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Gravis Veteran model: replace Infernus Heavy Bolter",
+      "es": "Gravis Veteran model: sustituir Infernus Heavy Bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "infernus-heavy-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "frag-cannon",
+      "hellstorm-bolt-rifle+grenade-launcher"
+     ],
+     "packages": {
+      "frag-cannon": [
+       {
+        "item": "frag-cannon",
+        "n": 1
+       }
+      ],
+      "hellstorm-bolt-rifle+grenade-launcher": [
+       {
+        "item": "hellstorm-bolt-rifle",
+        "n": 1
+       },
+       {
+        "item": "grenade-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Gravis Veteran model",
+     "labels": {
+      "frag-cannon": "Frag Cannon",
+      "hellstorm-bolt-rifle+grenade-launcher": "Hellstorm Bolt Rifle + Grenade Launcher"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol model: replace Heavy Thunder Hammer",
+      "es": "Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol model: sustituir Heavy Thunder Hammer"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "heavy-thunder-hammer",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "power-weapon+gear:storm-shield"
+     ],
+     "packages": {
+      "power-weapon+gear:storm-shield": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       },
+       {
+        "item": "gear:storm-shield",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol model",
+     "labels": {
+      "power-weapon+gear:storm-shield": "Power Weapon + Storm shield"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Deathwatch Veteran with Stalker Bolt Rifle, Bolt Pistol and Knives and Fist model: replace Stalker Bolt Rifle",
+      "es": "Deathwatch Veteran with Stalker Bolt Rifle, Bolt Pistol and Knives and Fist model: sustituir Stalker Bolt Rifle"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "stalker-bolt-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "plasma-incinerator"
+     ],
+     "packages": {
+      "plasma-incinerator": [
+       {
+        "item": "plasma-incinerator",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Deathwatch Veteran with Stalker Bolt Rifle, Bolt Pistol and Knives and Fist model",
+     "labels": {
+      "plasma-incinerator": "Plasma Incinerator"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "deathwatch-marksman-bolt-carbine",
+    "heavy-thunder-hammer",
+    "infernus-heavy-bolter",
+    "knives-and-fists",
+    "plasma-pistol",
+    "power-weapon",
+    "special-issue-bolt-pistol",
+    "stalker-bolt-rifle",
+    "xenophase-blade"
+   ]
+  },
+  {
+   "id": "deathwatch-terminator-squad",
+   "name": {
+    "en": "Deathwatch Terminator Squad",
+    "es": "Deathwatch Terminator Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "KILL TEAM",
+    "TERMINATOR",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Deathwatch Terminator Sergeant(⌀40mm)"
+     },
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "assault-cannon",
+     "name": {
+      "en": "Assault Cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cyclone-missile-launcher",
+     "name": {
+      "en": "Cyclone Missile Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "8",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast 2"
+       ],
+       "mode": {
+        "en": "Frag"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "D3+3",
+       "keywords": [],
+       "mode": {
+        "en": "Krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Blast 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-cannon",
+     "name": {
+      "en": "Plasma Cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Blast 1"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Hazardous",
+        "Blast 1"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chainfist",
+     "name": {
+      "en": "Chainfist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "Hunter"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "Standard"
+       }
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "thunder-hammer",
+     "name": {
+      "en": "Thunder Hammer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-lightning-claws",
+     "name": {
+      "en": "Twin Lightning Claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Terminatus Assault"
+     },
+     "text": {
+      "en": "This unit can re-roll charge rolls. After this unit ends a charge move, each enemy unit engaged with this unit makes a battle-shock roll, with -1 to that battle-shock roll if it’s a non-IMPERIUM/CHAOS unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Teleport Homer"
+     },
+     "text": {
+      "en": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do: When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Deathwatch-Terminator-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Storm Shield"
+     },
+     "text": {
+      "en": "This model has +1 W."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their Power Fist and Storm Bolter replaced with one of the following: 1 Storm Bolter and 1 Chainfist, 1 Storm Bolter and 1 Power Weapon, 1 Thunder Hammer and 1 Storm Shield, 1 Twin Lightning Claws",
+     "choices": []
+    },
+    {
+     "text": "Up to 3 Deathwatch Terminator models can each have their Storm Bolter replaced with one of the following: 1 Assault Cannon, 1 Cyclone Missile Launcher and 1 Storm Bolter, 1 Heavy Flamer, 1 Plasma Cannon",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Deathwatch Terminator Sergeant model",
+    "4-9 Deathwatch Terminator models"
+   ],
+   "equipped": [
+    "Every model is equipped with: 1 Power Fist; 1 Storm Bolter."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "power-fist": 5,
+      "storm-bolter": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "power-fist": 10,
+      "storm-bolter": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Power Fist + Storm Bolter",
+      "es": "sustituir Power Fist + Storm Bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "power-fist",
+       "n": 1
+      },
+      {
+       "item": "storm-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "storm-bolter+chainfist",
+      "storm-bolter+power-weapon",
+      "thunder-hammer+gear:storm-shield",
+      "twin-lightning-claws"
+     ],
+     "packages": {
+      "storm-bolter+chainfist": [
+       {
+        "item": "storm-bolter",
+        "n": 1
+       },
+       {
+        "item": "chainfist",
+        "n": 1
+       }
+      ],
+      "storm-bolter+power-weapon": [
+       {
+        "item": "storm-bolter",
+        "n": 1
+       },
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ],
+      "thunder-hammer+gear:storm-shield": [
+       {
+        "item": "thunder-hammer",
+        "n": 1
+       },
+       {
+        "item": "gear:storm-shield",
+        "n": 1
+       }
+      ],
+      "twin-lightning-claws": [
+       {
+        "item": "twin-lightning-claws",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 5,
+      "10": 10
+     },
+     "labels": {
+      "storm-bolter+chainfist": "Storm Bolter + Chainfist",
+      "storm-bolter+power-weapon": "Storm Bolter + Power Weapon",
+      "thunder-hammer+gear:storm-shield": "Thunder Hammer + Storm shield",
+      "twin-lightning-claws": "Twin Lightning Claws"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Deathwatch Terminator models: replace Storm Bolter",
+      "es": "Deathwatch Terminator models: sustituir Storm Bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "storm-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "assault-cannon",
+      "cyclone-missile-launcher+storm-bolter",
+      "heavy-flamer",
+      "plasma-cannon"
+     ],
+     "packages": {
+      "assault-cannon": [
+       {
+        "item": "assault-cannon",
+        "n": 1
+       }
+      ],
+      "cyclone-missile-launcher+storm-bolter": [
+       {
+        "item": "cyclone-missile-launcher",
+        "n": 1
+       },
+       {
+        "item": "storm-bolter",
+        "n": 1
+       }
+      ],
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-cannon": [
+       {
+        "item": "plasma-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 3,
+      "10": 3
+     },
+     "owner": "Deathwatch Terminator models",
+     "labels": {
+      "assault-cannon": "Assault Cannon",
+      "cyclone-missile-launcher+storm-bolter": "Cyclone Missile Launcher + Storm Bolter",
+      "heavy-flamer": "Heavy Flamer",
+      "plasma-cannon": "Plasma Cannon"
+     }
+    }
+   ],
+   "loadout": [
+    "power-fist",
+    "storm-bolter"
+   ]
+  },
+  {
+   "id": "fortis-kill-team",
+   "name": {
+    "en": "Fortis Kill Team",
+    "es": "Fortis Kill Team"
+   },
+   "keywords": [
+    "INFANTRY",
+    "KILL TEAM",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "6+",
+     "OC": "2",
+     "name": {
+      "en": "Kill Team Intercessor With Castellan Launcher, Superfrag Rocket Launcher and Knives and Fists(⌀32mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "castellan-launcher",
+     "name": {
+      "en": "Castellan Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-bolt-rifle",
+     "name": {
+      "en": "Deathwatch Bolt Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Lethal Hits",
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grenade-launcher",
+     "name": {
+      "en": "Grenade Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast 1"
+       ],
+       "mode": {
+        "en": "Frag"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "Krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "hand-flamer",
+     "name": {
+      "en": "Hand Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "9\"",
+       "A": "3",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Close-quarters",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolt-pistol",
+     "name": {
+      "en": "Heavy Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-incinerator",
+     "name": {
+      "en": "Plasma Incinerator"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 1",
+        "Assault"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Rapid Fire 1",
+        "Assault"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "pyreblaster",
+     "name": {
+      "en": "Pyreblaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Blast 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "superfrag-rocket-launcher",
+     "name": {
+      "en": "Superfrag Rocket Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast 1",
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "superkrak-rocket-launcher",
+     "name": {
+      "en": "Superkrak Rocket Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "D3+3",
+       "keywords": [
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "vengor-launcher",
+     "name": {
+      "en": "Vengor Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Blast 1",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "knives-and-fists",
+     "name": {
+      "en": "Knives and Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "thunder-hammer",
+     "name": {
+      "en": "Thunder Hammer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Fortis Doctrines"
+     },
+     "text": {
+      "en": "This unit’s attacks that target a unit: Below starting strength, have +1 to hit rolls. Or: at or below half-strength have +1 to hit rolls and wound rolls."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Fortis-Kill-Team",
+   "wargearOptions": [
+    {
+     "text": "The Kill Team Sergeant can have their Knives and Fists replaced with one of the following: 1 Chainsword, 1 Power Fist, 1 Power Weapon, 1 Thunder Hammer",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 model equipped with a Deathwatch Bolt Rifle can be equipped with 1 Astartes Grenade Launcher.",
+     "choices": []
+    },
+    {
+     "text": "The Kill Team Sergeant can have their Deathwatch Bolt Rifle replaced with one of the following: 1 Chainsword, 1 Hand Flamer, 1 Plasma Pistol, 1 Power Weapon",
+     "choices": []
+    },
+    {
+     "text": "1 Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fist model can have their Bolt Pistol replaced with 1 Plasma Pistol.",
+     "choices": []
+    },
+    {
+     "text": "The Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist can have their Superfrag Rocket Launcher replaced with 1 Superkrak Rocket Launcher.",
+     "choices": []
+    },
+    {
+     "text": "1 Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist model can have their Superfrag Rocket Launcher replaced with 1 Vengor Launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fists model",
+    "1 Kill Team Sergeant model",
+    "2 Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fists models",
+    "2 Kill Team Intercessor with Deathwatch Bolt Rifle, Bolt Pistol and Knives and Fists models",
+    "2 Kill Team Intercessor with Heavy Bolt Pistol and Chainsword models",
+    "2 Kill Team Intercessor with Pyreblaster, Bolt Pistol and Knives and Fists models"
+   ],
+   "equipped": [
+    "The Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fists is equipped with: 1 Castellan Launcher; 1 Knives and Fists; 1 Superfrag Rocket Launcher.",
+    "The Kill Team Sergeant is equipped with: 1 Bolt Pistol; 1 Deathwatch Bolt Rifle; 1 Knives and Fists.",
+    "Every Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fists is equipped with: 1 Bolt Pistol; 1 Knives and Fists; 1 Plasma Incinerator.",
+    "Every Kill Team Intercessor with Deathwatch Bolt Rifle, Bolt Pistol and Knives and Fists is equipped with: 1 Bolt Pistol; 1 Deathwatch Bolt Rifle; 1 Knives and Fists.",
+    "Every Kill Team Intercessor with Heavy Bolt Pistol and Chainsword is equipped with: 1 Chainsword; 1 Heavy Bolt Pistol.",
+    "Every Kill Team Intercessor with Pyreblaster, Bolt Pistol and Knives and Fists is equipped with: 1 Bolt Pistol; 1 Knives and Fists; 1 Pyreblaster."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "castellan-launcher": 1,
+      "knives-and-fists": 8,
+      "superfrag-rocket-launcher": 1,
+      "bolt-pistol": 7,
+      "deathwatch-bolt-rifle": 3,
+      "plasma-incinerator": 2,
+      "chainsword": 2,
+      "heavy-bolt-pistol": 2,
+      "pyreblaster": 2
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Kill Team Sergeant: Knives and Fists",
+      "es": "Kill Team Sergeant: Knives and Fists"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "knives-and-fists",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "chainsword",
+      "power-fist",
+      "power-weapon",
+      "thunder-hammer"
+     ],
+     "packages": {
+      "chainsword": [
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ],
+      "thunder-hammer": [
+       {
+        "item": "thunder-hammer",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Sergeant",
+     "labels": {
+      "chainsword": "Chainsword",
+      "power-fist": "Power Fist",
+      "power-weapon": "Power Weapon",
+      "thunder-hammer": "Thunder Hammer",
+      "": "Knives and Fists"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Grenade Launcher",
+      "es": "añadir Grenade Launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "grenade-launcher",
+     "packages": {
+      "grenade-launcher": [
+       {
+        "item": "grenade-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "labels": {
+      "grenade-launcher": "Grenade Launcher"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Kill Team Sergeant: Deathwatch Bolt Rifle",
+      "es": "Kill Team Sergeant: Deathwatch Bolt Rifle"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "deathwatch-bolt-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "chainsword",
+      "hand-flamer",
+      "plasma-pistol",
+      "power-weapon"
+     ],
+     "packages": {
+      "chainsword": [
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "hand-flamer": [
+       {
+        "item": "hand-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Sergeant",
+     "labels": {
+      "chainsword": "Chainsword",
+      "hand-flamer": "Hand Flamer",
+      "plasma-pistol": "Plasma Pistol",
+      "power-weapon": "Power Weapon",
+      "": "Deathwatch Bolt Rifle"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fist model: Bolt Pistol",
+      "es": "Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fist model: Bolt Pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fist model",
+     "labels": {
+      "plasma-pistol": "Plasma Pistol",
+      "": "Bolt Pistol"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist: Superfrag Rocket Launcher",
+      "es": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist: Superfrag Rocket Launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "superfrag-rocket-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "superkrak-rocket-launcher"
+     ],
+     "packages": {
+      "superkrak-rocket-launcher": [
+       {
+        "item": "superkrak-rocket-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist",
+     "labels": {
+      "superkrak-rocket-launcher": "Superkrak Rocket Launcher",
+      "": "Superfrag Rocket Launcher"
+     }
+    },
+    {
+     "id": "o6",
+     "label": {
+      "en": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist model: Superfrag Rocket Launcher",
+      "es": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist model: Superfrag Rocket Launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "superfrag-rocket-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "vengor-launcher"
+     ],
+     "packages": {
+      "vengor-launcher": [
+       {
+        "item": "vengor-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist model",
+     "labels": {
+      "vengor-launcher": "Vengor Launcher",
+      "": "Superfrag Rocket Launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "castellan-launcher",
+    "chainsword",
+    "deathwatch-bolt-rifle",
+    "heavy-bolt-pistol",
+    "knives-and-fists",
+    "plasma-incinerator",
+    "pyreblaster",
+    "superfrag-rocket-launcher"
+   ]
+  },
+  {
+   "id": "indomitor-kill-team",
+   "name": {
+    "en": "Indomitor Kill Team",
+    "es": "Indomitor Kill Team"
+   },
+   "keywords": [
+    "INFANTRY",
+    "KILL TEAM",
+    "EXPLOSIVES",
+    "GRAVIS",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Kill Team Heavy Intercessor With Melta Rifle, Bolt Pistol and Ceramite Fists(⌀40mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "auto-boltstorm-gauntlets",
+     "name": {
+      "en": "Auto Boltstorm Gauntlets"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-heavy-bolt-rifle",
+     "name": {
+      "en": "Deathwatch Heavy Bolt Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Assault",
+        "Lethal Hits",
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-heavy-bolter",
+     "name": {
+      "en": "Deathwatch Heavy Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Assault",
+        "Heavy",
+        "Lethal Hits",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flamestorm-gauntlets",
+     "name": {
+      "en": "Flamestorm Gauntlets"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast 2",
+        "Torrent",
+        "Twin-linked"
+       ]
+      },
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "-",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters",
+        "Twin-linked",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "Close Quarters"
+       }
+      }
+     ]
+    },
+    {
+     "id": "fragstorm-grenade-launcher",
+     "name": {
+      "en": "Fragstorm Grenade Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "melta-rifle",
+     "name": {
+      "en": "Melta Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "D3+2",
+       "keywords": [
+        "Melta 2"
+       ]
+      },
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D3+2",
+       "keywords": [
+        "Melta 2"
+       ],
+       "mode": {
+        "en": "Hunter"
+       }
+      }
+     ]
+    },
+    {
+     "id": "multi-melta",
+     "name": {
+      "en": "Multi-melta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "D3+2",
+       "keywords": [
+        "Melta 3"
+       ]
+      },
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D3+2",
+       "keywords": [
+        "Melta 3"
+       ],
+       "mode": {
+        "en": "Hunter"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ceramite-fists",
+     "name": {
+      "en": "Ceramite Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-power-fists",
+     "name": {
+      "en": "Twin Power Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Indomitor Doctrines"
+     },
+     "text": {
+      "en": "This unit’s ranged attacks that target the closest eligible enemy unit, have +1 S. If this unit made a charge move this turn, this unit’s melee attacks have +1 S."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Indomitor-Kill-Team",
+   "wargearOptions": [
+    {
+     "text": "For every 5 models in this unit, 1 Kill Team Heavy Intercessor with Deathwatch Heavy Bolt Rifle and Ceramite Fists. model can have their Deathwatch Heavy Bolt Rifle replaced with 1 Deathwatch Heavy Bolter.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Kill Team Heavy Intercessor with Flamestorm Gauntlets and Twin Power Fist models can each have their Flamestorm Gauntlets replaced with 1 Auto Boltstorm Gauntlets and 1 Fragstorm Grenade Launcher.",
+     "choices": []
+    },
+    {
+     "text": "1 Kill Team Heavy Intercessor with Melta Rifle, Bolt Pistol and Ceramite Fist model can have their Melta Rifle replaced with 1 Multi-melta.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "3 Kill Team Heavy Intercessor with Flamestorm Gauntlets and Twin Power Fists models",
+    "3 Kill Team Heavy Intercessor with Melta Rifle, Bolt Pistol and Ceramite Fists models",
+    "4 Kill Team Heavy Intercessor with Deathwatch Heavy Bolt Rifle and Ceramite Fists models"
+   ],
+   "equipped": [
+    "Every Kill Team Heavy Intercessor with Flamestorm Gauntlets and Twin Power Fists is equipped with: 1 Flamestorm Gauntlets; 1 Twin Power Fists.",
+    "Every Kill Team Heavy Intercessor with Melta Rifle, Bolt Pistol and Ceramite Fists is equipped with: 1 Bolt Pistol; 1 Ceramite Fists; 1 Melta Rifle.",
+    "Every Kill Team Heavy Intercessor with Deathwatch Heavy Bolt Rifle and Ceramite Fists is equipped with: 1 Ceramite Fists; 1 Deathwatch Heavy Bolt Rifle."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "flamestorm-gauntlets": 3,
+      "twin-power-fists": 3,
+      "bolt-pistol": 3,
+      "ceramite-fists": 7,
+      "melta-rifle": 3,
+      "deathwatch-heavy-bolt-rifle": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Kill Team Heavy Intercessor with Deathwatch Heavy Bolt Rifle and Ceramite Fists. model: replace Deathwatch Heavy Bolt Rifle",
+      "es": "Kill Team Heavy Intercessor with Deathwatch Heavy Bolt Rifle and Ceramite Fists. model: sustituir Deathwatch Heavy Bolt Rifle"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "deathwatch-heavy-bolt-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "deathwatch-heavy-bolter"
+     ],
+     "packages": {
+      "deathwatch-heavy-bolter": [
+       {
+        "item": "deathwatch-heavy-bolter",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Kill Team Heavy Intercessor with Deathwatch Heavy Bolt Rifle and Ceramite Fists. model",
+     "labels": {
+      "deathwatch-heavy-bolter": "Deathwatch Heavy Bolter"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Kill Team Heavy Intercessor with Flamestorm Gauntlets and Twin Power Fist models: replace Flamestorm Gauntlets",
+      "es": "Kill Team Heavy Intercessor with Flamestorm Gauntlets and Twin Power Fist models: sustituir Flamestorm Gauntlets"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "flamestorm-gauntlets",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "auto-boltstorm-gauntlets+fragstorm-grenade-launcher"
+     ],
+     "packages": {
+      "auto-boltstorm-gauntlets+fragstorm-grenade-launcher": [
+       {
+        "item": "auto-boltstorm-gauntlets",
+        "n": 1
+       },
+       {
+        "item": "fragstorm-grenade-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 3
+     },
+     "owner": "Kill Team Heavy Intercessor with Flamestorm Gauntlets and Twin Power Fist models",
+     "labels": {
+      "auto-boltstorm-gauntlets+fragstorm-grenade-launcher": "Auto Boltstorm Gauntlets + Fragstorm Grenade Launcher"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Kill Team Heavy Intercessor with Melta Rifle, Bolt Pistol and Ceramite Fist model: Melta Rifle",
+      "es": "Kill Team Heavy Intercessor with Melta Rifle, Bolt Pistol and Ceramite Fist model: Melta Rifle"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "melta-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "multi-melta"
+     ],
+     "packages": {
+      "multi-melta": [
+       {
+        "item": "multi-melta",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Heavy Intercessor with Melta Rifle, Bolt Pistol and Ceramite Fist model",
+     "labels": {
+      "multi-melta": "Multi-melta",
+      "": "Melta Rifle"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "ceramite-fists",
+    "deathwatch-heavy-bolt-rifle",
+    "flamestorm-gauntlets",
+    "melta-rifle",
+    "twin-power-fists"
+   ]
+  },
+  {
+   "id": "spectrus-kill-team",
+   "name": {
+    "en": "Spectrus Kill Team",
+    "es": "Spectrus Kill Team"
+   },
+   "keywords": [
+    "INFANTRY",
+    "EXPLOSIVES",
+    "KILL TEAM",
+    "PHOBOS",
+    "IMPERIUM",
+    "SMOKE"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Kill Team Infiltrator With Special-issue Bolt Pistol and Combat Knife(⌀32mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-sniper-rifle",
+     "name": {
+      "en": "Bolt Sniper Rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Precision",
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-bolt-carbine",
+     "name": {
+      "en": "Deathwatch Bolt Carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Precision",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-marksman-bolt-carbine",
+     "name": {
+      "en": "Deathwatch Marksman Bolt Carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Heavy",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deathwatch-occulus-bolt-carbine",
+     "name": {
+      "en": "Deathwatch Occulus Bolt Carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Ignores Cover",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "instigator-bolt-carbine",
+     "name": {
+      "en": "Instigator Bolt Carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Precision",
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "las-fusil",
+     "name": {
+      "en": "Las Fusil"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "D3+3",
+       "keywords": [
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "special-issue-bolt-pistol",
+     "name": {
+      "en": "Special-issue Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ceramite-fists",
+     "name": {
+      "en": "Ceramite Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "combat-knife",
+     "name": {
+      "en": "Combat Knife"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paired-combat-blades",
+     "name": {
+      "en": "Paired Combat Blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Spectrus Doctrines"
+     },
+     "text": {
+      "en": "At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves."
+     }
+    },
+    {
+     "name": {
+      "en": "Helix Gauntlet"
+     },
+     "text": {
+      "en": "In your Command phase, this unit heals D3 wounds."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators",
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Spectrus-Kill-Team",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Helix Gauntlet"
+     },
+     "text": {
+      "en": "In your Command phase, this unit heals D3 wounds."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Kill Team Infiltrator with Deathwatch Marksman Bolt Carbine, Bolt Pistol and Ceramite Fist model can have their Deathwatch Marksman Bolt Carbine replaced with 1 Helix Gauntlet.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models can each have their Bolt Sniper Rifle replaced with 1 Las Fusil.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models can each have their Bolt Sniper Rifle replaced with 1 Instigator Bolt Carbine.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Kill Team Infiltrator with Special-issue Bolt Pistol and Combat Knife models can each have their Combat Knife replaced with 1 Deathwatch Bolt Carbine and 1 Ceramite Fists.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "2 Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fists models",
+    "2 Kill Team Infiltrator with Deathwatch Occulus Bolt Carbine, Bolt Pistol and Paired Combat Blades models",
+    "2 Kill Team Infiltrator with Special-issue Bolt Pistol and Combat Knife models",
+    "4 Kill Team Infiltrator with Deathwatch Marksman Bolt Carbine, Bolt Pistol and Ceramite Fists models"
+   ],
+   "equipped": [
+    "Every Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fists is equipped with: 1 Bolt Pistol; 1 Bolt Sniper Rifle; 1 Ceramite Fists.",
+    "Every Kill Team Infiltrator with Deathwatch Occulus Bolt Carbine, Bolt Pistol and Paired Combat Blades is equipped with: 1 Bolt Pistol; 1 Deathwatch Occulus Bolt Carbine; 1 Paired Combat Blades.",
+    "Every Kill Team Infiltrator with Special-issue Bolt Pistol and Combat Knife is equipped with: 1 Combat Knife; 1 Special-issue Bolt Pistol.",
+    "Every Kill Team Infiltrator with Deathwatch Marksman Bolt Carbine, Bolt Pistol and Ceramite Fists is equipped with: 1 Bolt Pistol; 1 Ceramite Fists; 1 Deathwatch Marksman Bolt Carbine."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 8,
+      "bolt-sniper-rifle": 2,
+      "ceramite-fists": 6,
+      "deathwatch-occulus-bolt-carbine": 2,
+      "paired-combat-blades": 2,
+      "combat-knife": 2,
+      "special-issue-bolt-pistol": 2,
+      "deathwatch-marksman-bolt-carbine": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Kill Team Infiltrator with Deathwatch Marksman Bolt Carbine, Bolt Pistol and Ceramite Fist model: Deathwatch Marksman Bolt Carbine",
+      "es": "Kill Team Infiltrator with Deathwatch Marksman Bolt Carbine, Bolt Pistol and Ceramite Fist model: Deathwatch Marksman Bolt Carbine"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "deathwatch-marksman-bolt-carbine",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:helix-gauntlet"
+     ],
+     "packages": {
+      "gear:helix-gauntlet": [
+       {
+        "item": "gear:helix-gauntlet",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Infiltrator with Deathwatch Marksman Bolt Carbine, Bolt Pistol and Ceramite Fist model",
+     "labels": {
+      "gear:helix-gauntlet": "Helix gauntlet",
+      "": "Deathwatch Marksman Bolt Carbine"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models: replace Bolt Sniper Rifle",
+      "es": "Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models: sustituir Bolt Sniper Rifle"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "bolt-sniper-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "las-fusil"
+     ],
+     "packages": {
+      "las-fusil": [
+       {
+        "item": "las-fusil",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models",
+     "labels": {
+      "las-fusil": "Las Fusil"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models: replace Bolt Sniper Rifle",
+      "es": "Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models: sustituir Bolt Sniper Rifle"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "bolt-sniper-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "instigator-bolt-carbine"
+     ],
+     "packages": {
+      "instigator-bolt-carbine": [
+       {
+        "item": "instigator-bolt-carbine",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models",
+     "labels": {
+      "instigator-bolt-carbine": "Instigator Bolt Carbine"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Kill Team Infiltrator with Special-issue Bolt Pistol and Combat Knife models: replace Combat Knife",
+      "es": "Kill Team Infiltrator with Special-issue Bolt Pistol and Combat Knife models: sustituir Combat Knife"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "combat-knife",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "deathwatch-bolt-carbine+ceramite-fists"
+     ],
+     "packages": {
+      "deathwatch-bolt-carbine+ceramite-fists": [
+       {
+        "item": "deathwatch-bolt-carbine",
+        "n": 1
+       },
+       {
+        "item": "ceramite-fists",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Kill Team Infiltrator with Special-issue Bolt Pistol and Combat Knife models",
+     "labels": {
+      "deathwatch-bolt-carbine+ceramite-fists": "Deathwatch Bolt Carbine + Ceramite Fists"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "bolt-sniper-rifle",
+    "ceramite-fists",
+    "combat-knife",
+    "deathwatch-marksman-bolt-carbine",
+    "deathwatch-occulus-bolt-carbine",
+    "paired-combat-blades",
+    "special-issue-bolt-pistol"
+   ]
+  },
+  {
+   "id": "talonstrike-kill-team",
+   "name": {
+    "en": "Talonstrike Kill Team",
+    "es": "Talonstrike Kill Team"
+   },
+   "keywords": [
+    "INFANTRY",
+    "KILL TEAM",
+    "EXPLOSIVES",
+    "JUMP PACK",
+    "FLY",
+    "IMPERIUM",
+    "GRAVIS",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Kill Team Heavy Intercessor With Jump Pack(⌀40mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "assault-bolters",
+     "name": {
+      "en": "Assault Bolters"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Assault",
+        "Twin-linked",
+        "Sustained Hits 2",
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hand-flamer",
+     "name": {
+      "en": "Hand Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "9\"",
+       "A": "3",
+       "skill": "7+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Torrent",
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolt-pistol",
+     "name": {
+      "en": "Heavy Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-exterminators",
+     "name": {
+      "en": "Plasma Exterminators"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Twin-linked",
+        "Assault",
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Close-quarters",
+        "Assault",
+        "Hazardous",
+        "Twin-linked"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ],
+       "mode": {
+        "en": "Standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Close-quarters",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "Supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ceramite-fists",
+     "name": {
+      "en": "Ceramite Fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power Fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Talonstrike Doctrines"
+     },
+     "text": {
+      "en": "In a turn this unit was set up on the battlefield: This unit’s attacks have +1 AP. This unit’s melee attacks have [LANCE]."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Talonstrike-Kill-Team",
+   "wargearOptions": [
+    {
+     "text": "The Kill Team Sergeant with Jump Pack can have their Chainsword replaced with one of the following: 1 Power Fist, 1 Power Weapon",
+     "choices": []
+    },
+    {
+     "text": "The Kill Team Sergeant with Jump Pack can have their Heavy Bolt Pistol replaced with one of the following: 1 Hand Flamer, 1 Plasma Pistol",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Kill Team Intercessor with Jump Pack model can have their Heavy Bolt Pistol replaced with 1 Plasma Pistol.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Kill Team Heavy Intercessor with Jump Pack models can each have their Assault Bolters replaced with 1 Plasma Exterminator.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Kill Team Sergeant with Jump Pack model",
+    "4 Kill Team Heavy Intercessor with Jump Pack models",
+    "5 Kill Team Intercessor with Jump Pack models"
+   ],
+   "equipped": [
+    "The Kill Team Sergeant with Jump Pack is equipped with: 1 Chainsword; 1 Heavy Bolt Pistol.",
+    "Every Kill Team Heavy Intercessor with Jump Pack is equipped with: 1 Assault Bolters; 1 Ceramite Fists.",
+    "Every Kill Team Intercessor with Jump Pack is equipped with: 1 Chainsword; 1 Heavy Bolt Pistol."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "chainsword": 6,
+      "heavy-bolt-pistol": 6,
+      "assault-bolters": 4,
+      "ceramite-fists": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Kill Team Sergeant with Jump Pack: Chainsword",
+      "es": "Kill Team Sergeant with Jump Pack: Chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "power-fist",
+      "power-weapon"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Sergeant with Jump Pack",
+     "labels": {
+      "power-fist": "Power Fist",
+      "power-weapon": "Power Weapon",
+      "": "Chainsword"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Kill Team Sergeant with Jump Pack: Heavy Bolt Pistol",
+      "es": "Kill Team Sergeant with Jump Pack: Heavy Bolt Pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hand-flamer",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "hand-flamer": [
+       {
+        "item": "hand-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Kill Team Sergeant with Jump Pack",
+     "labels": {
+      "hand-flamer": "Hand Flamer",
+      "plasma-pistol": "Plasma Pistol",
+      "": "Heavy Bolt Pistol"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Kill Team Intercessor with Jump Pack model: replace Heavy Bolt Pistol",
+      "es": "Kill Team Intercessor with Jump Pack model: sustituir Heavy Bolt Pistol"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "heavy-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Kill Team Intercessor with Jump Pack model",
+     "labels": {
+      "plasma-pistol": "Plasma Pistol"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Kill Team Heavy Intercessor with Jump Pack models: replace Assault Bolters",
+      "es": "Kill Team Heavy Intercessor with Jump Pack models: sustituir Assault Bolters"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "assault-bolters",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "plasma-exterminators"
+     ],
+     "packages": {
+      "plasma-exterminators": [
+       {
+        "item": "plasma-exterminators",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 4
+     },
+     "owner": "Kill Team Heavy Intercessor with Jump Pack models",
+     "labels": {
+      "plasma-exterminators": "Plasma Exterminators"
+     }
+    }
+   ],
+   "loadout": [
+    "assault-bolters",
+    "ceramite-fists",
+    "chainsword",
+    "heavy-bolt-pistol"
+   ]
+  },
+  {
+   "id": "corvus-blackstar",
+   "name": {
+    "en": "Corvus Blackstar",
+    "es": "Corvus Blackstar"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FLY",
+    "IMPERIUM",
+    "SMOKE"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "6+",
+     "OC": "0"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "blackstar-rocket-launcher",
+     "name": {
+      "en": "Blackstar Rocket Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hurricane-bolter",
+     "name": {
+      "en": "Hurricane Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Twin-linked",
+        "Rapid Fire 6"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormstrike-missile-launcher",
+     "name": {
+      "en": "Stormstrike Missile Launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-assault-cannon",
+     "name": {
+      "en": "Twin Assault Cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Twin-linked",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-lascannon",
+     "name": {
+      "en": "Twin Lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D3+3",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-hull",
+     "name": {
+      "en": "Armoured Hull"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Blackstar Cluster Launcher"
+     },
+     "text": {
+      "en": "In your Movement phase, when this unit ends a normal move, select up to one enemy unit this unit moved over during that move and roll six D6: For each 4+, that unit suffers 1 mortal wound."
+     }
+    }
+   ],
+   "core": [
+    "Damaged 5",
+    "Deadly Demise D6",
+    "Hover",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Corvus-Blackstar",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Auspex Array"
+     },
+     "text": {
+      "en": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with 1 Hurricane Bolter",
+     "choices": []
+    },
+    {
+     "text": "This model's 2 Blackstar Rocket Launchers can be replaced with 2 Stormstrike Missile Launchers.",
+     "choices": []
+    },
+    {
+     "text": "This model's Twin Assault Cannon can be replaced with 1 Twin Lascannon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Corvus Blackstar model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Armoured Hull; Auspex Array; 2 Blackstar Rocket Launcher; 1 Twin Assault Cannon."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 12 DEATHWATCH INFANTRY models. Each GRAVIS/JUMP PACK/TERMINATOR model takes up the space of 2 models."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "armoured-hull": 1,
+      "gear:auspex-array": 1,
+      "blackstar-rocket-launcher": 2,
+      "twin-assault-cannon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Hurricane Bolter",
+      "es": "añadir Hurricane Bolter"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "hurricane-bolter",
+     "packages": {
+      "hurricane-bolter": [
+       {
+        "item": "hurricane-bolter",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "hurricane-bolter": "Hurricane Bolter"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "2× Blackstar Rocket Launcher",
+      "es": "2× Blackstar Rocket Launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "blackstar-rocket-launcher",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "",
+      "2xstormstrike-missile-launcher"
+     ],
+     "packages": {
+      "2xstormstrike-missile-launcher": [
+       {
+        "item": "stormstrike-missile-launcher",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xstormstrike-missile-launcher": "2× Stormstrike Missile Launcher",
+      "": "2× Blackstar Rocket Launcher"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Twin Assault Cannon",
+      "es": "Twin Assault Cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "twin-assault-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "twin-lascannon"
+     ],
+     "packages": {
+      "twin-lascannon": [
+       {
+        "item": "twin-lascannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "twin-lascannon": "Twin Lascannon",
+      "": "Twin Assault Cannon"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "blackstar-rocket-launcher",
+    "gear:auspex-array",
+    "twin-assault-cannon"
+   ]
+  }
+ ]
+}

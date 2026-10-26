@@ -1,0 +1,21 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "asmodai": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101403_DAAsmodaiALT.jpg?fm=webp&w=480&h=495",
+  "azrael": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101379_Azrael1.jpg?fm=webp&w=480&h=495",
+  "belial": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101404_DABelialGrandMasteroftheDeathwing1.jpg?fm=webp&w=480&h=495",
+  "deathwing-knights": "https://www.warhammer.com/app/resources/catalog/product/920x950/60010101006_EngDADeathwingAssault04.jpg?fm=webp&w=480&h=495",
+  "deathwing-terminator-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101398_SMTermSquad2.jpg?fm=webp&w=480&h=495",
+  "ezekiel": "https://www.warhammer.com/app/resources/catalog/product/920x950/99060101326_EzekielUpdate2.jpg?fm=webp&w=480&h=495",
+  "inner-circle-companions": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101407_DAInnerCircleCompanions2.jpg?fm=webp&w=480&h=495",
+  "land-speeder-vengeance": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101098_LandspeederVengeance01.jpg?fm=webp&w=480&h=495",
+  "lazarus": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101267_MasterLazarus01.jpg?fm=webp&w=480&h=495",
+  "lion-eljonson": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101410_LionsRetinue1.jpg?fm=webp&w=480&h=495",
+  "nephilim-jetfighter": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101095_NephilimJet01.jpg?fm=webp&w=480&h=495",
+  "ravenwing-black-knights": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101097_RavenwingCommand01.jpg?fm=webp&w=480&h=495",
+  "ravenwing-command-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101097_RavenwingCommand01.jpg?fm=webp&w=480&h=495",
+  "ravenwing-dark-talon": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101095_DarkTalon01.jpg?fm=webp&w=480&h=495",
+  "ravenwing-darkshroud": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101098_DADarkshroud01.jpg?fm=webp&w=480&h=495",
+  "sammael": "https://www.warhammer.com/app/resources/catalog/product/920x950/99810101020_SammaelCorvex01.jpg?fm=webp&w=480&h=495"
+ }
+}

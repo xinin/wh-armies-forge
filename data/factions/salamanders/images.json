@@ -1,0 +1,7 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "adrax-agatone": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101259_SALAdraxAgatone01.jpg?fm=webp&w=480&h=495",
+  "vulkan-hestan": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101444_SpaceMarinesSalamandersVulkanHestan1.jpg?fm=webp&w=480&h=495"
+ }
+}

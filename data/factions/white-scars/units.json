@@ -1,0 +1,448 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World, Warhammer Legends and other Chapters' datasheets: never imported.",
+  "ids": [
+   "adrax-agatone",
+   "aethon-shaan",
+   "arjac-rockfist",
+   "asmodai",
+   "astorath",
+   "astraeus",
+   "azrael",
+   "baal-predator",
+   "belial",
+   "bjorn-the-fell-handed",
+   "blood-angels-captain",
+   "blood-claws",
+   "caanok-var",
+   "captain-titus",
+   "castellan",
+   "cato-sicarius",
+   "centurion-assault-squad",
+   "centurion-devastator-squad",
+   "cerberus",
+   "chaplain-grimaldus",
+   "chief-librarian-mephiston",
+   "chief-librarian-tigurius",
+   "commander-dante",
+   "corvus-blackstar",
+   "crusade-ancient",
+   "crusader-squad",
+   "darnath-lysander",
+   "death-company-captain",
+   "death-company-captain-with-jump-pack",
+   "death-company-dreadnought",
+   "death-company-marines",
+   "death-company-marines-with-jump-packs",
+   "deathwatch-terminator-squad",
+   "deathwatch-veterans",
+   "deathwing-knights",
+   "deathwing-terminator-squad",
+   "decimus-kill-team",
+   "dreadnought",
+   "emperor-s-champion",
+   "execrator",
+   "ezekiel",
+   "falchion",
+   "fenrisian-wolves",
+   "fortis-kill-team",
+   "gladiator-lancer-1",
+   "gladiator-reaper-1",
+   "gladiator-valiant-1",
+   "grey-hunters",
+   "hammerfall-bunker",
+   "high-marshal-helbrecht",
+   "impulsor-1",
+   "indomitor-kill-team",
+   "inner-circle-companions",
+   "iron-father-feirros",
+   "iron-priest",
+   "kaius-konorius",
+   "kayvaan-shrike",
+   "kill-team-cassius",
+   "kratos",
+   "land-raider-excelsior",
+   "land-speeder-vengeance",
+   "lazarus",
+   "lemartes",
+   "lion-el-jonson",
+   "logan-grimnar",
+   "marneus-calgar",
+   "marshal",
+   "mastodon",
+   "murderfang",
+   "nephilim-jetfighter",
+   "njal-stormcaller",
+   "predator-annihilator",
+   "predator-destructor",
+   "ragnar-blackmane",
+   "rapier-carrier",
+   "ravenwing-black-knights",
+   "ravenwing-command-squad",
+   "ravenwing-dark-talon",
+   "ravenwing-darkshroud",
+   "razorback",
+   "relic-razorback",
+   "repulsor-1",
+   "repulsor-executioner-1",
+   "rhino-primaris",
+   "roboute-guilliman",
+   "sammael",
+   "sanguinary-guard",
+   "sanguinary-priest",
+   "scout-bike-squad",
+   "sicaran",
+   "spectrus-kill-team",
+   "stormhawk-interceptor",
+   "stormraven-gunship",
+   "stormtalon-gunship",
+   "sword-brethren-squad",
+   "talonstrike-kill-team",
+   "tarantula-air-defence-battery",
+   "tarantula-sentry-battery",
+   "terrax-pattern-termite",
+   "the-sanguinor",
+   "thunderhawk-gunship",
+   "thunderwolf-cavalry",
+   "tor-garadon",
+   "typhon",
+   "ulrik-the-slayer",
+   "venerable-dreadnought",
+   "venerable-dreadnought-1",
+   "victrix-honour-guard",
+   "vindicator",
+   "vulkan-he-stan",
+   "wardens-of-ultramar-1",
+   "watch-captain-artemis",
+   "watch-master",
+   "whirlwind",
+   "wolf-guard-battle-leader",
+   "wolf-guard-headtakers",
+   "wolf-guard-terminators",
+   "wolf-priest",
+   "wolf-scouts-1",
+   "wulfen",
+   "wulfen-dreadnought-1",
+   "wulfen-with-storm-shields"
+  ]
+ },
+ "units": [
+  {
+   "id": "korsarro-khan",
+   "name": {
+    "en": "Kor’sarro Khan",
+    "es": "Kor’sarro Khan"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "EXPLOSIVES",
+    "IMPERIUM",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "anzuq",
+     "name": {
+      "en": "Anzuq"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds: Infantry",
+        "Close-quarters",
+        "Anti-infantry 4+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "moonfang",
+     "name": {
+      "en": "Moonfang"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Anti-character 5+",
+        "Precision",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Trophy Taker"
+     },
+     "text": {
+      "en": "This unit’s attacks that target a CHARACTER unit can: Re-roll hit rolls of 1 Re-roll wound rolls of 1."
+     }
+    },
+    {
+     "name": {
+      "en": "For the Khan!"
+     },
+     "text": {
+      "en": "This unit’s ranged attacks have [ASSAULT] This unit’s melee attacks have [LANCE]."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Kor-sarro-Khan",
+   "composition": [
+    "1 Kor’sarro Khan model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Anzuq; 1 Bolt Pistol; 1 Moonfang."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "intercessor-squad",
+     "sternguard-veteran-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "anzuq": 1,
+      "bolt-pistol": 1,
+      "moonfang": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "anzuq",
+    "bolt-pistol",
+    "moonfang"
+   ]
+  },
+  {
+   "id": "suboden-khan",
+   "name": {
+    "en": "Suboden Khan",
+    "es": "Suboden Khan"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "EXPLOSIVES",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "8",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "onslaught-gatling-cannon",
+     "name": {
+      "en": "Onslaught gatling cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "8",
+       "skill": "2+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolt-pistol",
+     "name": {
+      "en": "Heavy Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stormtooth",
+     "name": {
+      "en": "Stormtooth"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Anti-monster/vehicle 4+",
+        "Lance"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-sword",
+     "name": {
+      "en": "Power Sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Spear of Chogoris"
+     },
+     "text": {
+      "en": "This unit’s ranged attacks have [Assault]. When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. If the assault doctrine is active for this unit, this unit has +1 to advance rolls and charge rolls."
+     }
+    },
+    {
+     "name": {
+      "en": "Skilled Riders"
+     },
+     "text": {
+      "en": "This unit has MOBILE."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Suboden-Khan",
+   "composition": [
+    "1 Suboden Khan model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Heavy Bolt Pistol; 1 Onslaught Gatling Cannon; 1 Power Sword; 1 Stormtooth."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "outrider-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "heavy-bolt-pistol": 1,
+      "onslaught-gatling-cannon": 1,
+      "power-sword": 1,
+      "stormtooth": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "heavy-bolt-pistol",
+    "onslaught-gatling-cannon",
+    "power-sword",
+    "stormtooth"
+   ]
+  }
+ ]
+}

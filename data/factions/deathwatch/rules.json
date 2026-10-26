@@ -1,0 +1,41 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "black-spear-task-force": {
+   "rule": {
+    "name": {
+     "en": "Mission Tactics"
+    },
+    "text": {
+     "en": "Friendly KILL TEAM units with this ability have the following abilities:\nFuror Tactics: If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1].\nMalleus Tactics: If the tactical doctrine is active for your unit, your unit’s attacks have [LETHAL HITS].\nPurgatus Tactics: If the assault doctrine is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have [PRECISION].\nRESTRICTIONS: Your army can include ADEPTUS ASTARTES DEATHWATCH units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.\nWith the exception of KILL TEAM CASSIUS (see Legends: Agents of the Imperium), your army cannot include any AGENTS OF THE IMPERIUM DEATHWATCH units."
+    }
+   },
+   "enhancements": {
+    "the-thief-of-secrets": {
+     "text": {
+      "en": "WATCH MASTER/CAPTAIN model only. This model has the following weapon:\nMELEE WEAPONS\nRANGE\nA\nWS\nS\nAP\nD\nThe Thief of Secrets\nThe Thief of Secrets Melee\n6\n2+\n6\n-3\n2"
+     },
+     "points": 10
+    },
+    "beacon-angelis": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. If this unit is a KILL TEAM unit, this unit has:\nDeep Strike.\nWhen you target this unit with the Rapid Ingress Stratagem, that use is -1CP."
+     },
+     "points": 25
+    },
+    "the-tome-of-ectoclades": {
+     "text": {
+      "en": "WATCH MASTER/CAPTAIN model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, the assault doctrine, devastator doctrine and tactical doctrine are active for this unit until the start of your next Command phase."
+     },
+     "points": 15
+    },
+    "osseus-key": {
+     "text": {
+      "en": "WATCH MASTER/TECHMARINE model only. While an enemy VEHICLE unit is within 6\" of this model, that enemy unit’s attacks have -1 A."
+     },
+     "points": 20
+    }
+   }
+  }
+ }
+}

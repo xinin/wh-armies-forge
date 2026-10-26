@@ -1,0 +1,14 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "astorath": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101419_BAAstorathTheGrim01.jpg?fm=webp&w=480&h=495",
+  "baal-predator": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101086_BaalPredatorNEW_01.jpg?fm=webp&w=480&h=495",
+  "blood-angels-captain": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101416_BACaptain01.jpg?fm=webp&w=480&h=495",
+  "chief-librarian-mephiston": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101266_BAMephistonLordofDeath01.jpg?fm=webp&w=480&h=495",
+  "commander-dante": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101395_BACommanderDante01.jpg?fm=webp&w=480&h=495",
+  "lemartes": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101418_BALemartes01.jpg?fm=webp&w=480&h=495",
+  "sanguinary-guard": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101413_BASanguinaryGuard01.jpg?fm=webp&w=480&h=495",
+  "sanguinary-priest": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101415_BASanguinaryPriest01.jpg?fm=webp&w=480&h=495",
+  "the-sanguinor": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101414_BATheSanguinor01.jpg?fm=webp&w=480&h=495"
+ }
+}

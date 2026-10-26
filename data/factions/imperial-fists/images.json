@@ -1,0 +1,7 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "darnath-lysander": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101446_SpaceMarinesImperialFistsDarnathLysander1.jpg?fm=webp&w=480&h=495",
+  "tor-garadon": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101258_SMIFTorGaradon01.jpg?fm=webp&w=480&h=495"
+ }
+}

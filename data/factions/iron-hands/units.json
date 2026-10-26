@@ -1,0 +1,428 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World, Warhammer Legends and other Chapters' datasheets: never imported.",
+  "ids": [
+   "adrax-agatone",
+   "aethon-shaan",
+   "arjac-rockfist",
+   "asmodai",
+   "astorath",
+   "astraeus",
+   "azrael",
+   "baal-predator",
+   "belial",
+   "bjorn-the-fell-handed",
+   "blood-angels-captain",
+   "blood-claws",
+   "captain-titus",
+   "castellan",
+   "cato-sicarius",
+   "centurion-assault-squad",
+   "centurion-devastator-squad",
+   "cerberus",
+   "chaplain-grimaldus",
+   "chief-librarian-mephiston",
+   "chief-librarian-tigurius",
+   "commander-dante",
+   "corvus-blackstar",
+   "crusade-ancient",
+   "crusader-squad",
+   "darnath-lysander",
+   "death-company-captain",
+   "death-company-captain-with-jump-pack",
+   "death-company-dreadnought",
+   "death-company-marines",
+   "death-company-marines-with-jump-packs",
+   "deathwatch-terminator-squad",
+   "deathwatch-veterans",
+   "deathwing-knights",
+   "deathwing-terminator-squad",
+   "decimus-kill-team",
+   "dreadnought",
+   "emperor-s-champion",
+   "execrator",
+   "ezekiel",
+   "falchion",
+   "fenrisian-wolves",
+   "fortis-kill-team",
+   "gladiator-lancer-1",
+   "gladiator-reaper-1",
+   "gladiator-valiant-1",
+   "grey-hunters",
+   "hammerfall-bunker",
+   "high-marshal-helbrecht",
+   "impulsor-1",
+   "indomitor-kill-team",
+   "inner-circle-companions",
+   "iron-priest",
+   "kaius-konorius",
+   "kayvaan-shrike",
+   "kill-team-cassius",
+   "kor-sarro-khan",
+   "kratos",
+   "land-raider-excelsior",
+   "land-speeder-vengeance",
+   "lazarus",
+   "lemartes",
+   "lion-el-jonson",
+   "logan-grimnar",
+   "marneus-calgar",
+   "marshal",
+   "mastodon",
+   "murderfang",
+   "nephilim-jetfighter",
+   "njal-stormcaller",
+   "predator-annihilator",
+   "predator-destructor",
+   "ragnar-blackmane",
+   "rapier-carrier",
+   "ravenwing-black-knights",
+   "ravenwing-command-squad",
+   "ravenwing-dark-talon",
+   "ravenwing-darkshroud",
+   "razorback",
+   "relic-razorback",
+   "repulsor-1",
+   "repulsor-executioner-1",
+   "rhino-primaris",
+   "roboute-guilliman",
+   "sammael",
+   "sanguinary-guard",
+   "sanguinary-priest",
+   "scout-bike-squad",
+   "sicaran",
+   "spectrus-kill-team",
+   "stormhawk-interceptor",
+   "stormraven-gunship",
+   "stormtalon-gunship",
+   "suboden-khan",
+   "sword-brethren-squad",
+   "talonstrike-kill-team",
+   "tarantula-air-defence-battery",
+   "tarantula-sentry-battery",
+   "terrax-pattern-termite",
+   "the-sanguinor",
+   "thunderhawk-gunship",
+   "thunderwolf-cavalry",
+   "tor-garadon",
+   "typhon",
+   "ulrik-the-slayer",
+   "venerable-dreadnought",
+   "venerable-dreadnought-1",
+   "victrix-honour-guard",
+   "vindicator",
+   "vulkan-he-stan",
+   "wardens-of-ultramar-1",
+   "watch-captain-artemis",
+   "watch-master",
+   "whirlwind",
+   "wolf-guard-battle-leader",
+   "wolf-guard-headtakers",
+   "wolf-guard-terminators",
+   "wolf-priest",
+   "wolf-scouts-1",
+   "wulfen",
+   "wulfen-dreadnought-1",
+   "wulfen-with-storm-shields"
+  ]
+ },
+ "units": [
+  {
+   "id": "caanok-var",
+   "name": {
+    "en": "Caanok Var",
+    "es": "Caanok Var"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "IMPERIUM",
+    "TERMINATOR"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm Bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "axiom",
+     "name": {
+      "en": "Axiom"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Cleave 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Cold and Calculating"
+     },
+     "text": {
+      "en": "In your Shooting phase or the Fight phase, when this unit is selected to attack, you can select one of the following for this unit’s attacks to have: [Lethal Hits: Monster/Vehicle]. Or: [Sustained Hits 1: non-Monster/Vehicle]. Or: If the tactical doctrine is active for this unit, [Lethal Hits: Monster/Vehicle] and [Sustained Hits 1: non-Monster/Vehicle]."
+     }
+    },
+    {
+     "name": {
+      "en": "Cerebrex Logic Engine"
+     },
+     "text": {
+      "en": "In the Declare Battle Formations step, you can select one friendly ADEPTUS ASTARTES INFANTRY unit. That unit has Scouts 6\"."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Feel No Pain 5+",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Caanok-Var",
+   "composition": [
+    "1 Caanok Var model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Axiom; 1 Storm Bolter."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "terminator-assault-squad",
+     "terminator-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "axiom": 1,
+      "storm-bolter": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "axiom",
+    "storm-bolter"
+   ]
+  },
+  {
+   "id": "iron-father-feirros",
+   "name": {
+    "en": "Iron Father Feirros",
+    "es": "Iron Father Feirros"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "GRAVIS",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gorgons-wrath",
+     "name": {
+      "en": "Gorgon’s Wrath"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 2",
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "harrowhand",
+     "name": {
+      "en": "Harrowhand"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "medusan-manipuli",
+     "name": {
+      "en": "Medusan Manipuli"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Master of the Forge"
+     },
+     "text": {
+      "en": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this model: That VEHICLE model heals 3 wounds. That VEHICLE model’s attacks can ignore modifiers to the following until the start of your next Movement phase: BS. Hit rolls and wound rolls."
+     }
+    },
+    {
+     "name": {
+      "en": "Rites of Tempering"
+     },
+     "text": {
+      "en": "Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
+     }
+    },
+    {
+     "name": {
+      "en": "Iron Father"
+     },
+     "text": {
+      "en": "While this model is within 3\" of a friendly ADEPTUS ASTARTES VEHICLE unit, this model has Lone Operative"
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Iron-Father-Feirros",
+   "composition": [
+    "1 Iron Father Feirros model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Bolt Pistol; 1 Gorgon’s Wrath; 1 Harrowhand; 1 Medusan Manipuli."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "aggressor-squad",
+     "eradicator-squad-with-heavy-bolters",
+     "eradicator-squad-with-melta-rifles",
+     "heavy-intercessor-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "gorgons-wrath": 1,
+      "harrowhand": 1,
+      "medusan-manipuli": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "gorgons-wrath",
+    "harrowhand",
+    "medusan-manipuli"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "spearpoint-task-force": [
+   {
+    "id": "evasive-manoeuvers",
+    "name": {
+     "en": "Evasive Manoeuvers"
+    },
+    "cp": 1,
+    "source": "Spearpoint Task Force",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "Battle-brothers of the White Scars Chapter are born and raised in the saddle. Expert pilots and riders all, they weave through incoming fire with instinctive skill."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES MOUNTED/SPEEDER unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES MOUNTED/SPEEDER unit."
+    },
+    "effect": {
+     "en": "Ranged attacks that target your unit have -1 to wound rolls."
+    }
+   },
+   {
+    "id": "mobile-lethality",
+    "name": {
+     "en": "Mobile Lethality"
+    },
+    "cp": 1,
+    "source": "Spearpoint Task Force",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "The White Scars fight their wars at a furious tempo, and their warriors are adept at fire-and-manoeuvre strategies."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly ADEPTUS ASTARTES unit is selected to make an advance/fall-back move."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "That fall-back move does not prevent your unit from being eligible to shoot. Your unit’s ranged attacks have [ASSAULT]."
+    }
+   },
+   {
+    "id": "flawless-riders",
+    "name": {
+     "en": "Flawless Riders"
+    },
+    "cp": 1,
+    "source": "Spearpoint Task Force",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Skilled Space Marine riders can guide their steeds through even the densest and most treacherous terrain to strike their foes from the position they least expect."
+    },
+    "when": {
+     "en": "Your Movement/Charge phase, when a friendly ADEPTUS ASTARTES MOUNTED unit is selected to move or declares a charge."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES MOUNTED unit."
+    },
+    "effect": {
+     "en": "Your unit has MOBILE."
+    }
+   },
+   {
+    "id": "spear-thrust-and-sabre-swing",
+    "name": {
+     "en": "Spear Thrust And Sabre Swing"
+    },
+    "cp": 1,
+    "source": "Spearpoint Task Force",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Some foes can be ended with a single charge. Others require sustained savagery to fell. The White Scars are adept at both methods of fighting."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks: Have [LETHAL HITS]. Or: Have [LANCE]. Or: If your unit has MOUNTED, have [LETHAL HITS] and [LANCE]."
+    }
+   },
+   {
+    "id": "withdraw-and-regroup",
+    "name": {
+     "en": "Withdraw And Regroup"
+    },
+    "cp": 1,
+    "source": "Spearpoint Task Force",
+    "kind": null,
+    "phase": "fight",
+    "turn": "enemy",
+    "legend": {
+     "en": "The riders and pilots sweep away as swiftly as they arrive, regrouping in preparation for their next assault."
+    },
+    "when": {
+     "en": "End of your opponent’s Fight phase."
+    },
+    "target": {
+     "en": "One friendly unengaged ADEPTUS ASTARTES MOUNTED/SPEEDER unit."
+    },
+    "effect": {
+     "en": "Place your unit in strategic reserves."
+    }
+   },
+   {
+    "id": "hunters-instincts",
+    "name": {
+     "en": "Hunter'S Instincts"
+    },
+    "cp": 1,
+    "source": "Spearpoint Task Force",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "The White Scars read the ebb and flow of battle with the hungry cunning of raptorial predators, reacting to the enemy’s movements with exceptional rapidity."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED/SPEEDER unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY/MOUNTED/SPEEDER unit."
+    },
+    "effect": {
+     "en": "Your unit can make a normal move of up to D3+3\"."
+    }
+   }
+  ]
+ }
+}

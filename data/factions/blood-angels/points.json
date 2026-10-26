@@ -1,0 +1,211 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "astorath",
+  "baal-predator",
+  "blood-angels-captain",
+  "captain-with-jump-pack",
+  "chaplain",
+  "chaplain-with-jump-pack",
+  "chief-librarian-mephiston",
+  "commander-dante",
+  "death-company-captain",
+  "death-company-captain-with-jump-pack",
+  "death-company-dreadnought",
+  "death-company-marines",
+  "death-company-marines-with-jump-packs",
+  "lemartes",
+  "sanguinary-guard",
+  "sanguinary-priest",
+  "the-sanguinor"
+ ],
+ "units": {
+  "astorath": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "baal-predator": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "blood-angels-captain": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "captain-with-jump-pack": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "chaplain": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "chaplain-with-jump-pack": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "chief-librarian-mephiston": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "commander-dante": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "death-company-captain": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "death-company-captain-with-jump-pack": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "death-company-dreadnought": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "death-company-marines": [
+   {
+    "models": 5,
+    "points": 90
+   },
+   {
+    "models": 10,
+    "points": 170
+   }
+  ],
+  "death-company-marines-with-jump-packs": [
+   {
+    "models": 5,
+    "points": 130
+   },
+   {
+    "models": 10,
+    "points": 260
+   }
+  ],
+  "lemartes": [
+   {
+    "models": 1,
+    "points": 110
+   }
+  ],
+  "sanguinary-guard": [
+   {
+    "models": 3,
+    "points": 135
+   },
+   {
+    "models": 6,
+    "points": 275
+   }
+  ],
+  "sanguinary-priest": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "the-sanguinor": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ]
+ },
+ "enhancements": {
+  "prescient-flash": 25,
+  "blazing-icon": 20,
+  "ordained-sacrifice": 25,
+  "unto-death": 15,
+  "shadow-of-abomination": 15,
+  "angelic-executioner": 20,
+  "instinctive-interception": 10,
+  "on-the-archtraitors-bridge": 20
+ },
+ "unitsExtraCopies": {
+  "baal-predator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 150
+    }
+   ]
+  },
+  "death-company-dreadnought": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 185
+    }
+   ]
+  },
+  "death-company-marines": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 105
+    },
+    {
+     "models": 10,
+     "points": 185
+    }
+   ]
+  },
+  "death-company-marines-with-jump-packs": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 160
+    },
+    {
+     "models": 10,
+     "points": 290
+    }
+   ]
+  },
+  "sanguinary-guard": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 150
+    },
+    {
+     "models": 6,
+     "points": 290
+    }
+   ]
+  }
+ },
+ "wargearCosts": {}
+}

@@ -1,0 +1,145 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "shadowmark-talon": [
+   {
+    "id": "into-darkness",
+    "name": {
+     "en": "Into Darkness"
+    },
+    "cp": 1,
+    "source": "Shadowmark Talon",
+    "kind": null,
+    "phase": "fight",
+    "turn": "enemy",
+    "legend": {
+     "en": "At the opportune moment, Raven Guard infiltration units slip away from battle, only to relocate ready to strike the foe again."
+    },
+    "when": {
+     "en": "End of your opponent’s Fight phase."
+    },
+    "target": {
+     "en": "One unengaged ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Place your unit in strategic reserves."
+    }
+   },
+   {
+    "id": "raptorial-vigilance",
+    "name": {
+     "en": "Raptorial Vigilance"
+    },
+    "cp": 1,
+    "source": "Shadowmark Talon",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "The Raven Guard are swift to exploit the movements of their foes, whether to pursue their prey and complete the kill or to make use of an opportunity to fade once more from sight."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Your unit can make a normal move of: Up to D6\". Or: If your unit is a PHOBOS/SCOUT SQUAD unit, up to 6\"."
+    }
+   },
+   {
+    "id": "murderous-fusillade",
+    "name": {
+     "en": "Murderous Fusillade"
+    },
+    "cp": 1,
+    "source": "Shadowmark Talon",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "From darkness and obscuring cover, Raven Guard battle-brothers open fire as one, striking their unaware targets with precision fire."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly ADEPTUS ASTARTES INFANTRY unit that made an ingress move this turn is selected to shoot."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks have: +1 BS. +1 AP."
+    }
+   },
+   {
+    "id": "suppressed-weapons",
+    "name": {
+     "en": "Suppressed Weapons"
+    },
+    "cp": 1,
+    "source": "Shadowmark Talon",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "The Raven Guard commonly utilise integral suppressors, flash-hiders and other technology to dampen weapon reports and conceal muzzle flare, enabling battle-brothers to fire on unsuspecting foes without giving away their positions."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly ADEPTUS ASTARTES INFANTRY unit has shot."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Those attacks do not prevent your unit from being hidden."
+    }
+   },
+   {
+    "id": "feint-and-thrust",
+    "name": {
+     "en": "Feint And Thrust"
+    },
+    "cp": 1,
+    "source": "Shadowmark Talon",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "Retreating from the fight, these warriors lure their enemies on before swiftly turning the tables and hurling themselves into their now overextended foe."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "The tactical doctrine is active for your unit in addition to any other combat doctrine, until the start of your next Command phase."
+    }
+   },
+   {
+    "id": "lay-low-the-tyrants",
+    "name": {
+     "en": "Lay Low The Tyrants"
+    },
+    "cp": 1,
+    "source": "Shadowmark Talon",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "In a storm of blade thrusts and bludgeoning strikes, enemy champions and commanders are laid low, leaving their troops in leaderless disarray."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks have [Precision]."
+    }
+   }
+  ]
+ }
+}

@@ -27,6 +27,8 @@ import time
 import urllib.request
 from pathlib import Path
 
+import factions
+
 ROOT = Path(__file__).resolve().parent.parent
 PORT = 9333
 CHROME = next((p for p in ('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -135,6 +137,10 @@ def main():
         print(f'{len(products)} products saved to {saved.name}')
 
     units = json.loads((fdir / 'units.json').read_text())['units']
+    parent = factions.entry(args.faction).get('parent')
+    if parent:  # a Chapter's versions of generic datasheets keep the parent's picture
+        generic = {u['id'] for u in factions.raw(parent)['units']}
+        units = [u for u in units if u['id'] not in generic]
     images_path = fdir / 'images.json'
     images = json.loads(images_path.read_text()) if images_path.exists() else {'units': {}}
     found = match(products, units)

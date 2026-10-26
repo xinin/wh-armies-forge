@@ -1,0 +1,41 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "forgefathers-seekers": {
+   "rule": {
+    "name": {
+     "en": "Vulkan's Quest"
+    },
+    "text": {
+     "en": "You can select the devastator doctrine one additional time per battle.\nFriendly ADEPTUS ASTARTES units’ ranged attacks that target a unit within 12\", have +1 S.\nIf your army includes a VULKAN HE’STAN unit, friendly INFERNUS SQUAD units have the following:\nWhen this unit is selected to make an advance/fall-back move, that advance/fall-back move does not prevent this unit from being eligible to start an action.\nWhen this unit starts an action, that action does not prevent this unit from being eligible to shoot.\nRestrictions: Your army can include SALAMANDERS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "forged-in-battle": {
+     "text": {
+      "en": "Adeptus Astartes model only. This unit can ignore modifiers to:\nBS.\nWS.\nHit rolls."
+     },
+     "points": 25
+    },
+    "adamantine-mantle": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. Attacks allocated to this model have -1 D."
+     },
+     "points": 20
+    },
+    "war-tempered-artifice": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks have:\n+1 S.\n+1 D."
+     },
+     "points": 25
+    },
+    "immolator": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit’s [TORRENT] weapons have +1 A."
+     },
+     "points": 20
+    }
+   }
+  }
+ }
+}

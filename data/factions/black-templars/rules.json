@@ -1,0 +1,89 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "fist-of-the-god-emperor": {
+   "rule": {
+    "name": {
+     "en": "Purge and Sanctify"
+    },
+    "text": {
+     "en": "Each time a friendly CRUSADER SQUAD unit makes a surge move, instead of selecting a surge target, you can select the closest objective to that unit. When that unit makes that surge move, each model in that unit must end that surge move as close as possible to that objective instead.\nRestrictions: Your army can include BLACK TEMPLARS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "righteous-fervour": {
+     "text": {
+      "en": "CRUSADER SQUAD unit only. This unit can re-roll Advance rolls."
+     },
+     "points": 15
+    },
+    "oathbound-exemplar": {
+     "text": {
+      "en": "ADEPTUS ASTARTES INFANTRY unit only. When this unit is selected to make an advance/fall-back move, that advance/fall-back move does not prevent this unit from being eligible to start an action."
+     },
+     "points": 10
+    }
+   }
+  },
+  "marshals-household": {
+   "rule": {
+    "name": {
+     "en": "Faith-fuelled Resolve"
+    },
+    "text": {
+     "en": "In the Fight phase, if a friendly SWORD BRETHREN SQUAD unit is within range of an objective, that unit’s melee attacks have +1 A.\nRestrictions: Your army can include BLACK TEMPLARS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "fervent-exemplars": {
+     "text": {
+      "en": "SWORD BRETHREN SQUAD unit only. This unit has +1 to charge rolls."
+     },
+     "points": 10
+    },
+    "inheritors-of-sigismund": {
+     "text": {
+      "en": "SWORD BRETHREN SQUAD unit only. This unit has Fights First."
+     },
+     "points": 15
+    }
+   }
+  },
+  "vow-sworn-crusaders": {
+   "rule": {
+    "name": {
+     "en": "Templar Vows"
+    },
+    "text": {
+     "en": "At the start of the first battle round, you can select one Vow listed below. That Vow is active for friendly ADEPTUS ASTARTES units until the end of the battle.\nAbhor the Witch, Destroy the Witch\nThis unit’s melee attacks that target a PSYKER unit:\nHave [PRECISION].\nHave [LANCE].\nAccept Any Challenge, No Matter the Odds\nFriendly melee attacks that target a unit with a T greater than this unit’s S have +1 to wound rolls.\nUphold the Honour of the Emperor\nFriendly INFANTRY units have:\nAt the end of your Movement phase, if this unit is controlling an objective, that objective is secured.\nWhen this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to start an action.\nRestrictions: Your army can include BLACK TEMPLARS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "augury-servo-host": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That enemy unit cannot have the benefit of cover."
+     },
+     "points": 20
+    },
+    "consecrating-aura": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit has 5+ InSv."
+     },
+     "points": 20
+    },
+    "incendiary-animus": {
+     "text": {
+      "en": "CHAPLAIN/JUDICIAR model only. This unit’s melee attacks have +1 S."
+     },
+     "points": 25
+    },
+    "zealous-vanguard": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit has Scouts 6\"."
+     },
+     "points": 25
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "id": "iron-hands",
+ "name": {
+  "en": "Iron Hands",
+  "es": "Manos de Hierro"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "IRON HANDS",
+  "chapterBit": "100"
+ },
+ "detachments": [
+  {
+   "id": "medusas-wrath",
+   "cost": 2,
+   "tags": [
+    "IRONSTORM"
+   ],
+   "name": {
+    "en": "Medusa's Wrath"
+   },
+   "rule": {
+    "name": {
+     "en": "Armoured Wrath"
+    },
+    "text": {
+     "en": "Each time a friendly ADEPTUS ASTARTES unit is selected to shoot or selected to fight apply one of the following when resolving those attacks: If that unit is within 6\" of a friendly CANNOK VAR/IRON FATHER FEIRROS unit you can: Re-roll one hit roll. Re-roll one wound roll. Re-roll one damage roll. Otherwise you can:…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "target-augury-web",
+     "requires": [
+      [
+       "TECHMARINE"
+      ]
+     ],
+     "name": {
+      "en": "Target Augury Web"
+     },
+     "text": {
+      "en": "TECHMARINE model only. In your movement phase, at the start or end of this unit’s move, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this unit. That VEHICLE model’s attacks…"
+     }
+    },
+    {
+     "id": "adept-of-the-omnissiah",
+     "requires": [
+      [
+       "TECHMARINE"
+      ]
+     ],
+     "name": {
+      "en": "Adept of the Omnissiah"
+     },
+     "text": {
+      "en": "TECHMARINE model only. (Once per battle round, per army) When an enemy unit targets a friendly ADEPTUS ASTARTES VEHICLE unit within 6\" of this unit, you can use this ability. If you do, that VEHICLE…"
+     }
+    },
+    {
+     "id": "master-of-the-machine-war",
+     "requires": [],
+     "name": {
+      "en": "Master of the Machine War"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES VEHICLE unit within 6\" of this model and then select the devastator doctrine or tactical…"
+     }
+    },
+    {
+     "id": "the-flesh-is-weak",
+     "requires": [],
+     "name": {
+      "en": "The Flesh is Weak"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model: Has +1 T. Has Feel No Pain 5+."
+     }
+    }
+   ]
+  }
+ ]
+}

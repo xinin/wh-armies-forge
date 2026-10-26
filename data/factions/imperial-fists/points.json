@@ -1,0 +1,32 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "darnath-lysander",
+  "tor-garadon"
+ ],
+ "units": {
+  "darnath-lysander": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "tor-garadon": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ]
+ },
+ "enhancements": {
+  "honour-indefatigable": 10,
+  "castellum-omnivox": 10,
+  "defensive-mastery": 10,
+  "spy-skull-data-link": 10
+ },
+ "unitsExtraCopies": {},
+ "wargearCosts": {}
+}

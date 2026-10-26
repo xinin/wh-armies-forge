@@ -1,0 +1,76 @@
+{
+ "id": "imperial-fists",
+ "name": {
+  "en": "Imperial Fists",
+  "es": "Puños Imperiales"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "IMPERIAL FISTS",
+  "chapterBit": "80"
+ },
+ "detachments": [
+  {
+   "id": "ceramite-sentinels",
+   "cost": 2,
+   "name": {
+    "en": "Ceramite Sentinels"
+   },
+   "rule": {
+    "name": {
+     "en": "Adaptive Defence"
+    },
+    "text": {
+     "en": "While a friendly ADEPTUS ASTARTES unit is within a terrain area, that unit’s attacks can re-roll wound rolls of 1. Friendly ADEPTUS ASTARTES units are entrenched while all of the following apply: That unit is within a terrain area. That unit was not set up this turn. No model in that unit moved more than 3\" this turn.…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "honour-indefatigable",
+     "requires": [
+      [
+       "GRAVIS"
+      ]
+     ],
+     "name": {
+      "en": "Honour Indefatigable"
+     },
+     "text": {
+      "en": "GRAVIS model only. (Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6: On a 2+, set this model back up on the battlefield as close as possible to where it…"
+     }
+    },
+    {
+     "id": "castellum-omnivox",
+     "requires": [],
+     "name": {
+      "en": "Castellum Omnivox"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES unit only. When this unit makes a advance/fall-back move, that move does not prevent this unit from being eligible to start an action."
+     }
+    },
+    {
+     "id": "defensive-mastery",
+     "requires": [],
+     "name": {
+      "en": "Defensive Mastery"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. When both players have deployed their armies, you can redeploy up to three friendly ADEPTUS ASTARTES INFANTRY units. When doing so, you can set those units up in…"
+     }
+    },
+    {
+     "id": "spy-skull-data-link",
+     "requires": [],
+     "name": {
+      "en": "Spy-skull Data Link"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES unit only. This unit’s ranged weapons have [IGNORES COVER]."
+     }
+    }
+   ]
+  }
+ ]
+}

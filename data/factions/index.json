@@ -7,6 +7,7 @@
         "es": "Astra Militarum"
       },
       "edition": "11th",
+      "alliance": "imperium",
       "path": "astra-militarum",
       "color": "#6b7d4a",
       "units": 70,
@@ -19,6 +20,7 @@
         "es": "Adeptus Custodes"
       },
       "edition": "11th",
+      "alliance": "imperium",
       "path": "adeptus-custodes",
       "color": "#b8923a",
       "units": 27,
@@ -31,6 +33,7 @@
         "es": "Tiránidos"
       },
       "edition": "11th",
+      "alliance": "xenos",
       "path": "tyranids",
       "color": "#7b3f8c",
       "units": 50,
@@ -43,6 +46,7 @@
         "es": "Caballeros Imperiales"
       },
       "edition": "11th",
+      "alliance": "imperium",
       "path": "imperial-knights",
       "color": "#2c5f8a",
       "units": 18,
@@ -55,10 +59,24 @@
         "es": "Imperio T’au"
       },
       "edition": "11th",
+      "alliance": "xenos",
       "path": "t-au-empire",
       "color": "#c06a2b",
       "units": 39,
       "detachments": 7
+    },
+    {
+      "id": "space-marines",
+      "name": {
+        "en": "Space Marines",
+        "es": "Marines Espaciales"
+      },
+      "edition": "11th",
+      "alliance": "imperium",
+      "path": "space-marines",
+      "color": "#2b5797",
+      "units": 67,
+      "detachments": 16
     },
     {
       "id": "space-wolves",
@@ -70,7 +88,138 @@
       "path": "space-wolves",
       "color": "#5f7f9a",
       "units": 88,
+      "detachments": 19,
+      "parent": "space-marines"
+    },
+    {
+      "id": "black-templars",
+      "name": {
+        "en": "Black Templars",
+        "es": "Templarios Negros"
+      },
+      "edition": "11th",
+      "path": "black-templars",
+      "color": "#4a4a4a",
+      "parent": "space-marines",
+      "units": 73,
       "detachments": 19
+    },
+    {
+      "id": "blood-angels",
+      "name": {
+        "en": "Blood Angels",
+        "es": "Ángeles Sangrientos"
+      },
+      "edition": "11th",
+      "path": "blood-angels",
+      "color": "#a3141b",
+      "parent": "space-marines",
+      "units": 81,
+      "detachments": 19
+    },
+    {
+      "id": "dark-angels",
+      "name": {
+        "en": "Dark Angels",
+        "es": "Ángeles Oscuros"
+      },
+      "edition": "11th",
+      "path": "dark-angels",
+      "color": "#1e5631",
+      "parent": "space-marines",
+      "units": 83,
+      "detachments": 19
+    },
+    {
+      "id": "deathwatch",
+      "name": {
+        "en": "Deathwatch",
+        "es": "Deathwatch"
+      },
+      "edition": "11th",
+      "path": "deathwatch",
+      "color": "#3c3f46",
+      "parent": "space-marines",
+      "units": 74,
+      "detachments": 17
+    },
+    {
+      "id": "imperial-fists",
+      "name": {
+        "en": "Imperial Fists",
+        "es": "Puños Imperiales"
+      },
+      "edition": "11th",
+      "path": "imperial-fists",
+      "color": "#d4a017",
+      "parent": "space-marines",
+      "units": 69,
+      "detachments": 17
+    },
+    {
+      "id": "iron-hands",
+      "name": {
+        "en": "Iron Hands",
+        "es": "Manos de Hierro"
+      },
+      "edition": "11th",
+      "path": "iron-hands",
+      "color": "#5b6168",
+      "parent": "space-marines",
+      "units": 69,
+      "detachments": 17
+    },
+    {
+      "id": "raven-guard",
+      "name": {
+        "en": "Raven Guard",
+        "es": "Guardia del Cuervo"
+      },
+      "edition": "11th",
+      "path": "raven-guard",
+      "color": "#2b2f33",
+      "parent": "space-marines",
+      "units": 69,
+      "detachments": 17
+    },
+    {
+      "id": "salamanders",
+      "name": {
+        "en": "Salamanders",
+        "es": "Salamandras"
+      },
+      "edition": "11th",
+      "path": "salamanders",
+      "color": "#2e7d32",
+      "parent": "space-marines",
+      "units": 69,
+      "detachments": 17
+    },
+    {
+      "id": "ultramarines",
+      "name": {
+        "en": "Ultramarines",
+        "es": "Ultramarines"
+      },
+      "edition": "11th",
+      "path": "ultramarines",
+      "color": "#1f4fa3",
+      "parent": "space-marines",
+      "units": 75,
+      "detachments": 17
+    },
+    {
+      "id": "white-scars",
+      "name": {
+        "en": "White Scars",
+        "es": "Cicatrices Blancas"
+      },
+      "edition": "11th",
+      "path": "white-scars",
+      "color": "#b5b5b5",
+      "parent": "space-marines",
+      "units": 69,
+      "detachments": 17
     },
     {
       "id": "necrons",
@@ -79,6 +228,7 @@
         "es": "Necrones"
       },
       "edition": "11th",
+      "alliance": "xenos",
       "path": "necrons",
       "color": "#2f9e6a",
       "units": 51,

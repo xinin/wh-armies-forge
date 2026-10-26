@@ -1,0 +1,145 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "blade-of-ultramar": [
+   {
+    "id": "armour-of-contempt",
+    "name": {
+     "en": "Armour Of Contempt"
+    },
+    "cp": 1,
+    "source": "Blade of Ultramar",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit have -1 AP until that enemy unit has attacked."
+    }
+   },
+   {
+    "id": "exemplary-vigilance",
+    "name": {
+     "en": "Exemplary Vigilance"
+    },
+    "cp": 1,
+    "source": "Blade of Ultramar",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Long have the Ultramarines guarded both Ultramar and the wider Imperium. No foe can hide from their vengeful gaze or evade the reach of their wrath."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks have [IGNORES COVER]."
+    }
+   },
+   {
+    "id": "ultramarian-adaptivity",
+    "name": {
+     "en": "Ultramarian Adaptivity"
+    },
+    "cp": 1,
+    "source": "Blade of Ultramar",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "No Chapter’s warriors know better the breadth - theoretical and practical - of the Codex Astartes’ teachings, and how these can and should be adapted to ensure victory."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase."
+    }
+   },
+   {
+    "id": "courage-and-honour",
+    "name": {
+     "en": "Courage And Honour!"
+    },
+    "cp": 1,
+    "source": "Blade of Ultramar",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Roaring their famed battle cry, the Ultramarines hurl themselves into the fight, striving all the harder to prevail beneath the unwavering eye of their Chapter Master."
+    },
+    "when": {
+     "en": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Your unit’s melee attacks have [Lance]."
+    }
+   },
+   {
+    "id": "practical-tactics",
+    "name": {
+     "en": "Practical Tactics"
+    },
+    "cp": 1,
+    "source": "Blade of Ultramar",
+    "kind": null,
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "After rapidly making a theoretical assessment of the foes’ probable next moves, the Ultramarines apply practical repositioning to counter them."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit."
+    },
+    "effect": {
+     "en": "Your unit can make a normal move of up to D3+3\"."
+    }
+   },
+   {
+    "id": "tactical-foresight",
+    "name": {
+     "en": "Tactical Foresight"
+    },
+    "cp": 1,
+    "source": "Blade of Ultramar",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "With the enemy’s countermeasures and responses predicted and allowed for in advance, the Ultramarines can weather their most ferocious attacks."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit with a S greater than this unit’s T have -1 to wound rolls."
+    }
+   }
+  ]
+ }
+}

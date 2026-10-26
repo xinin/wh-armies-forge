@@ -1,0 +1,41 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "ceramite-sentinels": {
+   "rule": {
+    "name": {
+     "en": "Adaptive Defence"
+    },
+    "text": {
+     "en": "While a friendly ADEPTUS ASTARTES unit is within a terrain area, that unit’s attacks can re-roll wound rolls of 1.\nFriendly ADEPTUS ASTARTES units are entrenched while all of the following apply:\nThat unit is within a terrain area.\nThat unit was not set up this turn.\nNo model in that unit moved more than 3\" this turn.\nFriendly DARNATH LYSANDER/TOR GARADON units have the following ability:\nDefensive Mastery: At the start of each phase, this unit is entrenched.\nDARNATH LYSANDER’s/TOR GARADON’s unit is always entrenched, regardless of the conditions listed above.\nRestrictions: Your army can include IMPERIAL FISTS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "honour-indefatigable": {
+     "text": {
+      "en": "GRAVIS model only. (Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6:\nOn a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged, with 3 wounds remaining."
+     },
+     "points": 10
+    },
+    "castellum-omnivox": {
+     "text": {
+      "en": "ADEPTUS ASTARTES unit only. When this unit makes a advance/fall-back move, that move does not prevent this unit from being eligible to start an action."
+     },
+     "points": 10
+    },
+    "defensive-mastery": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. When both players have deployed their armies, you can redeploy up to three friendly ADEPTUS ASTARTES INFANTRY units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+     },
+     "points": 10
+    },
+    "spy-skull-data-link": {
+     "text": {
+      "en": "ADEPTUS ASTARTES unit only. This unit’s ranged weapons have [IGNORES COVER]."
+     },
+     "points": 10
+    }
+   }
+  }
+ }
+}

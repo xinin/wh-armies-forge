@@ -23,8 +23,11 @@ const cached = (cache, key, load) => {
   return cache.get(key);
 };
 
+let factionEntries = [];
 export async function loadIndex() {
-  return getJSON('data/factions/index.json');
+  const index = await getJSON('data/factions/index.json');
+  factionEntries = index.factions;
+  return index;
 }
 
 const editionCache = new Map();
@@ -47,22 +50,70 @@ export const loadEmblem = entry => cached(emblemCache, entry.id, async () => {
 const factionCache = new Map();
 export const loadFaction = entry => cached(factionCache, entry.id, () => fetchFaction(entry));
 
-async function fetchFaction(entry) {
+// The files of one faction folder (and its translations), as they are.
+const filesCache = new Map();
+const loadFiles = entry => cached(filesCache, entry.id, async () => {
   const base = `data/factions/${entry.path}`;
-  const [faction, unitsFile, weaponsFile, points, rules, stratagems, images, emblem] = await Promise.all([
+  const [faction, units, weapons, points, rules, stratagems, images, emblem] = await Promise.all([
     getJSON(`${base}/faction.json`),
-    getJSON(`${base}/units.json`),
-    getJSON(`${base}/weapons.json`),
+    getJSON(`${base}/units.json`).then(f => f.units),
+    getJSON(`${base}/weapons.json`).then(f => f.weapons),
     getJSON(`${base}/points.json`),
-    optionalJSON(`${base}/rules.json`, { detachments: {} }),
-    optionalJSON(`${base}/stratagems.json`, { detachments: {} }),
-    optionalJSON(`${base}/images.json`, { units: {} }),
+    optionalJSON(`${base}/rules.json`, { detachments: {} }).then(f => f.detachments),
+    optionalJSON(`${base}/stratagems.json`, { detachments: {} }).then(f => f.detachments),
+    optionalJSON(`${base}/images.json`, { units: {} }).then(f => f.units),
     loadEmblem(entry),
     loadTranslations(`${base}/i18n`),
   ]);
+  return { faction, units, weapons, points, rules, stratagems, images, emblem };
+});
+
+// A Chapter (index.json "parent") only stores its own data; it is combined with its parent faction as described
+// in tools/factions.py (which does the same for the tools).
+const unitWords = u => new Set([...u.keywords, u.name.en].flatMap(k => k.toUpperCase().replace(/’/g, "'").split(/\s+/)));
+const hasWords = (u, group) => group.every(w => unitWords(u).has(w.replace(/’/g, "'")));
+function mergeChapter(p, c) {
+  const ex = c.faction.parentExcludes ?? {};
+  const { detachments, extraRules = [], ...own } = c.faction;
+  const faction = {
+    ...p.faction, ...own,
+    armyRule: c.faction.armyRule ?? p.faction.armyRule,
+    extraRules: [...(p.faction.extraRules ?? []).filter(r => !ex.rules?.includes(r.name.en)), ...extraRules],
+    detachments: [...p.faction.detachments.filter(d => !ex.detachments?.includes(d.id)), ...detachments],
+  };
+  const mine = new Map(c.units.map(u => [u.id, u]));
+  const units = p.units
+    .filter(u => !ex.units?.includes(u.id) && !ex.unitKeywords?.some(g => hasWords(u, g)))
+    .map(u => { const o = mine.get(u.id) ?? u; mine.delete(u.id); return o; });
+  units.push(...mine.values());
+  for (const rule of c.faction.keywordRules ?? []) {
+    units.forEach((u, i) => {
+      if (!u.keywords.includes(rule.keyword) && rule.units.some(g => hasWords(u, g))) units[i] = { ...u, keywords: [...u.keywords, rule.keyword] };
+    });
+  }
+  const points = { ...p.points };
+  for (const [k, v] of Object.entries(c.points)) {
+    points[k] = Array.isArray(v) ? [...new Set([...(points[k] ?? []), ...v])] : typeof v === 'object' ? { ...points[k], ...v } : v;
+  }
+  return {
+    faction, units, points,
+    weapons: { ...p.weapons, ...c.weapons },
+    rules: { ...p.rules, ...c.rules },
+    stratagems: { ...p.stratagems, ...c.stratagems },
+    images: { ...p.images, ...c.images },
+    emblem: c.emblem ?? p.emblem,
+  };
+}
+
+async function fetchFaction(entry) {
+  const parentEntry = entry.parent && factionEntries.find(f => f.id === entry.parent);
+  // copies: the build below completes the detachments in place, and a parent's files serve all its Chapters
+  const [own, parent] = await Promise.all([loadFiles(entry), parentEntry && loadFiles(parentEntry)]);
+  const files = parent ? mergeChapter(structuredClone(parent), structuredClone(own)) : structuredClone(own);
+  const { faction, points, emblem } = files;
   // full rule texts complement the short summaries written in faction.json
   for (const d of faction.detachments) {
-    const full = rules.detachments[d.id];
+    const full = files.rules[d.id];
     if (!full) continue;
     if (full.rule?.text?.en) d.rule = { ...d.rule, full: full.rule.text };
     for (const e of [...d.enhancements, ...(d.unitAbilities ?? [])]) {
@@ -74,8 +125,8 @@ async function fetchFaction(entry) {
   }
 
   const verified = new Set(points.verified ?? []);
-  const globalWeapons = weaponsFile.weapons;
-  const units = unitsFile.units.map(u => {
+  const globalWeapons = files.weapons;
+  const units = files.units.map(u => {
     const costs = points.units[u.id] ?? [];
     // 11th edition: some datasheets cost more from the 3rd copy in the same army
     // 11th edition: some datasheets cost more from the 2nd or 3rd copy in the same army ({from, sizes})
@@ -101,7 +152,7 @@ async function fetchFaction(entry) {
       weaponMap,
       wargearCosts: points.wargearCosts?.[u.id] ?? {},
       extraFrom: extra?.from ?? null,
-      storeImage: images.units[u.id] ?? null,
+      storeImage: files.images[u.id] ?? null,
       emblem,
       pointsVerified: verified.has(u.id),
     };
@@ -124,10 +175,10 @@ async function fetchFaction(entry) {
     faction,
     units,
     unitsById: new Map(units.map(u => [u.id, u])),
-    weapons: weaponsFile.weapons,
+    weapons: files.weapons,
     enhancements,
     detachmentsById: new Map(faction.detachments.map(d => [d.id, d])),
-    stratagems: stratagems.detachments,
+    stratagems: files.stratagems,
     emblem,
     pointsMeta: { version: points.version, source: points.source },
   };

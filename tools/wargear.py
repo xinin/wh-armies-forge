@@ -63,23 +63,35 @@ def type_key(name):
 
 def parse_composition(entries):
     """['1 Tempestor', '4-9 Tempestus Scions'] → [[(1, 1, 'tempestor'), (4, 9, 'tempestus scion')]]
-    Entries that each contain ' and ' are alternatives ("1 Sergeant and 9 Troopers" / "2 … and 18 …")."""
+    Entries that each contain ' and <number>' are alternatives ("1 Sergeant and 9 Troopers" / "2 … and 18 …");
+    other ' and's are part of the model name ("Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol")."""
+    split = lambda e: re.split(r'\s+and\s+(?=\d)', e)  # noqa: E731
     def part(text):
         m = re.match(r'^(\d+)(?:-(\d+))?\s+(.+)$', text.strip())
         return (int(m.group(1)), int(m.group(2) or m.group(1)), type_key(m.group(3))) if m else None
 
     entries = [e for e in entries if e.strip() and e.strip().upper() != 'OR']
-    if len(entries) > 1 and all(' and ' in e for e in entries):
-        alts = [[part(p) for p in e.split(' and ')] for e in entries]
+    if len(entries) > 1 and all(len(split(e)) > 1 for e in entries):
+        alts = [[part(p) for p in split(e)] for e in entries]
     else:
-        alts = [[part(p) for e in entries for p in e.split(' and ')]]
+        alts = [[part(p) for e in entries for p in split(e)]]
     return [[p for p in alt if p] for alt in alts if any(alt)]
 
 
 def type_counts(alternatives, models):
-    """{type: count} for a unit of `models` models."""
+    """{type: count} for a unit of `models` models. A size below the sum of the minimums (Decimus Kill Team: 5 models
+    of "1, 1, 1-2, 1-2, 1-2, 1-2") leaves out the last ranged types."""
     for alt in alternatives:
         lo, hi = sum(p[0] for p in alt), sum(p[1] for p in alt)
+        if models < lo and len(alternatives) == 1:
+            short = lo - models
+            alt = list(alt)
+            for i in reversed(range(len(alt))):
+                a, b, t = alt[i]
+                if short and a > 0 and b > a:
+                    alt[i] = (a - 1, b, t)
+                    short -= 1
+            lo = sum(p[0] for p in alt)
         if lo <= models <= hi:
             counts = {t: a for a, _, t in alt}
             rest = models - lo
@@ -153,7 +165,11 @@ def make_resolver(weapon_ids, global_ids=()):
         # the names differ by one leading qualifier word
         ends = [i for c in cands for i in known if (c.endswith('-' + i) and one_word(c[:-len(i) - 1]))
                 or (i.endswith('-' + c) and one_word(i[:-len(c) - 1]))]
-        return max(ends, key=len) if ends else None
+        if ends:
+            return max(ends, key=len)
+        # or by one word too many at the end (GW typo "Bolt Rifle Fire" for "Bolt Rifle")
+        starts = [i for c in cands for i in known if c.startswith(i + '-') and one_word(c[len(i) + 1:]) and '-' in i]
+        return max(starts, key=len) if starts else None
 
     def resolve(text, fuzzy=True):
         """'2 twin heavy bolters' → (2, ['twin-heavy-bolter'], True); 'vox-caster' → (1, ['gear:vox-caster'], False)"""
@@ -311,7 +327,7 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         return opt
 
     # all models at once
-    m = re.match(r'^All (?:[\w-]+ )?models in this unit can each have their (?P<x>.+?) replaced with (?P<y>.*)$', t)
+    m = re.match(r'^All (?:[\w-]+ )*?models in this unit can each have their (?P<x>.+?) replaced with (?P<y>.*)$', t)
     if m:
         keys, packages = pack(targets(m.group('y')))
         return {'type': 'swap', 'scope': 'all', 'replaces': items_of(m.group('x'), resolve), 'choices': [''] + keys, 'packages': packages} if keys else None
@@ -514,6 +530,15 @@ def ability_weapons(unit, resolve):
     return out
 
 
+def equipped_items(unit, type_name, resolve):
+    """Per-model equipment of one model type, from its "… is equipped with:" sentence (None if it has none)."""
+    for e in unit.get('equipped', []):
+        subject, _, rest = e.partition(' is equipped with')
+        if rest and type_key(re.sub(r'^(?:Every|Each|The)\s+', '', subject)) == type_name:
+            return [x for part in rest.split(':', 1)[-1].split(';') for x in items_of(part, resolve)]
+    return None
+
+
 def build(unit, model_sizes, global_weapons=(), faction_gear=None):
     """Add sizes[].loadout and wargear (new schema) to an imported unit. Returns the list of option
     texts that could not be structured."""
@@ -606,6 +631,30 @@ def build(unit, model_sizes, global_weapons=(), faction_gear=None):
                         'type': 'toggle', 'scope': 'all', 'replaces': [], 'gives': key, 'packages': {key: items},
                         'maxBySize': {str(m): 1 for m in model_sizes}, 'owner': re.sub(r'\s*models?$', '', name),
                         'labels': {key: ' + '.join(item_name(x['item']) for x in items)}})
+
+    # optional model types ("0-1 Chapter Ancient", "0-1 Chapter Champion" with "1-6 Victrix Honour Guard"): the sizes
+    # count the main models, so each optional model is a toggle that takes the place of one of them (only the
+    # equipment that differs is swapped)
+    if not companions and not addon and len(alts) == 1:
+        main = max(alts[0], key=lambda p: p[1])
+        main_items = equipped_items(unit, main[2], resolve)
+        next_id = len(raw_options) + 1
+        for lo, hi, t in alts[0]:
+            items = equipped_items(unit, t, resolve) if lo == 0 and t != main[2] else None
+            if not items or not main_items:
+                continue
+            common = {x['item'] for x in items} & {x['item'] for x in main_items}
+            gives = [x for x in items if x['item'] not in common]
+            if not gives:
+                continue
+            key = '+'.join(x['item'] for x in gives)
+            name = next(e.split(' ', 1)[1] for e in unit['composition'] if type_key(e.split(' ', 1)[1]) == t)
+            options.append({'id': f'o{next_id}',
+                            'label': {'en': f'{name}: add', 'es': f'{name}: añadir'}, 'type': 'toggle',
+                            'replaces': [x for x in main_items if x['item'] not in common], 'gives': key, 'packages': {key: gives},
+                            'maxBySize': {str(m): min(hi, sizes_counts[m].get(main[2], 0)) for m in model_sizes},
+                            'owner': re.sub(r'\s*models?$', '', name), 'labels': {key: ' + '.join(item_name(x['item']) for x in gives)}})
+            next_id += 1
 
     # footnotes that limit combinations; the app checks them when validating the list
     notes = ' '.join(unit.get('wargearNotes', []))

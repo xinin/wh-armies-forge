@@ -1,0 +1,7 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "caanok-var": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101447_SpaceMarinesIronHandsCaanokVar01.jpg?fm=webp&w=480&h=495",
+  "iron-father-feirros": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101257_SMIHFeirros01.jpg?fm=webp&w=480&h=495"
+ }
+}

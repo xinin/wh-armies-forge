@@ -1,0 +1,7 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "korsarro-khan": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101255_WSKorsarroKhan01.jpg?fm=webp&w=480&h=495",
+  "suboden-khan": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101448_SPACEMARINESWhiteScarsSubodenKhan01.jpg?fm=webp&w=480&h=495"
+ }
+}

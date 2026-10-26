@@ -1,0 +1,14 @@
+{
+ "_note": "Unit picture URLs (webstore). Fill with tools/store_images.py or from the app.",
+ "units": {
+  "castellan": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120107015_GKCastellanCroweLead.jpg?fm=webp&w=480&h=495",
+  "chaplain-grimaldus": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101364_BTChaplainGrimaldusandRetinueLead.jpg?fm=webp&w=480&h=495",
+  "crusade-ancient": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101442_BlackTemplarsCrusadeAncient1Update.jpg?fm=webp&w=480&h=495",
+  "crusader-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101351_CrusaderSquadLead.jpg?fm=webp&w=480&h=495",
+  "emperors-champion": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101366_EmperorsChampionLead.jpg?fm=webp&w=480&h=495",
+  "execrator": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101443_BlackTemplarsExecrator1Update.jpg?fm=webp&w=480&h=495",
+  "high-marshal-helbrecht": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101363_BTHighMarshalHelbrechtLead.jpg?fm=webp&w=480&h=495",
+  "marshal": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101368_BTMarshalLead.jpg?fm=webp&w=480&h=495",
+  "sword-brethren-squad": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120101357_BTSwordBrethrenLead.jpg?fm=webp&w=480&h=495"
+ }
+}

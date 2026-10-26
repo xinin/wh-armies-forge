@@ -1,0 +1,113 @@
+{
+ "id": "deathwatch",
+ "name": {
+  "en": "Deathwatch",
+  "es": "Deathwatch"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "extraRules": [
+  {
+   "name": {
+    "en": "Veteran Recruits"
+   },
+   "text": {
+    "en": "Your army cannot include the following ADEPTUS ASTARTES units:\nSCOUT SQUAD units.\nTERMINATOR SQUAD units.\nTERMINATOR ASSAULT SQUAD units."
+   }
+  }
+ ],
+ "wahapedia": {
+  "faction": "space-marines",
+  "chapter": "DEATHWATCH",
+  "chapterBit": "40"
+ },
+ "parentExcludes": {
+  "units": [
+   "scout-squad",
+   "terminator-squad",
+   "terminator-assault-squad"
+  ]
+ },
+ "detachments": [
+  {
+   "id": "black-spear-task-force",
+   "cost": 3,
+   "name": {
+    "en": "Black Spear Task Force"
+   },
+   "rule": {
+    "name": {
+     "en": "Mission Tactics"
+    },
+    "text": {
+     "en": "Friendly KILL TEAM units with this ability have the following abilities: Furor Tactics: If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1]. Malleus Tactics: If the tactical doctrine is active for your unit, your unit’s attacks have [LETHAL HITS]. Purgatus Tactics: If the…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "the-thief-of-secrets",
+     "requires": [
+      [
+       "WATCH",
+       "MASTER"
+      ],
+      [
+       "CAPTAIN"
+      ]
+     ],
+     "name": {
+      "en": "The Thief of Secrets"
+     },
+     "text": {
+      "en": "WATCH MASTER/CAPTAIN model only. This model has the following weapon: MELEE WEAPONS RANGE A WS S AP D The Thief of Secrets The Thief of Secrets Melee 6 2+ 6 -3 2"
+     }
+    },
+    {
+     "id": "beacon-angelis",
+     "requires": [],
+     "name": {
+      "en": "Beacon Angelis"
+     },
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. If this unit is a KILL TEAM unit, this unit has: Deep Strike. When you target this unit with the Rapid Ingress Stratagem, that use is -1CP."
+     }
+    },
+    {
+     "id": "the-tome-of-ectoclades",
+     "requires": [
+      [
+       "WATCH",
+       "MASTER"
+      ],
+      [
+       "CAPTAIN"
+      ]
+     ],
+     "name": {
+      "en": "The Tome of Ectoclades"
+     },
+     "text": {
+      "en": "WATCH MASTER/CAPTAIN model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, the assault doctrine, devastator doctrine and tactical doctrine are active for…"
+     }
+    },
+    {
+     "id": "osseus-key",
+     "requires": [
+      [
+       "WATCH",
+       "MASTER"
+      ],
+      [
+       "TECHMARINE"
+      ]
+     ],
+     "name": {
+      "en": "Osseus Key"
+     },
+     "text": {
+      "en": "WATCH MASTER/TECHMARINE model only. While an enemy VEHICLE unit is within 6\" of this model, that enemy unit’s attacks have -1 A."
+     }
+    }
+   ]
+  }
+ ]
+}

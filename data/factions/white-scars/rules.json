@@ -1,0 +1,41 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "spearpoint-task-force": {
+   "rule": {
+    "name": {
+     "en": "Storm-swift Onslaught"
+    },
+    "text": {
+     "en": "You can select the assault doctrine or tactical doctrine one additional time per battle.\nFriendly ADEPTUS ASTARTES MOUNTED/SPEEDER units have +1 to advance rolls.\nFriendly SUBODEN KHAN units have the following ability:\nWrath of the First Khan: At the end of the Fight phase, if this unit was eligible to fight this phase, you can use this ability. If you do:\nIf this unit is unengaged, this unit can make a normal move.\nOr: If this unit is engaged, this unit can make a fall-back move.\nRestrictions: Your army can include WHITE SCARS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+    }
+   },
+   "enhancements": {
+    "stormseers-wisdom": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit can re-roll advance rolls."
+     },
+     "points": 15
+    },
+    "chogorian-huntmaster": {
+     "text": {
+      "en": "ADEPTUS ASTARTES MOUNTED/SPEEDER unit only. When this unit is selected to make an ingress move, treat the current battle round number as being one higher than it actually is."
+     },
+     "points": 20
+    },
+    "hunters-eye": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit’s ranged attacks:\nHave [IGNORES COVER].\nHave [SUSTAINED HITS 1]."
+     },
+     "points": 25
+    },
+    "spearpoint-paragon": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks have:\n+1 S and AP.\nOr: If this unit made a charge move this turn, +2 S and AP."
+     },
+     "points": 25
+    }
+   }
+  }
+ }
+}

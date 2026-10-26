@@ -1,0 +1,41 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "blade-of-ultramar": {
+   "rule": {
+    "name": {
+     "en": "Mastered Doctrines"
+    },
+    "text": {
+     "en": "If your army includes a MARNEUS CALGAR unit, you can select the assault doctrine/devastator doctrine/tactical doctrine each one additional time per battle."
+    }
+   },
+   "enhancements": {
+    "student-of-the-codex": {
+     "text": {
+      "en": "CAPTAIN model only. The tactical doctrine is active for this unit in addition to any other combat doctrine."
+     },
+     "points": 20
+    },
+    "armour-of-antoninus": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model has:\n2+ Sv.\nFeel No Pain 5+."
+     },
+     "points": 15
+    },
+    "oath-of-macragge": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This model’s melee attacks have:\n+1 S and AP.\nOr: If the assault doctrine is active for this unit, +2 S and AP."
+     },
+     "points": 20
+    },
+    "veteran-of-behemoth": {
+     "text": {
+      "en": "ADEPTUS ASTARTES model only. This unit’s ranged attacks have [Sustained Hits 1]."
+     },
+     "points": 20
+    }
+   }
+  }
+ }
+}

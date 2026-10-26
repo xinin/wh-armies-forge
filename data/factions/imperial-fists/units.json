@@ -1,0 +1,354 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World, Warhammer Legends and other Chapters' datasheets: never imported.",
+  "ids": [
+   "adrax-agatone",
+   "aethon-shaan",
+   "arjac-rockfist",
+   "asmodai",
+   "astorath",
+   "astraeus",
+   "azrael",
+   "baal-predator",
+   "belial",
+   "bjorn-the-fell-handed",
+   "blood-angels-captain",
+   "blood-claws",
+   "caanok-var",
+   "captain-titus",
+   "castellan",
+   "cato-sicarius",
+   "centurion-assault-squad",
+   "centurion-devastator-squad",
+   "cerberus",
+   "chaplain-grimaldus",
+   "chief-librarian-mephiston",
+   "chief-librarian-tigurius",
+   "commander-dante",
+   "corvus-blackstar",
+   "crusade-ancient",
+   "crusader-squad",
+   "death-company-captain",
+   "death-company-captain-with-jump-pack",
+   "death-company-dreadnought",
+   "death-company-marines",
+   "death-company-marines-with-jump-packs",
+   "deathwatch-terminator-squad",
+   "deathwatch-veterans",
+   "deathwing-knights",
+   "deathwing-terminator-squad",
+   "decimus-kill-team",
+   "dreadnought",
+   "emperor-s-champion",
+   "execrator",
+   "ezekiel",
+   "falchion",
+   "fenrisian-wolves",
+   "fortis-kill-team",
+   "gladiator-lancer-1",
+   "gladiator-reaper-1",
+   "gladiator-valiant-1",
+   "grey-hunters",
+   "hammerfall-bunker",
+   "high-marshal-helbrecht",
+   "impulsor-1",
+   "indomitor-kill-team",
+   "inner-circle-companions",
+   "iron-father-feirros",
+   "iron-priest",
+   "kaius-konorius",
+   "kayvaan-shrike",
+   "kill-team-cassius",
+   "kor-sarro-khan",
+   "kratos",
+   "land-raider-excelsior",
+   "land-speeder-vengeance",
+   "lazarus",
+   "lemartes",
+   "lion-el-jonson",
+   "logan-grimnar",
+   "marneus-calgar",
+   "marshal",
+   "mastodon",
+   "murderfang",
+   "nephilim-jetfighter",
+   "njal-stormcaller",
+   "predator-annihilator",
+   "predator-destructor",
+   "ragnar-blackmane",
+   "rapier-carrier",
+   "ravenwing-black-knights",
+   "ravenwing-command-squad",
+   "ravenwing-dark-talon",
+   "ravenwing-darkshroud",
+   "razorback",
+   "relic-razorback",
+   "repulsor-1",
+   "repulsor-executioner-1",
+   "rhino-primaris",
+   "roboute-guilliman",
+   "sammael",
+   "sanguinary-guard",
+   "sanguinary-priest",
+   "scout-bike-squad",
+   "sicaran",
+   "spectrus-kill-team",
+   "stormhawk-interceptor",
+   "stormraven-gunship",
+   "stormtalon-gunship",
+   "suboden-khan",
+   "sword-brethren-squad",
+   "talonstrike-kill-team",
+   "tarantula-air-defence-battery",
+   "tarantula-sentry-battery",
+   "terrax-pattern-termite",
+   "the-sanguinor",
+   "thunderhawk-gunship",
+   "thunderwolf-cavalry",
+   "typhon",
+   "ulrik-the-slayer",
+   "venerable-dreadnought",
+   "venerable-dreadnought-1",
+   "victrix-honour-guard",
+   "vindicator",
+   "vulkan-he-stan",
+   "wardens-of-ultramar-1",
+   "watch-captain-artemis",
+   "watch-master",
+   "whirlwind",
+   "wolf-guard-battle-leader",
+   "wolf-guard-headtakers",
+   "wolf-guard-terminators",
+   "wolf-priest",
+   "wolf-scouts-1",
+   "wulfen",
+   "wulfen-dreadnought-1",
+   "wulfen-with-storm-shields"
+  ]
+ },
+ "units": [
+  {
+   "id": "darnath-lysander",
+   "name": {
+    "en": "Darnath Lysander",
+    "es": "Darnath Lysander"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "IMPERIUM",
+    "TERMINATOR"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "7",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "fist-of-dorn",
+     "name": {
+      "en": "Fist of Dorn"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Cleave 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rampart (Once per battle, per army)"
+     },
+     "text": {
+      "en": "At the start of any phase, you can use this ability. If you do, this model has 2+ InSv until the end of the phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Icon of Obstinacy"
+     },
+     "text": {
+      "en": "Attacks that target this unit have -1 to hit rolls."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Darnath-Lysander",
+   "composition": [
+    "1 Darnath Lysander model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Fist of Dorn."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "terminator-assault-squad",
+     "terminator-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "fist-of-dorn": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "fist-of-dorn"
+   ]
+  },
+  {
+   "id": "tor-garadon",
+   "name": {
+    "en": "Tor Garadon",
+    "es": "Tor Garadon"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "GRAVIS",
+    "IMPERIUM"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "artificer-grav-gun",
+     "name": {
+      "en": "Artificer Grav-gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-vehicle 2+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hand-of-defiance",
+     "name": {
+      "en": "Hand of Defiance"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "12",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Siege Captain"
+     },
+     "text": {
+      "en": "This model’s attacks that target a FORTIFICATION/MONSTER/VEHICLE unit have +2 S, AP and D."
+     }
+    },
+    {
+     "name": {
+      "en": "Signum Array"
+     },
+     "text": {
+      "en": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That enemy unit cannot have the benefit of cover."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tor-Garadon",
+   "composition": [
+    "1 Tor Garadon model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Artificer Grav-gun; 1 Hand of Defiance."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "aggressor-squad",
+     "eradicator-squad-with-heavy-bolters",
+     "eradicator-squad-with-melta-rifles",
+     "heavy-intercessor-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "artificer-grav-gun": 1,
+      "hand-of-defiance": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "artificer-grav-gun",
+    "hand-of-defiance"
+   ]
+  }
+ ]
+}

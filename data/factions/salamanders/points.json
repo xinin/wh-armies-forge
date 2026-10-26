@@ -1,0 +1,32 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "verified": [
+  "all-enhancements",
+  "adrax-agatone",
+  "vulkan-hestan"
+ ],
+ "units": {
+  "adrax-agatone": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "vulkan-hestan": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ]
+ },
+ "enhancements": {
+  "forged-in-battle": 25,
+  "adamantine-mantle": 20,
+  "war-tempered-artifice": 25,
+  "immolator": 20
+ },
+ "unitsExtraCopies": {},
+ "wargearCosts": {}
+}

@@ -89,9 +89,7 @@ def collect():
                 add(f, 'attach-rule', u['attachRule'])
         fa = json.loads((fdir / 'faction.json').read_text())
         full = json.loads((fdir / 'rules.json').read_text())['detachments'] if (fdir / 'rules.json').exists() else {}
-        add(f, 'army-rule', fa['armyRule']['name'])
-        add(f, 'army-rule', fa['armyRule']['text'])
-        for r in fa.get('extraRules', []):
+        for r in ([fa['armyRule']] if fa.get('armyRule') else []) + fa.get('extraRules', []):
             add(f, 'army-rule', r['name'])
             add(f, 'army-rule', r['text'])
         for d in fa['detachments']:
@@ -117,6 +115,11 @@ def collect():
             if s.get(k):
                 add('_shared', 'stratagem-' + k, s[k])
 
+    # a Chapter's texts that its parent faction also has belong to the parent (the app loads both files)
+    parents = {f['id']: f['parent'] for f in json.loads((ROOT / 'data' / 'factions' / 'index.json').read_text())['factions'] if f.get('parent')}
+    for f, p in parents.items():
+        for t in [t for t in texts.get(f, {}) if t in texts.get(p, {})]:
+            del texts[f][t]
     # texts used by 2+ factions go to the edition file
     count = collections.Counter(t for f, d in texts.items() if f != '_shared' for t in d)
     shared = texts.setdefault('_shared', collections.OrderedDict())

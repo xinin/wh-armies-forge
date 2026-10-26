@@ -1,0 +1,145 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+ "detachments": {
+  "black-spear-task-force": [
+   {
+    "id": "armour-of-contempt",
+    "name": {
+     "en": "Armour Of Contempt"
+    },
+    "cp": 1,
+    "source": "Black Spear Task Force",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit."
+    },
+    "target": {
+     "en": "That ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Attacks that target your unit have -1 AP until that enemy unit has attacked."
+    }
+   },
+   {
+    "id": "kraken-rounds",
+    "name": {
+     "en": "Kraken Rounds"
+    },
+    "cp": 1,
+    "source": "Black Spear Task Force",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Kraken rounds utilise adamantine cores and improved propellants to penetrate the thickest hide."
+    },
+    "when": {
+     "en": "Your Shooting phase when a KILL TEAM unit is selected to shoot."
+    },
+    "target": {
+     "en": "That KILL TEAM unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks: Have +6\" R. Have +1 S."
+    }
+   },
+   {
+    "id": "hellfire-rounds",
+    "name": {
+     "en": "Hellfire Rounds"
+    },
+    "cp": 1,
+    "source": "Black Spear Task Force",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Hellfire rounds douse their targets in voracious acids that are utterly lethal to organic life."
+    },
+    "when": {
+     "en": "Your Shooting phase when a KILL TEAM unit is selected to shoot."
+    },
+    "target": {
+     "en": "That KILL TEAM unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks (excluding [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+]."
+    }
+   },
+   {
+    "id": "dragonfire-rounds",
+    "name": {
+     "en": "Dragonfire Rounds"
+    },
+    "cp": 1,
+    "source": "Black Spear Task Force",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Dragonfire rounds are designed to explode just before contact, saturating foes in cover with searing gas and flames."
+    },
+    "when": {
+     "en": "Your Shooting phase when a KILL TEAM unit is selected to shoot."
+    },
+    "target": {
+     "en": "That KILL TEAM unit."
+    },
+    "effect": {
+     "en": "Your unit’s ranged attacks: Can re-roll wound rolls of 1. Have [IGNORES COVER]."
+    }
+   },
+   {
+    "id": "adaptive-tactics",
+    "name": {
+     "en": "Adaptive Tactics"
+    },
+    "cp": 1,
+    "source": "Black Spear Task Force",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "Only a truly versatile approach to warfare allows the tactical genius of the Deathwatch to best the myriad xenos foes they face."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly ADEPTUS ASTARTES unit."
+    },
+    "effect": {
+     "en": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase."
+    }
+   },
+   {
+    "id": "site-to-site-teleportation",
+    "name": {
+     "en": "Site-To-Site Teleportation"
+    },
+    "cp": 1,
+    "source": "Black Spear Task Force",
+    "kind": null,
+    "phase": "fight",
+    "turn": "enemy",
+    "legend": {
+     "en": "Site-to-site battlefield teleportation is a rare capability indeed, used only by the Deathwatch in extreme situations."
+    },
+    "when": {
+     "en": "End of your opponent’s Fight phase."
+    },
+    "target": {
+     "en": "One friendly unengaged ADEPTUS ASTARTES INFANTRY unit."
+    },
+    "effect": {
+     "en": "Place your unit in strategic reserves. If your unit has KILL TEAM, your unit has Deep Strike until the end of your next Movement phase."
+    }
+   }
+  ]
+ }
+}

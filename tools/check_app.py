@@ -30,6 +30,8 @@ import time
 import urllib.request
 from pathlib import Path
 
+import factions
+
 ROOT = Path(__file__).resolve().parent.parent
 CHROME = next((p for p in ('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
                            shutil.which('google-chrome'), shutil.which('chromium'), shutil.which('chrome')) if p and Path(p).exists()), None)
@@ -45,9 +47,9 @@ KEYWORDS = re.compile(r"\b[A-Z][A-Z’'\-]+(?:\s+[A-Z][A-Z’'\-]+)*\b")
 
 def test_list(n, faction):
     """Every datasheet and detachment of the faction, with wargear choices and attached characters."""
-    fdir = ROOT / 'data' / 'factions' / faction
-    units = json.loads((fdir / 'units.json').read_text())['units']
-    detachments = [d['id'] for d in json.loads((fdir / 'faction.json').read_text())['detachments']]
+    data = factions.load(faction)  # a Chapter with its parent's datasheets and detachments
+    units = data['units']
+    detachments = [d['id'] for d in data['faction']['detachments']]
     roster = []
     for i, u in enumerate(units):
         wargear = {}

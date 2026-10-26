@@ -1,0 +1,382 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World, Warhammer Legends and other Chapters' datasheets: never imported.",
+  "ids": [
+   "adrax-agatone",
+   "arjac-rockfist",
+   "asmodai",
+   "astorath",
+   "astraeus",
+   "azrael",
+   "baal-predator",
+   "belial",
+   "bjorn-the-fell-handed",
+   "blood-angels-captain",
+   "blood-claws",
+   "caanok-var",
+   "captain-titus",
+   "castellan",
+   "cato-sicarius",
+   "centurion-assault-squad",
+   "centurion-devastator-squad",
+   "cerberus",
+   "chaplain-grimaldus",
+   "chief-librarian-mephiston",
+   "chief-librarian-tigurius",
+   "commander-dante",
+   "corvus-blackstar",
+   "crusade-ancient",
+   "crusader-squad",
+   "darnath-lysander",
+   "death-company-captain",
+   "death-company-captain-with-jump-pack",
+   "death-company-dreadnought",
+   "death-company-marines",
+   "death-company-marines-with-jump-packs",
+   "deathwatch-terminator-squad",
+   "deathwatch-veterans",
+   "deathwing-knights",
+   "deathwing-terminator-squad",
+   "decimus-kill-team",
+   "dreadnought",
+   "emperor-s-champion",
+   "execrator",
+   "ezekiel",
+   "falchion",
+   "fenrisian-wolves",
+   "fortis-kill-team",
+   "gladiator-lancer-1",
+   "gladiator-reaper-1",
+   "gladiator-valiant-1",
+   "grey-hunters",
+   "hammerfall-bunker",
+   "high-marshal-helbrecht",
+   "impulsor-1",
+   "indomitor-kill-team",
+   "inner-circle-companions",
+   "iron-father-feirros",
+   "iron-priest",
+   "kaius-konorius",
+   "kill-team-cassius",
+   "kor-sarro-khan",
+   "kratos",
+   "land-raider-excelsior",
+   "land-speeder-vengeance",
+   "lazarus",
+   "lemartes",
+   "lion-el-jonson",
+   "logan-grimnar",
+   "marneus-calgar",
+   "marshal",
+   "mastodon",
+   "murderfang",
+   "nephilim-jetfighter",
+   "njal-stormcaller",
+   "predator-annihilator",
+   "predator-destructor",
+   "ragnar-blackmane",
+   "rapier-carrier",
+   "ravenwing-black-knights",
+   "ravenwing-command-squad",
+   "ravenwing-dark-talon",
+   "ravenwing-darkshroud",
+   "razorback",
+   "relic-razorback",
+   "repulsor-1",
+   "repulsor-executioner-1",
+   "rhino-primaris",
+   "roboute-guilliman",
+   "sammael",
+   "sanguinary-guard",
+   "sanguinary-priest",
+   "scout-bike-squad",
+   "sicaran",
+   "spectrus-kill-team",
+   "stormhawk-interceptor",
+   "stormraven-gunship",
+   "stormtalon-gunship",
+   "suboden-khan",
+   "sword-brethren-squad",
+   "talonstrike-kill-team",
+   "tarantula-air-defence-battery",
+   "tarantula-sentry-battery",
+   "terrax-pattern-termite",
+   "the-sanguinor",
+   "thunderhawk-gunship",
+   "thunderwolf-cavalry",
+   "tor-garadon",
+   "typhon",
+   "ulrik-the-slayer",
+   "venerable-dreadnought",
+   "venerable-dreadnought-1",
+   "victrix-honour-guard",
+   "vindicator",
+   "vulkan-he-stan",
+   "wardens-of-ultramar-1",
+   "watch-captain-artemis",
+   "watch-master",
+   "whirlwind",
+   "wolf-guard-battle-leader",
+   "wolf-guard-headtakers",
+   "wolf-guard-terminators",
+   "wolf-priest",
+   "wolf-scouts-1",
+   "wulfen",
+   "wulfen-dreadnought-1",
+   "wulfen-with-storm-shields"
+  ]
+ },
+ "units": [
+  {
+   "id": "aethon-shaan",
+   "name": {
+    "en": "Aethon Shaan",
+    "es": "Aethon Shaan"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAPTER MASTER",
+    "CHARACTER",
+    "EPIC HERO",
+    "EXPLOSIVES",
+    "FLY",
+    "IMPERIUM",
+    "JUMP PACK",
+    "SMOKE",
+    "TACTICUS"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-bolt-pistol",
+     "name": {
+      "en": "Heavy Bolt Pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "claws-of-severax",
+     "name": {
+      "en": "Claws of Severax"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Master of Shadows"
+     },
+     "text": {
+      "en": "In your Command phase, you can select one friendly ADEPTUS ASTARTES INFANTRY unit. You can re-roll charge rolls for that unit until the start of your next Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Blackwing Mantle (Once per phase, per army)"
+     },
+     "text": {
+      "en": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Lone Operative",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Aethon-Shaan",
+   "composition": [
+    "1 Aethon Shaan model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Claws of Severax; 1 Heavy Bolt Pistol."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "claws-of-severax": 1,
+      "heavy-bolt-pistol": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "claws-of-severax",
+    "heavy-bolt-pistol"
+   ]
+  },
+  {
+   "id": "kayvaan-shrike",
+   "name": {
+    "en": "Kayvaan Shrike",
+    "es": "Kayvaan Shrike"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CAPTAIN",
+    "CHARACTER",
+    "EPIC HERO",
+    "EXPLOSIVES",
+    "FLY",
+    "IMPERIUM",
+    "JUMP PACK",
+    "PHOBOS",
+    "SMOKE"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "blackout",
+     "name": {
+      "en": "Blackout"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Precision",
+        "Close-quarters"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ravens-talons",
+     "name": {
+      "en": "Raven’s Talons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Precision",
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Trifold Path of Shadow"
+     },
+     "text": {
+      "en": "This unit has: Stealth. -3\" detection range."
+     }
+    },
+    {
+     "name": {
+      "en": "Echo of the Ravenspire"
+     },
+     "text": {
+      "en": "At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader",
+    "Lone Operative"
+   ],
+   "factionAbilities": [
+    "Combat Doctrines",
+    "Transhuman Strategist"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Kayvaan-Shrike",
+   "composition": [
+    "1 Kayvaan Shrike model"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Blackout; 1 Raven’s Talons."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "assault-intercessors-with-jump-packs",
+     "vanguard-veteran-squad-with-jump-packs"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "blackout": 1,
+      "ravens-talons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blackout",
+    "ravens-talons"
+   ]
+  }
+ ]
+}
