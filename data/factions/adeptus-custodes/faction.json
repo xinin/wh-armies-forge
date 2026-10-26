@@ -66,7 +66,7 @@
       "en": "Eagle's Eye"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model has +1 W. (Once per battle, per army) When attacks are allocated to this model, you can use this ability. If you do, this model has 3+ InSv. <h2"
+      "en": "ADEPTUS CUSTODES model only. This model has +1 W. (Once per battle, per army) When attacks are allocated to this model, you can use this ability. If you do, this model has 3+ InSv."
      }
     }
    ]
@@ -166,7 +166,7 @@
       "en": "Huntress' Eye"
      },
      "text": {
-      "en": "ANATHEMA PSYKANA model only. In your Movement phase, you can select one visible enemy unit within 12\" of this unit. That unit makes a battle-shock roll, with -1 to that battle-shock roll. <h2"
+      "en": "ANATHEMA PSYKANA model only. In your Movement phase, you can select one visible enemy unit within 12\" of this unit. That unit makes a battle-shock roll, with -1 to that battle-shock roll."
      }
     }
    ]
@@ -244,7 +244,7 @@
       "en": "Radiant Mantle"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES INFANTRY model only. Attacks that target this unit have -1 to hit rolls. <h2"
+      "en": "ADEPTUS CUSTODES INFANTRY model only. Attacks that target this unit have -1 to hit rolls."
      }
     }
    ]
@@ -336,7 +336,7 @@
       "en": "Auric Exemplar"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model’s melee attacks have [Cleave 1]. <h2"
+      "en": "ADEPTUS CUSTODES model only. This model’s melee attacks have [Cleave 1]."
      }
     }
    ]
@@ -377,7 +377,7 @@
       "en": "Genalchemic Warding"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model has Feel No Pain 5+. <h2"
+      "en": "ADEPTUS CUSTODES model only. This model has Feel No Pain 5+."
      }
     }
    ]
@@ -473,7 +473,7 @@
       "en": "Auric Eagle"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES INFANTRY/MOUNTED unit only (excluding TERMINATOR units). This unit has +1 to advance rolls and charge rolls. <h2"
+      "en": "ADEPTUS CUSTODES INFANTRY/MOUNTED unit only (excluding TERMINATOR units). This unit has +1 to advance rolls and charge rolls."
      },
      "type": "upgrade",
      "excludes": [
@@ -520,7 +520,7 @@
       "en": "Pareldor's Caducatrix"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES model only. (Once per battle, per army) At the start of any phase, this model heals D3+3 wounds. <h2"
+      "en": "ADEPTUS CUSTODES model only. (Once per battle, per army) At the start of any phase, this model heals D3+3 wounds."
      }
     }
    ]
@@ -613,7 +613,7 @@
       "en": "Augury Uplink (one per army)"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+. <h2"
+      "en": "ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+."
      },
      "type": "upgrade"
     }

@@ -17,11 +17,11 @@ Es una web estática, sin dependencias ni paso de build.
 ## Funcionalidades
 
 - Catálogo de unidades con imagen, filtros por rol y búsqueda. Arrastra una unidad al ejército o pulsa **+**.
-- **Líderes**: arrastra un personaje sobre una unidad y las unidades válidas se iluminan. También puedes usar el desplegable "Unir a…". Arrastrar un líder fuera de la unidad lo separa, y arrastrar una unidad al catálogo la borra.
+- **Líderes y apoyo**: arrastra un personaje sobre una unidad y las unidades válidas se iluminan. También puedes usar el desplegable "Unir a…". Arrastrar un líder fuera de la unidad lo separa, y arrastrar una unidad al catálogo la borra. Los datasheets «SUPPORT» de la 11ª (Crypteks, Tenientes, Apotecarios…) ocupan su propio hueco: una unidad puede llevar su líder y además un apoyo.
 - Tamaño de unidad, equipo (cambios de arma y armas especiales por cada 10 modelos), mejoras y Señor de la Guerra.
 - Tamaño de batalla con un deslizador: Incursión (1000), Fuerza de Asalto (2000) o Embestida (3000). El límite de puntos es el del tamaño elegido.
-- Destacamentos con sus Puntos de Destacamento (DP) según el tamaño de batalla.
-- Validación en vivo: límite de puntos, DP, límite de unidades (×2 para Battleline y Dedicated Transport), Héroes Épicos, número de mejoras, mejoras repetidas, una mejora por unidad combinada, líderes válidos y Señor de la Guerra.
+- Destacamentos con sus Puntos de Destacamento (DP) según el tamaño de batalla. Si un destacamento da una habilidad a ciertos datasheets a cambio de puntos (las Ataduras Necrodérmicas de los C'tan en «Pantheon of Woe»), se aplica sola y se suma al coste de la unidad.
+- Validación en vivo: límite de puntos, DP, límite de unidades (×2 para Battleline y Dedicated Transport), Héroes Épicos, número de mejoras, mejoras repetidas, una mejora por unidad combinada, líderes y apoyos válidos y Señor de la Guerra.
 - Home con tus ejércitos guardados (puntos, validez, destacamentos y miniaturas) y un formulario para crear listas nuevas.
 - **Vista de ejército** (`#/list/<id>/view`): todas las unidades con su equipo, atributos, mejoras y habilidades; los destacamentos con su regla, mejoras (y quién las lleva) y estratagemas; la regla de ejército y las estratagemas generales. Se puede imprimir.
 - **Español e inglés**: el botón ES/EN cambia la interfaz y todo el contenido de juego (datasheets, armas, habilidades, equipo, reglas, mejoras y estratagemas). Las palabras clave en mayúsculas se quedan en inglés.
@@ -111,9 +111,9 @@ Sigue [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md): crear la facción desde Wa
 
 ## Estado de los datos
 
-- **Facciones**: Astra Militarum (completa), Adeptus Custodes (27 datasheets, reglas, estratagemas, emblema y fotos de la tienda, de la 11ª), Tiránidos (50 datasheets, 10 destacamentos, emblema y 47 fotos), Caballeros Imperiales (18 datasheets, 8 destacamentos, emblema y 17 fotos) Imperio T'au (39 datasheets, 7 destacamentos, drones, emblema y 38 fotos) y Lobos Espaciales (88 datasheets, 19 destacamentos, reglas extra del capítulo, emblema y 83 fotos). El objetivo es cargar todas las facciones siguiendo [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md).
+- **Facciones**: Astra Militarum (completa), Adeptus Custodes (27 datasheets, reglas, estratagemas, emblema y fotos de la tienda, de la 11ª), Tiránidos (50 datasheets, 10 destacamentos, emblema y 47 fotos), Caballeros Imperiales (18 datasheets, 8 destacamentos, emblema y 17 fotos) Imperio T'au (39 datasheets, 7 destacamentos, drones, emblema y 38 fotos), Lobos Espaciales (88 datasheets, 19 destacamentos, reglas extra del capítulo, emblema y 83 fotos) y Necrones (51 datasheets, 12 destacamentos, emblema y 41 fotos). El objetivo es cargar todas las facciones siguiendo [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md).
 
-- Datasheets: 292 unidades oficiales de la 11ª sacadas de Wahapedia (70 de Astra Militarum, 27 de Custodes, 50 de Tiránidos, 18 de Caballeros Imperiales, 39 del Imperio T'au y 88 de Lobos Espaciales), auditadas con `tools/audit_units.py` (0 errores). Todos los textos de juego están en inglés y en español (traducción propia, no oficial; ver `tools/translations.py`). Las de Forge World y Warhammer Legends están excluidas (lista `excluded` en `units.json`) y el importador no las vuelve a meter.
+- Datasheets: 343 unidades oficiales de la 11ª sacadas de Wahapedia (70 de Astra Militarum, 27 de Custodes, 50 de Tiránidos, 18 de Caballeros Imperiales, 39 del Imperio T'au, 88 de Lobos Espaciales y 51 de Necrones), auditadas con `tools/audit_units.py` (0 errores). Todos los textos de juego están en inglés y en español (traducción propia, no oficial; ver `tools/translations.py`). Las de Forge World y Warhammer Legends están excluidas (lista `excluded` en `units.json`) y el importador no las vuelve a meter.
 - Imágenes: fotos de producto de la tienda de warhammer.com (URLs en `images.json`), sin ficheros locales.
 - Reglas de reclutamiento, destacamentos y mejoras: 11ª edición (Wahapedia, pack de facción 11 / 2.8.1, octubre 2026).
 - Puntos de unidades: los de la 11ª de cada datasheet de Wahapedia, todos verificados (sin `*`), incluido el sobrecoste por copias y los costes de equipo («per Lascannon: 5»), que se cobran por cada pieza que lleva la unidad.

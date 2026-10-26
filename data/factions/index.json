@@ -59,6 +59,16 @@
       "edition": "11th",
       "path": "space-wolves",
       "color": "#5f7f9a"
+    },
+    {
+      "id": "necrons",
+      "name": {
+        "en": "Necrons",
+        "es": "Necrones"
+      },
+      "edition": "11th",
+      "path": "necrons",
+      "color": "#2f9e6a"
     }
   ]
 }

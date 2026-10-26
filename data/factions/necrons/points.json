@@ -1,0 +1,675 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/necrons/",
+ "verified": [
+  "all-enhancements",
+  "annihilation-barge",
+  "ctan-shard-of-the-deceiver",
+  "ctan-shard-of-the-nightbringer",
+  "ctan-shard-of-the-void-dragon",
+  "canoptek-doomstalker",
+  "canoptek-macrocytes",
+  "canoptek-reanimator",
+  "canoptek-scarab-swarms",
+  "canoptek-spyders",
+  "canoptek-tomb-crawlers",
+  "canoptek-wraiths",
+  "catacomb-command-barge",
+  "chronomancer",
+  "convergence-of-dominion",
+  "cryptothralls",
+  "deathmarks",
+  "doom-scythe",
+  "doomsday-ark",
+  "flayed-ones",
+  "geomancer",
+  "ghost-ark",
+  "hexmark-destroyer",
+  "illuminor-szeras",
+  "immortals",
+  "imotekh-the-stormlord",
+  "lokhust-destroyers",
+  "lokhust-heavy-destroyers",
+  "lokhust-lord",
+  "lychguard",
+  "monolith",
+  "necron-warriors",
+  "nekrosor-ammentar",
+  "night-scythe",
+  "obelisk",
+  "ophydian-destroyers",
+  "orikan-the-diviner",
+  "overlord",
+  "overlord-with-translocation-shroud",
+  "plasmancer",
+  "psychomancer",
+  "royal-warden",
+  "skorpekh-destroyers",
+  "skorpekh-lord",
+  "technomancer",
+  "tesseract-vault",
+  "the-silent-king",
+  "tomb-blades",
+  "transcendent-ctan",
+  "trazyn-the-infinite",
+  "triarch-praetorians",
+  "triarch-stalker"
+ ],
+ "units": {
+  "annihilation-barge": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "ctan-shard-of-the-deceiver": [
+   {
+    "models": 1,
+    "points": 330
+   }
+  ],
+  "ctan-shard-of-the-nightbringer": [
+   {
+    "models": 1,
+    "points": 360
+   }
+  ],
+  "ctan-shard-of-the-void-dragon": [
+   {
+    "models": 1,
+    "points": 345
+   }
+  ],
+  "canoptek-doomstalker": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "canoptek-macrocytes": [
+   {
+    "models": 5,
+    "points": 70
+   }
+  ],
+  "canoptek-reanimator": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "canoptek-scarab-swarms": [
+   {
+    "models": 3,
+    "points": 40
+   },
+   {
+    "models": 6,
+    "points": 80
+   }
+  ],
+  "canoptek-spyders": [
+   {
+    "models": 1,
+    "points": 65
+   },
+   {
+    "models": 2,
+    "points": 110
+   }
+  ],
+  "canoptek-tomb-crawlers": [
+   {
+    "models": 2,
+    "points": 60
+   }
+  ],
+  "canoptek-wraiths": [
+   {
+    "models": 3,
+    "points": 95
+   },
+   {
+    "models": 6,
+    "points": 220
+   }
+  ],
+  "catacomb-command-barge": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "chronomancer": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "convergence-of-dominion": [
+   {
+    "models": 1,
+    "points": 60
+   },
+   {
+    "models": 2,
+    "points": 120
+   },
+   {
+    "models": 3,
+    "points": 180
+   }
+  ],
+  "cryptothralls": [
+   {
+    "models": 2,
+    "points": 60
+   }
+  ],
+  "deathmarks": [
+   {
+    "models": 5,
+    "points": 60
+   },
+   {
+    "models": 10,
+    "points": 120
+   }
+  ],
+  "doom-scythe": [
+   {
+    "models": 1,
+    "points": 200
+   }
+  ],
+  "doomsday-ark": [
+   {
+    "models": 1,
+    "points": 200
+   }
+  ],
+  "flayed-ones": [
+   {
+    "models": 5,
+    "points": 55
+   },
+   {
+    "models": 10,
+    "points": 100
+   }
+  ],
+  "geomancer": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "ghost-ark": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "hexmark-destroyer": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "illuminor-szeras": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "immortals": [
+   {
+    "models": 5,
+    "points": 65
+   },
+   {
+    "models": 10,
+    "points": 130
+   }
+  ],
+  "imotekh-the-stormlord": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "lokhust-destroyers": [
+   {
+    "models": 1,
+    "points": 40
+   },
+   {
+    "models": 2,
+    "points": 55
+   },
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 190
+   }
+  ],
+  "lokhust-heavy-destroyers": [
+   {
+    "models": 1,
+    "points": 50
+   },
+   {
+    "models": 2,
+    "points": 100
+   },
+   {
+    "models": 3,
+    "points": 165
+   }
+  ],
+  "lokhust-lord": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "lychguard": [
+   {
+    "models": 5,
+    "points": 80
+   },
+   {
+    "models": 10,
+    "points": 160
+   }
+  ],
+  "monolith": [
+   {
+    "models": 1,
+    "points": 420
+   }
+  ],
+  "necron-warriors": [
+   {
+    "models": 10,
+    "points": 85
+   },
+   {
+    "models": 20,
+    "points": 190
+   }
+  ],
+  "nekrosor-ammentar": [
+   {
+    "models": 1,
+    "points": 195
+   }
+  ],
+  "night-scythe": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "obelisk": [
+   {
+    "models": 1,
+    "points": 280
+   }
+  ],
+  "ophydian-destroyers": [
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 150
+   }
+  ],
+  "orikan-the-diviner": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "overlord": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "overlord-with-translocation-shroud": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "plasmancer": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "psychomancer": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "royal-warden": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "skorpekh-destroyers": [
+   {
+    "models": 3,
+    "points": 85
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "skorpekh-lord": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "technomancer": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "tesseract-vault": [
+   {
+    "models": 1,
+    "points": 465
+   }
+  ],
+  "the-silent-king": [
+   {
+    "models": 3,
+    "points": 420
+   }
+  ],
+  "tomb-blades": [
+   {
+    "models": 3,
+    "points": 70
+   },
+   {
+    "models": 6,
+    "points": 140
+   }
+  ],
+  "transcendent-ctan": [
+   {
+    "models": 1,
+    "points": 340
+   }
+  ],
+  "trazyn-the-infinite": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "triarch-praetorians": [
+   {
+    "models": 5,
+    "points": 80
+   },
+   {
+    "models": 10,
+    "points": 160
+   }
+  ],
+  "triarch-stalker": [
+   {
+    "models": 1,
+    "points": 110
+   }
+  ]
+ },
+ "enhancements": {
+  "dread-majesty": 30,
+  "miniaturised-nebuloscope": 15,
+  "demanding-leader": 10,
+  "chrono-impedance-fields": 25,
+  "veil-of-darkness": 20,
+  "nether-realm-casket": 20,
+  "phasal-subjugator": 35,
+  "enaegic-dermal-bond": 30,
+  "honourable-combatant": 10,
+  "unflinching-will": 20,
+  "warrior-noble": 15,
+  "eternal-conqueror": 25,
+  "quantum-abacus": 15,
+  "atomic-disintegrators": 10,
+  "gauntlet-of-compression": 20,
+  "gravitic-bolas": 15,
+  "eternal-madness": 20,
+  "ingrained-superiority": 5,
+  "soulless-reaper": 15,
+  "eldritch-nightmare": 10,
+  "destroyer-ankh": 20,
+  "murdermind": 15,
+  "mark-of-the-nekrosor": 20,
+  "cursed-circlet": 25,
+  "dimensional-overseer": 25,
+  "arisen-tyrant": 25,
+  "hyperspatial-transfer-node": 15,
+  "osteoclave-fulcrum": 20,
+  "dimensional-sanctum": 20,
+  "hyperphasic-fulcrum": 15,
+  "autodivinator": 15,
+  "metalodermal-tesla-weave": 10,
+  "relocational-optimiser": 25,
+  "mortality-shroud": 10,
+  "recursive-reanimation": 5,
+  "deepening-madness": 20,
+  "enlivened-sentinels": 20,
+  "tools-of-dominion": 15
+ },
+ "unitsExtraCopies": {
+  "canoptek-wraiths": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 115
+    },
+    {
+     "models": 6,
+     "points": 240
+    }
+   ]
+  },
+  "chronomancer": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 80
+    }
+   ]
+  },
+  "deathmarks": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 70
+    },
+    {
+     "models": 10,
+     "points": 130
+    }
+   ]
+  },
+  "doomsday-ark": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 230
+    }
+   ]
+  },
+  "lokhust-destroyers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 70
+    },
+    {
+     "models": 2,
+     "points": 85
+    },
+    {
+     "models": 3,
+     "points": 110
+    },
+    {
+     "models": 6,
+     "points": 220
+    }
+   ]
+  },
+  "lokhust-heavy-destroyers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 60
+    },
+    {
+     "models": 2,
+     "points": 110
+    },
+    {
+     "models": 3,
+     "points": 175
+    }
+   ]
+  },
+  "monolith": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 440
+    }
+   ]
+  },
+  "obelisk": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 310
+    }
+   ]
+  },
+  "ophydian-destroyers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 90
+    },
+    {
+     "models": 6,
+     "points": 160
+    }
+   ]
+  },
+  "skorpekh-destroyers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 95
+    },
+    {
+     "models": 6,
+     "points": 180
+    }
+   ]
+  },
+  "skorpekh-lord": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 105
+    }
+   ]
+  },
+  "technomancer": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 90
+    }
+   ]
+  },
+  "tesseract-vault": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 505
+    }
+   ]
+  },
+  "tomb-blades": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 80
+    },
+    {
+     "models": 6,
+     "points": 150
+    }
+   ]
+  },
+  "transcendent-ctan": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 360
+    }
+   ]
+  },
+  "triarch-stalker": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 120
+    }
+   ]
+  }
+ },
+ "unitAbilities": {
+  "singularity-matrix": 45,
+  "quantum-goad": 45,
+  "animus-damper": 35,
+  "reletavistic-tether": 40
+ }
+}

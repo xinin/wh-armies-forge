@@ -127,7 +127,7 @@
       "en": "Trygon Prime"
      },
      "text": {
-      "en": "TRYGON model only. The bearer gains the SYNAPSE keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1. <h2"
+      "en": "TRYGON model only. The bearer gains the SYNAPSE keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1."
      }
     }
    ]
@@ -200,7 +200,7 @@
       "en": "The Dirgeheart of Kharis"
      },
      "text": {
-      "en": "TYRANIDS SYNAPSE model only. While an enemy unit is within 9\" of the bearer, worsen that units Leadership characteristic by 1. <h2"
+      "en": "TYRANIDS SYNAPSE model only. While an enemy unit is within 9\" of the bearer, worsen that units Leadership characteristic by 1."
      }
     }
    ]
@@ -335,7 +335,7 @@
       "en": "Monstrous Nemesis"
      },
      "text": {
-      "en": "TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll. <h2"
+      "en": "TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll."
      }
     }
    ]
@@ -459,7 +459,7 @@
       "en": "Adrenalised Onslaught"
      },
      "text": {
-      "en": "TYRANIDS model only. Each time the bearer’s unit Piles In or Consolidates, models in this unit can move an additional 3\". <h2"
+      "en": "TYRANIDS model only. Each time the bearer’s unit Piles In or Consolidates, models in this unit can move an additional 3\"."
      }
     }
    ]
@@ -515,7 +515,7 @@
       "en": "Cryptophotaic Camouflage"
      },
      "text": {
-      "en": "VON RYAN’S LEAPERS unit only. This unit has -3\" detection range. <h2"
+      "en": "VON RYAN’S LEAPERS unit only. This unit has -3\" detection range."
      },
      "type": "upgrade"
     }
@@ -564,7 +564,7 @@
       "en": "Synaptoprescience"
      },
      "text": {
-      "en": "NORN ASSIMILATOR unit only. This unit has 4+ InSv. <h2"
+      "en": "NORN ASSIMILATOR unit only. This unit has 4+ InSv."
      },
      "type": "upgrade"
     }
@@ -628,7 +628,7 @@
       "en": "Ocular Adaptation"
      },
      "text": {
-      "en": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls. <h2"
+      "en": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls."
      }
     }
    ]

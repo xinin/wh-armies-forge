@@ -266,6 +266,17 @@
    "equipped": [
     "This model is equipped with: 1 Bolt Pistol; 1 Bolt Rifle; 1 Ceramite Fists."
    ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {
@@ -412,6 +423,14 @@
    "equipped": [
     "This model is equipped with: 1 Master-crafted Power Weapon; 1 Storm Bolter."
    ],
+   "leader": {
+    "canLead": [
+     "terminator-assault-squad",
+     "terminator-squad",
+     "wolf-guard-terminators"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {
@@ -533,6 +552,19 @@
    "equipped": [
     "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Reductor Pistol; 1 Servo-armature."
    ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {
@@ -637,6 +669,15 @@
    "equipped": [
     "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Servo-armature."
    ],
+   "leader": {
+    "canLead": [
+     "aggressor-squad",
+     "eradicator-squad-with-heavy-bolters",
+     "eradicator-squad-with-melta-rifles",
+     "heavy-intercessor-squad"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {
@@ -1112,6 +1153,12 @@
    "equipped": [
     "This model is equipped with: 1 Heavy Bolt Pistol; 1 Relics of Battle."
    ],
+   "leader": {
+    "canLead": [
+     "bladeguard-veteran-squad"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {
@@ -3850,6 +3897,16 @@
    "equipped": [
     "This model is equipped with: 1 Absolvor Bolt Pistol; 1 Executioner Relic Blade."
    ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {
@@ -4630,6 +4687,19 @@
    "equipped": [
     "This model is equipped with: 1 Bolt Pistol; 1 Ceramite Fists; 1 Master-crafted Bolter."
    ],
+   "leader": {
+    "canLead": [
+     "assault-intercessor-squad",
+     "bladeguard-veteran-squad",
+     "company-heroes",
+     "desolation-squad",
+     "hellblaster-squad",
+     "infernus-squad",
+     "intercessor-squad",
+     "sternguard-veteran-squad"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {
@@ -4957,6 +5027,16 @@
    "equipped": [
     "This model is equipped with: 1 Monomolecular Combat Blades; 1 Special-issue Bolt Pistol."
    ],
+   "leader": {
+    "canLead": [
+     "eliminator-squad",
+     "incursor-squad",
+     "infiltrator-squad",
+     "reiver-squad",
+     "wolf-scouts"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {

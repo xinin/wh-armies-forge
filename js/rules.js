@@ -42,6 +42,7 @@ export function loadoutCounts(ru, def) {
   for (const opt of [...options.filter(o => o.scope !== 'all'), ...options.filter(o => o.scope === 'all')]) {
     const v = ru.wargear?.[opt.id];
     if (opt.needs?.some(x => (counts[x.item] ?? 0) < x.n)) continue; // "if this model is equipped with …"
+    if (opt.needsNot?.some(x => counts[x.item])) continue; // "if this model is not equipped with …"
     if (opt.type === 'swap' && v) apply(opt, v, opt.scope === 'all' ? available(opt) : 1);
     if (opt.type === 'pool') for (const [key, n] of Object.entries(v ?? {})) apply(opt, key, Number(n) || 0);
     if (opt.type === 'toggle' && v) apply(opt, opt.gives, opt.scope === 'all' ? available(opt) : Number(v));
@@ -74,8 +75,15 @@ export function unitPoints(ru, data, list = null) {
   const costs = def?.wargearCosts ?? {};
   const counts = Object.keys(costs).length ? loadoutCounts(ru, def).counts : {};
   const gear = Object.entries(costs).reduce((sum, [item, pts]) => sum + (counts[item] ?? 0) * pts, 0);
-  return base + enh + gear;
+  const abilities = detachmentAbilities(ru, list, data).reduce((sum, a) => sum + a.points, 0);
+  return base + enh + gear + abilities;
 }
+
+// Abilities a chosen detachment gives to this datasheet, each with its extra cost (Pantheon of Woe: "each NECRONS
+// MONSTER unit has the relevant Necrodermal Binding ability … increase the points cost of each of those units")
+export const detachmentAbilities = (ru, list, data) => (list?.detachments ?? [])
+  .flatMap(id => data.detachmentsById.get(id)?.unitAbilities ?? [])
+  .filter(a => a.unit === ru.unitId);
 
 export const listPoints = (list, data) => list.units.reduce((sum, ru) => sum + unitPoints(ru, data, list), 0);
 
@@ -141,12 +149,17 @@ function leadTargets(leaderRu, data) {
 
 export const isLeader = (ru, data) => leadTargets(ru, data).length > 0;
 
+// 11th edition SUPPORT datasheets attach like leaders, but in their own slot: a bodyguard can have its Leader
+// unit(s) and one Support unit
+export const isSupport = (ru, data) => !!data.unitsById.get(ru.unitId)?.leader?.support;
+
 export const leadersOf = (bodyguardUid, list) => list.units.filter(u => u.attachedTo === bodyguardUid);
 
 export function bodyguardLimits(bgDef, edition) {
   return {
     maxLeaders: bgDef.bodyguard?.maxLeaders ?? edition.rules.defaultMaxLeadersPerBodyguard,
     maxWithKeyword: bgDef.bodyguard?.maxWithKeyword ?? {},
+    maxSupport: edition.rules.maxSupportPerBodyguard,
   };
 }
 
@@ -156,9 +169,10 @@ export function canAttach(leaderRu, bgRu, list, data, edition) {
   if (!leadTargets(leaderRu, data).includes(bgRu.unitId)) return false;
   const bgDef = data.unitsById.get(bgRu.unitId);
   const leaderDef = data.unitsById.get(leaderRu.unitId);
-  const others = leadersOf(bgRu.uid, list).filter(u => u.uid !== leaderRu.uid);
-  const { maxLeaders, maxWithKeyword } = bodyguardLimits(bgDef, edition);
-  if (others.length >= maxLeaders) return false;
+  const support = isSupport(leaderRu, data);
+  const others = leadersOf(bgRu.uid, list).filter(u => u.uid !== leaderRu.uid && isSupport(u, data) === support);
+  const { maxLeaders, maxWithKeyword, maxSupport } = bodyguardLimits(bgDef, edition);
+  if (others.length >= (support ? maxSupport : maxLeaders)) return false;
   for (const [kw, max] of Object.entries(maxWithKeyword)) {
     if (!hasKw(leaderDef, kw)) continue;
     const n = others.filter(o => hasKw(data.unitsById.get(o.unitId), kw)).length;
@@ -240,10 +254,12 @@ export function validate(list, data, edition) {
     const leaders = leadersOf(bg.uid, list);
     if (!leaders.length) continue;
     const bgDef = data.unitsById.get(bg.unitId);
-    const { maxLeaders, maxWithKeyword } = bodyguardLimits(bgDef, edition);
-    if (leaders.length > maxLeaders) err('err.tooManyLeaders', { unit: nameOf(bg) }, [bg.uid]);
+    const { maxLeaders, maxWithKeyword, maxSupport } = bodyguardLimits(bgDef, edition);
+    const leading = leaders.filter(l => !isSupport(l, data));
+    if (leading.length > maxLeaders) err('err.tooManyLeaders', { unit: nameOf(bg) }, [bg.uid]);
+    if (leaders.length - leading.length > maxSupport) err('err.tooManySupport', { unit: nameOf(bg) }, [bg.uid]);
     for (const [kw, max] of Object.entries(maxWithKeyword)) {
-      if (leaders.filter(l => hasKw(data.unitsById.get(l.unitId), kw)).length > max) {
+      if (leading.filter(l => hasKw(data.unitsById.get(l.unitId), kw)).length > max) {
         err('err.leaderKeyword', { unit: nameOf(bg), kw }, [bg.uid]);
       }
     }

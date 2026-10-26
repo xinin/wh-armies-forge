@@ -295,6 +295,14 @@
    "equipped": [
     "This model is equipped with: 1 Executioner Greatblade."
    ],
+   "leader": {
+    "canLead": [
+     "prosecutor-squad",
+     "vigilator-squad",
+     "witchseeker-squad"
+    ],
+    "support": true
+   },
    "role": "character",
    "sizes": [
     {

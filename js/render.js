@@ -4,7 +4,7 @@ import { unitImg, imgFrame, ROLE_COLORS } from './images.js';
 import { icon } from './icons.js';
 import {
   battleSizeOf, unitPoints, listPoints, detachmentPointsUsed, availableEnhancements,
-  isLeader, leadersOf, canAttach, optionMax, optionMaxEach, hasKw, bodyguardLimits, isExtraCopy,
+  isLeader, isSupport, leadersOf, canAttach, detachmentAbilities, optionMax, optionMaxEach, hasKw, bodyguardLimits, isExtraCopy,
   loadoutCounts, itemName, gearSlug,
 } from './rules.js';
 
@@ -149,15 +149,20 @@ function renderRosterUnit(ru, list, data, edition, flagged, customImages) {
     ${dropHint}
   </article>`;
   }
-  // Attached unit: leader(s) on top in large, the led unit below
+  // Attached unit: leader(s) and support on top in large, the led unit below
   const invalid = [ru, ...leaders].some(u => flagged.has(u.uid));
+  const supports = leaders.filter(l => isSupport(l, data));
+  const leading = leaders.filter(l => !isSupport(l, data));
+  const { maxLeaders, maxSupport } = bodyguardLimits(def, edition);
+  const slots = (key, n, max) => `<span class="leader-slots ${n >= max ? 'full' : ''}">${t(key, { n, max })}</span>`;
   return `
   <article class="ru combo ${invalid ? 'invalid' : ''}" data-uid="${ru.uid}" data-drop="unit" style="--role:${ROLE_COLORS.character}">
-    ${leaders.map(l => `<div class="leader-main ${flagged.has(l.uid) ? 'invalid' : ''}" data-uid="${l.uid}" draggable="true" data-drag="ru:${l.uid}">
+    ${[...leading, ...supports].map(l => `<div class="leader-main ${flagged.has(l.uid) ? 'invalid' : ''}" data-uid="${l.uid}" draggable="true" data-drag="ru:${l.uid}">
       ${renderUnitCore(l, data.unitsById.get(l.unitId), list, data, edition, customImages, true)}</div>`).join('')}
     <div class="led">
-      <div class="attached-label">${t('unit.leading')}
-        <span class="leader-slots ${leaders.length >= bodyguardLimits(def, edition).maxLeaders ? 'full' : ''}">${t('roster.leaderSlots', { n: leaders.length, max: bodyguardLimits(def, edition).maxLeaders })}</span></div>
+      <div class="attached-label">${t(leading.length ? 'unit.leading' : 'unit.supporting')}
+        ${leading.length ? slots('roster.leaderSlots', leading.length, maxLeaders) : ''}
+        ${supports.length ? slots('roster.supportSlots', supports.length, maxSupport) : ''}</div>
       <div class="ru-sub ${flagged.has(ru.uid) ? 'invalid' : ''}" data-uid="${ru.uid}" style="--role:${ROLE_COLORS[def.role]}">
         ${renderUnitCore(ru, def, list, data, edition, customImages, false)}
       </div>
@@ -197,6 +202,7 @@ function renderUnitCore(ru, def, list, data, edition, customImages, attached) {
           ${targets.map(b => `<option value="${b.uid}">${esc(tr(data.unitsById.get(b.unitId).name))}</option>`).join('')}</select>` : ''}
         ${attached ? `<button class="btn small" data-action="detach" data-uid="${ru.uid}">${t('unit.detach')}</button>` : ''}
       </div>
+      ${detachmentAbilities(ru, list, data).map(a => `<div class="det-ability">${icon('stratTactic')}<b>${esc(tr(a.name))}</b><span class="muted">+${a.points} ${t('points')}</span></div>`).join('')}
       ${def.wargear?.length ? renderWargear(ru, def, data) : ''}
     </div>
     <div class="ru-actions">
@@ -371,7 +377,7 @@ export function renderSidebar(list, data, edition, issues) {
             <ul class="enh-list">${d.enhancements.map(e => {
               const enh = data.enhancements.get(e.id);
               return `<li><b>${esc(tr(e.name))}</b> <span class="muted">${enh.points} ${t('points')}${enh.type === 'upgrade' ? ' · ' + t('unit.upgrade') : ''}</span><br><small>${esc(tr(e.full ?? e.text)).replace(/\n/g, '<br>')}</small></li>`;
-            }).join('')}</ul>
+            }).join('')}${(d.unitAbilities ?? []).map(a => `<li><b>${esc(tr(a.name))}</b> <span class="muted">+${a.points} ${t('points')} · ${esc(tr(data.unitsById.get(a.unit)?.name))}</span><br><small>${esc(tr(a.full ?? a.text)).replace(/\n/g, '<br>')}</small></li>`).join('')}</ul>
           </details>
         </div>`;
       }).join('')}
@@ -434,7 +440,7 @@ export function renderModal(def, data, customImages) {
     ${def.composition?.length || def.equipped?.length ? `${dsHead(t('unit.composition'))}
       ${def.composition?.length ? `<p>${def.composition.map(c => esc(trs(c))).join(' · ')}</p>` : ''}
       ${(def.equipped ?? []).map(e => `<p class="muted">${esc(trs(e))}</p>`).join('')}` : ''}
-    ${def.leader ? `${dsHead(t('unit.leads'))}<p>${def.leader.canLead.map(id => esc(tr(data.unitsById.get(id)?.name) || id)).join(', ')}</p>` : ''}
+    ${def.leader ? `${dsHead(t(def.leader.support ? 'unit.supports' : 'unit.leads'))}<p>${def.leader.canLead.map(id => esc(tr(data.unitsById.get(id)?.name) || id)).join(', ')}</p>` : ''}
     ${def.attachRule ? `<p class="muted">${esc(trs(def.attachRule))}</p>` : ''}
     ${def.transport ? `${dsHead(t('unit.transport'))}<p>${esc(tr(def.transport))}</p>` : ''}
     ${def.lore ? `<blockquote class="lore">${esc(tr(def.lore))}</blockquote>` : ''}

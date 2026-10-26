@@ -3,7 +3,7 @@
 import { t, tr, trs } from './i18n.js';
 import { icon } from './icons.js';
 import { unitImg, imgFrame, ROLE_COLORS } from './images.js';
-import { battleSizeOf, listPoints, unitPoints, leadersOf, validate } from './rules.js';
+import { battleSizeOf, listPoints, unitPoints, leadersOf, isSupport, detachmentAbilities, validate } from './rules.js';
 import { esc, brandHtml, statRows, weaponTable, abilitiesBlock, ROLES } from './render.js';
 import { langToggle } from './home.js';
 
@@ -109,6 +109,7 @@ function unitCard(ru, def, data, customImages, list, extraClass = '') {
     </header>
     ${statRows(def)}
     ${weaponTable(ru, def, data)}
+    ${detachmentAbilities(ru, list, data).map(a => `<div class="ov-enh">${icon('stratTactic')}<div><b>${esc(tr(a.name))}</b> <small>(+${a.points} ${t('points')} · ${esc(tr(data.detachmentsById.get(a.detachmentId)?.name))})</small>${para(a.full ?? a.text)}</div></div>`).join('')}
     ${enh ? `<div class="ov-enh">${icon(enh.type === 'upgrade' ? 'stratPloy' : 'diamond')}<div><b>${esc(tr(enh.name))}</b> <small>(+${enh.points} ${t('points')} · ${esc(tr(data.detachmentsById.get(enh.detachmentId)?.name))})</small>${para(enh.full ?? enh.text)}</div></div>` : ''}
     ${abilitiesBlock(def, ru, data)}
   </article>`;
@@ -117,15 +118,16 @@ function unitCard(ru, def, data, customImages, list, extraClass = '') {
 function unitBlock(ru, list, data, customImages) {
   const def = data.unitsById.get(ru.unitId);
   if (!def) return '';
-  const leaders = leadersOf(ru.uid, list);
-  if (!leaders.length) return unitCard(ru, def, data, customImages, list);
+  const attached = leadersOf(ru.uid, list);
+  if (!attached.length) return unitCard(ru, def, data, customImages, list);
+  const leaders = [...attached.filter(l => !isSupport(l, data)), ...attached.filter(l => isSupport(l, data))];
   const total = unitPoints(ru, data, list) + leaders.reduce((a, l) => a + unitPoints(l, data, list), 0);
   const names = [...leaders.map(l => tr(data.unitsById.get(l.unitId)?.name)), tr(def.name)];
   return `
   <section class="ov-attached">
     <div class="ov-attached-head">${icon('emblemFull')}<span>${t('overview.attachedUnit')}: <b>${esc(names.join(' + '))}</b></span><span class="ov-attached-pts">${total} ${t('points')}</span></div>
     ${leaders.map(l => unitCard(l, data.unitsById.get(l.unitId), data, customImages, list, 'leader')).join('')}
-    <div class="ov-led-label">${t('unit.leading')}</div>
+    <div class="ov-led-label">${t(isSupport(leaders[0], data) ? 'unit.supporting' : 'unit.leading')}</div>
     ${unitCard(ru, def, data, customImages, list, 'led')}
   </section>`;
 }
@@ -152,6 +154,14 @@ function detachmentBlock(det, list, data) {
         </div>`;
       }).join('')}
     </div>
+    ${det.unitAbilities?.length ? `<h4 class="ov-sub">${t('overview.unitAbilities')}</h4>
+    <div class="ov-enh-list">${det.unitAbilities.map(a => {
+      const who = list.units.some(u => u.unitId === a.unit);
+      return `<div class="ov-enh-item ${who ? 'taken' : ''}">
+        <div class="ov-enh-name">${icon(who ? 'stratPloy' : 'diamond')}<b>${esc(tr(a.name))}</b><span>+${a.points} ${t('points')} · ${esc(tr(data.unitsById.get(a.unit)?.name))}</span></div>
+        ${para(a.full ?? a.text)}
+      </div>`;
+    }).join('')}</div>` : ''}
     <h4 class="ov-sub">${t('overview.stratagems')}</h4>
     <div class="strat-grid">${strats.map(stratCard).join('') || `<p class="muted">${t('overview.noStratagems')}</p>`}</div>
   </article>`;

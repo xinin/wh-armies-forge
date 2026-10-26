@@ -31,6 +31,19 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower().replace('’', '').replace("'", '')).strip('-')
 
 
+
+def enhancements_pos(sec):
+    """Position of the enhancements heading's id in a detachment section: "Enhancements", or the detachment's own
+    name for them (Pantheon of Woe: "Necrodermal Binding Abilities"). None if there is none."""
+    m = re.search(r'id="Enhancements(-\d+)?"', sec)
+    if m:
+        return m.start()
+    for h in re.finditer(r'<h2[^>]*?(id="[^"]+")', sec):
+        nxt = sec.find('<h2', h.end())
+        if 'EnhancementsPts' in sec[h.end():nxt if nxt > 0 else len(sec)]:
+            return h.start(1)
+    return None
+
 # Cyrillic letters that look like Latin ones; Wahapedia sometimes mixes them in ("Kauyоn" with a Cyrillic о)
 LATIN = str.maketrans('АВЕКМНОРСТХаеорсухі', 'ABEKMHOPCTXaeopcyxi')
 
@@ -129,18 +142,19 @@ def main():
         # the section ends at the next detachment of the page (also those of other Chapters, not in faction.json)
         end = next((p for p, h in heads[i + 1:] if key(h) in on_page or h in ('Crusade-Rules', 'Boarding-Actions')), len(page))
         sec = page[pos:end]
-        e_pos = re.search(r'id="Enhancements(-\d+)?"', sec)
+        e_pos = enhancements_pos(sec)
         s_pos = re.search(r'id="Stratagems(-\d+)?"', sec)
         r_pos = re.search(r'id="Detachment-Rules?(-\d+)?"', sec)
-        rule_html = sec[r_pos.start():sec.rfind('<h2', 0, e_pos.start())] if r_pos and e_pos else ''
+        rule_html = sec[r_pos.start():sec.rfind('<h2', 0, e_pos)] if r_pos and e_pos is not None else ''
         lines = clean(strip_fluff(rule_html)).split('\n')[1:]  # drop the "Detachment Rule" heading
         rule = {'name': {'en': lines[0]} if lines else det['rule']['name'], 'text': {'en': strip_errata('\n'.join(lines[1:]))}}
 
         enh = {}
-        ens_html = sec[e_pos.start():sec.rfind('<h2', 0, s_pos.start())] if e_pos and s_pos else ''
+        ens_html = sec[e_pos:sec.rfind('<h2', 0, s_pos.start())] if e_pos is not None and s_pos else ''
         for m in re.finditer(r'<ul class="EnhancementsPts"><li><span>(.*?)</span>\s*<span>(\d+ pts)</span></li></ul>(.*?)(?=<ul class="EnhancementsPts"|\Z)', ens_html, re.S):
             ename = re.sub(r'\(Aura\)|UPGRADE', '', clean(re.sub(r'<span class="EnhUpgrade">.*?</span>', '', m.group(1)))).strip()
-            ours = next((e for e in det['enhancements'] if key(e['name']['en']) == key(ename)), None)
+            # also the abilities a detachment gives to named datasheets (unitAbilities), listed the same way
+            ours = next((e for e in det['enhancements'] + det.get('unitAbilities', []) if key(e['name']['en']) == key(ename)), None)
             if ours:
                 body = strip_errata(clean(strip_fluff(m.group(3))))
                 enh[ours['id']] = {'text': {'en': body}, 'points': int(re.sub(r'\D', '', m.group(2)) or 0)}

@@ -66,7 +66,7 @@
       "en": "Sanctuary"
      },
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save. <h2"
+      "en": "IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save."
      }
     }
    ]
@@ -294,7 +294,7 @@
       "en": "Vengeful Tread"
      },
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. Once per turn, you can target the bearer with the Crushing Impact Stratagem for 0CP. <h2"
+      "en": "IMPERIAL KNIGHTS model only. Once per turn, you can target the bearer with the Crushing Impact Stratagem for 0CP."
      }
     }
    ]
@@ -335,7 +335,7 @@
       "en": "Knight of the Opus Machina"
      },
      "text": {
-      "en": "IMPERIAL KNIGHTS model only. While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that ADEPTUS MECHANICUS unit’s melee attacks have +1 WS and AP. <h2"
+      "en": "IMPERIAL KNIGHTS model only. While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that ADEPTUS MECHANICUS unit’s melee attacks have +1 WS and AP."
      }
     }
    ]
@@ -380,7 +380,7 @@
       "en": "Archeotech Autoloaders"
      },
      "text": {
-      "en": "IMPERIAL KNIGHTS DOMINUS model only. This unit can re-roll rolls to determine the A of a weapon. <h2"
+      "en": "IMPERIAL KNIGHTS DOMINUS model only. This unit can re-roll rolls to determine the A of a weapon."
      }
     }
    ]
@@ -426,7 +426,7 @@
       "en": "Ancestral Overbleed"
      },
      "text": {
-      "en": "ARMIGER unit only. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP. <h2"
+      "en": "ARMIGER unit only. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP."
      },
      "type": "upgrade"
     }

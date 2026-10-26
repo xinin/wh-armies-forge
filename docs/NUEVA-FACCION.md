@@ -52,6 +52,9 @@ python3 tools/bootstrap_faction.py space-wolves --source space-marines --chapter
 - **`requires` de cada mejora**: palabras clave que debe tener la unidad, deducidas del texto «X model only». Si sale `[]`, cualquier personaje (no Héroe Épico) puede llevarla. Corrige los casos dudosos. Ejemplo: `[["INFANTRY", "OFFICER"]]` exige las dos palabras clave; `[["A"], ["B"]]` significa A **o** B (en el texto, «A/B unit only»). También entiende nombres de datasheet en minúsculas («Kroot War Shaper model only») y las exclusiones «(excluding KROOT SHAPER models)», que van a `excludes`. Una palabra en plural («STEALTH BATTLESUITS») encaja con la palabra clave en singular.
 - **Letras que parecen latinas**: Wahapedia a veces mezcla letras cirílicas («Kauyоn» con una о cirílica). Los importadores las convierten a latinas; si un destacamento sale con `warning: no section`, mira si es esto.
 - **`type: "upgrade"`**: se marca solo en las mejoras etiquetadas como UPGRADE. Pueden llevarlas unidades que no son personajes y no cuentan para el límite de mejoras.
+- **`grantsLead`**: una mejora con «SUPPORT: OPHYDIAN DESTROYERS, …» (o «LEADER: …») deja al portador unirse también a esas unidades.
+- **`unitAbilities`**: si un destacamento lista habilidades con puntos bajo un título propio en vez de «Enhancements» (Pantheon of Woe: «Necrodermal Binding Abilities»), no son mejoras: cada datasheet nombrado las recibe solo y cuesta más (`points.json` → `unitAbilities`). Comprueba en la regla del destacamento que sea así.
+- **Requisitos con «o»** («OVERLORD or CATACOMB COMMAND BARGE model only») salen como alternativas. Las exclusiones solo cuentan justo detrás de «only»; un «(excluding TITANIC units)» más adelante habla de las unidades afectadas, no del portador.
 - **Nombres en español**: no hace falta tocarlos aquí; todos los textos se traducen en el paso 6.
 - **Mecánicas propias de la facción**: la regla de ejército solo se muestra como texto. Las órdenes de Astra Militarum (`armyRule.orders`) son un caso especial escrito a mano; otras facciones no lo necesitan.
 
@@ -71,7 +74,7 @@ Recorre todos los datasheets enlazados desde la página de la facción y clasifi
 
 Por cada unidad guarda:
 - perfiles, armas (con sus perfiles y reglas), habilidades (CORE, de facción, propias y de equipo), regla de dañado y órdenes;
-- composición, a quién lidera y límite de líderes;
+- composición, a quién lidera (sección LEADER) o a quién apoya (sección SUPPORT, `leader.support`) y límite de líderes. En la 11ª una unidad puede llevar sus líderes y además una unidad de apoyo;
 - **puntos de la 11ª**, que se marcan como verificados. Si el datasheet tiene sobrecoste por copias ("YOUR 3RD+ UNIT COSTS", a veces desde la 2.ª), va a `points.json` → `unitsExtraCopies` (`{from, sizes}`);
 - **costes de equipo** ("WARGEAR OPTIONS · per Lascannon · 5"): van a `points.json` → `wargearCosts` y la app los suma por cada pieza que lleve la unidad, también la que trae de serie;
 - **palabras clave por modelo** ("KEYWORDS – ALL MODELS: … | TEMPESTOR PRIME: CHARACTER; OFFICER"): la unidad recibe todas;
@@ -91,7 +94,9 @@ Por cada unidad guarda:
     - paquetes de varias armas ("autopistol and trench club → flamer and close combat weapon");
     - notas al pie con límite por arma ("no more than once… twice with 20 models");
     - alternativas excluyentes ("You can select one of the following options");
-    - opciones que dependen de otra ("If this model is equipped with a neo-volkite pistol, it can be equipped with a storm shield"): van a `needs` y solo se aplican si se cumple la condición;
+    - opciones que dependen de otra ("If this model is equipped with a neo-volkite pistol, it can be equipped with a storm shield"): van a `needs` y solo se aplican si se cumple la condición; con "is not equipped with" van a `needsNot`;
+    - "For every 3 models in this unit, this unit can have 1 Plasmacyte";
+    - "1 model's gauss scalpel or tesla caster can be replaced": se sustituye la de serie (la opción que cambia todas aplica después);
   - **unidades con acompañantes** ("3-6 Hunting Wolf / 3-6 Wolf Guard Headtaker", con puntos para 3, 6, 6 y 12 modelos): los tamaños son los modelos principales y los acompañantes una opción con su coste por modelo (`companion_split`). El número de modelos de la unidad cuenta solo los principales.
 
 Con `--all`, una facción se reemplaza entera: las unidades que ya no son datasheets de la facción se eliminan de `units.json` y `points.json`. Las de Legends y Forge World se apuntan en `units.json` → `excluded` y nunca se importan. Los identificadores son el nombre del datasheet en minúsculas con guiones (`cadian-heavy-weapons-squad`). No se usan alias: si GW renombra una unidad, actualiza su clave en `images.json` (las listas guardadas que la usaran la pierden al abrirse).
@@ -142,7 +147,9 @@ Hay que dejarlo en **0 errores**. Los errores son fallos de lectura y casi siemp
 - "up to two of the following, and can take duplicates" / "but cannot take duplicates" (varias elecciones por modelo) y "up to 2 seeker missiles" (cantidad);
 - "If this unit contains 10 models:" seguido de opciones completas, "2 models can each…" y "1 model in this unit equipped with…";
 - un tamaño que es el modelo más su complemento ("1 model | 85, 2 models | 105" con "can be equipped with 1 Tidewall defence platform");
-- la lista de equipo que nombra las armas distinto que la tabla de perfiles (Krootox Rampagers).
+- la lista de equipo que nombra las armas distinto que la tabla de perfiles (Krootox Rampagers, el «Chronomancer's stave» que es el Aeonstave a distancia y cuerpo a cuerpo);
+- armas que solo da una habilidad ("select up to two different C'tan Powers weapons … this model is equipped with those weapons": Tesseract Vault);
+- personajes SUPPORT sin unidades a las que unirse (la auditoría avisa con `data: the datasheet has Leader/Support targets`).
 
 La auditoría no ve los nombres de equipo raros que sí se ven en la app: revisa también la lista de comprobación del paso 7 en los dos idiomas.
 
@@ -174,8 +181,8 @@ Los textos completos se ven en la **vista de ejército** y en el desplegable de 
 4. El script pulsa "Show more" hasta cargar todo y guarda la lista en `adeptus-custodes-products.json`, que puedes reutilizar con `--products`.
 5. Empareja productos y unidades por nombre y escribe en `images.json` los que coinciden.
 
-**Revisa el resultado.** El emparejamiento es por palabras del nombre: con Astra Militarum acertó 52 de 53.
-- **Unidades sin imagen**: suelen ser variantes que comparten caja (los 7 Leman Russ, Comandantes, unidades de Ogretes…). Añádelas a mano en `images.json` copiando la URL del kit, o desde la app: ficha de la unidad → **Imagen de la tienda (URL)**.
+**Revisa el resultado.** El emparejamiento es por palabras del nombre, en singular, y prefiere el producto cuyo nombre tiene menos palabras de más; una caja que encaja con un nombre más concreto se reserva para esa unidad (la de «Lokhust Heavy Destroyer» no es la de los Lokhust Destroyers). Con Astra Militarum acertó 52 de 53.
+- **Unidades sin imagen**: suelen ser variantes que comparten caja (los 7 Leman Russ, Comandantes, unidades de Ogretes…) o unidades que solo se venden dentro de cajas conjuntas (Combat Patrol, Royal Court, Kill Team). Añádelas a mano en `images.json` copiando la URL del kit, o desde la app: ficha de la unidad → **Imagen de la tienda (URL)**.
 - **Coincidencias dudosas**: comprueba sobre todo las unidades con nombres genéricos (p. ej. "Heavy Weapons Squad").
 - Con `--products <facción>-products.json` puedes repetir el emparejamiento sin volver a abrir la tienda (por ejemplo, tras importar unidades nuevas).
 - Usa la tienda en **inglés** (`en-GB`): con nombres en español se emparejan muchas menos.

@@ -1,0 +1,760 @@
+{
+ "id": "necrons",
+ "name": {
+  "en": "Necrons",
+  "es": "Necrones"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/necrons/",
+ "armyRule": {
+  "name": {
+   "en": "Reanimation Protocols"
+  },
+  "text": {
+   "en": "If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols:\nWhen a unit’s Reanimation Protocols activate, that unit heals D3 wounds.\nExample: A unit of Lokhust Destroyers (which have a Wounds characteristic of 3) activates its Reanimation Protocols. The unit had a Starting Strength of 3, but currently contains 2 models, and one of those models has lost 1 wound. A 3 is rolled to see how many wounds are reanimated. The first of these reanimated wounds restores the wounded Lokhust Destroyer back to 3 wounds. The second of these reanimated wounds returns the destroyed Lokhust Destroyer to the battlefield with 1 wound remaining. The third of these reanimated wounds restores one of the remaining lost wounds to the same Lokhust Destroyer that was just returned. The unit now contains 3 models, two of which have 3 wounds remaining and one of which has 2 wounds remaining."
+  }
+ },
+ "detachments": [
+  {
+   "id": "starshatter-arsenal",
+   "cost": 3,
+   "name": {
+    "en": "Starshatter Arsenal"
+   },
+   "rule": {
+    "name": {
+     "en": "Relentless Onslaught"
+    },
+    "text": {
+     "en": "Each time a NECRONS model (excluding MONSTER models) from your army makes an attack that targets a unit within range of one or more objective markers, add 1 to the Hit roll. In addition, ranged weapons equipped by NECRONS VEHICLE and NECRONS MOUNTED models (excluding TITANIC models) from your army have the [ASSAULT]…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "dread-majesty",
+     "requires": [
+      [
+       "OVERLORD"
+      ],
+      [
+       "CATACOMB",
+       "COMMAND",
+       "BARGE"
+      ]
+     ],
+     "name": {
+      "en": "Dread Majesty"
+     },
+     "text": {
+      "en": "OVERLORD or CATACOMB COMMAND BARGE model only. While a friendly NECRONS unit (excluding MONSTER and TITANIC units) is within 6\" of the bearer, each time a model in that unit makes an attack, re-roll…"
+     }
+    },
+    {
+     "id": "miniaturised-nebuloscope",
+     "requires": [],
+     "name": {
+      "en": "Miniaturised Nebuloscope"
+     },
+     "text": {
+      "en": "NECRONS model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+     }
+    },
+    {
+     "id": "demanding-leader",
+     "requires": [],
+     "name": {
+      "en": "Demanding Leader"
+     },
+     "text": {
+      "en": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase,…"
+     }
+    },
+    {
+     "id": "chrono-impedance-fields",
+     "requires": [],
+     "name": {
+      "en": "Chrono-impedance Fields"
+     },
+     "text": {
+      "en": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase,…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "awakened-dynasty",
+   "cost": 3,
+   "name": {
+    "en": "Awakened Dynasty"
+   },
+   "rule": {
+    "name": {
+     "en": "Command Protocols"
+    },
+    "text": {
+     "en": "While a NECRONS CHARACTER model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "veil-of-darkness",
+     "requires": [],
+     "name": {
+      "en": "Veil of Darkness"
+     },
+     "text": {
+      "en": "NECRONS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: Place this unit in strategic reserves. This unit…"
+     }
+    },
+    {
+     "id": "nether-realm-casket",
+     "requires": [],
+     "name": {
+      "en": "Nether-realm Casket"
+     },
+     "text": {
+      "en": "NECRONS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
+     }
+    },
+    {
+     "id": "phasal-subjugator",
+     "requires": [],
+     "name": {
+      "en": "Phasal Subjugator"
+     },
+     "text": {
+      "en": "NECRONS model only. While a friendly NECRONS unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the Hit roll."
+     }
+    },
+    {
+     "id": "enaegic-dermal-bond",
+     "requires": [],
+     "name": {
+      "en": "Enaegic Dermal Bond"
+     },
+     "text": {
+      "en": "NECRONS model only. The bearer has the Feel No Pain 4+ ability."
+     }
+    }
+   ]
+  },
+  {
+   "id": "obeisance-phalanx",
+   "cost": 2,
+   "name": {
+    "en": "Obeisance Phalanx"
+   },
+   "rule": {
+    "name": {
+     "en": "Worthy Foes"
+    },
+    "text": {
+     "en": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a NOBLE, LYCHGUARD or TRIARCH unit from your army makes an attack that targets that unit, add 1 to the Wound roll. Errata Show Obeisance Phalanx Detachment, Worthy Foes Detachment Rule Change to: ‘In your Command phase,…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "honourable-combatant",
+     "requires": [
+      [
+       "OVERLORD"
+      ]
+     ],
+     "name": {
+      "en": "Honourable Combatant"
+     },
+     "text": {
+      "en": "OVERLORD model only. Each time the bearer’s unit destroys an enemy CHARACTER unit, your opponent loses 1CP if they have any."
+     }
+    },
+    {
+     "id": "unflinching-will",
+     "requires": [
+      [
+       "OVERLORD"
+      ]
+     ],
+     "name": {
+      "en": "Unflinching Will"
+     },
+     "text": {
+      "en": "OVERLORD model only. The bearer’s melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities."
+     }
+    },
+    {
+     "id": "warrior-noble",
+     "requires": [
+      [
+       "OVERLORD"
+      ]
+     ],
+     "name": {
+      "en": "Warrior Noble"
+     },
+     "text": {
+      "en": "OVERLORD model only. Each time a melee attack targets the bearer’s unit, subtract 1 from the Hit roll."
+     }
+    },
+    {
+     "id": "eternal-conqueror",
+     "requires": [
+      [
+       "OVERLORD"
+      ]
+     ],
+     "name": {
+      "en": "Eternal Conqueror"
+     },
+     "text": {
+      "en": "OVERLORD model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll."
+     }
+    }
+   ]
+  },
+  {
+   "id": "pantheon-of-woe",
+   "cost": 2,
+   "name": {
+    "en": "Pantheon of Woe"
+   },
+   "rule": {
+    "name": {
+     "en": "Cosmic Distortion"
+    },
+    "text": {
+     "en": "NECRONS MONSTER units from your army have the following ability: Distortion Fields (Aura): While an enemy unit is within 6\" of this unit, it is unravelling. While an enemy unit is unravelling, each time an attack targets that unit, improve the Armour Penetration characteristic of that attack by 1. At the start of each…"
+    }
+   },
+   "enhancements": [],
+   "unitAbilities": [
+    {
+     "id": "singularity-matrix",
+     "unit": "ctan-shard-of-the-deceiver",
+     "name": {
+      "en": "Singularity Matrix"
+     },
+     "text": {
+      "en": "C’TAN SHARD OF THE DECEIVER model only. This model has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a…"
+     }
+    },
+    {
+     "id": "quantum-goad",
+     "unit": "ctan-shard-of-the-nightbringer",
+     "name": {
+      "en": "Quantum Goad"
+     },
+     "text": {
+      "en": "C’TAN SHARD OF THE NIGHTBRINGER model only. This model is eligible to declare a charge in a turn in which it Advanced."
+     }
+    },
+    {
+     "id": "animus-damper",
+     "unit": "ctan-shard-of-the-void-dragon",
+     "name": {
+      "en": "Animus Damper"
+     },
+     "text": {
+      "en": "C’TAN SHARD OF THE VOID DRAGON model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit visible to the bearer. That unit must take a Leadership test.…"
+     }
+    },
+    {
+     "id": "reletavistic-tether",
+     "unit": "transcendent-ctan",
+     "name": {
+      "en": "Reletavistic Tether"
+     },
+     "text": {
+      "en": "TRANSCENDENT C’TAN model only. In your turn, when this unit makes an ingress/advance move using its Transdimensional Displacement ability, this unit can end that move more than 6\" horizontally from…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cryptek-conclave",
+   "cost": 2,
+   "name": {
+    "en": "Cryptek Conclave"
+   },
+   "rule": {
+    "name": {
+     "en": "Technosorcerous Augmentations"
+    },
+    "text": {
+     "en": "Ranged weapons equipped by CRYPTEK models from your army have the [ASSAULT] ability. In your Shooting phase, each time a CRYPTEK unit from your army is selected to shoot, select one of the following abilities: [ANTI-INFANTRY 3+], [ANTI-MOUNTED 4+], [ASSAULT], [HEAVY], [IGNORES COVER]. Until the end of the phase,…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "quantum-abacus",
+     "requires": [],
+     "name": {
+      "en": "Quantum Abacus"
+     },
+     "text": {
+      "en": "NECRONS model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if it is within range of one or more objectives: on a 4+, you gain 1CP."
+     }
+    },
+    {
+     "id": "atomic-disintegrators",
+     "requires": [
+      [
+       "CRYPTEK"
+      ]
+     ],
+     "name": {
+      "en": "Atomic Disintegrators"
+     },
+     "text": {
+      "en": "CRYPTEK model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, when selecting an ability for the Technosorcerous Augmentations Detachment rule, you can also select from…"
+     }
+    },
+    {
+     "id": "gauntlet-of-compression",
+     "requires": [],
+     "name": {
+      "en": "Gauntlet of Compression"
+     },
+     "text": {
+      "en": "NECRONS model only. Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit."
+     }
+    },
+    {
+     "id": "gravitic-bolas",
+     "requires": [
+      [
+       "CRYPTEK"
+      ]
+     ],
+     "name": {
+      "en": "Gravitic Bolas"
+     },
+     "text": {
+      "en": "CRYPTEK model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks (excluding TITANIC units); until the start of your next turn, that…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "annihilation-legion",
+   "cost": 2,
+   "name": {
+    "en": "Annihilation Legion"
+   },
+   "rule": {
+    "name": {
+     "en": "Annihilation Protocol"
+    },
+    "text": {
+     "en": "Each time a DESTROYER CULT or FLAYED ONES unit from your army declares a charge, you can re-roll the Charge roll. If one or more targets of that charge are Below Half-strength, add 1 to the Charge roll as well. Each time a DESTROYER CULT unit from your army makes a ranged attack that targets the closest eligible…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eternal-madness",
+     "requires": [],
+     "name": {
+      "en": "Eternal Madness"
+     },
+     "text": {
+      "en": "NECRONS model only. In the Fight phase, each time a model in the bearer’s unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from…"
+     }
+    },
+    {
+     "id": "ingrained-superiority",
+     "requires": [],
+     "name": {
+      "en": "Ingrained Superiority"
+     },
+     "text": {
+      "en": "NECRONS model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+     }
+    },
+    {
+     "id": "soulless-reaper",
+     "requires": [
+      [
+       "DESTROYER",
+       "CULT"
+      ]
+     ],
+     "name": {
+      "en": "Soulless Reaper"
+     },
+     "text": {
+      "en": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer’s unit is selected to Fall Back, roll one D6: on a 3+, that unit cannot Fall Back this phase and must Remain…"
+     }
+    },
+    {
+     "id": "eldritch-nightmare",
+     "requires": [
+      [
+       "DESTROYER",
+       "CULT"
+      ]
+     ],
+     "name": {
+      "en": "Eldritch Nightmare"
+     },
+     "text": {
+      "en": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+     }
+    }
+   ]
+  },
+  {
+   "id": "cursed-legion",
+   "cost": 2,
+   "name": {
+    "en": "Cursed Legion"
+   },
+   "rule": {
+    "name": {
+     "en": "Cold Fervour"
+    },
+    "text": {
+     "en": "Add 2 to the Strength characteristic of weapons equipped by DESTROYER CULT models from your army. The first time each turn that a DESTROYER CULT unit from your army makes attacks that destroy a unit or cause it to become Below Half-strength, after that unit has finished resolving its attacks, until the end of the…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "destroyer-ankh",
+     "requires": [
+      [
+       "CATACOMB",
+       "COMMAND",
+       "BARGE"
+      ],
+      [
+       "OVERLORD"
+      ]
+     ],
+     "name": {
+      "en": "Destroyer Ankh"
+     },
+     "text": {
+      "en": "CATACOMB COMMAND BARGE or OVERLORD model only. The bearer has the DESTROYER CULT keyword. Add 2\" to the Move characteristic of models in the bearer’s unit and add 2 to the Attacks characteristic of…"
+     }
+    },
+    {
+     "id": "murdermind",
+     "requires": [
+      [
+       "CRYPTEK"
+      ]
+     ],
+     "name": {
+      "en": "Murdermind"
+     },
+     "text": {
+      "en": "CRYPTEK model only. The bearer has the DESTROYER CULT keyword. Add 3\" to the Move characteristic of the bearer."
+     },
+     "grantsLead": [
+      "ophydian-destroyers",
+      "skorpekh-destroyers",
+      "lokhust-destroyers",
+      "lokhust-heavy-destroyers"
+     ]
+    },
+    {
+     "id": "mark-of-the-nekrosor",
+     "requires": [
+      [
+       "DESTROYER",
+       "CULT"
+      ]
+     ],
+     "name": {
+      "en": "Mark of the Nekrosor"
+     },
+     "text": {
+      "en": "DESTROYER CULT model only. Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll."
+     }
+    },
+    {
+     "id": "cursed-circlet",
+     "requires": [
+      [
+       "DESTROYER",
+       "CULT"
+      ]
+     ],
+     "name": {
+      "en": "Cursed Circlet"
+     },
+     "text": {
+      "en": "DESTROYER CULT model only. In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "hypercrypt-legion",
+   "cost": 2,
+   "name": {
+    "en": "Hypercrypt Legion"
+   },
+   "rule": {
+    "name": {
+     "en": "Hyperphasing"
+    },
+    "text": {
+     "en": "At the end of your opponent’s turn, you can select a number of NECRONS units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 units Strike Force…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "dimensional-overseer",
+     "requires": [],
+     "name": {
+      "en": "Dimensional Overseer"
+     },
+     "text": {
+      "en": "NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add one to the number of units from your army that you can select for the Hyperphasing rule."
+     }
+    },
+    {
+     "id": "arisen-tyrant",
+     "requires": [],
+     "name": {
+      "en": "Arisen Tyrant"
+     },
+     "text": {
+      "en": "NECRONS model only. Each time a model in the bearer’s unit makes an attack, re-roll a Hit roll of 1. If the bearer’s unit was set up on the battlefield this turn, you can re-roll the Hit roll instead."
+     }
+    },
+    {
+     "id": "hyperspatial-transfer-node",
+     "requires": [],
+     "name": {
+      "en": "Hyperspatial Transfer Node"
+     },
+     "text": {
+      "en": "NECRONS model only. Each time the bearer’s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer’s unit."
+     }
+    },
+    {
+     "id": "osteoclave-fulcrum",
+     "requires": [],
+     "name": {
+      "en": "Osteoclave Fulcrum"
+     },
+     "text": {
+      "en": "NECRONS model only. Models in the bearer’s unit have the Deep Strike ability."
+     }
+    }
+   ]
+  },
+  {
+   "id": "canoptek-court",
+   "cost": 2,
+   "name": {
+    "en": "Canoptek Court"
+   },
+   "rule": {
+    "name": {
+     "en": "Power Matrix"
+    },
+    "text": {
+     "en": "Certain areas of the battlefield are considered to be within your army’s Power Matrix, as follows: Your deployment zone is always within your army’s Power Matrix. At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "dimensional-sanctum",
+     "requires": [
+      [
+       "CRYPTEK"
+      ]
+     ],
+     "name": {
+      "en": "Dimensional Sanctum"
+     },
+     "text": {
+      "en": "CRYPTEK model only. Models in the bearer’s unit have the Infiltrators ability."
+     }
+    },
+    {
+     "id": "hyperphasic-fulcrum",
+     "requires": [
+      [
+       "CRYPTEK"
+      ]
+     ],
+     "name": {
+      "en": "Hyperphasic Fulcrum"
+     },
+     "text": {
+      "en": "CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army’s Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1."
+     }
+    },
+    {
+     "id": "autodivinator",
+     "requires": [
+      [
+       "CRYPTEK"
+      ]
+     ],
+     "name": {
+      "en": "Autodivinator"
+     },
+     "text": {
+      "en": "CRYPTEK model only. Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP."
+     }
+    },
+    {
+     "id": "metalodermal-tesla-weave",
+     "requires": [
+      [
+       "CRYPTEK"
+      ]
+     ],
+     "name": {
+      "en": "Metalodermal Tesla Weave"
+     },
+     "text": {
+      "en": "CRYPTEK model only. Once per phase, when an enemy unit selects the bearer’s unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "the-phaerons-armoury",
+   "cost": 1,
+   "name": {
+    "en": "The Phaeron's Armoury"
+   },
+   "rule": {
+    "name": {
+     "en": "Empowered Engines"
+    },
+    "text": {
+     "en": "Friendly NECRONS TITANIC FLY units have +6\" M. This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "relocational-optimiser",
+     "requires": [],
+     "name": {
+      "en": "Relocational Optimiser"
+     },
+     "text": {
+      "en": "NECRONS model only. When this unit is selected to shoot, if this unit was set up using a Monolith’s Eternity Gate ability this turn, this unit’s ranged attacks have: [LETHAL HITS]. Or: [SUSTAINED…"
+     }
+    },
+    {
+     "id": "mortality-shroud",
+     "requires": [
+      [
+       "OBELISK"
+      ]
+     ],
+     "name": {
+      "en": "Mortality Shroud"
+     },
+     "text": {
+      "en": "OBELISK unit only. In your opponent’s Battle-shock step, if an enemy unit within 8\" of this unit is below starting strength, that enemy unit makes a battle-shock roll."
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "skyshroud-spearhead",
+   "cost": 1,
+   "name": {
+    "en": "Skyshroud Spearhead"
+   },
+   "rule": {
+    "name": {
+     "en": "Transdimensional Deployment"
+    },
+    "text": {
+     "en": "Friendly TOMB BLADES units have Deep Strike. When a friendly TOMB BLADES unit is selected to shoot, if that unit made an ingress move this turn, that unit’s ranged attacks have +1 to hit rolls."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "recursive-reanimation",
+     "requires": [
+      [
+       "TOMB",
+       "BLADES"
+      ]
+     ],
+     "name": {
+      "en": "Recursive Reanimation"
+     },
+     "text": {
+      "en": "TOMB BLADES unit only. When this unit activates its Reanimation Protocols, +1 to the roll."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "deepening-madness",
+     "requires": [
+      [
+       "DESTROYER",
+       "CULT",
+       "MOUNTED"
+      ]
+     ],
+     "name": {
+      "en": "Deepening Madness"
+     },
+     "text": {
+      "en": "DESTROYER CULT MOUNTED unit only. This unit’s ranged attacks have [ASSAULT]."
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "hand-of-the-dynasty",
+   "cost": 1,
+   "name": {
+    "en": "Hand of the Dynasty"
+   },
+   "rule": {
+    "name": {
+     "en": "Hypermotility Protocols"
+    },
+    "text": {
+     "en": "Friendly IMMORTALS/NECRON WARRIORS units’ ranged attacks have [ASSAULT]. When a friendly IMMORTALS/NECRON WARRIORS unit is selected to make an advance move, that move does not prevent that unit from being eligible to start an action. This detachment has the DYNASTY tag and cannot be taken with another DYNASTY…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "enlivened-sentinels",
+     "requires": [
+      [
+       "NECRON",
+       "WARRIORS"
+      ]
+     ],
+     "name": {
+      "en": "Enlivened Sentinels"
+     },
+     "text": {
+      "en": "NECRON WARRIORS unit only. This unit has Scouts 5\""
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "tools-of-dominion",
+     "requires": [
+      [
+       "IMMORTALS"
+      ]
+     ],
+     "name": {
+      "en": "Tools of Dominion"
+     },
+     "text": {
+      "en": "IMMORTALS unit only. This unit’s ranged attacks have [RAPID FIRE 1]."
+     },
+     "type": "upgrade"
+    }
+   ]
+  }
+ ]
+}

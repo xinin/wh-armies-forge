@@ -55,9 +55,12 @@ export async function loadFaction(entry) {
     const full = rules.detachments[d.id];
     if (!full) continue;
     if (full.rule?.text?.en) d.rule = { ...d.rule, full: full.rule.text };
-    for (const e of d.enhancements) {
+    for (const e of [...d.enhancements, ...(d.unitAbilities ?? [])]) {
       if (full.enhancements?.[e.id]) e.full = full.enhancements[e.id].text;
     }
+  }
+  for (const d of faction.detachments) {
+    for (const a of d.unitAbilities ?? []) Object.assign(a, { points: points.unitAbilities?.[a.id] ?? 0, detachmentId: d.id });
   }
 
   const verified = new Set(points.verified ?? []);

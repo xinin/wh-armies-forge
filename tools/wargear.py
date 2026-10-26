@@ -17,6 +17,8 @@ Data produced for each unit (consumed by js/render.js → loadoutOf):
         maxEachBySize {models: n}     pools: the same choice cannot be taken more than n times (footnotes)
         needs     [{item, n}]     only while the unit carries that ("If this model is equipped with 1 Neo-volkite
                                   Pistol, it can be equipped with 1 Storm Shield")
+        needsNot  [{item, n}]     only while the unit does not carry that ("If this model is not equipped with a
+                                  tachyon arrow, it can be equipped with 1 resurrection orb")
         maxEachChoice {key: {models: n}}  pools: limit of one choice ("it cannot take duplicates of this piece of wargear")
         owner     model type the option applies to ("Shock Trooper Sergeants"), exclusive: alternatives
         label / labels  English labels (the app rebuilds them in the current language)
@@ -265,6 +267,17 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
     def by_size(fn):
         return {str(m): fn(m, c) for m, c in sizes_counts.items()}
 
+    def replaced(x):
+        # "1 model's gauss scalpel or tesla caster can be replaced": the default one is replaced (an option that
+        # swaps it on every model applies after this one, see loadoutCounts in js/rules.js)
+        items = items_of(x, resolve)
+        if ' or ' in x and any(i['item'].startswith('gear:') for i in items):
+            for alt in x.split(' or '):
+                alt_items = items_of(alt, resolve)
+                if alt_items and all(any(i['item'] in b for b in base_by_size.values()) for i in alt_items):
+                    return alt_items
+        return items
+
     def count_items(m, x):
         return min((base_by_size[m].get(r['item'], 0) // max(r['n'], 1) for r in x), default=0) if x else m
 
@@ -289,7 +302,7 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         keys, packages = pack(targets(m.group('y')))
         if not keys:
             return None
-        opt = {'type': 'swap', 'replaces': items_of(m.group('x'), resolve), 'choices': [''] + keys, 'packages': packages}
+        opt = {'type': 'swap', 'replaces': replaced(m.group('x')), 'choices': [''] + keys, 'packages': packages}
         if m.groupdict().get('min'):
             opt['minModels'] = int(m.group('min'))
         owner = m.groupdict().get('o1') or m.groupdict().get('o2')
@@ -344,14 +357,15 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
 
     # add-ons; "If this model is equipped with X, it can be equipped with Y" needs X
     needs = None
-    nm = re.match(r'^If this model is equipped with (?P<c>[^,]+), (?P<rest>it can be equipped with .*)$', t)
+    nm = re.match(r'^If this model is (?P<neg>not )?equipped with (?P<c>[^,]+), (?P<rest>it can be equipped with .*)$', t)
     if nm:
-        needs = items_of(nm.group('c'), resolve)
+        needs = ('needsNot' if nm.group('neg') else 'needs', items_of(nm.group('c'), resolve))
         t = 'This model can be equipped with ' + nm.group('rest').removeprefix('it can be equipped with ')
     adds = [
         (r'^This unit can be equipped with (?P<y>.*)$', 'one'),
         (r'^Any number of models can (?:each )?be equipped with (?P<y>.*)$', 'all'),
         (r'^For every (?P<per>\d+) models in this unit, (?P<k>\w+) (?P<t>.+?)(?: equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'per'),
+        (r'^For every (?P<per>\d+) models in this unit, this unit can have (?P<y>.*)$', 'per'),
         (r'^Any number of (?P<t>.+?) can (?:each )?be equipped with (?P<y>.*)$', 'type'),
         (rf'^{COND}(?:This model|it|one model|The (?P<o1>.+?)|(?P<k>\d+|One|one) (?P<t>.+?))(?: (?:not )?equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'one'),
     ]
@@ -363,7 +377,7 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         if kind == 'all':
             def per_model(mm, c): return mm
         elif kind == 'per':
-            def per_model(mm, c): return (mm // int(m.group('per'))) * num(m.group('k'))
+            def per_model(mm, c): return (mm // int(m.group('per'))) * num(m.groupdict().get('k') or '1')
         elif kind == 'type':
             def per_model(mm, c): return count_of(m.group('t'), c, mm)
         else:
@@ -399,7 +413,7 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         if m.groupdict().get('min'):
             opt['minModels'] = int(m.group('min'))
         if needs:
-            opt['needs'] = needs
+            opt[needs[0]] = needs[1]
         owner = m.groupdict().get('t') or m.groupdict().get('o1')
         if owner and owner.lower() not in ('model', 'models', 'model in this unit'):
             opt['owner'] = owner
@@ -628,6 +642,9 @@ def build(unit, model_sizes, global_weapons=(), faction_gear=None):
                 del b[i]
             for w in unused:
                 b[w] = n
+                twin = f'{w}-melee'  # the same name in both tables is one weapon with two profiles (Aeonstave)
+                if any(x['id'] == twin for x in unit['weapons']):
+                    b[twin] = n
 
     unit['wargear'] = options
     unit['sizes'] = [{**s, 'loadout': {i: c for i, c in base.get(s['models'], {}).items() if c}} for s in unit['sizes']]
@@ -636,6 +653,10 @@ def build(unit, model_sizes, global_weapons=(), faction_gear=None):
     if gw:
         unit['gearWeapons'] = gw
     aw = ability_weapons(unit, resolve)
+    # "select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped
+    # with those weapons": the profiles nothing else gives belong to that ability
+    if any('is equipped with those weapons' in a['text']['en'] for a in unit.get('abilities', [])):
+        aw += [{'item': w, 'n': 1} for w in unused if not any(w in b for b in base.values())]
     if aw:
         unit['abilityWeapons'] = aw
     return unparsed

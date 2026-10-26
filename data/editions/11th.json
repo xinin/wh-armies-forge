@@ -18,6 +18,7 @@
     "maxSameUpgrade": 3,
     "upgradesCountTowardEnhancementLimit": false,
     "warlordRequired": true,
-    "defaultMaxLeadersPerBodyguard": 1
+    "defaultMaxLeadersPerBodyguard": 1,
+    "maxSupportPerBodyguard": 1
   }
 }

@@ -104,6 +104,8 @@ def audit_unit(unit, faction, points, all_ids, excluded=frozenset()):
         errors.append('data: no keywords')
     if not points['units'].get(unit['id']):
         errors.append('data: no points')
+    if targets and not unit.get('leader'):
+        errors.append('data: the datasheet has Leader/Support targets but the unit has none')
     for t, legends in targets:
         if slug(t) not in all_ids and slug(t) not in excluded and not legends:
             errors.append(f'data: leader target "{t}" is not a unit of the faction')

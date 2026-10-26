@@ -264,6 +264,9 @@ body[data-view=home] { overflow-y: auto; }
 .ru-name:hover { color: var(--gold-2); }
 .ru-pts { margin-left: auto; font-weight: 700; color: var(--gold-2); font-variant-numeric: tabular-nums; }
 .ru-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.det-ability { display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12px; }
+.det-ability .gw-icon { width: 14px; height: 14px; color: var(--gold-2); }
+.det-ability b { color: var(--gold-2); font-family: var(--display); text-transform: uppercase; letter-spacing: .04em; }
 .ru-controls select { min-height: 30px; padding: 3px 6px; font-size: 12px; max-width: 100%; }
 .ru-controls select.has-enh { border-color: var(--gold); color: var(--gold-2); }
 .ru-actions { display: flex; flex-direction: column; gap: 4px; }

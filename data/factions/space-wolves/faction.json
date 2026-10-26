@@ -113,7 +113,7 @@
       "en": "Artificer Armour"
      },
      "text": {
-      "en": "ADEPTUS ASTARTES model only. This model has: 2+ Sv. Feel No Pain 5+. <h2"
+      "en": "ADEPTUS ASTARTES model only. This model has: 2+ Sv. Feel No Pain 5+."
      }
     }
    ]
@@ -203,7 +203,7 @@
       "en": "Venator Omni-auspex"
      },
      "text": {
-      "en": "PHOBOS model only. This unit’s attacks that target a hidden unit can: Re-roll wound rolls of 1. Or: If the assault doctrine is active for this unit, re-roll wound rolls of 1-2. <h2"
+      "en": "PHOBOS model only. This unit’s attacks that target a hidden unit can: Re-roll wound rolls of 1. Or: If the assault doctrine is active for this unit, re-roll wound rolls of 1-2."
      }
     }
    ]
@@ -249,7 +249,7 @@
       "en": "Venerable Champion"
      },
      "text": {
-      "en": "DREADNOUGHT unit only. While a friendly ADEPTUS ASTARTES INFANTRY/MOUNTED unit is within 6\" of this unit, that unit’s attacks can re-roll hit rolls of 1. <h2"
+      "en": "DREADNOUGHT unit only. While a friendly ADEPTUS ASTARTES INFANTRY/MOUNTED unit is within 6\" of this unit, that unit’s attacks can re-roll hit rolls of 1."
      },
      "type": "upgrade"
     }
@@ -291,7 +291,7 @@
       "en": "Tactical Insight"
      },
      "text": {
-      "en": "CAPTAIN model only. The tactical doctrine is active for this unit in addition to any other combat doctrine. <h2"
+      "en": "CAPTAIN model only. The tactical doctrine is active for this unit in addition to any other combat doctrine."
      }
     }
    ]
@@ -336,7 +336,7 @@
       "en": "Tempered in Battle"
      },
      "text": {
-      "en": "TACTICUS model only. Friendly ADEPTUS ASTARTES units within 6\" of this model can re-roll leadership rolls. <h2"
+      "en": "TACTICUS model only. Friendly ADEPTUS ASTARTES units within 6\" of this model can re-roll leadership rolls."
      }
     }
    ]
@@ -381,7 +381,7 @@
       "en": "Corporeum Reliquary"
      },
      "text": {
-      "en": "ADEPTUS ASTARTES TERMINATOR model only. In your first Movement phase, this unit can make an ingress move. <h2"
+      "en": "ADEPTUS ASTARTES TERMINATOR model only. In your first Movement phase, this unit can make an ingress move."
      }
     }
    ]
@@ -425,7 +425,7 @@
       "en": "Honour of Vigilance"
      },
      "text": {
-      "en": "ADEPTUS ASTARTES model only. This unit’s ranged attacks have [Lethal Hits]. If the devastator doctrine is active for this unit, this unit can re-roll advance rolls. <h2"
+      "en": "ADEPTUS ASTARTES model only. This unit’s ranged attacks have [Lethal Hits]. If the devastator doctrine is active for this unit, this unit can re-roll advance rolls."
      }
     }
    ]
@@ -483,7 +483,7 @@
       "en": "Gunnery Honours"
      },
      "text": {
-      "en": "ADEPTUS ASTARTES VEHICLE unit only (excluding DEDICATED TRANSPORT/FLY/WALKER units). This unit’s ranged attacks have [Heavy]. <h2"
+      "en": "ADEPTUS ASTARTES VEHICLE unit only (excluding DEDICATED TRANSPORT/FLY/WALKER units). This unit’s ranged attacks have [Heavy]."
      },
      "excludes": [
       [
@@ -629,7 +629,7 @@
       "en": "Furious Assault"
      },
      "text": {
-      "en": "ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle]. <h2"
+      "en": "ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle]."
      },
      "type": "upgrade"
     }
@@ -675,7 +675,7 @@
       "en": "Relentless Advance"
      },
      "text": {
-      "en": "GRAVIS model only. This unit has Scouts 5\". <h2"
+      "en": "GRAVIS model only. This unit has Scouts 5\"."
      }
     }
    ]
@@ -722,7 +722,7 @@
       "en": "Narthecis Gauntlet"
      },
      "text": {
-      "en": "APOTHECARY BIOLOGIS model only. in your Command phase, this unit heals D3+1 wounds. <h2"
+      "en": "APOTHECARY BIOLOGIS model only. in your Command phase, this unit heals D3+1 wounds."
      }
     }
    ]
@@ -767,7 +767,7 @@
       "en": "Spearpoint War Leader"
      },
      "text": {
-      "en": "TACTICUS model only. This unit has Scouts 6\". <h2"
+      "en": "TACTICUS model only. This unit has Scouts 6\"."
      }
     }
    ]
@@ -794,7 +794,7 @@
       "en": "Beacon Angelis"
      },
      "text": {
-      "en": "ADEPTUS ASTARTES model only. If this unit is a KILL TEAM unit, this unit has: Deep Strike. When you target this unit with the Rapid Ingress Stratagem, that use is -1CP. <h2"
+      "en": "ADEPTUS ASTARTES model only. If this unit is a KILL TEAM unit, this unit has: Deep Strike. When you target this unit with the Rapid Ingress Stratagem, that use is -1CP."
      }
     }
    ]
@@ -868,7 +868,7 @@
       "en": "Skjald's Foretelling"
      },
      "text": {
-      "en": "Wolf Guard Battle Leader model only. This unit’s melee attacks have [Lance]. <h2"
+      "en": "Wolf Guard Battle Leader model only. This unit’s melee attacks have [Lance]."
      }
     }
    ]
@@ -913,7 +913,7 @@
       "en": "A Giant Amongst Giants"
      },
      "text": {
-      "en": "ADEPTUS ASTARTES INFANTRY model only. This model has +2 W. This model’s melee attacks have +1 S. <h2"
+      "en": "ADEPTUS ASTARTES INFANTRY model only. This model has +2 W. This model’s melee attacks have +1 S."
      }
     }
    ]
@@ -950,7 +950,7 @@
       "en": "Wolf-Touched"
      },
      "text": {
-      "en": "LEADER: WULFEN WITH STORM SHIELDS, WULFEN ADEPTUS ASTARTES model only. This unit has: WULFEN. +2\" M. <h2"
+      "en": "LEADER: WULFEN WITH STORM SHIELDS, WULFEN ADEPTUS ASTARTES model only. This unit has: WULFEN. +2\" M."
      }
     }
    ]

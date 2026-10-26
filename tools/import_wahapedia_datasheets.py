@@ -253,9 +253,11 @@ def parse(page, ds_slug, chapter_bit=None):
             (costs if tier <= 1 else extra_sizes).append({'models': int(mm.group(1)), 'points': int(mm.group(2))})
     extra = {'from': extra_from or 3, 'sizes': extra_sizes} if extra_sizes else None
 
-    leader_text = text(sec.get('LEADER', ''))
+    # LEADER, or SUPPORT (11th: a bodyguard can have one Leader and one Support unit attached)
+    lead_key = 'LEADER' if 'LEADER' in sec else 'SUPPORT'
+    leader_text = text(sec.get(lead_key, ''))
     # targets marked as Warhammer Legends ("sLegendary"; not always right, so only used to silence the "not found" check)
-    legends_targets = [text(x) for x in re.findall(r'<li class="[^"]*sLegendary[^"]*"[^>]*>(.*?)</li>', sec.get('LEADER', ''), re.S)]
+    legends_targets = [text(x) for x in re.findall(r'<li class="[^"]*sLegendary[^"]*"[^>]*>(.*?)</li>', sec.get(lead_key, ''), re.S)]
     leader_targets = [l for l in leader_text.split('\n')[1:] if l.isupper() or l.istitle()]
     orders_text = re.sub(r'\s+', ' ', text(re.split(r'<table class="dsCoreArmy', sec.get('ORDERS', ''))[0])).strip()
     transport = re.sub(r'\s+', ' ', text(sec.get('TRANSPORT', ''))).strip()
@@ -289,6 +291,7 @@ def parse(page, ds_slug, chapter_bit=None):
         if mm: bg['maxWithKeyword'] = {mm.group(1).upper(): 1}
         if bg: unit['bodyguard'] = bg
     if transport: unit['transport'] = {'en': transport}
+    if lead_key == 'SUPPORT' and leader_targets: unit['leader'] = {'support': True}
     leader_targets = [(t, t in legends_targets) for t in leader_targets]
     return unit, leader_targets, costs, extra, gear_costs
 
@@ -397,7 +400,9 @@ def main():
         unit['name']['es'] = old.get('name', {}).get('es', unit['name']['en'])
         lead = [by_name.get(slug(t)) for t, _ in targets]
         if any(lead):
-            unit['leader'] = {'canLead': [x for x in lead if x]}
+            unit['leader'] = {'canLead': [x for x in lead if x], **unit.get('leader', {})}
+        else:
+            unit.pop('leader', None)
         for key in ('bodyguard', 'notes'):
             if key in old: unit[key] = old[key]
         unmatched = [t for (t, legends), x in zip(targets, lead) if not x and not legends and slug(t) not in excluded]  # Legends/FW targets are expected

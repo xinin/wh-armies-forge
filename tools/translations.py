@@ -100,7 +100,7 @@ def collect():
             add(f, 'detachment-rule', d['rule']['name'])
             # the app shows the full rules.json texts; faction.json summaries only when there is none
             add(f, 'detachment-rule', fd.get('rule', {}).get('text') or d['rule']['text'])
-            for e in d['enhancements']:
+            for e in d['enhancements'] + d.get('unitAbilities', []):
                 add(f, 'enhancement-name', e['name'])
                 add(f, 'enhancement-text', fd.get('enhancements', {}).get(e['id'], {}).get('text') or e['text'])
         if (fdir / 'stratagems.json').exists():

@@ -41,7 +41,9 @@ def slug(s):
 
 
 def tokens(s):
-    return {t for t in slug(re.sub(r'([a-z])([A-Z])', r'\1 \2', s)).split('-') if t and t not in NOISE and not re.fullmatch(r'(19|20)\d\d|\d+', t)}
+    # singular forms, so "Canoptek Spyders" matches the "Canoptek Spyder" kit
+    return {re.sub(r'(?<=[a-z]{3})s$', '', t) for t in slug(re.sub(r'([a-z])([A-Z])', r'\1 \2', s)).split('-')
+            if t and t not in NOISE and not re.fullmatch(r'(19|20)\d\d|\d+', t)}
 
 
 def cdp_page(url_part):
@@ -94,21 +96,22 @@ def collect(url):
 
 def match(products, units):
     """unit id → product, when the product's tokens cover the unit's name tokens (best = fewest extra tokens)."""
-    prod_tokens = [(p, tokens(p['name'] or '') | tokens(p['href'].split('/shop/')[-1]) | tokens(Path(p['img']).stem.split('_', 1)[-1]))
+    prod_tokens = [(p, tokens(p['name'] or ''), tokens(p['name'] or '') | tokens(p['href'].split('/shop/')[-1]) | tokens(Path(p['img']).stem.split('_', 1)[-1]))
                    for p in products if p.get('img')]
+    wants = [tokens(u['name']['en']) for u in units]
     out = {}
-    for u in units:
-        want = tokens(u['name']['en'])
+    for u, want in zip(units, wants):
         if not want:
             continue
-        best = None
-        for p, have in prod_tokens:
-            if want <= have:
-                extra = len(have - want)
-                if best is None or extra < best[0]:
-                    best = (extra, p)
+        # fewest extra words in the product name first, then in name + link + picture file
+        cands = sorted(((len(name - want) if want <= name else 99, len(have - want), i, p, have)
+                        for i, (p, name, have) in enumerate(prod_tokens) if want <= have), key=lambda c: c[:3])
+        # a kit that also covers a more specific unit name is that unit's ("Lokhust Heavy Destroyer" is not the
+        # kit of the Lokhust Destroyers), unless nothing else fits
+        specific = [w for w in wants if want < w]
+        best = next((c for c in cands if not any(w <= c[4] for w in specific)), cands[0] if cands else None)
         if best:
-            out[u['id']] = best[1]
+            out[u['id']] = best[3]
     return out
 
 

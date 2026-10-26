@@ -1,0 +1,401 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/necrons/",
+ "detachments": {
+  "awakened-dynasty": {
+   "rule": {
+    "name": {
+     "en": "Command Protocols"
+    },
+    "text": {
+     "en": "While a NECRONS CHARACTER model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll."
+    }
+   },
+   "enhancements": {
+    "veil-of-darkness": {
+     "text": {
+      "en": "NECRONS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:\nPlace this unit in strategic reserves.\nThis unit has Deep Strike until the start of your next Shooting phase.\nThis unit must make an ingress move in your next Movement phase (including in your first turn)."
+     },
+     "points": 20
+    },
+    "nether-realm-casket": {
+     "text": {
+      "en": "NECRONS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
+     },
+     "points": 20
+    },
+    "phasal-subjugator": {
+     "text": {
+      "en": "NECRONS model only. While a friendly NECRONS unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the Hit roll."
+     },
+     "points": 35
+    },
+    "enaegic-dermal-bond": {
+     "text": {
+      "en": "NECRONS model only. The bearer has the Feel No Pain 4+ ability."
+     },
+     "points": 30
+    }
+   }
+  },
+  "annihilation-legion": {
+   "rule": {
+    "name": {
+     "en": "Annihilation Protocol"
+    },
+    "text": {
+     "en": "Each time a DESTROYER CULT or FLAYED ONES unit from your army declares a charge, you can re-roll the Charge roll. If one or more targets of that charge are Below Half-strength, add 1 to the Charge roll as well.\nEach time a DESTROYER CULT unit from your army makes a ranged attack that targets the closest eligible target, add 1 to the Armour Penetration characteristic of that attack."
+    }
+   },
+   "enhancements": {
+    "eternal-madness": {
+     "text": {
+      "en": "NECRONS model only. In the Fight phase, each time a model in the bearer’s unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking models unit has finished making its attacks, and is then removed from play."
+     },
+     "points": 20
+    },
+    "ingrained-superiority": {
+     "text": {
+      "en": "NECRONS model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+     },
+     "points": 5
+    },
+    "soulless-reaper": {
+     "text": {
+      "en": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer’s unit is selected to Fall Back, roll one D6: on a 3+, that unit cannot Fall Back this phase and must Remain Stationary."
+     },
+     "points": 15
+    },
+    "eldritch-nightmare": {
+     "text": {
+      "en": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+     },
+     "points": 10
+    }
+   }
+  },
+  "canoptek-court": {
+   "rule": {
+    "name": {
+     "en": "Power Matrix"
+    },
+    "text": {
+     "en": "Certain areas of the battlefield are considered to be within your army’s Power Matrix, as follows:\nYour deployment zone is always within your army’s Power Matrix.\nAt the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Power Matrix.\nAt the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Power Matrix.\nEach time a model in a CRYPTEK or CANOPTEK unit from your army makes an attack, re-roll a Hit roll of 1. If such a unit is wholly within your army’s Power Matrix, you can re-roll the Hit roll instead."
+    }
+   },
+   "enhancements": {
+    "dimensional-sanctum": {
+     "text": {
+      "en": "CRYPTEK model only. Models in the bearer’s unit have the Infiltrators ability."
+     },
+     "points": 20
+    },
+    "hyperphasic-fulcrum": {
+     "text": {
+      "en": "CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army’s Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1."
+     },
+     "points": 15
+    },
+    "autodivinator": {
+     "text": {
+      "en": "CRYPTEK model only. Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP."
+     },
+     "points": 15
+    },
+    "metalodermal-tesla-weave": {
+     "text": {
+      "en": "CRYPTEK model only. Once per phase, when an enemy unit selects the bearer’s unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+     },
+     "points": 10
+    }
+   }
+  },
+  "obeisance-phalanx": {
+   "rule": {
+    "name": {
+     "en": "Worthy Foes"
+    },
+    "text": {
+     "en": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a NOBLE, LYCHGUARD or TRIARCH unit from your army makes an attack that targets that unit, add 1 to the Wound roll."
+    }
+   },
+   "enhancements": {
+    "honourable-combatant": {
+     "text": {
+      "en": "OVERLORD model only. Each time the bearer’s unit destroys an enemy CHARACTER unit, your opponent loses 1CP if they have any."
+     },
+     "points": 10
+    },
+    "unflinching-will": {
+     "text": {
+      "en": "OVERLORD model only. The bearer’s melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities."
+     },
+     "points": 20
+    },
+    "warrior-noble": {
+     "text": {
+      "en": "OVERLORD model only. Each time a melee attack targets the bearer’s unit, subtract 1 from the Hit roll."
+     },
+     "points": 15
+    },
+    "eternal-conqueror": {
+     "text": {
+      "en": "OVERLORD model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll."
+     },
+     "points": 25
+    }
+   }
+  },
+  "hypercrypt-legion": {
+   "rule": {
+    "name": {
+     "en": "Hyperphasing"
+    },
+    "text": {
+     "en": "At the end of your opponent’s turn, you can select a number of NECRONS units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\nBATTLE SIZE NUMBER OF UNITS\nIncursion Up to 1 units\nStrike Force Up to 2 units\nOnslaught Up to 3 units\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves."
+    }
+   },
+   "enhancements": {
+    "dimensional-overseer": {
+     "text": {
+      "en": "NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add one to the number of units from your army that you can select for the Hyperphasing rule."
+     },
+     "points": 25
+    },
+    "arisen-tyrant": {
+     "text": {
+      "en": "NECRONS model only. Each time a model in the bearer’s unit makes an attack, re-roll a Hit roll of 1. If the bearer’s unit was set up on the battlefield this turn, you can re-roll the Hit roll instead."
+     },
+     "points": 25
+    },
+    "hyperspatial-transfer-node": {
+     "text": {
+      "en": "NECRONS model only. Each time the bearer’s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer’s unit."
+     },
+     "points": 15
+    },
+    "osteoclave-fulcrum": {
+     "text": {
+      "en": "NECRONS model only. Models in the bearer’s unit have the Deep Strike ability."
+     },
+     "points": 20
+    }
+   }
+  },
+  "starshatter-arsenal": {
+   "rule": {
+    "name": {
+     "en": "Relentless Onslaught"
+    },
+    "text": {
+     "en": "Each time a NECRONS model (excluding MONSTER models) from your army makes an attack that targets a unit within range of one or more objective markers, add 1 to the Hit roll. In addition, ranged weapons equipped by NECRONS VEHICLE and NECRONS MOUNTED models (excluding TITANIC models) from your army have the [ASSAULT] ability."
+    }
+   },
+   "enhancements": {
+    "dread-majesty": {
+     "text": {
+      "en": "OVERLORD or CATACOMB COMMAND BARGE model only. While a friendly NECRONS unit (excluding MONSTER and TITANIC units) is within 6\" of the bearer, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+     },
+     "points": 30
+    },
+    "miniaturised-nebuloscope": {
+     "text": {
+      "en": "NECRONS model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+     },
+     "points": 15
+    },
+    "demanding-leader": {
+     "text": {
+      "en": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back."
+     },
+     "points": 10
+    },
+    "chrono-impedance-fields": {
+     "text": {
+      "en": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+     },
+     "points": 25
+    }
+   }
+  },
+  "cryptek-conclave": {
+   "rule": {
+    "name": {
+     "en": "Technosorcerous Augmentations"
+    },
+    "text": {
+     "en": "Ranged weapons equipped by CRYPTEK models from your army have the [ASSAULT] ability.\nIn your Shooting phase, each time a CRYPTEK unit from your army is selected to shoot, select one of the following abilities: [ANTI-INFANTRY 3+], [ANTI-MOUNTED 4+], [ASSAULT], [HEAVY], [IGNORES COVER]. Until the end of the phase, ranged weapons equipped by models in that unit have that ability."
+    }
+   },
+   "enhancements": {
+    "quantum-abacus": {
+     "text": {
+      "en": "NECRONS model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if it is within range of one or more objectives: on a 4+, you gain 1CP."
+     },
+     "points": 15
+    },
+    "atomic-disintegrators": {
+     "text": {
+      "en": "CRYPTEK model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, when selecting an ability for the Technosorcerous Augmentations Detachment rule, you can also select from the following abilities: [ANTI-MONSTER 5+], [ANTI-VEHICLE 5+]."
+     },
+     "points": 10
+    },
+    "gauntlet-of-compression": {
+     "text": {
+      "en": "NECRONS model only. Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit."
+     },
+     "points": 20
+    },
+    "gravitic-bolas": {
+     "text": {
+      "en": "CRYPTEK model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks (excluding TITANIC units); until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for that unit."
+     },
+     "points": 15
+    }
+   }
+  },
+  "cursed-legion": {
+   "rule": {
+    "name": {
+     "en": "Cold Fervour"
+    },
+    "text": {
+     "en": "Add 2 to the Strength characteristic of weapons equipped by DESTROYER CULT models from your army.\nThe first time each turn that a DESTROYER CULT unit from your army makes attacks that destroy a unit or cause it to become Below Half-strength, after that unit has finished resolving its attacks, until the end of the turn, add 2 to the Strength characteristic of weapons equipped by friendly NECRONS models (excluding DESTROYER CULT, MONSTER and TITANIC models)."
+    }
+   },
+   "enhancements": {
+    "destroyer-ankh": {
+     "text": {
+      "en": "CATACOMB COMMAND BARGE or OVERLORD model only. The bearer has the DESTROYER CULT keyword. Add 2\" to the Move characteristic of models in the bearer’s unit and add 2 to the Attacks characteristic of melee weapons equipped by the bearer."
+     },
+     "points": 20
+    },
+    "murdermind": {
+     "text": {
+      "en": "SUPPORT: OPHYDIAN DESTROYERS, SKORPEKH DESTROYERS, LOKHUST DESTROYERS, LOKHUST HEAVY DESTROYERS\nCRYPTEK model only. The bearer has the DESTROYER CULT keyword. Add 3\" to the Move characteristic of the bearer."
+     },
+     "points": 15
+    },
+    "mark-of-the-nekrosor": {
+     "text": {
+      "en": "DESTROYER CULT model only. Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll."
+     },
+     "points": 20
+    },
+    "cursed-circlet": {
+     "text": {
+      "en": "DESTROYER CULT model only. In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\"."
+     },
+     "points": 25
+    }
+   }
+  },
+  "pantheon-of-woe": {
+   "rule": {
+    "name": {
+     "en": "Cosmic Distortion"
+    },
+    "text": {
+     "en": "NECRONS MONSTER units from your army have the following ability:\nDistortion Fields (Aura): While an enemy unit is within 6\" of this unit, it is unravelling. While an enemy unit is unravelling, each time an attack targets that unit, improve the Armour Penetration characteristic of that attack by 1.\nAt the start of each phase, for each NECRONS MONSTER unit from your army, that unit can suffer 3 mortal wounds. If it does, until the end of the phase, the range of that unit’s Distortion Fields Aura ability is increased to 9\".\nDesigner’s Note: If your army contains more than one TRANSCENDENT C’TAN unit, each of those units must take the Reletavistic Tether ability.\nRESTRICTIONS\nWhen mustering your army, each NECRONS MONSTER unit from your army has the relevant Necrodermal Binding ability shown below, and you must increase the points cost of each of those units by the amount shown in the Munitorum Field Manual. If this causes your army to exceed the points limit for the battle you are playing, you cannot include that unit in your army."
+    }
+   },
+   "enhancements": {
+    "singularity-matrix": {
+     "text": {
+      "en": "C’TAN SHARD OF THE DECEIVER model only. This model has the following ability:\nLord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP."
+     },
+     "points": 45
+    },
+    "quantum-goad": {
+     "text": {
+      "en": "C’TAN SHARD OF THE NIGHTBRINGER model only. This model is eligible to declare a charge in a turn in which it Advanced."
+     },
+     "points": 45
+    },
+    "animus-damper": {
+     "text": {
+      "en": "C’TAN SHARD OF THE VOID DRAGON model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit visible to the bearer. That unit must take a Leadership test. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll and, if that Leadership test was failed, subtract 1 from the Wound roll as well."
+     },
+     "points": 35
+    },
+    "reletavistic-tether": {
+     "text": {
+      "en": "TRANSCENDENT C’TAN model only. In your turn, when this unit makes an ingress/advance move using its Transdimensional Displacement ability, this unit can end that move more than 6\" horizontally from all enemy units (instead of more than 8\"). When this unit ends that move within 8\" of an enemy unit, this unit is not eligible to declare a charge until the end of the turn."
+     },
+     "points": 40
+    }
+   }
+  },
+  "hand-of-the-dynasty": {
+   "rule": {
+    "name": {
+     "en": "Hypermotility Protocols"
+    },
+    "text": {
+     "en": "Friendly IMMORTALS/NECRON WARRIORS units’ ranged attacks have [ASSAULT].\nWhen a friendly IMMORTALS/NECRON WARRIORS unit is selected to make an advance move, that move does not prevent that unit from being eligible to start an action.\nThis detachment has the DYNASTY tag and cannot be taken with another DYNASTY detachment."
+    }
+   },
+   "enhancements": {
+    "enlivened-sentinels": {
+     "text": {
+      "en": "NECRON WARRIORS unit only. This unit has Scouts 5\""
+     },
+     "points": 20
+    },
+    "tools-of-dominion": {
+     "text": {
+      "en": "IMMORTALS unit only. This unit’s ranged attacks have [RAPID FIRE 1]."
+     },
+     "points": 15
+    }
+   }
+  },
+  "skyshroud-spearhead": {
+   "rule": {
+    "name": {
+     "en": "Transdimensional Deployment"
+    },
+    "text": {
+     "en": "Friendly TOMB BLADES units have Deep Strike.\nWhen a friendly TOMB BLADES unit is selected to shoot, if that unit made an ingress move this turn, that unit’s ranged attacks have +1 to hit rolls."
+    }
+   },
+   "enhancements": {
+    "recursive-reanimation": {
+     "text": {
+      "en": "TOMB BLADES unit only. When this unit activates its Reanimation Protocols, +1 to the roll."
+     },
+     "points": 5
+    },
+    "deepening-madness": {
+     "text": {
+      "en": "DESTROYER CULT MOUNTED unit only. This unit’s ranged attacks have [ASSAULT]."
+     },
+     "points": 20
+    }
+   }
+  },
+  "the-phaerons-armoury": {
+   "rule": {
+    "name": {
+     "en": "Empowered Engines"
+    },
+    "text": {
+     "en": "Friendly NECRONS TITANIC FLY units have +6\" M.\nThis detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment."
+    }
+   },
+   "enhancements": {
+    "relocational-optimiser": {
+     "text": {
+      "en": "NECRONS model only. When this unit is selected to shoot, if this unit was set up using a Monolith’s Eternity Gate ability this turn, this unit’s ranged attacks have:\n[LETHAL HITS].\nOr: [SUSTAINED HITS 1]."
+     },
+     "points": 25
+    },
+    "mortality-shroud": {
+     "text": {
+      "en": "OBELISK unit only. In your opponent’s Battle-shock step, if an enemy unit within 8\" of this unit is below starting strength, that enemy unit makes a battle-shock roll."
+     },
+     "points": 10
+    }
+   }
+  }
+ }
+}
