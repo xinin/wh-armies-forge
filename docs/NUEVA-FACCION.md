@@ -34,7 +34,8 @@ Crea `data/factions/adeptus-custodes/` con:
 Además la añade a `data/factions/index.json`. `--color` es el color de la facción en las tarjetas de la home. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
 
 **Revisa `faction.json`:**
-- **`requires` de cada mejora**: palabras clave que debe tener la unidad, deducidas del texto «X model only». Si sale `[]`, cualquier personaje (no Héroe Épico) puede llevarla. Corrige los casos dudosos. Ejemplo: `[["INFANTRY", "OFFICER"]]` exige las dos palabras clave; `[["A"], ["B"]]` significa A **o** B.
+- **`requires` de cada mejora**: palabras clave que debe tener la unidad, deducidas del texto «X model only». Si sale `[]`, cualquier personaje (no Héroe Épico) puede llevarla. Corrige los casos dudosos. Ejemplo: `[["INFANTRY", "OFFICER"]]` exige las dos palabras clave; `[["A"], ["B"]]` significa A **o** B (en el texto, «A/B unit only»). También entiende nombres de datasheet en minúsculas («Kroot War Shaper model only») y las exclusiones «(excluding KROOT SHAPER models)», que van a `excludes`. Una palabra en plural («STEALTH BATTLESUITS») encaja con la palabra clave en singular.
+- **Letras que parecen latinas**: Wahapedia a veces mezcla letras cirílicas («Kauyоn» con una о cirílica). Los importadores las convierten a latinas; si un destacamento sale con `warning: no section`, mira si es esto.
 - **`type: "upgrade"`**: se marca solo en las mejoras etiquetadas como UPGRADE. Pueden llevarlas unidades que no son personajes y no cuentan para el límite de mejoras.
 - **Nombres en español**: no hace falta tocarlos aquí; todos los textos se traducen en el paso 6.
 - **Mecánicas propias de la facción**: la regla de ejército solo se muestra como texto. Las órdenes de Astra Militarum (`armyRule.orders`) son un caso especial escrito a mano; otras facciones no lo necesitan.
@@ -57,6 +58,11 @@ Por cada unidad guarda:
 - perfiles, armas (con sus perfiles y reglas), habilidades (CORE, de facción, propias y de equipo), regla de dañado y órdenes;
 - composición, a quién lidera y límite de líderes;
 - **puntos de la 11ª**, que se marcan como verificados. Si el datasheet tiene sobrecoste por copias ("YOUR 3RD+ UNIT COSTS", a veces desde la 2.ª), va a `points.json` → `unitsExtraCopies` (`{from, sizes}`);
+- **costes de equipo** ("WARGEAR OPTIONS · per Lascannon · 5"): van a `points.json` → `wargearCosts` y la app los suma por cada pieza que lleve la unidad, también la que trae de serie;
+- **palabras clave por modelo** ("KEYWORDS – ALL MODELS: … | TEMPESTOR PRIME: CHARACTER; OFFICER"): la unidad recibe todas;
+- **equipo común de la facción** (los drones T'au de la sección «Drones» de la página de la facción): su regla y su arma se copian en cada unidad que puede llevarlos;
+- **armas que da un equipo o una habilidad** ("MV15 Gun Drone: The bearer is equipped with 1 twin pulse blaster", "… is equipped with the support turret weapon"): van a `gearWeapons` / `abilityWeapons` y salen en la tabla de armas;
+- **notas que limitan combinaciones** ("cannot have duplicates of these pieces of wargear", "No model can be equipped with both …"): van a `uniqueGear` / `exclusiveGear` y la validación de la lista avisa si no se cumplen;
 - **equipo con cantidades** (`tools/wargear.py`):
   - cuántos modelos de cada tipo tiene la unidad en cada tamaño ("1 Tempestor + 4-9 Tempestus Scions");
   - el equipo por defecto contado ("Every Heavy Weapons Gunner is equipped with: lascannon…" → 3× lascannon). Lo que no es un arma (vox, estandarte, medi-pack) se guarda como equipo, y su habilidad de equipo solo se muestra si la unidad lo lleva;
@@ -98,7 +104,8 @@ Compara cada unidad importada con su datasheet de la caché y termina con «N er
 | `composition` | Tipos de modelo que no cuadran con el tamaño de la unidad |
 | `loadout` | Equipo por defecto que no se reconoce como arma: nombre escrito distinto o equipo sin habilidad |
 | `reachable` | Armas del datasheet que no están en el equipo por defecto ni en ninguna opción, es decir, opciones o equipo mal leídos |
-| `options` | Opciones de equipo que no se han convertido en selector |
+| `options` | Opciones de equipo que no se han convertido en selector, o que dan un «equipo» que no es un arma ni tiene regla (opción mal leída) |
+| `costs` | Costes de equipo de algo que la unidad no puede llevar |
 | `replaces` | Opciones que sustituyen algo que la unidad nunca lleva |
 | `data` | Sin perfiles, palabras clave o puntos, o líderes hacia unidades inexistentes |
 
@@ -111,7 +118,12 @@ Hay que dejarlo en **0 errores**. Los errores son fallos de lectura y casi siemp
 - llamadas a nota pegadas al texto ("following*:");
 - "equipped with: nothing";
 - notas entre corchetes dentro de una opción ("1 medi-pack [that model's hot-shot lasgun cannot be replaced]"), que se leían como un objeto de equipo;
-- plurales con un calificativo delante ("2 additional heavy stubbers" / "heavy stubber").
+- plurales con un calificativo delante ("2 additional heavy stubbers" / "heavy stubber");
+- erratas de una letra en nombres largos ("tri-bade" / "tri-blade") y "have their X can be replaced with";
+- "up to two of the following, and can take duplicates" / "but cannot take duplicates" (varias elecciones por modelo) y "up to 2 seeker missiles" (cantidad);
+- "If this unit contains 10 models:" seguido de opciones completas, "2 models can each…" y "1 model in this unit equipped with…";
+- un tamaño que es el modelo más su complemento ("1 model | 85, 2 models | 105" con "can be equipped with 1 Tidewall defence platform");
+- la lista de equipo que nombra las armas distinto que la tabla de perfiles (Krootox Rampagers).
 
 La auditoría no ve los nombres de equipo raros que sí se ven en la app: revisa también la lista de comprobación del paso 7 en los dos idiomas.
 

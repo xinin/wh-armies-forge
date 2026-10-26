@@ -5,6 +5,7 @@ import { icon } from './icons.js';
 import {
   battleSizeOf, unitPoints, listPoints, detachmentPointsUsed, availableEnhancements,
   isLeader, leadersOf, canAttach, optionMax, optionMaxEach, hasKw, bodyguardLimits, isExtraCopy,
+  loadoutCounts, itemName, gearSlug,
 } from './rules.js';
 
 export const ROLES = ['character', 'battleline', 'infantry', 'mounted', 'monster', 'vehicle', 'transport', 'aircraft', 'titanic', 'fortification'];
@@ -24,7 +25,6 @@ const EMPTY_ART = `<img class="empty-aquila" src="assets/brand/aquila.webp" alt=
 
 export const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-const weaponName = (def, id) => tr(def.weaponMap.get(id)?.name) || id;
 
 /* ---------- Header ---------- */
 
@@ -207,18 +207,6 @@ function renderUnitCore(ru, def, list, data, edition, customImages, attached) {
   ${renderSheet(ru, def, data)}`;
 }
 
-const slugify = str => String(str).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-
-// Name of a loadout item: a weapon of the datasheet, or gear ("gear:vox-caster" → its wargear ability name).
-function itemName(def, id) {
-  if (!id.startsWith('gear:')) return weaponName(def, id);
-  // gear ids are singular ("servo-scribe"), the wargear ability may be plural ("Servo-scribes")
-  const singular = s => s.split('-').map(w => w.replace(/s$/, '')).join('-');
-  const g = id.slice(5);
-  const ability = (def.wargearAbilities ?? []).find(a => singular(slugify(a.name.en)) === singular(g));
-  return ability ? tr(ability.name) : g.replace(/-/g, ' ').replace(/^./, c => c.toUpperCase());
-}
-
 // Labels of wargear options, built in the current language from the option data.
 const packageLabel = (def, items) => {
   const net = {};
@@ -237,36 +225,16 @@ function optionLabel(def, opt) {
   const replaced = packageLabel(def, opt.replaces ?? []);
   let label;
   if (opt.type === 'toggle') label = `${owner}${t('wg.add')} ${choiceLabel(def, opt, opt.gives)}`;
-  else if (opt.type === 'pool') label = `${owner}${t('wg.replace')} ${replaced}`;
+  else if (opt.type === 'pool') label = opt.replaces?.length ? `${owner}${t('wg.replace')} ${replaced}` : `${owner}${t('wg.add')}`;
   else if (opt.exclusive) label = t('wg.chooseOne');
   else label = `${owner}${replaced || t('wg.optional')}`;
   label = label.charAt(0).toUpperCase() + label.slice(1);
   return opt.scope === 'all' ? `${label} (${t('wg.allModels')})` : label;
 }
 
-/* Effective equipment of a unit: the default loadout of its size (with counts) after the chosen options.
-   Per-model options are applied first, "all models" swaps last on what is left. → [{ id, name, count, changed, gear }] */
-export function loadoutOf(ru, def, data) {
-  const size = def.sizes[ru.sizeIdx] ?? def.sizes[0];
-  const models = size?.models ?? 1;
-  const base = size?.loadout ?? {};
-  const counts = { ...base };
-  const add = (item, n) => { counts[item] = Math.max(0, (counts[item] ?? 0) + n); };
-  const apply = (opt, key, times) => {
-    if (!times) return;
-    for (const r of opt.replaces ?? []) add(r.item, -r.n * times);
-    for (const x of opt.packages?.[key] ?? []) add(x.item, x.n * times);
-  };
-  const available = opt => (opt.replaces?.length
-    ? Math.min(...opt.replaces.map(r => Math.floor((counts[r.item] ?? 0) / r.n)))
-    : models);
-  const options = (def.wargear ?? []).filter(o => !(o.minModels && models < o.minModels));
-  for (const opt of [...options.filter(o => o.scope !== 'all'), ...options.filter(o => o.scope === 'all')]) {
-    const v = ru.wargear?.[opt.id];
-    if (opt.type === 'swap' && v) apply(opt, v, opt.scope === 'all' ? available(opt) : 1);
-    if (opt.type === 'pool') for (const [key, n] of Object.entries(v ?? {})) apply(opt, key, Number(n) || 0);
-    if (opt.type === 'toggle' && v) apply(opt, opt.gives, opt.scope === 'all' ? available(opt) : Number(v));
-  }
+/* Effective equipment of a unit (see loadoutCounts) with names. → [{ id, name, count, changed, gear }] */
+export function loadoutOf(ru, def) {
+  const { counts, base } = loadoutCounts(ru, def);
   return Object.entries(counts).filter(([, n]) => n > 0).map(([id, count]) => ({
     id, count, gear: id.startsWith('gear:'), changed: count !== (base[id] ?? 0),
     name: `${count > 1 ? count + '× ' : ''}${itemName(def, id)}`,
@@ -284,7 +252,7 @@ export function statRows(def) {
 }
 
 export function weaponTable(ru, def, data) {
-  const items = loadoutOf(ru, def, data);
+  const items = loadoutOf(ru, def);
   const section = type => items.filter(i => def.weaponMap.get(i.id)?.type === type).flatMap(r => {
     const w = def.weaponMap.get(r.id);
     return w.profiles.map((p, k) => `<tr class="${r.changed ? 'changed' : ''} ${k ? 'subprofile' : ''}">
@@ -306,10 +274,10 @@ function shownWargearAbilities(ru, def, data) {
   const possible = new Set([
     ...def.sizes.flatMap(s => Object.keys(s.loadout ?? {})),
     ...(def.wargear ?? []).flatMap(o => Object.values(o.packages ?? {}).flat().map(x => x.item)),
-  ].filter(i => i.startsWith('gear:')).map(i => i.slice(5)));
-  const carried = ru ? new Set(loadoutOf(ru, def, data).filter(i => i.gear).map(i => i.id.slice(5))) : possible;
+  ].filter(i => i.startsWith('gear:')).map(i => gearSlug(i.slice(5))));
+  const carried = ru ? new Set(loadoutOf(ru, def).filter(i => i.gear).map(i => gearSlug(i.id.slice(5)))) : possible;
   return (def.wargearAbilities ?? []).filter(a => {
-    const g = slugify(a.name.en);
+    const g = gearSlug(a.name.en);
     return !possible.has(g) || carried.has(g);
   });
 }
@@ -358,7 +326,7 @@ function renderWargear(ru, def, data) {
       const each = Math.min(max, optionMaxEach(opt, models));
       return `<div class="wg-row pool"><span>${label} <b class="${used > max ? 'bad' : ''}">${used}/${max}</b></span>
         <div class="pool-items">${opt.choices.map(c => `<label class="stepper">${esc(choiceLabel(def, opt, c))}
-          <input type="number" min="0" max="${each}" value="${v?.[c] ?? 0}" data-action="wg-pool" data-uid="${ru.uid}" data-opt="${opt.id}" data-weapon="${esc(c)}"></label>`).join('')}
+          <input type="number" min="0" max="${Math.min(each, optionMaxEach(opt, models, c))}" value="${v?.[c] ?? 0}" data-action="wg-pool" data-uid="${ru.uid}" data-opt="${opt.id}" data-weapon="${esc(c)}"></label>`).join('')}
         </div>${Number.isFinite(optionMaxEach(opt, models)) ? `<small>${t('wargear.maxEach', { n: each })}</small>` : ''}</div>`;
     }
     return `<label class="wg-row"><span>${label}</span>

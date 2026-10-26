@@ -1,0 +1,29 @@
+{
+  "id": "8fhu1qat",
+  "name": "Imperio T’au 2000",
+  "factionId": "t-au-empire",
+  "edition": "11th",
+  "battleSize": "strike-force",
+  "detachments": [],
+  "units": [
+    {
+      "uid": "tvt1teb7",
+      "unitId": "commander-in-coldstar-battlesuit",
+      "sizeIdx": 0,
+      "wargear": {
+        "o1": "plasma-rifle",
+        "o2": {
+          "gear:gun-drone": 1,
+          "gear:shield-drone": 1
+        },
+        "o3": {}
+      },
+      "enhancement": null,
+      "warlord": false,
+      "attachedTo": null
+    }
+  ],
+  "created": 1793001544027,
+  "updated": 1793001578730,
+  "file": "armies/imperio-t-au-2000-8fhu1qat.json"
+}

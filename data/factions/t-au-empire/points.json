@@ -1,0 +1,520 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-26",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/",
+ "verified": [
+  "all-enhancements",
+  "breacher-team",
+  "broadside-battlesuits",
+  "cadre-fireblade",
+  "commander-farsight",
+  "commander-in-coldstar-battlesuit",
+  "commander-in-enforcer-battlesuit",
+  "commander-shadowsun",
+  "crisis-fireknife-battlesuits",
+  "crisis-starscythe-battlesuits",
+  "crisis-sunforge-battlesuits",
+  "darkstrider",
+  "devilfish",
+  "ethereal",
+  "firesight-team",
+  "ghostkeel-battlesuit",
+  "hammerhead-gunship",
+  "kroot-carnivores",
+  "kroot-farstalkers",
+  "kroot-flesh-shaper",
+  "kroot-hounds",
+  "kroot-lone-spear",
+  "kroot-trail-shaper",
+  "kroot-war-shaper",
+  "krootox-rampagers",
+  "krootox-riders",
+  "pathfinder-team",
+  "piranhas",
+  "razorshark-strike-fighter",
+  "riptide-battlesuit",
+  "sky-ray-gunship",
+  "stealth-battlesuits",
+  "stormsurge",
+  "strike-team",
+  "sun-shark-bomber",
+  "the-twin-lance",
+  "tidewall-droneport",
+  "tidewall-gunrig",
+  "tidewall-shieldline",
+  "vespid-stingwings"
+ ],
+ "units": {
+  "breacher-team": [
+   {
+    "models": 10,
+    "points": 80
+   }
+  ],
+  "broadside-battlesuits": [
+   {
+    "models": 1,
+    "points": 75
+   },
+   {
+    "models": 2,
+    "points": 150
+   },
+   {
+    "models": 3,
+    "points": 255
+   }
+  ],
+  "cadre-fireblade": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "commander-farsight": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "commander-in-coldstar-battlesuit": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "commander-in-enforcer-battlesuit": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "commander-shadowsun": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "crisis-fireknife-battlesuits": [
+   {
+    "models": 3,
+    "points": 100
+   }
+  ],
+  "crisis-starscythe-battlesuits": [
+   {
+    "models": 3,
+    "points": 100
+   }
+  ],
+  "crisis-sunforge-battlesuits": [
+   {
+    "models": 3,
+    "points": 125
+   }
+  ],
+  "darkstrider": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "devilfish": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "ethereal": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "firesight-team": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ],
+  "ghostkeel-battlesuit": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "hammerhead-gunship": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "kroot-carnivores": [
+   {
+    "models": 10,
+    "points": 65
+   },
+   {
+    "models": 20,
+    "points": 130
+   }
+  ],
+  "kroot-farstalkers": [
+   {
+    "models": 12,
+    "points": 75
+   }
+  ],
+  "kroot-flesh-shaper": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "kroot-hounds": [
+   {
+    "models": 5,
+    "points": 45
+   },
+   {
+    "models": 10,
+    "points": 65
+   }
+  ],
+  "kroot-lone-spear": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "kroot-trail-shaper": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "kroot-war-shaper": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "krootox-rampagers": [
+   {
+    "models": 3,
+    "points": 85
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "krootox-riders": [
+   {
+    "models": 1,
+    "points": 45
+   },
+   {
+    "models": 2,
+    "points": 60
+   },
+   {
+    "models": 3,
+    "points": 90
+   }
+  ],
+  "pathfinder-team": [
+   {
+    "models": 10,
+    "points": 85
+   }
+  ],
+  "piranhas": [
+   {
+    "models": 1,
+    "points": 65
+   },
+   {
+    "models": 2,
+    "points": 110
+   },
+   {
+    "models": 3,
+    "points": 165
+   }
+  ],
+  "razorshark-strike-fighter": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "riptide-battlesuit": [
+   {
+    "models": 1,
+    "points": 190
+   }
+  ],
+  "sky-ray-gunship": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "stealth-battlesuits": [
+   {
+    "models": 5,
+    "points": 100
+   }
+  ],
+  "stormsurge": [
+   {
+    "models": 1,
+    "points": 375
+   }
+  ],
+  "strike-team": [
+   {
+    "models": 10,
+    "points": 70
+   }
+  ],
+  "sun-shark-bomber": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "the-twin-lance": [
+   {
+    "models": 2,
+    "points": 240
+   }
+  ],
+  "tidewall-droneport": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "tidewall-gunrig": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "tidewall-shieldline": [
+   {
+    "models": 1,
+    "points": 85
+   },
+   {
+    "models": 2,
+    "points": 105
+   }
+  ],
+  "vespid-stingwings": [
+   {
+    "models": 5,
+    "points": 70
+   },
+   {
+    "models": 10,
+    "points": 115
+   }
+  ]
+ },
+ "enhancements": {
+  "coordinated-exploitation": 30,
+  "exemplar-of-the-montka": 10,
+  "strategic-conqueror": 15,
+  "strike-swiftly": 45,
+  "internal-grenade-racks": 20,
+  "prototype-weapon-system": 15,
+  "puretide-engram-neurochip": 15,
+  "starflare-ignition-system": 20,
+  "exemplar-of-the-kauyon": 20,
+  "precision-of-the-patient-hunter": 15,
+  "solid-image-projection-unit": 20,
+  "through-unity-devastation": 30,
+  "borthrod-gland": 15,
+  "kroothawk-flock": 10,
+  "nomadic-hunter": 20,
+  "root-carved-weapons": 10,
+  "student-of-kauyon": 20,
+  "admired-leader": 20,
+  "thermoneutronic-projector": 15,
+  "plasma-accelerator-rifle": 20,
+  "supernova-launcher": 15,
+  "negation-emitters": 15,
+  "unmasking-suite": 15
+ },
+ "unitsExtraCopies": {
+  "broadside-battlesuits": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 95
+    },
+    {
+     "models": 2,
+     "points": 170
+    },
+    {
+     "models": 3,
+     "points": 275
+    }
+   ]
+  },
+  "crisis-fireknife-battlesuits": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 110
+    }
+   ]
+  },
+  "crisis-starscythe-battlesuits": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 110
+    }
+   ]
+  },
+  "crisis-sunforge-battlesuits": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 135
+    }
+   ]
+  },
+  "devilfish": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 85
+    }
+   ]
+  },
+  "ghostkeel-battlesuit": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 165
+    }
+   ]
+  },
+  "hammerhead-gunship": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 160
+    }
+   ]
+  },
+  "kroot-farstalkers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 12,
+     "points": 85
+    }
+   ]
+  },
+  "krootox-rampagers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 95
+    },
+    {
+     "models": 6,
+     "points": 180
+    }
+   ]
+  },
+  "pathfinder-team": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 10,
+     "points": 100
+    }
+   ]
+  },
+  "piranhas": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 75
+    },
+    {
+     "models": 2,
+     "points": 120
+    },
+    {
+     "models": 3,
+     "points": 175
+    }
+   ]
+  },
+  "riptide-battlesuit": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 220
+    }
+   ]
+  },
+  "stealth-battlesuits": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 110
+    }
+   ]
+  },
+  "stormsurge": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 400
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "broadside-battlesuits": {
+   "high-yield-missile-pods": 5
+  },
+  "crisis-fireknife-battlesuits": {
+   "missile-pod": 5
+  },
+  "crisis-starscythe-battlesuits": {
+   "tau-flamer": 5
+  },
+  "ghostkeel-battlesuit": {
+   "cyclic-ion-raker": 15
+  },
+  "pathfinder-team": {
+   "ion-rifle": 5
+  },
+  "riptide-battlesuit": {
+   "ion-accelerator": 25
+  }
+ }
+}

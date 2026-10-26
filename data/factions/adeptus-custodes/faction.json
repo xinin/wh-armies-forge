@@ -461,14 +461,26 @@
     },
     {
      "id": "auric-eagle",
-     "requires": [],
+     "requires": [
+      [
+       "INFANTRY"
+      ],
+      [
+       "MOUNTED"
+      ]
+     ],
      "name": {
       "en": "Auric Eagle"
      },
      "text": {
       "en": "ADEPTUS CUSTODES INFANTRY/MOUNTED unit only (excluding TERMINATOR units). This unit has +1 to advance rolls and charge rolls. <h2"
      },
-     "type": "upgrade"
+     "type": "upgrade",
+     "excludes": [
+      [
+       "TERMINATOR"
+      ]
+     ]
     }
    ]
   },

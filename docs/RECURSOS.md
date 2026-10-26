@@ -92,7 +92,7 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 ## Estado y salvedades de los datos
 
 - **Edición**: todo es de la 11ª, sacado de Wahapedia: reglas de reclutamiento, destacamentos, mejoras, estratagemas y los datasheets de todas las facciones. Los PDF de Drive solo se usan para los iconos, el emblema y las ilustraciones.
-- **Puntos**: los de la 11ª de cada datasheet de Wahapedia, todos verificados. Conviene contrastarlos con el MFM vigente cuando salga uno nuevo.
+- **Puntos**: los de la 11ª de cada datasheet de Wahapedia, todos verificados. Conviene contrastarlos con el MFM vigente cuando salga uno nuevo. Los costes de equipo («per Lascannon: 5») se cobran por cada pieza que lleve la unidad, también la de serie: es la lectura literal de Wahapedia y conviene confirmarla con el MFM.
 - **Onslaught**: sus valores en `11th.json` están sin confirmar.
 - **Excluido**: Forge World, Warhammer Legends y Boarding Actions.
 - **Idioma**: la interfaz y todo el contenido de juego están en español e inglés. Los textos se importan en inglés y la traducción al español es propia, no oficial, con la terminología de GW. Las palabras clave en mayúsculas se dejan en inglés.

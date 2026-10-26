@@ -35,12 +35,24 @@ def summary(text, limit=320):
 
 
 def requirements(body, faction_words):
-    """'INFANTRY OFFICER model only.' → [['INFANTRY', 'OFFICER']]; faction keywords are dropped."""
-    m = re.match(r'^((?:[A-Z][A-Z\'’-]*\s*)+?)\s+(?:model|unit)s? only', body)
-    if not m:
-        return []
-    words = [w for w in m.group(1).split() if w not in faction_words]
-    return [words] if words else []
+    """Who can take an enhancement, from the start of its text. Faction keywords are dropped.
+    'INFANTRY OFFICER model only.'            → requires [['INFANTRY', 'OFFICER']]
+    'GHOSTKEEL BATTLESUIT/PATHFINDER TEAM …'   → one alternative per '/'
+    'Kroot War Shaper model only.'             → the datasheet name: [['KROOT', 'WAR', 'SHAPER']]
+    '… (excluding KROOT SHAPER models).'       → excludes [['KROOT', 'SHAPER']]
+    Returns (requires, excludes)."""
+    def groups(names):
+        out = []
+        for alt in names.split('/'):
+            words = [w.upper() for w in alt.split() if w.upper() not in faction_words]
+            if words:
+                out.append(words)
+        return out
+    name = r"[A-Z][\w'’-]*(?:[ /][A-Z][\w'’-]*)*"
+    m = re.match(rf"^({name})\s+(?:(?:model|unit)s?\s+)?only\b", body)
+    requires = groups(m.group(1)) if m else []
+    x = re.search(rf"\(excluding ({name}) (?:model|unit)s?\)", body)
+    return requires, groups(x.group(1)) if x else []
 
 
 def main():
@@ -73,6 +85,7 @@ def main():
     detachments, enh_points = [], {}
     seen = set()
     for det_name, dp in dets_dp:
+        det_name = clean(det_name)
         did = slug(det_name)
         if did in seen:
             continue
@@ -98,7 +111,10 @@ def main():
             if eid in enh_points:  # same name in two detachments
                 eid = f'{eid}-{did}'
             enh_points[eid] = int(m.group(2))
-            e = {'id': eid, 'requires': requirements(body, faction_words), 'name': {'en': ename}, 'text': {'en': summary(body, 200)}}
+            requires, excludes = requirements(body, faction_words)
+            e = {'id': eid, 'requires': requires, 'name': {'en': ename}, 'text': {'en': summary(body, 200)}}
+            if excludes:
+                e['excludes'] = excludes
             if upgrade:
                 e['type'] = 'upgrade'
             enhancements.append(e)

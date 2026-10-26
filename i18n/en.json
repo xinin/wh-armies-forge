@@ -172,5 +172,7 @@
   "stat.AP": "AP",
   "stat.D": "D",
   "list.nameLabel": "List name",
-  "list.pointsUsed": "Points"
+  "list.pointsUsed": "Points",
+  "err.duplicateGear": "{unit}: cannot carry more than one {item} per model",
+  "err.exclusiveGear": "{unit}: no model can carry both {a} and {b}"
 }

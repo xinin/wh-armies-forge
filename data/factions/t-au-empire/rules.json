@@ -1,0 +1,227 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/",
+ "detachments": {
+  "kauyon": {
+   "rule": {
+    "name": {
+     "en": "Patient Hunter"
+    },
+    "text": {
+     "en": "During the third, fourth and fifth battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll."
+    }
+   },
+   "enhancements": {
+    "exemplar-of-the-kauyon": {
+     "text": {
+      "en": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of from the third."
+     },
+     "points": 20
+    },
+    "precision-of-the-patient-hunter": {
+     "text": {
+      "en": "T’AU EMPIRE model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well."
+     },
+     "points": 15
+    },
+    "solid-image-projection-unit": {
+     "text": {
+      "en": "T’AU EMPIRE model only. After both players have deployed their armies, select up to three T’AU EMPIRE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+     },
+     "points": 20
+    },
+    "through-unity-devastation": {
+     "text": {
+      "en": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit."
+     },
+     "points": 30
+    }
+   }
+  },
+  "montka": {
+   "rule": {
+    "name": {
+     "en": "Killing Blow"
+    },
+    "text": {
+     "en": "During the first, second and third battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [ASSAULT] ability. During the first, second and third battle rounds, while a unit is a Guided unit, its ranged weapons have the [LETHAL HITS] ability."
+    }
+   },
+   "enhancements": {
+    "coordinated-exploitation": {
+     "text": {
+      "en": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [SUSTAINED HITS 1] ability while targeting their Spotted unit."
+     },
+     "points": 30
+    },
+    "exemplar-of-the-montka": {
+     "text": {
+      "en": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Killing Blow Detachment rule applies to that unit during the fourth battle round as well."
+     },
+     "points": 10
+    },
+    "strategic-conqueror": {
+     "text": {
+      "en": "T’AU EMPIRE model only. At the start of the first battle round, before the first turn begins, select one objective marker on the battlefield. While a friendly T’AU EMPIRE model is within range of that objective marker and the bearer is on the battlefield, add 1 to that friendly model’s Objective Control characteristic."
+     },
+     "points": 15
+    },
+    "strike-swiftly": {
+     "text": {
+      "en": "T’AU EMPIRE model only. In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability."
+     },
+     "points": 45
+    }
+   }
+  },
+  "retaliation-cadre": {
+   "rule": {
+    "name": {
+     "en": "Bonded Heroes"
+    },
+    "text": {
+     "en": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well."
+    }
+   },
+   "enhancements": {
+    "internal-grenade-racks": {
+     "text": {
+      "en": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+     },
+     "points": 20
+    },
+    "prototype-weapon-system": {
+     "text": {
+      "en": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability."
+     },
+     "points": 15
+    },
+    "puretide-engram-neurochip": {
+     "text": {
+      "en": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP."
+     },
+     "points": 15
+    },
+    "starflare-ignition-system": {
+     "text": {
+      "en": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves."
+     },
+     "points": 20
+    }
+   }
+  },
+  "kroot-hunting-pack": {
+   "rule": {
+    "name": {
+     "en": "Hunter’s Instincts"
+    },
+    "text": {
+     "en": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.\nSkirmish Fighters\nKROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.\nKEYWORDS\nIf you select this Detachment, KROOT CARNIVORE units from your army have the Battleline keyword."
+    }
+   },
+   "enhancements": {
+    "borthrod-gland": {
+     "text": {
+      "en": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+     },
+     "points": 15
+    },
+    "kroothawk-flock": {
+     "text": {
+      "en": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer."
+     },
+     "points": 10
+    },
+    "nomadic-hunter": {
+     "text": {
+      "en": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability."
+     },
+     "points": 20
+    },
+    "root-carved-weapons": {
+     "text": {
+      "en": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities."
+     },
+     "points": 10
+    }
+   }
+  },
+  "advanced-acquisition-cadre": {
+   "rule": {
+    "name": {
+     "en": "Expert Fieldcraft"
+    },
+    "text": {
+     "en": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden."
+    }
+   },
+   "enhancements": {
+    "negation-emitters": {
+     "text": {
+      "en": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range."
+     },
+     "points": 15
+    },
+    "unmasking-suite": {
+     "text": {
+      "en": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot."
+     },
+     "points": 15
+    }
+   }
+  },
+  "auxiliary-cadre": {
+   "rule": {
+    "name": {
+     "en": "Integrated Command Structure"
+    },
+    "text": {
+     "en": "Friendly KROOT/VESPID STINGWINGS units have the following ability:\nHarnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\nWhile a unit is prey-marked, that unit has +3\" detection range\nFriendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability:\nLocalised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.\nThis detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment."
+    }
+   },
+   "enhancements": {
+    "student-of-kauyon": {
+     "text": {
+      "en": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike."
+     },
+     "points": 20
+    },
+    "admired-leader": {
+     "text": {
+      "en": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase."
+     },
+     "points": 20
+    }
+   }
+  },
+  "experimental-prototype-cadre": {
+   "rule": {
+    "name": {
+     "en": "Superior Craftsmanship"
+    },
+    "text": {
+     "en": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R.\nThis detachment has the BATTLESUIT tag and cannot be taken with another BATTLESUIT detachment."
+    }
+   },
+   "enhancements": {
+    "thermoneutronic-projector": {
+     "text": {
+      "en": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have:\n+2 S\n+1 AP and D."
+     },
+     "points": 15
+    },
+    "plasma-accelerator-rifle": {
+     "text": {
+      "en": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have:\n+2 S\n+1 A, AP and D."
+     },
+     "points": 20
+    },
+    "supernova-launcher": {
+     "text": {
+      "en": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have:\n+3 S\n+1 AP and D."
+     },
+     "points": 15
+    }
+   }
+  }
+ }
+}

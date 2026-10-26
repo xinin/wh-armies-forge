@@ -628,5 +628,11 @@
     }
    ]
   }
+ },
+ "wargearCosts": {
+  "tyrannofex": {
+   "acid-spray": 10,
+   "rupture-cannon": 20
+  }
  }
 }

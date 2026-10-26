@@ -7,7 +7,9 @@ Usage:
     python3 tools/import_wahapedia_datasheets.py astra-militarum X --html-dir saved_pages/   (uses <slug>.html files)
 
 Adds or updates only the given datasheets. Kept from an existing entry: Spanish name, bodyguard, notes.
-Points: the first cost tier goes to points.json "units"; the 3rd+ copy tier (11th edition) to "unitsExtraCopies".
+Points: the first cost tier goes to points.json "units"; the 3rd+ copy tier (11th edition) to "unitsExtraCopies";
+"per <wargear>" costs to "wargearCosts" ({unit: {item: points}}, charged for every piece the unit carries).
+Faction-wide wargear (T'au drones, from the faction page) is copied into the units that can take it.
 Wargear (model counts, default loadout, options) is built by tools/wargear.py. With --all, units that are no
 longer datasheets of the faction are removed. Run tools/audit_units.py afterwards.
 """
@@ -110,35 +112,8 @@ def parse_option_list(html_part):
     return out
 
 
-def parse(page, ds_slug):
-    i = page.find('<div class="dsOuterFrame datasheet')
-    end = page.find('<div class="ds2colKWFlat', i)
-    block = page[i:end]
-    kw_start = page.find('KEYWORDS:', end)
-    kw_block = page[kw_start:page.find('</div>', kw_start)]
-
-    name = text(re.search(r'<div class="dsH2Header"><div>(.*?)</div>', block, re.S).group(1))
-
-    # characteristics: name/value pairs in order; every "M" starts a new model profile
-    prof_area = block[block.find('dsProfileBaseWrap'):block.find('<div class="ds2col">')]
-    stats = []
-    for item in re.finditer(r'class="(dsCharName|dsCharValue[^"]*|dsModelName[^"]*)"[^>]*>(.*?)</div>', prof_area, re.S):
-        kind, val = item.group(1), text(item.group(2))
-        if kind == 'dsCharName':
-            if val == 'M':
-                stats.append({})
-            key = val
-        elif kind.startswith('dsCharValue') and stats:
-            stats[-1][{'SV': 'Sv', 'LD': 'Ld'}.get(key, key)] = val
-        elif kind.startswith('dsModelName') and stats:
-            stats[-1]['name'] = {'en': title(val)}
-    stats = [st for st in stats if 'M' in st]
-    inv = re.search(r'class="dsCharInvulValue[^"]*">(.*?)</div>', block, re.S)
-    if inv:
-        for st in stats:
-            st['inv'] = text(inv.group(1))
-
-    # weapons: rows after the RANGED / MELEE headers
+def parse_weapons(block):
+    """Weapon profiles of a weapon table: rows after the RANGED / MELEE headers → {id: weapon}."""
     weapons = {}
     melee_at = block.find('MELEE WEAPONS')
     for m in re.finditer(r'<tr class="dsWeaponRow">(.*?)</tr>', block, re.S):
@@ -162,6 +137,62 @@ def parse(page, ds_slug):
         if mode:
             p['mode'] = {'en': mode}
         w['profiles'].append(p)
+    return weapons
+
+
+def faction_wargear(faction_page):
+    """Wargear shared by the whole faction, listed on the faction page (T'au "Drones": guardian, gun, marker,
+    missile and shield drone) → {gear id: {name, text, weapons}}."""
+    i = faction_page.find('id="Drones"')
+    if i < 0:
+        return {}
+    sec = faction_page[i:faction_page.find('<h2', i + 10)]
+    out = {}
+    for block in re.split(r'<div class="BreakInsideAvoid">', sec)[1:]:
+        nm = re.search(r'class="impact18 underl">(.*?)</p>', block, re.S)
+        if not nm:
+            continue
+        name = title(text(nm.group(1)))
+        body = re.sub(r'<p class="ShowFluff.*?</p>|<p[^>]*class="impact18 underl">.*?</p>', '', block, flags=re.S)
+        body = re.sub(r'<table class="wTable.*?</table>', '', body, flags=re.S)
+        rule = re.sub(r'\s+', ' ', text(body)).strip()
+        weapons = list(parse_weapons(block).values())
+        if rule.endswith(':') and weapons:  # "… the following ranged weapon:" + its table → name it
+            rule += ' ' + ', '.join(w['name']['en'] for w in weapons) + '.'
+        out[wargear.gear_id(name)] = {'name': {'en': name}, 'text': {'en': rule}, 'weapons': weapons}
+    return out
+
+
+def parse(page, ds_slug):
+    i = page.find('<div class="dsOuterFrame datasheet')
+    end = page.find('<div class="ds2colKWFlat', i)
+    block = page[i:end]
+    # left keyword column: "KEYWORDS: A; B" or, with per-model keywords,
+    # "KEYWORDS – ALL MODELS: A; B | TEMPESTOR PRIME: CHARACTER; OFFICER" (the unit gets all of them)
+    kw_block = page[end:page.find('<div class="dsRight', end)].replace('<span class="dsVertLine"></span>', '\n')
+
+    name = text(re.search(r'<div class="dsH2Header"><div>(.*?)</div>', block, re.S).group(1))
+
+    # characteristics: name/value pairs in order; every "M" starts a new model profile
+    prof_area = block[block.find('dsProfileBaseWrap'):block.find('<div class="ds2col">')]
+    stats = []
+    for item in re.finditer(r'class="(dsCharName|dsCharValue[^"]*|dsModelName[^"]*)"[^>]*>(.*?)</div>', prof_area, re.S):
+        kind, val = item.group(1), text(item.group(2))
+        if kind == 'dsCharName':
+            if val == 'M':
+                stats.append({})
+            key = val
+        elif kind.startswith('dsCharValue') and stats:
+            stats[-1][{'SV': 'Sv', 'LD': 'Ld'}.get(key, key)] = val
+        elif kind.startswith('dsModelName') and stats:
+            stats[-1]['name'] = {'en': title(val)}
+    stats = [st for st in stats if 'M' in st]
+    inv = re.search(r'class="dsCharInvulValue[^"]*">(.*?)</div>', block, re.S)
+    if inv:
+        for st in stats:
+            st['inv'] = text(inv.group(1))
+
+    weapons = parse_weapons(block)
 
     core, faction = [], []
     for label, value in re.findall(r'<td class="dsCoreArmyLabel[^"]*">(.*?)</td><td class="dsCoreArmyValue">(.*?)</td>', block, re.S):
@@ -183,13 +214,21 @@ def parse(page, ds_slug):
     attach = next((re.sub(r'\s+', ' ', s).strip() + '.' for s in comp_text.split('.') if 'Leader unit' in s and 'attached' in s), None)
 
     # cost tiers: "YOUR 1ST TO 2ND UNITS COST" / "YOUR 3RD+ UNIT COSTS" (or "YOUR 2ND+ …"): extra = {from, sizes}
-    costs, extra_sizes, extra_from, tier = [], [], None, 0
+    costs, extra_sizes, extra_from, tier, gear_costs, in_gear = [], [], None, 0, [], False
     for row in re.findall(r'<tr>(.*?)</tr>', comp_html, re.S):
         if 'dsUnitCostHeader' in row:
+            # "WARGEAR OPTIONS | per Lascannon | 5": points per piece of that wargear the unit carries
+            in_gear = 'WARGEAR' in text(row).upper()
+            if in_gear:
+                continue
             tier += 1
             fm = re.search(r'YOUR (\d+)(?:ST|ND|RD|TH)\+', text(row).upper())
             if tier > 1 and fm:
                 extra_from = int(fm.group(1))
+            continue
+        gm = re.search(r'<td>per (.+?)</td><td><div class="PriceTag">\s*(\d+)\s*</div>', row)
+        if in_gear and gm:
+            gear_costs.append((text(gm.group(1)), int(gm.group(2))))
             continue
         mm = re.search(r'<td>(?:\d+-)?(\d+) models?</td><td><div class="PriceTag">\s*(\d+)\s*</div>', row)
         if mm:
@@ -202,9 +241,8 @@ def parse(page, ds_slug):
     transport = re.sub(r'\s+', ' ', text(sec.get('TRANSPORT', ''))).strip()
     damaged_key = next((k for k in sec if k.startswith('DAMAGED')), None)
 
-    kw_text = text(kw_block)
-    km = re.search(r'KEYWORDS:\s*(.*?)\n', kw_text + '\n')
-    keywords = [k.strip().upper() for k in re.split(r'[;,]', km.group(1)) if k.strip()] if km else []
+    kw_lines = [re.sub(r'^[^;:]*:', '', line).strip() for line in text(kw_block).split('\n')]
+    keywords = list(dict.fromkeys(k.strip().upper() for line in kw_lines for k in re.split(r'[;,]', line) if k.strip()))
 
     unit = {
         'id': slug(name), 'name': {'en': name}, 'keywords': keywords, 'stats': stats,
@@ -231,7 +269,7 @@ def parse(page, ds_slug):
         if mm: bg['maxWithKeyword'] = {mm.group(1).upper(): 1}
         if bg: unit['bodyguard'] = bg
     if transport: unit['transport'] = {'en': transport}
-    return unit, leader_targets, costs, extra
+    return unit, leader_targets, costs, extra, gear_costs
 
 
 def datasheet_links(faction_page, faction):
@@ -299,14 +337,14 @@ def main():
         else:
             page = fetch(f'{BASE}/{args.faction}/{ds}')
         try:
-            unit, targets, costs, extra = parse(page, ds)
+            unit, targets, costs, extra, gear_costs = parse(page, ds)
         except (AttributeError, ValueError) as e:
             print(f'skip {ds}: could not parse ({e})', file=sys.stderr)
             continue
         if unit['id'] in excluded:
             print(f'skip {unit["id"]} (excluded)')
             continue
-        parsed.append((unit, targets, costs, extra))
+        parsed.append((unit, targets, costs, extra, gear_costs))
 
     if args.all:
         # a full import replaces the faction: units that are no longer datasheets are dropped
@@ -316,10 +354,12 @@ def main():
             existing.pop(uid)
             points['units'].pop(uid, None)
             points.get('unitsExtraCopies', {}).pop(uid, None)
+            points.get('wargearCosts', {}).pop(uid, None)
     by_name = {slug(u['name']['en']): u['id'] for u in existing.values()}
     by_name.update({slug(u['name']['en']): u['id'] for u, *_ in parsed})
     issues = {}
-    for unit, targets, costs, extra in parsed:
+    shared_gear = faction_wargear(fetch(f'{BASE}/{args.faction}/'))
+    for unit, targets, costs, extra, gear_costs in parsed:
         old = existing.get(unit['id'], {})
         unit['role'] = role_of(unit['keywords'])
         unit['name']['es'] = old.get('name', {}).get('es', unit['name']['en'])
@@ -338,7 +378,18 @@ def main():
         else:
             points.get('unitsExtraCopies', {}).pop(unit['id'], None)
         unit['sizes'] = [{'models': c['models']} for c in costs] or old.get('sizes') or [{'models': 1}]
-        unparsed = wargear.build(unit, [s['models'] for s in unit['sizes']], global_weapons)
+        unparsed = wargear.build(unit, [s['models'] for s in unit['sizes']], global_weapons, shared_gear)
+        resolve = wargear.make_resolver([w['id'] for w in unit['weapons']], global_weapons)
+        per_item = {}
+        for name, pts in gear_costs:
+            _, ids, is_weapon = resolve(name)
+            per_item[ids[0]] = pts
+            if not is_weapon and ids[0] not in {i for sz in unit['sizes'] for i in sz['loadout']}:
+                unparsed.append(f'wargear cost for "{name}" is not a weapon of the datasheet')
+        if per_item:
+            points.setdefault('wargearCosts', {})[unit['id']] = per_item
+        else:
+            points.get('wargearCosts', {}).pop(unit['id'], None)
         existing[unit['id']] = {**unit}
         if unparsed or unmatched:
             issues[unit['id']] = unparsed + [f'leader target not found: {t}' for t in unmatched]

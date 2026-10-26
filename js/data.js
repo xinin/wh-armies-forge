@@ -86,6 +86,7 @@ export async function loadFaction(entry) {
       ...u,
       sizes,
       weaponMap,
+      wargearCosts: points.wargearCosts?.[u.id] ?? {},
       extraFrom: extra?.from ?? null,
       storeImage: images.units[u.id] ?? null,
       emblem,

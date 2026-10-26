@@ -228,7 +228,12 @@
      },
      "text": {
       "en": "TYRANIDS model only (excluding MONSTERS models). The bearer’s unit can be regenerated up to twice per phase, instead of once."
-     }
+     },
+     "excludes": [
+      [
+       "MONSTER"
+      ]
+     ]
     },
     {
      "id": "instinctive-defence",
@@ -476,7 +481,19 @@
    "enhancements": [
     {
      "id": "encircling-horrors",
-     "requires": [],
+     "requires": [
+      [
+       "NEUROLICTOR"
+      ],
+      [
+       "LICTOR"
+      ],
+      [
+       "VON",
+       "RYAN'S",
+       "LEAPERS"
+      ]
+     ],
      "name": {
       "en": "Encircling Horrors"
      },
@@ -570,7 +587,20 @@
    "enhancements": [
     {
      "id": "elevated-might",
-     "requires": [],
+     "requires": [
+      [
+       "WINGED",
+       "TYRANID",
+       "PRIME"
+      ],
+      [
+       "TYRANID",
+       "PRIME",
+       "WITH",
+       "LASH",
+       "WHIP"
+      ]
+     ],
      "name": {
       "en": "Elevated Might"
      },
@@ -580,7 +610,20 @@
     },
     {
      "id": "ocular-adaptation",
-     "requires": [],
+     "requires": [
+      [
+       "WINGED",
+       "TYRANID",
+       "PRIME"
+      ],
+      [
+       "TYRANID",
+       "PRIME",
+       "WITH",
+       "LASH",
+       "WHIP"
+      ]
+     ],
      "name": {
       "en": "Ocular Adaptation"
      },

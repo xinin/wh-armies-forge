@@ -436,6 +436,1455 @@
    ]
   },
   {
+   "id": "cadian-command-squad",
+   "name": {
+    "en": "Cadian Command Squad",
+    "es": "Escuadra de Mando Cadiana"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "PLATOON",
+    "CADIAN",
+    "COMMAND SQUAD",
+    "CHARACTER",
+    "OFFICER"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "5+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Cadian Veteran Guardsman(⌀28.5mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flamer",
+     "name": {
+      "en": "Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grenade-launcher",
+     "name": {
+      "en": "Grenade launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [],
+       "mode": {
+        "en": "krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "lasgun",
+     "name": {
+      "en": "Lasgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "laspistol",
+     "name": {
+      "en": "Laspistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-gun",
+     "name": {
+      "en": "Plasma gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Cadia Stands!"
+     },
+     "text": {
+      "en": "While this unit contains an OFFICER model and this unit is within range of an objective, this unit can re-roll battle-shock rolls."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Voice of Command"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Cadian-Command-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Master Vox"
+     },
+     "text": {
+      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
+     }
+    },
+    {
+     "name": {
+      "en": "Medi-pack"
+     },
+     "text": {
+      "en": "At the start of your Command phase, if the bearer’s unit is below its Starting Strength, you can return up to D3 destroyed PLATOON models (excluding CHARACTERS) to this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Regimental Standard"
+     },
+     "text": {
+      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+     }
+    }
+   ],
+   "ordersText": {
+    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
+   },
+   "orders": 1,
+   "wargearOptions": [
+    {
+     "text": "1 Cadian Veteran Guardsman’s lasgun and regimental standard can be replaced with one of the following:",
+     "choices": [
+      "1 flamer",
+      "1 grenade launcher",
+      "1 meltagun",
+      "1 plasma gun"
+     ]
+    },
+    {
+     "text": "1 Cadian Veteran Guardsman’s laspistol can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "The Cadian Commander’s laspistol can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "1 Cadian Veteran Guardsman's chainsword can be replaced with one of the following:",
+     "choices": [
+      "1 flamer and 1 close combat weapon",
+      "1 grenade launcher and 1 close combat weapon",
+      "1 meltagun and 1 close combat weapon",
+      "1 plasma gun and 1 close combat weapon",
+      "1 power fist",
+      "1 power weapon"
+     ]
+    },
+    {
+     "text": "The Cadian Commander’s chainsword can be replaced with one of the following:",
+     "choices": [
+      "1 power fist",
+      "1 power weapon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Cadian Commander",
+    "4 Cadian Veteran Guardsmen"
+   ],
+   "equipped": [
+    "The Cadian Commander is equipped with: laspistol; chainsword.",
+    "1 Cadian Veteran Guardsman is equipped with: las pistol; chainsword.",
+    "1 other Cadian Veteran Guardsman is equipped with: lasgun; master vox; close combat weapon.",
+    "1 other Cadian Veteran Guardsman is equipped with: lasgun; medi-pack; close combat weapon.",
+    "1 other Cadian Veteran Guardsman is equipped with: lasgun; regimental standard; close combat weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "cadian-shock-troops"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "laspistol": 2,
+      "chainsword": 2,
+      "lasgun": 3,
+      "gear:master-vox": 1,
+      "close-combat-weapon": 3,
+      "gear:medi-pack": 1,
+      "gear:regimental-standard": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Cadian Veteran Guardsman: Lasgun + Regimental standard",
+      "es": "Cadian Veteran Guardsman: Lasgun + Regimental standard"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "lasgun",
+       "n": 1
+      },
+      {
+       "item": "gear:regimental-standard",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "flamer",
+      "grenade-launcher",
+      "meltagun",
+      "plasma-gun"
+     ],
+     "packages": {
+      "flamer": [
+       {
+        "item": "flamer",
+        "n": 1
+       }
+      ],
+      "grenade-launcher": [
+       {
+        "item": "grenade-launcher",
+        "n": 1
+       }
+      ],
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "plasma-gun": [
+       {
+        "item": "plasma-gun",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Cadian Veteran Guardsman",
+     "labels": {
+      "flamer": "Flamer",
+      "grenade-launcher": "Grenade launcher",
+      "meltagun": "Meltagun",
+      "plasma-gun": "Plasma gun",
+      "": "Lasgun + Regimental standard"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Cadian Veteran Guardsman: Laspistol",
+      "es": "Cadian Veteran Guardsman: Laspistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "laspistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "bolt-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Cadian Veteran Guardsman",
+     "labels": {
+      "bolt-pistol": "Bolt pistol",
+      "plasma-pistol": "Plasma pistol",
+      "": "Laspistol"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Cadian Commander: Laspistol",
+      "es": "Cadian Commander: Laspistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "laspistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "bolt-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Cadian Commander",
+     "labels": {
+      "bolt-pistol": "Bolt pistol",
+      "plasma-pistol": "Plasma pistol",
+      "": "Laspistol"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Cadian Veteran Guardsman: Chainsword",
+      "es": "Cadian Veteran Guardsman: Chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "flamer+close-combat-weapon",
+      "grenade-launcher+close-combat-weapon",
+      "meltagun+close-combat-weapon",
+      "plasma-gun+close-combat-weapon",
+      "power-fist",
+      "power-weapon"
+     ],
+     "packages": {
+      "flamer+close-combat-weapon": [
+       {
+        "item": "flamer",
+        "n": 1
+       },
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       }
+      ],
+      "grenade-launcher+close-combat-weapon": [
+       {
+        "item": "grenade-launcher",
+        "n": 1
+       },
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       }
+      ],
+      "meltagun+close-combat-weapon": [
+       {
+        "item": "meltagun",
+        "n": 1
+       },
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       }
+      ],
+      "plasma-gun+close-combat-weapon": [
+       {
+        "item": "plasma-gun",
+        "n": 1
+       },
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       }
+      ],
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Cadian Veteran Guardsman",
+     "labels": {
+      "flamer+close-combat-weapon": "Flamer + Close combat weapon",
+      "grenade-launcher+close-combat-weapon": "Grenade launcher + Close combat weapon",
+      "meltagun+close-combat-weapon": "Meltagun + Close combat weapon",
+      "plasma-gun+close-combat-weapon": "Plasma gun + Close combat weapon",
+      "power-fist": "Power fist",
+      "power-weapon": "Power weapon",
+      "": "Chainsword"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Cadian Commander: Chainsword",
+      "es": "Cadian Commander: Chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "power-fist",
+      "power-weapon"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Cadian Commander",
+     "labels": {
+      "power-fist": "Power fist",
+      "power-weapon": "Power weapon",
+      "": "Chainsword"
+     }
+    }
+   ],
+   "loadout": [
+    "chainsword",
+    "close-combat-weapon",
+    "gear:master-vox",
+    "gear:medi-pack",
+    "gear:regimental-standard",
+    "lasgun",
+    "laspistol"
+   ]
+  },
+  {
+   "id": "catachan-command-squad",
+   "name": {
+    "en": "Catachan Command Squad",
+    "es": "Escuadra de Mando Catachana"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "PLATOON",
+    "CATACHAN",
+    "COMMAND SQUAD",
+    "CHARACTER",
+    "OFFICER"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "5+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Veteran Guardsman(⌀25mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flamer",
+     "name": {
+      "en": "Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grenade-launcher",
+     "name": {
+      "en": "Grenade launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [],
+       "mode": {
+        "en": "krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lasgun",
+     "name": {
+      "en": "Lasgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "laspistol",
+     "name": {
+      "en": "Laspistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-gun",
+     "name": {
+      "en": "Plasma gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "sniper-rifle",
+     "name": {
+      "en": "Sniper rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Gung-ho Command"
+     },
+     "text": {
+      "en": "While this unit contains an OFFICER, ranged weapons equipped by models in this unit have the [ASSAULT] ability."
+     }
+    }
+   ],
+   "core": [
+    "Leader",
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Voice of Command"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Catachan-Command-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Master Vox"
+     },
+     "text": {
+      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
+     }
+    },
+    {
+     "name": {
+      "en": "Medi-pack"
+     },
+     "text": {
+      "en": "At the start of your Command phase, if the bearer’s unit is below its Starting Strength, you can return up to D3 destroyed PLATOON models (excluding CHARACTERS) to this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Regimental Standard"
+     },
+     "text": {
+      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+     }
+    }
+   ],
+   "ordersText": {
+    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
+   },
+   "orders": 1,
+   "wargearOptions": [
+    {
+     "text": "Any number of Veteran Guardsmen can each have their lasgun replaced with one of the following*:",
+     "choices": [
+      "1 flamer",
+      "1 grenade launcher",
+      "1 heavy flamer",
+      "1 meltagun",
+      "1 plasma gun",
+      "1 sniper rifle"
+     ]
+    },
+    {
+     "text": "1 Veteran Guardsman equipped with a lasgun can be equipped with 1 master vox.**",
+     "choices": []
+    },
+    {
+     "text": "1 Veteran Guardsman equipped with a lasgun can be equipped 1 medi-pack.**",
+     "choices": []
+    },
+    {
+     "text": "1 Veteran Guardsman equipped with a lasgun can be equipped with 1 regimental standard.**",
+     "choices": []
+    },
+    {
+     "text": "The Catachan Commander’s laspistol can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "The Catachan Commander can be equipped with one of the following:",
+     "choices": [
+      "1 boltgun",
+      "1 chainsword",
+      "1 power fist",
+      "1 power weapon"
+     ]
+    }
+   ],
+   "wargearNotes": [
+    "* You cannot select the same weapon from this list more than once per unit.",
+    "** A model can only take one of these options."
+   ],
+   "composition": [
+    "1 Catachan Commander",
+    "4 Veteran Guardsmen"
+   ],
+   "equipped": [
+    "The Catachan Commander is equipped with: laspistol; close combat weapon.",
+    "Every Veteran Guardsman is equipped with: lasgun; laspistol; close combat weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "catachan-jungle-fighters"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "laspistol": 5,
+      "close-combat-weapon": 5,
+      "lasgun": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Veteran Guardsmen: replace Lasgun",
+      "es": "Veteran Guardsmen: sustituir Lasgun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "lasgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "flamer",
+      "grenade-launcher",
+      "heavy-flamer",
+      "meltagun",
+      "plasma-gun",
+      "sniper-rifle"
+     ],
+     "packages": {
+      "flamer": [
+       {
+        "item": "flamer",
+        "n": 1
+       }
+      ],
+      "grenade-launcher": [
+       {
+        "item": "grenade-launcher",
+        "n": 1
+       }
+      ],
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ],
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "plasma-gun": [
+       {
+        "item": "plasma-gun",
+        "n": 1
+       }
+      ],
+      "sniper-rifle": [
+       {
+        "item": "sniper-rifle",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 4
+     },
+     "owner": "Veteran Guardsmen",
+     "labels": {
+      "flamer": "Flamer",
+      "grenade-launcher": "Grenade launcher",
+      "heavy-flamer": "Heavy flamer",
+      "meltagun": "Meltagun",
+      "plasma-gun": "Plasma gun",
+      "sniper-rifle": "Sniper rifle"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Veteran Guardsman: add Master vox",
+      "es": "Veteran Guardsman: añadir Master vox"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:master-vox",
+     "packages": {
+      "gear:master-vox": [
+       {
+        "item": "gear:master-vox",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1
+     },
+     "owner": "Veteran Guardsman",
+     "labels": {
+      "gear:master-vox": "Master vox"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Veteran Guardsman: add Medi pack",
+      "es": "Veteran Guardsman: añadir Medi pack"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:medi-pack",
+     "packages": {
+      "gear:medi-pack": [
+       {
+        "item": "gear:medi-pack",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1
+     },
+     "owner": "Veteran Guardsman",
+     "labels": {
+      "gear:medi-pack": "Medi pack"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Veteran Guardsman: add Regimental standard",
+      "es": "Veteran Guardsman: añadir Regimental standard"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:regimental-standard",
+     "packages": {
+      "gear:regimental-standard": [
+       {
+        "item": "gear:regimental-standard",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1
+     },
+     "owner": "Veteran Guardsman",
+     "labels": {
+      "gear:regimental-standard": "Regimental standard"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Catachan Commander: Laspistol",
+      "es": "Catachan Commander: Laspistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "laspistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "bolt-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Catachan Commander",
+     "labels": {
+      "bolt-pistol": "Bolt pistol",
+      "plasma-pistol": "Plasma pistol",
+      "": "Laspistol"
+     }
+    },
+    {
+     "id": "o6",
+     "label": {
+      "en": "Catachan Commander: optional",
+      "es": "Catachan Commander: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "boltgun",
+      "chainsword",
+      "power-fist",
+      "power-weapon"
+     ],
+     "packages": {
+      "boltgun": [
+       {
+        "item": "boltgun",
+        "n": 1
+       }
+      ],
+      "chainsword": [
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Catachan Commander",
+     "labels": {
+      "boltgun": "Boltgun",
+      "chainsword": "Chainsword",
+      "power-fist": "Power fist",
+      "power-weapon": "Power weapon",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "lasgun",
+    "laspistol"
+   ]
+  },
+  {
    "id": "commissar",
    "name": {
     "en": "Commissar",
@@ -1197,6 +2646,971 @@
     "power-klaw",
     "power-sword",
     "storm-bolter"
+   ]
+  },
+  {
+   "id": "gaunts-ghosts",
+   "name": {
+    "en": "Gaunt’s Ghosts",
+    "es": "Gaunt’s Ghosts"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "GAUNT’S GHOSTS",
+    "CHARACTER",
+    "EPIC HERO",
+    "OFFICER"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Tanith Ghost(⌀28.5mm)"
+     },
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "braggs-autocannon",
+     "name": {
+      "en": "Bragg’s autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "5+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "corbecs-hot-shot-lascarbine",
+     "name": {
+      "en": "Corbec’s hot-shot lascarbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "larkins-long-las",
+     "name": {
+      "en": "Larkin’s long-las"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "4",
+       "keywords": [
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lascarbine",
+     "name": {
+      "en": "Lascarbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rawnes-lascarbine",
+     "name": {
+      "en": "Rawne’s lascarbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gaunts-chainsword",
+     "name": {
+      "en": "Gaunt’s chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "straight-silver-knife",
+     "name": {
+      "en": "Straight silver knife"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "mkolls-straight-silver-knife",
+     "name": {
+      "en": "Mkoll’s straight silver knife"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Tanith Camo-cloaks"
+     },
+     "text": {
+      "en": "Models in this unit have the Benefit of Cover."
+     }
+    },
+    {
+     "name": {
+      "en": "Covert Stealth Team"
+     },
+     "text": {
+      "en": "At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: Place this unit in strategic reserves. This unit has Deep Strike until the start of your next Shooting phase. This unit must make an ingress move in your next Movement phase (including in your first turn)."
+     }
+    }
+   ],
+   "core": [
+    "Fights First",
+    "Infiltrators",
+    "Lone Operative",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Voice of Command"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Gaunt-s-Ghosts",
+   "ordersText": {
+    "en": "This unit’s OFFICER can issue up to 2 Orders to REGIMENT or GAUNT’S GHOSTS units."
+   },
+   "orders": 2,
+   "composition": [
+    "1 Ibram Gaunt – EPIC HERO",
+    "5 Tanith Ghosts"
+   ],
+   "equipped": [
+    "Ibram Gaunt is equipped with: bolt pistol; Gaunt’s chainsword.",
+    "1 Tanith Ghost is equipped with: Corbec’s hot-shot lascarbine; straight silver knife.",
+    "1 Tanith Ghost is equipped with: Rawne’s lascarbine; straight silver knife.",
+    "1 Tanith Ghost is equipped with: Larkin’s long-las; straight silver knife.",
+    "1 Tanith Ghost is equipped with: Bragg’s autocannon; straight silver knife.",
+    "1 Tanith Ghost is equipped with: lascarbine; Mkoll’s straight silver knife."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 6,
+     "loadout": {
+      "bolt-pistol": 1,
+      "gaunts-chainsword": 1,
+      "corbecs-hot-shot-lascarbine": 1,
+      "straight-silver-knife": 4,
+      "rawnes-lascarbine": 1,
+      "larkins-long-las": 1,
+      "braggs-autocannon": 1,
+      "lascarbine": 1,
+      "mkolls-straight-silver-knife": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "braggs-autocannon",
+    "corbecs-hot-shot-lascarbine",
+    "gaunts-chainsword",
+    "larkins-long-las",
+    "lascarbine",
+    "mkolls-straight-silver-knife",
+    "rawnes-lascarbine",
+    "straight-silver-knife"
+   ]
+  },
+  {
+   "id": "krieg-command-squad",
+   "name": {
+    "en": "Krieg Command Squad",
+    "es": "Escuadra de Mando de Krieg"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "PLATOON",
+    "KRIEG",
+    "COMMAND SQUAD",
+    "CHARACTER",
+    "OFFICER"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "5+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Veteran Guardsman(⌀25mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flamer",
+     "name": {
+      "en": "Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grenade-launcher",
+     "name": {
+      "en": "Grenade launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [],
+       "mode": {
+        "en": "krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "lasgun",
+     "name": {
+      "en": "Lasgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "laspistol",
+     "name": {
+      "en": "Laspistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-gun",
+     "name": {
+      "en": "Plasma gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "trench-club",
+     "name": {
+      "en": "Trench club"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Grim Determination"
+     },
+     "text": {
+      "en": "While this unit contains an OFFICER, you can target this unit with Stratagems even while it is Battle-shocked and Orders issued to this unit do not cease to affect this unit if it becomes Battle-shocked."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Voice of Command"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Krieg-Command-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Master Vox"
+     },
+     "text": {
+      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
+     }
+    },
+    {
+     "name": {
+      "en": "Alchemyk Counteragents"
+     },
+     "text": {
+      "en": "The bearer’s unit has the Feel No Pain 6+ ability against mortal wounds."
+     }
+    },
+    {
+     "name": {
+      "en": "Regimental Standard"
+     },
+     "text": {
+      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Servo-scribes"
+     },
+     "text": {
+      "en": "Once per battle, when issuing an Order, the Lord Commissar can issue one additional Order. Designer’s Note: Place a Servo-scribes token next to the unit, removing it when this ability has been used."
+     }
+    }
+   ],
+   "ordersText": {
+    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
+   },
+   "orders": 1,
+   "wargearOptions": [
+    {
+     "text": "1 Veteran Guardsman’s boltgun can be replaced with one of the following:",
+     "choices": [
+      "1 flamer",
+      "1 grenade launcher",
+      "1 meltagun",
+      "1 plasma gun"
+     ]
+    },
+    {
+     "text": "The Lord Commissar's power weapon can be replaced with 1 power fist.",
+     "choices": []
+    },
+    {
+     "text": "The Lord Commissar can be equipped with 1 plasma pistol.",
+     "choices": []
+    },
+    {
+     "text": "1 Veteran Guardsman’s chainsword can be replaced with one of the following:",
+     "choices": [
+      "1 trench club",
+      "1 power weapon"
+     ]
+    },
+    {
+     "text": "1 Veteran Guardsman not equipped with alchemyk counteragents can replace its laspistol with one of the following:",
+     "choices": [
+      "1 bolt pistol",
+      "1 plasma pistol"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Lord Commissar",
+    "5 Veteran Guardsmen"
+   ],
+   "equipped": [
+    "The Lord Commissar is equipped with: laspistol; power weapon.",
+    "One Veteran Guardsman is equipped with: laspistol; chainsword.",
+    "One Veteran Guardsman is equipped with: laspistol; close combat weapon; alchemyk counteragents; servo-scribes.",
+    "One Veteran Guardsman is equipped with: lasgun; close combat weapon; master vox.",
+    "One Veteran Guardsman is equipped with: lasgun; close combat weapon; regimental standard.",
+    "One Veteran Guardsman is equipped with: boltgun; close combat weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "death-korps-of-krieg",
+     "krieg-combat-engineers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 6,
+     "loadout": {
+      "laspistol": 3,
+      "power-weapon": 1,
+      "chainsword": 1,
+      "close-combat-weapon": 4,
+      "gear:alchemyk-counteragent": 1,
+      "gear:servo-scribe": 1,
+      "lasgun": 2,
+      "gear:master-vox": 1,
+      "gear:regimental-standard": 1,
+      "boltgun": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Veteran Guardsman: Boltgun",
+      "es": "Veteran Guardsman: Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "flamer",
+      "grenade-launcher",
+      "meltagun",
+      "plasma-gun"
+     ],
+     "packages": {
+      "flamer": [
+       {
+        "item": "flamer",
+        "n": 1
+       }
+      ],
+      "grenade-launcher": [
+       {
+        "item": "grenade-launcher",
+        "n": 1
+       }
+      ],
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "plasma-gun": [
+       {
+        "item": "plasma-gun",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Veteran Guardsman",
+     "labels": {
+      "flamer": "Flamer",
+      "grenade-launcher": "Grenade launcher",
+      "meltagun": "Meltagun",
+      "plasma-gun": "Plasma gun",
+      "": "Boltgun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Lord Commissar: Power weapon",
+      "es": "Lord Commissar: Power weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "power-fist"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Lord Commissar",
+     "labels": {
+      "power-fist": "Power fist",
+      "": "Power weapon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Lord Commissar: add Plasma pistol",
+      "es": "Lord Commissar: añadir Plasma pistol"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "plasma-pistol",
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "6": 1
+     },
+     "owner": "Lord Commissar",
+     "labels": {
+      "plasma-pistol": "Plasma pistol"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Veteran Guardsman: Chainsword",
+      "es": "Veteran Guardsman: Chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "trench-club",
+      "power-weapon"
+     ],
+     "packages": {
+      "trench-club": [
+       {
+        "item": "trench-club",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Veteran Guardsman",
+     "labels": {
+      "trench-club": "Trench club",
+      "power-weapon": "Power weapon",
+      "": "Chainsword"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Veteran Guardsman: Laspistol",
+      "es": "Veteran Guardsman: Laspistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "laspistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "bolt-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Veteran Guardsman",
+     "labels": {
+      "bolt-pistol": "Bolt pistol",
+      "plasma-pistol": "Plasma pistol",
+      "": "Laspistol"
+     }
+    }
+   ],
+   "loadout": [
+    "boltgun",
+    "chainsword",
+    "close-combat-weapon",
+    "gear:alchemyk-counteragent",
+    "gear:master-vox",
+    "gear:regimental-standard",
+    "gear:servo-scribe",
+    "lasgun",
+    "laspistol",
+    "power-weapon"
    ]
   },
   {
@@ -2188,6 +4602,645 @@
     "conquest",
     "konstantins-hooves",
     "sols-righteous-gaze"
+   ]
+  },
+  {
+   "id": "militarum-tempestus-command-squad",
+   "name": {
+    "en": "Militarum Tempestus Command Squad",
+    "es": "Escuadra de Mando Tempestus"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "MILITARUM TEMPESTUS",
+    "COMMAND SQUAD",
+    "CHARACTER",
+    "OFFICER"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Tempestor Prime(⌀25mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flamer",
+     "name": {
+      "en": "Flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grenade-launcher",
+     "name": {
+      "en": "Grenade launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [],
+       "mode": {
+        "en": "krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "hot-shot-lasgun",
+     "name": {
+      "en": "Hot-shot lasgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hot-shot-laspistol",
+     "name": {
+      "en": "Hot-shot laspistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hot-shot-volley-gun",
+     "name": {
+      "en": "Hot-shot volley gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-gun",
+     "name": {
+      "en": "Plasma gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "tempestus-dagger",
+     "name": {
+      "en": "Tempestus dagger"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Tempestor Prime"
+     },
+     "text": {
+      "en": "While this unit contains a Tempestor Prime, ranged weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Voice of Command"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Militarum-Tempestus-Command-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Medi-pack"
+     },
+     "text": {
+      "en": "At the start of your Command phase, if the bearer’s unit is below its Starting Strength, you can return up to D3 destroyed Tempestus Scions models to this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Regimental Standard"
+     },
+     "text": {
+      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Command Rod"
+     },
+     "text": {
+      "en": "While the bearer is leading a unit, that unit can be affected by up to two different Orders at the same time."
+     }
+    },
+    {
+     "name": {
+      "en": "Master Vox"
+     },
+     "text": {
+      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
+     }
+    }
+   ],
+   "ordersText": {
+    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
+   },
+   "orders": 1,
+   "wargearOptions": [
+    {
+     "text": "Any number of Tempestus Scions can each have their hot-shot lasgun replaced with one of the following*:",
+     "choices": [
+      "1 flamer",
+      "1 grenade launcher",
+      "1 hot-shot volley gun",
+      "1 meltagun",
+      "1 plasma gun"
+     ]
+    },
+    {
+     "text": "1 Tempestus Scion equipped with a hot-shot lasgun can be equipped with 1 regimental standard (that model’s hot-shot lasgun cannot be replaced).",
+     "choices": []
+    },
+    {
+     "text": "1 Tempestus Scion’s hot-shot lasgun can be replaced with 1 hot-shot laspistol and 1 master vox.",
+     "choices": []
+    },
+    {
+     "text": "1 Tempestus Scion’s hot-shot lasgun can be replaced with one of the following:",
+     "choices": [
+      "1 hot-shot laspistol and 1 medi-pack",
+      "1 hot-shot lasgun, 1 hot-shot laspistol and 1 medi-pack [that model's hot-shot lasgun cannot be replaced]"
+     ]
+    },
+    {
+     "text": "The Tempestor Prime’s bolt pistol can be replaced with one of the following:",
+     "choices": [
+      "1 plasma pistol",
+      "1 command rod"
+     ]
+    }
+   ],
+   "wargearNotes": [
+    "* You cannot select the same weapon from this list more than once per unit."
+   ],
+   "composition": [
+    "1 Tempestor Prime",
+    "4 Tempestus Scions"
+   ],
+   "equipped": [
+    "The Tempestor Prime is equipped with: bolt pistol; Tempestus dagger.",
+    "Every Tempestus Scion is equipped with: hot-shot lasgun; close combat weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "tempestus-scions"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 1,
+      "tempestus-dagger": 1,
+      "hot-shot-lasgun": 4,
+      "close-combat-weapon": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Tempestus Scions: replace Hot-shot lasgun",
+      "es": "Tempestus Scions: sustituir Hot-shot lasgun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "hot-shot-lasgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "flamer",
+      "grenade-launcher",
+      "hot-shot-volley-gun",
+      "meltagun",
+      "plasma-gun"
+     ],
+     "packages": {
+      "flamer": [
+       {
+        "item": "flamer",
+        "n": 1
+       }
+      ],
+      "grenade-launcher": [
+       {
+        "item": "grenade-launcher",
+        "n": 1
+       }
+      ],
+      "hot-shot-volley-gun": [
+       {
+        "item": "hot-shot-volley-gun",
+        "n": 1
+       }
+      ],
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "plasma-gun": [
+       {
+        "item": "plasma-gun",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 4
+     },
+     "owner": "Tempestus Scions",
+     "labels": {
+      "flamer": "Flamer",
+      "grenade-launcher": "Grenade launcher",
+      "hot-shot-volley-gun": "Hot-shot volley gun",
+      "meltagun": "Meltagun",
+      "plasma-gun": "Plasma gun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Tempestus Scion: add Regimental standard",
+      "es": "Tempestus Scion: añadir Regimental standard"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:regimental-standard",
+     "packages": {
+      "gear:regimental-standard": [
+       {
+        "item": "gear:regimental-standard",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1
+     },
+     "owner": "Tempestus Scion",
+     "labels": {
+      "gear:regimental-standard": "Regimental standard"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Tempestus Scion: Hot-shot lasgun",
+      "es": "Tempestus Scion: Hot-shot lasgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hot-shot-lasgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hot-shot-laspistol+gear:master-vox"
+     ],
+     "packages": {
+      "hot-shot-laspistol+gear:master-vox": [
+       {
+        "item": "hot-shot-laspistol",
+        "n": 1
+       },
+       {
+        "item": "gear:master-vox",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Tempestus Scion",
+     "labels": {
+      "hot-shot-laspistol+gear:master-vox": "Hot-shot laspistol + Master vox",
+      "": "Hot-shot lasgun"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Tempestus Scion: Hot-shot lasgun",
+      "es": "Tempestus Scion: Hot-shot lasgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hot-shot-lasgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hot-shot-laspistol+gear:medi-pack",
+      "hot-shot-lasgun+hot-shot-laspistol+gear:medi-pack"
+     ],
+     "packages": {
+      "hot-shot-laspistol+gear:medi-pack": [
+       {
+        "item": "hot-shot-laspistol",
+        "n": 1
+       },
+       {
+        "item": "gear:medi-pack",
+        "n": 1
+       }
+      ],
+      "hot-shot-lasgun+hot-shot-laspistol+gear:medi-pack": [
+       {
+        "item": "hot-shot-lasgun",
+        "n": 1
+       },
+       {
+        "item": "hot-shot-laspistol",
+        "n": 1
+       },
+       {
+        "item": "gear:medi-pack",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Tempestus Scion",
+     "labels": {
+      "hot-shot-laspistol+gear:medi-pack": "Hot-shot laspistol + Medi pack",
+      "hot-shot-lasgun+hot-shot-laspistol+gear:medi-pack": "Hot-shot lasgun + Hot-shot laspistol + Medi pack",
+      "": "Hot-shot lasgun"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Tempestor Prime: Bolt pistol",
+      "es": "Tempestor Prime: Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-pistol",
+      "gear:command-rod"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ],
+      "gear:command-rod": [
+       {
+        "item": "gear:command-rod",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Tempestor Prime",
+     "labels": {
+      "plasma-pistol": "Plasma pistol",
+      "gear:command-rod": "Command rod",
+      "": "Bolt pistol"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "close-combat-weapon",
+    "hot-shot-lasgun",
+    "tempestus-dagger"
    ]
   },
   {
@@ -5704,710 +8757,6 @@
    ]
   },
   {
-   "id": "cadian-command-squad",
-   "name": {
-    "en": "Cadian Command Squad",
-    "es": "Escuadra de Mando Cadiana"
-   },
-   "keywords": [
-    "ASTRA MILITARUM"
-   ],
-   "stats": [
-    {
-     "M": "6\"",
-     "T": "3",
-     "Sv": "5+",
-     "W": "3",
-     "Ld": "7+",
-     "OC": "1",
-     "name": {
-      "en": "Cadian Veteran Guardsman(⌀28.5mm)"
-     }
-    }
-   ],
-   "weapons": [
-    {
-     "id": "bolt-pistol",
-     "name": {
-      "en": "Bolt pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "flamer",
-     "name": {
-      "en": "Flamer"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "D6",
-       "skill": "-",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Ignores Cover",
-        "Torrent"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "grenade-launcher",
-     "name": {
-      "en": "Grenade launcher"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "D3",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Blast"
-       ],
-       "mode": {
-        "en": "frag"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "9",
-       "AP": "-2",
-       "D": "D3",
-       "keywords": [],
-       "mode": {
-        "en": "krak"
-       }
-      }
-     ]
-    },
-    {
-     "id": "lasgun",
-     "name": {
-      "en": "Lasgun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "laspistol",
-     "name": {
-      "en": "Laspistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "meltagun",
-     "name": {
-      "en": "Meltagun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "9",
-       "AP": "-4",
-       "D": "D6",
-       "keywords": [
-        "Melta 2"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "plasma-gun",
-     "name": {
-      "en": "Plasma gun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "plasma-pistol",
-     "name": {
-      "en": "Plasma pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Pistol"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "chainsword",
-     "name": {
-      "en": "Chainsword"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "4",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "close-combat-weapon",
-     "name": {
-      "en": "Close combat weapon"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "2",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "power-fist",
-     "name": {
-      "en": "Power fist"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "4+",
-       "S": "6",
-       "AP": "-2",
-       "D": "2",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "power-weapon",
-     "name": {
-      "en": "Power weapon"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "4+",
-       "S": "4",
-       "AP": "-2",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    }
-   ],
-   "abilities": [
-    {
-     "name": {
-      "en": "Cadia Stands!"
-     },
-     "text": {
-      "en": "While this unit contains an OFFICER model and this unit is within range of an objective, this unit can re-roll battle-shock rolls."
-     }
-    }
-   ],
-   "core": [
-    "Leader"
-   ],
-   "factionAbilities": [
-    "Voice of Command"
-   ],
-   "source": "wahapedia.ru/wh40k11ed/factions/.../Cadian-Command-Squad",
-   "wargearAbilities": [
-    {
-     "name": {
-      "en": "Master Vox"
-     },
-     "text": {
-      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
-     }
-    },
-    {
-     "name": {
-      "en": "Medi-pack"
-     },
-     "text": {
-      "en": "At the start of your Command phase, if the bearer’s unit is below its Starting Strength, you can return up to D3 destroyed PLATOON models (excluding CHARACTERS) to this unit."
-     }
-    },
-    {
-     "name": {
-      "en": "Regimental Standard"
-     },
-     "text": {
-      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
-     }
-    }
-   ],
-   "ordersText": {
-    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
-   },
-   "orders": 1,
-   "wargearOptions": [
-    {
-     "text": "1 Cadian Veteran Guardsman’s lasgun and regimental standard can be replaced with one of the following:",
-     "choices": [
-      "1 flamer",
-      "1 grenade launcher",
-      "1 meltagun",
-      "1 plasma gun"
-     ]
-    },
-    {
-     "text": "1 Cadian Veteran Guardsman’s laspistol can be replaced with one of the following:",
-     "choices": [
-      "1 bolt pistol",
-      "1 plasma pistol"
-     ]
-    },
-    {
-     "text": "The Cadian Commander’s laspistol can be replaced with one of the following:",
-     "choices": [
-      "1 bolt pistol",
-      "1 plasma pistol"
-     ]
-    },
-    {
-     "text": "1 Cadian Veteran Guardsman's chainsword can be replaced with one of the following:",
-     "choices": [
-      "1 flamer and 1 close combat weapon",
-      "1 grenade launcher and 1 close combat weapon",
-      "1 meltagun and 1 close combat weapon",
-      "1 plasma gun and 1 close combat weapon",
-      "1 power fist",
-      "1 power weapon"
-     ]
-    },
-    {
-     "text": "The Cadian Commander’s chainsword can be replaced with one of the following:",
-     "choices": [
-      "1 power fist",
-      "1 power weapon"
-     ]
-    }
-   ],
-   "composition": [
-    "1 Cadian Commander",
-    "4 Cadian Veteran Guardsmen"
-   ],
-   "equipped": [
-    "The Cadian Commander is equipped with: laspistol; chainsword.",
-    "1 Cadian Veteran Guardsman is equipped with: las pistol; chainsword.",
-    "1 other Cadian Veteran Guardsman is equipped with: lasgun; master vox; close combat weapon.",
-    "1 other Cadian Veteran Guardsman is equipped with: lasgun; medi-pack; close combat weapon.",
-    "1 other Cadian Veteran Guardsman is equipped with: lasgun; regimental standard; close combat weapon."
-   ],
-   "role": "infantry",
-   "leader": {
-    "canLead": [
-     "cadian-shock-troops"
-    ]
-   },
-   "sizes": [
-    {
-     "models": 5,
-     "loadout": {
-      "laspistol": 2,
-      "chainsword": 2,
-      "lasgun": 3,
-      "gear:master-vox": 1,
-      "close-combat-weapon": 3,
-      "gear:medi-pack": 1,
-      "gear:regimental-standard": 1
-     }
-    }
-   ],
-   "wargear": [
-    {
-     "id": "o1",
-     "label": {
-      "en": "Cadian Veteran Guardsman: Lasgun + Regimental standard",
-      "es": "Cadian Veteran Guardsman: Lasgun + Regimental standard"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "lasgun",
-       "n": 1
-      },
-      {
-       "item": "gear:regimental-standard",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "flamer",
-      "grenade-launcher",
-      "meltagun",
-      "plasma-gun"
-     ],
-     "packages": {
-      "flamer": [
-       {
-        "item": "flamer",
-        "n": 1
-       }
-      ],
-      "grenade-launcher": [
-       {
-        "item": "grenade-launcher",
-        "n": 1
-       }
-      ],
-      "meltagun": [
-       {
-        "item": "meltagun",
-        "n": 1
-       }
-      ],
-      "plasma-gun": [
-       {
-        "item": "plasma-gun",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Cadian Veteran Guardsman",
-     "labels": {
-      "flamer": "Flamer",
-      "grenade-launcher": "Grenade launcher",
-      "meltagun": "Meltagun",
-      "plasma-gun": "Plasma gun",
-      "": "Lasgun + Regimental standard"
-     }
-    },
-    {
-     "id": "o2",
-     "label": {
-      "en": "Cadian Veteran Guardsman: Laspistol",
-      "es": "Cadian Veteran Guardsman: Laspistol"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "laspistol",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "bolt-pistol",
-      "plasma-pistol"
-     ],
-     "packages": {
-      "bolt-pistol": [
-       {
-        "item": "bolt-pistol",
-        "n": 1
-       }
-      ],
-      "plasma-pistol": [
-       {
-        "item": "plasma-pistol",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Cadian Veteran Guardsman",
-     "labels": {
-      "bolt-pistol": "Bolt pistol",
-      "plasma-pistol": "Plasma pistol",
-      "": "Laspistol"
-     }
-    },
-    {
-     "id": "o3",
-     "label": {
-      "en": "Cadian Commander: Laspistol",
-      "es": "Cadian Commander: Laspistol"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "laspistol",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "bolt-pistol",
-      "plasma-pistol"
-     ],
-     "packages": {
-      "bolt-pistol": [
-       {
-        "item": "bolt-pistol",
-        "n": 1
-       }
-      ],
-      "plasma-pistol": [
-       {
-        "item": "plasma-pistol",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Cadian Commander",
-     "labels": {
-      "bolt-pistol": "Bolt pistol",
-      "plasma-pistol": "Plasma pistol",
-      "": "Laspistol"
-     }
-    },
-    {
-     "id": "o4",
-     "label": {
-      "en": "Cadian Veteran Guardsman: Chainsword",
-      "es": "Cadian Veteran Guardsman: Chainsword"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "chainsword",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "flamer+close-combat-weapon",
-      "grenade-launcher+close-combat-weapon",
-      "meltagun+close-combat-weapon",
-      "plasma-gun+close-combat-weapon",
-      "power-fist",
-      "power-weapon"
-     ],
-     "packages": {
-      "flamer+close-combat-weapon": [
-       {
-        "item": "flamer",
-        "n": 1
-       },
-       {
-        "item": "close-combat-weapon",
-        "n": 1
-       }
-      ],
-      "grenade-launcher+close-combat-weapon": [
-       {
-        "item": "grenade-launcher",
-        "n": 1
-       },
-       {
-        "item": "close-combat-weapon",
-        "n": 1
-       }
-      ],
-      "meltagun+close-combat-weapon": [
-       {
-        "item": "meltagun",
-        "n": 1
-       },
-       {
-        "item": "close-combat-weapon",
-        "n": 1
-       }
-      ],
-      "plasma-gun+close-combat-weapon": [
-       {
-        "item": "plasma-gun",
-        "n": 1
-       },
-       {
-        "item": "close-combat-weapon",
-        "n": 1
-       }
-      ],
-      "power-fist": [
-       {
-        "item": "power-fist",
-        "n": 1
-       }
-      ],
-      "power-weapon": [
-       {
-        "item": "power-weapon",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Cadian Veteran Guardsman",
-     "labels": {
-      "flamer+close-combat-weapon": "Flamer + Close combat weapon",
-      "grenade-launcher+close-combat-weapon": "Grenade launcher + Close combat weapon",
-      "meltagun+close-combat-weapon": "Meltagun + Close combat weapon",
-      "plasma-gun+close-combat-weapon": "Plasma gun + Close combat weapon",
-      "power-fist": "Power fist",
-      "power-weapon": "Power weapon",
-      "": "Chainsword"
-     }
-    },
-    {
-     "id": "o5",
-     "label": {
-      "en": "Cadian Commander: Chainsword",
-      "es": "Cadian Commander: Chainsword"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "chainsword",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "power-fist",
-      "power-weapon"
-     ],
-     "packages": {
-      "power-fist": [
-       {
-        "item": "power-fist",
-        "n": 1
-       }
-      ],
-      "power-weapon": [
-       {
-        "item": "power-weapon",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Cadian Commander",
-     "labels": {
-      "power-fist": "Power fist",
-      "power-weapon": "Power weapon",
-      "": "Chainsword"
-     }
-    }
-   ],
-   "loadout": [
-    "chainsword",
-    "close-combat-weapon",
-    "gear:master-vox",
-    "gear:medi-pack",
-    "gear:regimental-standard",
-    "lasgun",
-    "laspistol"
-   ]
-  },
-  {
    "id": "cadian-heavy-weapons-squad",
    "name": {
     "en": "Cadian Heavy Weapons Squad",
@@ -7189,737 +9538,6 @@
    ]
   },
   {
-   "id": "catachan-command-squad",
-   "name": {
-    "en": "Catachan Command Squad",
-    "es": "Escuadra de Mando Catachana"
-   },
-   "keywords": [
-    "ASTRA MILITARUM"
-   ],
-   "stats": [
-    {
-     "M": "6\"",
-     "T": "3",
-     "Sv": "5+",
-     "W": "3",
-     "Ld": "7+",
-     "OC": "1",
-     "name": {
-      "en": "Veteran Guardsman(⌀25mm)"
-     }
-    }
-   ],
-   "weapons": [
-    {
-     "id": "bolt-pistol",
-     "name": {
-      "en": "Bolt pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "boltgun",
-     "name": {
-      "en": "Boltgun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "flamer",
-     "name": {
-      "en": "Flamer"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "D6",
-       "skill": "-",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Ignores Cover",
-        "Torrent"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "grenade-launcher",
-     "name": {
-      "en": "Grenade launcher"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "D3",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Blast"
-       ],
-       "mode": {
-        "en": "frag"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "9",
-       "AP": "-2",
-       "D": "D3",
-       "keywords": [],
-       "mode": {
-        "en": "krak"
-       }
-      }
-     ]
-    },
-    {
-     "id": "heavy-flamer",
-     "name": {
-      "en": "Heavy flamer"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "D6",
-       "skill": "-",
-       "S": "5",
-       "AP": "-1",
-       "D": "1",
-       "keywords": [
-        "Ignores Cover",
-        "Torrent"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "lasgun",
-     "name": {
-      "en": "Lasgun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "laspistol",
-     "name": {
-      "en": "Laspistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "meltagun",
-     "name": {
-      "en": "Meltagun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "9",
-       "AP": "-4",
-       "D": "D6",
-       "keywords": [
-        "Melta 2"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "plasma-gun",
-     "name": {
-      "en": "Plasma gun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "plasma-pistol",
-     "name": {
-      "en": "Plasma pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Pistol"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "sniper-rifle",
-     "name": {
-      "en": "Sniper rifle"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "36\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "4",
-       "AP": "-2",
-       "D": "2",
-       "keywords": [
-        "Heavy",
-        "Precision"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "chainsword",
-     "name": {
-      "en": "Chainsword"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "4",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "close-combat-weapon",
-     "name": {
-      "en": "Close combat weapon"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "2",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "power-fist",
-     "name": {
-      "en": "Power fist"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "4+",
-       "S": "6",
-       "AP": "-2",
-       "D": "2",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "power-weapon",
-     "name": {
-      "en": "Power weapon"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "4+",
-       "S": "4",
-       "AP": "-2",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    }
-   ],
-   "abilities": [
-    {
-     "name": {
-      "en": "Gung-ho Command"
-     },
-     "text": {
-      "en": "While this unit contains an OFFICER, ranged weapons equipped by models in this unit have the [ASSAULT] ability."
-     }
-    }
-   ],
-   "core": [
-    "Leader",
-    "Scouts 6\""
-   ],
-   "factionAbilities": [
-    "Voice of Command"
-   ],
-   "source": "wahapedia.ru/wh40k11ed/factions/.../Catachan-Command-Squad",
-   "wargearAbilities": [
-    {
-     "name": {
-      "en": "Master Vox"
-     },
-     "text": {
-      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
-     }
-    },
-    {
-     "name": {
-      "en": "Medi-pack"
-     },
-     "text": {
-      "en": "At the start of your Command phase, if the bearer’s unit is below its Starting Strength, you can return up to D3 destroyed PLATOON models (excluding CHARACTERS) to this unit."
-     }
-    },
-    {
-     "name": {
-      "en": "Regimental Standard"
-     },
-     "text": {
-      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
-     }
-    }
-   ],
-   "ordersText": {
-    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
-   },
-   "orders": 1,
-   "wargearOptions": [
-    {
-     "text": "Any number of Veteran Guardsmen can each have their lasgun replaced with one of the following*:",
-     "choices": [
-      "1 flamer",
-      "1 grenade launcher",
-      "1 heavy flamer",
-      "1 meltagun",
-      "1 plasma gun",
-      "1 sniper rifle"
-     ]
-    },
-    {
-     "text": "1 Veteran Guardsman equipped with a lasgun can be equipped with 1 master vox.**",
-     "choices": []
-    },
-    {
-     "text": "1 Veteran Guardsman equipped with a lasgun can be equipped 1 medi-pack.**",
-     "choices": []
-    },
-    {
-     "text": "1 Veteran Guardsman equipped with a lasgun can be equipped with 1 regimental standard.**",
-     "choices": []
-    },
-    {
-     "text": "The Catachan Commander’s laspistol can be replaced with one of the following:",
-     "choices": [
-      "1 bolt pistol",
-      "1 plasma pistol"
-     ]
-    },
-    {
-     "text": "The Catachan Commander can be equipped with one of the following:",
-     "choices": [
-      "1 boltgun",
-      "1 chainsword",
-      "1 power fist",
-      "1 power weapon"
-     ]
-    }
-   ],
-   "wargearNotes": [
-    "* You cannot select the same weapon from this list more than once per unit.",
-    "** A model can only take one of these options."
-   ],
-   "composition": [
-    "1 Catachan Commander",
-    "4 Veteran Guardsmen"
-   ],
-   "equipped": [
-    "The Catachan Commander is equipped with: laspistol; close combat weapon.",
-    "Every Veteran Guardsman is equipped with: lasgun; laspistol; close combat weapon."
-   ],
-   "role": "infantry",
-   "leader": {
-    "canLead": [
-     "catachan-jungle-fighters"
-    ]
-   },
-   "sizes": [
-    {
-     "models": 5,
-     "loadout": {
-      "laspistol": 5,
-      "close-combat-weapon": 5,
-      "lasgun": 4
-     }
-    }
-   ],
-   "wargear": [
-    {
-     "id": "o1",
-     "label": {
-      "en": "Veteran Guardsmen: replace Lasgun",
-      "es": "Veteran Guardsmen: sustituir Lasgun"
-     },
-     "type": "pool",
-     "replaces": [
-      {
-       "item": "lasgun",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "flamer",
-      "grenade-launcher",
-      "heavy-flamer",
-      "meltagun",
-      "plasma-gun",
-      "sniper-rifle"
-     ],
-     "packages": {
-      "flamer": [
-       {
-        "item": "flamer",
-        "n": 1
-       }
-      ],
-      "grenade-launcher": [
-       {
-        "item": "grenade-launcher",
-        "n": 1
-       }
-      ],
-      "heavy-flamer": [
-       {
-        "item": "heavy-flamer",
-        "n": 1
-       }
-      ],
-      "meltagun": [
-       {
-        "item": "meltagun",
-        "n": 1
-       }
-      ],
-      "plasma-gun": [
-       {
-        "item": "plasma-gun",
-        "n": 1
-       }
-      ],
-      "sniper-rifle": [
-       {
-        "item": "sniper-rifle",
-        "n": 1
-       }
-      ]
-     },
-     "maxBySize": {
-      "5": 4
-     },
-     "owner": "Veteran Guardsmen",
-     "labels": {
-      "flamer": "Flamer",
-      "grenade-launcher": "Grenade launcher",
-      "heavy-flamer": "Heavy flamer",
-      "meltagun": "Meltagun",
-      "plasma-gun": "Plasma gun",
-      "sniper-rifle": "Sniper rifle"
-     }
-    },
-    {
-     "id": "o2",
-     "label": {
-      "en": "Veteran Guardsman: add Master vox",
-      "es": "Veteran Guardsman: añadir Master vox"
-     },
-     "type": "toggle",
-     "replaces": [],
-     "gives": "gear:master-vox",
-     "packages": {
-      "gear:master-vox": [
-       {
-        "item": "gear:master-vox",
-        "n": 1
-       }
-      ]
-     },
-     "maxBySize": {
-      "5": 1
-     },
-     "owner": "Veteran Guardsman",
-     "labels": {
-      "gear:master-vox": "Master vox"
-     }
-    },
-    {
-     "id": "o3",
-     "label": {
-      "en": "Veteran Guardsman: add Medi pack",
-      "es": "Veteran Guardsman: añadir Medi pack"
-     },
-     "type": "toggle",
-     "replaces": [],
-     "gives": "gear:medi-pack",
-     "packages": {
-      "gear:medi-pack": [
-       {
-        "item": "gear:medi-pack",
-        "n": 1
-       }
-      ]
-     },
-     "maxBySize": {
-      "5": 1
-     },
-     "owner": "Veteran Guardsman",
-     "labels": {
-      "gear:medi-pack": "Medi pack"
-     }
-    },
-    {
-     "id": "o4",
-     "label": {
-      "en": "Veteran Guardsman: add Regimental standard",
-      "es": "Veteran Guardsman: añadir Regimental standard"
-     },
-     "type": "toggle",
-     "replaces": [],
-     "gives": "gear:regimental-standard",
-     "packages": {
-      "gear:regimental-standard": [
-       {
-        "item": "gear:regimental-standard",
-        "n": 1
-       }
-      ]
-     },
-     "maxBySize": {
-      "5": 1
-     },
-     "owner": "Veteran Guardsman",
-     "labels": {
-      "gear:regimental-standard": "Regimental standard"
-     }
-    },
-    {
-     "id": "o5",
-     "label": {
-      "en": "Catachan Commander: Laspistol",
-      "es": "Catachan Commander: Laspistol"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "laspistol",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "bolt-pistol",
-      "plasma-pistol"
-     ],
-     "packages": {
-      "bolt-pistol": [
-       {
-        "item": "bolt-pistol",
-        "n": 1
-       }
-      ],
-      "plasma-pistol": [
-       {
-        "item": "plasma-pistol",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Catachan Commander",
-     "labels": {
-      "bolt-pistol": "Bolt pistol",
-      "plasma-pistol": "Plasma pistol",
-      "": "Laspistol"
-     }
-    },
-    {
-     "id": "o6",
-     "label": {
-      "en": "Catachan Commander: optional",
-      "es": "Catachan Commander: opcional"
-     },
-     "type": "swap",
-     "replaces": [],
-     "choices": [
-      "",
-      "boltgun",
-      "chainsword",
-      "power-fist",
-      "power-weapon"
-     ],
-     "packages": {
-      "boltgun": [
-       {
-        "item": "boltgun",
-        "n": 1
-       }
-      ],
-      "chainsword": [
-       {
-        "item": "chainsword",
-        "n": 1
-       }
-      ],
-      "power-fist": [
-       {
-        "item": "power-fist",
-        "n": 1
-       }
-      ],
-      "power-weapon": [
-       {
-        "item": "power-weapon",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Catachan Commander",
-     "labels": {
-      "boltgun": "Boltgun",
-      "chainsword": "Chainsword",
-      "power-fist": "Power fist",
-      "power-weapon": "Power weapon",
-      "": "—"
-     }
-    }
-   ],
-   "loadout": [
-    "close-combat-weapon",
-    "lasgun",
-    "laspistol"
-   ]
-  },
-  {
    "id": "catachan-heavy-weapons-squad",
    "name": {
     "en": "Catachan Heavy Weapons Squad",
@@ -8442,284 +10060,6 @@
     "lasgun",
     "laspistol",
     "malleus-rocket-launcher"
-   ]
-  },
-  {
-   "id": "gaunts-ghosts",
-   "name": {
-    "en": "Gaunt’s Ghosts",
-    "es": "Gaunt’s Ghosts"
-   },
-   "keywords": [
-    "ASTRA MILITARUM"
-   ],
-   "stats": [
-    {
-     "M": "6\"",
-     "T": "3",
-     "Sv": "4+",
-     "W": "3",
-     "Ld": "6+",
-     "OC": "1",
-     "name": {
-      "en": "Tanith Ghost(⌀28.5mm)"
-     },
-     "inv": "5+"
-    }
-   ],
-   "weapons": [
-    {
-     "id": "braggs-autocannon",
-     "name": {
-      "en": "Bragg’s autocannon"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "48\"",
-       "A": "4",
-       "skill": "5+",
-       "S": "9",
-       "AP": "-1",
-       "D": "3",
-       "keywords": [
-        "Heavy"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "bolt-pistol",
-     "name": {
-      "en": "Bolt pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "2+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "corbecs-hot-shot-lascarbine",
-     "name": {
-      "en": "Corbec’s hot-shot lascarbine"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "3",
-       "skill": "3+",
-       "S": "3",
-       "AP": "-1",
-       "D": "1",
-       "keywords": [
-        "Assault"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "larkins-long-las",
-     "name": {
-      "en": "Larkin’s long-las"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "36\"",
-       "A": "1",
-       "skill": "2+",
-       "S": "5",
-       "AP": "-2",
-       "D": "4",
-       "keywords": [
-        "Heavy",
-        "Precision"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "lascarbine",
-     "name": {
-      "en": "Lascarbine"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "3",
-       "skill": "3+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Assault"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "rawnes-lascarbine",
-     "name": {
-      "en": "Rawne’s lascarbine"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "3",
-       "skill": "3+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Assault",
-        "Sustained Hits 1"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "gaunts-chainsword",
-     "name": {
-      "en": "Gaunt’s chainsword"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "5",
-       "skill": "2+",
-       "S": "3",
-       "AP": "-1",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "straight-silver-knife",
-     "name": {
-      "en": "Straight silver knife"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "3+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "mkolls-straight-silver-knife",
-     "name": {
-      "en": "Mkoll’s straight silver knife"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "5",
-       "skill": "2+",
-       "S": "3",
-       "AP": "-1",
-       "D": "1",
-       "keywords": [
-        "Devastating Wounds",
-        "Precision"
-       ]
-      }
-     ]
-    }
-   ],
-   "abilities": [
-    {
-     "name": {
-      "en": "Tanith Camo-cloaks"
-     },
-     "text": {
-      "en": "Models in this unit have the Benefit of Cover."
-     }
-    },
-    {
-     "name": {
-      "en": "Covert Stealth Team"
-     },
-     "text": {
-      "en": "At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: Place this unit in strategic reserves. This unit has Deep Strike until the start of your next Shooting phase. This unit must make an ingress move in your next Movement phase (including in your first turn)."
-     }
-    }
-   ],
-   "core": [
-    "Fights First",
-    "Infiltrators",
-    "Lone Operative",
-    "Stealth"
-   ],
-   "factionAbilities": [
-    "Voice of Command"
-   ],
-   "source": "wahapedia.ru/wh40k11ed/factions/.../Gaunt-s-Ghosts",
-   "ordersText": {
-    "en": "This unit’s OFFICER can issue up to 2 Orders to REGIMENT or GAUNT’S GHOSTS units."
-   },
-   "orders": 2,
-   "composition": [
-    "1 Ibram Gaunt – EPIC HERO",
-    "5 Tanith Ghosts"
-   ],
-   "equipped": [
-    "Ibram Gaunt is equipped with: bolt pistol; Gaunt’s chainsword.",
-    "1 Tanith Ghost is equipped with: Corbec’s hot-shot lascarbine; straight silver knife.",
-    "1 Tanith Ghost is equipped with: Rawne’s lascarbine; straight silver knife.",
-    "1 Tanith Ghost is equipped with: Larkin’s long-las; straight silver knife.",
-    "1 Tanith Ghost is equipped with: Bragg’s autocannon; straight silver knife.",
-    "1 Tanith Ghost is equipped with: lascarbine; Mkoll’s straight silver knife."
-   ],
-   "role": "infantry",
-   "sizes": [
-    {
-     "models": 6,
-     "loadout": {
-      "bolt-pistol": 1,
-      "gaunts-chainsword": 1,
-      "corbecs-hot-shot-lascarbine": 1,
-      "straight-silver-knife": 4,
-      "rawnes-lascarbine": 1,
-      "larkins-long-las": 1,
-      "braggs-autocannon": 1,
-      "lascarbine": 1,
-      "mkolls-straight-silver-knife": 1
-     }
-    }
-   ],
-   "wargear": [],
-   "loadout": [
-    "bolt-pistol",
-    "braggs-autocannon",
-    "corbecs-hot-shot-lascarbine",
-    "gaunts-chainsword",
-    "larkins-long-las",
-    "lascarbine",
-    "mkolls-straight-silver-knife",
-    "rawnes-lascarbine",
-    "straight-silver-knife"
    ]
   },
   {
@@ -9912,680 +11252,6 @@
    ]
   },
   {
-   "id": "krieg-command-squad",
-   "name": {
-    "en": "Krieg Command Squad",
-    "es": "Escuadra de Mando de Krieg"
-   },
-   "keywords": [
-    "ASTRA MILITARUM"
-   ],
-   "stats": [
-    {
-     "M": "6\"",
-     "T": "3",
-     "Sv": "5+",
-     "W": "3",
-     "Ld": "6+",
-     "OC": "1",
-     "name": {
-      "en": "Veteran Guardsman(⌀25mm)"
-     }
-    }
-   ],
-   "weapons": [
-    {
-     "id": "boltgun",
-     "name": {
-      "en": "Boltgun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "bolt-pistol",
-     "name": {
-      "en": "Bolt pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "flamer",
-     "name": {
-      "en": "Flamer"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "D6",
-       "skill": "-",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Ignores Cover",
-        "Torrent"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "grenade-launcher",
-     "name": {
-      "en": "Grenade launcher"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "D3",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Blast"
-       ],
-       "mode": {
-        "en": "frag"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "9",
-       "AP": "-2",
-       "D": "D3",
-       "keywords": [],
-       "mode": {
-        "en": "krak"
-       }
-      }
-     ]
-    },
-    {
-     "id": "lasgun",
-     "name": {
-      "en": "Lasgun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "laspistol",
-     "name": {
-      "en": "Laspistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "meltagun",
-     "name": {
-      "en": "Meltagun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "9",
-       "AP": "-4",
-       "D": "D6",
-       "keywords": [
-        "Melta 2"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "plasma-gun",
-     "name": {
-      "en": "Plasma gun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "plasma-pistol",
-     "name": {
-      "en": "Plasma pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "4+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Pistol"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "chainsword",
-     "name": {
-      "en": "Chainsword"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "4",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "close-combat-weapon",
-     "name": {
-      "en": "Close combat weapon"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "2",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "power-fist",
-     "name": {
-      "en": "Power fist"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "4+",
-       "S": "6",
-       "AP": "-2",
-       "D": "2",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "power-weapon",
-     "name": {
-      "en": "Power weapon"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "4+",
-       "S": "4",
-       "AP": "-2",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "trench-club",
-     "name": {
-      "en": "Trench club"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "4+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    }
-   ],
-   "abilities": [
-    {
-     "name": {
-      "en": "Grim Determination"
-     },
-     "text": {
-      "en": "While this unit contains an OFFICER, you can target this unit with Stratagems even while it is Battle-shocked and Orders issued to this unit do not cease to affect this unit if it becomes Battle-shocked."
-     }
-    }
-   ],
-   "core": [
-    "Leader"
-   ],
-   "factionAbilities": [
-    "Voice of Command"
-   ],
-   "source": "wahapedia.ru/wh40k11ed/factions/.../Krieg-Command-Squad",
-   "wargearAbilities": [
-    {
-     "name": {
-      "en": "Master Vox"
-     },
-     "text": {
-      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
-     }
-    },
-    {
-     "name": {
-      "en": "Alchemyk Counteragents"
-     },
-     "text": {
-      "en": "The bearer’s unit has the Feel No Pain 6+ ability against mortal wounds."
-     }
-    },
-    {
-     "name": {
-      "en": "Regimental Standard"
-     },
-     "text": {
-      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
-     }
-    },
-    {
-     "name": {
-      "en": "Servo-scribes"
-     },
-     "text": {
-      "en": "Once per battle, when issuing an Order, the Lord Commissar can issue one additional Order. Designer’s Note: Place a Servo-scribes token next to the unit, removing it when this ability has been used."
-     }
-    }
-   ],
-   "ordersText": {
-    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
-   },
-   "orders": 1,
-   "wargearOptions": [
-    {
-     "text": "1 Veteran Guardsman’s boltgun can be replaced with one of the following:",
-     "choices": [
-      "1 flamer",
-      "1 grenade launcher",
-      "1 meltagun",
-      "1 plasma gun"
-     ]
-    },
-    {
-     "text": "The Lord Commissar's power weapon can be replaced with 1 power fist.",
-     "choices": []
-    },
-    {
-     "text": "The Lord Commissar can be equipped with 1 plasma pistol.",
-     "choices": []
-    },
-    {
-     "text": "1 Veteran Guardsman’s chainsword can be replaced with one of the following:",
-     "choices": [
-      "1 trench club",
-      "1 power weapon"
-     ]
-    },
-    {
-     "text": "1 Veteran Guardsman not equipped with alchemyk counteragents can replace its laspistol with one of the following:",
-     "choices": [
-      "1 bolt pistol",
-      "1 plasma pistol"
-     ]
-    }
-   ],
-   "composition": [
-    "1 Lord Commissar",
-    "5 Veteran Guardsmen"
-   ],
-   "equipped": [
-    "The Lord Commissar is equipped with: laspistol; power weapon.",
-    "One Veteran Guardsman is equipped with: laspistol; chainsword.",
-    "One Veteran Guardsman is equipped with: laspistol; close combat weapon; alchemyk counteragents; servo-scribes.",
-    "One Veteran Guardsman is equipped with: lasgun; close combat weapon; master vox.",
-    "One Veteran Guardsman is equipped with: lasgun; close combat weapon; regimental standard.",
-    "One Veteran Guardsman is equipped with: boltgun; close combat weapon."
-   ],
-   "role": "infantry",
-   "leader": {
-    "canLead": [
-     "death-korps-of-krieg",
-     "krieg-combat-engineers"
-    ]
-   },
-   "sizes": [
-    {
-     "models": 6,
-     "loadout": {
-      "laspistol": 3,
-      "power-weapon": 1,
-      "chainsword": 1,
-      "close-combat-weapon": 4,
-      "gear:alchemyk-counteragent": 1,
-      "gear:servo-scribe": 1,
-      "lasgun": 2,
-      "gear:master-vox": 1,
-      "gear:regimental-standard": 1,
-      "boltgun": 1
-     }
-    }
-   ],
-   "wargear": [
-    {
-     "id": "o1",
-     "label": {
-      "en": "Veteran Guardsman: Boltgun",
-      "es": "Veteran Guardsman: Boltgun"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "boltgun",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "flamer",
-      "grenade-launcher",
-      "meltagun",
-      "plasma-gun"
-     ],
-     "packages": {
-      "flamer": [
-       {
-        "item": "flamer",
-        "n": 1
-       }
-      ],
-      "grenade-launcher": [
-       {
-        "item": "grenade-launcher",
-        "n": 1
-       }
-      ],
-      "meltagun": [
-       {
-        "item": "meltagun",
-        "n": 1
-       }
-      ],
-      "plasma-gun": [
-       {
-        "item": "plasma-gun",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Veteran Guardsman",
-     "labels": {
-      "flamer": "Flamer",
-      "grenade-launcher": "Grenade launcher",
-      "meltagun": "Meltagun",
-      "plasma-gun": "Plasma gun",
-      "": "Boltgun"
-     }
-    },
-    {
-     "id": "o2",
-     "label": {
-      "en": "Lord Commissar: Power weapon",
-      "es": "Lord Commissar: Power weapon"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "power-weapon",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "power-fist"
-     ],
-     "packages": {
-      "power-fist": [
-       {
-        "item": "power-fist",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Lord Commissar",
-     "labels": {
-      "power-fist": "Power fist",
-      "": "Power weapon"
-     }
-    },
-    {
-     "id": "o3",
-     "label": {
-      "en": "Lord Commissar: add Plasma pistol",
-      "es": "Lord Commissar: añadir Plasma pistol"
-     },
-     "type": "toggle",
-     "replaces": [],
-     "gives": "plasma-pistol",
-     "packages": {
-      "plasma-pistol": [
-       {
-        "item": "plasma-pistol",
-        "n": 1
-       }
-      ]
-     },
-     "maxBySize": {
-      "6": 1
-     },
-     "owner": "Lord Commissar",
-     "labels": {
-      "plasma-pistol": "Plasma pistol"
-     }
-    },
-    {
-     "id": "o4",
-     "label": {
-      "en": "Veteran Guardsman: Chainsword",
-      "es": "Veteran Guardsman: Chainsword"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "chainsword",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "trench-club",
-      "power-weapon"
-     ],
-     "packages": {
-      "trench-club": [
-       {
-        "item": "trench-club",
-        "n": 1
-       }
-      ],
-      "power-weapon": [
-       {
-        "item": "power-weapon",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Veteran Guardsman",
-     "labels": {
-      "trench-club": "Trench club",
-      "power-weapon": "Power weapon",
-      "": "Chainsword"
-     }
-    },
-    {
-     "id": "o5",
-     "label": {
-      "en": "Veteran Guardsman: Laspistol",
-      "es": "Veteran Guardsman: Laspistol"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "laspistol",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "bolt-pistol",
-      "plasma-pistol"
-     ],
-     "packages": {
-      "bolt-pistol": [
-       {
-        "item": "bolt-pistol",
-        "n": 1
-       }
-      ],
-      "plasma-pistol": [
-       {
-        "item": "plasma-pistol",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Veteran Guardsman",
-     "labels": {
-      "bolt-pistol": "Bolt pistol",
-      "plasma-pistol": "Plasma pistol",
-      "": "Laspistol"
-     }
-    }
-   ],
-   "loadout": [
-    "boltgun",
-    "chainsword",
-    "close-combat-weapon",
-    "gear:alchemyk-counteragent",
-    "gear:master-vox",
-    "gear:regimental-standard",
-    "gear:servo-scribe",
-    "lasgun",
-    "laspistol",
-    "power-weapon"
-   ]
-  },
-  {
    "id": "krieg-heavy-weapons-squad",
    "name": {
     "en": "Krieg Heavy Weapons Squad",
@@ -10801,639 +11467,6 @@
     "close-combat-weapon",
     "lascannon",
     "laspistol"
-   ]
-  },
-  {
-   "id": "militarum-tempestus-command-squad",
-   "name": {
-    "en": "Militarum Tempestus Command Squad",
-    "es": "Escuadra de Mando Tempestus"
-   },
-   "keywords": [
-    "ASTRA MILITARUM"
-   ],
-   "stats": [
-    {
-     "M": "6\"",
-     "T": "3",
-     "Sv": "4+",
-     "W": "1",
-     "Ld": "7+",
-     "OC": "1",
-     "name": {
-      "en": "Tempestor Prime(⌀25mm)"
-     }
-    }
-   ],
-   "weapons": [
-    {
-     "id": "bolt-pistol",
-     "name": {
-      "en": "Bolt pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "flamer",
-     "name": {
-      "en": "Flamer"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "D6",
-       "skill": "-",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Ignores Cover",
-        "Torrent"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "grenade-launcher",
-     "name": {
-      "en": "Grenade launcher"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "D3",
-       "skill": "3+",
-       "S": "4",
-       "AP": "0",
-       "D": "1",
-       "keywords": [
-        "Blast"
-       ],
-       "mode": {
-        "en": "frag"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "9",
-       "AP": "-2",
-       "D": "D3",
-       "keywords": [],
-       "mode": {
-        "en": "krak"
-       }
-      }
-     ]
-    },
-    {
-     "id": "hot-shot-lasgun",
-     "name": {
-      "en": "Hot-shot lasgun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "3",
-       "AP": "-1",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "hot-shot-laspistol",
-     "name": {
-      "en": "Hot-shot laspistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "3",
-       "AP": "-1",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "hot-shot-volley-gun",
-     "name": {
-      "en": "Hot-shot volley gun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "30\"",
-       "A": "2",
-       "skill": "3+",
-       "S": "4",
-       "AP": "-1",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 2"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "meltagun",
-     "name": {
-      "en": "Meltagun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "9",
-       "AP": "-4",
-       "D": "D6",
-       "keywords": [
-        "Melta 2"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "plasma-gun",
-     "name": {
-      "en": "Plasma gun"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "24\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Rapid Fire 1"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "plasma-pistol",
-     "name": {
-      "en": "Plasma pistol"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "7",
-       "AP": "-2",
-       "D": "1",
-       "keywords": [
-        "Pistol"
-       ],
-       "mode": {
-        "en": "standard"
-       }
-      },
-      {
-       "range": "12\"",
-       "A": "1",
-       "skill": "3+",
-       "S": "8",
-       "AP": "-3",
-       "D": "2",
-       "keywords": [
-        "Hazardous",
-        "Pistol"
-       ],
-       "mode": {
-        "en": "supercharge"
-       }
-      }
-     ]
-    },
-    {
-     "id": "close-combat-weapon",
-     "name": {
-      "en": "Close combat weapon"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "2",
-       "skill": "4+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    },
-    {
-     "id": "tempestus-dagger",
-     "name": {
-      "en": "Tempestus dagger"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "4",
-       "skill": "3+",
-       "S": "3",
-       "AP": "0",
-       "D": "1",
-       "keywords": []
-      }
-     ]
-    }
-   ],
-   "abilities": [
-    {
-     "name": {
-      "en": "Tempestor Prime"
-     },
-     "text": {
-      "en": "While this unit contains a Tempestor Prime, ranged weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
-     }
-    }
-   ],
-   "core": [
-    "Deep Strike",
-    "Leader"
-   ],
-   "factionAbilities": [
-    "Voice of Command"
-   ],
-   "source": "wahapedia.ru/wh40k11ed/factions/.../Militarum-Tempestus-Command-Squad",
-   "wargearAbilities": [
-    {
-     "name": {
-      "en": "Medi-pack"
-     },
-     "text": {
-      "en": "At the start of your Command phase, if the bearer’s unit is below its Starting Strength, you can return up to D3 destroyed Tempestus Scions models to this unit."
-     }
-    },
-    {
-     "name": {
-      "en": "Regimental Standard"
-     },
-     "text": {
-      "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
-     }
-    },
-    {
-     "name": {
-      "en": "Command Rod"
-     },
-     "text": {
-      "en": "While the bearer is leading a unit, that unit can be affected by up to two different Orders at the same time."
-     }
-    },
-    {
-     "name": {
-      "en": "Master Vox"
-     },
-     "text": {
-      "en": "Each time the OFFICER in the bearer’s unit issues an Order, it can issue it to an eligible unit up to 24\" away."
-     }
-    }
-   ],
-   "ordersText": {
-    "en": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit."
-   },
-   "orders": 1,
-   "wargearOptions": [
-    {
-     "text": "Any number of Tempestus Scions can each have their hot-shot lasgun replaced with one of the following*:",
-     "choices": [
-      "1 flamer",
-      "1 grenade launcher",
-      "1 hot-shot volley gun",
-      "1 meltagun",
-      "1 plasma gun"
-     ]
-    },
-    {
-     "text": "1 Tempestus Scion equipped with a hot-shot lasgun can be equipped with 1 regimental standard (that model’s hot-shot lasgun cannot be replaced).",
-     "choices": []
-    },
-    {
-     "text": "1 Tempestus Scion’s hot-shot lasgun can be replaced with 1 hot-shot laspistol and 1 master vox.",
-     "choices": []
-    },
-    {
-     "text": "1 Tempestus Scion’s hot-shot lasgun can be replaced with one of the following:",
-     "choices": [
-      "1 hot-shot laspistol and 1 medi-pack",
-      "1 hot-shot lasgun, 1 hot-shot laspistol and 1 medi-pack [that model's hot-shot lasgun cannot be replaced]"
-     ]
-    },
-    {
-     "text": "The Tempestor Prime’s bolt pistol can be replaced with one of the following:",
-     "choices": [
-      "1 plasma pistol",
-      "1 command rod"
-     ]
-    }
-   ],
-   "wargearNotes": [
-    "* You cannot select the same weapon from this list more than once per unit."
-   ],
-   "composition": [
-    "1 Tempestor Prime",
-    "4 Tempestus Scions"
-   ],
-   "equipped": [
-    "The Tempestor Prime is equipped with: bolt pistol; Tempestus dagger.",
-    "Every Tempestus Scion is equipped with: hot-shot lasgun; close combat weapon."
-   ],
-   "role": "infantry",
-   "leader": {
-    "canLead": [
-     "tempestus-scions"
-    ]
-   },
-   "sizes": [
-    {
-     "models": 5,
-     "loadout": {
-      "bolt-pistol": 1,
-      "tempestus-dagger": 1,
-      "hot-shot-lasgun": 4,
-      "close-combat-weapon": 4
-     }
-    }
-   ],
-   "wargear": [
-    {
-     "id": "o1",
-     "label": {
-      "en": "Tempestus Scions: replace Hot-shot lasgun",
-      "es": "Tempestus Scions: sustituir Hot-shot lasgun"
-     },
-     "type": "pool",
-     "replaces": [
-      {
-       "item": "hot-shot-lasgun",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "flamer",
-      "grenade-launcher",
-      "hot-shot-volley-gun",
-      "meltagun",
-      "plasma-gun"
-     ],
-     "packages": {
-      "flamer": [
-       {
-        "item": "flamer",
-        "n": 1
-       }
-      ],
-      "grenade-launcher": [
-       {
-        "item": "grenade-launcher",
-        "n": 1
-       }
-      ],
-      "hot-shot-volley-gun": [
-       {
-        "item": "hot-shot-volley-gun",
-        "n": 1
-       }
-      ],
-      "meltagun": [
-       {
-        "item": "meltagun",
-        "n": 1
-       }
-      ],
-      "plasma-gun": [
-       {
-        "item": "plasma-gun",
-        "n": 1
-       }
-      ]
-     },
-     "maxBySize": {
-      "5": 4
-     },
-     "owner": "Tempestus Scions",
-     "labels": {
-      "flamer": "Flamer",
-      "grenade-launcher": "Grenade launcher",
-      "hot-shot-volley-gun": "Hot-shot volley gun",
-      "meltagun": "Meltagun",
-      "plasma-gun": "Plasma gun"
-     }
-    },
-    {
-     "id": "o2",
-     "label": {
-      "en": "Tempestus Scion: add Regimental standard",
-      "es": "Tempestus Scion: añadir Regimental standard"
-     },
-     "type": "toggle",
-     "replaces": [],
-     "gives": "gear:regimental-standard",
-     "packages": {
-      "gear:regimental-standard": [
-       {
-        "item": "gear:regimental-standard",
-        "n": 1
-       }
-      ]
-     },
-     "maxBySize": {
-      "5": 1
-     },
-     "owner": "Tempestus Scion",
-     "labels": {
-      "gear:regimental-standard": "Regimental standard"
-     }
-    },
-    {
-     "id": "o3",
-     "label": {
-      "en": "Tempestus Scion: Hot-shot lasgun",
-      "es": "Tempestus Scion: Hot-shot lasgun"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "hot-shot-lasgun",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "hot-shot-laspistol+gear:master-vox"
-     ],
-     "packages": {
-      "hot-shot-laspistol+gear:master-vox": [
-       {
-        "item": "hot-shot-laspistol",
-        "n": 1
-       },
-       {
-        "item": "gear:master-vox",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Tempestus Scion",
-     "labels": {
-      "hot-shot-laspistol+gear:master-vox": "Hot-shot laspistol + Master vox",
-      "": "Hot-shot lasgun"
-     }
-    },
-    {
-     "id": "o4",
-     "label": {
-      "en": "Tempestus Scion: Hot-shot lasgun",
-      "es": "Tempestus Scion: Hot-shot lasgun"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "hot-shot-lasgun",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "hot-shot-laspistol+gear:medi-pack",
-      "hot-shot-lasgun+hot-shot-laspistol+gear:medi-pack"
-     ],
-     "packages": {
-      "hot-shot-laspistol+gear:medi-pack": [
-       {
-        "item": "hot-shot-laspistol",
-        "n": 1
-       },
-       {
-        "item": "gear:medi-pack",
-        "n": 1
-       }
-      ],
-      "hot-shot-lasgun+hot-shot-laspistol+gear:medi-pack": [
-       {
-        "item": "hot-shot-lasgun",
-        "n": 1
-       },
-       {
-        "item": "hot-shot-laspistol",
-        "n": 1
-       },
-       {
-        "item": "gear:medi-pack",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Tempestus Scion",
-     "labels": {
-      "hot-shot-laspistol+gear:medi-pack": "Hot-shot laspistol + Medi pack",
-      "hot-shot-lasgun+hot-shot-laspistol+gear:medi-pack": "Hot-shot lasgun + Hot-shot laspistol + Medi pack",
-      "": "Hot-shot lasgun"
-     }
-    },
-    {
-     "id": "o5",
-     "label": {
-      "en": "Tempestor Prime: Bolt pistol",
-      "es": "Tempestor Prime: Bolt pistol"
-     },
-     "type": "swap",
-     "replaces": [
-      {
-       "item": "bolt-pistol",
-       "n": 1
-      }
-     ],
-     "choices": [
-      "",
-      "plasma-pistol",
-      "gear:command-rod"
-     ],
-     "packages": {
-      "plasma-pistol": [
-       {
-        "item": "plasma-pistol",
-        "n": 1
-       }
-      ],
-      "gear:command-rod": [
-       {
-        "item": "gear:command-rod",
-        "n": 1
-       }
-      ]
-     },
-     "owner": "Tempestor Prime",
-     "labels": {
-      "plasma-pistol": "Plasma pistol",
-      "gear:command-rod": "Command rod",
-      "": "Bolt pistol"
-     }
-    }
-   ],
-   "loadout": [
-    "bolt-pistol",
-    "close-combat-weapon",
-    "hot-shot-lasgun",
-    "tempestus-dagger"
    ]
   },
   {

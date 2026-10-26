@@ -476,6 +476,161 @@
    ]
   },
   {
+   "id": "hyperadapted-raveners",
+   "name": {
+    "en": "Hyperadapted Raveners",
+    "es": "Hyperadapted Raveners"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GREAT DEVOURER",
+    "VANGUARD INVADER",
+    "BURROWERS",
+    "HYPERADAPTED RAVENERS",
+    "CHARACTER",
+    "SYNAPSE"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "5",
+     "Sv": "4+",
+     "W": "6",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Raveners(⌀40mm)"
+     }
+    }
+   ],
+   "weapons": [
+    {
+     "id": "venom-bolt",
+     "name": {
+      "en": "Venom bolt"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "prime-claws-and-talons",
+     "name": {
+      "en": "Prime claws and talons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-monster 5+",
+        "Anti-vehicle 5+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ravener-heavy-claws-and-talons",
+     "name": {
+      "en": "Ravener heavy claws and talons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-monster 5+",
+        "Anti-vehicle 5+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Alpha Invader"
+     },
+     "text": {
+      "en": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Hypersensory Array"
+     },
+     "text": {
+      "en": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Shadow In The Warp (Ravener Prime only)",
+    "Synapse"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Hyperadapted-Raveners",
+   "composition": [
+    "1 Ravener Prime",
+    "4 Raveners"
+   ],
+   "equipped": [
+    "The Ravener Prime is equipped with: Prime claws and talons.",
+    "3 Raveners are equipped with: Ravener heavy claws and talons.",
+    "1 Ravener is equipped with: venom bolt; Ravener heavy claws and talons."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "raveners"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "prime-claws-and-talons": 1,
+      "ravener-heavy-claws-and-talons": 4,
+      "venom-bolt": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "prime-claws-and-talons",
+    "ravener-heavy-claws-and-talons",
+    "venom-bolt"
+   ]
+  },
+  {
    "id": "neurotyrant",
    "name": {
     "en": "Neurotyrant",
@@ -2796,155 +2951,6 @@
    "loadout": [
     "chitinous-claws-and-teeth",
     "shockcannon"
-   ]
-  },
-  {
-   "id": "hyperadapted-raveners",
-   "name": {
-    "en": "Hyperadapted Raveners",
-    "es": "Hyperadapted Raveners"
-   },
-   "keywords": [
-    "TYRANIDS"
-   ],
-   "stats": [
-    {
-     "M": "10\"",
-     "T": "5",
-     "Sv": "4+",
-     "W": "6",
-     "Ld": "7+",
-     "OC": "1",
-     "name": {
-      "en": "Raveners(⌀40mm)"
-     }
-    }
-   ],
-   "weapons": [
-    {
-     "id": "venom-bolt",
-     "name": {
-      "en": "Venom bolt"
-     },
-     "type": "ranged",
-     "profiles": [
-      {
-       "range": "12\"",
-       "A": "D6+3",
-       "skill": "-",
-       "S": "6",
-       "AP": "-1",
-       "D": "1",
-       "keywords": [
-        "Assault",
-        "Ignores Cover",
-        "Torrent"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "prime-claws-and-talons",
-     "name": {
-      "en": "Prime claws and talons"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "6",
-       "skill": "3+",
-       "S": "5",
-       "AP": "-2",
-       "D": "2",
-       "keywords": [
-        "Anti-monster 5+",
-        "Anti-vehicle 5+",
-        "Twin-linked"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "ravener-heavy-claws-and-talons",
-     "name": {
-      "en": "Ravener heavy claws and talons"
-     },
-     "type": "melee",
-     "profiles": [
-      {
-       "range": "Melee",
-       "A": "3",
-       "skill": "3+",
-       "S": "5",
-       "AP": "-2",
-       "D": "2",
-       "keywords": [
-        "Anti-monster 5+",
-        "Anti-vehicle 5+",
-        "Twin-linked"
-       ]
-      }
-     ]
-    }
-   ],
-   "abilities": [
-    {
-     "name": {
-      "en": "Alpha Invader"
-     },
-     "text": {
-      "en": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
-     }
-    },
-    {
-     "name": {
-      "en": "Hypersensory Array"
-     },
-     "text": {
-      "en": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase."
-     }
-    }
-   ],
-   "core": [
-    "Deep Strike",
-    "Leader"
-   ],
-   "factionAbilities": [
-    "Shadow In The Warp (Ravener Prime only)",
-    "Synapse"
-   ],
-   "source": "wahapedia.ru/wh40k11ed/factions/.../Hyperadapted-Raveners",
-   "composition": [
-    "1 Ravener Prime",
-    "4 Raveners"
-   ],
-   "equipped": [
-    "The Ravener Prime is equipped with: Prime claws and talons.",
-    "3 Raveners are equipped with: Ravener heavy claws and talons.",
-    "1 Ravener is equipped with: venom bolt; Ravener heavy claws and talons."
-   ],
-   "role": "infantry",
-   "leader": {
-    "canLead": [
-     "raveners"
-    ]
-   },
-   "sizes": [
-    {
-     "models": 5,
-     "loadout": {
-      "prime-claws-and-talons": 1,
-      "ravener-heavy-claws-and-talons": 4,
-      "venom-bolt": 1
-     }
-    }
-   ],
-   "wargear": [],
-   "loadout": [
-    "prime-claws-and-talons",
-    "ravener-heavy-claws-and-talons",
-    "venom-bolt"
    ]
   },
   {

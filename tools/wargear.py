@@ -15,8 +15,15 @@ Data produced for each unit (consumed by js/render.js → loadoutOf):
         minModels                     only available from that unit size
         scope     'all'               the swap/toggle applies to every model at once
         maxEachBySize {models: n}     pools: the same choice cannot be taken more than n times (footnotes)
+        maxEachChoice {key: {models: n}}  pools: limit of one choice ("it cannot take duplicates of this piece of wargear")
         owner     model type the option applies to ("Shock Trooper Sergeants"), exclusive: alternatives
         label / labels  English labels (the app rebuilds them in the current language)
+    uniqueGear    [item]          "* This model cannot have duplicates of these pieces of wargear" (at most 1 per model)
+    exclusiveGear [[a, b]]        "* No model can be equipped with both a twin plasma rifle and twin smart missile system"
+    gearWeapons   {"gear:<slug>": [{item, n}]}  weapons a piece of wargear gives ("MV15 Gun Drone: The bearer is
+                                                equipped with 1 twin pulse blaster", faction drones)
+    abilityWeapons [{item, n}]                  weapons an ability gives ("… its Shas'ui model is equipped with the
+                                                support turret weapon")
 Option texts that do not fit a known pattern stay as text only (wargearOptions) and are reported by
 tools/audit_units.py.
 """
@@ -105,6 +112,18 @@ def compact(s):
     return re.sub(r'[^a-z0-9]', '', s.lower())
 
 
+def one_edit(a, b):
+    """True if a and b differ by exactly one inserted, deleted or replaced character."""
+    if a == b or abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) > len(b):
+        a, b = b, a
+    i = 0
+    while i < len(a) and a[i] == b[i]:
+        i += 1
+    return a[i + (len(a) == len(b)):] == b[i + 1:]
+
+
 def make_resolver(weapon_ids, global_ids=()):
     known = set(weapon_ids)
     allids = known | set(global_ids)
@@ -120,6 +139,10 @@ def make_resolver(weapon_ids, global_ids=()):
                 return c
             if compact(c) in by_compact:  # "battlecannon" ~ "battle-cannon"
                 return by_compact[compact(c)]
+        # one-letter typo in a long name ("dart-bow and tri-bade" ~ "dart-bow-and-tri-blade")
+        typo = {i for c in cands if len(compact(c)) >= 12 for k, i in by_compact.items() if one_edit(compact(c), k)}
+        if len(typo) == 1:
+            return typo.pop()
         if not fuzzy:
             return None
         # "Militarum multi-laser" ~ "multi-laser", "additional heavy stubbers" ~ "heavy-stubber":
@@ -143,6 +166,12 @@ def make_resolver(weapon_ids, global_ids=()):
         g = slug(' '.join(singular(w) for w in t.split()))
         return n, [f'gear:{g}'], False
     return resolve
+
+
+def gear_id(name):
+    """'MV15 Gun Drones' → 'gear:mv15-gun-drone' (the id resolve() gives to non-weapon equipment)"""
+    name = re.sub(r'\s*\(.*?\)', '', name)  # "Command-link Drone (Aura)"
+    return 'gear:' + slug(' '.join(singular(w) for w in name.replace('\u2011', '-').split()))
 
 
 def items_of(text, resolve):
@@ -209,6 +238,8 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
     footnote = '*' in text
     t = re.sub(r'\*+', '', text.replace('’', "'").replace('\u2011', '-')).strip()
     t = re.sub(r'\s+', ' ', t)
+    t = re.sub(r'have their (.+?) can be replaced with', r'have their \1 replaced with', t)  # GW typo (Piranhas)
+    t = re.sub(r"\.\s*That model's .+? cannot be replaced\.?$", '.', t)  # restriction already implied by the option
 
     def targets(y):
         y = y.strip().rstrip('.').strip()
@@ -276,6 +307,7 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         (r'^For every (?P<per>\d+) models in this unit, (?:up to )?(?P<k>\w+) (?P<t>.+?)(?: equipped with [^,]+?)? can (?:each )?(?:have their (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'per'),
         (r"^For every (?P<per>\d+) models in this unit, (?:up to )?(?P<k>\w+) (?P<t>.+?)'s (?P<x>.+?) can be replaced with (?P<y>.*)$", 'per'),
         (r'^Up to (?P<k>\w+) (?P<t>.+?) can (?:each )?(?:have their (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'upto'),
+        (r'^(?P<k>\d+|Two|two|Three|three|Four|four) (?P<t>.+?) can each (?:have their (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'upto'),
     ]
     for pat, kind in pool:
         m = re.match(pat, t)
@@ -314,29 +346,47 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         m = re.match(pat, t)
         if not m:
             continue
-        y = re.sub(r'\(.*?\)|\[.*?\]', '', m.group('y'))
-        tg = targets(y)
-        keys, packages = pack(tg)
-        if not keys:
-            return None
-        if re.match(r'^(?:one|1) of the following', y.strip(), re.I) and kind == 'one':
-            opt = {'type': 'swap', 'replaces': [], 'choices': [''] + keys, 'packages': packages}
+        # how many models the option covers, for a unit of mm models with type counts c
+        if kind == 'all':
+            def per_model(mm, c): return mm
+        elif kind == 'per':
+            def per_model(mm, c): return (mm // int(m.group('per'))) * num(m.group('k'))
+        elif kind == 'type':
+            def per_model(mm, c): return count_of(m.group('t'), c, mm)
         else:
-            opt = {'type': 'toggle', 'replaces': [], 'gives': keys[0], 'packages': packages}
-            if kind == 'all':
-                opt['maxBySize'] = by_size(lambda mm, c: mm)
-            elif kind == 'per':
-                per, k = int(m.group('per')), num(m.group('k'))
-                opt['maxBySize'] = by_size(lambda mm, c: (mm // per) * k)
-            elif kind == 'type':
-                opt['maxBySize'] = by_size(lambda mm, c: count_of(m.group('t'), c, mm))
+            def per_model(mm, c): return num(m.groupdict().get('k') or '1')
+        up =re.match(r'^up to (\w+) of the following(?:,? (and can|but cannot) take duplicates)?:?$', m.group('y').strip(), re.I)
+        if up:
+            # "can be equipped with up to two of the following, and can take duplicates: …" → per-model picks
+            k = num(up.group(1))
+            keys, packages = pack([items_of(re.sub(r'\(.*?\)', '', c), resolve) for c in choices])
+            if not keys:
+                return None
+            opt = {'type': 'pool', 'replaces': [], 'choices': keys, 'packages': packages,
+                   'maxBySize': by_size(lambda mm, c: k * per_model(mm, c))}
+            if up.group(2) and up.group(2).lower().startswith('but'):
+                opt['maxEachBySize'] = by_size(lambda mm, c: per_model(mm, c))
+            single = {key: by_size(lambda mm, c: per_model(mm, c)) for key, c in zip(keys, choices)
+                      if re.search(r'cannot take duplicates of this', c, re.I)}
+            if single:
+                opt['maxEachChoice'] = single
+        else:
+            qty = re.match(r'^up to (\w+) (.+)$', m.group('y').strip(), re.I)
+            y = re.sub(r'\(.*?\)|\[.*?\]', '', qty.group(2) if qty else m.group('y'))
+            k = num(qty.group(1)) if qty else 1
+            tg = [[{**x, 'n': 1} for x in items_of(y, resolve)]] if qty else targets(y)
+            keys, packages = pack(tg)
+            if not keys:
+                return None
+            if re.match(r'^(?:one|1) of the following', y.strip(), re.I) and kind == 'one':
+                opt = {'type': 'swap', 'replaces': [], 'choices': [''] + keys, 'packages': packages}
             else:
-                k = num(m.groupdict().get('k') or '1')
-                opt['maxBySize'] = by_size(lambda mm, c: k)
+                opt = {'type': 'toggle', 'replaces': [], 'gives': keys[0], 'packages': packages,
+                       'maxBySize': by_size(lambda mm, c: k * per_model(mm, c))}
         if m.groupdict().get('min'):
             opt['minModels'] = int(m.group('min'))
         owner = m.groupdict().get('t') or m.groupdict().get('o1')
-        if owner and owner.lower() not in ('model', 'models'):
+        if owner and owner.lower() not in ('model', 'models', 'model in this unit'):
             opt['owner'] = owner
         return opt
     return None
@@ -361,13 +411,88 @@ def alternative_package(text, resolve, sizes_counts, base_by_size):
            [{'item': x['item'], 'n': x['n'] * k} for x in opt['packages'][key]]
 
 
-def build(unit, model_sizes, global_weapons=()):
+def expand_conditional(options):
+    """'If this unit contains 10 models:' followed by whole option sentences → one option per sentence, each with
+    the condition ("If this unit contains 10 models, 1 Vespid Stingwing can replace …")."""
+    out = []
+    for i, o in enumerate(options):
+        m = re.match(r'^If this unit contains (\d+) models:?$', o['text'].strip())
+        if m and o['choices'] and all(re.search(r'\bcan\b', c) for c in o['choices']):
+            out += [(f'o{i + 1}{chr(97 + k)}', {'text': f'If this unit contains {m.group(1)} models, {c.strip()}', 'choices': []})
+                    for k, c in enumerate(o['choices'])]
+        else:
+            out.append((f'o{i + 1}', o))
+    return out
+
+
+def bearer_weapons(text, resolve):
+    """Weapons in "The bearer is equipped with 1 drone burst cannon and …" (not "the following ranged weapon")."""
+    m = re.search(r'[Tt]he bearer is equipped with (?!the following)(.+?)(?: and the bearer|\.|$)', text)
+    return [x for x in items_of(m.group(1), resolve) if not x['item'].startswith('gear:')] if m else []
+
+
+def gear_weapons(unit, resolve, faction_gear):
+    """{gear id: [{item, n}]} for wargear that gives weapons: datasheet wargear abilities ("The bearer is equipped
+    with 1 drone burst cannon …") and faction-wide wargear (T'au drones), whose ability and weapons are copied
+    into the unit."""
+    out = {}
+    for a in unit.get('wargearAbilities', []):
+        items = bearer_weapons(a['text']['en'], resolve)
+        if items:
+            out[gear_id(a['name']['en'])] = items
+    used = {i for s in unit['sizes'] for i in s.get('loadout', {})} | \
+           {x['item'] for o in unit.get('wargear', []) for p in o['packages'].values() for x in p}
+    own = {gear_id(a['name']['en']) for a in unit.get('wargearAbilities', [])}
+    for gid, g in (faction_gear or {}).items():
+        if gid not in used or gid in own:
+            continue
+        unit.setdefault('wargearAbilities', []).append({'name': g['name'], 'text': g['text'], 'faction': True})
+        ids = []
+        for w in g['weapons']:
+            wid = f"{gid.removeprefix('gear:')}-{w['id']}"
+            if wid not in {x['id'] for x in unit['weapons']}:
+                unit['weapons'].append({**w, 'id': wid, 'name': {'en': f"{w['name']['en']} ({g['name']['en']})"}, 'gear': gid})
+            ids.append({'item': wid, 'n': 1})
+        if ids:
+            out[gid] = ids
+    return out
+
+
+def ability_weapons(unit, resolve):
+    """Weapons given by an ability: "… its Shas'ui model is equipped with the support turret weapon"."""
+    out = []
+    for a in unit.get('abilities', []):
+        for m in re.finditer(r'is equipped with the (.+?) weapon', a['text']['en']):
+            out += [x for x in items_of(m.group(1), resolve) if not x['item'].startswith('gear:')]
+    return out
+
+
+def build(unit, model_sizes, global_weapons=(), faction_gear=None):
     """Add sizes[].loadout and wargear (new schema) to an imported unit. Returns the list of option
     texts that could not be structured."""
     resolve = make_resolver([w['id'] for w in unit['weapons']], global_weapons)
+    raw_options = expand_conditional(unit.get('wargearOptions', []))
     alts = parse_composition(unit.get('composition', []))
+    # "1 model | 85, 2 models | 105" for a single model that "can be equipped with 1 Tidewall defence platform":
+    # the add-on counts as the extra model, so the bigger size includes it and the option goes away
+    top = max((sum(p[1] for p in alt) for alt in alts), default=0)
+    addon = None
+    if top and max(model_sizes) > top:
+        for oid, o in raw_options:
+            m = re.match(r"^This model can be equipped with 1 (.+?)\.?$", o['text'].strip())
+            if m and not o['choices']:
+                addon = (oid, m.group(1))
+                unit['composition'] = unit.get('composition', []) + [f'0-{max(model_sizes) - top} {m.group(1)}']
+                alts = parse_composition(unit['composition'])
+                raw_options = [x for x in raw_options if x[0] != oid]
+                break
     sizes_counts = {m: type_counts(alts, m) for m in model_sizes}
     base = {m: base_loadout(unit.get('equipped', []), sizes_counts[m], m, resolve) for m in model_sizes}
+    if addon:
+        for m in model_sizes:
+            if m > top:
+                for x in items_of(f'{m - top} {addon[1]}', resolve):
+                    base[m][x['item']] = base[m].get(x['item'], 0) + x['n']
     names = {w['id']: w['name']['en'] for w in unit['weapons']}
     types = {w['id']: w['type'] for w in unit['weapons']}
 
@@ -383,7 +508,7 @@ def build(unit, model_sizes, global_weapons=()):
         return ' + '.join(f'{n}× {item_name(i)}' if n > 1 else item_name(i) for i, n in merged.items() if n > 0)
 
     options, unparsed = [], []
-    for i, o in enumerate(unit.get('wargearOptions', [])):
+    for oid, o in raw_options:
         opt = parse_option(o['text'], o['choices'], resolve, sizes_counts, base, unit.get('wargearNotes', []))
         if not opt:
             unparsed.append(o['text'])
@@ -403,6 +528,8 @@ def build(unit, model_sizes, global_weapons=()):
         owner = f"{opt['owner']}: " if opt.get('owner') else ''
         if opt['type'] == 'toggle':
             label = {'en': f"{owner}add {opt['labels'][opt['gives']]}", 'es': f"{owner}añadir {opt['labels'][opt['gives']]}"}
+        elif opt['type'] == 'pool' and not opt['replaces']:
+            label = {'en': f'{owner}add', 'es': f'{owner}añadir'}
         elif opt['type'] == 'pool':
             label = {'en': f'{owner}replace {replaced}', 'es': f'{owner}sustituir {replaced}'}
         elif opt.get('exclusive'):
@@ -413,9 +540,51 @@ def build(unit, model_sizes, global_weapons=()):
             opt['labels'][''] = replaced or '—'
         if opt.get('scope') == 'all':
             label = {'en': label['en'] + ' (all models)', 'es': label['es'] + ' (todos los modelos)'}
-        options.append({'id': f'o{i + 1}', 'label': label, **opt})
+        options.append({'id': oid, 'label': label, **opt})
+
+    # footnotes that limit combinations; the app checks them when validating the list
+    notes = ' '.join(unit.get('wargearNotes', []))
+    if re.search(r'cannot have duplicates of these pieces of wargear', notes):
+        starred = {x['item'] for _, o in raw_options for c in o['choices'] if '*' in c for x in items_of(c, resolve)}
+        if starred:
+            unit['uniqueGear'] = sorted(starred)
+            for o in options:
+                if o['type'] == 'pool' and not o['replaces']:
+                    single = {k: {str(mm): mm for mm in model_sizes} for k, pk in o['packages'].items()
+                              if any(x['item'] in starred for x in pk)}
+                    if single:
+                        o['maxEachChoice'] = {**o.get('maxEachChoice', {}), **single}
+    both = re.search(r'No model can be equipped with both (?:an? )?(.+?) and (?:an? )?(.+?)(?: at the same time)?\.', notes)
+    if both:
+        pair = [items_of(both.group(k), resolve) for k in (1, 2)]
+        if all(len(x) == 1 for x in pair):
+            unit['exclusiveGear'] = [[pair[0][0]['item'], pair[1][0]['item']]]
+
+    # the equipment list names some profiles differently from the weapon table (Krootox Rampagers: "hunting blades;
+    # Rampager fists" for "Close combat weapon" and "Krootox fists"): when every unknown item is carried by the whole
+    # unit and as many weapons are never mentioned anywhere, those weapons are the ones carried
+    gear_ab = {gear_id(a['name']['en']) for a in unit.get('wargearAbilities', [])}
+    mentioned = {i for b in base.values() for i in b} | {x['item'] for o in options for p in o['packages'].values() for x in p}
+    granted = {x['item'] for x in ability_weapons(unit, resolve)} | \
+              {x['item'] for a in unit.get('wargearAbilities', []) for x in bearer_weapons(a['text']['en'], resolve)}
+    unused = [w['id'] for w in unit['weapons'] if w['id'] not in mentioned and w['id'] not in granted
+              and not re.search(r'-(melee|ranged)$', w['id'])]
+    for m, b in base.items():
+        unknown = [i for i in b if i.startswith('gear:') and i not in gear_ab]
+        if unknown and len(unknown) == len(unused) and len({b[i] for i in unknown}) == 1:
+            n = b[unknown[0]]
+            for i in unknown:
+                del b[i]
+            for w in unused:
+                b[w] = n
 
     unit['wargear'] = options
     unit['sizes'] = [{**s, 'loadout': base.get(s['models'], {})} for s in unit['sizes']]
     unit['loadout'] = sorted({i for b in base.values() for i in b})
+    gw = gear_weapons(unit, resolve, faction_gear)
+    if gw:
+        unit['gearWeapons'] = gw
+    aw = ability_weapons(unit, resolve)
+    if aw:
+        unit['abilityWeapons'] = aw
     return unparsed

@@ -172,5 +172,7 @@
   "stat.AP": "FP",
   "stat.D": "D",
   "list.nameLabel": "Nombre de la lista",
-  "list.pointsUsed": "Puntos"
+  "list.pointsUsed": "Puntos",
+  "err.duplicateGear": "{unit}: no puede llevar más de un {item} por modelo",
+  "err.exclusiveGear": "{unit}: ningún modelo puede llevar a la vez {a} y {b}"
 }

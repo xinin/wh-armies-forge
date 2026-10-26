@@ -39,6 +39,16 @@
       "edition": "11th",
       "path": "imperial-knights",
       "color": "#2c5f8a"
+    },
+    {
+      "id": "t-au-empire",
+      "name": {
+        "en": "T’au Empire",
+        "es": "Imperio T’au"
+      },
+      "edition": "11th",
+      "path": "t-au-empire",
+      "color": "#c06a2b"
     }
   ]
 }

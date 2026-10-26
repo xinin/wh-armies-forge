@@ -477,5 +477,10 @@
     }
    ]
   }
+ },
+ "wargearCosts": {
+  "shield-captain": {
+   "gear:praesidium-shield": 25
+  }
  }
 }

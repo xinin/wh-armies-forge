@@ -92,9 +92,9 @@
         "es": "Las unidades ASTRA MILITARUM amigas (salvo TITANIC) tienen Sigilo." } },
       "enhancements": [
         { "id": "guerrilla-honours", "requires": [["INFANTRY", "OFFICER"]], "name": { "en": "Guerrilla Honours", "es": "Honores de Guerrilla" }, "text": { "en": "Redeploy up to 3 INFANTRY units into Reserves.", "es": "Redespliega hasta 3 unidades INFANTRY en Reservas." } },
-        { "id": "scare-gas-grenades", "requires": [], "name": { "en": "Scare Gas Grenades", "es": "Granadas de Gas del Miedo" }, "text": { "en": "Once per battle, Battle-shock test on an enemy within 8\".", "es": "Una vez por batalla, chequeo de acobardamiento a un enemigo a 8\"." } },
+        { "id": "scare-gas-grenades", "requires": [["INFANTRY"]], "name": { "en": "Scare Gas Grenades", "es": "Granadas de Gas del Miedo" }, "text": { "en": "Once per battle, Battle-shock test on an enemy within 8\".", "es": "Una vez por batalla, chequeo de acobardamiento a un enemigo a 8\"." } },
         { "id": "survival-gear", "requires": [["INFANTRY"]], "name": { "en": "Survival Gear", "es": "Equipo de Supervivencia" }, "text": { "en": "Scouts 6\".", "es": "Exploradores 6\"." } },
-        { "id": "tripwires", "requires": [], "name": { "en": "Tripwires", "es": "Cables Trampa" }, "text": { "en": "Enemy INFANTRY/MOUNTED ending moves within 8\" may be stunned on 4+.", "es": "INFANTRY/MOUNTED enemigas que acaben a 8\" pueden quedar aturdidas a 4+." } }
+        { "id": "tripwires", "requires": [["INFANTRY"]], "name": { "en": "Tripwires", "es": "Cables Trampa" }, "text": { "en": "Enemy INFANTRY/MOUNTED ending moves within 8\" may be stunned on 4+.", "es": "INFANTRY/MOUNTED enemigas que acaben a 8\" pueden quedar aturdidas a 4+." } }
       ]
     },
     {
@@ -152,8 +152,8 @@
         "en": "Details pending verification.",
         "es": "Detalles pendientes de verificar." } },
       "enhancements": [
-        { "id": "bombast-vox-array", "requires": [["OFFICER"]], "name": { "en": "Bombast-class Vox-array", "es": "Vox-array clase Bombast" }, "text": { "en": "Pending verification.", "es": "Pendiente de verificar." } },
-        { "id": "priority-drop-beacon", "requires": [], "name": { "en": "Priority Drop Beacon", "es": "Baliza de Despliegue Prioritario" }, "text": { "en": "Pending verification.", "es": "Pendiente de verificar." } }
+        { "id": "bombast-vox-array", "requires": [["TEMPESTUS", "OFFICER"]], "name": { "en": "Bombast-class Vox-array", "es": "Vox-array clase Bombast" }, "text": { "en": "Pending verification.", "es": "Pendiente de verificar." } },
+        { "id": "priority-drop-beacon", "requires": [["TEMPESTUS", "OFFICER"]], "name": { "en": "Priority Drop Beacon", "es": "Baliza de Despliegue Prioritario" }, "text": { "en": "Pending verification.", "es": "Pendiente de verificar." } }
       ]
     }
   ]

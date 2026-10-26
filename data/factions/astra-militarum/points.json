@@ -912,5 +912,54 @@
     }
    ]
   }
+ },
+ "wargearCosts": {
+  "field-ordnance-battery": {
+   "bombast-field-gun": 10
+  },
+  "krieg-heavy-weapons-squad": {
+   "krieg-heavy-flamer": 5
+  },
+  "leman-russ-battle-tank": {
+   "lascannon": 5,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  },
+  "leman-russ-commander": {
+   "lascannon": 5,
+   "demolisher-battle-cannon": 15,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  },
+  "leman-russ-demolisher": {
+   "lascannon": 5,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  },
+  "leman-russ-eradicator": {
+   "lascannon": 5,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  },
+  "leman-russ-executioner": {
+   "lascannon": 5,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  },
+  "leman-russ-exterminator": {
+   "lascannon": 5,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  },
+  "leman-russ-punisher": {
+   "lascannon": 5,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  },
+  "leman-russ-vanquisher": {
+   "lascannon": 5,
+   "multi-melta": 5,
+   "plasma-cannon": 5
+  }
  }
 }

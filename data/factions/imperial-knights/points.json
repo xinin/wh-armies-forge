@@ -252,5 +252,10 @@
     }
    ]
   }
+ },
+ "wargearCosts": {
+  "knight-crusader": {
+   "rapid-fire-battle-cannon": 15
+  }
  }
 }

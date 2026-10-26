@@ -401,9 +401,8 @@ function clampWargear(ru, lastChanged) {
     } else if (opt.type === 'toggle') {
       next[opt.id] = Math.min(Number(v) || 0, opt.scope === 'all' ? 1 : max);
     } else if (opt.type === 'pool') {
-      const each = optionMaxEach(opt, models);
       const pool = {};
-      for (const c of opt.choices) if (v?.[c] > 0) pool[c] = Math.min(Number(v[c]), each);
+      for (const c of opt.choices) if (v?.[c] > 0) pool[c] = Math.min(Number(v[c]), optionMaxEach(opt, models, c));
       let total = Object.values(pool).reduce((a, b) => a + b, 0);
       for (const k of Object.keys(pool).sort((a, b) => (a === lastChanged) - (b === lastChanged))) {
         if (total <= max) break;

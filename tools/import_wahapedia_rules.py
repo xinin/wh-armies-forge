@@ -31,9 +31,17 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower().replace('’', '').replace("'", '')).strip('-')
 
 
+# Cyrillic letters that look like Latin ones; Wahapedia sometimes mixes them in ("Kauyоn" with a Cyrillic о)
+LATIN = str.maketrans('АВЕКМНОРСТХаеорсухі', 'ABEKMHOPCTXaeopcyxi')
+
+
+def latin(s):
+    return s.translate(LATIN)
+
+
 def key(s):
     """Loose comparison key: Wahapedia anchors turn "Emperor’s Chosen" into "Emperor-s-Chosen"."""
-    return re.sub(r'[^a-z0-9]', '', s.lower())
+    return re.sub(r'[^a-z0-9]', '', latin(s).lower())
 
 
 def clean(x):
@@ -41,7 +49,7 @@ def clean(x):
     x = re.sub(r'</(p|div|h\d|li|tr)>', '\n', x)
     x = re.sub(r'</t[dh]>', ' ', x)
     x = re.sub(r'<[^>]+>', '', x)
-    x = html.unescape(x).replace('‑', '-')
+    x = latin(html.unescape(x)).replace('‑', '-')
     x = re.sub(r'[ \t]+', ' ', x)
     return re.sub(r'\s*\n\s*', '\n', x).strip()
 

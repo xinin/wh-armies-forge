@@ -150,8 +150,17 @@ def main():
 
     if args.cmd == 'pending':
         done = known()
+        texts = collect()
+        # a text used by 2+ factions must be in the edition file: the app only loads the active faction's file
+        edition = load(EDITION)
+        moved = {t: done[t] for t in texts.get('_shared', {}) if t in done and t not in edition.get('texts', {})}
+        if moved:
+            edition.setdefault('texts', {}).update(moved)
+            edition['texts'] = dict(sorted(edition['texts'].items()))
+            EDITION.write_text(json.dumps(edition, ensure_ascii=False, indent=1) + '\n')
+            print(f'{len(moved)} translations shared by several factions copied to {EDITION.relative_to(ROOT)}')
         os.makedirs(args.out, exist_ok=True)
-        for target, d in collect().items():
+        for target, d in texts.items():
             rows = [(t, c) for t, c in d.items() if t not in done]
             path = Path(args.out) / f'{target}.tsv'
             path.write_text(''.join(f'{i}\t{c}\t{esc(t)}\n' for i, (t, c) in enumerate(rows, 1)))

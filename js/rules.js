@@ -17,12 +17,63 @@ export function isExtraCopy(ru, data, list) {
   return Boolean(list && size?.extraPoints != null && def.extraFrom && copyIndex(ru, list) >= def.extraFrom - 1);
 }
 
+export const slugify = str => String(str).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// gear ids are singular ("servo-scribe"), the wargear ability may be plural ("Servo-scribes") or tagged
+// ("Command-link Drone (Aura)")
+export const gearSlug = name => slugify(name.replace(/\s*\(.*?\)/g, '')).split('-').map(w => w.replace(/s$/, '')).join('-');
+
+/* Equipment counts of a roster unit: the default loadout of its size after the chosen options (per-model options
+   first, "all models" swaps last on what is left), plus the weapons given by its wargear (drones) and abilities.
+   → { counts: {item: n}, base: {item: n} } (base = the size's default loadout, with what it gives) */
+export function loadoutCounts(ru, def) {
+  const size = def.sizes[ru.sizeIdx] ?? def.sizes[0];
+  const models = size?.models ?? 1;
+  const counts = { ...(size?.loadout ?? {}) };
+  const add = (c, item, n) => { c[item] = Math.max(0, (c[item] ?? 0) + n); };
+  const apply = (opt, key, times) => {
+    if (!times) return;
+    for (const r of opt.replaces ?? []) add(counts, r.item, -r.n * times);
+    for (const x of opt.packages?.[key] ?? []) add(counts, x.item, x.n * times);
+  };
+  const available = opt => (opt.replaces?.length
+    ? Math.min(...opt.replaces.map(r => Math.floor((counts[r.item] ?? 0) / r.n)))
+    : models);
+  const options = (def.wargear ?? []).filter(o => !(o.minModels && models < o.minModels));
+  for (const opt of [...options.filter(o => o.scope !== 'all'), ...options.filter(o => o.scope === 'all')]) {
+    const v = ru.wargear?.[opt.id];
+    if (opt.type === 'swap' && v) apply(opt, v, opt.scope === 'all' ? available(opt) : 1);
+    if (opt.type === 'pool') for (const [key, n] of Object.entries(v ?? {})) apply(opt, key, Number(n) || 0);
+    if (opt.type === 'toggle' && v) apply(opt, opt.gives, opt.scope === 'all' ? available(opt) : Number(v));
+  }
+  const withGiven = c => {
+    const out = { ...c };
+    for (const [gear, weapons] of Object.entries(def.gearWeapons ?? {})) {
+      for (const w of weapons) if (c[gear]) add(out, w.item, c[gear] * w.n);
+    }
+    for (const w of def.abilityWeapons ?? []) add(out, w.item, w.n);
+    return out;
+  };
+  return { counts: withGiven(counts), base: withGiven(size?.loadout ?? {}) };
+}
+
+// Name of a loadout item: a weapon of the datasheet, or gear ("gear:vox-caster" → its wargear ability name).
+export function itemName(def, id) {
+  if (!id.startsWith('gear:')) return tr(def.weaponMap.get(id)?.name) || id;
+  const g = gearSlug(id.slice(5));
+  const ability = [...(def.wargearAbilities ?? []), ...(def.abilities ?? [])].find(a => gearSlug(a.name.en) === g);
+  return ability ? tr(ability.name) : id.slice(5).replace(/-/g, ' ').replace(/^./, c => c.toUpperCase());
+}
+
 export function unitPoints(ru, data, list = null) {
   const def = data.unitsById.get(ru.unitId);
   const size = def?.sizes[ru.sizeIdx];
   const base = (isExtraCopy(ru, data, list) ? size.extraPoints : size?.points) ?? 0;
   const enh = ru.enhancement ? data.enhancements.get(ru.enhancement)?.points ?? 0 : 0;
-  return base + enh;
+  // 11th edition "per <wargear>" costs, for every piece the unit carries
+  const costs = def?.wargearCosts ?? {};
+  const counts = Object.keys(costs).length ? loadoutCounts(ru, def).counts : {};
+  const gear = Object.entries(costs).reduce((sum, [item, pts]) => sum + (counts[item] ?? 0) * pts, 0);
+  return base + enh + gear;
 }
 
 export const listPoints = (list, data) => list.units.reduce((sum, ru) => sum + unitPoints(ru, data, list), 0);
@@ -37,8 +88,10 @@ export function optionMax(opt, models) {
   return opt.maxBySize?.[models] ?? 1;
 }
 
-// Footnote limits such as "you cannot select the same weapon more than once (twice with 20 models)".
-export const optionMaxEach = (opt, models) => opt.maxEachBySize?.[models] ?? Infinity;
+// Footnote limits such as "you cannot select the same weapon more than once (twice with 20 models)", or of one
+// choice ("it cannot take duplicates of this piece of wargear").
+export const optionMaxEach = (opt, models, key = null) =>
+  Math.min(opt.maxEachBySize?.[models] ?? Infinity, (key && opt.maxEachChoice?.[key]?.[models]) ?? Infinity);
 
 function canBeCharacter(def, list, data) {
   if (hasKw(def, 'CHARACTER')) return true;
@@ -49,12 +102,18 @@ export function enhancementFits(enh, def, list, data) {
   if (enh.type !== 'upgrade') {
     if (!canBeCharacter(def, list, data) || hasKw(def, 'EPIC HERO')) return false;
   }
+  // "… (excluding KROOT SHAPER models)"
+  if (enh.excludes?.some(group => group.every(kw => kwMatch(def, kw)))) return false;
   if (!enh.requires?.length) return true;
-  return enh.requires.some(group => group.every(kw => hasKw(def, kw) || kwWords(def).has(normKw(kw))));
+  return enh.requires.some(group => group.every(kw => kwMatch(def, kw)));
 }
 
-// Requirements imported from "X Y model only" are split into words; a word also matches
-// when it is part of a multi-word keyword ("VON RYAN'S LEAPERS", "VANGUARD INVADER").
+// Requirements imported from "X Y model only" are split into words; a word also matches when it is part of a
+// multi-word keyword ("VON RYAN'S LEAPERS", "VANGUARD INVADER") or is its plural ("STEALTH BATTLESUITS" units).
+const kwMatch = (def, kw) => {
+  const w = normKw(kw);
+  return hasKw(def, kw) || kwWords(def).has(w) || (w.endsWith('S') && kwWords(def).has(w.slice(0, -1)));
+};
 const normKw = kw => kw.toUpperCase().replace(/[’‘]/g, "'");
 const kwWordCache = new WeakMap();
 function kwWords(def) {
@@ -118,6 +177,22 @@ export function validate(list, data, edition) {
   if (!list.detachments.length) err('err.noDetachment');
   const dp = detachmentPointsUsed(list, data);
   if (dp > bs.detachmentPoints) err('err.overDP', { used: dp, max: bs.detachmentPoints });
+
+  // Wargear footnotes: "cannot have duplicates of these pieces of wargear", "no model can be equipped with both …"
+  for (const ru of list.units) {
+    const def = data.unitsById.get(ru.unitId);
+    if (!def || !(def.uniqueGear || def.exclusiveGear)) continue;
+    const models = def.sizes[ru.sizeIdx]?.models ?? 1;
+    const { counts } = loadoutCounts(ru, def);
+    for (const item of def.uniqueGear ?? []) {
+      if ((counts[item] ?? 0) > models) err('err.duplicateGear', { unit: nameOf(ru), item: itemName(def, item) }, [ru.uid]);
+    }
+    for (const [a, b] of def.exclusiveGear ?? []) {
+      if ((counts[a] ?? 0) + (counts[b] ?? 0) > models) {
+        err('err.exclusiveGear', { unit: nameOf(ru), a: itemName(def, a), b: itemName(def, b) }, [ru.uid]);
+      }
+    }
+  }
 
   // Unit limits per datasheet
   const byUnit = new Map();
