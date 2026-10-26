@@ -23,7 +23,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import wargear  # noqa: E402
-from import_wahapedia_datasheets import BASE, parse, sections, slug  # noqa: E402
+from import_wahapedia_datasheets import BASE, only_chapter, parse, sections, slug  # noqa: E402
 from wahapedia_fetch import fetch  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -36,7 +36,9 @@ def audit_unit(unit, faction, points, all_ids, excluded=frozenset()):
     m = re.search(r'/([^/]+)$', unit.get('source', ''))
     if not m or 'wahapedia' not in unit.get('source', ''):
         return [f'not imported from Wahapedia (source: {unit.get("source", "hand-written")})'], []
-    page = fetch(f'{BASE}/{faction}/{m.group(1)}')
+    cfg = json.loads((ROOT / 'data' / 'factions' / faction / 'faction.json').read_text()).get('wahapedia', {})
+    bit = int(cfg['chapterBit'], 16) if cfg.get('chapterBit') else None
+    page = only_chapter(fetch(f'{BASE}/{cfg.get("faction", faction)}/{m.group(1)}'), bit)
     fresh, targets, costs, extra, _ = parse(page, m.group(1))
     i = page.find('<div class="dsOuterFrame datasheet')
     block = page[i:page.find('<div class="ds2colKWFlat', i)]
@@ -77,8 +79,8 @@ def audit_unit(unit, faction, points, all_ids, excluded=frozenset()):
 
     structured = len(unit.get('wargear', []))
     unit_copy = json.loads(json.dumps(fresh))
-    unit_copy['sizes'] = [{'models': n} for n in sizes]
-    unparsed = wargear.build(unit_copy, sizes)
+    unit_copy['sizes'] = [{'models': c['models']} for c in costs] or [{'models': n} for n in sizes]
+    unparsed = wargear.build(unit_copy, [s['models'] for s in unit_copy['sizes']])
     for t in unparsed:
         (warns if any(re.match(p, t) for p in UNSUPPORTED) else errors).append(f'options: not a selector: "{t[:110]}"')
     if structured != len(unit_copy['wargear']):
@@ -102,8 +104,8 @@ def audit_unit(unit, faction, points, all_ids, excluded=frozenset()):
         errors.append('data: no keywords')
     if not points['units'].get(unit['id']):
         errors.append('data: no points')
-    for t in targets:
-        if slug(t) not in all_ids and slug(t) not in excluded:
+    for t, legends in targets:
+        if slug(t) not in all_ids and slug(t) not in excluded and not legends:
             errors.append(f'data: leader target "{t}" is not a unit of the faction')
     return errors, warns
 

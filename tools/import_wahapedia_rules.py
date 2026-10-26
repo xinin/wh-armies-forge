@@ -45,6 +45,7 @@ def key(s):
 
 
 def clean(x):
+    x = re.sub(r'<script.*?</script>', '', x, flags=re.S)  # ad snippets inside rule sections
     x = re.sub(r'<br\s*/?>', '\n', x)
     x = re.sub(r'</(p|div|h\d|li|tr)>', '\n', x)
     x = re.sub(r'</t[dh]>', ' ', x)
@@ -113,17 +114,20 @@ def main():
 
     fdir = ROOT / 'data' / 'factions' / args.faction
     faction = json.loads((fdir / 'faction.json').read_text())
-    page = Path(args.faction_html).read_text() if args.faction_html else fetch(f'{BASE}/factions/{args.faction}/')
+    source = faction.get('wahapedia', {}).get('faction', args.faction)  # a Chapter lives in another faction page
+    page = Path(args.faction_html).read_text() if args.faction_html else fetch(f'{BASE}/factions/{source}/')
     core = Path(args.core_html).read_text() if args.core_html else fetch(f'{BASE}/the-rules/core-rules/')
 
     by_name = {key(d['name']['en']): d for d in faction['detachments']}
+    on_page = set(by_name) | {key(n) for n in re.findall(r'data-det-name="([^"]+)"', page)}
     heads = [(m.start(), m.group(1)) for m in re.finditer(r'<h2[^>]*id="([^"]+)"', page)]
     rules, strats = {'detachments': {}}, {}
     for i, (pos, hid) in enumerate(heads):
         det = by_name.get(key(hid))
         if not det:
             continue
-        end = next((p for p, h in heads[i + 1:] if key(h) in by_name or h in ('Crusade-Rules', 'Boarding-Actions')), len(page))
+        # the section ends at the next detachment of the page (also those of other Chapters, not in faction.json)
+        end = next((p for p, h in heads[i + 1:] if key(h) in on_page or h in ('Crusade-Rules', 'Boarding-Actions')), len(page))
         sec = page[pos:end]
         e_pos = re.search(r'id="Enhancements(-\d+)?"', sec)
         s_pos = re.search(r'id="Stratagems(-\d+)?"', sec)
@@ -147,8 +151,8 @@ def main():
     core_strats = dedupe([s for s in parse_stratagems(core) if s['source'].startswith('Core')])
     print(f'core stratagems: {len(core_strats)}')
 
-    (fdir / 'rules.json').write_text(json.dumps({'source': f'{BASE}/factions/{args.faction}/', **rules}, ensure_ascii=False, indent=1) + '\n')
-    (fdir / 'stratagems.json').write_text(json.dumps({'source': f'{BASE}/factions/{args.faction}/', 'detachments': strats}, ensure_ascii=False, indent=1) + '\n')
+    (fdir / 'rules.json').write_text(json.dumps({'source': f'{BASE}/factions/{source}/', **rules}, ensure_ascii=False, indent=1) + '\n')
+    (fdir / 'stratagems.json').write_text(json.dumps({'source': f'{BASE}/factions/{source}/', 'detachments': strats}, ensure_ascii=False, indent=1) + '\n')
     (ROOT / 'data' / 'editions' / '11th-stratagems.json').write_text(
         json.dumps({'source': f'{BASE}/the-rules/core-rules/', 'stratagems': core_strats}, ensure_ascii=False, indent=1) + '\n')
 

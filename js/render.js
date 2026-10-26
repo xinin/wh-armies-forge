@@ -380,9 +380,11 @@ export function renderSidebar(list, data, edition, issues) {
   <section class="side-block">
     <div class="panel-head"><h2>${icon('emblem', 'head-icon')}${t('rules.armyRule')}</h2></div>
     <details class="army-rule"><summary>${esc(tr(ar.name))}</summary>
-      <p>${esc(tr(ar.text))}</p>
+      ${esc(tr(ar.text)).split('\n').map(l => `<p>${l}</p>`).join('')}
       <ul class="orders">${(ar.orders ?? []).map(o => `<li><b>${esc(tr(o.name))}</b> ${esc(tr(o.text))}</li>`).join('')}</ul>
     </details>
+    ${(data.faction.extraRules ?? []).map(r => `<details class="army-rule"><summary>${esc(tr(r.name))}</summary>
+      ${esc(tr(r.text)).split('\n').map(l => `<p>${l}</p>`).join('')}</details>`).join('')}
     <p class="data-meta">${t('data.version')}: ${esc(data.pointsMeta.version)}</p>
     <p class="disclaimer">${t('disclaimer')}</p>
   </section>`;

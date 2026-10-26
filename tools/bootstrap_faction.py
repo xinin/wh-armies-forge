@@ -2,6 +2,11 @@
 
 Usage:
     python3 tools/bootstrap_faction.py <wahapedia-faction-slug> [--color "#8a1c1c"] [--html FILE] [--force]
+    python3 tools/bootstrap_faction.py space-wolves --source space-marines --chapter "Space Wolves"
+
+--source/--chapter: a Space Marine Chapter inside the "space-marines" page of Wahapedia. Only the detachments and
+army rules marked for that Chapter (or for every Chapter) are kept, and faction.json records
+"wahapedia": {"faction": <source>, "chapter": <CHAPTER KEYWORD>} for the other importers.
 
 --force regenerates faction.json (and enhancement points) of an existing faction; units/images are kept.
 
@@ -61,26 +66,54 @@ def main():
     ap.add_argument('--color', default='#6b7d4a')
     ap.add_argument('--html')
     ap.add_argument('--force', action='store_true')
+    ap.add_argument('--source', help='Wahapedia faction page the Chapter belongs to (space-marines)')
+    ap.add_argument('--chapter', help='Chapter name as shown on that page ("Space Wolves")')
     args = ap.parse_args()
 
     fdir = ROOT / 'data' / 'factions' / args.faction
     if (fdir / 'faction.json').exists() and not args.force:
         sys.exit(f'{fdir}/faction.json already exists (use --force to overwrite)')
-    page = Path(args.html).read_text() if args.html else fetch(f'{BASE}/factions/{args.faction}/')
+    source = args.source or args.faction
+    page = Path(args.html).read_text() if args.html else fetch(f'{BASE}/factions/{source}/')
 
     title = re.search(r'<title>(.*?)</title>', page, re.S)
     name = re.sub(r'\[.*?\]', '', clean(title.group(1))).split('|')[0].split('–')[0].strip() if title else args.faction.replace('-', ' ').title()
-    faction_words = set(name.upper().split())
+    if args.chapter:
+        name = args.chapter
+    faction_words = set(name.upper().split()) | ({'ADEPTUS', 'ASTARTES'} if args.chapter else set())
 
-    # army rule: first <h3> after the "Army Rules" heading
-    # army rule: first heading after "Army Rules" (an <h3> in most factions, its own <h2> in some)
+    # Chapter filter: the page marks Chapter content with data-f="CH:<hex mask>"; the Chapter's own bit comes from
+    # its filter header (<div class="DetFilterGroupHeader" data-f="CH:801,…">Space Wolves</div>) without bit 1
+    chapter_bit = None
+    if args.chapter:
+        hm = re.search(rf'DetFilterGroupHeader[^>]*data-f="[^"]*CH:([0-9a-f]+)[^"]*">\s*{re.escape(args.chapter)}\s*<', page)
+        if not hm:
+            sys.exit(f'chapter "{args.chapter}" not found on {source}')
+        chapter_bit = int(hm.group(1), 16) & ~1
+
+    def for_chapter(attrs):
+        m = re.search(r'CH:([0-9a-f]+)', attrs or '')
+        return chapter_bit is None or not m or bool(int(m.group(1), 16) & chapter_bit)
+
+    # army rule: first heading after "Army Rules" (an <h3> in most factions, its own <h2> in some); with a Chapter,
+    # the other army rules that apply to it ("Librarius", "Curse of the Wulfen"…) go to extraRules
     a = page.find('id="Army-Rules"')
-    army_html = page[page.find('</h2>', a) + 5:]
-    head = re.search(r'<(h[23])[^>]*>(.*?)</\1>(.*?)(?=<h[23]|\Z)', army_html, re.S)
-    army_rule = {'name': {'en': clean(head.group(2))}, 'text': {'en': summary(clean(strip_fluff(head.group(3))), 900)}} if head else \
-        {'name': {'en': 'Army rule'}, 'text': {'en': ''}}
+    army_html = page[page.find('</h2>', a) + 5:page.find('<h2', a + 20)]
+    heads = list(re.finditer(r'<(h[23])[^>]*>(.*?)</\1>(.*?)(?=<h[23]|\Z)', army_html, re.S))
+    if not heads:  # the army rule is its own <h2> right after "Army Rules" (Imperial Knights)
+        army_html = page[page.find('<h2', a + 20):]
+        heads = list(re.finditer(r'<(h2)[^>]*>(.*?)</\1>(.*?)(?=<h[23]|\Z)', army_html, re.S))[:1]
+    rules, prev = [], 0
+    for h in heads:
+        masks = re.findall(r'data-f="([^"]*)"', army_html[prev:h.start()])
+        prev = h.start(3)
+        if for_chapter(masks[-1] if masks else ''):
+            rules.append({'name': {'en': clean(h.group(2))}, 'text': {'en': clean(strip_fluff(h.group(3)))}})
+    army_rule = rules[0] if rules else {'name': {'en': 'Army rule'}, 'text': {'en': ''}}
+    extra_rules = rules[1:] if args.chapter else []
 
-    dets_dp = re.findall(r'data-det-name="([^"]+)" data-dp-base="(\d+)"', page)
+    dets_dp = [(n, dp) for tag, n, dp in re.findall(r'(<[^<>]*data-det-name="([^"]+)" data-dp-base="(\d+)"[^<>]*>)', page)
+               if for_chapter(re.search(r'data-f="([^"]*)"', tag).group(1) if 'data-f=' in tag else '')]
     heads = [(m.start(), m.group(1)) for m in re.finditer(r'<h2[^>]*id="([^"]+)"', page)]
     detachments, enh_points = [], {}
     seen = set()
@@ -127,11 +160,13 @@ def main():
         print(f'{did:28} {dp} DP  enhancements={len(enhancements)}')
 
     fdir.mkdir(parents=True, exist_ok=True)
-    src = f'{BASE}/factions/{args.faction}/'
-    (fdir / 'faction.json').write_text(json.dumps({
-        'id': args.faction, 'name': {'en': name, 'es': name}, 'source': src,
-        'armyRule': army_rule, 'detachments': detachments,
-    }, ensure_ascii=False, indent=1) + '\n')
+    src = f'{BASE}/factions/{source}/'
+    faction = {'id': args.faction, 'name': {'en': name, 'es': name}, 'source': src, 'armyRule': army_rule}
+    if extra_rules:
+        faction['extraRules'] = extra_rules
+    if args.chapter:
+        faction['wahapedia'] = {'faction': source, 'chapter': args.chapter.upper(), 'chapterBit': f'{chapter_bit:x}'}
+    (fdir / 'faction.json').write_text(json.dumps({**faction, 'detachments': detachments}, ensure_ascii=False, indent=1) + '\n')
     # --force only regenerates faction.json and the enhancement points: imported units, unit points
     # and images are never overwritten
     points_path = fdir / 'points.json'

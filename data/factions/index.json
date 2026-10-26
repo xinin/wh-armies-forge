@@ -49,6 +49,16 @@
       "edition": "11th",
       "path": "t-au-empire",
       "color": "#c06a2b"
+    },
+    {
+      "id": "space-wolves",
+      "name": {
+        "en": "Space Wolves",
+        "es": "Lobos Espaciales"
+      },
+      "edition": "11th",
+      "path": "space-wolves",
+      "color": "#5f7f9a"
     }
   ]
 }

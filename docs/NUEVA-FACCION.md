@@ -33,6 +33,21 @@ Crea `data/factions/adeptus-custodes/` con:
 
 Además la añade a `data/factions/index.json`. `--color` es el color de la facción en las tarjetas de la home. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
 
+### Capítulos de Marines Espaciales
+
+Los capítulos con datasheets propios (Lobos Espaciales, Ángeles Oscuros, Ángeles Sangrientos…) no tienen página propia en Wahapedia: están dentro de `space-marines`. Se cargan como una facción aparte:
+
+```sh
+python3 tools/bootstrap_faction.py space-wolves --source space-marines --chapter "Space Wolves" --color "#5b7a99"
+```
+
+- `--chapter` es el nombre tal cual aparece en el filtro de capítulos de la página. Wahapedia marca cada fila con una máscara (`data-f="CH:<hex>"`) y el script toma el bit de ese capítulo.
+- Solo entran los destacamentos y mejoras genéricos y los del capítulo; los de otros capítulos se descartan.
+- La primera regla de ejército (Combat Doctrines) va a `armyRule`. Las demás (Librarius, Curse of the Wulfen…) van a `extraRules` y se ven en el editor y en la pestaña «Regla de ejército».
+- Guarda en `faction.json` → `wahapedia` (`faction`, `chapter`, `chapterBit`). Los demás importadores lo leen de ahí, así que el resto de pasos se ejecutan igual, con el id de la facción (`space-wolves`).
+- Los datasheets de otros capítulos se reconocen por sus palabras clave de facción y no se importan. En los datasheets genéricos, las filas solo para otros capítulos (puntos, a quién lidera) se quitan antes de leer la página (`only_chapter`).
+- Las unidades de otras facciones que permite una regla (los aliados de Deathwatch Support) no entran.
+
 **Revisa `faction.json`:**
 - **`requires` de cada mejora**: palabras clave que debe tener la unidad, deducidas del texto «X model only». Si sale `[]`, cualquier personaje (no Héroe Épico) puede llevarla. Corrige los casos dudosos. Ejemplo: `[["INFANTRY", "OFFICER"]]` exige las dos palabras clave; `[["A"], ["B"]]` significa A **o** B (en el texto, «A/B unit only»). También entiende nombres de datasheet en minúsculas («Kroot War Shaper model only») y las exclusiones «(excluding KROOT SHAPER models)», que van a `excludes`. Una palabra en plural («STEALTH BATTLESUITS») encaja con la palabra clave en singular.
 - **Letras que parecen latinas**: Wahapedia a veces mezcla letras cirílicas («Kauyоn» con una о cirílica). Los importadores las convierten a latinas; si un destacamento sale con `warning: no section`, mira si es esto.
@@ -75,11 +90,15 @@ Por cada unidad guarda:
     - añadidos ("can be equipped with");
     - paquetes de varias armas ("autopistol and trench club → flamer and close combat weapon");
     - notas al pie con límite por arma ("no more than once… twice with 20 models");
-    - alternativas excluyentes ("You can select one of the following options").
+    - alternativas excluyentes ("You can select one of the following options");
+    - opciones que dependen de otra ("If this model is equipped with a neo-volkite pistol, it can be equipped with a storm shield"): van a `needs` y solo se aplican si se cumple la condición;
+  - **unidades con acompañantes** ("3-6 Hunting Wolf / 3-6 Wolf Guard Headtaker", con puntos para 3, 6, 6 y 12 modelos): los tamaños son los modelos principales y los acompañantes una opción con su coste por modelo (`companion_split`). El número de modelos de la unidad cuenta solo los principales.
 
 Con `--all`, una facción se reemplaza entera: las unidades que ya no son datasheets de la facción se eliminan de `units.json` y `points.json`. Las de Legends y Forge World se apuntan en `units.json` → `excluded` y nunca se importan. Los identificadores son el nombre del datasheet en minúsculas con guiones (`cadian-heavy-weapons-squad`). No se usan alias: si GW renombra una unidad, actualiza su clave en `images.json` (las listas guardadas que la usaran la pierden al abrirse).
 
 **Revisa la salida.** Al final aparecen líneas `CHECK <unidad>` con lo que no se ha podido interpretar: opciones de equipo que no encajan en ningún patrón y unidades a las que lidera que no existen en la facción. Las unidades de Legends y Forge World excluidas no se avisan.
+- **Exclusiones por página**: una página de Legends puede tener el mismo id que una unidad oficial (Venerable Dreadnought). Por eso la exclusión se comprueba por la página del datasheet, no por el id.
+- **Líderes marcados como Legends**: Wahapedia a veces marca como Legends un objetivo de liderazgo que es oficial. Se conservan todos; la marca solo silencia el aviso si el objetivo no existe en la facción.
 - **Rol incorrecto**: se calcula a partir de las palabras clave, en este orden: FORTIFICATION, TITANIC, CHARACTER, BATTLELINE, AIRCRAFT, TRANSPORT, MONSTER, VEHICLE, MOUNTED y, si no, infantry. TITANIC va antes que CHARACTER para que los Caballeros Imperiales, que son personajes titánicos, salgan en «Titánicos»; las mejoras y el Señor de la Guerra dependen de las palabras clave, no del rol.
 - **Datasheets que no se pueden reclutar** (p. ej. Sir Hekhtur, que solo se usa cuando muere el Canis Rex): salen sin puntos. Añade su id a `excluded.ids` y quítalos de `units`.
 
@@ -160,6 +179,7 @@ Los textos completos se ven en la **vista de ejército** y en el desplegable de 
 - **Coincidencias dudosas**: comprueba sobre todo las unidades con nombres genéricos (p. ej. "Heavy Weapons Squad").
 - Con `--products <facción>-products.json` puedes repetir el emparejamiento sin volver a abrir la tienda (por ejemplo, tras importar unidades nuevas).
 - Usa la tienda en **inglés** (`en-GB`): con nombres en español se emparejan muchas menos.
+- Para un capítulo, usa su propia sección (`…/shop/warhammer-40000/space-marines/space-wolves`). La de Marines genéricos sirve después para las unidades comunes que falten.
 - Algunas unidades se venden en la sección de **otra facción** (p. ej. los Skitarii de los Caballeros Imperiales están en Adeptus Mechanicus). Vuelve a ejecutar el script con la URL de esa sección: solo rellena las unidades que aún no tienen imagen.
 
 ## 5. Emblema de la facción (opcional)

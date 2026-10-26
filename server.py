@@ -121,8 +121,14 @@ class Handler(SimpleHTTPRequestHandler):
             super().log_message(fmt, *args)
 
 
+class Server(ThreadingHTTPServer):
+    # the app loads every faction at once (~60 files in parallel): the default backlog of 5 refuses connections
+    request_queue_size = 128
+    daemon_threads = True
+
+
 if __name__ == '__main__':
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
     ARMIES.mkdir(exist_ok=True)
     print(f'→ http://localhost:{port}   (armies saved in {ARMIES})')
-    ThreadingHTTPServer(('127.0.0.1', port), Handler).serve_forever()
+    Server(('127.0.0.1', port), Handler).serve_forever()

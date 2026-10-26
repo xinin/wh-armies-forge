@@ -83,6 +83,7 @@ export function renderOverview(list, data, edition, customImages, tab) {
         ${para(data.faction.armyRule.text)}
         <div class="ov-orders">${(data.faction.armyRule.orders ?? []).map(o => `<div class="ov-order"><b>${esc(tr(o.name))}</b><span>${esc(tr(o.text))}</span></div>`).join('')}</div>
       </div>
+      ${(data.faction.extraRules ?? []).map(r => `<div class="ov-rule"><h4>${esc(tr(r.name))}</h4>${para(r.text)}</div>`).join('')}
     </section>
 
     <section id="ov-core" ${panel('core', tab)}>

@@ -91,6 +91,9 @@ def collect():
         full = json.loads((fdir / 'rules.json').read_text())['detachments'] if (fdir / 'rules.json').exists() else {}
         add(f, 'army-rule', fa['armyRule']['name'])
         add(f, 'army-rule', fa['armyRule']['text'])
+        for r in fa.get('extraRules', []):
+            add(f, 'army-rule', r['name'])
+            add(f, 'army-rule', r['text'])
         for d in fa['detachments']:
             fd = full.get(d['id'], {})
             add(f, 'detachment', d['name'])

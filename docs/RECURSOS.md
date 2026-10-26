@@ -9,7 +9,7 @@ Fuentes de datos, webs y recursos usados para construir Forja de Ejércitos, y q
 | Recurso | URL | Para qué lo usamos |
 |---|---|---|
 | Wahapedia: reglas básicas (11ª) | https://wahapedia.ru/wh40k11ed/the-rules/core-rules/ | Reglas de reclutamiento (tamaños de batalla, puntos de destacamento, límites de unidades y mejoras, líderes) y **estratagemas generales (Core)** |
-| Wahapedia: página de facción (11ª) | `https://wahapedia.ru/wh40k11ed/factions/<facción>/`<br>p. ej. [astra-militarum](https://wahapedia.ru/wh40k11ed/factions/astra-militarum/) | Regla de ejército, destacamentos (coste en DP, regla, mejoras, estratagemas) e índice de datasheets con su clasificación (oficial, Legends o Forge World) |
+| Wahapedia: página de facción (11ª) | `https://wahapedia.ru/wh40k11ed/factions/<facción>/`<br>p. ej. [astra-militarum](https://wahapedia.ru/wh40k11ed/factions/astra-militarum/) | Regla de ejército, destacamentos (coste en DP, regla, mejoras, estratagemas) e índice de datasheets con su clasificación (oficial, Legends o Forge World). Los capítulos de Marines (Lobos Espaciales…) salen de la página `space-marines`, filtrando por la máscara de capítulo `data-f="CH:<hex>"` |
 | Wahapedia: datasheet (11ª) | `https://wahapedia.ru/wh40k11ed/factions/<facción>/<Datasheet>`<br>p. ej. [Lord-Marshal-Dreir](https://wahapedia.ru/wh40k11ed/factions/astra-militarum/Lord-Marshal-Dreir) | Perfiles, armas, habilidades, equipo, líderes y **puntos de la 11ª**, incluido el sobrecoste a partir de la 3.ª copia |
 | Munitorum Field Manual (MFM) | https://mfm.warhammer-community.com/en | Fuente oficial de puntos; cambia con cada ajuste de balance. Sirve para verificar `points.json` a mano |
 | Tienda de Warhammer | `https://www.warhammer.com/en-GB/shop/warhammer-40000/<grupo>/<facción>`<br>p. ej. [Astra Militarum (es-ES)](https://www.warhammer.com/es-ES/shop/warhammer-40000/armies-of-the-imperium/astra-militarum) | Fotos de producto de cada unidad (`images.json`) |
@@ -75,7 +75,7 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 
 | Script | Qué hace | Fuente |
 |---|---|---|
-| `bootstrap_faction.py` | Crea la carpeta de una facción nueva: regla de ejército, destacamentos, mejoras y ficheros vacíos. La registra en `index.json` | Wahapedia (facción) |
+| `bootstrap_faction.py` | Crea la carpeta de una facción nueva: regla de ejército, destacamentos, mejoras y ficheros vacíos. La registra en `index.json`. Con `--source space-marines --chapter "Space Wolves"` crea un capítulo | Wahapedia (facción) |
 | `import_wahapedia_datasheets.py` | Importa datasheets de la 11ª (`--all` para todos los oficiales; Legends y FW van a `excluded`) con sus puntos | Wahapedia (datasheets) |
 | `wargear.py` | Motor de equipo: modelos por tipo y tamaño, equipo por defecto con cantidades y opciones de equipo como selectores | (usado por el importador) |
 | `audit_units.py` | Compara cada unidad importada con su datasheet y avisa de armas, habilidades u opciones mal leídas | Caché de Wahapedia |

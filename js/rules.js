@@ -41,6 +41,7 @@ export function loadoutCounts(ru, def) {
   const options = (def.wargear ?? []).filter(o => !(o.minModels && models < o.minModels));
   for (const opt of [...options.filter(o => o.scope !== 'all'), ...options.filter(o => o.scope === 'all')]) {
     const v = ru.wargear?.[opt.id];
+    if (opt.needs?.some(x => (counts[x.item] ?? 0) < x.n)) continue; // "if this model is equipped with …"
     if (opt.type === 'swap' && v) apply(opt, v, opt.scope === 'all' ? available(opt) : 1);
     if (opt.type === 'pool') for (const [key, n] of Object.entries(v ?? {})) apply(opt, key, Number(n) || 0);
     if (opt.type === 'toggle' && v) apply(opt, opt.gives, opt.scope === 'all' ? available(opt) : Number(v));
@@ -110,6 +111,7 @@ export function enhancementFits(enh, def, list, data) {
 
 // Requirements imported from "X Y model only" are split into words; a word also matches when it is part of a
 // multi-word keyword ("VON RYAN'S LEAPERS", "VANGUARD INVADER") or is its plural ("STEALTH BATTLESUITS" units).
+// The datasheet name counts as a keyword too ("WOLF PRIEST model only": 11th-edition datasheets omit it).
 const kwMatch = (def, kw) => {
   const w = normKw(kw);
   return hasKw(def, kw) || kwWords(def).has(w) || (w.endsWith('S') && kwWords(def).has(w.slice(0, -1)));
@@ -117,7 +119,7 @@ const kwMatch = (def, kw) => {
 const normKw = kw => kw.toUpperCase().replace(/[’‘]/g, "'");
 const kwWordCache = new WeakMap();
 function kwWords(def) {
-  if (!kwWordCache.has(def)) kwWordCache.set(def, new Set(def.keywords.flatMap(k => normKw(k).split(/\s+/))));
+  if (!kwWordCache.has(def)) kwWordCache.set(def, new Set([...def.keywords, def.name.en].flatMap(k => normKw(k).split(/\s+/))));
   return kwWordCache.get(def);
 }
 

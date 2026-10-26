@@ -163,7 +163,25 @@ def faction_wargear(faction_page):
     return out
 
 
-def parse(page, ds_slug):
+def faction_keywords(page):
+    """FACTION KEYWORDS of a datasheet page: {'ADEPTUS ASTARTES', 'SPACE WOLVES'}"""
+    i = page.find('<div class="dsRight', page.find('<div class="ds2colKWFlat'))
+    t = text(page[i:page.find('</div>', page.find('FACTION KEYWORDS', i))]).replace('FACTION KEYWORDS:', '')
+    return {k.strip().upper() for k in re.split(r'[;,\n]', t) if k.strip()}
+
+
+def only_chapter(page, chapter_bit):
+    """Drop the rows a Space Marine datasheet shows only for other Chapters (data-f="CH:<hex mask>": unit costs,
+    leader targets)."""
+    if chapter_bit is None:
+        return page
+    def keep(m):
+        return m.group(0) if int(m.group(2), 16) & chapter_bit else ''
+    return re.sub(r'<(tr|li) class="clFlCH" data-f="CH:([0-9a-f]+)[^"]*">.*?</\1>', keep, page, flags=re.S)
+
+
+def parse(page, ds_slug, chapter_bit=None):
+    page = only_chapter(page, chapter_bit)
     i = page.find('<div class="dsOuterFrame datasheet')
     end = page.find('<div class="ds2colKWFlat', i)
     block = page[i:end]
@@ -215,7 +233,7 @@ def parse(page, ds_slug):
 
     # cost tiers: "YOUR 1ST TO 2ND UNITS COST" / "YOUR 3RD+ UNIT COSTS" (or "YOUR 2ND+ …"): extra = {from, sizes}
     costs, extra_sizes, extra_from, tier, gear_costs, in_gear = [], [], None, 0, [], False
-    for row in re.findall(r'<tr>(.*?)</tr>', comp_html, re.S):
+    for row in re.findall(r'<tr[^>]*>(.*?)</tr>', comp_html, re.S):
         if 'dsUnitCostHeader' in row:
             # "WARGEAR OPTIONS | per Lascannon | 5": points per piece of that wargear the unit carries
             in_gear = 'WARGEAR' in text(row).upper()
@@ -236,6 +254,8 @@ def parse(page, ds_slug):
     extra = {'from': extra_from or 3, 'sizes': extra_sizes} if extra_sizes else None
 
     leader_text = text(sec.get('LEADER', ''))
+    # targets marked as Warhammer Legends ("sLegendary"; not always right, so only used to silence the "not found" check)
+    legends_targets = [text(x) for x in re.findall(r'<li class="[^"]*sLegendary[^"]*"[^>]*>(.*?)</li>', sec.get('LEADER', ''), re.S)]
     leader_targets = [l for l in leader_text.split('\n')[1:] if l.isupper() or l.istitle()]
     orders_text = re.sub(r'\s+', ' ', text(re.split(r'<table class="dsCoreArmy', sec.get('ORDERS', ''))[0])).strip()
     transport = re.sub(r'\s+', ' ', text(sec.get('TRANSPORT', ''))).strip()
@@ -269,6 +289,7 @@ def parse(page, ds_slug):
         if mm: bg['maxWithKeyword'] = {mm.group(1).upper(): 1}
         if bg: unit['bodyguard'] = bg
     if transport: unit['transport'] = {'en': transport}
+    leader_targets = [(t, t in legends_targets) for t in leader_targets]
     return unit, leader_targets, costs, extra, gear_costs
 
 
@@ -299,32 +320,43 @@ def main():
     args = ap.parse_args()
     wahapedia_fetch.REFRESH = args.refresh
 
+    fdir = ROOT / 'data' / 'factions' / args.faction
+    # a Space Marine Chapter lives inside another Wahapedia faction page (see bootstrap_faction.py --chapter)
+    cfg = json.loads((fdir / 'faction.json').read_text()).get('wahapedia', {})
+    source, chapter = cfg.get('faction', args.faction), cfg.get('chapter')
+    chapter_bit = int(cfg['chapterBit'], 16) if cfg.get('chapterBit') else None
+    allowed = {'ADEPTUS ASTARTES', chapter} if chapter else None
+
     pages = {}  # slug → html, fetched once
     not_core = []
     if args.all or args.list:
-        slugs = datasheet_links(fetch(f'{BASE}/{args.faction}/'), args.faction)
-        tags = {'core': [], 'legends': [], 'fw': []}
+        slugs = datasheet_links(fetch(f'{BASE}/{source}/'), source)
+        tags = {'core': [], 'legends': [], 'fw': []} | ({'other chapters': []} if chapter else {})
         for ds in slugs:
-            pages[ds] = fetch(f'{BASE}/{args.faction}/{ds}')
+            pages[ds] = fetch(f'{BASE}/{source}/{ds}')
             if '<div class="dsOuterFrame datasheet' not in pages[ds]:
                 continue  # not a datasheet page
-            tags[source_tag(pages[ds])].append(ds)
+            tag = source_tag(pages[ds])
+            if tag == 'core' and allowed and not faction_keywords(pages[ds]) <= allowed:
+                tag = 'other chapters'
+            tags[tag].append(ds)
         for tag, names in tags.items():
             print(f'{tag.upper()} ({len(names)}): {", ".join(names)}')
         if args.list:
             return
         args.datasheets = tags['core']
-        not_core = [slug(ds) for ds in tags['legends'] + tags['fw']]
+        not_core = [slug(ds) for t, names in tags.items() if t != 'core' for ds in names]
     if not args.datasheets:
         ap.error('give datasheet slugs or --all')
 
-    fdir = ROOT / 'data' / 'factions' / args.faction
     units_file = json.loads((fdir / 'units.json').read_text())
     points = json.loads((fdir / 'points.json').read_text())
     global_weapons = json.loads((fdir / 'weapons.json').read_text())['weapons']
     existing = {u['id']: u for u in units_file['units']}
     if not_core:
         ex = units_file.setdefault('excluded', {'_note': 'Forge World and Warhammer Legends datasheets: never imported.', 'ids': []})
+        if chapter:
+            ex['_note'] = "Forge World, Warhammer Legends and other Chapters' datasheets: never imported."
         ex['ids'] = sorted(set(ex['ids']) | set(not_core))
     excluded = set(units_file.get('excluded', {}).get('ids', []))
 
@@ -335,13 +367,13 @@ def main():
         elif args.html_dir:
             page = (Path(args.html_dir) / f'{ds}.html').read_text()
         else:
-            page = fetch(f'{BASE}/{args.faction}/{ds}')
+            page = fetch(f'{BASE}/{source}/{ds}')
         try:
-            unit, targets, costs, extra, gear_costs = parse(page, ds)
+            unit, targets, costs, extra, gear_costs = parse(page, ds, chapter_bit)
         except (AttributeError, ValueError) as e:
             print(f'skip {ds}: could not parse ({e})', file=sys.stderr)
             continue
-        if unit['id'] in excluded:
+        if slug(ds) in excluded:  # by datasheet page: "Venerable-Dreadnought" (Legends) ≠ "Venerable-Dreadnought-1"
             print(f'skip {unit["id"]} (excluded)')
             continue
         parsed.append((unit, targets, costs, extra, gear_costs))
@@ -358,17 +390,17 @@ def main():
     by_name = {slug(u['name']['en']): u['id'] for u in existing.values()}
     by_name.update({slug(u['name']['en']): u['id'] for u, *_ in parsed})
     issues = {}
-    shared_gear = faction_wargear(fetch(f'{BASE}/{args.faction}/'))
+    shared_gear = faction_wargear(fetch(f'{BASE}/{source}/'))
     for unit, targets, costs, extra, gear_costs in parsed:
         old = existing.get(unit['id'], {})
         unit['role'] = role_of(unit['keywords'])
         unit['name']['es'] = old.get('name', {}).get('es', unit['name']['en'])
-        lead = [by_name.get(slug(t)) for t in targets]
+        lead = [by_name.get(slug(t)) for t, _ in targets]
         if any(lead):
             unit['leader'] = {'canLead': [x for x in lead if x]}
         for key in ('bodyguard', 'notes'):
             if key in old: unit[key] = old[key]
-        unmatched = [t for t, x in zip(targets, lead) if not x and slug(t) not in excluded]  # Legends/FW targets are expected
+        unmatched = [t for (t, legends), x in zip(targets, lead) if not x and not legends and slug(t) not in excluded]  # Legends/FW targets are expected
         if costs:
             points['units'][unit['id']] = costs
             points.setdefault('verified', [])
@@ -377,15 +409,31 @@ def main():
             points.setdefault('unitsExtraCopies', {})[unit['id']] = extra
         else:
             points.get('unitsExtraCopies', {}).pop(unit['id'], None)
+        costs_raw = costs
+        split = wargear.companion_split(unit.get('composition', []), unit.get('equipped', []), [c['models'] for c in costs])
+        if split:  # 3, 3+3 companions, 6, 6+6 → sizes 3 and 6, companions cost per model (see wargear.companion_split)
+            lo = split[2]
+            comp_cost = (costs[1]['points'] - costs[0]['points']) // lo
+            costs = [costs[0], costs[2]]
+            if extra:
+                extra['sizes'] = [extra['sizes'][0], extra['sizes'][2]]
+                points.setdefault('unitsExtraCopies', {})[unit['id']] = extra
+            points['units'][unit['id']] = costs
         unit['sizes'] = [{'models': c['models']} for c in costs] or old.get('sizes') or [{'models': 1}]
-        unparsed = wargear.build(unit, [s['models'] for s in unit['sizes']], global_weapons, shared_gear)
+        unparsed = wargear.build(unit, [c['models'] for c in costs_raw] if split else [s['models'] for s in unit['sizes']], global_weapons, shared_gear)
         resolve = wargear.make_resolver([w['id'] for w in unit['weapons']], global_weapons)
         per_item = {}
         for name, pts in gear_costs:
             _, ids, is_weapon = resolve(name)
             per_item[ids[0]] = pts
-            if not is_weapon and ids[0] not in {i for sz in unit['sizes'] for i in sz['loadout']}:
+            carried = {i for sz in unit['sizes'] for i in sz['loadout']} | \
+                      {x['item'] for o in unit['wargear'] for pk in o['packages'].values() for x in pk}
+            if not is_weapon and ids[0] not in carried:
                 unparsed.append(f'wargear cost for "{name}" is not a weapon of the datasheet')
+        if split:
+            comp_opt = unit['wargear'][-1]
+            for x in comp_opt['packages'][comp_opt['gives']][:1]:
+                per_item[x['item']] = comp_cost
         if per_item:
             points.setdefault('wargearCosts', {})[unit['id']] = per_item
         else:
