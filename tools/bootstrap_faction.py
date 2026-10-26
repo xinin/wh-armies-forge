@@ -13,7 +13,7 @@ army rules marked for that Chapter (or for every Chapter) are kept, and faction.
     e.g. python3 tools/bootstrap_faction.py adeptus-custodes --color "#b8923a"
 
 Writes data/factions/<slug>/:
-    faction.json   army rule + detachments (DP cost, rule summary) + enhancements (requirements, type)
+    faction.json   army rule + detachments (DP cost, tags, rule summary) + enhancements (requirements, type)
                    + unitAbilities: abilities listed with points under the detachment's own heading instead of
                    "Enhancements" (Pantheon of Woe: "Necrodermal Binding Abilities"); each named datasheet gets its
                    ability automatically and costs that much more
@@ -21,7 +21,8 @@ Writes data/factions/<slug>/:
     weapons.json   empty (datasheets carry their own weapon profiles)
     points.json    enhancement (and unitAbilities) points; unit points are added by import_wahapedia_datasheets.py
     images.json    empty (fill with tools/store_images.py)
-and registers the faction in data/factions/index.json.
+and registers the faction in data/factions/index.json (with its detachment count; import_wahapedia_datasheets.py
+keeps the unit count).
 Next steps: import_wahapedia_datasheets.py --all, import_wahapedia_rules.py (see docs/NUEVA-FACCION.md).
 """
 import argparse
@@ -35,6 +36,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from import_wahapedia_rules import BASE, clean, enhancements_pos, fetch, key, slug, strip_fluff  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def update_index(faction, **fields):
+    """Set fields of the faction's entry in data/factions/index.json. The faction picker shows the unit and
+    detachment counts from there, without loading the faction."""
+    path = ROOT / 'data' / 'factions' / 'index.json'
+    index = json.loads(path.read_text())
+    next(f for f in index['factions'] if f['id'] == faction).update(fields)
+    path.write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n')
+
+
+def detachment_tags(page):
+    """Tags over the detachment headings (<div class="H2Unique">UNIQUE: SHIELD HOST</div><h2 id="Dread-Host">): an army
+    can only take one detachment with the same tag. → {key(heading id): ['SHIELD HOST']}"""
+    return {key(m.group(2)): [t.strip() for t in clean(m.group(1)).replace('UNIQUE:', '').split(',') if t.strip()]
+            for m in re.finditer(r'<div class="H2Unique">(.*?)</div>\s*<h2 id="([^"]+)"', page, re.S)}
 
 
 def summary(text, limit=320):
@@ -120,6 +137,7 @@ def main():
                if for_chapter(re.search(r'data-f="([^"]*)"', tag).group(1) if 'data-f=' in tag else '')]
     heads = [(m.start(), m.group(1)) for m in re.finditer(r'<h2[^>]*id="([^"]+)"', page)]
     detachments, enh_points, ability_points = [], {}, {}
+    tags = detachment_tags(page)
     seen = set()
     for det_name, dp in dets_dp:
         det_name = clean(det_name)
@@ -166,7 +184,8 @@ def main():
                 e['type'] = 'upgrade'
             enhancements.append(e)
         detachments.append({
-            'id': did, 'cost': int(dp), 'name': {'en': det_name},
+            'id': did, 'cost': int(dp), **({'tags': tags[key(det_name)]} if tags.get(key(det_name)) else {}),
+            'name': {'en': det_name},
             'rule': {'name': {'en': rule_lines[0] if rule_lines else det_name},
                      'text': {'en': summary(' '.join(rule_lines[1:]))}},
             'enhancements': enhancements,
@@ -205,8 +224,10 @@ def main():
     index_path = ROOT / 'data' / 'factions' / 'index.json'
     index = json.loads(index_path.read_text())
     if not any(f['id'] == args.faction for f in index['factions']):
-        index['factions'].append({'id': args.faction, 'name': {'en': name, 'es': name}, 'edition': '11th', 'path': args.faction, 'color': args.color})
+        index['factions'].append({'id': args.faction, 'name': {'en': name, 'es': name}, 'edition': '11th', 'path': args.faction,
+                                  'color': args.color, 'units': 0})
         index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n')
+    update_index(args.faction, detachments=len(detachments))
     print(f'{name}: {len(detachments)} detachments → {fdir}')
 
 

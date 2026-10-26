@@ -5,6 +5,7 @@ Usage:
     python3 tools/import_wahapedia_datasheets.py astra-militarum --all          (every non-Legends/FW datasheet)
     python3 tools/import_wahapedia_datasheets.py astra-militarum --list         (show the classification only; fetches every page)
     python3 tools/import_wahapedia_datasheets.py astra-militarum X --html-dir saved_pages/   (uses <slug>.html files)
+    python3 tools/import_wahapedia_datasheets.py astra-militarum --all --check  (writes nothing: lists what would change)
 
 Adds or updates only the given datasheets. Kept from an existing entry: Spanish name, bodyguard, notes.
 Points: the first cost tier goes to points.json "units"; the 3rd+ copy tier (11th edition) to "unitsExtraCopies";
@@ -27,6 +28,7 @@ import wargear  # noqa: E402
 from html.parser import HTMLParser  # noqa: E402
 import wahapedia_fetch  # noqa: E402
 from wahapedia_fetch import fetch  # noqa: E402
+from bootstrap_faction import update_index  # noqa: E402
 
 BASE = 'https://wahapedia.ru/wh40k11ed/factions'
 
@@ -320,6 +322,8 @@ def main():
     ap.add_argument('--list', action='store_true', help='only print the core / legends / fw classification')
     ap.add_argument('--html-dir')
     ap.add_argument('--refresh', action='store_true', help='ignore the local page cache')
+    ap.add_argument('--check', action='store_true',
+                    help='write nothing; list what the import would change (exit code 1 if anything)')
     args = ap.parse_args()
     wahapedia_fetch.REFRESH = args.refresh
 
@@ -453,8 +457,42 @@ def main():
 
     order = ['character', 'battleline', 'infantry', 'mounted', 'monster', 'vehicle', 'transport', 'aircraft', 'titanic', 'fortification']
     units_file['units'] = sorted(existing.values(), key=lambda u: (order.index(u['role']) if u['role'] in order else 99, u['name']['en']))
+    if args.check:
+        changes = report_changes(fdir, units_file, points)
+        print(f'{args.faction}: {changes} changes' if changes else f'{args.faction}: no changes')
+        sys.exit(1 if changes else 0)
     (fdir / 'units.json').write_text(json.dumps(units_file, ensure_ascii=False, indent=1) + '\n')
     (fdir / 'points.json').write_text(json.dumps(points, ensure_ascii=False, indent=1) + '\n')
+    update_index(args.faction, units=len(units_file['units']))
+
+
+def report_changes(fdir, units_file, points):
+    """--check: print what the import would change in units.json / points.json, field by field. Returns the count.
+    After a change to the importer or to tools/wargear.py, a re-import of the other factions should change nothing."""
+    short = lambda v: (s if len(s := json.dumps(v, ensure_ascii=False)) <= 140 else s[:137] + '…')  # noqa: E731
+    old_units = {u['id']: u for u in json.loads((fdir / 'units.json').read_text())['units']}
+    new_units = {u['id']: u for u in units_file['units']}
+    old_points = json.loads((fdir / 'points.json').read_text())
+    changes = []
+    for uid in sorted(set(old_units) | set(new_units)):
+        old, new = old_units.get(uid), new_units.get(uid)
+        if old is None or new is None:
+            changes.append(f'{uid}: {"new unit" if old is None else "removed"}')
+            continue
+        changes += [f'{uid}.{k}: {short(old.get(k))} → {short(new.get(k))}' for k in sorted(set(old) | set(new)) if old.get(k) != new.get(k)]
+    if units_file.get('excluded') != json.loads((fdir / 'units.json').read_text()).get('excluded'):
+        changes.append('excluded datasheets')
+    for section in sorted(set(old_points) | set(points)):
+        old, new = old_points.get(section), points.get(section)
+        if old == new:
+            continue
+        if isinstance(old, dict) and isinstance(new, dict):
+            changes += [f'points.{section}.{k}: {short(old.get(k))} → {short(new.get(k))}' for k in sorted(set(old) | set(new)) if old.get(k) != new.get(k)]
+        else:
+            changes.append(f'points.{section}: {short(old)} → {short(new)}')
+    for c in changes:
+        print(f'CHANGE {c}')
+    return len(changes)
 
 
 if __name__ == '__main__':

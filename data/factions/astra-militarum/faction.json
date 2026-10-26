@@ -85,7 +85,7 @@
       ]
     },
     {
-      "id": "recon-element", "cost": 2,
+      "id": "recon-element", "cost": 2, "tags": ["RECON"],
       "name": { "en": "Recon Element", "es": "Elemento de Reconocimiento" },
       "rule": { "name": { "en": "Masters of Camouflage", "es": "Maestros del Camuflaje" }, "text": {
         "en": "Friendly ASTRA MILITARUM units (excluding TITANIC) have Stealth.",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "id": "grizzled-company", "cost": 3,
+      "id": "grizzled-company", "cost": 3, "tags": ["ABHUMAN"],
       "name": { "en": "Grizzled Company", "es": "Compañía Curtida" },
       "rule": { "name": { "en": "Ruthless Discipline", "es": "Disciplina Implacable" }, "text": {
         "en": "Each OFFICER can issue +1 Order. Units under an Order re-roll Hit rolls of 1.",
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "id": "abhuman-auxiliaries", "cost": 1,
+      "id": "abhuman-auxiliaries", "cost": 1, "tags": ["ABHUMAN"],
       "name": { "en": "Abhuman Auxiliaries", "es": "Auxiliares Abhumanos" },
       "rule": { "name": { "en": "Absolutist Principles", "es": "Principios Absolutistas" }, "text": {
         "en": "BULLGRYN, OGRYN SQUAD and RATLINGS gain ABHUMAN. COMMISSARs can issue Take Aim! and 1 Order to ABHUMAN units.",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "id": "designation-force", "cost": 1,
+      "id": "designation-force", "cost": 1, "tags": ["RECON"],
       "name": { "en": "Designation Force", "es": "Fuerza de Designación" },
       "rule": { "name": { "en": "Designated Targets", "es": "Objetivos Designados" }, "text": {
         "en": "SCOUT SENTINEL or INFANTRY SMOKE units can designate enemies (+3\" detection).",

@@ -14,6 +14,7 @@ For each unit it checks:
   costs        every "per <wargear>" cost is for something the unit can carry
   replaces     options only replace equipment the unit actually has
   data         stats, keywords, points and leader targets are present
+and that the unit/detachment counts in data/factions/index.json (shown by the faction picker) match.
 Exit code 1 when there are errors (warnings don't fail).
 """
 import json
@@ -114,6 +115,7 @@ def audit_unit(unit, faction, points, all_ids, excluded=frozenset()):
 
 def main():
     factions = sys.argv[1:] or sorted(p.name for p in (ROOT / 'data' / 'factions').iterdir() if p.is_dir())
+    index = {f['id']: f for f in json.loads((ROOT / 'data' / 'factions' / 'index.json').read_text())['factions']}
     total_e = total_w = 0
     for faction in factions:
         fdir = ROOT / 'data' / 'factions' / faction
@@ -123,6 +125,13 @@ def main():
         points = json.loads((fdir / 'points.json').read_text())
         all_ids = {u['id'] for u in units}
         print(f'== {faction} ({len(units)} units)')
+        # the faction picker shows these counts from index.json
+        detachments = len(json.loads((fdir / 'faction.json').read_text())['detachments'])
+        entry = index.get(faction, {})
+        if (entry.get('units'), entry.get('detachments')) != (len(units), detachments):
+            print(f'  ERROR index.json: {entry.get("units")} units / {entry.get("detachments")} detachments, '
+                  f'the faction has {len(units)} / {detachments}')
+            total_e += 1
         for u in units:
             errors, warns = audit_unit(u, faction, points, all_ids, excluded)
             for e in errors:

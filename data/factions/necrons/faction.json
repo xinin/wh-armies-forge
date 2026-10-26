@@ -83,6 +83,9 @@
   {
    "id": "awakened-dynasty",
    "cost": 3,
+   "tags": [
+    "DYNASTY"
+   ],
    "name": {
     "en": "Awakened Dynasty"
    },
@@ -489,6 +492,9 @@
   {
    "id": "hypercrypt-legion",
    "cost": 2,
+   "tags": [
+    "HYPERCRYPT"
+   ],
    "name": {
     "en": "Hypercrypt Legion"
    },
@@ -619,6 +625,9 @@
   {
    "id": "the-phaerons-armoury",
    "cost": 1,
+   "tags": [
+    "HYPERCRYPT"
+   ],
    "name": {
     "en": "The Phaeron's Armoury"
    },
@@ -711,6 +720,9 @@
   {
    "id": "hand-of-the-dynasty",
    "cost": 1,
+   "tags": [
+    "DYNASTY"
+   ],
    "name": {
     "en": "Hand of the Dynasty"
    },

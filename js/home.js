@@ -112,7 +112,8 @@ function listCard(list, ctx, customImages) {
 }
 
 // Pop-up to pick the faction of a new list: one tile per faction with its emblem and colour.
-export function renderFactionPicker(index, factions) {
+// emblems: faction id → inline SVG (or null); the unit/detachment counts come from index.json.
+export function renderFactionPicker(index, emblems) {
   return `
   <div class="dialog-card picker" role="dialog" aria-modal="true" aria-labelledby="picker-title">
     <header class="picker-head">
@@ -120,14 +121,11 @@ export function renderFactionPicker(index, factions) {
       <button class="btn icon" data-action="close-picker" aria-label="${t('close')}">✕</button>
     </header>
     <div class="faction-grid">
-      ${index.factions.map(f => {
-        const data = factions.get(f.id);
-        return `<button class="faction-tile" data-action="pick-faction" data-id="${f.id}" style="--faction:${f.color ?? '#6b7d4a'}">
-          <span class="ft-emblem">${factionEmblem(data)}</span>
+      ${index.factions.map(f => `<button class="faction-tile" data-action="pick-faction" data-id="${f.id}" style="--faction:${f.color ?? '#6b7d4a'}">
+          <span class="ft-emblem">${factionEmblem({ emblem: emblems.get(f.id) })}</span>
           <span class="ft-name">${esc(tr(f.name))}</span>
-          ${data ? `<span class="ft-meta">${data.units.length} ${t('home.units')} · ${data.faction.detachments.length} ${t('picker.detachments')}</span>` : ''}
-        </button>`;
-      }).join('')}
+          <span class="ft-meta">${f.units} ${t('home.units')} · ${f.detachments} ${t('picker.detachments')}</span>
+        </button>`).join('')}
     </div>
   </div>`;
 }

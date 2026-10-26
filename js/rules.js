@@ -24,7 +24,8 @@ export const gearSlug = name => slugify(name.replace(/\s*\(.*?\)/g, '')).split('
 
 /* Equipment counts of a roster unit: the default loadout of its size after the chosen options (per-model options
    first, "all models" swaps last on what is left), plus the weapons given by its wargear (drones) and abilities.
-   → { counts: {item: n}, base: {item: n} } (base = the size's default loadout, with what it gives) */
+   → { counts: {item: n}, base: {item: n}, inactive: Set(option id) } (base = the size's default loadout, with what
+   it gives; inactive = options whose condition is not met, "if this model is (not) equipped with …") */
 export function loadoutCounts(ru, def) {
   const size = def.sizes[ru.sizeIdx] ?? def.sizes[0];
   const models = size?.models ?? 1;
@@ -39,10 +40,13 @@ export function loadoutCounts(ru, def) {
     ? Math.min(...opt.replaces.map(r => Math.floor((counts[r.item] ?? 0) / r.n)))
     : models);
   const options = (def.wargear ?? []).filter(o => !(o.minModels && models < o.minModels));
+  const inactive = new Set();
   for (const opt of [...options.filter(o => o.scope !== 'all'), ...options.filter(o => o.scope === 'all')]) {
     const v = ru.wargear?.[opt.id];
-    if (opt.needs?.some(x => (counts[x.item] ?? 0) < x.n)) continue; // "if this model is equipped with …"
-    if (opt.needsNot?.some(x => counts[x.item])) continue; // "if this model is not equipped with …"
+    if (opt.needs?.some(x => (counts[x.item] ?? 0) < x.n) || opt.needsNot?.some(x => counts[x.item])) {
+      inactive.add(opt.id);
+      continue;
+    }
     if (opt.type === 'swap' && v) apply(opt, v, opt.scope === 'all' ? available(opt) : 1);
     if (opt.type === 'pool') for (const [key, n] of Object.entries(v ?? {})) apply(opt, key, Number(n) || 0);
     if (opt.type === 'toggle' && v) apply(opt, opt.gives, opt.scope === 'all' ? available(opt) : Number(v));
@@ -55,7 +59,7 @@ export function loadoutCounts(ru, def) {
     for (const w of def.abilityWeapons ?? []) add(out, w.item, w.n);
     return out;
   };
-  return { counts: withGiven(counts), base: withGiven(size?.loadout ?? {}) };
+  return { counts: withGiven(counts), base: withGiven(size?.loadout ?? {}), inactive };
 }
 
 // Name of a loadout item: a weapon of the datasheet, or gear ("gear:vox-caster" → its wargear ability name).
@@ -86,6 +90,12 @@ export const detachmentAbilities = (ru, list, data) => (list?.detachments ?? [])
   .filter(a => a.unit === ru.unitId);
 
 export const listPoints = (list, data) => list.units.reduce((sum, ru) => sum + unitPoints(ru, data, list), 0);
+
+// Detachments with the same tag ("SHIELD HOST", "DYNASTY"…): an army can only take one of them.
+export const sharedTag = (a, b) => a?.tags?.find(tag => b?.tags?.includes(tag));
+// The chosen detachment that shares a tag with `det` (other than itself), if any.
+export const tagRival = (list, data, det) => list.detachments.map(id => data.detachmentsById.get(id))
+  .find(o => o && o.id !== det.id && sharedTag(o, det));
 
 export const detachmentPointsUsed = (list, data) =>
   list.detachments.reduce((sum, id) => sum + (data.detachmentsById.get(id)?.cost ?? 0), 0);
@@ -193,6 +203,11 @@ export function validate(list, data, edition) {
   if (!list.detachments.length) err('err.noDetachment');
   const dp = detachmentPointsUsed(list, data);
   if (dp > bs.detachmentPoints) err('err.overDP', { used: dp, max: bs.detachmentPoints });
+  list.detachments.forEach((id, i) => {
+    const det = data.detachmentsById.get(id);
+    const rival = list.detachments.slice(0, i).map(o => data.detachmentsById.get(o)).find(o => sharedTag(o, det));
+    if (rival) err('err.detachmentTag', { a: tr(rival.name), b: tr(det.name), tag: sharedTag(rival, det) });
+  });
 
   // Wargear footnotes: "cannot have duplicates of these pieces of wargear", "no model can be equipped with both …"
   for (const ru of list.units) {

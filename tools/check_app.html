@@ -1,0 +1,87 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>check_app</title>
+<!-- Driven by tools/check_app.py (#lang=es&lists=id,id…): goes through every view of the app in an iframe and
+     leaves what it saw as JSON in a pre#out element. JavaScript errors are read by check_app.py from Chrome's log. -->
+<body style="margin:0">
+<iframe id="app" style="width:1440px;height:1000px;border:0"></iframe>
+<script type="module">
+const params = new URLSearchParams(location.hash.slice(1));
+const lists = params.get('lists').split(',');
+localStorage.setItem('wh-army-forge-v1', JSON.stringify({ lang: params.get('lang'), customImages: {} }));
+
+const frame = document.getElementById('app');
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+async function until(what, test, ms = 20000) {
+  for (let t = 0; t < ms; t += 50) {
+    if (test()) return;
+    await sleep(50);
+  }
+  throw new Error(`timeout: ${what}`);
+}
+const doc = () => frame.contentDocument;
+// empties the views first, so a view that fails to render is not mistaken for the previous one
+const go = hash => {
+  for (const id of ['home', 'roster', 'overview']) doc().getElementById(id).innerHTML = '';
+  frame.contentWindow.location.hash = hash;
+};
+const view = name => doc()?.body?.dataset.view === name;
+
+const out = { lists: {} };
+try {
+  frame.src = '/#/';
+  await until('home', () => view('home') && doc().querySelector('.home-hero'));
+  await until('home lists', () => doc().querySelectorAll('.list-card').length >= lists.length);
+  const loaded = frame.contentWindow.performance.getEntriesByType('resource').filter(e => /\.(json|svg)$/.test(e.name));
+  out.home = { cards: doc().querySelectorAll('.list-card').length, requests: loaded.length,
+               kb: Math.round(loaded.reduce((a, e) => a + e.decodedBodySize, 0) / 1024), text: doc().body.innerText };
+
+  doc().querySelector('[data-action="open-faction-picker"]').click();
+  await until('faction picker', () => doc().querySelector('.faction-tile'));
+  out.picker = { tiles: doc().querySelectorAll('.faction-tile').length,
+                 emblems: doc().querySelectorAll('.faction-tile .ft-emblem svg').length, text: doc().getElementById('dialog').innerText };
+  doc().querySelector('[data-action="close-picker"]').click();
+
+  for (const id of lists) {
+    const res = out.lists[id] = {};
+    go(`#/list/${id}`);
+    await until(`builder ${id}`, () => view('builder') && doc().querySelector('#roster [data-action="remove"]'));
+    await sleep(200);
+    doc().querySelectorAll('details').forEach(d => { d.open = true; });
+    res.rosterUnits = doc().querySelectorAll('#roster [data-action="remove"]').length;
+    res.builder = doc().body.innerText;
+
+    const modals = [];
+    const units = new Set([...doc().querySelectorAll('#roster [data-action="details"]')].map(el => el.dataset.unit));
+    for (const unit of units) {
+      doc().querySelector(`#roster [data-action="details"][data-unit="${unit}"]`).click();
+      await until(`datasheet ${unit}`, () => !doc().getElementById('modal').hidden);
+      modals.push(doc().getElementById('modal').innerText);
+      doc().querySelector('[data-action="close-modal"]').click();
+      await until(`close datasheet ${unit}`, () => doc().getElementById('modal').hidden);
+    }
+    res.datasheets = units.size;
+    res.modals = modals.join('\n=====\n');
+
+    go(`#/list/${id}/view`);
+    await until(`overview ${id}`, () => view('overview') && doc().querySelector('.ov-nav'));
+    res.overview = '';
+    for (const tab of doc().querySelectorAll('.ov-nav [data-tab]')) {
+      doc().querySelector(`.ov-nav [data-tab="${tab.dataset.tab}"]`).click();
+      await sleep(50);
+      res.overview += doc().getElementById('overview').innerText + '\n';
+    }
+  }
+
+  // back home after visiting the builders: every list is still there
+  go('#/');
+  await until('home again', () => view('home') && doc().querySelectorAll('.list-card').length >= lists.length);
+  out.homeAgain = doc().querySelectorAll('.list-card').length;
+} catch (err) {
+  out.error = err.message;
+}
+const pre = document.createElement('pre');
+pre.id = 'out';
+pre.textContent = JSON.stringify(out);
+document.body.append(pre);
+</script>

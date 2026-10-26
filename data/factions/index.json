@@ -8,7 +8,9 @@
       },
       "edition": "11th",
       "path": "astra-militarum",
-      "color": "#6b7d4a"
+      "color": "#6b7d4a",
+      "units": 70,
+      "detachments": 11
     },
     {
       "id": "adeptus-custodes",
@@ -18,7 +20,9 @@
       },
       "edition": "11th",
       "path": "adeptus-custodes",
-      "color": "#b8923a"
+      "color": "#b8923a",
+      "units": 27,
+      "detachments": 13
     },
     {
       "id": "tyranids",
@@ -28,7 +32,9 @@
       },
       "edition": "11th",
       "path": "tyranids",
-      "color": "#7b3f8c"
+      "color": "#7b3f8c",
+      "units": 50,
+      "detachments": 10
     },
     {
       "id": "imperial-knights",
@@ -38,7 +44,9 @@
       },
       "edition": "11th",
       "path": "imperial-knights",
-      "color": "#2c5f8a"
+      "color": "#2c5f8a",
+      "units": 18,
+      "detachments": 8
     },
     {
       "id": "t-au-empire",
@@ -48,7 +56,9 @@
       },
       "edition": "11th",
       "path": "t-au-empire",
-      "color": "#c06a2b"
+      "color": "#c06a2b",
+      "units": 39,
+      "detachments": 7
     },
     {
       "id": "space-wolves",
@@ -58,7 +68,9 @@
       },
       "edition": "11th",
       "path": "space-wolves",
-      "color": "#5f7f9a"
+      "color": "#5f7f9a",
+      "units": 88,
+      "detachments": 19
     },
     {
       "id": "necrons",
@@ -68,7 +80,9 @@
       },
       "edition": "11th",
       "path": "necrons",
-      "color": "#2f9e6a"
+      "color": "#2f9e6a",
+      "units": 51,
+      "detachments": 12
     }
   ]
 }

@@ -5,7 +5,7 @@ import { icon } from './icons.js';
 import {
   battleSizeOf, unitPoints, listPoints, detachmentPointsUsed, availableEnhancements,
   isLeader, isSupport, leadersOf, canAttach, detachmentAbilities, optionMax, optionMaxEach, hasKw, bodyguardLimits, isExtraCopy,
-  loadoutCounts, itemName, gearSlug,
+  loadoutCounts, itemName, gearSlug, sharedTag, tagRival,
 } from './rules.js';
 
 export const ROLES = ['character', 'battleline', 'infantry', 'mounted', 'monster', 'vehicle', 'transport', 'aircraft', 'titanic', 'fortification'];
@@ -314,15 +314,20 @@ function renderSheet(ru, def, data) {
 
 function renderWargear(ru, def, data) {
   const models = def.sizes[ru.sizeIdx]?.models ?? 1;
+  const { inactive } = loadoutCounts(ru, def);
   const rows = def.wargear.map(opt => {
-    const label = esc(optionLabel(def, opt));
     if (opt.minModels && models < opt.minModels) {
-      return `<div class="wg-row off"><span>${label}</span><small>${t('wargear.minModels', { n: opt.minModels })}</small></div>`;
+      return `<div class="wg-row off"><span>${esc(optionLabel(def, opt))}</span><small>${t('wargear.minModels', { n: opt.minModels })}</small></div>`;
     }
+    // "if this model is (not) equipped with …": disabled while the condition is not met (the choice is kept)
+    const off = inactive.has(opt.id);
+    const dis = off ? 'disabled' : '';
+    const label = esc(optionLabel(def, opt)) + (off ? `<small class="wg-why">${esc(t(opt.needs ? 'wargear.needs' : 'wargear.needsNot',
+      { items: (opt.needs ?? opt.needsNot).map(x => itemName(def, x.item)).join(', ') }))}</small>` : '');
     const v = ru.wargear?.[opt.id];
     if (opt.type === 'swap') {
-      return `<label class="wg-row"><span>${label}</span>
-        <select data-action="wg-swap" data-uid="${ru.uid}" data-opt="${opt.id}">
+      return `<label class="wg-row ${off ? 'off' : ''}"><span>${label}</span>
+        <select data-action="wg-swap" data-uid="${ru.uid}" data-opt="${opt.id}" ${dis}>
           ${opt.choices.map(c => `<option value="${esc(c)}" ${c === (v ?? '') ? 'selected' : ''}>${esc(choiceLabel(def, opt, c))}</option>`).join('')}
         </select></label>`;
     }
@@ -330,15 +335,15 @@ function renderWargear(ru, def, data) {
     if (opt.type === 'pool') {
       const used = Object.values(v ?? {}).reduce((a, b) => a + b, 0);
       const each = Math.min(max, optionMaxEach(opt, models));
-      return `<div class="wg-row pool"><span>${label} <b class="${used > max ? 'bad' : ''}">${used}/${max}</b></span>
+      return `<div class="wg-row pool ${off ? 'off' : ''}"><span>${label} <b class="${used > max ? 'bad' : ''}">${used}/${max}</b></span>
         <div class="pool-items">${opt.choices.map(c => `<label class="stepper">${esc(choiceLabel(def, opt, c))}
-          <input type="number" min="0" max="${Math.min(each, optionMaxEach(opt, models, c))}" value="${v?.[c] ?? 0}" data-action="wg-pool" data-uid="${ru.uid}" data-opt="${opt.id}" data-weapon="${esc(c)}"></label>`).join('')}
+          <input type="number" min="0" max="${Math.min(each, optionMaxEach(opt, models, c))}" value="${v?.[c] ?? 0}" data-action="wg-pool" data-uid="${ru.uid}" data-opt="${opt.id}" data-weapon="${esc(c)}" ${dis}></label>`).join('')}
         </div>${Number.isFinite(optionMaxEach(opt, models)) ? `<small>${t('wargear.maxEach', { n: each })}</small>` : ''}</div>`;
     }
-    return `<label class="wg-row"><span>${label}</span>
+    return `<label class="wg-row ${off ? 'off' : ''}"><span>${label}</span>
       ${max > 1 && opt.scope !== 'all'
-        ? `<input type="number" min="0" max="${max}" value="${v ?? 0}" data-action="wg-toggle" data-uid="${ru.uid}" data-opt="${opt.id}">`
-        : `<input type="checkbox" ${v ? 'checked' : ''} data-action="wg-toggle" data-uid="${ru.uid}" data-opt="${opt.id}">`}
+        ? `<input type="number" min="0" max="${max}" value="${v ?? 0}" data-action="wg-toggle" data-uid="${ru.uid}" data-opt="${opt.id}" ${dis}>`
+        : `<input type="checkbox" ${v ? 'checked' : ''} data-action="wg-toggle" data-uid="${ru.uid}" data-opt="${opt.id}" ${dis}>`}
     </label>`;
   }).join('');
   return `<details class="wargear"><summary>${t('unit.wargear')}</summary>${rows}</details>`;
@@ -365,13 +370,16 @@ export function renderSidebar(list, data, edition, issues) {
     <div class="detachments">
       ${data.faction.detachments.map(d => {
         const on = list.detachments.includes(d.id);
-        const disabled = !on && dp + d.cost > bs.detachmentPoints;
+        const rival = !on && tagRival(list, data, d);
+        const disabled = !on && (dp + d.cost > bs.detachmentPoints || rival);
         return `<div class="det ${on ? 'on' : ''} ${disabled ? 'disabled' : ''}">
           <button class="det-head" data-action="toggle-detachment" data-id="${d.id}" aria-pressed="${on}">
             <span class="det-check">${icon(on ? 'stratPloy' : 'diamond')}</span>
             <span class="det-name">${esc(tr(d.name))}</span>
+            ${d.tags?.length ? `<span class="det-tag">${esc(d.tags.join(', '))}</span>` : ''}
             <span class="det-cost">${d.cost} DP</span>
           </button>
+          ${rival ? `<div class="det-rival">${esc(t('det.tagTaken', { tag: sharedTag(rival, d), name: tr(rival.name) }))}</div>` : ''}
           <details><summary>${esc(tr(d.rule.name))}</summary>
             ${esc(tr(d.rule.full ?? d.rule.text)).split('\n').map(l => `<p>${l}</p>`).join('')}
             <ul class="enh-list">${d.enhancements.map(e => {

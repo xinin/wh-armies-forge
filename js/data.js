@@ -11,34 +11,45 @@ const optionalJSON = (path, fallback) => getJSON(path).catch(() => fallback);
 
 // translations of the (English) game texts: <prefix>.<lang>.json for every non-English language
 async function loadTranslations(prefix) {
-  for (const l of LANGS.filter(x => x !== 'en')) {
+  await Promise.all(LANGS.filter(x => x !== 'en').map(async l => {
     const tr = await optionalJSON(`${prefix}.${l}.json`, null);
     if (tr) addGameTexts(l, tr.texts, tr.terms);
-  }
+  }));
 }
+
+// Loaders cache the promise, so callers that ask at the same time share one download (a failed one is retried).
+const cached = (cache, key, load) => {
+  if (!cache.has(key)) cache.set(key, load().catch(err => { cache.delete(key); throw err; }));
+  return cache.get(key);
+};
 
 export async function loadIndex() {
   return getJSON('data/factions/index.json');
 }
 
 const editionCache = new Map();
-export async function loadEdition(id) {
-  if (!editionCache.has(id)) {
-    const [edition, strats] = await Promise.all([
-      getJSON(`data/editions/${id}.json`),
-      optionalJSON(`data/editions/${id}-stratagems.json`, { stratagems: [] }),
-    ]);
-    await loadTranslations(`data/editions/${id}.i18n`);
-    editionCache.set(id, { ...edition, coreStratagems: strats.stratagems });
-  }
-  return editionCache.get(id);
-}
+export const loadEdition = id => cached(editionCache, id, async () => {
+  const [edition, strats] = await Promise.all([
+    getJSON(`data/editions/${id}.json`),
+    optionalJSON(`data/editions/${id}-stratagems.json`, { stratagems: [] }),
+    loadTranslations(`data/editions/${id}.i18n`),
+  ]);
+  return { ...edition, coreStratagems: strats.stratagems };
+});
+
+// The faction's emblem as inline SVG (null: the app's default emblem). The faction picker only needs this.
+const emblemCache = new Map();
+export const loadEmblem = entry => cached(emblemCache, entry.id, async () => {
+  const raw = await fetch(`data/factions/${entry.path}/emblem.svg`).then(r => (r.ok ? r.text() : null)).catch(() => null);
+  return raw?.includes('<svg') ? prepareSvg(raw) : null;
+});
 
 const factionCache = new Map();
-export async function loadFaction(entry) {
-  if (factionCache.has(entry.id)) return factionCache.get(entry.id);
+export const loadFaction = entry => cached(factionCache, entry.id, () => fetchFaction(entry));
+
+async function fetchFaction(entry) {
   const base = `data/factions/${entry.path}`;
-  const [faction, unitsFile, weaponsFile, points, rules, stratagems, images] = await Promise.all([
+  const [faction, unitsFile, weaponsFile, points, rules, stratagems, images, emblem] = await Promise.all([
     getJSON(`${base}/faction.json`),
     getJSON(`${base}/units.json`),
     getJSON(`${base}/weapons.json`),
@@ -46,10 +57,9 @@ export async function loadFaction(entry) {
     optionalJSON(`${base}/rules.json`, { detachments: {} }),
     optionalJSON(`${base}/stratagems.json`, { detachments: {} }),
     optionalJSON(`${base}/images.json`, { units: {} }),
+    loadEmblem(entry),
+    loadTranslations(`${base}/i18n`),
   ]);
-  await loadTranslations(`${base}/i18n`);
-  const emblemRaw = await fetch(`${base}/emblem.svg`).then(r => (r.ok ? r.text() : null)).catch(() => null);
-  const emblem = emblemRaw?.includes('<svg') ? prepareSvg(emblemRaw) : null;
   // full rule texts complement the short summaries written in faction.json
   for (const d of faction.detachments) {
     const full = rules.detachments[d.id];
@@ -109,7 +119,7 @@ export async function loadFaction(entry) {
     }
   }
 
-  const data = {
+  return {
     entry,
     faction,
     units,
@@ -121,6 +131,4 @@ export async function loadFaction(entry) {
     emblem,
     pointsMeta: { version: points.version, source: points.source },
   };
-  factionCache.set(entry.id, data);
-  return data;
 }

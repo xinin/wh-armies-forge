@@ -188,6 +188,9 @@
   {
    "id": "spearhead-at-arms",
    "cost": 2,
+   "tags": [
+    "ARMIGERS"
+   ],
    "name": {
     "en": "Spearhead-At-Arms"
    },
@@ -388,6 +391,9 @@
   {
    "id": "throne-bonded-outriders",
    "cost": 1,
+   "tags": [
+    "ARMIGERS"
+   ],
    "name": {
     "en": "Throne-Bonded Outriders"
    },

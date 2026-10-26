@@ -1,18 +1,22 @@
 """Local server for Army Forge: serves the app and stores each army list as a JSON file.
 
-    python3 server.py [port]        → http://localhost:8000
+    python3 server.py [port] [--armies DIR]        → http://localhost:8000
+
+--armies saves the lists in another folder (tools/check_app.py uses a temporary one).
 
 API (JSON):
-    GET    /api/lists        all saved lists
+    GET    /api/lists        all saved lists (each with "file": its path, which is not stored in the file)
     PUT    /api/lists/<id>   create/replace a list   → armies/<name>-<id>.json
     DELETE /api/lists/<id>   delete a list
     PUT    /api/images/<faction>/<unit-id>   {"url": "https://..."} → data/factions/<faction>/images.json
                                              (an empty url removes the entry)
 """
+import argparse
 import json
 import os
 import re
 import sys
+import unicodedata
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -23,6 +27,8 @@ SLUG_RE = re.compile(r'^[a-z0-9-]{2,64}$')
 
 
 def slug(s):
+    """File name part of a list name: 'Tiránidos 2000' → 'tiranidos-2000', 'Imperio T’au' → 'imperio-tau'."""
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().replace("'", '')
     return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')[:60] or 'army'
 
 
@@ -35,8 +41,8 @@ class Handler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(ROOT), **kwargs)
 
     def end_headers(self):
-        # always serve fresh files while developing the data/config
-        self.send_header('Cache-Control', 'no-store')
+        # the browser revalidates every file (fresh data after an import), and unchanged ones come back as 304
+        self.send_header('Cache-Control', 'no-cache')
         super().end_headers()
 
     def _json(self, status, payload):
@@ -56,7 +62,7 @@ class Handler(SimpleHTTPRequestHandler):
             lists = []
             for p in sorted(ARMIES.glob('*.json')):
                 try:
-                    lists.append(json.loads(p.read_text(encoding='utf-8')))
+                    lists.append({**json.loads(p.read_text(encoding='utf-8')), 'file': f'armies/{p.name}'})
                 except (OSError, ValueError):
                     print(f'warning: could not read {p.name}', file=sys.stderr)
             return self._json(200, lists)
@@ -77,6 +83,7 @@ class Handler(SimpleHTTPRequestHandler):
             return self._json(400, {'error': 'bad json'})
         if not isinstance(data, dict) or data.get('id') != list_id or not isinstance(data.get('units'), list):
             return self._json(400, {'error': 'bad list'})
+        data.pop('file', None)  # derived from the name, see GET
         ARMIES.mkdir(exist_ok=True)
         target = ARMIES / f"{slug(str(data.get('name', '')))}-{list_id}.json"
         tmp = target.with_suffix('.tmp')
@@ -122,13 +129,18 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 class Server(ThreadingHTTPServer):
-    # the app loads every faction at once (~60 files in parallel): the default backlog of 5 refuses connections
+    # the home loads the factions of the saved lists at once (~10 files each, in parallel): the default backlog
+    # of 5 refuses connections
     request_queue_size = 128
     daemon_threads = True
 
 
 if __name__ == '__main__':
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
+    ap = argparse.ArgumentParser()
+    ap.add_argument('port', nargs='?', type=int, default=8000)
+    ap.add_argument('--armies', type=Path, default=ARMIES)
+    args = ap.parse_args()
+    port, ARMIES = args.port, args.armies.resolve()
     ARMIES.mkdir(exist_ok=True)
     print(f'→ http://localhost:{port}   (armies saved in {ARMIES})')
     Server(('127.0.0.1', port), Handler).serve_forever()

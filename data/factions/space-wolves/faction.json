@@ -121,6 +121,9 @@
   {
    "id": "phobos-shadow-force",
    "cost": 1,
+   "tags": [
+    "PHOBOS"
+   ],
    "name": {
     "en": "Phobos Shadow Force"
    },
@@ -166,6 +169,9 @@
   {
    "id": "phobos-shock-force",
    "cost": 1,
+   "tags": [
+    "PHOBOS"
+   ],
    "name": {
     "en": "Phobos Shock Force"
    },
@@ -258,6 +264,9 @@
   {
    "id": "tactical-brethren",
    "cost": 1,
+   "tags": [
+    "DOCTRINES"
+   ],
    "name": {
     "en": "Tactical Brethren"
    },
@@ -299,6 +308,9 @@
   {
    "id": "tacticus-firestorm-force",
    "cost": 1,
+   "tags": [
+    "TACTICUS"
+   ],
    "name": {
     "en": "Tacticus Firestorm Force"
    },
@@ -344,6 +356,9 @@
   {
    "id": "terminator-storm-force",
    "cost": 1,
+   "tags": [
+    "TERMINATOR"
+   ],
    "name": {
     "en": "Terminator Storm Force"
    },
@@ -389,6 +404,9 @@
   {
    "id": "devastator-brethren",
    "cost": 1,
+   "tags": [
+    "DOCTRINES"
+   ],
    "name": {
     "en": "Devastator Brethren"
    },
@@ -433,6 +451,9 @@
   {
    "id": "ironstorm-spearhead",
    "cost": 1,
+   "tags": [
+    "IRONSTORM"
+   ],
    "name": {
     "en": "Ironstorm Spearhead"
    },
@@ -596,6 +617,9 @@
   {
    "id": "assault-brethren",
    "cost": 1,
+   "tags": [
+    "DOCTRINES"
+   ],
    "name": {
     "en": "Assault Brethren"
    },
@@ -638,6 +662,9 @@
   {
    "id": "gravis-linebreaker-force",
    "cost": 1,
+   "tags": [
+    "GRAVIS"
+   ],
    "name": {
     "en": "Gravis Linebreaker Force"
    },
@@ -683,6 +710,9 @@
   {
    "id": "gravis-siege-force",
    "cost": 1,
+   "tags": [
+    "GRAVIS"
+   ],
    "name": {
     "en": "Gravis Siege Force"
    },
@@ -730,6 +760,9 @@
   {
    "id": "tacticus-attack-force",
    "cost": 1,
+   "tags": [
+    "TACTICUS"
+   ],
    "name": {
     "en": "Tacticus Attack Force"
    },
@@ -876,6 +909,9 @@
   {
    "id": "champions-of-fenris",
    "cost": 1,
+   "tags": [
+    "TERMINATOR"
+   ],
    "name": {
     "en": "Champions of Fenris"
    },

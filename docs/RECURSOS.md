@@ -76,9 +76,10 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 | Script | Qué hace | Fuente |
 |---|---|---|
 | `bootstrap_faction.py` | Crea la carpeta de una facción nueva: regla de ejército, destacamentos, mejoras y ficheros vacíos. La registra en `index.json`. Con `--source space-marines --chapter "Space Wolves"` crea un capítulo | Wahapedia (facción) |
-| `import_wahapedia_datasheets.py` | Importa datasheets de la 11ª (`--all` para todos los oficiales; Legends y FW van a `excluded`) con sus puntos | Wahapedia (datasheets) |
+| `import_wahapedia_datasheets.py` | Importa datasheets de la 11ª (`--all` para todos los oficiales; Legends y FW van a `excluded`) con sus puntos. Con `--check` no escribe nada y lista lo que cambiaría | Wahapedia (datasheets) |
 | `wargear.py` | Motor de equipo: modelos por tipo y tamaño, equipo por defecto con cantidades y opciones de equipo como selectores | (usado por el importador) |
 | `audit_units.py` | Compara cada unidad importada con su datasheet y avisa de armas, habilidades u opciones mal leídas | Caché de Wahapedia |
+| `check_app.py` (+ `check_app.html`) | Abre la app en Chrome headless con una lista de prueba por facción y comprueba cada vista en español e inglés (errores, textos sin traducir, «undefined») | La app |
 | `translations.py` | Lista los textos de juego sin traducir (`pending`) y guarda las traducciones (`apply`) en los `i18n.es.json` | Datos importados |
 | `wahapedia_fetch.py` | Descarga con caché local (`.cache/wahapedia/`) para los importadores | Wahapedia |
 | `import_wahapedia_rules.py` | Textos completos de reglas y mejoras, estratagemas de destacamento y Core | Wahapedia |

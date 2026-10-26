@@ -9,6 +9,17 @@ Es una web estática, sin dependencias ni paso de build.
 
 `serve.sh` arranca `server.py`, un servidor local en Python sin dependencias. Sirve la app y guarda cada ejército como un fichero JSON en `armies/<nombre>-<id>.json`. Si sirves la carpeta con otro servidor estático, las listas se guardan solo en el navegador.
 
+La app carga cada facción solo cuando la necesita: la home, las de tus listas guardadas; el editor, la de su lista. El navegador reutiliza los ficheros que no han cambiado.
+
+## Comprobaciones
+
+```sh
+.venv/bin/python tools/audit_units.py          # datasheets importados contra Wahapedia
+python3 tools/check_app.py                     # cada vista de la app en Chrome headless, en español e inglés
+```
+
+Deben terminar con `0 errors` y `0 failures`. Ver [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md).
+
 ## Documentación
 
 - [docs/NUEVA-FACCION.md](docs/NUEVA-FACCION.md): proceso paso a paso para cargar un ejército nuevo.
@@ -18,10 +29,10 @@ Es una web estática, sin dependencias ni paso de build.
 
 - Catálogo de unidades con imagen, filtros por rol y búsqueda. Arrastra una unidad al ejército o pulsa **+**.
 - **Líderes y apoyo**: arrastra un personaje sobre una unidad y las unidades válidas se iluminan. También puedes usar el desplegable "Unir a…". Arrastrar un líder fuera de la unidad lo separa, y arrastrar una unidad al catálogo la borra. Los datasheets «SUPPORT» de la 11ª (Crypteks, Tenientes, Apotecarios…) ocupan su propio hueco: una unidad puede llevar su líder y además un apoyo.
-- Tamaño de unidad, equipo (cambios de arma y armas especiales por cada 10 modelos), mejoras y Señor de la Guerra.
+- Tamaño de unidad, equipo (cambios de arma y armas especiales por cada 10 modelos), mejoras y Señor de la Guerra. Las opciones que dependen de otra («si lleva una pistola neovolkita…») salen desactivadas, con el motivo, mientras no se cumple la condición.
 - Tamaño de batalla con un deslizador: Incursión (1000), Fuerza de Asalto (2000) o Embestida (3000). El límite de puntos es el del tamaño elegido.
 - Destacamentos con sus Puntos de Destacamento (DP) según el tamaño de batalla. Si un destacamento da una habilidad a ciertos datasheets a cambio de puntos (las Ataduras Necrodérmicas de los C'tan en «Pantheon of Woe»), se aplica sola y se suma al coste de la unidad.
-- Validación en vivo: límite de puntos, DP, límite de unidades (×2 para Battleline y Dedicated Transport), Héroes Épicos, número de mejoras, mejoras repetidas, una mejora por unidad combinada, líderes y apoyos válidos y Señor de la Guerra.
+- Validación en vivo: límite de puntos, DP, límite de unidades (×2 para Battleline y Dedicated Transport), Héroes Épicos, número de mejoras, mejoras repetidas, una mejora por unidad combinada, líderes y apoyos válidos, un solo destacamento por etiqueta (SHIELD HOST, DYNASTY…) y Señor de la Guerra.
 - Home con tus ejércitos guardados (puntos, validez, destacamentos y miniaturas) y un formulario para crear listas nuevas.
 - **Vista de ejército** (`#/list/<id>/view`): todas las unidades con su equipo, atributos, mejoras y habilidades; los destacamentos con su regla, mejoras (y quién las lleva) y estratagemas; la regla de ejército y las estratagemas generales. Se puede imprimir.
 - **Español e inglés**: el botón ES/EN cambia la interfaz y todo el contenido de juego (datasheets, armas, habilidades, equipo, reglas, mejoras y estratagemas). Las palabras clave en mayúsculas se quedan en inglés.

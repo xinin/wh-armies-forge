@@ -1,5 +1,5 @@
 import { loadLang, t, tr } from './i18n.js';
-import { loadIndex, loadEdition, loadFaction } from './data.js';
+import { loadIndex, loadEdition, loadFaction, loadEmblem } from './data.js';
 import {
   initStore, getState, subscribe, update, getActiveList, createList, deleteList, newRosterUnit, cloneRosterUnit,
   importList, onSaveStatus, getSaveStatus, getBackend,
@@ -7,7 +7,7 @@ import {
 import { renderHome, renderHomeHeader, renderFactionPicker } from './home.js';
 import { setFactionEmblem } from './icons.js';
 import { renderOverview, renderOverviewHeader, OV_TABS } from './overview.js';
-import { validate, canAttach, isLeader, battleSizeOf, optionMax, optionMaxEach } from './rules.js';
+import { validate, canAttach, isLeader, battleSizeOf, optionMax, optionMaxEach, tagRival } from './rules.js';
 import {
   renderHeader, renderCatalog, renderCatalogItems, renderRoster, renderSidebar, renderModal, sheetState,
 } from './render.js';
@@ -16,7 +16,7 @@ const $ = sel => document.querySelector(sel);
 const ui = { view: 'home', search: '', role: '', modalUnit: null, tab: 'roster', ovTab: OV_TABS[0] };
 let index, edition, data;
 const editions = new Map();
-const factions = new Map();
+const factions = new Map(); // faction id → data, only for the factions loaded so far
 
 /* ---------- Boot ---------- */
 
@@ -25,11 +25,7 @@ async function boot() {
   await initStore();
   await loadLang(getState().lang);
   index = await loadIndex();
-  // everything the home screen needs to summarise every saved list
-  for (const f of index.factions) {
-    if (!editions.has(f.edition)) editions.set(f.edition, await loadEdition(f.edition));
-    factions.set(f.id, await loadFaction(f));
-  }
+  await Promise.all([...new Set(index.factions.map(f => f.edition))].map(async id => editions.set(id, await loadEdition(id))));
   subscribe(() => render());
   onSaveStatus(renderSaveStatus);
   bindEvents();
@@ -50,12 +46,21 @@ async function route() {
     if (location.hash && location.hash !== '#/') history.replaceState(null, '', '#/');
     getState().activeId = null;
     ui.view = 'home';
+    await ensureFactions(getState().lists.map(l => l.factionId));
   }
   render();
   window.scrollTo(0, 0);
 }
 
 const openList = id => { location.hash = `#/list/${id}`; };
+
+// Factions are loaded on demand: the home needs those of the saved lists, the builder the one of its list.
+async function ensureFactions(ids) {
+  await Promise.all([...new Set(ids)].map(async id => {
+    const entry = index.factions.find(f => f.id === id);
+    if (entry && !factions.has(id)) factions.set(id, await loadFaction(entry));
+  }));
+}
 
 // New list for the chosen faction (Strike Force by default; size and name can be changed in the builder).
 function createListFor(factionId) {
@@ -70,9 +75,10 @@ function createListFor(factionId) {
   openList(list.id);
 }
 
-function openFactionPicker() {
+async function openFactionPicker() {
+  const emblems = new Map(await Promise.all(index.factions.map(async f => [f.id, await loadEmblem(f)])));
   const el = $('#dialog');
-  el.innerHTML = renderFactionPicker(index, factions);
+  el.innerHTML = renderFactionPicker(index, emblems);
   el.hidden = false;
   el.onclick = e => { if (e.target === el) closeDialog(); };
   el.querySelector('.faction-tile')?.focus();
@@ -88,6 +94,7 @@ async function loadForActive() {
   const list = getActiveList();
   const entry = index.factions.find(f => f.id === list.factionId) ?? index.factions[0];
   [edition, data] = await Promise.all([loadEdition(list.edition ?? entry.edition), loadFaction(entry)]);
+  factions.set(entry.id, data);
   setFactionEmblem(data.emblem);
   // datasheets may have been re-imported since the list was saved: drop units that no longer exist
   // and wargear choices that are no longer valid (saved straight away)
@@ -324,7 +331,8 @@ async function onClick(e) {
       } else {
         const bs = battleSizeOf(list, edition);
         const used = list.detachments.reduce((s, d) => s + data.detachmentsById.get(d).cost, 0);
-        if (used + data.detachmentsById.get(id).cost <= bs.detachmentPoints) list.detachments.push(id);
+        const det = data.detachmentsById.get(id);
+        if (used + det.cost <= bs.detachmentPoints && !tagRival(list, data, det)) list.detachments.push(id);
       }
     });
     case 'open-list': return openList(el.dataset.id);
@@ -590,6 +598,7 @@ async function importJson(file) {
     const obj = JSON.parse(await file.text());
     const list = obj.list ?? obj;
     if (!Array.isArray(list.units) || !list.factionId) throw new Error('bad format');
+    await ensureFactions([list.factionId]);
     importList(list);
     toast(t('list.imported'));
   } catch {

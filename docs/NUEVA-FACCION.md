@@ -52,6 +52,7 @@ python3 tools/bootstrap_faction.py space-wolves --source space-marines --chapter
 - **`requires` de cada mejora**: palabras clave que debe tener la unidad, deducidas del texto «X model only». Si sale `[]`, cualquier personaje (no Héroe Épico) puede llevarla. Corrige los casos dudosos. Ejemplo: `[["INFANTRY", "OFFICER"]]` exige las dos palabras clave; `[["A"], ["B"]]` significa A **o** B (en el texto, «A/B unit only»). También entiende nombres de datasheet en minúsculas («Kroot War Shaper model only») y las exclusiones «(excluding KROOT SHAPER models)», que van a `excludes`. Una palabra en plural («STEALTH BATTLESUITS») encaja con la palabra clave en singular.
 - **Letras que parecen latinas**: Wahapedia a veces mezcla letras cirílicas («Kauyоn» con una о cirílica). Los importadores las convierten a latinas; si un destacamento sale con `warning: no section`, mira si es esto.
 - **`type: "upgrade"`**: se marca solo en las mejoras etiquetadas como UPGRADE. Pueden llevarlas unidades que no son personajes y no cuentan para el límite de mejoras.
+- **`tags`**: etiquetas del destacamento, sacadas de la marca «UNIQUE: …» de Wahapedia sobre su título. Un ejército solo puede llevar un destacamento de cada etiqueta (los seis de Custodes son SHIELD HOST); el panel bloquea los demás y la validación avisa.
 - **`grantsLead`**: una mejora con «SUPPORT: OPHYDIAN DESTROYERS, …» (o «LEADER: …») deja al portador unirse también a esas unidades.
 - **`unitAbilities`**: si un destacamento lista habilidades con puntos bajo un título propio en vez de «Enhancements» (Pantheon of Woe: «Necrodermal Binding Abilities»), no son mejoras: cada datasheet nombrado las recibe solo y cuesta más (`points.json` → `unitAbilities`). Comprueba en la regla del destacamento que sea así.
 - **Requisitos con «o»** («OVERLORD or CATACOMB COMMAND BARGE model only») salen como alternativas. Las exclusiones solo cuentan justo detrás de «only»; un «(excluding TITANIC units)» más adelante habla de las unidades afectadas, no del portador.
@@ -153,7 +154,15 @@ Hay que dejarlo en **0 errores**. Los errores son fallos de lectura y casi siemp
 
 La auditoría no ve los nombres de equipo raros que sí se ven en la app: revisa también la lista de comprobación del paso 7 en los dos idiomas.
 
-Si aparece un patrón nuevo, añádelo en `tools/wargear.py` (opciones y equipo) o en `tools/import_wahapedia_datasheets.py` (lectura de la página), reimporta y vuelve a auditar **todas** las facciones (`tools/audit_units.py` sin argumentos), para no romper las anteriores.
+Si aparece un patrón nuevo, añádelo en `tools/wargear.py` (opciones y equipo) o en `tools/import_wahapedia_datasheets.py` (lectura de la página), reimporta y vuelve a auditar **todas** las facciones (`tools/audit_units.py` sin argumentos). Después comprueba que el cambio no altera las facciones anteriores:
+
+```sh
+for f in $(ls data/factions | grep -v index); do .venv/bin/python tools/import_wahapedia_datasheets.py $f --all --check; done
+```
+
+`--check` reimporta con el código actual sin escribir nada y lista lo que cambiaría (`CHANGE unidad.campo: antes → después`). En las facciones que ya estaban bien debe decir `no changes`; si no, el patrón nuevo ha roto algo o hay un cambio a mano en `units.json` que una reimportación perdería.
+
+La auditoría también comprueba que `data/factions/index.json` tenga bien el número de unidades y de destacamentos de cada facción, que es lo que enseña el selector de **Nueva lista** sin cargar la facción. Los importadores los mantienen solos.
 
 ## 3. Reglas completas y estratagemas
 
@@ -230,6 +239,17 @@ La traducción no es oficial. Un texto sin traducir se muestra en inglés, así 
 
 ## 7. Comprobar en la app
 
+Primero la comprobación automática (necesita Google Chrome; tarda unos 45 s por idioma con 7 facciones):
+
+```sh
+python3 tools/check_app.py                 # todas las facciones, en español e inglés
+python3 tools/check_app.py necrons         # solo una
+```
+
+Crea en una carpeta temporal una lista de prueba por facción (todas las unidades y destacamentos, cada opción de equipo con su primera elección y cada líder o apoyo unido a la primera unidad que puede), arranca el servidor con esa carpeta (tus listas no se tocan) y recorre en Chrome headless la home, el selector de facción, el editor, todas las fichas y todas las pestañas de la vista de ejército. Falla si hay errores de JavaScript, si falta alguna lista, unidad, ficha o facción, si sale «undefined» o «NaN», o si hay frases en el otro idioma. Con `--keep` deja la carpeta con las listas y el texto de cada vista.
+
+Después, a mano:
+
 ```sh
 ./serve.sh
 ```
@@ -251,7 +271,9 @@ La traducción no es oficial. Un texto sin traducir se muestra en inglés, así 
 | Sale un MFM nuevo | Reimporta la facción con `--all --refresh` (los puntos vienen en cada datasheet) y audita, o edita `points.json` a mano |
 | GW publica erratas de reglas o estratagemas | `import_wahapedia_rules.py <facción>` y `import_wahapedia_datasheets.py <facción> --all --refresh`, y después `audit_units.py` |
 | Sale una unidad nueva | `import_wahapedia_datasheets.py <facción> <Datasheet>` y `store_images.py … --products <lista guardada>`, o la URL a mano |
-| Has reimportado algo | `translations.py pending`, traduce lo que salga y `apply` |
+| Has reimportado algo | `translations.py pending`, traduce lo que salga y `apply`; después `check_app.py` |
+| Has cambiado el importador o `wargear.py` | `import_wahapedia_datasheets.py <facción> --all --check` en todas las facciones: debe dar `no changes` |
+| Has cambiado el código de la app | `check_app.py` |
 | Quieres excluir una unidad | Añade su id a `units.json` → `excluded.ids` y bórrala de `units`, `points.json` e `images.json` |
 
 ## Problemas conocidos
