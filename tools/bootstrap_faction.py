@@ -41,7 +41,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from import_wahapedia_rules import BASE, clean, enhancements_pos, fetch, key, slug, strip_fluff  # noqa: E402
+from import_wahapedia_rules import BASE, clean, enhancements_pos, fetch, key, rule_lines, section_at, slug, strip_fluff  # noqa: E402
 from factions import refresh_counts  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -115,6 +115,9 @@ def main():
     ap.add_argument('--force', action='store_true')
     ap.add_argument('--source', help='Wahapedia faction page the Chapter belongs to (space-marines)')
     ap.add_argument('--chapter', help='Chapter name as shown on that page ("Space Wolves")')
+    ap.add_argument('--other-faction', action='append', metavar='KEYWORD',
+                    help='faction keyword of datasheets on the page that belong to another faction (repeatable; kept '
+                         'in faction.json → wahapedia.otherFactions, the datasheet importer skips them)')
     ap.add_argument('--chapter-bit', help='hex bit of the Chapter (or 10: the base army without Chapter) in the CH masks')
     args = ap.parse_args()
 
@@ -193,6 +196,9 @@ def main():
     det_tags = [(tag, n, dp) for tag, n, dp in re.findall(r'(<[^<>]*data-det-name="([^"]+)" data-dp-base="(\d+)"[^<>]*>)', page)]
     attrs_of = lambda tag: re.search(r'data-f="([^"]*)"', tag).group(1) if 'data-f=' in tag else ''  # noqa: E731
     dets_dp = [(n, dp) for tag, n, dp in det_tags if keep(attrs_of(tag))]
+    fk = re.search(r"If your Army Faction is ([A-Z][A-Z’' -]+?)[,.]", (army_rule or {}).get('text', {}).get('en', ''))
+    if fk:
+        faction_words |= set(fk.group(1).split())
     denied_dets = sorted({slug(clean(n)) for tag, n, dp in det_tags if denied(attrs_of(tag))})
     heads = [(m.start(), m.group(1)) for m in re.finditer(r'<h2[^>]*id="([^"]+)"', page)]
     detachments, enh_points, ability_points = [], {}, {}
@@ -213,10 +219,15 @@ def main():
         sec = page[pos:end]
         r_pos = re.search(r'id="Detachment-Rules?(-\d+)?"', sec)
         e_pos = enhancements_pos(sec)
-        s_pos = re.search(r'id="Stratagems(-\d+)?"', sec)
-        rule_lines = clean(strip_fluff(sec[r_pos.start():sec.rfind('<h2', 0, e_pos)])).split('\n')[1:] if r_pos and e_pos is not None else []
+        rule_text = rule_lines(section_at(sec, r_pos.start() if r_pos else None))
+        # "LEGIONES DAEMONICA units from your army gain the SHADOW LEGION keyword": every unit of the faction has it
+        # in this detachment, so it is not a requirement of its enhancements
+        det_words = set(faction_words)
+        for m in re.finditer(r"([A-Z][A-Z’' ]+) units from your army gain the ([A-Z][A-Z’' ]+?) keyword", ' '.join(rule_text)):
+            if set(m.group(1).split()) <= faction_words:
+                det_words |= set(m.group(2).split())
         enhancements, unit_abilities = [], []
-        ens_html = sec[e_pos:sec.rfind('<', 0, s_pos.start())] if e_pos is not None and s_pos else ''
+        ens_html = section_at(sec, e_pos)
         automatic = not ens_html.startswith('id="Enhancements')
         for m in re.finditer(r'<ul class="EnhancementsPts"><li><span>(.*?)</span>\s*<span>(\d+) pts</span></li></ul>(.*?)(?=<ul class="EnhancementsPts"|\Z)', ens_html, re.S):
             upgrade = 'EnhUpgrade' in m.group(1)
@@ -227,7 +238,7 @@ def main():
             eid = slug(ename)
             if eid in enh_points or eid in ability_points:  # same name in two detachments
                 eid = f'{eid}-{did}'
-            requires, excludes = requirements(body, faction_words)
+            requires, excludes = requirements(body, det_words)
             if automatic and requires:
                 ability_points[eid] = int(m.group(2))
                 unit_abilities.append({'id': eid, 'unit': slug(' '.join(requires[0])), 'name': {'en': ename},
@@ -245,8 +256,8 @@ def main():
         detachments.append({
             'id': did, 'cost': int(dp), **({'tags': tags[key(det_name)]} if tags.get(key(det_name)) else {}),
             'name': {'en': det_name},
-            'rule': {'name': {'en': rule_lines[0] if rule_lines else det_name},
-                     'text': {'en': summary(' '.join(rule_lines[1:]))}},
+            'rule': {'name': {'en': rule_text[0] if rule_text else det_name},
+                     'text': {'en': summary(' '.join(rule_text[1:]))}},
             'enhancements': enhancements,
             **({'unitAbilities': unit_abilities} if unit_abilities else {}),
         })
@@ -262,6 +273,9 @@ def main():
     if chapter_bit is not None:
         faction['wahapedia'] = {'faction': source, **({'chapter': args.chapter.upper()} if args.chapter else {}),
                                 'chapterBit': f'{chapter_bit:x}'}
+    other_factions = args.other_faction or old.get('wahapedia', {}).get('otherFactions')
+    if other_factions:
+        faction.setdefault('wahapedia', {'faction': source})['otherFactions'] = other_factions
     if parent:
         excludes, keyword_rules = chapter_rules(extra_rules)
         excludes = {**({'rules': denied_rules} if denied_rules else {}), **({'detachments': denied_dets} if denied_dets else {}), **excludes}

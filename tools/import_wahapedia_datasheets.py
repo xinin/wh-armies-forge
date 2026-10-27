@@ -295,6 +295,14 @@ def parse(page, ds_slug, chapter_bit=None):
         if mm: bg['maxWithKeyword'] = {mm.group(1).upper(): 1}
         if bg: unit['bodyguard'] = bg
     if transport: unit['transport'] = {'en': transport}
+    # "DAEMONIC ALLEGIANCE: … you must select one of the keywords below. Until the end of the battle, this model has
+    # that keyword and the additional wargear stated for that keyword": a required choice (tools/wargear.py)
+    choice = next(((k, v) for k, v in sec.items() if 'must select one of the keywords below' in v), None)
+    if choice:
+        opts = re.findall(r'^([A-Z][A-Z’\' ]+?)\s+–\s+This model is additionally equipped with:\s*(.+?)\.?$', text(choice[1]), re.M)
+        if opts:
+            unit['keywordChoice'] = {'name': {'en': choice[0].title()},
+                                     'options': [{'keyword': k.strip(), 'equipment': e.strip()} for k, e in opts]}
     if lead_key == 'SUPPORT' and leader_targets: unit['leader'] = {'support': True}
     leader_targets = [(t, t in legends_targets) for t in leader_targets]
     return unit, leader_targets, costs, extra, gear_costs
@@ -351,6 +359,13 @@ def main():
             if tag == 'core' and allowed and not faction_keywords(pages[ds]) <= allowed:
                 tag = 'other chapters'
             tags[tag].append(ds)
+        # datasheets of other factions listed on the page (Chaos Daemons: the HERETIC ASTARTES units the Shadow Legion
+        # detachment allows) belong to those factions: faction.json → "wahapedia": {"otherFactions": [keyword…]}
+        foreign = set(cfg.get('otherFactions', []))
+        others = [ds for ds in tags['core'] if faction_keywords(pages[ds]) & foreign]
+        if others:
+            tags['core'] = [ds for ds in tags['core'] if ds not in others]
+            tags['other factions'] = others
         for tag, names in tags.items():
             print(f'{tag.upper()} ({len(names)}): {", ".join(names)}')
         if args.list:

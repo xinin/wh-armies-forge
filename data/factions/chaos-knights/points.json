@@ -1,0 +1,39 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-27",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-knights/",
+ "verified": [
+  "all-enhancements"
+ ],
+ "units": {},
+ "enhancements": {
+  "knight-diabolus": 25,
+  "blasphemous-engine": 35,
+  "fleshmetal-fusion": 35,
+  "bestial-aspect": 30,
+  "aspect-of-the-beast": 30,
+  "hunters-helm": 15,
+  "octagram-of-conjuration": 40,
+  "throne-tyrannicus": 25,
+  "nightmares-master": 20,
+  "tyrants-shadow": 25,
+  "malevolent-heraldry": 30,
+  "veil-of-medrengard": 35,
+  "preyslayers-mantle": 15,
+  "final-howl": 20,
+  "loping-predator": 10,
+  "panoply-of-the-cursed-knight": 15,
+  "throne-mechanicum-of-skulls": 25,
+  "blade-of-celerity": 35,
+  "warp-borne-stalker": 25,
+  "putrid-carapace": 30,
+  "mirror-of-fates": 30,
+  "blessing-of-the-dark-master": 20,
+  "pterrorshade-rookery": 20,
+  "hate-filled-dominion": 20,
+  "soul-spoor-auspicator": 15,
+  "snarling-rivalry": 10,
+  "cruel-lashmaster": 25,
+  "iconoclast-idol": 20
+ }
+}

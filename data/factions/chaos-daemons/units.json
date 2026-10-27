@@ -1,0 +1,8063 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World and Warhammer Legends datasheets: never imported.",
+  "ids": [
+   "accursed-cultists",
+   "aetaos-rau-keres",
+   "an-ggrath-the-unbound",
+   "chaos-lord",
+   "chaos-lord-in-terminator-armour",
+   "chaos-lord-on-disc-of-tzeentch",
+   "chaos-lord-on-juggernaut",
+   "chaos-lord-on-palanquin-of-nurgle",
+   "chaos-lord-on-steed-of-slaanesh",
+   "chaos-lord-with-jump-pack",
+   "chaos-terminator-squad",
+   "chosen",
+   "cultist-firebrand",
+   "cultist-mob",
+   "cultist-mob-with-firearms",
+   "dark-apostle",
+   "dark-commune",
+   "fellgor-beastmen",
+   "furies",
+   "gellerpox-infected",
+   "giant-chaos-spawn",
+   "havocs",
+   "herald-of-slaanesh-on-steed-of-slaanesh",
+   "legionaries",
+   "master-of-possession",
+   "mutoid-vermin",
+   "negavolt-cultists",
+   "plague-toads",
+   "possessed",
+   "pox-riders",
+   "raptors",
+   "renegade-enforcer",
+   "renegade-heavy-weapons-squad",
+   "renegade-ogryn-beast-handler",
+   "renegade-ogryn-brutes",
+   "renegade-plague-ogryns",
+   "rogue-psyker",
+   "scabeiathrax-the-bloated",
+   "sorcerer",
+   "sorcerer-in-terminator-armour",
+   "sorcerer-on-disc-of-tzeentch",
+   "sorcerer-on-palanquin-of-nurgle",
+   "sorcerer-on-steed-of-slaanesh",
+   "spined-chaos-beast",
+   "traitor-enforcer",
+   "traitor-guardsmen-squad",
+   "warp-talons",
+   "zarakynel"
+  ]
+ },
+ "units": [
+  {
+   "id": "belakor",
+   "name": {
+    "en": "Be’lakor",
+    "es": "Be’lakor"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "FLY",
+    "EPIC HERO",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "BE’LAKOR",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "20",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "betraying-shades",
+     "name": {
+      "en": "Betraying Shades"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "9",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Ignores Cover",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "12",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-3",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Hazardous",
+        "Ignores Cover",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "the-blade-of-shadows",
+     "name": {
+      "en": "The Blade of Shadows"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-4",
+       "D": "D6+1",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "The Dark Master (Aura)"
+     },
+     "text": {
+      "en": "The area of the battlefield within 6\" of this model is within your army’s Shadow of Chaos."
+     }
+    },
+    {
+     "name": {
+      "en": "Shadow Form Abilities"
+     },
+     "text": {
+      "en": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Be-lakor",
+   "damaged": {
+    "name": {
+     "en": "1-7 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Be’lakor – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Betraying Shades; the Blade of Shadows."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "betraying-shades": 1,
+      "the-blade-of-shadows": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "betraying-shades",
+    "the-blade-of-shadows"
+   ]
+  },
+  {
+   "id": "bloodmaster",
+   "name": {
+    "en": "Bloodmaster",
+    "es": "Bloodmaster"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "BLOODMASTER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "5+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "blade-of-blood",
+     "name": {
+      "en": "Blade of blood"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bloodmaster"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll."
+     }
+    },
+    {
+     "name": {
+      "en": "A Gory Path"
+     },
+     "text": {
+      "en": "Each time this model’s unit Consolidates, it can move up to 6\" instead of up to 3\"."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Bloodmaster",
+   "composition": [
+    "1 Bloodmaster"
+   ],
+   "equipped": [
+    "This model is equipped with: blade of blood."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "bloodletters"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "blade-of-blood": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blade-of-blood"
+   ]
+  },
+  {
+   "id": "bloodthirster",
+   "name": {
+    "en": "Bloodthirster",
+    "es": "Bloodthirster"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "BLOODTHIRSTER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bloodflail",
+     "name": {
+      "en": "Bloodflail"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "16",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hellfire-breath",
+     "name": {
+      "en": "Hellfire breath"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lash-of-khorne",
+     "name": {
+      "en": "Lash of Khorne"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "axe-of-khorne",
+     "name": {
+      "en": "Axe of Khorne"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-4",
+       "D": "D3+1",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "16",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "great-axe-of-khorne",
+     "name": {
+      "en": "Great axe of Khorne"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "16",
+       "AP": "-4",
+       "D": "D6+2",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Daemon Lord of Khorne (Aura)"
+     },
+     "text": {
+      "en": "While a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Relentless Carnage"
+     },
+     "text": {
+      "en": "At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound."
+     }
+    },
+    {
+     "name": {
+      "en": "Greater Daemon of Khorne (Aura)"
+     },
+     "text": {
+      "en": "While a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Bloodthirster",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s great axe of Khorne can be replaced with 1 axe of Khorne and one of the following:",
+     "choices": [
+      "1 bloodflail",
+      "1 lash of Khorne"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Bloodthirster"
+   ],
+   "equipped": [
+    "This model is equipped with: hellfire breath; great axe of Khorne."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hellfire-breath": 1,
+      "great-axe-of-khorne": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Great axe of Khorne",
+      "es": "Great axe of Khorne"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "great-axe-of-khorne",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "axe-of-khorne+bloodflail",
+      "axe-of-khorne+lash-of-khorne"
+     ],
+     "packages": {
+      "axe-of-khorne+bloodflail": [
+       {
+        "item": "axe-of-khorne",
+        "n": 1
+       },
+       {
+        "item": "bloodflail",
+        "n": 1
+       }
+      ],
+      "axe-of-khorne+lash-of-khorne": [
+       {
+        "item": "axe-of-khorne",
+        "n": 1
+       },
+       {
+        "item": "lash-of-khorne",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "axe-of-khorne+bloodflail": "Axe of Khorne + Bloodflail",
+      "axe-of-khorne+lash-of-khorne": "Axe of Khorne + Lash of Khorne",
+      "": "Great axe of Khorne"
+     }
+    }
+   ],
+   "loadout": [
+    "great-axe-of-khorne",
+    "hellfire-breath"
+   ]
+  },
+  {
+   "id": "changecaster",
+   "name": {
+    "en": "Changecaster",
+    "es": "Changecaster"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "CHANGECASTER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "6+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "arcane-fireball",
+     "name": {
+      "en": "Arcane Fireball"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Devastating Wounds",
+        "Hazardous",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "herald-combat-weapon",
+     "name": {
+      "en": "Herald combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Changecaster"
+     },
+     "text": {
+      "en": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Storm of Mutating Sorcery (Psychic)"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy Infantry unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Changecaster",
+   "composition": [
+    "1 Changecaster"
+   ],
+   "equipped": [
+    "This model is equipped with: Arcane Fireball; Herald combat weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "blue-horrors",
+     "pink-horrors"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "arcane-fireball": 1,
+      "herald-combat-weapon": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "arcane-fireball",
+    "herald-combat-weapon"
+   ]
+  },
+  {
+   "id": "contorted-epitome",
+   "name": {
+    "en": "Contorted Epitome",
+    "es": "Contorted Epitome"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "PSYKER",
+    "CHAOS",
+    "SLAANESH",
+    "CONTORTED EPITOME",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "6",
+     "Sv": "5+",
+     "W": "8",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "coiled-tentacles",
+     "name": {
+      "en": "Coiled tentacles"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "D6",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ravaging-claws",
+     "name": {
+      "en": "Ravaging claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Swallow Energy (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against mortal wounds and Psychic Attacks."
+     }
+    },
+    {
+     "name": {
+      "en": "Horrible Fascination(Psychic)"
+     },
+     "text": {
+      "en": "At the start of your opponent’s Shooting phase, one PSYKER model from your army with this ability can use it. If it does, select one enemy unit within 12\" of and visible to that PSYKER model and roll one D6: on a 1, that PSYKER model suffers D3 mortal wounds; on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Fights First",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Contorted-Epitome",
+   "composition": [
+    "1 Contorted Epitome"
+   ],
+   "equipped": [
+    "This model is equipped with: coiled tentacles; ravaging claws."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "daemonettes"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "coiled-tentacles": 1,
+      "ravaging-claws": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "coiled-tentacles",
+    "ravaging-claws"
+   ]
+  },
+  {
+   "id": "daemon-prince-of-chaos-with-wings",
+   "name": {
+    "en": "Daemon Prince Of Chaos With Wings",
+    "es": "Daemon Prince Of Chaos With Wings"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "DAEMON PRINCE OF CHAOS WITH WINGS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Malefic Destruction"
+     },
+     "text": {
+      "en": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons."
+     }
+    },
+    {
+     "name": {
+      "en": "Harbinger of Death"
+     },
+     "text": {
+      "en": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability: [LETHAL HITS] [PRECISION] [SUSTAINED HITS 1]"
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-Of-Chaos-With-Wings",
+   "composition": [
+    "1 Daemon Prince of Chaos with Wings"
+   ],
+   "equipped": [
+    "This model is equipped with: infernal cannon; hellforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "daemon-prince-of-chaos",
+   "name": {
+    "en": "Daemon Prince of Chaos",
+    "es": "Daemon Prince of Chaos"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "DAEMON PRINCE OF CHAOS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "10",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Daemonic Lord"
+     },
+     "text": {
+      "en": "While this model is within 3\" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Prince of Darkness (Aura)"
+     },
+     "text": {
+      "en": "While a friendly LEGIONES DAEMONICA unit is within 6\" of this model, models in that unit have the Stealth ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Unholy Vigour"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-of-Chaos",
+   "composition": [
+    "1 Daemon Prince of Chaos"
+   ],
+   "equipped": [
+    "This model is equipped with: infernal cannon; hellforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "epidemius",
+   "name": {
+    "en": "Epidemius",
+    "es": "Epidemius"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "EPIDEMIUS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "5",
+     "Sv": "6+",
+     "W": "8",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "balesword-and-nurgling-attendants",
+     "name": {
+      "en": "Balesword and Nurgling attendants"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Blessed by the Plague God"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have a 4+ invulnerable save."
+     }
+    },
+    {
+     "name": {
+      "en": "Tally of Pestilence"
+     },
+     "text": {
+      "en": "Keep a tally of how many enemy models are destroyed by NURGLE LEGIONES DAEMONICA models from your army during the battle. At the start of your Command phase, if this tally is 7 or more, you gain 1CP and the tally is reset to 0."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Epidemius",
+   "composition": [
+    "1 Epidemius – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: balesword and Nurgling attendants."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "plaguebearers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "balesword-and-nurgling-attendants": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "balesword-and-nurgling-attendants"
+   ]
+  },
+  {
+   "id": "exalted-flamer",
+   "name": {
+    "en": "Exalted Flamer",
+    "es": "Exalted Flamer"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "EXALTED FLAMER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "4",
+     "Sv": "7+",
+     "W": "6",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "fire-of-tzeentch",
+     "name": {
+      "en": "Fire of Tzeentch"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "blue fire"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "pink fire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "flamer-mouths",
+     "name": {
+      "en": "Flamer mouths"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Blazing Warpfire (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Flames of Change (Psychic)"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks, and roll one D6. On a 4+, until the end of your opponent’s next turn, that enemy unit is aflame. While a unit is aflame, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Exalted-Flamer",
+   "composition": [
+    "1 Exalted Flamer"
+   ],
+   "equipped": [
+    "This model is equipped with: Fire of Tzeentch; Flamer mouths."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "flamers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "fire-of-tzeentch": 1,
+      "flamer-mouths": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "fire-of-tzeentch",
+    "flamer-mouths"
+   ]
+  },
+  {
+   "id": "fateskimmer",
+   "name": {
+    "en": "Fateskimmer",
+    "es": "Fateskimmer"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "FLY",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "FATESKIMMER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "7",
+     "Sv": "6+",
+     "W": "9",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "arcane-fireball",
+     "name": {
+      "en": "Arcane Fireball"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Devastating Wounds",
+        "Hazardous",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "herald-combat-weapon",
+     "name": {
+      "en": "Herald combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "screamer-bites",
+     "name": {
+      "en": "Screamer bites"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-monster 4+",
+        "Anti-vehicle 4+",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Fateskimmer"
+     },
+     "text": {
+      "en": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Rider of the Immaterial Winds"
+     },
+     "text": {
+      "en": "Once per battle, at the end of your opponent’s turn, if this model’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Fateskimmer",
+   "composition": [
+    "1 Fateskimmer"
+   ],
+   "equipped": [
+    "This model is equipped with: Arcane Fireball; Herald combat weapon; Screamer bites."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "screamers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "arcane-fireball": 1,
+      "herald-combat-weapon": 1,
+      "screamer-bites": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "arcane-fireball",
+    "herald-combat-weapon",
+    "screamer-bites"
+   ]
+  },
+  {
+   "id": "fluxmaster",
+   "name": {
+    "en": "Fluxmaster",
+    "es": "Fluxmaster"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "FLY",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "FLUXMASTER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "6+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "arcane-fireball",
+     "name": {
+      "en": "Arcane Fireball"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Devastating Wounds",
+        "Hazardous",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "herald-combat-weapon",
+     "name": {
+      "en": "Herald combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Fluxmaster"
+     },
+     "text": {
+      "en": "This unit has Stealth. Melee attacks that target this unit have -1 to hit rolls."
+     }
+    },
+    {
+     "name": {
+      "en": "Altered Reality (Psychic)"
+     },
+     "text": {
+      "en": "Once per battle round, after a Hit roll, a Wound roll, or a saving throw is made for this model, you can change the result of that roll to an unmodified 6."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Fluxmaster",
+   "composition": [
+    "1 Fluxmaster"
+   ],
+   "equipped": [
+    "This model is equipped with: Arcane Fireball; Herald combat weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "blue-horrors",
+     "pink-horrors"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "arcane-fireball": 1,
+      "herald-combat-weapon": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "arcane-fireball",
+    "herald-combat-weapon"
+   ]
+  },
+  {
+   "id": "great-unclean-one",
+   "name": {
+    "en": "Great Unclean One",
+    "es": "Great Unclean One"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "GREAT UNCLEAN ONE",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "12",
+     "Sv": "5+",
+     "W": "20",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "plague-flail",
+     "name": {
+      "en": "Plague flail"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "putrid-vomit",
+     "name": {
+      "en": "Putrid vomit"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bileblade",
+     "name": {
+      "en": "Bileblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bilesword",
+     "name": {
+      "en": "Bilesword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": [
+        "Lethal Hits"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "doomsday-bell",
+     "name": {
+      "en": "Doomsday bell"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Greater Daemon of Nurgle (Aura)"
+     },
+     "text": {
+      "en": "While a friendly NURGLE LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    },
+    {
+     "name": {
+      "en": "Daemon Lord of Nurgle (Aura)"
+     },
+     "text": {
+      "en": "While a friendly NURGLE LEGIONES DAEMONICA unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Nurgle’s Rot (Psychic)"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, you can select one enemy unit within 12\" of this model. Until the start of your next Movement phase, subtract 1 from the Toughness characteristic of models in that unit."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike",
+    "Feel No Pain 6+"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Great-Unclean-One",
+   "damaged": {
+    "name": {
+     "en": "1-7 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s plague flail can be replaced with 1 bileblade.",
+     "choices": []
+    },
+    {
+     "text": "This model’s bilesword can be replaced with 1 doomsday bell.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Great Unclean One"
+   ],
+   "equipped": [
+    "This model is equipped with: plague flail; putrid vomit; bilesword."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "plague-flail": 1,
+      "putrid-vomit": 1,
+      "bilesword": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Plague flail",
+      "es": "Plague flail"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "plague-flail",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bileblade"
+     ],
+     "packages": {
+      "bileblade": [
+       {
+        "item": "bileblade",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "bileblade": "Bileblade",
+      "": "Plague flail"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Bilesword",
+      "es": "Bilesword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bilesword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "doomsday-bell"
+     ],
+     "packages": {
+      "doomsday-bell": [
+       {
+        "item": "doomsday-bell",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "doomsday-bell": "Doomsday bell",
+      "": "Bilesword"
+     }
+    }
+   ],
+   "loadout": [
+    "bilesword",
+    "plague-flail",
+    "putrid-vomit"
+   ]
+  },
+  {
+   "id": "horticulous-slimux",
+   "name": {
+    "en": "Horticulous Slimux",
+    "es": "Horticulous Slimux"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "EPIC HERO",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "HORTICULOUS SLIMUX"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "acidic-maw",
+     "name": {
+      "en": "Acidic maw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-4",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lopping-shears",
+     "name": {
+      "en": "Lopping shears"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Beast Handler"
+     },
+     "text": {
+      "en": "While this model is leading a unit, you can re-roll charge rolls made for that unit. In addition, once per battle, you can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Seed the Garden of Nurgle"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, if this model is within one Area Terrain feature, until the end of the battle, that AREA TERRAIN feature is considered to be within your army’s Shadow of Chaos."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Horticulous-Slimux",
+   "composition": [
+    "1 Horticulous Slimux – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: acidic maw; lopping shears."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "beasts-of-nurgle"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "acidic-maw": 1,
+      "lopping-shears": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "acidic-maw",
+    "lopping-shears"
+   ]
+  },
+  {
+   "id": "infernal-enrapturess",
+   "name": {
+    "en": "Infernal Enrapturess",
+    "es": "Infernal Enrapturess"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "INFERNAL ENRAPTURESS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heartstring-lyre",
+     "name": {
+      "en": "Heartstring lyre"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Assault"
+       ],
+       "mode": {
+        "en": "cacophonous melody"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Assault"
+       ],
+       "mode": {
+        "en": "euphonic blast"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ravaging-claws",
+     "name": {
+      "en": "Ravaging claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Harmonic Alignment"
+     },
+     "text": {
+      "en": "While this model is leading a unit, in your Command phase, you can return D3 destroyed Bodyguard models to that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Discordant Disruption (Aura)"
+     },
+     "text": {
+      "en": "While an enemy PSYKER unit is within 12\" of this model, Psychic weapons equipped by models in that unit have the [HAZARDOUS] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Fights First",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Infernal-Enrapturess",
+   "composition": [
+    "1 Infernal Enrapturess"
+   ],
+   "equipped": [
+    "This model is equipped with: heartstring lyre; ravaging claws."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "daemonettes"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "heartstring-lyre": 1,
+      "ravaging-claws": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "heartstring-lyre",
+    "ravaging-claws"
+   ]
+  },
+  {
+   "id": "kairos-fateweaver",
+   "name": {
+    "en": "Kairos Fateweaver",
+    "es": "Kairos Fateweaver"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "EPIC HERO",
+    "FLY",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "KAIROS FATEWEAVER"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "10",
+     "Sv": "6+",
+     "W": "20",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-gateway",
+     "name": {
+      "en": "Infernal Gateway"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6+3",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Blast",
+        "Indirect Fire",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "D3+6",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Indirect Fire",
+        "Hazardous",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "staff-of-tomorrow",
+     "name": {
+      "en": "Staff of Tomorrow"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Greater Daemon of Tzeentch (Aura)"
+     },
+     "text": {
+      "en": "While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    },
+    {
+     "name": {
+      "en": "One Head Looks Forward"
+     },
+     "text": {
+      "en": "At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "One Head Looks Back"
+     },
+     "text": {
+      "en": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of the use of that stratagem by 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Kairos-Fateweaver",
+   "damaged": {
+    "name": {
+     "en": "1-7 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Kairos Fateweaver – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Infernal Gateway; Staff of Tomorrow."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-gateway": 1,
+      "staff-of-tomorrow": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "infernal-gateway",
+    "staff-of-tomorrow"
+   ]
+  },
+  {
+   "id": "karanak",
+   "name": {
+    "en": "Karanak",
+    "es": "Karanak"
+   },
+   "keywords": [
+    "BEAST",
+    "CHARACTER",
+    "EPIC HERO",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "KARANAK"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "7+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "scalding-roar",
+     "name": {
+      "en": "Scalding roar"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "soul-rending-fangs",
+     "name": {
+      "en": "Soul-rending fangs"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-character 3+",
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Pack Leader"
+     },
+     "text": {
+      "en": "While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Prey of the Blood God"
+     },
+     "text": {
+      "en": "At the start of the first battle round, select one enemy unit to be this model’s prey. Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the Wound roll. Each time this model’s prey is destroyed, select one new enemy unit to be this model’s prey."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Karanak",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Brass Collar of Bloody Vengeance"
+     },
+     "text": {
+      "en": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds."
+     }
+    }
+   ],
+   "composition": [
+    "1 Karanak – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: scalding roar; soul-rending fangs; Brass Collar of Bloody Vengeance."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "flesh-hounds"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "scalding-roar": 1,
+      "soul-rending-fangs": 1,
+      "gear:brass-collar-of-bloody-vengeance": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "gear:brass-collar-of-bloody-vengeance",
+    "scalding-roar",
+    "soul-rending-fangs"
+   ]
+  },
+  {
+   "id": "keeper-of-secrets",
+   "name": {
+    "en": "Keeper Of Secrets",
+    "es": "Keeper Of Secrets"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "KEEPER OF SECRETS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "10",
+     "Sv": "5+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "living-whip",
+     "name": {
+      "en": "Living whip"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phantasmagoria",
+     "name": {
+      "en": "Phantasmagoria"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "9",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Hazardous",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "ritual-knife",
+     "name": {
+      "en": "Ritual knife"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "snapping-claws",
+     "name": {
+      "en": "Snapping claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "witstealer-sword",
+     "name": {
+      "en": "Witstealer sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Daemon Lord of Slaanesh (Aura)"
+     },
+     "text": {
+      "en": "While a friendly SLAANESH LEGIONES DAEMONICA unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1."
+     }
+    },
+    {
+     "name": {
+      "en": "Mesmerising Form"
+     },
+     "text": {
+      "en": "Each time an attack targets this model, subtract 1 from the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Greater Daemon of Slaanesh (Aura)"
+     },
+     "text": {
+      "en": "While a friendly SLAANESH LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Keeper-Of-Secrets",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Shining Aegis"
+     },
+     "text": {
+      "en": "The bearer has a Save characteristic of 3+."
+     }
+    }
+   ],
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "Living whip",
+      "Ritual knife",
+      "Shining aegis"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Keeper of Secrets"
+   ],
+   "equipped": [
+    "This model is equipped with: Phantasmagoria; snapping claws; witstealer sword."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "phantasmagoria": 1,
+      "snapping-claws": 1,
+      "witstealer-sword": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "living-whip",
+      "ritual-knife",
+      "gear:shining-aegi"
+     ],
+     "packages": {
+      "living-whip": [
+       {
+        "item": "living-whip",
+        "n": 1
+       }
+      ],
+      "ritual-knife": [
+       {
+        "item": "ritual-knife",
+        "n": 1
+       }
+      ],
+      "gear:shining-aegi": [
+       {
+        "item": "gear:shining-aegi",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "living-whip": "Living whip",
+      "ritual-knife": "Ritual knife",
+      "gear:shining-aegi": "Shining aegi",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "phantasmagoria",
+    "snapping-claws",
+    "witstealer-sword"
+   ]
+  },
+  {
+   "id": "lord-of-change",
+   "name": {
+    "en": "Lord of Change",
+    "es": "Lord of Change"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "FLY",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "LORD OF CHANGE",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "10",
+     "Sv": "6+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "rod-of-sorcery",
+     "name": {
+      "en": "Rod of sorcery"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-of-change",
+     "name": {
+      "en": "Bolt of Change"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "9",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "9",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Hazardous",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "baleful-sword",
+     "name": {
+      "en": "Baleful sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "staff-of-tzeentch",
+     "name": {
+      "en": "Staff of Tzeentch"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Daemon Lord of Tzeentch (Aura)"
+     },
+     "text": {
+      "en": "While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Master of Magicks (Psychic)"
+     },
+     "text": {
+      "en": "In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Greater Daemon of Tzeentch (Aura)"
+     },
+     "text": {
+      "en": "While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lord-of-Change",
+   "damaged": {
+    "name": {
+     "en": "1-7 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 rod of sorcery",
+      "1 baleful sword"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Lord of Change"
+   ],
+   "equipped": [
+    "This model is equipped with: Bolt of Change; staff of Tzeentch."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-of-change": 1,
+      "staff-of-tzeentch": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "rod-of-sorcery",
+      "baleful-sword"
+     ],
+     "packages": {
+      "rod-of-sorcery": [
+       {
+        "item": "rod-of-sorcery",
+        "n": 1
+       }
+      ],
+      "baleful-sword": [
+       {
+        "item": "baleful-sword",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "rod-of-sorcery": "Rod of sorcery",
+      "baleful-sword": "Baleful sword",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-of-change",
+    "staff-of-tzeentch"
+   ]
+  },
+  {
+   "id": "poxbringer",
+   "name": {
+    "en": "Poxbringer",
+    "es": "Poxbringer"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "POXBRINGER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "5",
+     "Sv": "7+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "foul-balesword",
+     "name": {
+      "en": "Foul balesword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Poxbringer"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit."
+     }
+    },
+    {
+     "name": {
+      "en": "Feculent Despair (Aura, Psychic)"
+     },
+     "text": {
+      "en": "While an enemy unit is within 6\" of this model, each time that unit takes a Battle-shock test, subtract 1 from that test."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Feel No Pain 5+",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Poxbringer",
+   "composition": [
+    "1 Poxbringer"
+   ],
+   "equipped": [
+    "This model is equipped with: foul balesword."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "plaguebearers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "foul-balesword": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "foul-balesword"
+   ]
+  },
+  {
+   "id": "rendmaster-on-blood-throne",
+   "name": {
+    "en": "Rendmaster On Blood Throne",
+    "es": "Rendmaster On Blood Throne"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "RENDMASTER ON BLOOD THRONE",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "9",
+     "Sv": "4+",
+     "W": "9",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "attendants-hellblades",
+     "name": {
+      "en": "Attendants’ hellblades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blade-of-blood",
+     "name": {
+      "en": "Blade of blood"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Blood Throne"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, select one enemy unit within 18\" of and visible to this model. Until the end of the phase, each time a friendly KHORNE LEGIONES DAEMONICA unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1."
+     }
+    },
+    {
+     "name": {
+      "en": "Champion Slayer"
+     },
+     "text": {
+      "en": "Each time this model makes a melee attack that targets a CHARACTER or MONSTER unit, you can re-roll the Wound roll. Each time this model destroys an enemy CHARACTER or MONSTER unit, this model regains up to D6 lost wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Rendmaster-On-Blood-Throne",
+   "composition": [
+    "1 Rendmaster on Blood Throne"
+   ],
+   "equipped": [
+    "This model is equipped with: attendants’ hellblades; blade of blood."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "attendants-hellblades": 1,
+      "blade-of-blood": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "attendants-hellblades",
+    "blade-of-blood"
+   ]
+  },
+  {
+   "id": "rotigus",
+   "name": {
+    "en": "Rotigus",
+    "es": "Rotigus"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "EPIC HERO",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "ROTIGUS"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "12",
+     "Sv": "5+",
+     "W": "22",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "streams-of-brackish-filth",
+     "name": {
+      "en": "Streams of brackish filth"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "8",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gnarlrod",
+     "name": {
+      "en": "Gnarlrod"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Lethal Hits",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Greater Daemon of Nurgle (Aura)"
+     },
+     "text": {
+      "en": "While a friendly NURGLE LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    },
+    {
+     "name": {
+      "en": "Virulent Blessing (Psychic)"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, you can select one enemy unit within 24\" and visible to this model. Until the end of the phase, each time an attack made by a NURGLE LEGIONES DAEMONICA model is allocated to a model in that unit, add 1 to the Damage characteristic of that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Deluge of Nurgle (Aura)"
+     },
+     "text": {
+      "en": "While an enemy unit is within 6\" of this model, subtract 2 from the Move characteristic and subtract 1 from the Objective Control characteristic of models in that unit."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike",
+    "Feel No Pain 6+"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Rotigus",
+   "damaged": {
+    "name": {
+     "en": "1-7 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Rotigus – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: streams of brackish filth; gnarlrod."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "streams-of-brackish-filth": 1,
+      "gnarlrod": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "gnarlrod",
+    "streams-of-brackish-filth"
+   ]
+  },
+  {
+   "id": "shalaxi-helbane",
+   "name": {
+    "en": "Shalaxi Helbane",
+    "es": "Shalaxi Helbane"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "EPIC HERO",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "SHALAXI HELBANE"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "20",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "lash-of-slaanesh",
+     "name": {
+      "en": "Lash of Slaanesh"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pavane-of-slaanesh",
+     "name": {
+      "en": "Pavane of Slaanesh"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Hazardous",
+        "Devastating Wounds",
+        "Psychic",
+        "Sustained Hits 3"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "snapping-claws",
+     "name": {
+      "en": "Snapping claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "soulpiercer",
+     "name": {
+      "en": "Soulpiercer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+2",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Greater Daemon of Slaanesh (Aura)"
+     },
+     "text": {
+      "en": "While a friendly SLAANESH LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    },
+    {
+     "name": {
+      "en": "No Prey Can Evade"
+     },
+     "text": {
+      "en": "You can re-roll Advance and Charge rolls made for this model."
+     }
+    },
+    {
+     "name": {
+      "en": "Monarch of the Hunt"
+     },
+     "text": {
+      "en": "At the start of the first battle round, select one enemy unit to be this model’s quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s quarry is destroyed, select one new enemy unit to be this model’s quarry."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Shalaxi-Helbane",
+   "damaged": {
+    "name": {
+     "en": "1-7 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Shalaxi Helbane – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: lash of Slaanesh; Pavane of Slaanesh; snapping claws; soulpiercer."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "lash-of-slaanesh": 1,
+      "pavane-of-slaanesh": 1,
+      "snapping-claws": 1,
+      "soulpiercer": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lash-of-slaanesh",
+    "pavane-of-slaanesh",
+    "snapping-claws",
+    "soulpiercer"
+   ]
+  },
+  {
+   "id": "skarbrand",
+   "name": {
+    "en": "Skarbrand",
+    "es": "Skarbrand"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "EPIC HERO",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "SKARBRAND"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "20",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bellow-of-endless-fury",
+     "name": {
+      "en": "Bellow of endless fury"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "8",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "slaughter-and-carnage",
+     "name": {
+      "en": "Slaughter and Carnage"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "16",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "16",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Greater Daemon of Khorne (Aura)"
+     },
+     "text": {
+      "en": "While a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+     }
+    },
+    {
+     "name": {
+      "en": "Rage Embodied (Aura)"
+     },
+     "text": {
+      "en": "While a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Murderlust"
+     },
+     "text": {
+      "en": "This unit is eligible to declare a charge in a turn in which it Advanced."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skarbrand",
+   "damaged": {
+    "name": {
+     "en": "1-7 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage."
+    }
+   },
+   "composition": [
+    "1 Skarbrand – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: bellow of endless fury; Slaughter and Carnage."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bellow-of-endless-fury": 1,
+      "slaughter-and-carnage": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bellow-of-endless-fury",
+    "slaughter-and-carnage"
+   ]
+  },
+  {
+   "id": "skullmaster",
+   "name": {
+    "en": "Skullmaster",
+    "es": "Skullmaster"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "SKULLMASTER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "7",
+     "Sv": "3+",
+     "W": "6",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "blade-of-blood",
+     "name": {
+      "en": "Blade of blood"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "juggernauts-bladed-horn",
+     "name": {
+      "en": "Juggernaut’s bladed horn"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks",
+        "Lance"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Skullmaster’s Fury"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Devastating Charge"
+     },
+     "text": {
+      "en": "Each time this model’s unit ends a Charge move, each enemy unit within Engagement Range of that unit must take a Battle-shock test."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skullmaster",
+   "composition": [
+    "1 Skullmaster"
+   ],
+   "equipped": [
+    "This model is equipped with: blade of blood; Juggernaut’s bladed horn."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "bloodcrushers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "blade-of-blood": 1,
+      "juggernauts-bladed-horn": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blade-of-blood",
+    "juggernauts-bladed-horn"
+   ]
+  },
+  {
+   "id": "skulltaker",
+   "name": {
+    "en": "Skulltaker",
+    "es": "Skulltaker"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "SKULLTAKER"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "the-slayer-sword",
+     "name": {
+      "en": "The Slayer Sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Lord of Decapitations"
+     },
+     "text": {
+      "en": "While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Skulls for Khorne"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model destroys an enemy Character unit, you gain 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skulltaker",
+   "composition": [
+    "1 Skulltaker – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: the Slayer Sword."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "bloodletters"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "the-slayer-sword": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "the-slayer-sword"
+   ]
+  },
+  {
+   "id": "sloppity-bilepiper",
+   "name": {
+    "en": "Sloppity Bilepiper",
+    "es": "Sloppity Bilepiper"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "SLOPPITY BILEPIPER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "5",
+     "Sv": "7+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "marotter",
+     "name": {
+      "en": "Marotter"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Jolly Gutpipes"
+     },
+     "text": {
+      "en": "While this model is leading a unit, add 1 to the Move characteristic of models in that unit and you can re-roll Advance rolls made for that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Disease of Mirth (Aura)"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, every enemy unit (excluding MONSTERS and VEHICLES) within 6\" of this model must take a Battle-shock test."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sloppity-Bilepiper",
+   "composition": [
+    "1 Sloppity Bilepiper"
+   ],
+   "equipped": [
+    "This model is equipped with: marotter."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "plaguebearers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "marotter": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "marotter"
+   ]
+  },
+  {
+   "id": "spoilpox-scrivener",
+   "name": {
+    "en": "Spoilpox Scrivener",
+    "es": "Spoilpox Scrivener"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "SPOILPOX SCRIVENER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "5",
+     "Sv": "7+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "disgusting-sneezes",
+     "name": {
+      "en": "Disgusting sneezes"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plaguesword-and-distended-maw",
+     "name": {
+      "en": "Plaguesword and distended maw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Keep Counting!"
+     },
+     "text": {
+      "en": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Meet Your Quota!"
+     },
+     "text": {
+      "en": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Spoilpox-Scrivener",
+   "composition": [
+    "1 Spoilpox Scrivener"
+   ],
+   "equipped": [
+    "This model is equipped with: disgusting sneezes; plaguesword and distended maw."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "plaguebearers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "disgusting-sneezes": 1,
+      "plaguesword-and-distended-maw": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "disgusting-sneezes",
+    "plaguesword-and-distended-maw"
+   ]
+  },
+  {
+   "id": "syllesske",
+   "name": {
+    "en": "Syll’esske",
+    "es": "Syll’esske"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "EPIC HERO",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "SYLL’ESSKE"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "6",
+     "Sv": "6+",
+     "W": "9",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "cacophonic-choir",
+     "name": {
+      "en": "Cacophonic choir"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Ignores Cover",
+        "Psychic",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Psychic",
+        "Hazardous",
+        "Ignores Cover",
+        "Devastating Wounds",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "scourging-whip",
+     "name": {
+      "en": "Scourging whip"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "9\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Assault"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "axe-of-dominion",
+     "name": {
+      "en": "Axe of Dominion"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "scourging-whip-melee",
+     "name": {
+      "en": "Scourging whip"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Prince of Slaanesh"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes a melee attack, a successful unmodified Wound roll of 5+ scores a Critical Wound."
+     }
+    },
+    {
+     "name": {
+      "en": "Delightful Agonies"
+     },
+     "text": {
+      "en": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Syll-esske",
+   "composition": [
+    "1 Syll’Esske – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Cacophonic Choir; scourging whip; Axe of Dominion."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "daemonettes"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "cacophonic-choir": 1,
+      "scourging-whip": 1,
+      "scourging-whip-melee": 1,
+      "axe-of-dominion": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "axe-of-dominion",
+    "cacophonic-choir",
+    "scourging-whip",
+    "scourging-whip-melee"
+   ]
+  },
+  {
+   "id": "the-blue-scribes",
+   "name": {
+    "en": "The Blue Scribes",
+    "es": "The Blue Scribes"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "EPIC HERO",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "THE BLUE SCRIBES"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "6+",
+     "W": "6",
+     "Ld": "8+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "sharp-quills",
+     "name": {
+      "en": "Sharp quills"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "5+",
+       "S": "2",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-psyker 2+"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "P’tarix’s Sorcerous Syphon (Aura)"
+     },
+     "text": {
+      "en": "While an enemy unit is within 12\" of this model, each time a model in that unit makes a Psychic Attack, subtract 1 from the Wound roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Xirat’p’s Sorcerous Barrages (Psychic)"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Lone Operative"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../The-Blue-Scribes",
+   "composition": [
+    "1 The Blue Scribes – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: sharp quills."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "sharp-quills": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "sharp-quills"
+   ]
+  },
+  {
+   "id": "the-changeling",
+   "name": {
+    "en": "The Changeling",
+    "es": "The Changeling"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "THE CHANGELING"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-flames",
+     "name": {
+      "en": "Infernal Flames"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Ignores Cover",
+        "Hazardous",
+        "Psychic",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "the-tricksters-staff",
+     "name": {
+      "en": "The Trickster’s Staff"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Formless Horror"
+     },
+     "text": {
+      "en": "Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Mischief and Confusion"
+     },
+     "text": {
+      "en": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Lone Operative",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../The-Changeling",
+   "composition": [
+    "1 The Changeling – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Infernal Flames; the Trickster’s Staff."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-flames": 1,
+      "the-tricksters-staff": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "infernal-flames",
+    "the-tricksters-staff"
+   ]
+  },
+  {
+   "id": "the-masque-of-slaanesh",
+   "name": {
+    "en": "The Masque Of Slaanesh",
+    "es": "The Masque Of Slaanesh"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "THE MASQUE OF SLAANESH"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "serrated-claws",
+     "name": {
+      "en": "Serrated claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "The Eternal Dance"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, select one enemy unit within 6\" of this model. Until the end of the phase: Each time a friendly SLAANESH LEGIONES DAEMONICA model makes a melee attack that targets that enemy unit, add 1 to the Wound roll. Each time a model in that enemy unit makes a melee attack, subtract 1 from the Wound roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Dazzling Acrobatics"
+     },
+     "text": {
+      "en": "This model is eligible to declare a charge in a turn in which it Advanced or Fell Back."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Fights First",
+    "Lone Operative"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../The-Masque-Of-Slaanesh",
+   "composition": [
+    "1 The Masque of Slaanesh – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: serrated claws."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "serrated-claws": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "serrated-claws"
+   ]
+  },
+  {
+   "id": "tormentbringer",
+   "name": {
+    "en": "Tormentbringer",
+    "es": "Tormentbringer"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "TORMENTBRINGER ON EXALTED SEEKER CHARIOT",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "6",
+     "Sv": "5+",
+     "W": "12",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "lashes-of-torment",
+     "name": {
+      "en": "Lashes of torment"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Assault",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lashes-of-torment-melee",
+     "name": {
+      "en": "Lashes of torment"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seeker-tongues",
+     "name": {
+      "en": "Seeker tongues"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "slashing-claws",
+     "name": {
+      "en": "Slashing claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Tormentbringer (Aura)"
+     },
+     "text": {
+      "en": "While a friendly SLAANESH LEGIONES DAEMONICA unit is within 6\" of this model, melee weapons in that unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Hysterical Frenzy (Psychic)"
+     },
+     "text": {
+      "en": "Each time a model in this model’s unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tormentbringer",
+   "composition": [
+    "1 Tormentbringer"
+   ],
+   "equipped": [
+    "This model is equipped with: lashes of torment; Seeker tongues; slashing claws."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "hellflayers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "lashes-of-torment": 1,
+      "lashes-of-torment-melee": 1,
+      "seeker-tongues": 1,
+      "slashing-claws": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lashes-of-torment",
+    "lashes-of-torment-melee",
+    "seeker-tongues",
+    "slashing-claws"
+   ]
+  },
+  {
+   "id": "tranceweaver",
+   "name": {
+    "en": "Tranceweaver",
+    "es": "Tranceweaver"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "PSYKER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "TRANCEWEAVER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ravaging-claws",
+     "name": {
+      "en": "Ravaging claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Tranceweaver"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack is within range of an objective marker, you can re-roll the Hit roll instead."
+     }
+    },
+    {
+     "name": {
+      "en": "Symphony of Pain (Psychic)"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, you can select one enemy unit that is Battle-shocked and within 12\" of this model. Until the end of the turn, each time a SLAANESH LEGIONES DAEMONICA model from your army makes an attack that targets that enemy unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Fights First",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tranceweaver",
+   "composition": [
+    "1 Tranceweaver"
+   ],
+   "equipped": [
+    "This model is equipped with: ravaging claws."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "daemonettes"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "ravaging-claws": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "ravaging-claws"
+   ]
+  },
+  {
+   "id": "bloodletters",
+   "name": {
+    "en": "Bloodletters",
+    "es": "Bloodletters"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "BLOODLETTERS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "7+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hellblade",
+     "name": {
+      "en": "Hellblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bane of Cowards"
+     },
+     "text": {
+      "en": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Bloodletters",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Daemonic Icon"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+     }
+    },
+    {
+     "name": {
+      "en": "Instrument of Chaos"
+     },
+     "text": {
+      "en": "Add 1 to Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Bloodletter that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+     "choices": []
+    },
+    {
+     "text": "1 Bloodletter that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Bloodreaper",
+    "9 Bloodletters"
+   ],
+   "equipped": [
+    "Every model is equipped with: hellblade."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "hellblade": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Bloodletter: add Instrument of chao",
+      "es": "Bloodletter: añadir Instrument of chao"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:instrument-of-chao",
+     "packages": {
+      "gear:instrument-of-chao": [
+       {
+        "item": "gear:instrument-of-chao",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Bloodletter",
+     "labels": {
+      "gear:instrument-of-chao": "Instrument of chao"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Bloodletter: add Daemonic icon",
+      "es": "Bloodletter: añadir Daemonic icon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:daemonic-icon",
+     "packages": {
+      "gear:daemonic-icon": [
+       {
+        "item": "gear:daemonic-icon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Bloodletter",
+     "labels": {
+      "gear:daemonic-icon": "Daemonic icon"
+     }
+    }
+   ],
+   "loadout": [
+    "hellblade"
+   ]
+  },
+  {
+   "id": "blue-horrors",
+   "name": {
+    "en": "Blue Horrors",
+    "es": "Blue Horrors"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "HORRORS",
+    "BLUE",
+    "BRIMSTONE: SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "1",
+     "Ld": "8+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "coruscating-blue-flames",
+     "name": {
+      "en": "Coruscating Blue Flames"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "coruscating-yellow-flames",
+     "name": {
+      "en": "Coruscating Yellow Flames"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "5+",
+       "S": "2",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blue-claws",
+     "name": {
+      "en": "Blue claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "5+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "yellow-claws",
+     "name": {
+      "en": "Yellow claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "5+",
+       "S": "2",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Split"
+     },
+     "text": {
+      "en": "Each time a BLUE HORROR model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, add one BRIMSTONE HORROR model to this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Sullen Malevolence (Aura)"
+     },
+     "text": {
+      "en": "While an enemy unit is within 6\" of this unit, if this unit contains one or more BLUE HORROR models, worsen the Leadership characteristic of models in that enemy unit by 1."
+     }
+    },
+    {
+     "name": {
+      "en": "Exploding Horrors"
+     },
+     "text": {
+      "en": "Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more BRIMSTONE HORROR models in this unit. For each BRIMSTONE HORROR model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Infiltrators"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Blue-Horrors",
+   "composition": [
+    "10 Blue Horrors"
+   ],
+   "equipped": [
+    "Every Blue Horror is equipped with: Coruscating Blue Flames; blue claws.",
+    "Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "coruscating-blue-flames": 10,
+      "blue-claws": 10,
+      "coruscating-yellow-flames": 1,
+      "yellow-claws": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blue-claws",
+    "coruscating-blue-flames",
+    "coruscating-yellow-flames",
+    "yellow-claws"
+   ]
+  },
+  {
+   "id": "daemonettes",
+   "name": {
+    "en": "Daemonettes",
+    "es": "Daemonettes"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "DAEMONETTES",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "slashing-claws",
+     "name": {
+      "en": "Slashing claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Horrifying Beauty"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from the result if that enemy unit is Below Half-strength."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Fights First"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemonettes",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Daemonic Icon"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+     }
+    },
+    {
+     "name": {
+      "en": "Instrument of Chaos"
+     },
+     "text": {
+      "en": "Add 1 to Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Daemonette that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+     "choices": []
+    },
+    {
+     "text": "1 Daemonette that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Alluress",
+    "9 Daemonettes"
+   ],
+   "equipped": [
+    "Every model is equipped with: slashing claws."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "slashing-claws": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Daemonette: add Instrument of chao",
+      "es": "Daemonette: añadir Instrument of chao"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:instrument-of-chao",
+     "packages": {
+      "gear:instrument-of-chao": [
+       {
+        "item": "gear:instrument-of-chao",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Daemonette",
+     "labels": {
+      "gear:instrument-of-chao": "Instrument of chao"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Daemonette: add Daemonic icon",
+      "es": "Daemonette: añadir Daemonic icon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:daemonic-icon",
+     "packages": {
+      "gear:daemonic-icon": [
+       {
+        "item": "gear:daemonic-icon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Daemonette",
+     "labels": {
+      "gear:daemonic-icon": "Daemonic icon"
+     }
+    }
+   ],
+   "loadout": [
+    "slashing-claws"
+   ]
+  },
+  {
+   "id": "nurglings",
+   "name": {
+    "en": "Nurglings",
+    "es": "Nurglings"
+   },
+   "keywords": [
+    "SWARM",
+    "BATTLELINE",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "NURGLINGS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "4",
+     "Ld": "8+",
+     "OC": "0",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "diseased-claws-and-teeth",
+     "name": {
+      "en": "Diseased claws and teeth"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "5+",
+       "S": "2",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Mischief Makers"
+     },
+     "text": {
+      "en": "Each time an enemy unit (excluding TITANIC units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Infiltrators"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Nurglings",
+   "composition": [
+    "3-6 Nurgling Swarms"
+   ],
+   "equipped": [
+    "Every model is equipped with: diseased claws and teeth."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "diseased-claws-and-teeth": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "diseased-claws-and-teeth": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "diseased-claws-and-teeth"
+   ]
+  },
+  {
+   "id": "pink-horrors",
+   "name": {
+    "en": "Pink Horrors",
+    "es": "Pink Horrors"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "HORRORS",
+    "PINK",
+    "BLUE",
+    "BRIMSTONE: SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Blue Horror/brimstone Horror(⌀25mm)"
+     },
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "coruscating-pink-flames",
+     "name": {
+      "en": "Coruscating Pink Flames"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "coruscating-blue-flames",
+     "name": {
+      "en": "Coruscating Blue Flames"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "coruscating-yellow-flames",
+     "name": {
+      "en": "Coruscating Yellow Flames"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "5+",
+       "S": "2",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pink-claws",
+     "name": {
+      "en": "Pink claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "blue-claws",
+     "name": {
+      "en": "Blue claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "5+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "yellow-claws",
+     "name": {
+      "en": "Yellow claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "5+",
+       "S": "2",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Split"
+     },
+     "text": {
+      "en": "Each time a PINK HORROR or BLUE HORROR model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Pink-Horrors",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Daemonic Icon"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+     }
+    },
+    {
+     "name": {
+      "en": "Instrument of Chaos"
+     },
+     "text": {
+      "en": "Add 1 to Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Pink Horror that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+     "choices": []
+    },
+    {
+     "text": "1 Pink Horror that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "10 Pink Horrors"
+   ],
+   "equipped": [
+    "Every Pink Horror is equipped with: Coruscating Pink Flames; pink claws.",
+    "Every Blue Horror added to this unit using the Split ability is equipped with: Coruscating Blue Flames; blue claws.",
+    "Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "coruscating-pink-flames": 10,
+      "pink-claws": 10,
+      "coruscating-blue-flames": 1,
+      "blue-claws": 1,
+      "coruscating-yellow-flames": 1,
+      "yellow-claws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Pink Horror: add Instrument of chao",
+      "es": "Pink Horror: añadir Instrument of chao"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:instrument-of-chao",
+     "packages": {
+      "gear:instrument-of-chao": [
+       {
+        "item": "gear:instrument-of-chao",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Pink Horror",
+     "labels": {
+      "gear:instrument-of-chao": "Instrument of chao"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Pink Horror: add Daemonic icon",
+      "es": "Pink Horror: añadir Daemonic icon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:daemonic-icon",
+     "packages": {
+      "gear:daemonic-icon": [
+       {
+        "item": "gear:daemonic-icon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Pink Horror",
+     "labels": {
+      "gear:daemonic-icon": "Daemonic icon"
+     }
+    }
+   ],
+   "loadout": [
+    "blue-claws",
+    "coruscating-blue-flames",
+    "coruscating-pink-flames",
+    "coruscating-yellow-flames",
+    "pink-claws",
+    "yellow-claws"
+   ]
+  },
+  {
+   "id": "plaguebearers",
+   "name": {
+    "en": "Plaguebearers",
+    "es": "Plaguebearers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "PLAGUEBEARERS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "5",
+     "Sv": "7+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "plaguesword",
+     "name": {
+      "en": "Plaguesword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Infected Outbreak"
+     },
+     "text": {
+      "en": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Plaguebearers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Daemonic Icon"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+     }
+    },
+    {
+     "name": {
+      "en": "Instrument of Chaos"
+     },
+     "text": {
+      "en": "Add 1 to Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Plaguebearer that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+     "choices": []
+    },
+    {
+     "text": "1 Plaguebearer that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Plagueridden",
+    "9 Plaguebearers"
+   ],
+   "equipped": [
+    "Every model is equipped with: plaguesword."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "plaguesword": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Plaguebearer: add Instrument of chao",
+      "es": "Plaguebearer: añadir Instrument of chao"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:instrument-of-chao",
+     "packages": {
+      "gear:instrument-of-chao": [
+       {
+        "item": "gear:instrument-of-chao",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Plaguebearer",
+     "labels": {
+      "gear:instrument-of-chao": "Instrument of chao"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Plaguebearer: add Daemonic icon",
+      "es": "Plaguebearer: añadir Daemonic icon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:daemonic-icon",
+     "packages": {
+      "gear:daemonic-icon": [
+       {
+        "item": "gear:daemonic-icon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Plaguebearer",
+     "labels": {
+      "gear:daemonic-icon": "Daemonic icon"
+     }
+    }
+   ],
+   "loadout": [
+    "plaguesword"
+   ]
+  },
+  {
+   "id": "beasts-of-nurgle",
+   "name": {
+    "en": "Beasts Of Nurgle",
+    "es": "Beasts Of Nurgle"
+   },
+   "keywords": [
+    "BEAST",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "BEASTS OF NURGLE",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "9",
+     "Sv": "6+",
+     "W": "7",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "putrid-appendages",
+     "name": {
+      "en": "Putrid appendages"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Grotesque Regeneration"
+     },
+     "text": {
+      "en": "At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Deep Strike",
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Beasts-Of-Nurgle",
+   "composition": [
+    "1-2 Beasts of Nurgle"
+   ],
+   "equipped": [
+    "Every model is equipped with: putrid appendages."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "putrid-appendages": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "putrid-appendages": 2
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "putrid-appendages"
+   ]
+  },
+  {
+   "id": "fiends",
+   "name": {
+    "en": "Fiends",
+    "es": "Fiends"
+   },
+   "keywords": [
+    "BEAST",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "FIENDS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "5",
+     "Sv": "7+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "barbed-tail-and-dissecting-claws",
+     "name": {
+      "en": "Barbed tail and dissecting claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Soporific Musk"
+     },
+     "text": {
+      "en": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Fiends",
+   "composition": [
+    "1 Blissbringer",
+    "2-5 Fiends"
+   ],
+   "equipped": [
+    "Every model is equipped with: barbed tail and dissecting claws."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "barbed-tail-and-dissecting-claws": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "barbed-tail-and-dissecting-claws": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "barbed-tail-and-dissecting-claws"
+   ]
+  },
+  {
+   "id": "flamers",
+   "name": {
+    "en": "Flamers",
+    "es": "Flamers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "FLAMERS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "4",
+     "Sv": "7+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "flickering-flames",
+     "name": {
+      "en": "Flickering Flames"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flamer-mouths",
+     "name": {
+      "en": "Flamer mouths"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bounding Leaps"
+     },
+     "text": {
+      "en": "This unit is eligible to shoot in a turn in which it Fell Back."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Flamers",
+   "composition": [
+    "1 Pyrocaster",
+    "2-5 Flamers"
+   ],
+   "equipped": [
+    "Every model is equipped with: Flickering Flames; Flamer mouths."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "flickering-flames": 3,
+      "flamer-mouths": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "flickering-flames": 6,
+      "flamer-mouths": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "flamer-mouths",
+    "flickering-flames"
+   ]
+  },
+  {
+   "id": "flesh-hounds",
+   "name": {
+    "en": "Flesh Hounds",
+    "es": "Flesh Hounds"
+   },
+   "keywords": [
+    "BEAST",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "FLESH HOUNDS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "7+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "burning-roar",
+     "name": {
+      "en": "Burning roar"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gore-drenched-fangs",
+     "name": {
+      "en": "Gore-drenched fangs"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Hunters from the Warp"
+     },
+     "text": {
+      "en": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Flesh-Hounds",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Collar of Khorne"
+     },
+     "text": {
+      "en": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks."
+     }
+    }
+   ],
+   "composition": [
+    "1 Gore Hound",
+    "4-9 Flesh Hounds"
+   ],
+   "equipped": [
+    "The Gore Hound is equipped with: burning roar; gore-drenched fangs; collar of Khorne.",
+    "Every Flesh Hound is equipped with: gore-drenched fangs; collar of Khorne."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "burning-roar": 1,
+      "gore-drenched-fangs": 5,
+      "gear:collar-of-khorne": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "burning-roar": 1,
+      "gore-drenched-fangs": 10,
+      "gear:collar-of-khorne": 10
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "burning-roar",
+    "gear:collar-of-khorne",
+    "gore-drenched-fangs"
+   ]
+  },
+  {
+   "id": "screamers",
+   "name": {
+    "en": "Screamers",
+    "es": "Screamers"
+   },
+   "keywords": [
+    "BEAST",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "SCREAMERS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "4",
+     "Sv": "6+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "lamprey-bite",
+     "name": {
+      "en": "Lamprey bite"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-monster 4+",
+        "Anti-vehicle 4+"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Slashing Dive"
+     },
+     "text": {
+      "en": "In your Movement phase, after this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Screamers",
+   "composition": [
+    "3-6 Screamers"
+   ],
+   "equipped": [
+    "Every model is equipped with: lamprey bite."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "lamprey-bite": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "lamprey-bite": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lamprey-bite"
+   ]
+  },
+  {
+   "id": "bloodcrushers",
+   "name": {
+    "en": "Bloodcrushers",
+    "es": "Bloodcrushers"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "BLOODCRUSHERS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "7",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hellblade",
+     "name": {
+      "en": "Hellblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "juggernauts-bladed-horn",
+     "name": {
+      "en": "Juggernaut’s bladed horn"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks",
+        "Lance"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Brass Stampede"
+     },
+     "text": {
+      "en": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Bloodcrushers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Daemonic Icon"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+     }
+    },
+    {
+     "name": {
+      "en": "Instrument of Chaos"
+     },
+     "text": {
+      "en": "Add 1 to Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Bloodcrusher that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+     "choices": []
+    },
+    {
+     "text": "1 Bloodcrusher that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Bloodhunter",
+    "2-5 Bloodcrushers"
+   ],
+   "equipped": [
+    "Every model is equipped with: hellblade; Juggernaut’s bladed horn."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "hellblade": 3,
+      "juggernauts-bladed-horn": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "hellblade": 6,
+      "juggernauts-bladed-horn": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Bloodcrusher: add Instrument of chao",
+      "es": "Bloodcrusher: añadir Instrument of chao"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:instrument-of-chao",
+     "packages": {
+      "gear:instrument-of-chao": [
+       {
+        "item": "gear:instrument-of-chao",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 1
+     },
+     "owner": "Bloodcrusher",
+     "labels": {
+      "gear:instrument-of-chao": "Instrument of chao"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Bloodcrusher: add Daemonic icon",
+      "es": "Bloodcrusher: añadir Daemonic icon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:daemonic-icon",
+     "packages": {
+      "gear:daemonic-icon": [
+       {
+        "item": "gear:daemonic-icon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 1
+     },
+     "owner": "Bloodcrusher",
+     "labels": {
+      "gear:daemonic-icon": "Daemonic icon"
+     }
+    }
+   ],
+   "loadout": [
+    "hellblade",
+    "juggernauts-bladed-horn"
+   ]
+  },
+  {
+   "id": "burning-chariot",
+   "name": {
+    "en": "Burning Chariot",
+    "es": "Burning Chariot"
+   },
+   "keywords": [
+    "MOUNTED",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "TZEENTCH",
+    "BURNING CHARIOT",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "8",
+     "Sv": "7+",
+     "W": "9",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "fire-of-tzeentch",
+     "name": {
+      "en": "Fire of Tzeentch"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "blue fire"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "pink fire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "flamer-mouths",
+     "name": {
+      "en": "Flamer mouths"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "screamer-bites",
+     "name": {
+      "en": "Screamer bites"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-monster 4+",
+        "Anti-vehicle 4+",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Eldritch Flames (Psychic)"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Burning-Chariot",
+   "composition": [
+    "1 Burning Chariot"
+   ],
+   "equipped": [
+    "This model is equipped with: Fire of Tzeentch; Flamer mouths; Screamer bites."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "fire-of-tzeentch": 1,
+      "flamer-mouths": 1,
+      "screamer-bites": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "fire-of-tzeentch",
+    "flamer-mouths",
+    "screamer-bites"
+   ]
+  },
+  {
+   "id": "hellflayers",
+   "name": {
+    "en": "Hellflayers",
+    "es": "Hellflayers"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "HELLFLAYERS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "6",
+     "Sv": "5+",
+     "W": "7",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "lashes-of-torment",
+     "name": {
+      "en": "Lashes of torment"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Assault",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lashes-of-torment-melee",
+     "name": {
+      "en": "Lashes of torment"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seeker-tongues",
+     "name": {
+      "en": "Seeker tongues"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "slashing-claws",
+     "name": {
+      "en": "Slashing claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Cutting Down the Foe"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Hellflayers",
+   "composition": [
+    "1-2 Hellflayers"
+   ],
+   "equipped": [
+    "Every model is equipped with: lashes of torment; Seeker tongues; slashing claws."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "lashes-of-torment": 1,
+      "lashes-of-torment-melee": 1,
+      "seeker-tongues": 1,
+      "slashing-claws": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "lashes-of-torment": 2,
+      "lashes-of-torment-melee": 2,
+      "seeker-tongues": 2,
+      "slashing-claws": 2
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lashes-of-torment",
+    "lashes-of-torment-melee",
+    "seeker-tongues",
+    "slashing-claws"
+   ]
+  },
+  {
+   "id": "plague-drones",
+   "name": {
+    "en": "Plague Drones",
+    "es": "Plague Drones"
+   },
+   "keywords": [
+    "MOUNTED",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "NURGLE",
+    "PLAGUE DRONES",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "8",
+     "Sv": "6+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "deaths-heads",
+     "name": {
+      "en": "Death’s heads"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "foul-mouthparts",
+     "name": {
+      "en": "Foul mouthparts"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plaguesword",
+     "name": {
+      "en": "Plaguesword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Death’s Heads"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly NURGLE LEGIONES DAEMONICA unit makes an attack that targets that unit, you can re-roll the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Plague-Drones",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Daemonic Icon"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+     }
+    },
+    {
+     "name": {
+      "en": "Instrument of Chaos"
+     },
+     "text": {
+      "en": "Add 1 to Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Plague Drone that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+     "choices": []
+    },
+    {
+     "text": "1 Plague Drone that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Plaguebringer",
+    "2-5 Plague Drones"
+   ],
+   "equipped": [
+    "Every model is equipped with: death’s heads; foul mouthparts; plaguesword."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "deaths-heads": 3,
+      "foul-mouthparts": 3,
+      "plaguesword": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "deaths-heads": 6,
+      "foul-mouthparts": 6,
+      "plaguesword": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Plague Drone: add Instrument of chao",
+      "es": "Plague Drone: añadir Instrument of chao"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:instrument-of-chao",
+     "packages": {
+      "gear:instrument-of-chao": [
+       {
+        "item": "gear:instrument-of-chao",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 1
+     },
+     "owner": "Plague Drone",
+     "labels": {
+      "gear:instrument-of-chao": "Instrument of chao"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Plague Drone: add Daemonic icon",
+      "es": "Plague Drone: añadir Daemonic icon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:daemonic-icon",
+     "packages": {
+      "gear:daemonic-icon": [
+       {
+        "item": "gear:daemonic-icon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 1
+     },
+     "owner": "Plague Drone",
+     "labels": {
+      "gear:daemonic-icon": "Daemonic icon"
+     }
+    }
+   ],
+   "loadout": [
+    "deaths-heads",
+    "foul-mouthparts",
+    "plaguesword"
+   ]
+  },
+  {
+   "id": "seekers",
+   "name": {
+    "en": "Seekers",
+    "es": "Seekers"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "SEEKERS",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "4",
+     "Sv": "7+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "lashing-tongue",
+     "name": {
+      "en": "Lashing tongue"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "slashing-claws",
+     "name": {
+      "en": "Slashing claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Unholy Speed"
+     },
+     "text": {
+      "en": "You can re-roll Advance and Charge rolls made for this unit."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Scouts 9\""
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Seekers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Daemonic Icon"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+     }
+    },
+    {
+     "name": {
+      "en": "Instrument of Chaos"
+     },
+     "text": {
+      "en": "Add 1 to Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Seeker that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+     "choices": []
+    },
+    {
+     "text": "1 Seeker that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Heartseeker",
+    "4-9 Seekers"
+   ],
+   "equipped": [
+    "Every model is equipped with: lashing tongue; slashing claws."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "lashing-tongue": 5,
+      "slashing-claws": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "lashing-tongue": 10,
+      "slashing-claws": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Seeker: add Instrument of chao",
+      "es": "Seeker: añadir Instrument of chao"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:instrument-of-chao",
+     "packages": {
+      "gear:instrument-of-chao": [
+       {
+        "item": "gear:instrument-of-chao",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 1
+     },
+     "owner": "Seeker",
+     "labels": {
+      "gear:instrument-of-chao": "Instrument of chao"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Seeker: add Daemonic icon",
+      "es": "Seeker: añadir Daemonic icon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:daemonic-icon",
+     "packages": {
+      "gear:daemonic-icon": [
+       {
+        "item": "gear:daemonic-icon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 1
+     },
+     "owner": "Seeker",
+     "labels": {
+      "gear:daemonic-icon": "Daemonic icon"
+     }
+    }
+   ],
+   "loadout": [
+    "lashing-tongue",
+    "slashing-claws"
+   ]
+  },
+  {
+   "id": "skull-cannon",
+   "name": {
+    "en": "Skull Cannon",
+    "es": "Skull Cannon"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "SKULL CANNON",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "9",
+     "Sv": "4+",
+     "W": "9",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "skull-cannon",
+     "name": {
+      "en": "Skull cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "attendants-hellblades",
+     "name": {
+      "en": "Attendants’ hellblades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "biting-maw",
+     "name": {
+      "en": "Biting maw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Skulls of the Fallen"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit that was hit by one or more of those attacks. That unit must take a Battle-shock test."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skull-Cannon",
+   "composition": [
+    "1 Skull Cannon"
+   ],
+   "equipped": [
+    "This model is equipped with: skull cannon; attendants’ hellblades; biting maw."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "skull-cannon": 1,
+      "attendants-hellblades": 1,
+      "biting-maw": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "attendants-hellblades",
+    "biting-maw",
+    "skull-cannon"
+   ]
+  },
+  {
+   "id": "soul-grinder",
+   "name": {
+    "en": "Soul Grinder",
+    "es": "Soul Grinder"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "DAEMON",
+    "SOUL GRINDER",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "5",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "harvester-cannon",
+     "name": {
+      "en": "Harvester cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "torrent-of-burning-blood",
+     "name": {
+      "en": "Torrent of burning blood"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phlegm-bombardment",
+     "name": {
+      "en": "Phlegm bombardment"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Blast",
+        "Indirect Fire",
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "scream-of-despair",
+     "name": {
+      "en": "Scream of despair"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "warp-gaze",
+     "name": {
+      "en": "Warp gaze"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "D6+2",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "iron-claw",
+     "name": {
+      "en": "Iron claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "16",
+       "AP": "-3",
+       "D": "D6+2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "warpclaw",
+     "name": {
+      "en": "Warpclaw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "warpsword",
+     "name": {
+      "en": "Warpsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Scuttling Walker"
+     },
+     "text": {
+      "en": "Each time this model makes a Normal or Advance move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4\" or less in height as if they were not there."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Soul-Grinder",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s warpsword can be replaced with 1 warpclaw.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Soul Grinder"
+   ],
+   "equipped": [
+    "This model is equipped with: harvester cannon; iron claw; warpsword."
+   ],
+   "keywordChoice": {
+    "name": {
+     "en": "Daemonic Allegiance"
+    },
+    "options": [
+     {
+      "keyword": "KHORNE",
+      "equipment": "torrent of burning blood"
+     },
+     {
+      "keyword": "TZEENTCH",
+      "equipment": "warp gaze"
+     },
+     {
+      "keyword": "NURGLE",
+      "equipment": "phlegm bombardment"
+     },
+     {
+      "keyword": "SLAANESH",
+      "equipment": "scream of despair"
+     }
+    ]
+   },
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "harvester-cannon": 1,
+      "iron-claw": 1,
+      "warpsword": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Warpsword",
+      "es": "Warpsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "warpsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "warpclaw"
+     ],
+     "packages": {
+      "warpclaw": [
+       {
+        "item": "warpclaw",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "warpclaw": "Warpclaw",
+      "": "Warpsword"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Daemonic Allegiance"
+     },
+     "name": {
+      "en": "Daemonic Allegiance"
+     },
+     "type": "swap",
+     "required": true,
+     "replaces": [],
+     "choices": [
+      "",
+      "khorne",
+      "tzeentch",
+      "nurgle",
+      "slaanesh"
+     ],
+     "packages": {
+      "khorne": [
+       {
+        "item": "torrent-of-burning-blood",
+        "n": 1
+       }
+      ],
+      "tzeentch": [
+       {
+        "item": "warp-gaze",
+        "n": 1
+       }
+      ],
+      "nurgle": [
+       {
+        "item": "phlegm-bombardment",
+        "n": 1
+       }
+      ],
+      "slaanesh": [
+       {
+        "item": "scream-of-despair",
+        "n": 1
+       }
+      ]
+     },
+     "keywords": {
+      "khorne": "KHORNE",
+      "tzeentch": "TZEENTCH",
+      "nurgle": "NURGLE",
+      "slaanesh": "SLAANESH"
+     },
+     "labels": {
+      "": "—",
+      "khorne": "KHORNE: Torrent of burning blood",
+      "tzeentch": "TZEENTCH: Warp gaze",
+      "nurgle": "NURGLE: Phlegm bombardment",
+      "slaanesh": "SLAANESH: Scream of despair"
+     }
+    }
+   ],
+   "loadout": [
+    "harvester-cannon",
+    "iron-claw",
+    "warpsword"
+   ]
+  },
+  {
+   "id": "feculent-gnarlmaw",
+   "name": {
+    "en": "Feculent Gnarlmaw",
+    "es": "Feculent Gnarlmaw"
+   },
+   "keywords": [
+    "FORTIFICATION",
+    "CHAOS",
+    "DAEMON",
+    "FRAME",
+    "NURGLE",
+    "FECULENT GNARLMAW",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "-",
+     "T": "9",
+     "Sv": "4+",
+     "W": "9",
+     "Ld": "7+",
+     "OC": "0"
+    }
+   ],
+   "weapons": [],
+   "abilities": [
+    {
+     "name": {
+      "en": "Shroud of Flies (Aura)"
+     },
+     "text": {
+      "en": "While a friendly NURGLE LEGIONES DAEMONICA unit is within 6\" of this FORTIFICATION, models in that unit have the Stealth ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Diseased Cover"
+     },
+     "text": {
+      "en": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Fortification"
+     },
+     "text": {
+      "en": "While an enemy unit is only within Engagement Range of one or more FORTIFICATIONS from your army: That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Feculent-Gnarlmaw",
+   "composition": [
+    "1 Feculent Gnarlmaw"
+   ],
+   "equipped": [
+    "This model is equipped with: nothing."
+   ],
+   "role": "fortification",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {}
+    }
+   ],
+   "wargear": [],
+   "loadout": []
+  },
+  {
+   "id": "skull-altar",
+   "name": {
+    "en": "Skull Altar",
+    "es": "Skull Altar"
+   },
+   "keywords": [
+    "FORTIFICATION",
+    "FRAME",
+    "CHAOS",
+    "DAEMON",
+    "KHORNE",
+    "SKULL ALTAR",
+    "SHADOW LEGION"
+   ],
+   "stats": [
+    {
+     "M": "-",
+     "T": "12",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "7+",
+     "OC": "0"
+    }
+   ],
+   "weapons": [],
+   "abilities": [
+    {
+     "name": {
+      "en": "Shadow of Khorne (Aura)"
+     },
+     "text": {
+      "en": "The area of the battlefield within 6\" of this FORTIFICATION is considered to be within your army’s Shadow of Chaos. In addition, while a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this FORTIFICATION, each time you take a Battle-shock test for that unit, you can re-roll that test."
+     }
+    },
+    {
+     "name": {
+      "en": "Cover"
+     },
+     "text": {
+      "en": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Fortification"
+     },
+     "text": {
+      "en": "While an enemy unit is only within Engagement Range of one or more FORTIFICATIONS from your army: That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators"
+   ],
+   "factionAbilities": [
+    "The Shadow of Chaos"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skull-Altar",
+   "composition": [
+    "1 Skull Altar"
+   ],
+   "equipped": [
+    "This model is equipped with: nothing."
+   ],
+   "role": "fortification",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {}
+    }
+   ],
+   "wargear": [],
+   "loadout": []
+  }
+ ]
+}

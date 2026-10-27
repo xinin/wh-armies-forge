@@ -31,7 +31,9 @@ Crea `data/factions/adeptus-custodes/` con:
 - `faction.json`: regla de ejército, destacamentos (coste en DP, regla resumida) y mejoras con sus requisitos;
 - `units.json`, `weapons.json`, `points.json` (con los puntos de las mejoras) e `images.json`.
 
-Además la añade a `data/factions/index.json`. `--alliance` (`imperium`, `chaos` o `xenos`) es el grupo en el que sale en **Nueva lista**, como en la tienda de Warhammer; los capítulos usan el de su base. `--color` es el color de la facción en las tarjetas de la home. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
+Además la añade a `data/factions/index.json`. `--alliance` (`imperium`, `chaos` o `xenos`) es el grupo en el que sale en **Nueva lista**, como en la tienda de Warhammer; los capítulos usan el de su base. `--color` es el color de la facción en las tarjetas de la home.
+
+Las reglas se leen por secciones de la página, estén en el orden que estén (en algunos destacamentos las estratagemas van antes que las mejoras). Se quita el preámbulo «If your Army Faction is X, … Detachment rule», y su palabra clave de facción (LEGIONES DAEMONICA) se toma como palabra de facción en los requisitos de las mejoras. Si un destacamento da una palabra clave a todo el ejército («… units from your army gain the SHADOW LEGION keyword»), esa palabra no se pide como requisito de sus mejoras. Si la página de Wahapedia enlaza también datasheets de otra facción (la de Demonios del Caos incluye los HERETIC ASTARTES de la Legión de la Sombra), añade `--other-faction "HERETIC ASTARTES"`: se guarda en `faction.json` → `wahapedia.otherFactions` y el importador los salta. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
 
 ### Marines Espaciales y sus capítulos
 
@@ -92,6 +94,8 @@ Por cada unidad guarda:
     - opciones que dependen de otra ("If this model is equipped with a neo-volkite pistol, it can be equipped with a storm shield"): van a `needs` y solo se aplican si se cumple la condición; con "is not equipped with" van a `needsNot`;
     - "For every 3 models in this unit, this unit can have 1 Plasmacyte";
     - "1 model's gauss scalpel or tesla caster can be replaced": se sustituye la de serie (la opción que cambia todas aplica después);
+  - **palabra clave a elegir** ("must select one of the keywords below": KHORNE, TZEENTCH… con el equipo que da cada una, Daemon Prince): `keywordChoice`, que pasa a ser una opción obligatoria; la unidad recibe la palabra elegida (cuenta para las mejoras) y la lista no es válida hasta elegirla;
+  - "X and one of the following:" (Bloodthirster) y dueños como "1 Bloodletter that is not equipped with…";
   - **unidades con acompañantes** ("3-6 Hunting Wolf / 3-6 Wolf Guard Headtaker", con puntos para 3, 6, 6 y 12 modelos): los tamaños son los modelos principales y los acompañantes una opción con su coste por modelo (`companion_split`). El número de modelos de la unidad cuenta solo los principales.
 
 Con `--all`, una facción se reemplaza entera: las unidades que ya no son datasheets de la facción se eliminan de `units.json` y `points.json`. Las de Legends y Forge World se apuntan en `units.json` → `excluded` y nunca se importan. Los identificadores son el nombre del datasheet en minúsculas con guiones (`cadian-heavy-weapons-squad`). No se usan alias: si GW renombra una unidad, actualiza su clave en `images.json` (las listas guardadas que la usaran la pierden al abrirse).
@@ -230,6 +234,10 @@ python3 tools/translations.py pending                 # .cache/translations/<fac
 python3 tools/translations.py apply .cache/translations/<facción>.tsv .cache/translations/<facción>.es.txt
 python3 tools/translations.py pending                 # debe quedar en 0
 ```
+
+Con Claude Code, la traducción se reparte entre agentes `traductor` (`.claude/agents/traductor.md`, que lleva la terminología y las comprobaciones): uno por bloque de ~150-200 líneas del `.tsv`, en paralelo, cada uno escribe su `<facción>.es.<N>.txt`. No aplican nada: el agente principal unifica los nombres nuevos que propone cada bloque, aplica los ficheros y comprueba con `pending` y `check_app.py`.
+
+Para ver cómo se tradujo antes un término: `python3 tools/translations.py lookup "Engagement Range"`.
 
 - Usa la terminología de GW en español (acobardamiento, alcance de combate, Despliegue Rápido, No Hay Dolor…) y la misma traducción para el mismo término en toda la facción.
 - Las palabras clave en mayúsculas (INFANTRY, OFFICER…) se quedan en inglés, igual que los nombres propios.

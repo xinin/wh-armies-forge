@@ -75,6 +75,7 @@
   "err.multiWarlord": "Solo puede haber un Señor de la Guerra",
   "err.leaderInvalid": "{leader} no puede liderar a {unit}",
   "err.tooManyLeaders": "{unit}: demasiados líderes unidos",
+  "err.choiceRequired": "{unit}: elige {choice}",
   "err.tooManySupport": "{unit}: demasiadas unidades de apoyo unidas",
   "err.detachmentTag": "{a} y {b} tienen la etiqueta {tag}: solo puedes elegir uno",
   "det.tagTaken": "Etiqueta {tag}: ya tienes {name}",

@@ -7,6 +7,9 @@
     python3 tools/translations.py apply DIR/<name>.tsv DIR/<name>.es.txt
                                                           merge a translation file: one line per text,
                                                           "<number><TAB><translation>" (line breaks written as \\n)
+    python3 tools/translations.py lookup "Engagement Range" [--limit 8]
+                                                          existing translations of texts containing those words
+                                                          (shortest first), to keep the terminology consistent
 
 Rule terms with a value ("Rapid Fire 2", "Feel No Pain 5+") are translated through the "terms" glossary of the
 edition file, not listed here. Keywords in capitals (INFANTRY, OFFICER…) stay in English inside the texts.
@@ -83,6 +86,8 @@ def collect():
             for o in u.get('wargear', []):
                 if o.get('owner'):
                     add(f, 'model-type', o['owner'])
+                if o.get('name'):
+                    add(f, 'wargear-option', o['name'])
             for c in u.get('composition', []) + u.get('equipped', []):
                 add(f, 'composition', c)
             if u.get('attachRule'):
@@ -152,7 +157,17 @@ def main():
     pa = sub.add_parser('apply')
     pa.add_argument('pending_tsv')
     pa.add_argument('translated_txt')
+    pl = sub.add_parser('lookup')
+    pl.add_argument('words')
+    pl.add_argument('--limit', type=int, default=8)
     args = ap.parse_args()
+
+    if args.cmd == 'lookup':
+        hits = sorted((t for t in known().items() if args.words.lower() in t[0].lower()), key=lambda t: len(t[0]))
+        for en, es in hits[:args.limit]:
+            print(f'{esc(en)}\n  → {esc(es)}')
+        print(f'({len(hits)} texts contain "{args.words}")')
+        return
 
     if args.cmd == 'pending':
         done = known()

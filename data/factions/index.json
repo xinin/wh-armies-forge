@@ -233,6 +233,32 @@
       "color": "#2f9e6a",
       "units": 51,
       "detachments": 12
+    },
+    {
+      "id": "chaos-daemons",
+      "name": {
+        "en": "Chaos Daemons",
+        "es": "Demonios del Caos"
+      },
+      "edition": "11th",
+      "alliance": "chaos",
+      "path": "chaos-daemons",
+      "color": "#8e1b2c",
+      "units": 53,
+      "detachments": 9
+    },
+    {
+      "id": "chaos-knights",
+      "name": {
+        "en": "Chaos Knights",
+        "es": "Chaos Knights"
+      },
+      "edition": "11th",
+      "alliance": "chaos",
+      "path": "chaos-knights",
+      "color": "#4a3b2e",
+      "units": 0,
+      "detachments": 8
     }
   ]
 }

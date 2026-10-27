@@ -32,6 +32,22 @@ def slug(s):
 
 
 
+def section_at(sec, pos):
+    """One part of a detachment section (rule, enhancements or stratagems): from its heading (`pos`, inside the <h2>)
+    to the next heading. Pages do not always list them in the same order (Chaos Daemons: stratagems first)."""
+    if pos is None:
+        return ''
+    nxt = sec.find('<h2', pos)
+    return sec[pos:nxt if nxt >= 0 else len(sec)]
+
+
+def rule_lines(rule_html):
+    """Detachment rule lines without the "Detachment Rule" heading and the "If your Army Faction is X, you can use
+    this … Detachment rule." preamble: the first line is the rule's name."""
+    lines = clean(strip_fluff(rule_html)).split('\n')[1:]
+    return lines[1:] if lines and re.match(r'^If your Army Faction is .*Detachment rule\.?$', lines[0]) else lines
+
+
 def enhancements_pos(sec):
     """Position of the enhancements heading's id in a detachment section: "Enhancements", or the detachment's own
     name for them (Pantheon of Woe: "Necrodermal Binding Abilities"). None if there is none."""
@@ -145,12 +161,11 @@ def main():
         e_pos = enhancements_pos(sec)
         s_pos = re.search(r'id="Stratagems(-\d+)?"', sec)
         r_pos = re.search(r'id="Detachment-Rules?(-\d+)?"', sec)
-        rule_html = sec[r_pos.start():sec.rfind('<h2', 0, e_pos)] if r_pos and e_pos is not None else ''
-        lines = clean(strip_fluff(rule_html)).split('\n')[1:]  # drop the "Detachment Rule" heading
+        lines = rule_lines(section_at(sec, r_pos.start() if r_pos else None))
         rule = {'name': {'en': lines[0]} if lines else det['rule']['name'], 'text': {'en': strip_errata('\n'.join(lines[1:]))}}
 
         enh = {}
-        ens_html = sec[e_pos:sec.rfind('<h2', 0, s_pos.start())] if e_pos is not None and s_pos else ''
+        ens_html = section_at(sec, e_pos)
         for m in re.finditer(r'<ul class="EnhancementsPts"><li><span>(.*?)</span>\s*<span>(\d+ pts)</span></li></ul>(.*?)(?=<ul class="EnhancementsPts"|\Z)', ens_html, re.S):
             ename = re.sub(r'\(Aura\)|UPGRADE', '', clean(re.sub(r'<span class="EnhUpgrade">.*?</span>', '', m.group(1)))).strip()
             # also the abilities a detachment gives to named datasheets (unitAbilities), listed the same way
@@ -159,7 +174,7 @@ def main():
                 body = strip_errata(clean(strip_fluff(m.group(3))))
                 enh[ours['id']] = {'text': {'en': body}, 'points': int(re.sub(r'\D', '', m.group(2)) or 0)}
         rules['detachments'][det['id']] = {'rule': rule, 'enhancements': enh}
-        strats[det['id']] = dedupe(parse_stratagems(sec[s_pos.start():] if s_pos else ''))
+        strats[det['id']] = dedupe(parse_stratagems(section_at(sec, s_pos.start() if s_pos else None)))
         print(f"{det['id']:24} rule={len(rule['text']['en']):4} chars  enhancements={len(enh)}  stratagems={len(strats[det['id']])}")
 
     core_strats = dedupe([s for s in parse_stratagems(core) if s['source'].startswith('Core')])

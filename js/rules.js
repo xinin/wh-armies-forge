@@ -141,8 +141,15 @@ function kwWords(def) {
   return kwWordCache.get(def);
 }
 
-export function availableEnhancements(ru, list, data) {
+// The datasheet as this roster unit is: with the keyword of its choice ("Daemonic Allegiance": KHORNE…), if any.
+export function unitDef(ru, data) {
   const def = data.unitsById.get(ru.unitId);
+  const extra = (def?.wargear ?? []).filter(o => o.keywords && ru.wargear?.[o.id]).map(o => o.keywords[ru.wargear[o.id]]).filter(Boolean);
+  return extra.length ? { ...def, keywords: [...def.keywords, ...extra] } : def;
+}
+
+export function availableEnhancements(ru, list, data) {
+  const def = unitDef(ru, data);
   return list.detachments
     .flatMap(id => data.detachmentsById.get(id)?.enhancements ?? [])
     .map(e => data.enhancements.get(e.id))
@@ -209,6 +216,13 @@ export function validate(list, data, edition) {
     if (rival) err('err.detachmentTag', { a: tr(rival.name), b: tr(det.name), tag: sharedTag(rival, det) });
   });
 
+  // Choices a unit must make ("Daemonic Allegiance")
+  for (const ru of list.units) {
+    for (const o of data.unitsById.get(ru.unitId)?.wargear ?? []) {
+      if (o.required && !ru.wargear?.[o.id]) err('err.choiceRequired', { unit: nameOf(ru), choice: tr(o.name) }, [ru.uid]);
+    }
+  }
+
   // Wargear footnotes: "cannot have duplicates of these pieces of wargear", "no model can be equipped with both …"
   for (const ru of list.units) {
     const def = data.unitsById.get(ru.unitId);
@@ -248,7 +262,7 @@ export function validate(list, data, edition) {
   for (const ru of withEnh) {
     const enh = data.enhancements.get(ru.enhancement);
     if (!enh) continue;
-    const def = data.unitsById.get(ru.unitId);
+    const def = unitDef(ru, data);
     enhCount.set(enh.id, (enhCount.get(enh.id) ?? 0) + 1);
     if (enh.type !== 'upgrade' || edition.rules.upgradesCountTowardEnhancementLimit) enhTotal++;
     if (!list.detachments.includes(enh.detachmentId)) err('err.enhNotInDetachment', { enh: tr(enh.name) }, [ru.uid]);

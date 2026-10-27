@@ -1,0 +1,287 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-daemons/",
+ "detachments": {
+  "daemonic-incursion": {
+   "rule": {
+    "name": {
+     "en": "Warp Rifts"
+    },
+    "text": {
+     "en": "Each time a LEGIONES DAEMONICA unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units with which it shares the KHORNE, TZEENTCH, NURGLE or SLAANESH keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
+    }
+   },
+   "enhancements": {
+    "argath-the-king-of-blades": {
+     "text": {
+      "en": "KHORNE LEGIONES DAEMONICA model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is within your army’s Shadow of Chaos, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+     },
+     "points": 20
+    },
+    "soulstealer": {
+     "text": {
+      "en": "SLAANESH LEGIONES DAEMONICA model only. Each time the bearer destroys an enemy model with a melee attack, roll one D6, adding 1 to the result if the bearer is within your army’s Shadow of Chaos. On a 4+, the bearer regains 1 lost wound."
+     },
+     "points": 15
+    },
+    "the-endless-gift": {
+     "text": {
+      "en": "NURGLE LEGIONES DAEMONICA model only. The bearer has the Feel No Pain 5+ ability."
+     },
+     "points": 30
+    },
+    "the-everstave": {
+     "text": {
+      "en": "TZEENTCH LEGIONES DAEMONICA model only. Add 1 to the Strength characteristic of the bearer’s ranged weapons and increase the Range characteristic of such weapons by 3\". While the bearer is within your army’s Shadow of Chaos, add 2 to the Strength characteristic of the bearer’s ranged weapons and increase the Range characteristic of such weapons by 6\" instead."
+     },
+     "points": 25
+    }
+   }
+  },
+  "shadow-legion": {
+   "rule": {
+    "name": {
+     "en": "Thralls of the First Prince"
+    },
+    "text": {
+     "en": "When mustering your army, you cannot include any DAEMON PRINCE, DAEMON PRINCE WITH WINGS or EPIC HERO units (excluding BE’LAKOR), but you can include the following HERETIC ASTARTES units:\nCHAOS LORD\nCHAOS LORD IN TERMINATOR ARMOUR\nCHAOS LORD WITH JUMP PACK\nCHAOS TERMINATOR SQUAD\nCHOSEN\nDAMNED units\nDARK APOSTLE\nHAVOCS\nLEGIONARIES\nMASTER OF POSSESSION\nPOSSESSED\nRAPTORS\nSORCERER\nSORCERER IN TERMINATOR ARMOUR\nWARP TALONS\nThe combined points value of such units depends on your battle size, as shown below.\nIncursion: Up to 500 pts\nStrike Force: Up to 1000 pts\nOnslaught: Up to 1500 pts\nKEYWORDS\nBE’LAKOR and HERETIC ASTARTES units from your army gain the SHADOW LEGION and UNDIVIDED keywords.\nLEGIONES DAEMONICA units from your army gain the SHADOW LEGION keyword.\nIf your Army Faction is LEGIONES DAEMONICA, you can use this Shadow Legion Detachment rule.\nFirst Prince of Chaos\nUnits from your army have the relevant abilities presented below.\nMURDERER’S COWL\nSHADOW LEGION KHORNE units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.\nPENUMBRAL PUPPETRY\nSHADOW LEGION TZEENTCH units only. This unit has Stealth. Each time a melee attack targets this unit, subtract 1 from the Hit roll.\nGLOAM ROT\nSHADOW LEGION NURGLE units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.\nSHADOW’S CARESS\nSHADOW LEGION SLAANESH units only. Enemy units cannot target this unit with snap shooting attacks.\nDISCIPLES OF BE’LAKOR\nSHADOW LEGION UNDIVIDED units only.\nThis unit has the Dark Pacts army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not HERETIC ASTARTES. If this unit is BE’LAKOR, it automatically passes the Leadership test required for Dark Pacts.\nSHADOW LEGION HERETIC ASTARTES models in this unit have the Deep Strike ability."
+    }
+   },
+   "enhancements": {
+    "leaping-shadows": {
+     "text": {
+      "en": "SHADOW LEGION model only. Models in the bearer’s unit have the Scouts 9\" ability."
+     },
+     "points": 25
+    },
+    "mantle-of-gloom": {
+     "text": {
+      "en": "SHADOW LEGION model only. While an enemy unit is within Engagement Range of the bearer’s unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+     },
+     "points": 20
+    },
+    "fade-to-darkness": {
+     "text": {
+      "en": "SHADOW LEGION model only. At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves."
+     },
+     "points": 30
+    },
+    "malice-made-manifest": {
+     "text": {
+      "en": "SHADOW LEGION model only. At the start of the Fight phase, select one enemy unit within Engagement Range of the bearer’s unit and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+     },
+     "points": 25
+    }
+   }
+  },
+  "blood-legion": {
+   "rule": {
+    "name": {
+     "en": "Murdercall"
+    },
+    "text": {
+     "en": "In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8\" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6\"."
+    }
+   },
+   "enhancements": {
+    "slaughterthirst": {
+     "text": {
+      "en": "LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability."
+     },
+     "points": 25
+    },
+    "furys-cage": {
+     "text": {
+      "en": "LEGIONES DAEMONICA KHORNE MONSTER model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re-roll the Hit roll and you can re-roll the Wound roll."
+     },
+     "points": 20
+    },
+    "brazenmaw": {
+     "text": {
+      "en": "LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit."
+     },
+     "points": 15
+    },
+    "gateway-unto-damnation": {
+     "text": {
+      "en": "LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet."
+     },
+     "points": 10
+    }
+   }
+  },
+  "legion-of-excess": {
+   "rule": {
+    "name": {
+     "en": "Beguiling Aura"
+    },
+    "text": {
+     "en": "LEGIONES DAEMONICA SLAANESH units from your army are eligible to declare a charge in a turn in which they Fell Back.\nSeductive Gambit\nLEGIONES DAEMONICA SLAANESH units from your army have the following ability:\nSeductive Gambit: Each time this unit ends a Charge move, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the Fights First ability, but instead, each time a model in this unit makes an attack, you can re-roll the Hit roll and you can re-roll a Wound roll of 1."
+    }
+   },
+   "enhancements": {
+    "false-majesty": {
+     "text": {
+      "en": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+     },
+     "points": 30
+    },
+    "dreaming-crown": {
+     "text": {
+      "en": "LEGIONES DAEMONICA SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH unit (excluding MONSTERS) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+     },
+     "points": 30
+    },
+    "avatar-of-perfection": {
+     "text": {
+      "en": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the start of each phase, if there are no other friendly units within 6\" of the bearer, you can: re-roll Advance rolls made for the bearer; re-roll Charge rolls made for the bearer; ignore any or all modifiers to its Move characteristic and to any Advance and/or Charge rolls made for the bearer."
+     },
+     "points": 15
+    },
+    "soul-glutton": {
+     "text": {
+      "en": "LEGIONES DAEMONICA SLAANESH MONSTER model only. At the end of the Fight phase, if one or more enemy models were destroyed this phase as a result of one or more of the bearer’s attacks, it can use this Enhancement. If it does, it regains up to D3 lost wounds."
+     },
+     "points": 10
+    }
+   }
+  },
+  "plague-legion": {
+   "rule": {
+    "name": {
+     "en": "Melancholic Miasma"
+    },
+    "text": {
+     "en": "While an enemy unit is within 9\" of one or more LEGIONES DAEMONICA NURGLE units from your army, that enemy unit is within your army’s Shadow of Chaos. In each player’s Command phase, select one enemy unit within your army’s Shadow of Chaos. That unit must take a Battle-shock test."
+    }
+   },
+   "enhancements": {
+    "cankerblight": {
+     "text": {
+      "en": "LEGIONES DAEMONICA NURGLE model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) that is within 6\" of the bearer fails a Battle-shock test, the bearer can use this Enhancement. If it does, one model in that unit is destroyed (chosen by its controlling player). Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+     },
+     "points": 15
+    },
+    "maggot-maws": {
+     "text": {
+      "en": "LEGIONES DAEMONICA NURGLE model only. In your Shooting phase, select one enemy unit within 6\" of the bearer; that enemy unit must take a Battle-shock test. Then roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds. Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule."
+     },
+     "points": 15
+    },
+    "droning-shroud": {
+     "text": {
+      "en": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, that unit can only be targeted by a ranged attack if the attacking model is within 18\"."
+     },
+     "points": 35
+    },
+    "font-of-spores": {
+     "text": {
+      "en": "LEGIONES DAEMONICA NURGLE MONSTER model only. While a friendly LEGIONES DAEMONICA NURGLE unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1."
+     },
+     "points": 20
+    }
+   }
+  },
+  "scintillating-legion": {
+   "rule": {
+    "name": {
+     "en": "Fates in Flux"
+    },
+    "text": {
+     "en": "You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\nDesigner’s Note: When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once."
+    }
+   },
+   "enhancements": {
+    "inescapable-eye": {
+     "text": {
+      "en": "LEGIONES DAEMONICA TZEENTCH model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+     },
+     "points": 15
+    },
+    "infernal-puppeteer": {
+     "text": {
+      "en": "LEGIONES DAEMONICA TZEENTCH MONSTER model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9\" detection range until this unit has shot."
+     },
+     "points": 20
+    },
+    "neverblade": {
+     "text": {
+      "en": "LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll."
+     },
+     "points": 25
+    },
+    "improbable-shield": {
+     "text": {
+      "en": "LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+     },
+     "points": 30
+    }
+   }
+  },
+  "cavalcade-of-chaos": {
+   "rule": {
+    "name": {
+     "en": "Unholy Avalanche"
+    },
+    "text": {
+     "en": "If a friendly LEGIONES DAEMONICA MOUNTED unit made a fall-back move this turn, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge."
+    }
+   },
+   "enhancements": {
+    "apocalyptic-steeds": {
+     "text": {
+      "en": "LEGIONES DAEMONICA MOUNTED unit only. This unit has +1\" M."
+     },
+     "points": 10
+    },
+    "soul-shattering-charge": {
+     "text": {
+      "en": "LEGIONES DAEMONICA MOUNTED unit only. When this unit is selected to fight, if this unit made a charge move this turn, you can use this ability. If you do, when determining which models in this unit can fight, friendly models that are within 3\" of enemy units engaged with this unit can target those enemy units."
+     },
+     "points": 10
+    }
+   }
+  },
+  "lords-of-the-warp": {
+   "rule": {
+    "name": {
+     "en": "Loci of Power"
+    },
+    "text": {
+     "en": "Friendly LEGIONES DAEMONICA CHARACTER models (excluding MONSTER models) have +1 Ld and OC."
+    }
+   },
+   "enhancements": {
+    "swollen-with-power": {
+     "text": {
+      "en": "LEGIONES DAEMONICA CHARACTER model only (excluding MONSTER units). This model has +2 W."
+     },
+     "points": 10
+    }
+   }
+  },
+  "warptide": {
+   "rule": {
+    "name": {
+     "en": "Shudderblink"
+    },
+    "text": {
+     "en": "When a friendly LEGIONES DAEMONICA BATTLELINE unit is selected to make an advance move:\nThat unit’s ranged attacks have [ASSAULT] until the end of the turn.\nThat move does not prevent that unit from being eligible to declare a charge."
+    }
+   },
+   "enhancements": {
+    "bane-forged-weapons": {
+     "text": {
+      "en": "LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S."
+     },
+     "points": 15
+    },
+    "soul-hungry-slaughterers": {
+     "text": {
+      "en": "LEGIONES DAEMONICA BATTLELINE unit only. When you target this unit with the Heroic Intervention/Fire Overwatch stratagem, that use is -1 CP."
+     },
+     "points": 10
+    }
+   }
+  }
+ }
+}

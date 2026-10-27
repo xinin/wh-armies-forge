@@ -1,0 +1,483 @@
+{
+ "id": "chaos-knights",
+ "name": {
+  "en": "Chaos Knights",
+  "es": "Chaos Knights"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-knights/",
+ "armyRule": {
+  "name": {
+   "en": "Harbingers of Dread"
+  },
+  "text": {
+   "en": "If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.\nDEATHLY TERROR (AURA)N/A\nWhile an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.\nDESPAIR (AURA)\nWhile an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).\nDOOM\nEach time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.\nDARKNESS\nThis model has Stealth.\nDISMAY (AURA)\nIn the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.\nDELIRIUM (AURA)\nWhile an enemy unit that is Below Half-strength is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.\nDOMINION\nAdd 3\" to the range of this model’s Aura abilities."
+  }
+ },
+ "detachments": [
+  {
+   "id": "infernal-lance",
+   "cost": 3,
+   "name": {
+    "en": "Infernal Lance"
+   },
+   "rule": {
+    "name": {
+     "en": "Malefic Surge"
+    },
+    "text": {
+     "en": "In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "knight-diabolus",
+     "requires": [],
+     "name": {
+      "en": "Knight Diabolus"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability."
+     }
+    },
+    {
+     "id": "blasphemous-engine",
+     "requires": [],
+     "name": {
+      "en": "Blasphemous Engine"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal…"
+     }
+    },
+    {
+     "id": "fleshmetal-fusion",
+     "requires": [],
+     "name": {
+      "en": "Fleshmetal Fusion"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated…"
+     }
+    },
+    {
+     "id": "bestial-aspect",
+     "requires": [],
+     "name": {
+      "en": "Bestial Aspect"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [assault] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "helhunt-lance",
+   "cost": 2,
+   "name": {
+    "en": "Helhunt Lance"
+   },
+   "rule": {
+    "name": {
+     "en": "Masters of the Pack"
+    },
+    "text": {
+     "en": "If a TITANIC CHAOS KNIGHTS unit from your army has an Aura ability that affects friendly WAR DOG units, while two or more friendly WAR DOG models are within range of that TITANIC CHAOS KNIGHTS unit’s Aura ability, that TITANIC CHAOS KNIGHTS unit is affected by that Aura ability as well. Example: Two friendly WAR DOG…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "aspect-of-the-beast",
+     "requires": [],
+     "name": {
+      "en": "Aspect of the Beast"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. At the start of your Command phase, select one Dread ability to be active for the bearer until the start of your next Command phase, in addition to the Dread abilities…"
+     }
+    },
+    {
+     "id": "hunters-helm",
+     "requires": [],
+     "name": {
+      "en": "Hunter’s Helm"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. You can re-roll Advance and Charge rolls made for the bearer’s unit."
+     }
+    },
+    {
+     "id": "octagram-of-conjuration",
+     "requires": [
+      [
+       "KNIGHT",
+       "ABOMINANT"
+      ]
+     ],
+     "name": {
+      "en": "Octagram of Conjuration"
+     },
+     "text": {
+      "en": "KNIGHT ABOMINANT model only. The bearer has the following ability: Octagram of Conjuration (Aura): While a friendly WAR DOG model is within 9\" of this model, after that WAR DOG model has shot, you…"
+     }
+    },
+    {
+     "id": "throne-tyrannicus",
+     "requires": [
+      [
+       "TITANIC"
+      ]
+     ],
+     "name": {
+      "en": "Throne Tyrannicus"
+     },
+     "text": {
+      "en": "TITANIC CHAOS KNIGHTS model only. In your Command phase, select one other CHAOS KNIGHTS CHARACTER model within 9\" of the bearer. If the bearer has one or more Aura abilities that affect friendly WAR…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "traitoris-lance",
+   "cost": 2,
+   "name": {
+    "en": "Traitoris Lance"
+   },
+   "rule": {
+    "name": {
+     "en": "Paragons of Terror"
+    },
+    "text": {
+     "en": "At the start of the first battle round, after selecting one or more Dread abilities to be active for your army, you can select one additional Dread ability to be active for your army (this additional Dread ability cannot be randomly selected)."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "nightmares-master",
+     "requires": [],
+     "name": {
+      "en": "Nightmare’s Master"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+     }
+    },
+    {
+     "id": "tyrants-shadow",
+     "requires": [],
+     "name": {
+      "en": "Tyrant’s Shadow"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. At the end of your Command phase, select one objective marker the bearer is within range of and that you control. That objective marker remains under your control until your…"
+     }
+    },
+    {
+     "id": "malevolent-heraldry",
+     "requires": [],
+     "name": {
+      "en": "Malevolent Heraldry"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. Each time you roll dice to randomly select which Dread abilities are active for your army, if the bearer is on the battlefield, you can re-roll one or both results rolled."
+     }
+    },
+    {
+     "id": "veil-of-medrengard",
+     "requires": [],
+     "name": {
+      "en": "Veil of Medrengard"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. The bearer has a 4+ invulnerable save against ranged attacks, and a 5+ invulnerable save against melee attacks."
+     }
+    }
+   ]
+  },
+  {
+   "id": "houndpack-lance",
+   "cost": 2,
+   "name": {
+    "en": "Houndpack Lance"
+   },
+   "rule": {
+    "name": {
+     "en": "Marked Prey"
+    },
+    "text": {
+     "en": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability. KEYWORDS…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "preyslayers-mantle",
+     "requires": [
+      [
+       "WAR",
+       "DOG"
+      ]
+     ],
+     "name": {
+      "en": "Preyslayer’s Mantle"
+     },
+     "text": {
+      "en": "WAR DOG model only. The bearer has the Super-heavy Walker ability."
+     }
+    },
+    {
+     "id": "final-howl",
+     "requires": [
+      [
+       "WAR",
+       "DOG"
+      ]
+     ],
+     "name": {
+      "en": "Final Howl"
+     },
+     "text": {
+      "en": "WAR DOG model only. While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1."
+     }
+    },
+    {
+     "id": "loping-predator",
+     "requires": [
+      [
+       "WAR",
+       "DOG"
+      ]
+     ],
+     "name": {
+      "en": "Loping Predator"
+     },
+     "text": {
+      "en": "WAR DOG model only. The bearer’s ranged weapons have the [assault] ability."
+     }
+    },
+    {
+     "id": "panoply-of-the-cursed-knight",
+     "requires": [
+      [
+       "WAR",
+       "DOG"
+      ]
+     ],
+     "name": {
+      "en": "Panoply of the Cursed Knight"
+     },
+     "text": {
+      "en": "WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+     }
+    }
+   ]
+  },
+  {
+   "id": "lords-of-dread",
+   "cost": 2,
+   "name": {
+    "en": "Lords of Dread"
+   },
+   "rule": {
+    "name": {
+     "en": "Tyrannical Court"
+    },
+    "text": {
+     "en": "Improve the Objective Control characteristic of CHAOS KNIGHTS CHARACTER models from your army by 2. In addition, once per battle round, if your WARLORD is on the battlefield, you can use the Claimed for the Dark Gods Stratagem for 0CP."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "throne-mechanicum-of-skulls",
+     "requires": [],
+     "name": {
+      "en": "Throne Mechanicum of Skulls"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, once per battle, in your Charge phase, the bearer can use this Enhancement. If it does, until the end…"
+     }
+    },
+    {
+     "id": "blade-of-celerity",
+     "requires": [],
+     "name": {
+      "en": "Blade of Celerity"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. In addition, once per battle, in the Fight phase, the bearer can use this Enhancement. If it does, until the end of…"
+     }
+    },
+    {
+     "id": "warp-borne-stalker",
+     "requires": [],
+     "name": {
+      "en": "Warp-borne Stalker"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. The bearer has the Deep Strike ability. In addition, once per battle, at the end of your opponent’s turn, if the bearer is not within Engagement Range of one or more enemy…"
+     }
+    },
+    {
+     "id": "putrid-carapace",
+     "requires": [],
+     "name": {
+      "en": "Putrid Carapace"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. The bearer has a Save characteristic of 2+. In addition, once per battle, at the start of either player’s Command phase, the bearer can use this Enhancement. If it does, the…"
+     }
+    },
+    {
+     "id": "mirror-of-fates",
+     "requires": [],
+     "name": {
+      "en": "Mirror of Fates"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that…"
+     }
+    },
+    {
+     "id": "blessing-of-the-dark-master",
+     "requires": [],
+     "name": {
+      "en": "Blessing of the Dark Master"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. The bearer has the Stealth ability. In addition, once per battle, after you make a saving throw for the bearer, you can change the Damage characteristic of that attack to 0."
+     }
+    }
+   ]
+  },
+  {
+   "id": "bastions-of-tyranny",
+   "cost": 1,
+   "name": {
+    "en": "Bastions of Tyranny"
+   },
+   "rule": {
+    "name": {
+     "en": "Annihilate the Unworthy"
+    },
+    "text": {
+     "en": "Friendly KNIGHT TYRANT units’ attacks that target a battle-shocked unit have +1 to the hit roll."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "pterrorshade-rookery",
+     "requires": [
+      [
+       "KNIGHT",
+       "TYRANT"
+      ]
+     ],
+     "name": {
+      "en": "Pterrorshade Rookery"
+     },
+     "text": {
+      "en": "KNIGHT TYRANT model only. When this unit is selected to shoot, select one enemy unit within 24\" of this unit. That enemy unit has +6\" detection range until this unit has shot."
+     }
+    },
+    {
+     "id": "hate-filled-dominion",
+     "requires": [
+      [
+       "KNIGHT",
+       "TYRANT"
+      ]
+     ],
+     "name": {
+      "en": "Hate-Filled Dominion"
+     },
+     "text": {
+      "en": "KNIGHT TYRANT model only. This unit can re-roll rolls to determine the A of a weapon."
+     }
+    }
+   ]
+  },
+  {
+   "id": "hunting-warpack",
+   "cost": 1,
+   "name": {
+    "en": "Hunting Warpack"
+   },
+   "rule": {
+    "name": {
+     "en": "Scenting Fear"
+    },
+    "text": {
+     "en": "(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12\" of a friendly WAR DOG unit. That enemy unit has +6\" detection range. This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "soul-spoor-auspicator",
+     "requires": [
+      [
+       "HUNTSMAN"
+      ]
+     ],
+     "name": {
+      "en": "Soul-Spoor Auspicator"
+     },
+     "text": {
+      "en": "HUNTSMAN unit only. This unit’s ranged attacks have +6\" R."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "snarling-rivalry",
+     "requires": [
+      [
+       "EXECUTIONER"
+      ]
+     ],
+     "name": {
+      "en": "Snarling Rivalry"
+     },
+     "text": {
+      "en": "EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER]."
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "iconoclast-fiefdom",
+   "cost": 1,
+   "name": {
+    "en": "Iconoclast Fiefdom"
+   },
+   "rule": {
+    "name": {
+     "en": "Wretched Thralls"
+    },
+    "text": {
+     "en": "You can include DAMNED units in your army (see Codex: Chaos Space Marines). The combined points cost of such units cannot exceed 500 points. Friendly DAMNED units can re-roll leadership rolls."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "cruel-lashmaster",
+     "requires": [],
+     "name": {
+      "en": "Cruel Lashmaster"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. While a friendly DAMNED unit is within 6\" of this model, when that unit is selected to make a normal/advance/fall-back move that unit has +2\" M until the end of the phase."
+     }
+    },
+    {
+     "id": "iconoclast-idol",
+     "requires": [],
+     "name": {
+      "en": "Iconoclast Idol"
+     },
+     "text": {
+      "en": "CHAOS KNIGHTS model only. While a friendly DAMNED unit is within 6\" of this model, when you target that unit with the Heroic Intervention stratagem, that use is -1 CP."
+     }
+    }
+   ]
+  }
+ ]
+}

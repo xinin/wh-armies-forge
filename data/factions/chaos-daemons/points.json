@@ -1,0 +1,573 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-27",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-daemons/",
+ "verified": [
+  "all-enhancements",
+  "accursed-cultists",
+  "belakor",
+  "beasts-of-nurgle",
+  "bloodcrushers",
+  "bloodletters",
+  "bloodmaster",
+  "bloodthirster",
+  "blue-horrors",
+  "burning-chariot",
+  "changecaster",
+  "chaos-lord",
+  "chaos-lord-in-terminator-armour",
+  "chaos-lord-with-jump-pack",
+  "chaos-terminator-squad",
+  "chosen",
+  "contorted-epitome",
+  "cultist-firebrand",
+  "cultist-mob",
+  "daemon-prince-of-chaos-with-wings",
+  "daemon-prince-of-chaos",
+  "daemonettes",
+  "dark-apostle",
+  "dark-commune",
+  "epidemius",
+  "exalted-flamer",
+  "fateskimmer",
+  "feculent-gnarlmaw",
+  "fellgor-beastmen",
+  "fiends",
+  "flamers",
+  "flesh-hounds",
+  "fluxmaster",
+  "great-unclean-one",
+  "havocs",
+  "hellflayers",
+  "horticulous-slimux",
+  "infernal-enrapturess",
+  "kairos-fateweaver",
+  "karanak",
+  "keeper-of-secrets",
+  "legionaries",
+  "lord-of-change",
+  "master-of-possession",
+  "nurglings",
+  "pink-horrors",
+  "plague-drones",
+  "plaguebearers",
+  "possessed",
+  "poxbringer",
+  "raptors",
+  "rendmaster-on-blood-throne",
+  "rotigus",
+  "screamers",
+  "seekers",
+  "shalaxi-helbane",
+  "skarbrand",
+  "skull-altar",
+  "skull-cannon",
+  "skullmaster",
+  "skulltaker",
+  "sloppity-bilepiper",
+  "sorcerer",
+  "sorcerer-in-terminator-armour",
+  "soul-grinder",
+  "spoilpox-scrivener",
+  "syllesske",
+  "the-blue-scribes",
+  "the-changeling",
+  "the-masque-of-slaanesh",
+  "tormentbringer",
+  "traitor-enforcer",
+  "traitor-guardsmen-squad",
+  "tranceweaver",
+  "warp-talons"
+ ],
+ "units": {
+  "belakor": [
+   {
+    "models": 1,
+    "points": 390
+   }
+  ],
+  "beasts-of-nurgle": [
+   {
+    "models": 1,
+    "points": 80
+   },
+   {
+    "models": 2,
+    "points": 150
+   }
+  ],
+  "bloodcrushers": [
+   {
+    "models": 3,
+    "points": 95
+   },
+   {
+    "models": 6,
+    "points": 210
+   }
+  ],
+  "bloodletters": [
+   {
+    "models": 10,
+    "points": 110
+   }
+  ],
+  "bloodmaster": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "bloodthirster": [
+   {
+    "models": 1,
+    "points": 320
+   }
+  ],
+  "blue-horrors": [
+   {
+    "models": 10,
+    "points": 125
+   }
+  ],
+  "burning-chariot": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "changecaster": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "contorted-epitome": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "daemon-prince-of-chaos-with-wings": [
+   {
+    "models": 1,
+    "points": 190
+   }
+  ],
+  "daemon-prince-of-chaos": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "daemonettes": [
+   {
+    "models": 10,
+    "points": 100
+   }
+  ],
+  "epidemius": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "exalted-flamer": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "fateskimmer": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "feculent-gnarlmaw": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "fiends": [
+   {
+    "models": 3,
+    "points": 90
+   },
+   {
+    "models": 6,
+    "points": 190
+   }
+  ],
+  "flamers": [
+   {
+    "models": 3,
+    "points": 65
+   },
+   {
+    "models": 6,
+    "points": 130
+   }
+  ],
+  "flesh-hounds": [
+   {
+    "models": 5,
+    "points": 80
+   },
+   {
+    "models": 10,
+    "points": 150
+   }
+  ],
+  "fluxmaster": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "great-unclean-one": [
+   {
+    "models": 1,
+    "points": 265
+   }
+  ],
+  "hellflayers": [
+   {
+    "models": 1,
+    "points": 80
+   },
+   {
+    "models": 2,
+    "points": 160
+   }
+  ],
+  "horticulous-slimux": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "infernal-enrapturess": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "kairos-fateweaver": [
+   {
+    "models": 1,
+    "points": 305
+   }
+  ],
+  "karanak": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "keeper-of-secrets": [
+   {
+    "models": 1,
+    "points": 265
+   }
+  ],
+  "lord-of-change": [
+   {
+    "models": 1,
+    "points": 320
+   }
+  ],
+  "nurglings": [
+   {
+    "models": 3,
+    "points": 45
+   },
+   {
+    "models": 6,
+    "points": 90
+   }
+  ],
+  "pink-horrors": [
+   {
+    "models": 10,
+    "points": 150
+   }
+  ],
+  "plague-drones": [
+   {
+    "models": 3,
+    "points": 110
+   },
+   {
+    "models": 6,
+    "points": 220
+   }
+  ],
+  "plaguebearers": [
+   {
+    "models": 10,
+    "points": 115
+   }
+  ],
+  "poxbringer": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "rendmaster-on-blood-throne": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "rotigus": [
+   {
+    "models": 1,
+    "points": 280
+   }
+  ],
+  "screamers": [
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 160
+   }
+  ],
+  "seekers": [
+   {
+    "models": 5,
+    "points": 85
+   },
+   {
+    "models": 10,
+    "points": 155
+   }
+  ],
+  "shalaxi-helbane": [
+   {
+    "models": 1,
+    "points": 315
+   }
+  ],
+  "skarbrand": [
+   {
+    "models": 1,
+    "points": 330
+   }
+  ],
+  "skull-altar": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ],
+  "skull-cannon": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "skullmaster": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "skulltaker": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "sloppity-bilepiper": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ],
+  "soul-grinder": [
+   {
+    "models": 1,
+    "points": 180
+   }
+  ],
+  "spoilpox-scrivener": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "syllesske": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "the-blue-scribes": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "the-changeling": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ],
+  "the-masque-of-slaanesh": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "tormentbringer": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "tranceweaver": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ]
+ },
+ "enhancements": {
+  "argath-the-king-of-blades": 20,
+  "soulstealer": 15,
+  "the-endless-gift": 30,
+  "the-everstave": 25,
+  "false-majesty": 30,
+  "dreaming-crown": 30,
+  "avatar-of-perfection": 15,
+  "soul-glutton": 10,
+  "inescapable-eye": 15,
+  "infernal-puppeteer": 20,
+  "neverblade": 25,
+  "improbable-shield": 30,
+  "slaughterthirst": 25,
+  "furys-cage": 20,
+  "brazenmaw": 15,
+  "gateway-unto-damnation": 10,
+  "leaping-shadows": 25,
+  "mantle-of-gloom": 20,
+  "fade-to-darkness": 30,
+  "malice-made-manifest": 25,
+  "cankerblight": 15,
+  "maggot-maws": 15,
+  "droning-shroud": 35,
+  "font-of-spores": 20,
+  "apocalyptic-steeds": 10,
+  "soul-shattering-charge": 10,
+  "bane-forged-weapons": 15,
+  "soul-hungry-slaughterers": 10,
+  "swollen-with-power": 10
+ },
+ "unitsExtraCopies": {
+  "bloodcrushers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 135
+    },
+    {
+     "models": 6,
+     "points": 250
+    }
+   ]
+  },
+  "bloodthirster": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 335
+    }
+   ]
+  },
+  "contorted-epitome": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 125
+    }
+   ]
+  },
+  "fiends": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 115
+    },
+    {
+     "models": 6,
+     "points": 215
+    }
+   ]
+  },
+  "great-unclean-one": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 280
+    }
+   ]
+  },
+  "keeper-of-secrets": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 280
+    }
+   ]
+  },
+  "lord-of-change": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 340
+    }
+   ]
+  },
+  "poxbringer": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 70
+    }
+   ]
+  },
+  "rendmaster-on-blood-throne": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 180
+    }
+   ]
+  },
+  "soul-grinder": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 195
+    }
+   ]
+  }
+ }
+}

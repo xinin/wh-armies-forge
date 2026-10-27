@@ -17,6 +17,8 @@ Data produced for each unit (consumed by js/render.js → loadoutOf):
         maxEachBySize {models: n}     pools: the same choice cannot be taken more than n times (footnotes)
         needs     [{item, n}]     only while the unit carries that ("If this model is equipped with 1 Neo-volkite
                                   Pistol, it can be equipped with 1 Storm Shield")
+        keywords  {key: KEYWORD}  a choice also gives the model that keyword; with required: true one must be made
+                                  ("Daemonic Allegiance": KHORNE + torrent of burning blood…); name = the choice's name
         needsNot  [{item, n}]     only while the unit does not carry that ("If this model is not equipped with a
                                   tachyon arrow, it can be equipped with 1 resurrection orb")
         maxEachChoice {key: {models: n}}  pools: limit of one choice ("it cannot take duplicates of this piece of wargear")
@@ -265,6 +267,9 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         y = y.strip().rstrip('.').strip()
         if not y or re.match(r'^(?:one|1) of the following:?$', y, re.I):
             return [items_of(c, resolve) for c in choices]
+        both = re.match(r'^(.+?) and (?:one|1) of the following:?$', y, re.I)
+        if both:  # "1 axe of Khorne and one of the following: 1 bloodflail / 1 lash of Khorne"
+            return [items_of(both.group(1), resolve) + items_of(c, resolve) for c in choices]
         inline = re.match(r'^(?:one|1) of the following:\s*(.+)$', y, re.I)
         if inline:  # "one of the following: 1 Power Fist, 1 Power Weapon"
             return [items_of(c, resolve) for c in re.split(r',\s*(?=\d+ )', inline.group(1))]
@@ -383,7 +388,7 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         (r'^For every (?P<per>\d+) models in this unit, (?P<k>\w+) (?P<t>.+?)(?: equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'per'),
         (r'^For every (?P<per>\d+) models in this unit, this unit can have (?P<y>.*)$', 'per'),
         (r'^Any number of (?P<t>.+?) can (?:each )?be equipped with (?P<y>.*)$', 'type'),
-        (rf'^{COND}(?:This model|it|one model|The (?P<o1>.+?)|(?P<k>\d+|One|one) (?P<t>.+?))(?: (?:not )?equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'one'),
+        (rf'^{COND}(?:This model|it|one model|The (?P<o1>.+?)|(?P<k>\d+|One|one) (?P<t>.+?))(?: (?:that|who) (?:is|are))?(?: (?:not )?equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'one'),
     ]
     for pat, kind in adds:
         m = re.match(pat, t)
@@ -632,13 +637,23 @@ def build(unit, model_sizes, global_weapons=(), faction_gear=None):
                         'maxBySize': {str(m): 1 for m in model_sizes}, 'owner': re.sub(r'\s*models?$', '', name),
                         'labels': {key: ' + '.join(item_name(x['item']) for x in items)}})
 
+    kc = unit.get('keywordChoice')
+    if kc:
+        packages = {o['keyword'].lower().replace(' ', '-'): items_of(o['equipment'], resolve) for o in kc['options']}
+        keys = list(packages)
+        options.append({'id': f'o{len(raw_options) + 1 + bool(companions)}', 'label': dict(kc['name']), 'name': kc['name'],
+                        'type': 'swap', 'required': True, 'replaces': [], 'choices': [''] + keys, 'packages': packages,
+                        'keywords': {k: o['keyword'] for k, o in zip(keys, kc['options'])},
+                        'labels': {'': '—', **{k: f"{o['keyword']}: {' + '.join(item_name(x['item']) for x in packages[k])}"
+                                               for k, o in zip(keys, kc['options'])}}})
+
     # optional model types ("0-1 Chapter Ancient", "0-1 Chapter Champion" with "1-6 Victrix Honour Guard"): the sizes
     # count the main models, so each optional model is a toggle that takes the place of one of them (only the
     # equipment that differs is swapped)
     if not companions and not addon and len(alts) == 1:
         main = max(alts[0], key=lambda p: p[1])
         main_items = equipped_items(unit, main[2], resolve)
-        next_id = len(raw_options) + 1
+        next_id = len(raw_options) + 1 + bool(kc)
         for lo, hi, t in alts[0]:
             items = equipped_items(unit, t, resolve) if lo == 0 and t != main[2] else None
             if not items or not main_items:

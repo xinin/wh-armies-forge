@@ -223,6 +223,7 @@ const packageLabel = (def, items) => {
 
 function choiceLabel(def, opt, key) {
   if (key === '') return opt.replaces?.length ? packageLabel(def, opt.replaces) : '—';
+  if (opt.keywords?.[key]) return `${opt.keywords[key]}: ${packageLabel(def, opt.packages?.[key] ?? [])}`;
   return packageLabel(def, opt.packages?.[key] ?? []) || key;
 }
 
@@ -230,7 +231,8 @@ function optionLabel(def, opt) {
   const owner = opt.owner ? `${trs(opt.owner)}: ` : '';
   const replaced = packageLabel(def, opt.replaces ?? []);
   let label;
-  if (opt.type === 'toggle') label = `${owner}${t('wg.add')} ${choiceLabel(def, opt, opt.gives)}`;
+  if (opt.name) label = tr(opt.name);
+  else if (opt.type === 'toggle') label = `${owner}${t('wg.add')} ${choiceLabel(def, opt, opt.gives)}`;
   else if (opt.type === 'pool') label = opt.replaces?.length ? `${owner}${t('wg.replace')} ${replaced}` : `${owner}${t('wg.add')}`;
   else if (opt.exclusive) label = t('wg.chooseOne');
   else label = `${owner}${replaced || t('wg.optional')}`;
