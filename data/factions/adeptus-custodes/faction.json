@@ -46,7 +46,7 @@
       "en": "Emperor's Light"
      },
      "text": {
-      "en": "ADEPTUS CUSTODES model only. This model has the following weapon: MELEE WEAPONS RANGE A WS S AP D Emperor's Light EXTRA ATTACKS Emperor's Light EXTRA ATTACKSMelee 3 2+ 5 -2 2"
+      "en": "ADEPTUS CUSTODES model only. This model has the following weapon: MELEE WEAPONS RANGE A WS S AP D Emperor's Light EXTRA ATTACKS Emperor's Light EXTRA ATTACKS Melee 3 2+ 5 -2 2"
      }
     },
     {
@@ -490,12 +490,12 @@
      "text": {
       "en": "ADEPTUS CUSTODES INFANTRY/MOUNTED unit only (excluding TERMINATOR units). This unit has +1 to advance rolls and charge rolls."
      },
-     "type": "upgrade",
      "excludes": [
       [
        "TERMINATOR"
       ]
-     ]
+     ],
+     "type": "upgrade"
     }
    ]
   },

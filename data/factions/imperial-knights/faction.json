@@ -243,6 +243,16 @@
       "en": "IMPERIAL KNIGHTS model only. While two or more ARMIGER models arc under the effects of the bearer’s Bondsman ability, once per turn, you can target one of those ARMIGER models with the…"
      }
     }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BATTLELINE",
+     "units": [
+      [
+       "ARMIGER"
+      ]
+     ]
+    }
    ]
   },
   {

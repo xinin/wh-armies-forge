@@ -18,6 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from wahapedia_fetch import fetch  # noqa: E402
+from page_scope import scope_of  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = 'https://wahapedia.ru/wh40k11ed'
@@ -75,6 +76,11 @@ def key(s):
 
 def clean(x):
     x = re.sub(r'<script.*?</script>', '', x, flags=re.S)  # ad snippets inside rule sections
+    # dice icons next to a rule picked by a D6 roll (Chaos Knights Dread abilities): "DESPAIR (AURA) (D6: 1)";
+    # "N/A" marks the one that is always active
+    x = re.sub(r'<div class="cruD(\d)"></div>', r'\1', x)
+    x = re.sub(r'<div class="cruD6wrap2?">\s*(\d+|N/A)\s*</div>',
+               lambda m: '' if m.group(1) == 'N/A' else f' (D6: {"-".join(sorted({m.group(1)[0], m.group(1)[-1]}))})', x)
     x = re.sub(r'<br\s*/?>', '\n', x)
     x = re.sub(r'</(p|div|h\d|li|tr)>', '\n', x)
     x = re.sub(r'</t[dh]>', ' ', x)
@@ -143,7 +149,7 @@ def main():
 
     fdir = ROOT / 'data' / 'factions' / args.faction
     faction = json.loads((fdir / 'faction.json').read_text())
-    source = faction.get('wahapedia', {}).get('faction', args.faction)  # a Chapter lives in another faction page
+    source = scope_of(args.faction).page  # a Chapter lives in another faction page
     page = Path(args.faction_html).read_text() if args.faction_html else fetch(f'{BASE}/factions/{source}/')
     core = Path(args.core_html).read_text() if args.core_html else fetch(f'{BASE}/the-rules/core-rules/')
 

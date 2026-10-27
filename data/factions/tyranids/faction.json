@@ -130,6 +130,29 @@
       "en": "TRYGON model only. The bearer gains the SYNAPSE keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1."
      }
     }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BURROWER",
+     "units": [
+      [
+       "MAWLOC"
+      ],
+      [
+       "TRYGON"
+      ]
+     ]
+    },
+    {
+     "keyword": "CHARACTER",
+     "units": [
+      [
+       "TRYGON"
+      ]
+     ],
+     "chosen": true,
+     "max": 2
+    }
    ]
   },
   {
@@ -231,7 +254,7 @@
      },
      "excludes": [
       [
-       "MONSTER"
+       "MONSTERS"
       ]
      ]
     },
@@ -490,7 +513,7 @@
       ],
       [
        "VON",
-       "RYAN'S",
+       "RYAN’S",
        "LEAPERS"
       ]
      ],

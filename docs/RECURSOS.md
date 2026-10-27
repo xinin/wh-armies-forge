@@ -80,6 +80,8 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 | `wargear.py` | Motor de equipo: modelos por tipo y tamaño, equipo por defecto con cantidades y opciones de equipo como selectores | (usado por el importador) |
 | `audit_units.py` | Compara cada unidad importada con su datasheet y avisa de armas, habilidades u opciones mal leídas | Caché de Wahapedia |
 | `factions.py` | Combina un capítulo con su facción base, igual que la app (lo usan los demás scripts) | Datos locales |
+| `page_scope.py` | Qué parte de una página de Wahapedia es de cada facción: la página entera (`PageScope`), la base de Marines (`ChapterBase`) o un capítulo (`Chapter`), con los datasheets de otras facciones que no se importan. Se guarda en `faction.json` → `wahapedia` y lo usan todos los importadores | `faction.json` |
+| `faction_model.py` | El esquema de `faction.json` como clases (`Faction`, `Detachment`, `Enhancement`, `KeywordGrant`…): `bootstrap_faction.py` construye una `Faction` y la escribe con `to_json()`, con un orden de campos fijo | (usado por `bootstrap_faction.py`) |
 | `check_app.py` (+ `check_app.html`) | Abre la app en Chrome headless con una lista de prueba por facción y comprueba cada vista en español e inglés (errores, textos sin traducir, «undefined») | La app |
 | `translations.py` | Lista los textos de juego sin traducir (`pending`) y guarda las traducciones (`apply`) en los `i18n.es.json` | Datos importados |
 | `wahapedia_fetch.py` | Descarga con caché local (`.cache/wahapedia/`) para los importadores | Wahapedia |

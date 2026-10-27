@@ -1,0 +1,927 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-knights/",
+ "detachments": {
+  "traitoris-lance": [
+   {
+    "id": "pterrorshades",
+    "name": {
+     "en": "Pterrorshades"
+    },
+    "cp": 1,
+    "source": "Traitoris Lance",
+    "kind": "Wargear",
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "Shrieking with hunger, Pterrorshades descend in a whirlwind to feast on the fearful souls of the foe. Their banquet transmutes into vital energy that flows into the Chaos Knight on which they roost."
+    },
+    "when": {
+     "en": "Any phase, just after an enemy unit fails a Battle-shock test."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that is within 12\" of that enemy unit."
+    },
+    "effect": {
+     "en": "Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound and one model in your unit regains up to 1 lost wound."
+    },
+    "restrictions": {
+     "en": "You can only use this Stratagem once per battle round."
+    }
+   },
+   {
+    "id": "conquerors-without-mercy",
+    "name": {
+     "en": "Conquerors Without Mercy"
+    },
+    "cp": 1,
+    "source": "Traitoris Lance",
+    "kind": "Battle Tactic",
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Chaos Knights leave only death and devastation in their wake, and reduce entire worlds to ruin."
+    },
+    "when": {
+     "en": "Fight phase."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS model from your army that made a Charge move this turn and has not been selected to fight this phase."
+    },
+    "effect": {
+     "en": "Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by your model by 1. After your model has finished making its attacks this phase, if it destroyed one or more enemy units this phase, each enemy unit within 6\" of your model must take a Battle-shock test."
+    }
+   },
+   {
+    "id": "disdain-for-the-weak",
+    "name": {
+     "en": "Disdain For The Weak"
+    },
+    "cp": 1,
+    "source": "Traitoris Lance",
+    "kind": "Strategic Ploy",
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Fallen Nobles sneer at the pathetic efforts of their foes, doubly so in the case of those who fear them."
+    },
+    "when": {
+     "en": "Fight phase, just after an enemy unit has selected its targets."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+    },
+    "effect": {
+     "en": "Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 5+ ability against attacks made by Battle-shocked models."
+    }
+   },
+   {
+    "id": "a-long-leash",
+    "name": {
+     "en": "A Long Leash"
+    },
+    "cp": 1,
+    "source": "Traitoris Lance",
+    "kind": "Strategic Ploy",
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "The neural connections between Fallen Nobles and doggedly loyal or fearful War Dog pilots can extend over remarkable distances."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One ABHORRENT unit from your army and up to two friendly WAR DOG units."
+    },
+    "effect": {
+     "en": "Until the start of your next Command phase, those WAR DOG units are treated as being within range of any Aura abilities your ABHORRENT unit has."
+    }
+   },
+   {
+    "id": "imperious-advance",
+    "name": {
+     "en": "Imperious Advance"
+    },
+    "cp": 1,
+    "source": "Traitoris Lance",
+    "kind": "Epic Deed",
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Employing piloting skill or brute force, Fallen Nobles can either manoeuvre or simply barge their steeds through foes and obstacles alike."
+    },
+    "when": {
+     "en": "Your Movement phase or your Charge phase."
+    },
+    "target": {
+     "en": "Up to two WAR DOG units from your army or one TITANIC CHAOS KNIGHTS unit from your army."
+    },
+    "effect": {
+     "en": "Until the end of the phase, each time a model in one of your units makes a Normal, Advance, Fall Back or Charge move, it can move through models and terrain features. When doing so, it can move within Engagement Range of such models but, unless it made a Charge move, cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed (the Super-heavy Walker ability does not apply while using this Stratagem)."
+    }
+   },
+   {
+    "id": "storm-of-darkness",
+    "name": {
+     "en": "Storm Of Darkness"
+    },
+    "cp": 1,
+    "source": "Traitoris Lance",
+    "kind": "Strategic Ploy",
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "Through dark rituals and dread pacts, the Chaos Knights draw upon the fear and despair of their foes and bind it into a curse upon the land itself, wreathing themselves in a shrouding pall."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+    },
+    "effect": {
+     "en": "Your unit has Stealth. Melee attacks that target your unit have -1 to hit rolls."
+    }
+   }
+  ],
+  "infernal-lance": [
+   {
+    "id": "profane-symbiosis",
+    "name": {
+     "en": "Profane Symbiosis"
+    },
+    "cp": 1,
+    "source": "Infernal Lance",
+    "kind": "Battle Tactic",
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "Some Fallen Nobles are conjoined, symbiotically or parasitically, with the hideous systems of their Chaos Knight. This allows them to channel more unholy energies, though not without risk."
+    },
+    "when": {
+     "en": "End of any phase."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that is not Empowered."
+    },
+    "effect": {
+     "en": "Your unit makes a Malefic Surge."
+    },
+    "restrictions": {
+     "en": "You cannot select the same unit as the target of this Stratagem more than once per battle round."
+    }
+   },
+   {
+    "id": "hellforged-construction",
+    "name": {
+     "en": "Hellforged Construction"
+    },
+    "cp": 1,
+    "source": "Infernal Lance",
+    "kind": "Battle Tactic",
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Reinforced with warp-infused materials and warded through ritual blood sacrifice, these Chaos Knights can withstand unnatural levels of punishment."
+    },
+    "when": {
+     "en": "Fight phase, just after an enemy unit has selected its targets."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+    },
+    "effect": {
+     "en": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    }
+   },
+   {
+    "id": "corrupting-taint",
+    "name": {
+     "en": "Corrupting Taint"
+    },
+    "cp": 1,
+    "source": "Infernal Lance",
+    "kind": "Epic Deed",
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "The foul energies and unnatural influence of the Chaos Knights spread from them like sorcerous radiation, tainting all they touch."
+    },
+    "when": {
+     "en": "Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge."
+    },
+    "target": {
+     "en": "That CHAOS KNIGHTS CHARACTER unit."
+    },
+    "effect": {
+     "en": "Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+    }
+   },
+   {
+    "id": "unleash-balefire",
+    "name": {
+     "en": "Unleash Balefire"
+    },
+    "cp": 1,
+    "source": "Infernal Lance",
+    "kind": "Wargear",
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "These weapons bathe the target in blasts of daemonic balefire that burns flesh and soul alike."
+    },
+    "when": {
+     "en": "Your Shooting phase."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase."
+    },
+    "effect": {
+     "en": "After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it."
+    }
+   },
+   {
+    "id": "warp-vision",
+    "name": {
+     "en": "Warp Vision"
+    },
+    "cp": 1,
+    "source": "Infernal Lance",
+    "kind": "Wargear",
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Supernatural sensors perceive the soul-spoor of their prey, or even stare forward through fate and time."
+    },
+    "when": {
+     "en": "Your Shooting phase."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase."
+    },
+    "effect": {
+     "en": "Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability."
+    }
+   },
+   {
+    "id": "diabolic-bulwark",
+    "name": {
+     "en": "Diabolic Bulwark"
+    },
+    "cp": 1,
+    "source": "Infernal Lance",
+    "kind": "Wargear",
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "Ectoplasmic blood surges hot through glowing conduits as the Fallen Noble feeds power to their Knight suit’s supernaturally enhanced ion shield emitters."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+    },
+    "effect": {
+     "en": "Until the end of the phase, models in your unit have a 4+ invulnerable save."
+    }
+   }
+  ],
+  "lords-of-dread": [
+   {
+    "id": "claimed-for-the-dark-gods",
+    "name": {
+     "en": "Claimed For The Dark Gods"
+    },
+    "cp": 1,
+    "source": "Lords of Dread",
+    "kind": "Epic Deed",
+    "phase": "command",
+    "turn": "either",
+    "legend": {
+     "en": "The Fallen Noble dedicates their latest conquest to the Dark Gods in hope of reward."
+    },
+    "when": {
+     "en": "Start of your Command phase."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS CHARACTER unit from your army that is within range of one or more objective markers you control."
+    },
+    "effect": {
+     "en": "Select one of those objective markers. That objective marker remains under your control, with a Level of Control of 5 (unless it would otherwise be higher), until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+    }
+   },
+   {
+    "id": "spiteful-demise",
+    "name": {
+     "en": "Spiteful Demise"
+    },
+    "cp": 1,
+    "source": "Lords of Dread",
+    "kind": "Epic Deed",
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "Determined that tales will be told of their spectacular end, the Fallen Noble overloads the internal generators of their Knight suit, hoping to take their enemy with them into oblivion."
+    },
+    "when": {
+     "en": "Any phase, just after a CHAOS KNIGHTS CHARACTER unit from your army is destroyed."
+    },
+    "target": {
+     "en": "That CHAOS KNIGHTS CHARACTER unit. You can use this Stratagem on that unit even though it was just destroyed."
+    },
+    "effect": {
+     "en": "When rolling to determine whether mortal wounds are inflicted by your unit’s Deadly Demise ability, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of a 4+ instead of on a 6."
+    }
+   },
+   {
+    "id": "runes-of-disdain",
+    "name": {
+     "en": "Runes Of Disdain"
+    },
+    "cp": 2,
+    "source": "Lords of Dread",
+    "kind": "Epic Deed",
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Inscribed into the Knight suit’s servo-skeleton, these markings channel the pilot’s contempt for the foe and manifest it as a sorcerous aura of defence."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS CHARACTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+    },
+    "effect": {
+     "en": "Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+    }
+   },
+   {
+    "id": "titanic-duel",
+    "name": {
+     "en": "Titanic Duel"
+    },
+    "cp": 1,
+    "source": "Lords of Dread",
+    "kind": "Epic Deed",
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "The Chaos Knights engage in duels not for honour, but to assert their absolute dominance over the battlefield."
+    },
+    "when": {
+     "en": "Your Shooting phase or the Fight phase."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS CHARACTER unit from your army that has not been selected to shoot or fight this phase."
+    },
+    "effect": {
+     "en": "Select one enemy MONSTER or VEHICLE unit. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. Each time a model in your unit makes an attack that targets that enemy unit, if that enemy unit is TITANIC, you can re-roll the Hit roll and you can re-roll the Wound roll instead."
+    }
+   },
+   {
+    "id": "trophy-hunter",
+    "name": {
+     "en": "Trophy Hunter"
+    },
+    "cp": 1,
+    "source": "Lords of Dread",
+    "kind": "Epic Deed",
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "To these Fallen Nobles, each new foe chased down is another opportunity to claim gory trophies."
+    },
+    "when": {
+     "en": "Fight phase, just before a CHAOS KNIGHTS CHARACTER unit from your army consolidates."
+    },
+    "target": {
+     "en": "That CHAOS KNIGHTS CHARACTER unit."
+    },
+    "effect": {
+     "en": "Until the end of the phase, each time your unit Consolidates, models in it can move an additional 3\" as long as your unit can end that move within Engagement Range of one or more enemy units."
+    }
+   },
+   {
+    "id": "crushed-like-vermin",
+    "name": {
+     "en": "Crushed Like Vermin"
+    },
+    "cp": 1,
+    "source": "Lords of Dread",
+    "kind": "Epic Deed",
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Screaming enemy warriors are crushed to gory paste as the Chaos Knight tramples spitefully through their midst, stamping and raking these unworthy foes with its huge, taloned feet."
+    },
+    "when": {
+     "en": "Your Movement phase, just after a CHAOS KNIGHTS CHARACTER unit from your army ends a Normal move."
+    },
+    "target": {
+     "en": "That CHAOS KNIGHTS CHARACTER unit."
+    },
+    "effect": {
+     "en": "Select one enemy unit (excluding MONSTERS and VEHICLES) that your unit moved over during that move and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound. If one or more models are destroyed as a result of this Stratagem, that enemy unit must take a Battle-shock test."
+    }
+   }
+  ],
+  "houndpack-lance": [
+   {
+    "id": "vox-howl",
+    "name": {
+     "en": "Vox-Howl"
+    },
+    "cp": 2,
+    "source": "Houndpack Lance",
+    "kind": "Battle Tactic",
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "This artificially generated vox-borne rallying cry booms out across multiple wavelengths. It bolsters the courage of fellow War Dog pilots and their steeds, even as it fills the foes’ communications with squealing scrapcode and monstrous howling."
+    },
+    "when": {
+     "en": "Start of the Shooting phase or the start of the Fight phase."
+    },
+    "target": {
+     "en": "One WAR DOG CHARACTER unit from your army."
+    },
+    "effect": {
+     "en": "Each enemy unit within 6\" of your unit must take a Battle-shock test. Each friendly WAR DOG unit that is within 6\" of your unit and is Battle-shocked must take a Leadership test; if that test is passed, that unit is no longer Battle-shocked."
+    },
+    "restrictions": {
+     "en": "You can only use this Stratagem once per turn."
+    }
+   },
+   {
+    "id": "hungry-for-combat",
+    "name": {
+     "en": "Hungry For Combat"
+    },
+    "cp": 1,
+    "source": "Houndpack Lance",
+    "kind": "Battle Tactic",
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Eager to get into battle, these War Dogs hope to win glory and prove their worth to peers and masters alike."
+    },
+    "when": {
+     "en": "Start of the Fight phase."
+    },
+    "target": {
+     "en": "Two or more WAR DOG units from your army within Engagement Range of the same enemy unit."
+    },
+    "effect": {
+     "en": "Select one enemy unit within Engagement Range of those WAR DOG units. Until the end of the phase, models in those WAR DOG units can only target that enemy unit, but each time a model in one of those WAR DOG units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+    }
+   },
+   {
+    "id": "cunning-hunter",
+    "name": {
+     "en": "Cunning Hunter"
+    },
+    "cp": 1,
+    "source": "Houndpack Lance",
+    "kind": "Strategic Ploy",
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "This War Dog's pilot knows when to feign fight or give ground, only to redouble their attack the moment their prey’s guard drops."
+    },
+    "when": {
+     "en": "Your Movement phase, just after a WAR DOG unit from your army Falls Back."
+    },
+    "target": {
+     "en": "That WAR DOG unit."
+    },
+    "effect": {
+     "en": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+    }
+   },
+   {
+    "id": "animalistic-rage",
+    "name": {
+     "en": "Animalistic Rage"
+    },
+    "cp": 1,
+    "source": "Houndpack Lance",
+    "kind": "Battle Tactic",
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "Many War Dog pilots are bitter and twisted souls whose hearts are filled with animalistic rage, and they will vent that anger with their last dying gasp."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, just after a WAR DOG unit from your army that has not been selected to attack this phase is destroyed."
+    },
+    "target": {
+     "en": "That WAR DOG unit. You can use this Stratagem on that unit even though it was just destroyed."
+    },
+    "effect": {
+     "en": "Before resolving your unit’s Deadly Demise ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any Consolidation moves have been made, resolve your unit’s Deadly Demise ability as normal."
+    }
+   },
+   {
+    "id": "harrying-hounds",
+    "name": {
+     "en": "Harrying Hounds"
+    },
+    "cp": 1,
+    "source": "Houndpack Lance",
+    "kind": "Strategic Ploy",
+    "phase": "movement",
+    "turn": "enemy",
+    "legend": {
+     "en": "War Dogs fight with agility and guile, giving ground only to surge in on the attack from another angle."
+    },
+    "when": {
+     "en": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move."
+    },
+    "target": {
+     "en": "One WAR DOG unit from your army that is within 8\" of that enemy unit."
+    },
+    "effect": {
+     "en": "Your unit can make a Normal move of up to 6\"."
+    }
+   },
+   {
+    "id": "encircling-pack",
+    "name": {
+     "en": "Encircling Pack"
+    },
+    "cp": 1,
+    "source": "Houndpack Lance",
+    "kind": "Strategic Ploy",
+    "phase": "fight",
+    "turn": "enemy",
+    "legend": {
+     "en": "The War Dogs of the dread household move to outflank and encircle their prey."
+    },
+    "when": {
+     "en": "End of your opponent’s Fight phase."
+    },
+    "target": {
+     "en": "One WAR DOG unit from your army that is wholly within 12\" of one or more battlefield edges and not within Engagement Range of one or more enemy units."
+    },
+    "effect": {
+     "en": "Remove your unit from the battlefield and place it into Strategic Reserves."
+    }
+   }
+  ],
+  "helhunt-lance": [
+   {
+    "id": "feral-arrogance",
+    "name": {
+     "en": "Feral Arrogance"
+    },
+    "cp": 1,
+    "source": "Helhunt Lance",
+    "kind": "Strategic Ploy",
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "This Chaos Knight shrugs off even the most dire hurts as though they are beneath such a mighty, warp-empowered predator."
+    },
+    "when": {
+     "en": "Any phase, just after a mortal wound is allocated to a CHAOS KNIGHTS unit from your army."
+    },
+    "target": {
+     "en": "That CHAOS KNIGHTS unit."
+    },
+    "effect": {
+     "en": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds."
+    }
+   },
+   {
+    "id": "merciless-fusillade",
+    "name": {
+     "en": "Merciless Fusillade"
+    },
+    "cp": 1,
+    "source": "Helhunt Lance",
+    "kind": "Battle Tactic",
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "The scion slaves their servants’ weapons to their own, forming an overwhelming firestorm."
+    },
+    "when": {
+     "en": "Start of your Shooting phase or the start of the Fight phase."
+    },
+    "target": {
+     "en": "One TITANIC CHAOS KNIGHTS unit from your army, and up to two friendly WAR DOG units, that have not been selected to shoot or fight this phase."
+    },
+    "effect": {
+     "en": "Select one enemy unit that is an eligible target for each of those CHAOS KNIGHTS units. Until the end of the phase, each time one of those Chaos Knights units is selected to shoot or fight, if that enemy unit is an eligible target, you can only select that enemy unit as the target for all of those attacks and those attacks have the [SUSTAINED HITS 1] ability."
+    }
+   },
+   {
+    "id": "beasthide-manifestation",
+    "name": {
+     "en": "Beasthide Manifestation"
+    },
+    "cp": 1,
+    "source": "Helhunt Lance",
+    "kind": "Battle Tactic",
+    "phase": "shooting",
+    "turn": "either",
+    "legend": {
+     "en": "The raw and bestial power of the Warp causes this Chaos Knight to sprout thick mutant scales and layered hide in response to incoming attacks"
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+    },
+    "effect": {
+     "en": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    }
+   },
+   {
+    "id": "flush-the-quarry",
+    "name": {
+     "en": "Flush The Quarry"
+    },
+    "cp": 1,
+    "source": "Helhunt Lance",
+    "kind": "Battle Tactic",
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Urged on by their masters, the War Dogs push hard through the densest terrain."
+    },
+    "when": {
+     "en": "Start of your Movement phase."
+    },
+    "target": {
+     "en": "One TITANIC CHAOS KNIGHTS unit from your army and up to three friendly WAR DOG units within 6\" of that Titanic Chaos Knights unit."
+    },
+    "effect": {
+     "en": "Until the end of the phase, each time one of those War Dog units makes a Normal, Advance or Fall Back move, its models can move through models and terrain features. When doing so, they can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+    }
+   },
+   {
+    "id": "contemptuous-volleys",
+    "name": {
+     "en": "Contemptuous Volleys"
+    },
+    "cp": 1,
+    "source": "Helhunt Lance",
+    "kind": "Strategic Ploy",
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "No mere prey swirling about their steed’s feet will prevent this scion from focusing their fire."
+    },
+    "when": {
+     "en": "Your Movement phase, just after a CHAOS KNIGHTS unit from your army Falls Back."
+    },
+    "target": {
+     "en": "That CHAOS KNIGHTS unit."
+    },
+    "effect": {
+     "en": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+    }
+   },
+   {
+    "id": "goaded-beast",
+    "name": {
+     "en": "Goaded Beast"
+    },
+    "cp": 1,
+    "source": "Helhunt Lance",
+    "kind": "Strategic Ploy",
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "Firing upon adamantine monsters only goads them to greater wrath and more ferocious bloodshed."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, just after an enemy unit has shot."
+    },
+    "target": {
+     "en": "One CHAOS KNIGHTS unit from your army that lost one or more wounds as a result of those attacks."
+    },
+    "effect": {
+     "en": "Your unit can make a surge move of up to D6\""
+    }
+   }
+  ],
+  "bastions-of-tyranny": [
+   {
+    "id": "rune-cursed-stronghold",
+    "name": {
+     "en": "Rune-Cursed Stronghold"
+    },
+    "cp": 1,
+    "source": "Bastions of Tyranny",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "The mightiest of the Chaos Knights are etched with malign wards capable of shielding them from powerful weapons and throwing back esoteric assaults."
+    },
+    "when": {
+     "en": "Any phase, when a friendly KNIGHT TYRANT unit suffers a mortal wound."
+    },
+    "target": {
+     "en": "That KNIGHT TYRANT unit."
+    },
+    "effect": {
+     "en": "Your unit has Feel No Pain 5+ against mortal wounds."
+    }
+   },
+   {
+    "id": "pitiless-focus",
+    "name": {
+     "en": "Pitiless Focus"
+    },
+    "cp": 1,
+    "source": "Bastions of Tyranny",
+    "kind": null,
+    "phase": "movement",
+    "turn": "your",
+    "legend": {
+     "en": "Eager to unleash the full power at their fingertips, the scion of a Knight Tyrant will allow nothing to impede their devastating arsenal."
+    },
+    "when": {
+     "en": "Your Movement phase, when a friendly KNIGHT TYRANT unit is selected to make a fall-back move."
+    },
+    "target": {
+     "en": "That KNIGHT TYRANT unit."
+    },
+    "effect": {
+     "en": "That move does not prevent your unit from being eligible to shoot."
+    }
+   },
+   {
+    "id": "intimidating-reminder",
+    "name": {
+     "en": "Intimidating Reminder"
+    },
+    "cp": 1,
+    "source": "Bastions of Tyranny",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "With a spiteful lash of suppressive firepower, a Knight Tyrant reminds its foes of the deferent fear and awe that are the only acceptable attitudes in the presence of such power."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly KNIGHT TYRANT unit has shot."
+    },
+    "target": {
+     "en": "That KNIGHT TYRANT unit."
+    },
+    "effect": {
+     "en": "Select one enemy unit hit by those attacks. That enemy unit is suppressed until the start of your next Command phase: While a unit is suppressed, that unit’s attacks have -1 to hit rolls."
+    }
+   }
+  ],
+  "hunting-warpack": [
+   {
+    "id": "insensate-bloodthirst",
+    "name": {
+     "en": "Insensate Bloodthirst"
+    },
+    "cp": 1,
+    "source": "Hunting Warpack",
+    "kind": null,
+    "phase": "fight",
+    "turn": "either",
+    "legend": {
+     "en": "Gripped by a fever to kill and with prey within reach, whatever damage the prey inflicts is smothered by a War Dog’s thrill of the hunt."
+    },
+    "when": {
+     "en": "Fight phase, when an enemy unit targets a friendly WAR DOG unit."
+    },
+    "target": {
+     "en": "That WAR DOG unit."
+    },
+    "effect": {
+     "en": "Your unit has Feel No Pain 5+"
+    }
+   },
+   {
+    "id": "leash-of-the-masters",
+    "name": {
+     "en": "Leash Of The Masters"
+    },
+    "cp": 1,
+    "source": "Hunting Warpack",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "Under the painful neural leash of a Helm Mechanicum, a War Dog pilot’s gory instincts can be overridden to undertake vital operations prioritised by their larger masters."
+    },
+    "when": {
+     "en": "Your Shooting phase, when a friendly WAR DOG unit has shot."
+    },
+    "target": {
+     "en": "That WAR DOG unit."
+    },
+    "effect": {
+     "en": "Those attacks do not prevent your unit from being eligible to start an action."
+    }
+   },
+   {
+    "id": "stalking-focus",
+    "name": {
+     "en": "Stalking Focus"
+    },
+    "cp": 1,
+    "source": "Hunting Warpack",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "enemy",
+    "legend": {
+     "en": "With a prize under their talons, War Dogs are adept at evading the prey’s sight by loping low through cover."
+    },
+    "when": {
+     "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective."
+    },
+    "target": {
+     "en": "That WAR DOG unit."
+    },
+    "effect": {
+     "en": "Ranged attacks that target your unit have -1 AP until that enemy unit has attacked."
+    }
+   }
+  ],
+  "iconoclast-fiefdom": [
+   {
+    "id": "avenge-the-masters",
+    "name": {
+     "en": "Avenge The Masters!"
+    },
+    "cp": 1,
+    "source": "Iconoclast Fiefdom",
+    "kind": null,
+    "phase": "any",
+    "turn": "either",
+    "legend": {
+     "en": "As the object of their adulation is consumed by fire, mortal worshippers are roused to a desperate fury, seeking vengeance on behalf of their deceased master."
+    },
+    "when": {
+     "en": "Any phase, when a friendly CHAOS KNIGHTS unit is destroyed by an enemy unit."
+    },
+    "target": {
+     "en": "That enemy unit."
+    },
+    "effect": {
+     "en": "That enemy unit is marked until the end of the battle. Friendly DAMNED units’ attacks that target a marked unit have [LETHAL HITS]."
+    }
+   },
+   {
+    "id": "dark-sacrifice",
+    "name": {
+     "en": "Dark Sacrifice"
+    },
+    "cp": 1,
+    "source": "Iconoclast Fiefdom",
+    "kind": null,
+    "phase": "command",
+    "turn": "your",
+    "legend": {
+     "en": "The pilots of corrupted Knight suits demand a ritual offering of their serfs, and their mechanical steed feeds upon the victims’ life forces and raw fear."
+    },
+    "when": {
+     "en": "Your Command phase."
+    },
+    "target": {
+     "en": "One friendly DAMNED unit (excluding ACCURSED CULTISTS units) within 9\" of a friendly CHAOS KNIGHTS model."
+    },
+    "effect": {
+     "en": "Select one CHAOS KNIGHTS model within 9\" of your unit and roll D3+3: Your DAMNED unit suffers that number of mortal wounds. That CHAOS KNIGHTS model heals that number of wounds."
+    }
+   },
+   {
+    "id": "coursing-thralls",
+    "name": {
+     "en": "Coursing Thralls"
+    },
+    "cp": 1,
+    "source": "Iconoclast Fiefdom",
+    "kind": null,
+    "phase": "shooting",
+    "turn": "your",
+    "legend": {
+     "en": "With blaring hunting horns and bellowed calls to their towering masters, mortal thralls signal the location of hiding prey."
+    },
+    "when": {
+     "en": "Start of your Shooting phase."
+    },
+    "target": {
+     "en": "One friendly DAMNED unit."
+    },
+    "effect": {
+     "en": "Select one visible enemy unit within 12\" of your unit. That enemy unit is hunted: While a unit is hunted, that unit has +6\" detection range."
+    }
+   }
+  ]
+ }
+}

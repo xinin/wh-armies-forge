@@ -97,6 +97,9 @@ def collect():
         for r in ([fa['armyRule']] if fa.get('armyRule') else []) + fa.get('extraRules', []):
             add(f, 'army-rule', r['name'])
             add(f, 'army-rule', r['text'])
+            for item in r.get('items', []):
+                add(f, 'army-rule', item['name'])
+                add(f, 'army-rule', item['text'])
         for d in fa['detachments']:
             fd = full.get(d['id'], {})
             add(f, 'detachment', d['name'])

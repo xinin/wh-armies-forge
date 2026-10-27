@@ -2,7 +2,7 @@
  "id": "chaos-knights",
  "name": {
   "en": "Chaos Knights",
-  "es": "Chaos Knights"
+  "es": "Caballeros del Caos"
  },
  "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-knights/",
  "armyRule": {
@@ -10,8 +10,14 @@
    "en": "Harbingers of Dread"
   },
   "text": {
-   "en": "If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.\nDEATHLY TERROR (AURA)N/A\nWhile an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.\nDESPAIR (AURA)\nWhile an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).\nDOOM\nEach time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.\nDARKNESS\nThis model has Stealth.\nDISMAY (AURA)\nIn the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.\nDELIRIUM (AURA)\nWhile an enemy unit that is Below Half-strength is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.\nDOMINION\nAdd 3\" to the range of this model’s Aura abilities."
+   "en": "If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.\nDEATHLY TERROR (AURA)\nWhile an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.\nDESPAIR (AURA) (D6: 1)\nWhile an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).\nDOOM (D6: 2)\nEach time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.\nDARKNESS (D6: 3)\nThis model has Stealth.\nDISMAY (AURA) (D6: 4)\nIn the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.\nDELIRIUM (AURA) (D6: 5)\nWhile an enemy unit that is Below Half-strength is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.\nDOMINION (D6: 6)\nAdd 3\" to the range of this model’s Aura abilities."
   }
+ },
+ "wahapedia": {
+  "faction": "chaos-knights",
+  "otherFactions": [
+   "HERETIC ASTARTES"
+  ]
  },
  "detachments": [
   {
@@ -269,6 +275,39 @@
       "en": "WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
      }
     }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BATTLELINE",
+     "units": [
+      [
+       "WAR",
+       "DOG"
+      ]
+     ]
+    },
+    {
+     "keyword": "CHARACTER",
+     "units": [
+      [
+       "WAR",
+       "DOG"
+      ]
+     ],
+     "chosen": true,
+     "max": 3
+    }
+   ],
+   "minUnits": [
+    {
+     "units": [
+      [
+       "WAR",
+       "DOG"
+      ]
+     ],
+     "min": 3
+    }
    ]
   },
   {
@@ -398,6 +437,9 @@
   {
    "id": "hunting-warpack",
    "cost": 1,
+   "tags": [
+    "WAR DOGS"
+   ],
    "name": {
     "en": "Hunting Warpack"
    },

@@ -3,9 +3,87 @@
  "version": "2026-10-27",
  "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-knights/",
  "verified": [
-  "all-enhancements"
+  "all-enhancements",
+  "knight-abominant",
+  "knight-desecrator",
+  "knight-despoiler",
+  "knight-rampager",
+  "knight-ruinator",
+  "knight-tyrant",
+  "war-dog-brigand",
+  "war-dog-executioner",
+  "war-dog-huntsman",
+  "war-dog-karnivore",
+  "war-dog-stalker"
  ],
- "units": {},
+ "units": {
+  "knight-abominant": [
+   {
+    "models": 1,
+    "points": 350
+   }
+  ],
+  "knight-desecrator": [
+   {
+    "models": 1,
+    "points": 350
+   }
+  ],
+  "knight-despoiler": [
+   {
+    "models": 1,
+    "points": 360
+   }
+  ],
+  "knight-rampager": [
+   {
+    "models": 1,
+    "points": 350
+   }
+  ],
+  "knight-ruinator": [
+   {
+    "models": 1,
+    "points": 325
+   }
+  ],
+  "knight-tyrant": [
+   {
+    "models": 1,
+    "points": 390
+   }
+  ],
+  "war-dog-brigand": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "war-dog-executioner": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "war-dog-huntsman": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "war-dog-karnivore": [
+   {
+    "models": 1,
+    "points": 145
+   }
+  ],
+  "war-dog-stalker": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ]
+ },
  "enhancements": {
   "knight-diabolus": 25,
   "blasphemous-engine": 35,
@@ -35,5 +113,67 @@
   "snarling-rivalry": 10,
   "cruel-lashmaster": 25,
   "iconoclast-idol": 20
+ },
+ "unitsExtraCopies": {
+  "knight-abominant": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 370
+    }
+   ]
+  },
+  "knight-desecrator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 370
+    }
+   ]
+  },
+  "knight-despoiler": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 390
+    }
+   ]
+  },
+  "knight-rampager": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 370
+    }
+   ]
+  },
+  "knight-ruinator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 345
+    }
+   ]
+  },
+  "knight-tyrant": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 410
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "knight-despoiler": {
+   "despoiler-gatling-cannon": 25,
+   "despoiler-battle-cannon": 10
+  }
  }
 }

@@ -251,13 +251,13 @@
       "id": "chaos-knights",
       "name": {
         "en": "Chaos Knights",
-        "es": "Chaos Knights"
+        "es": "Caballeros del Caos"
       },
       "edition": "11th",
       "alliance": "chaos",
       "path": "chaos-knights",
       "color": "#4a3b2e",
-      "units": 0,
+      "units": 11,
       "detachments": 8
     }
   ]

@@ -25,11 +25,6 @@
    "Librarius",
    "Special Move Types"
   ],
-  "unitKeywords": [
-   [
-    "PSYKER"
-   ]
-  ],
   "units": [
    "gladiator-lancer",
    "gladiator-reaper",
@@ -37,6 +32,11 @@
    "impulsor",
    "repulsor",
    "repulsor-executioner"
+  ],
+  "unitKeywords": [
+   [
+    "PSYKER"
+   ]
   ]
  },
  "detachments": [

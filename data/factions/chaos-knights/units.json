@@ -2,7 +2,2813 @@
  "_note": "Datasheets. Points live in points.json.",
  "excluded": {
   "_note": "Forge World and Warhammer Legends datasheets: never imported.",
-  "ids": []
+  "ids": [
+   "accursed-cultists",
+   "chaos-acastus-knight-asterius",
+   "chaos-acastus-knight-porphyrion",
+   "chaos-cerastus-knight-acheron",
+   "chaos-cerastus-knight-atrapos",
+   "chaos-cerastus-knight-castigator",
+   "chaos-cerastus-knight-lancer",
+   "chaos-questoris-knight-magaera",
+   "chaos-questoris-knight-styrix",
+   "cultist-firebrand",
+   "cultist-mob",
+   "cultist-mob-with-firearms",
+   "dark-commune",
+   "fellgor-beastmen",
+   "gellerpox-infected",
+   "mutoid-vermin",
+   "negavolt-cultists",
+   "renegade-enforcer",
+   "renegade-heavy-weapons-squad",
+   "renegade-ogryn-beast-handler",
+   "renegade-ogryn-brutes",
+   "renegade-plague-ogryns",
+   "rogue-psyker",
+   "traitor-enforcer",
+   "traitor-guardsmen-squad",
+   "war-dog-moirax"
+  ]
  },
- "units": []
+ "units": [
+  {
+   "id": "war-dog-brigand",
+   "name": {
+    "en": "War Dog Brigand",
+    "es": "War Dog Brigand"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "WAR DOG",
+    "BRIGAND"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "6",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "avenger-chaincannon",
+     "name": {
+      "en": "Avenger chaincannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "12",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "daemonbreath-spear",
+     "name": {
+      "en": "Daemonbreath spear"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-multi-launcher",
+     "name": {
+      "en": "Havoc multi-launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-feet",
+     "name": {
+      "en": "Armoured feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Brigand"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../War-Dog-Brigand",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s diabolus heavy stubber can be replaced with 1 havoc multi-launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 War Dog Brigand"
+   ],
+   "equipped": [
+    "This model is equipped with: avenger chaincannon; daemonbreath spear; diabolus heavy stubber; armoured feet."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "avenger-chaincannon": 1,
+      "daemonbreath-spear": 1,
+      "diabolus-heavy-stubber": 1,
+      "armoured-feet": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Diabolus heavy stubber",
+      "es": "Diabolus heavy stubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "diabolus-heavy-stubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "havoc-multi-launcher"
+     ],
+     "packages": {
+      "havoc-multi-launcher": [
+       {
+        "item": "havoc-multi-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "havoc-multi-launcher": "Havoc multi-launcher",
+      "": "Diabolus heavy stubber"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-feet",
+    "avenger-chaincannon",
+    "daemonbreath-spear",
+    "diabolus-heavy-stubber"
+   ]
+  },
+  {
+   "id": "war-dog-executioner",
+   "name": {
+    "en": "War Dog Executioner",
+    "es": "War Dog Executioner"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "WAR DOG",
+    "EXECUTIONER"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "6",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "daemonbreath-meltagun",
+     "name": {
+      "en": "Daemonbreath meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "war-dog-autocannon",
+     "name": {
+      "en": "War Dog autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "armoured-feet",
+     "name": {
+      "en": "Armoured feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Executioner"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3\" of it must take a Battle-shock test."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../War-Dog-Executioner",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s diabolus heavy stubber can be replaced with 1 daemonbreath meltagun.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 War Dog Executioner"
+   ],
+   "equipped": [
+    "This model is equipped with: diabolus heavy stubber; 2 War Dog autocannons; armoured feet."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "diabolus-heavy-stubber": 1,
+      "war-dog-autocannon": 2,
+      "armoured-feet": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Diabolus heavy stubber",
+      "es": "Diabolus heavy stubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "diabolus-heavy-stubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "daemonbreath-meltagun"
+     ],
+     "packages": {
+      "daemonbreath-meltagun": [
+       {
+        "item": "daemonbreath-meltagun",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "daemonbreath-meltagun": "Daemonbreath meltagun",
+      "": "Diabolus heavy stubber"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-feet",
+    "diabolus-heavy-stubber",
+    "war-dog-autocannon"
+   ]
+  },
+  {
+   "id": "war-dog-huntsman",
+   "name": {
+    "en": "War Dog Huntsman",
+    "es": "War Dog Huntsman"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "WAR DOG",
+    "HUNTSMAN"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "6",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "daemonbreath-meltagun",
+     "name": {
+      "en": "Daemonbreath meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "daemonbreath-spear",
+     "name": {
+      "en": "Daemonbreath spear"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chaintalon",
+     "name": {
+      "en": "Reaper chaintalon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Huntsman"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, you can re-roll the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../War-Dog-Huntsman",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s diabolus heavy stubber can be replaced with 1 daemonbreath meltagun.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 War Dog Huntsman"
+   ],
+   "equipped": [
+    "This model is equipped with: daemonbreath spear; diabolus heavy stubber; reaper chaintalon."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "daemonbreath-spear": 1,
+      "diabolus-heavy-stubber": 1,
+      "reaper-chaintalon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Diabolus heavy stubber",
+      "es": "Diabolus heavy stubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "diabolus-heavy-stubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "daemonbreath-meltagun"
+     ],
+     "packages": {
+      "daemonbreath-meltagun": [
+       {
+        "item": "daemonbreath-meltagun",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "daemonbreath-meltagun": "Daemonbreath meltagun",
+      "": "Diabolus heavy stubber"
+     }
+    }
+   ],
+   "loadout": [
+    "daemonbreath-spear",
+    "diabolus-heavy-stubber",
+    "reaper-chaintalon"
+   ]
+  },
+  {
+   "id": "war-dog-karnivore",
+   "name": {
+    "en": "War Dog Karnivore",
+    "es": "War Dog Karnivore"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "WAR DOG",
+    "KARNIVORE"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "6",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-multi-launcher",
+     "name": {
+      "en": "Havoc multi-launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chaintalon",
+     "name": {
+      "en": "Reaper chaintalon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "slaughterclaw",
+     "name": {
+      "en": "Slaughterclaw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Karnivore"
+     },
+     "text": {
+      "en": "You can re-roll Advance and Charge rolls made for this model."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../War-Dog-Karnivore",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s diabolus heavy stubber can be replaced with 1 havoc multi-launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 War Dog Karnivore"
+   ],
+   "equipped": [
+    "This model is equipped with: diabolus heavy stubber; reaper chaintalon; slaughterclaw."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "diabolus-heavy-stubber": 1,
+      "reaper-chaintalon": 1,
+      "slaughterclaw": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Diabolus heavy stubber",
+      "es": "Diabolus heavy stubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "diabolus-heavy-stubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "havoc-multi-launcher"
+     ],
+     "packages": {
+      "havoc-multi-launcher": [
+       {
+        "item": "havoc-multi-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "havoc-multi-launcher": "Havoc multi-launcher",
+      "": "Diabolus heavy stubber"
+     }
+    }
+   ],
+   "loadout": [
+    "diabolus-heavy-stubber",
+    "reaper-chaintalon",
+    "slaughterclaw"
+   ]
+  },
+  {
+   "id": "war-dog-stalker",
+   "name": {
+    "en": "War Dog Stalker",
+    "es": "War Dog Stalker"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "WAR DOG",
+    "STALKER"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "6",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "avenger-chaincannon",
+     "name": {
+      "en": "Avenger chaincannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "12",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "daemonbreath-spear",
+     "name": {
+      "en": "Daemonbreath spear"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-multi-launcher",
+     "name": {
+      "en": "Havoc multi-launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chaintalon",
+     "name": {
+      "en": "Reaper chaintalon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "slaughterclaw",
+     "name": {
+      "en": "Slaughterclaw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Stalker"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets an enemy unit, if there are no other units from your opponent’s army within 6\" of that target, add 1 to the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../War-Dog-Stalker",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s avenger chaincannon can be replaced with 1 daemonbreath spear.",
+     "choices": []
+    },
+    {
+     "text": "This model’s diabolus heavy stubber can be replaced with 1 havoc multi-launcher.",
+     "choices": []
+    },
+    {
+     "text": "This model’s slaughterclaw can be replaced with 1 reaper chaintalon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 War Dog Stalker"
+   ],
+   "equipped": [
+    "This model is equipped with: avenger chaincannon; diabolus heavy stubber; slaughterclaw."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "avenger-chaincannon": 1,
+      "diabolus-heavy-stubber": 1,
+      "slaughterclaw": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Avenger chaincannon",
+      "es": "Avenger chaincannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "avenger-chaincannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "daemonbreath-spear"
+     ],
+     "packages": {
+      "daemonbreath-spear": [
+       {
+        "item": "daemonbreath-spear",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "daemonbreath-spear": "Daemonbreath spear",
+      "": "Avenger chaincannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Diabolus heavy stubber",
+      "es": "Diabolus heavy stubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "diabolus-heavy-stubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "havoc-multi-launcher"
+     ],
+     "packages": {
+      "havoc-multi-launcher": [
+       {
+        "item": "havoc-multi-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "havoc-multi-launcher": "Havoc multi-launcher",
+      "": "Diabolus heavy stubber"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Slaughterclaw",
+      "es": "Slaughterclaw"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "slaughterclaw",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "reaper-chaintalon"
+     ],
+     "packages": {
+      "reaper-chaintalon": [
+       {
+        "item": "reaper-chaintalon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "reaper-chaintalon": "Reaper chaintalon",
+      "": "Slaughterclaw"
+     }
+    }
+   ],
+   "loadout": [
+    "avenger-chaincannon",
+    "diabolus-heavy-stubber",
+    "slaughterclaw"
+   ]
+  },
+  {
+   "id": "knight-abominant",
+   "name": {
+    "en": "Knight Abominant",
+    "es": "Knight Abominant"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "ABHORRENT",
+    "PSYKER",
+    "CHARACTER",
+    "CHAOS",
+    "KNIGHT ABOMINANT"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "volkite-combustor",
+     "name": {
+      "en": "Volkite combustor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "12",
+       "skill": "3+",
+       "S": "12",
+       "AP": "0",
+       "D": "3",
+       "keywords": [
+        "Ignores Cover",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "balemace",
+     "name": {
+      "en": "Balemace"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "electroscourge",
+     "name": {
+      "en": "Electroscourge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "9",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Vortex Terrors (Psychic)"
+     },
+     "text": {
+      "en": "At the start of your Shooting phase, select one enemy unit within 24\" of and visible to this model. That enemy unit must take a Battle-shock test."
+     }
+    },
+    {
+     "name": {
+      "en": "Warp Storms (Psychic)"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, roll one D6 for each enemy unit within 9\" of one or more models with this ability: on a 3+, that enemy unit suffers D3 mortal wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Abominant",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Knight Abominant"
+   ],
+   "equipped": [
+    "This model is equipped with: diabolus heavy stubber; volkite combustor; balemace; electroscourge."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "diabolus-heavy-stubber": 1,
+      "volkite-combustor": 1,
+      "balemace": 1,
+      "electroscourge": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "balemace",
+    "diabolus-heavy-stubber",
+    "electroscourge",
+    "volkite-combustor"
+   ]
+  },
+  {
+   "id": "knight-desecrator",
+   "name": {
+    "en": "Knight Desecrator",
+    "es": "Knight Desecrator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "ABHORRENT",
+    "CHARACTER",
+    "CHAOS",
+    "KNIGHT DESECRATOR"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "desecrator-laser-destructor",
+     "name": {
+      "en": "Desecrator laser destructor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "18",
+       "AP": "-4",
+       "D": "D6+3",
+       "keywords": [
+        "Devastating Wounds: Monster/vehicle"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "warpstrike-claw",
+     "name": {
+      "en": "Warpstrike claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Obsessive Ruthlessness"
+     },
+     "text": {
+      "en": "This unit’s ranged attacks that target a MONSTER/VEHICLE unit can ignore modifiers to this unit’s: BS. Hit rolls and wound rolls."
+     }
+    },
+    {
+     "name": {
+      "en": "Taskmaster (Aura)"
+     },
+     "text": {
+      "en": "While a friendly WAR DOG model is within 9\" of this model, each time that WAR DOG model makes a ranged attack, re-roll a Hit roll of 1."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Desecrator",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s reaper chainsword can be replaced with 1 warpstrike claw.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Knight Desecrator"
+   ],
+   "equipped": [
+    "This model is equipped with: desecrator laser destructor; diabolus heavy stubber; reaper chainsword."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "desecrator-laser-destructor": 1,
+      "diabolus-heavy-stubber": 1,
+      "reaper-chainsword": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Reaper chainsword",
+      "es": "Reaper chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "reaper-chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "warpstrike-claw"
+     ],
+     "packages": {
+      "warpstrike-claw": [
+       {
+        "item": "warpstrike-claw",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "warpstrike-claw": "Warpstrike claw",
+      "": "Reaper chainsword"
+     }
+    }
+   ],
+   "loadout": [
+    "desecrator-laser-destructor",
+    "diabolus-heavy-stubber",
+    "reaper-chainsword"
+   ]
+  },
+  {
+   "id": "knight-despoiler",
+   "name": {
+    "en": "Knight Despoiler",
+    "es": "Knight Despoiler"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "ABHORRENT",
+    "CHARACTER",
+    "CHAOS",
+    "KNIGHT DESPOILER"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "daemonbreath-meltagun",
+     "name": {
+      "en": "Daemonbreath meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "daemonbreath-thermal-cannon",
+     "name": {
+      "en": "Daemonbreath thermal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2D3",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Blast",
+        "Melta 6"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "despoiler-battle-cannon",
+     "name": {
+      "en": "Despoiler battle cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Rapid Fire D6+3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "despoiler-gatling-cannon",
+     "name": {
+      "en": "Despoiler gatling cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "18",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-missile-pod",
+     "name": {
+      "en": "Havoc missile pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-darkflamer",
+     "name": {
+      "en": "Heavy darkflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hellstorm-autocannons",
+     "name": {
+      "en": "Hellstorm autocannons"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ruinspear-rocket-pod",
+     "name": {
+      "en": "Ruinspear rocket pod"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "titanic-feet",
+     "name": {
+      "en": "Titanic feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "warpstrike-claw",
+     "name": {
+      "en": "Warpstrike claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Dread Dominion (Aura)"
+     },
+     "text": {
+      "en": "While a friendly WAR DOG model is within 9\" of this model, improve that WAR DOG model’s Leadership and Objective Control characteristics by 1."
+     }
+    },
+    {
+     "name": {
+      "en": "Seething Hatred"
+     },
+     "text": {
+      "en": "Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Despoiler",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s daemonbreath meltagun can be replaced with 1 diabolus heavy stubber.",
+     "choices": []
+    },
+    {
+     "text": "This model’s reaper chainsword can be replaced with one of the following:",
+     "choices": [
+      "1 daemonbreath thermal cannon",
+      "1 despoiler gatling cannon and 1 heavy darkflamer",
+      "1 despoiler battle cannon and 1 diabolus heavy stubber"
+     ]
+    },
+    {
+     "text": "This model’s warpstrike claw can be replaced with one of the following:",
+     "choices": [
+      "1 daemonbreath thermal cannon",
+      "1 despoiler gatling cannon and 1 heavy darkflamer",
+      "1 despoiler battle cannon and 1 diabolus heavy stubber"
+     ]
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 havoc missile pod",
+      "1 ruinspear rocket pod",
+      "1 hellstorm autocannons"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Knight Despoiler"
+   ],
+   "equipped": [
+    "This model is equipped with: daemonbreath meltagun; reaper chainsword; titanic feet; warpstrike claw."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "daemonbreath-meltagun": 1,
+      "reaper-chainsword": 1,
+      "titanic-feet": 1,
+      "warpstrike-claw": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Daemonbreath meltagun",
+      "es": "Daemonbreath meltagun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "daemonbreath-meltagun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "diabolus-heavy-stubber"
+     ],
+     "packages": {
+      "diabolus-heavy-stubber": [
+       {
+        "item": "diabolus-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "diabolus-heavy-stubber": "Diabolus heavy stubber",
+      "": "Daemonbreath meltagun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Reaper chainsword",
+      "es": "Reaper chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "reaper-chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "daemonbreath-thermal-cannon",
+      "despoiler-gatling-cannon+heavy-darkflamer",
+      "despoiler-battle-cannon+diabolus-heavy-stubber"
+     ],
+     "packages": {
+      "daemonbreath-thermal-cannon": [
+       {
+        "item": "daemonbreath-thermal-cannon",
+        "n": 1
+       }
+      ],
+      "despoiler-gatling-cannon+heavy-darkflamer": [
+       {
+        "item": "despoiler-gatling-cannon",
+        "n": 1
+       },
+       {
+        "item": "heavy-darkflamer",
+        "n": 1
+       }
+      ],
+      "despoiler-battle-cannon+diabolus-heavy-stubber": [
+       {
+        "item": "despoiler-battle-cannon",
+        "n": 1
+       },
+       {
+        "item": "diabolus-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "daemonbreath-thermal-cannon": "Daemonbreath thermal cannon",
+      "despoiler-gatling-cannon+heavy-darkflamer": "Despoiler gatling cannon + Heavy darkflamer",
+      "despoiler-battle-cannon+diabolus-heavy-stubber": "Despoiler battle cannon + Diabolus heavy stubber",
+      "": "Reaper chainsword"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Warpstrike claw",
+      "es": "Warpstrike claw"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "warpstrike-claw",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "daemonbreath-thermal-cannon",
+      "despoiler-gatling-cannon+heavy-darkflamer",
+      "despoiler-battle-cannon+diabolus-heavy-stubber"
+     ],
+     "packages": {
+      "daemonbreath-thermal-cannon": [
+       {
+        "item": "daemonbreath-thermal-cannon",
+        "n": 1
+       }
+      ],
+      "despoiler-gatling-cannon+heavy-darkflamer": [
+       {
+        "item": "despoiler-gatling-cannon",
+        "n": 1
+       },
+       {
+        "item": "heavy-darkflamer",
+        "n": 1
+       }
+      ],
+      "despoiler-battle-cannon+diabolus-heavy-stubber": [
+       {
+        "item": "despoiler-battle-cannon",
+        "n": 1
+       },
+       {
+        "item": "diabolus-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "daemonbreath-thermal-cannon": "Daemonbreath thermal cannon",
+      "despoiler-gatling-cannon+heavy-darkflamer": "Despoiler gatling cannon + Heavy darkflamer",
+      "despoiler-battle-cannon+diabolus-heavy-stubber": "Despoiler battle cannon + Diabolus heavy stubber",
+      "": "Warpstrike claw"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "havoc-missile-pod",
+      "ruinspear-rocket-pod",
+      "hellstorm-autocannons"
+     ],
+     "packages": {
+      "havoc-missile-pod": [
+       {
+        "item": "havoc-missile-pod",
+        "n": 1
+       }
+      ],
+      "ruinspear-rocket-pod": [
+       {
+        "item": "ruinspear-rocket-pod",
+        "n": 1
+       }
+      ],
+      "hellstorm-autocannons": [
+       {
+        "item": "hellstorm-autocannons",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "havoc-missile-pod": "Havoc missile pod",
+      "ruinspear-rocket-pod": "Ruinspear rocket pod",
+      "hellstorm-autocannons": "Hellstorm autocannons",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "daemonbreath-meltagun",
+    "reaper-chainsword",
+    "titanic-feet",
+    "warpstrike-claw"
+   ]
+  },
+  {
+   "id": "knight-rampager",
+   "name": {
+    "en": "Knight Rampager",
+    "es": "Knight Rampager"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "ABHORRENT",
+    "CHARACTER",
+    "CHAOS",
+    "KNIGHT RAMPAGER"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "diabolus-heavy-stubber",
+     "name": {
+      "en": "Diabolus heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-chainsword",
+     "name": {
+      "en": "Reaper chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-4",
+       "D": "6",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "18",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "warpstrike-claw",
+     "name": {
+      "en": "Warpstrike claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "20",
+       "AP": "-3",
+       "D": "8",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bloodlust"
+     },
+     "text": {
+      "en": "Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Frenzied Rampage (Aura)"
+     },
+     "text": {
+      "en": "While a friendly WAR DOG model is within 9\" of this model, each time that WAR DOG model makes a melee attack, re-roll a Hit roll of 1."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Rampager",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Knight Rampager"
+   ],
+   "equipped": [
+    "This model is equipped with: diabolus heavy stubber; reaper chainsword; warpstrike claw."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "diabolus-heavy-stubber": 1,
+      "reaper-chainsword": 1,
+      "warpstrike-claw": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "diabolus-heavy-stubber",
+    "reaper-chainsword",
+    "warpstrike-claw"
+   ]
+  },
+  {
+   "id": "knight-ruinator",
+   "name": {
+    "en": "Knight Ruinator",
+    "es": "Knight Ruinator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "ABHORRENT",
+    "CHARACTER",
+    "CHAOS",
+    "KNIGHT RUINATOR"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "26",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "darkflame-lance",
+     "name": {
+      "en": "Darkflame lance"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6+6",
+       "skill": "-",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "terrorpulse-missiles",
+     "name": {
+      "en": "Terrorpulse missiles"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6+6",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fellbore",
+     "name": {
+      "en": "Fellbore"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-3",
+       "D": "6",
+       "keywords": [
+        "Anti-monster 2+",
+        "Anti-vehicle 2+"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Methodical Destruction"
+     },
+     "text": {
+      "en": "At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim."
+     }
+    },
+    {
+     "name": {
+      "en": "Close-range Killers (Aura)"
+     },
+     "text": {
+      "en": "While a friendly WAR DOG model is within 9\" of this model, each time that WAR DOG model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Ruinator",
+   "damaged": {
+    "name": {
+     "en": "1-9 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Knight Ruinator"
+   ],
+   "equipped": [
+    "This model is equipped with: darkflame lance; terrorpulse missiles; fellbore."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "darkflame-lance": 1,
+      "terrorpulse-missiles": 1,
+      "fellbore": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "darkflame-lance",
+    "fellbore",
+    "terrorpulse-missiles"
+   ]
+  },
+  {
+   "id": "knight-tyrant",
+   "name": {
+    "en": "Knight Tyrant",
+    "es": "Knight Tyrant"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "TITANIC",
+    "TOWERING",
+    "CHARACTER",
+    "CHAOS",
+    "KNIGHT TYRANT"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "12",
+     "Sv": "3+",
+     "W": "28",
+     "Ld": "6+",
+     "OC": "10",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "brimstone-volcano-lance",
+     "name": {
+      "en": "Brimstone volcano lance"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "60\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "20",
+       "AP": "-5",
+       "D": "D6+8",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "darkflame-cannon",
+     "name": {
+      "en": "Darkflame cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3D6",
+       "skill": "-",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ectoplasma-decimator",
+     "name": {
+      "en": "Ectoplasma decimator"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "gheiststrike-missile-launcher",
+     "name": {
+      "en": "Gheiststrike missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "72\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-6",
+       "D": "D6+1",
+       "keywords": [
+        "Anti-titanic 4+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-daemonbreath-meltagun",
+     "name": {
+      "en": "Twin daemonbreath meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-desecrator-cannon",
+     "name": {
+      "en": "Twin Desecrator cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "warpshock-harpoon",
+     "name": {
+      "en": "Warpshock harpoon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "24",
+       "AP": "-6",
+       "D": "12",
+       "keywords": [
+        "Blast",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "titanic-feet",
+     "name": {
+      "en": "Titanic feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Infernal Aegis (Aura)"
+     },
+     "text": {
+      "en": "While a friendly WAR DOG unit is within 6\" of this model, each time an attack targets that WAR DOG unit, models in it have the Benefit of Cover against that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Bastion of Corruption"
+     },
+     "text": {
+      "en": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6+2"
+   ],
+   "factionAbilities": [
+    "Harbingers of Dread",
+    "Super-heavy Walker"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Knight-Tyrant",
+   "damaged": {
+    "name": {
+     "en": "1-10 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s 2 gheiststrike missile launchers and twin Desecrator cannon can be replaced with 1 gheiststrike missile launcher and 2 twin Desecrator cannons.",
+     "choices": []
+    },
+    {
+     "text": "This model’s brimstone volcano lance and ectoplasma decimator can be replaced with 1 darkflame cannon and 1 warpshock harpoon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Knight Tyrant"
+   ],
+   "equipped": [
+    "This model is equipped with: brimstone volcano lance; ectoplasma decimator; 2 gheiststrike missile launchers; 2 twin daemonbreath meltaguns; twin Desecrator cannon; titanic feet."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "brimstone-volcano-lance": 1,
+      "ectoplasma-decimator": 1,
+      "gheiststrike-missile-launcher": 2,
+      "twin-daemonbreath-meltagun": 2,
+      "twin-desecrator-cannon": 1,
+      "titanic-feet": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "2× Gheiststrike missile launcher + Twin Desecrator cannon",
+      "es": "2× Gheiststrike missile launcher + Twin Desecrator cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "gheiststrike-missile-launcher",
+       "n": 2
+      },
+      {
+       "item": "twin-desecrator-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gheiststrike-missile-launcher+2xtwin-desecrator-cannon"
+     ],
+     "packages": {
+      "gheiststrike-missile-launcher+2xtwin-desecrator-cannon": [
+       {
+        "item": "gheiststrike-missile-launcher",
+        "n": 1
+       },
+       {
+        "item": "twin-desecrator-cannon",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "gheiststrike-missile-launcher+2xtwin-desecrator-cannon": "Gheiststrike missile launcher + 2× Twin Desecrator cannon",
+      "": "2× Gheiststrike missile launcher + Twin Desecrator cannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Brimstone volcano lance + Ectoplasma decimator",
+      "es": "Brimstone volcano lance + Ectoplasma decimator"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "brimstone-volcano-lance",
+       "n": 1
+      },
+      {
+       "item": "ectoplasma-decimator",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "darkflame-cannon+warpshock-harpoon"
+     ],
+     "packages": {
+      "darkflame-cannon+warpshock-harpoon": [
+       {
+        "item": "darkflame-cannon",
+        "n": 1
+       },
+       {
+        "item": "warpshock-harpoon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "darkflame-cannon+warpshock-harpoon": "Darkflame cannon + Warpshock harpoon",
+      "": "Brimstone volcano lance + Ectoplasma decimator"
+     }
+    }
+   ],
+   "loadout": [
+    "brimstone-volcano-lance",
+    "ectoplasma-decimator",
+    "gheiststrike-missile-launcher",
+    "titanic-feet",
+    "twin-daemonbreath-meltagun",
+    "twin-desecrator-cannon"
+   ]
+  }
+ ]
 }

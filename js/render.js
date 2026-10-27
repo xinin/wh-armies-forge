@@ -5,7 +5,7 @@ import { icon } from './icons.js';
 import {
   battleSizeOf, unitPoints, listPoints, detachmentPointsUsed, availableEnhancements,
   isLeader, isSupport, leadersOf, canAttach, detachmentAbilities, optionMax, optionMaxEach, hasKw, bodyguardLimits, isExtraCopy,
-  loadoutCounts, itemName, gearSlug, sharedTag, tagRival,
+  loadoutCounts, itemName, gearSlug, sharedTag, tagRival, canBeCharacter, unitDef,
 } from './rules.js';
 
 export const ROLES = ['character', 'battleline', 'infantry', 'mounted', 'monster', 'vehicle', 'transport', 'aircraft', 'titanic', 'fortification'];
@@ -173,7 +173,7 @@ function renderRosterUnit(ru, list, data, edition, flagged, customImages) {
 }
 
 function renderUnitCore(ru, def, list, data, edition, customImages, attached) {
-  const isChar = hasKw(def, 'CHARACTER');
+  const isChar = canBeCharacter(unitDef(ru, data, list), list, data);
   const enhs = availableEnhancements(ru, list, data);
   const targets = !attached && isLeader(ru, data)
     ? list.units.filter(b => b.uid !== ru.uid && !isLeader(b, data) && canAttach(ru, b, list, data, edition))
@@ -397,7 +397,7 @@ export function renderSidebar(list, data, edition, issues) {
     <div class="panel-head"><h2>${icon('emblem', 'head-icon')}${t('rules.armyRule')}</h2></div>
     <details class="army-rule"><summary>${esc(tr(ar.name))}</summary>
       ${esc(tr(ar.text)).split('\n').map(l => `<p>${l}</p>`).join('')}
-      <ul class="orders">${(ar.orders ?? []).map(o => `<li><b>${esc(tr(o.name))}</b> ${esc(tr(o.text))}</li>`).join('')}</ul>
+      <ul class="orders">${(ar.items ?? []).map(o => `<li><b>${esc(tr(o.name))}</b> ${esc(tr(o.text))}</li>`).join('')}</ul>
     </details>
     ${(data.faction.extraRules ?? []).map(r => `<details class="army-rule"><summary>${esc(tr(r.name))}</summary>
       ${esc(tr(r.text)).split('\n').map(l => `<p>${l}</p>`).join('')}</details>`).join('')}

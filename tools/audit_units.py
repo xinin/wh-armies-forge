@@ -25,7 +25,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import factions as fx  # noqa: E402
 import wargear  # noqa: E402
-from import_wahapedia_datasheets import BASE, only_chapter, parse, sections, slug  # noqa: E402
+from import_wahapedia_datasheets import BASE, parse, sections, slug  # noqa: E402
+from page_scope import scope_of  # noqa: E402
 from wahapedia_fetch import fetch  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,9 +39,8 @@ def audit_unit(unit, faction, points, all_ids, excluded=frozenset()):
     m = re.search(r'/([^/]+)$', unit.get('source', ''))
     if not m or 'wahapedia' not in unit.get('source', ''):
         return [f'not imported from Wahapedia (source: {unit.get("source", "hand-written")})'], []
-    cfg = json.loads((ROOT / 'data' / 'factions' / faction / 'faction.json').read_text()).get('wahapedia', {})
-    bit = int(cfg['chapterBit'], 16) if cfg.get('chapterBit') else None
-    page = only_chapter(fetch(f'{BASE}/{cfg.get("faction", faction)}/{m.group(1)}'), bit)
+    scope = scope_of(faction)
+    page = scope.datasheet(fetch(f'{BASE}/{scope.page}/{m.group(1)}'))
     fresh, targets, costs, extra, _ = parse(page, m.group(1))
     i = page.find('<div class="dsOuterFrame datasheet')
     block = page[i:page.find('<div class="ds2colKWFlat', i)]

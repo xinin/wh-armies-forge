@@ -23,7 +23,7 @@
      },
      "points": 20
     },
-    "grand-strategist-ca": {
+    "grand-strategist-combined-arms": {
      "text": {
       "en": "OFFICER model only. In your Command phase, the bearer can issue one additional Order."
      },
@@ -281,7 +281,7 @@
      },
      "points": 35
     },
-    "grand-strategist-ai": {
+    "grand-strategist": {
      "text": {
       "en": "OFFICER model only. After both players have deployed their armies, if the bearer’s unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to two units with the REGIMENT or SQUADRON keywords from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
      },
@@ -347,7 +347,7 @@
     }
    },
    "enhancements": {
-    "bombast-vox-array": {
+    "bombast-class-vox-array": {
      "text": {
       "en": "MILITARUM TEMPESTUS OFFICER model only. When this model issues an Order, if this unit has the Master Vox wargear ability, this model can issue that Order to up to three different REGIMENT units, instead of only one."
      },

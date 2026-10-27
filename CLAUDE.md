@@ -111,10 +111,17 @@ base faction (`bootstrap_faction.py space-marines --chapter-bit 10`) and each Ch
 - `faction.json` of a Chapter: `parentExcludes` (rules/detachments/units/unitKeywords it cannot use) and
   `keywordRules` (keywords its rules give, e.g. DEATHWING), parsed from its army rules.
 - Python tools that need the faction as the app sees it use `tools/factions.py` (`load`, `raw`, `refresh_counts`).
+- Which part of a Wahapedia page is a faction's is its scope, `tools/page_scope.py`: `PageScope` (a whole page),
+  `ChapterBase` (bit 10), `Chapter` (its bit minus the parent's); `scope_of(faction)` reads it from `faction.json` →
+  `wahapedia`. Importers and the audit never read the Chapter masks themselves.
 - Translations of texts the parent has belong to the parent's `i18n.es.json`.
 
 ## Data model notes
 
+- `faction.json` is built from the classes of `tools/faction_model.py` (`Faction`, `Rule`, `Detachment`,
+  `Enhancement`, `KeywordGrant`, `MinUnits`, `ParentExcludes`…): field order = JSON order, `opt()` fields are left
+  out when empty. A new field goes there first. `units.json` is still built as dicts (`wargear.py` fills it step by
+  step).
 - Wargear (`tools/wargear.py` docstring): `sizes[].loadout`, options `swap`/`pool`/`toggle` with `replaces`,
   `packages`, `maxBySize`, `needs`/`needsNot` (shown disabled while unmet), `scope: all`, `owner`; `gearWeapons`,
   `abilityWeapons`, `uniqueGear`, `exclusiveGear`. Optional "0-1" model types and companion models become toggles.
@@ -122,6 +129,12 @@ base faction (`bootstrap_faction.py space-marines --chapter-bit 10`) and each Ch
   carried, default equipment included — literal reading of Wahapedia, unconfirmed), `enhancements`, `unitAbilities`.
 - 11th edition SUPPORT datasheets: `leader.support: true`; a bodyguard takes its Leader(s) plus one Support unit.
 - Detachment `unitAbilities` (Pantheon of Woe): automatic abilities for named datasheets with extra points.
+- Detachment `keywordGrants` (parsed by `bootstrap_faction.py` → `detachment_keywords`): "WAR DOG units from your
+  army have the BATTLELINE keyword" → `{keyword, units}`, added by `unitDef(ru, data, list)` (unit limits,
+  enhancement requirements); "select three WAR DOG units … CHARACTER" → `chosen: true, max: 3`: those units can take
+  Enhancements and be Warlord (`canBeCharacter`), and validation counts the ones that do. `minUnits`: "Your army
+  must include three or more WAR DOG units". Detachment `tags` come from the heading or from "has the X tag and
+  cannot be taken with another X detachment".
 - Saved lists store ids only; on load the app drops unknown units and invalid wargear choices.
 
 ## Checks (run before reporting a task as done)
@@ -129,7 +142,8 @@ base faction (`bootstrap_faction.py space-marines --chapter-bit 10`) and each Ch
 ```sh
 .venv/bin/python tools/audit_units.py                       # every faction: 0 errors, 0 warnings
 for f in $(python3 -c "import json;print(' '.join(f['id'] for f in json.load(open('data/factions/index.json'))['factions']))"); do
-  .venv/bin/python tools/import_wahapedia_datasheets.py $f --all --check; done   # "no changes" everywhere
+  .venv/bin/python tools/import_wahapedia_datasheets.py $f --all --check        # "no changes" everywhere
+  .venv/bin/python tools/bootstrap_faction.py $f --check; done                   # "no changes" everywhere
 python3 tools/translations.py pending                       # 0 pending everywhere
 python3 tools/check_app.py                                  # 0 failures (ES + EN, ~2 min per language)
 ```
@@ -137,7 +151,8 @@ python3 tools/check_app.py                                  # 0 failures (ES + E
 - `audit_units.py` compares each imported unit with its cached datasheet (weapons, abilities, composition, loadout,
   reachable weapons, options, costs) and checks the `index.json` counts and alliance.
 - `--check` re-imports with the current code without writing: after changing an importer or `wargear.py`, previous
-  factions must report `no changes`.
+  factions must report `no changes`. Every `faction.json` is generated (none is hand-edited): `bootstrap_faction.py
+  <f> --force` regenerates any faction, Chapters included, with the options stored in `faction.json` → `wahapedia`.
 - `check_app.py` builds a test list per faction in a temp folder, runs the server with `--armies`, and walks the
   home, faction picker, builder, every datasheet and every overview tab in headless Chrome: JS errors, missing
   units, `undefined`/`NaN`, text in the wrong language. `--keep` leaves the dumps.
@@ -146,7 +161,7 @@ python3 tools/check_app.py                                  # 0 failures (ES + E
 ## Known gaps
 
 - Allies (Deathwatch Support, Imperial Agents, Freeblades, the HERETIC ASTARTES units of the Chaos Daemons Shadow
-  Legion) are not modelled.
+  Legion, the DAMNED units of the Chaos Knights Iconoclast Fiefdom) are not modelled.
 - Onslaught (3000 pts) limits in `11th.json` are unconfirmed; wargear costs on default equipment unconfirmed.
 - Some units have no store picture (sold only in boxes or not sold).
 - Chapter emblems of Ultramarines, Imperial Fists, Iron Hands, Raven Guard, Salamanders and White Scars are hand-drawn

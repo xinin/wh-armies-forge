@@ -112,9 +112,15 @@ export function optionMax(opt, models) {
 export const optionMaxEach = (opt, models, key = null) =>
   Math.min(opt.maxEachBySize?.[models] ?? Infinity, (key && opt.maxEachChoice?.[key]?.[models]) ?? Infinity);
 
-function canBeCharacter(def, list, data) {
+// Keywords the list's detachments give ("WAR DOG units from your army have the BATTLELINE keyword"); `chosen` ones
+// only go to the units the player picks ("select three WAR DOG units … those units have the CHARACTER keyword").
+const detachmentGrants = (list, data) => list.detachments.flatMap(id => data.detachmentsById.get(id)?.keywordGrants ?? []);
+const matchesGroups = (def, groups) => groups.some(group => group.every(kw => kwMatch(def, kw)));
+
+// A CHARACTER, or a unit the detachment lets the player make one (it can then take Enhancements and be Warlord).
+export function canBeCharacter(def, list, data) {
   if (hasKw(def, 'CHARACTER')) return true;
-  return hasKw(def, 'TITANIC') && list.detachments.some(id => data.detachmentsById.get(id)?.titanicCanBeCharacter);
+  return detachmentGrants(list, data).some(g => g.chosen && g.keyword === 'CHARACTER' && matchesGroups(def, g.units));
 }
 
 export function enhancementFits(enh, def, list, data) {
@@ -124,15 +130,18 @@ export function enhancementFits(enh, def, list, data) {
   // "… (excluding KROOT SHAPER models)"
   if (enh.excludes?.some(group => group.every(kw => kwMatch(def, kw)))) return false;
   if (!enh.requires?.length) return true;
-  return enh.requires.some(group => group.every(kw => kwMatch(def, kw)));
+  // "TITANIC CHARACTER model only": CHARACTER also covers the units a detachment lets the player make CHARACTERs
+  return enh.requires.some(group => group.every(kw => kw === 'CHARACTER' ? canBeCharacter(def, list, data) : kwMatch(def, kw)));
 }
 
 // Requirements imported from "X Y model only" are split into words; a word also matches when it is part of a
-// multi-word keyword ("VON RYAN'S LEAPERS", "VANGUARD INVADER") or is its plural ("STEALTH BATTLESUITS" units).
-// The datasheet name counts as a keyword too ("WOLF PRIEST model only": 11th-edition datasheets omit it).
+// multi-word keyword ("VON RYAN'S LEAPERS", "VANGUARD INVADER"), its plural ("STEALTH BATTLESUITS" units) or its
+// singular ("SCOUT SENTINEL model only": keyword SCOUT SENTINELS). The datasheet name counts as a keyword too
+// ("WOLF PRIEST model only": 11th-edition datasheets omit it).
 const kwMatch = (def, kw) => {
   const w = normKw(kw);
-  return hasKw(def, kw) || kwWords(def).has(w) || (w.endsWith('S') && kwWords(def).has(w.slice(0, -1)));
+  const words = kwWords(def);
+  return hasKw(def, kw) || words.has(w) || (w.endsWith('S') && words.has(w.slice(0, -1))) || words.has(w + 'S');
 };
 const normKw = kw => kw.toUpperCase().replace(/[’‘]/g, "'");
 const kwWordCache = new WeakMap();
@@ -141,15 +150,21 @@ function kwWords(def) {
   return kwWordCache.get(def);
 }
 
-// The datasheet as this roster unit is: with the keyword of its choice ("Daemonic Allegiance": KHORNE…), if any.
-export function unitDef(ru, data) {
+// The datasheet as this roster unit is in this list: with the keyword of its choice ("Daemonic Allegiance": KHORNE…)
+// and the keywords its detachments give it, if any.
+export function unitDef(ru, data, list) {
   const def = data.unitsById.get(ru.unitId);
-  const extra = (def?.wargear ?? []).filter(o => o.keywords && ru.wargear?.[o.id]).map(o => o.keywords[ru.wargear[o.id]]).filter(Boolean);
-  return extra.length ? { ...def, keywords: [...def.keywords, ...extra] } : def;
+  if (!def) return def;
+  const extra = (def.wargear ?? []).filter(o => o.keywords && ru.wargear?.[o.id]).map(o => o.keywords[ru.wargear[o.id]]).filter(Boolean);
+  for (const g of detachmentGrants(list, data)) {
+    if (!g.chosen && matchesGroups(def, g.units)) extra.push(g.keyword);
+  }
+  const keywords = [...new Set(extra)].filter(kw => !def.keywords.includes(kw));
+  return keywords.length ? { ...def, keywords: [...def.keywords, ...keywords] } : def;
 }
 
 export function availableEnhancements(ru, list, data) {
-  const def = unitDef(ru, data);
+  const def = unitDef(ru, data, list);
   return list.detachments
     .flatMap(id => data.detachmentsById.get(id)?.enhancements ?? [])
     .map(e => data.enhancements.get(e.id))
@@ -243,7 +258,7 @@ export function validate(list, data, edition) {
   const byUnit = new Map();
   for (const ru of list.units) byUnit.set(ru.unitId, [...(byUnit.get(ru.unitId) ?? []), ru]);
   for (const [unitId, rus] of byUnit) {
-    const def = data.unitsById.get(unitId);
+    const def = unitDef(rus[0], data, list);  // BATTLELINE may come from the detachment
     if (!def) continue;
     if (hasKw(def, 'EPIC HERO')) {
       if (rus.length > edition.rules.epicHeroLimit) err('err.epicHero', { name: tr(def.name) }, rus.map(r => r.uid));
@@ -262,7 +277,7 @@ export function validate(list, data, edition) {
   for (const ru of withEnh) {
     const enh = data.enhancements.get(ru.enhancement);
     if (!enh) continue;
-    const def = unitDef(ru, data);
+    const def = unitDef(ru, data, list);
     enhCount.set(enh.id, (enhCount.get(enh.id) ?? 0) + 1);
     if (enh.type !== 'upgrade' || edition.rules.upgradesCountTowardEnhancementLimit) enhTotal++;
     if (!list.detachments.includes(enh.detachmentId)) err('err.enhNotInDetachment', { enh: tr(enh.name) }, [ru.uid]);
@@ -299,10 +314,32 @@ export function validate(list, data, edition) {
     if (enhs.length > edition.rules.maxEnhancementsPerUnit) err('err.enhPerUnit', { unit: nameOf(bg) }, enhs.map(u => u.uid));
   }
 
+  // Detachments: units the player picks to gain a keyword ("select three WAR DOG units … CHARACTER": those with an
+  // Enhancement or chosen as Warlord), and units the army must include
+  for (const id of list.detachments) {
+    const det = data.detachmentsById.get(id);
+    for (const g of (det?.keywordGrants ?? []).filter(g => g.chosen && g.max)) {
+      const picked = list.units.filter(ru => {
+        const def = unitDef(ru, data, list);
+        if (!def || hasKw(def, g.keyword) || !matchesGroups(def, g.units)) return false;
+        return g.keyword !== 'CHARACTER' || ru.warlord || (ru.enhancement && data.enhancements.get(ru.enhancement)?.type !== 'upgrade');
+      });
+      if (picked.length > g.max) err('err.grantMax', { det: tr(det.name), n: g.max, kw: g.keyword }, picked.map(r => r.uid));
+    }
+    for (const m of det?.minUnits ?? []) {
+      const n = list.units.filter(ru => { const def = unitDef(ru, data, list); return def && matchesGroups(def, m.units); }).length;
+      if (n < m.min) err('err.minUnits', { det: tr(det.name), n: m.min, units: m.units.map(g => g.join(' ')).join('/') });
+    }
+  }
+
   // Warlord
   const warlords = list.units.filter(u => u.warlord);
   if (list.units.length && edition.rules.warlordRequired && !warlords.length) err('err.noWarlord');
   if (warlords.length > 1) err('err.multiWarlord', {}, warlords.map(u => u.uid));
+  for (const ru of warlords) {
+    const def = unitDef(ru, data, list);
+    if (def && !canBeCharacter(def, list, data)) err('err.warlordInvalid', { unit: nameOf(ru) }, [ru.uid]);
+  }
 
   if (list.units.some(ru => !data.unitsById.get(ru.unitId)?.pointsVerified)) {
     issues.push({ level: 'warn', msg: t('warn.pointsUnverified'), uids: [] });

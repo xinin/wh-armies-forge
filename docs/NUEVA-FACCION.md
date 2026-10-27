@@ -33,7 +33,13 @@ Crea `data/factions/adeptus-custodes/` con:
 
 Además la añade a `data/factions/index.json`. `--alliance` (`imperium`, `chaos` o `xenos`) es el grupo en el que sale en **Nueva lista**, como en la tienda de Warhammer; los capítulos usan el de su base. `--color` es el color de la facción en las tarjetas de la home.
 
-Las reglas se leen por secciones de la página, estén en el orden que estén (en algunos destacamentos las estratagemas van antes que las mejoras). Se quita el preámbulo «If your Army Faction is X, … Detachment rule», y su palabra clave de facción (LEGIONES DAEMONICA) se toma como palabra de facción en los requisitos de las mejoras. Si un destacamento da una palabra clave a todo el ejército («… units from your army gain the SHADOW LEGION keyword»), esa palabra no se pide como requisito de sus mejoras. Si la página de Wahapedia enlaza también datasheets de otra facción (la de Demonios del Caos incluye los HERETIC ASTARTES de la Legión de la Sombra), añade `--other-faction "HERETIC ASTARTES"`: se guarda en `faction.json` → `wahapedia.otherFactions` y el importador los salta. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
+Las reglas se leen por secciones de la página, estén en el orden que estén (en algunos destacamentos las estratagemas van antes que las mejoras). Se quita el preámbulo «If your Army Faction is X, … Detachment rule», y su palabra clave de facción (LEGIONES DAEMONICA) se toma como palabra de facción en los requisitos de las mejoras. Si un destacamento da una palabra clave a todo el ejército («… units from your army gain the SHADOW LEGION keyword»), esa palabra no se pide como requisito de sus mejoras.
+
+Además se leen de la regla del destacamento:
+- **palabras clave que da** (`keywordGrants`): «WAR DOG units from your army have the BATTLELINE keyword» (cuenta para el límite de copias y los requisitos de las mejoras); «select three WAR DOG units from your army … those units have the CHARACTER keyword» (`chosen`, `max`): esas unidades pueden llevar mejoras y ser Señor de la Guerra, y la lista avisa si se pasan del máximo;
+- **unidades obligatorias** (`minUnits`): «Your army must include three or more WAR DOG units»;
+- **etiqueta** también desde el texto («This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment»), si no viene sobre el título;
+- los **iconos de dado** de las reglas que se eligen tirando (habilidades Dread de los Caballeros del Caos) pasan al texto como «(D6: 1)». Si la página de Wahapedia enlaza también datasheets de otra facción (la de Demonios del Caos incluye los HERETIC ASTARTES de la Legión de la Sombra), añade `--other-faction "HERETIC ASTARTES"`: se guarda en `faction.json` → `wahapedia.otherFactions` y el importador los salta. Con `--force` se regenera solo `faction.json` (y los puntos de las mejoras) de una facción existente; las unidades, sus puntos y las imágenes no se tocan.
 
 ### Marines Espaciales y sus capítulos
 
@@ -155,10 +161,13 @@ La auditoría no ve los nombres de equipo raros que sí se ven en la app: revisa
 Si aparece un patrón nuevo, añádelo en `tools/wargear.py` (opciones y equipo) o en `tools/import_wahapedia_datasheets.py` (lectura de la página), reimporta y vuelve a auditar **todas** las facciones (`tools/audit_units.py` sin argumentos). Después comprueba que el cambio no altera las facciones anteriores:
 
 ```sh
-for f in $(ls data/factions | grep -v index); do .venv/bin/python tools/import_wahapedia_datasheets.py $f --all --check; done
+for f in $(ls data/factions | grep -v index); do
+  .venv/bin/python tools/import_wahapedia_datasheets.py $f --all --check
+  .venv/bin/python tools/bootstrap_faction.py $f --check
+done
 ```
 
-`--check` reimporta con el código actual sin escribir nada y lista lo que cambiaría (`CHANGE unidad.campo: antes → después`). En las facciones que ya estaban bien debe decir `no changes`; si no, el patrón nuevo ha roto algo o hay un cambio a mano en `units.json` que una reimportación perdería.
+`--check` reimporta con el código actual sin escribir nada y lista lo que cambiaría (`CHANGE unidad.campo: antes → después` en los datasheets; las líneas que cambiarían de `faction.json` y `points.json` en `bootstrap_faction.py`). En las facciones que ya estaban bien debe decir `no changes`; si no, el patrón nuevo ha roto algo o hay un cambio a mano que una regeneración perdería. Ningún `faction.json` se edita a mano: si algo sale mal, se arregla el importador. `bootstrap_faction.py <facción> --force` regenera cualquier facción, capítulos incluidos, con las opciones guardadas en `faction.json` → `wahapedia`.
 
 La auditoría también comprueba que `data/factions/index.json` tenga bien el número de unidades y de destacamentos de cada facción, que es lo que enseña el selector de **Nueva lista** sin cargar la facción. Los importadores los mantienen solos.
 
@@ -282,7 +291,7 @@ Después, a mano:
 | GW publica erratas de reglas o estratagemas | `import_wahapedia_rules.py <facción>` y `import_wahapedia_datasheets.py <facción> --all --refresh`, y después `audit_units.py` |
 | Sale una unidad nueva | `import_wahapedia_datasheets.py <facción> <Datasheet>` y `store_images.py … --products <lista guardada>`, o la URL a mano |
 | Has reimportado algo | `translations.py pending`, traduce lo que salga y `apply`; después `check_app.py` |
-| Has cambiado el importador o `wargear.py` | `import_wahapedia_datasheets.py <facción> --all --check` en todas las facciones: debe dar `no changes` |
+| Has cambiado el importador, `wargear.py` o `bootstrap_faction.py` | `import_wahapedia_datasheets.py <facción> --all --check` y `bootstrap_faction.py <facción> --check` en todas las facciones: deben dar `no changes` |
 | Has cambiado el código de la app | `check_app.py` |
 | Quieres excluir una unidad | Añade su id a `units.json` → `excluded.ids` y bórrala de `units`, `points.json` e `images.json` |
 

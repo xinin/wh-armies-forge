@@ -31,6 +31,7 @@ from html.parser import HTMLParser  # noqa: E402
 import wahapedia_fetch  # noqa: E402
 from wahapedia_fetch import fetch  # noqa: E402
 import factions  # noqa: E402
+from page_scope import scope_of  # noqa: E402
 
 BASE = 'https://wahapedia.ru/wh40k11ed/factions'
 
@@ -174,18 +175,9 @@ def faction_keywords(page):
     return {k.strip().upper() for k in re.split(r'[;,\n]', t) if k.strip()}
 
 
-def only_chapter(page, chapter_bit):
-    """Drop the rows a Space Marine datasheet shows only for other Chapters (data-f="CH:<hex mask>": unit costs,
-    leader targets)."""
-    if chapter_bit is None:
-        return page
-    def keep(m):
-        return m.group(0) if int(m.group(2), 16) & chapter_bit else ''
-    return re.sub(r'<(tr|li) class="clFlCH" data-f="CH:([0-9a-f]+)[^"]*">.*?</\1>', keep, page, flags=re.S)
-
-
-def parse(page, ds_slug, chapter_bit=None):
-    page = only_chapter(page, chapter_bit)
+def parse(page, ds_slug):
+    """A datasheet page (as the faction's scope shows it: page_scope.PageScope.datasheet) → (unit, leader targets,
+    costs, extra copies, wargear costs)."""
     i = page.find('<div class="dsOuterFrame datasheet')
     end = page.find('<div class="ds2colKWFlat', i)
     block = page[i:end]
@@ -338,34 +330,24 @@ def main():
     wahapedia_fetch.REFRESH = args.refresh
 
     fdir = ROOT / 'data' / 'factions' / args.faction
-    # a Space Marine Chapter lives inside another Wahapedia faction page (see bootstrap_faction.py --chapter)
-    cfg = json.loads((fdir / 'faction.json').read_text()).get('wahapedia', {})
-    source, chapter = cfg.get('faction', args.faction), cfg.get('chapter')
-    chapter_bit = int(cfg['chapterBit'], 16) if cfg.get('chapterBit') else None
-    # base army or Chapter: only generic datasheets and the Chapter's own
-    allowed = {'ADEPTUS ASTARTES'} | ({chapter} if chapter else set()) if chapter_bit is not None else None
+    # which Wahapedia page, and which part of it, is the faction's (a Space Marine Chapter: see page_scope.py)
+    scope = scope_of(args.faction)
+    source, chapter = scope.page, scope.chapter
     parent = factions.entry(args.faction).get('parent')
 
     pages = {}  # slug → html, fetched once
     not_core = []
     if args.all or args.list:
         slugs = datasheet_links(fetch(f'{BASE}/{source}/'), source)
-        tags = {'core': [], 'legends': [], 'fw': []} | ({'other chapters': []} if allowed else {})
+        # base army or Chapter: only generic datasheets and the Chapter's own ('other chapters'); datasheets of other
+        # factions listed on the page (Chaos Daemons: the HERETIC ASTARTES units the Shadow Legion detachment allows)
+        # belong to those factions ('other factions')
+        tags = {'core': [], 'legends': [], 'fw': []}
         for ds in slugs:
             pages[ds] = fetch(f'{BASE}/{source}/{ds}')
             if '<div class="dsOuterFrame datasheet' not in pages[ds]:
                 continue  # not a datasheet page
-            tag = source_tag(pages[ds])
-            if tag == 'core' and allowed and not faction_keywords(pages[ds]) <= allowed:
-                tag = 'other chapters'
-            tags[tag].append(ds)
-        # datasheets of other factions listed on the page (Chaos Daemons: the HERETIC ASTARTES units the Shadow Legion
-        # detachment allows) belong to those factions: faction.json → "wahapedia": {"otherFactions": [keyword…]}
-        foreign = set(cfg.get('otherFactions', []))
-        others = [ds for ds in tags['core'] if faction_keywords(pages[ds]) & foreign]
-        if others:
-            tags['core'] = [ds for ds in tags['core'] if ds not in others]
-            tags['other factions'] = others
+            tags.setdefault(scope.classify(source_tag(pages[ds]), faction_keywords(pages[ds])), []).append(ds)
         for tag, names in tags.items():
             print(f'{tag.upper()} ({len(names)}): {", ".join(names)}')
         if args.list:
@@ -397,7 +379,7 @@ def main():
         else:
             page = fetch(f'{BASE}/{source}/{ds}')
         try:
-            unit, targets, costs, extra, gear_costs = parse(page, ds, chapter_bit)
+            unit, targets, costs, extra, gear_costs = parse(scope.datasheet(page), ds)
         except (AttributeError, ValueError) as e:
             print(f'skip {ds}: could not parse ({e})', file=sys.stderr)
             continue
