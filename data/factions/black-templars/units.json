@@ -128,6 +128,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -346,6 +349,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -484,6 +490,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -842,6 +851,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -1100,6 +1113,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -1225,6 +1241,10 @@
     "EPIC HERO",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
    ],
    "stats": [
     {
@@ -1398,6 +1418,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -1516,6 +1540,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
    ],
    "stats": [
     {
@@ -1665,6 +1693,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
    ],
    "stats": [
     {
@@ -1900,6 +1932,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2037,6 +2073,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2155,6 +2194,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -2639,6 +2681,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2869,6 +2915,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -3010,6 +3059,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
    ],
    "stats": [
     {
@@ -3527,6 +3580,10 @@
     "TACTICUS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -3965,6 +4022,10 @@
     "IMPERIUM",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -4140,6 +4201,10 @@
     "IMPERIUM",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -4314,6 +4379,10 @@
     "FRAME",
     "IMPERIUM",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
    ],
    "stats": [
     {
@@ -4492,6 +4561,10 @@
     "DEDICATED TRANSPORT",
     "FRAME",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
    ],
    "stats": [
     {
@@ -4845,6 +4918,10 @@
     "IMPERIUM",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -5172,6 +5249,10 @@
     "FRAME",
     "IMPERIUM",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLACK TEMPLARS"
    ],
    "stats": [
     {

@@ -45,6 +45,9 @@
     "WAR DOG",
     "BRIGAND"
    ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -256,6 +259,9 @@
     "WAR DOG",
     "EXECUTIONER"
    ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -443,6 +449,9 @@
     "CHAOS",
     "WAR DOG",
     "HUNTSMAN"
+   ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
    ],
    "stats": [
     {
@@ -649,6 +658,9 @@
     "WAR DOG",
     "KARNIVORE"
    ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -841,6 +853,9 @@
     "CHAOS",
     "WAR DOG",
     "STALKER"
+   ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
    ],
    "stats": [
     {
@@ -1157,6 +1172,9 @@
     "CHAOS",
     "KNIGHT ABOMINANT"
    ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -1326,6 +1344,9 @@
     "CHARACTER",
     "CHAOS",
     "KNIGHT DESECRATOR"
+   ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
    ],
    "stats": [
     {
@@ -1556,6 +1577,9 @@
     "CHARACTER",
     "CHAOS",
     "KNIGHT DESPOILER"
+   ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
    ],
    "stats": [
     {
@@ -2121,6 +2145,9 @@
     "CHAOS",
     "KNIGHT RAMPAGER"
    ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -2302,6 +2329,9 @@
     "CHAOS",
     "KNIGHT RUINATOR"
    ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -2464,6 +2494,9 @@
     "CHARACTER",
     "CHAOS",
     "KNIGHT TYRANT"
+   ],
+   "factionKeywords": [
+    "CHAOS KNIGHTS"
    ],
    "stats": [
     {

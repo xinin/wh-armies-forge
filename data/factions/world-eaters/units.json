@@ -1,0 +1,5748 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World and Warhammer Legends datasheets: never imported.",
+  "ids": [
+   "blood-slaughterer",
+   "bloodcrushers",
+   "bloodletters",
+   "bloodthirster",
+   "cerberus",
+   "chaos-thunderhawk",
+   "falchion",
+   "flesh-hounds",
+   "greater-brass-scorpion",
+   "hell-blade",
+   "hell-talon",
+   "kratos",
+   "kytan-ravager",
+   "mastodon",
+   "rapier-carrier",
+   "skarbrand",
+   "terrax-pattern-termite",
+   "typhon"
+  ]
+ },
+ "units": [
+  {
+   "id": "angron",
+   "name": {
+    "en": "Angron",
+    "es": "Angron"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "FLY",
+    "EPIC HERO",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "PRIMARCH",
+    "ANGRON"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "11",
+     "Sv": "2+",
+     "W": "16",
+     "Ld": "5+",
+     "OC": "6",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "samniarius-and-spinegrinder",
+     "name": {
+      "en": "Samni’arius and Spinegrinder"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6+2",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "16",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Reborn in Blood"
+     },
+     "text": {
+      "en": "At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining."
+     }
+    },
+    {
+     "name": {
+      "en": "Wrathful Presence"
+     },
+     "text": {
+      "en": "At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Angron",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Angron – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Samni’arius and Spinegrinder."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "samniarius-and-spinegrinder": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "samniarius-and-spinegrinder"
+   ]
+  },
+  {
+   "id": "daemon-prince-of-khorne",
+   "name": {
+    "en": "Daemon Prince of Khorne",
+    "es": "Daemon Prince of Khorne"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "DAEMON PRINCE"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "16",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Lord of Murder"
+     },
+     "text": {
+      "en": "While this model is within 3\" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Devastating Assault"
+     },
+     "text": {
+      "en": "Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Direct the Slaughter"
+     },
+     "text": {
+      "en": "Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-of-Khorne",
+   "composition": [
+    "1 Daemon Prince of Khorne"
+   ],
+   "equipped": [
+    "This model is equipped with: infernal cannon; hellforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "daemon-prince-of-khorne-with-wings",
+   "name": {
+    "en": "Daemon Prince of Khorne with Wings",
+    "es": "Daemon Prince of Khorne with Wings"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "FLY",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "DAEMON PRINCE"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "9",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "16",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bloodied Terror"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, each enemy unit within Engagement Range of this model must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength."
+     }
+    },
+    {
+     "name": {
+      "en": "Swooping Predator"
+     },
+     "text": {
+      "en": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-of-Khorne-with-Wings",
+   "composition": [
+    "1 Daemon Prince of Khorne with Wings"
+   ],
+   "equipped": [
+    "This model is equipped with: infernal cannon; hellforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "kh-rn-the-betrayer",
+   "name": {
+    "en": "Khârn The Betrayer",
+    "es": "Khârn The Betrayer"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "GRENADES",
+    "CHAOS",
+    "KHORNE",
+    "KHÂRN THE BETRAYER"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "gorechild",
+     "name": {
+      "en": "Gorechild"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Legendary Killer"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+     }
+    },
+    {
+     "name": {
+      "en": "The Betrayer"
+     },
+     "text": {
+      "en": "At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: If that leadership roll is failed, one bodyguard model in this unit is destroyed."
+     }
+    },
+    {
+     "name": {
+      "en": "Berzerker Frenzy"
+     },
+     "text": {
+      "en": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Kh-rn-The-Betrayer",
+   "composition": [
+    "1 Khârn the Betrayer – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: plasma pistol; Gorechild."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "khorne-berzerkers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "plasma-pistol": 1,
+      "gorechild": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "gorechild",
+    "plasma-pistol"
+   ]
+  },
+  {
+   "id": "lord-invocatus",
+   "name": {
+    "en": "Lord Invocatus",
+    "es": "Lord Invocatus"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "EPIC HERO",
+    "CHAOS",
+    "KHORNE",
+    "LORD INVOCATUS"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "8",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cowards-bane",
+     "name": {
+      "en": "Coward’s Bane"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bladed-horn",
+     "name": {
+      "en": "Bladed horn"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks",
+        "Lance"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Fire Riders"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have the Deep Strike ability and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models and terrain features. When making a Normal, Advance or Fall Back move, models in that unit can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them and any Desperate Escape test is automatically passed."
+     }
+    },
+    {
+     "name": {
+      "en": "Bloody Stampede"
+     },
+     "text": {
+      "en": "Each time this model’s unit ends a Charge move, select one enemy unit within Engagement Range of this model, then roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+     }
+    }
+   ],
+   "core": [
+    "Leader",
+    "Deep Strike",
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lord-Invocatus",
+   "composition": [
+    "1 Lord Invocatus – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; Coward’s Bane, bladed horn."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "eightbound",
+     "exalted-eightbound",
+     "khorne-berzerkers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "cowards-bane": 1,
+      "bladed-horn": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bladed-horn",
+    "bolt-pistol",
+    "cowards-bane"
+   ]
+  },
+  {
+   "id": "lord-on-juggernaut",
+   "name": {
+    "en": "Lord on Juggernaut",
+    "es": "Lord on Juggernaut"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "CHAOS",
+    "KHORNE",
+    "LORD ON JUGGERNAUT"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "7",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "exalted-chainblade",
+     "name": {
+      "en": "Exalted chainblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "bladed-horn",
+     "name": {
+      "en": "Bladed horn"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks",
+        "Lance"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Aggressive Advance"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features."
+     }
+    },
+    {
+     "name": {
+      "en": "Crush All Who Stand Before Us"
+     },
+     "text": {
+      "en": "Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lord-on-Juggernaut",
+   "composition": [
+    "1 World Eaters Lord on Juggernaut"
+   ],
+   "equipped": [
+    "This model is equipped with: plasma pistol; exalted chainblade; bladed horn."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "eightbound",
+     "exalted-eightbound",
+     "khorne-berzerkers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "plasma-pistol": 1,
+      "exalted-chainblade": 1,
+      "bladed-horn": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bladed-horn",
+    "exalted-chainblade",
+    "plasma-pistol"
+   ]
+  },
+  {
+   "id": "master-of-executions",
+   "name": {
+    "en": "Master of Executions",
+    "es": "Master of Executions"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "CHAOS",
+    "KHORNE",
+    "MASTER OF EXECUTIONS"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "axe-of-dismemberment",
+     "name": {
+      "en": "Axe of dismemberment"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds",
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Forwards, for Blood!"
+     },
+     "text": {
+      "en": "While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move."
+     }
+    },
+    {
+     "name": {
+      "en": "A Worthy Skull"
+     },
+     "text": {
+      "en": "Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Master-of-Executions",
+   "composition": [
+    "1 Master of Executions"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; axe of dismemberment."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "khorne-berzerkers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "axe-of-dismemberment": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "axe-of-dismemberment",
+    "bolt-pistol"
+   ]
+  },
+  {
+   "id": "slaughterbound",
+   "name": {
+    "en": "Slaughterbound",
+    "es": "Slaughterbound"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "POSSESSED",
+    "SLAUGHTERBOUND"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "lacerator-and-daemonic-claw",
+     "name": {
+      "en": "Lacerator and daemonic claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rage Eternal"
+     },
+     "text": {
+      "en": "While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Possessed Lord"
+     },
+     "text": {
+      "en": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Slaughterbound",
+   "composition": [
+    "1 Slaughterbound"
+   ],
+   "equipped": [
+    "This model is equipped with: lacerator and daemonic claw."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "eightbound",
+     "exalted-eightbound"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "lacerator-and-daemonic-claw": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "lacerator-and-daemonic-claw"
+   ]
+  },
+  {
+   "id": "khorne-berzerkers",
+   "name": {
+    "en": "Khorne Berzerkers",
+    "es": "Khorne Berzerkers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "GRENADES",
+    "CHAOS",
+    "KHORNE",
+    "BERZERKERS"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "6+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainblade",
+     "name": {
+      "en": "Chainblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "khornate-eviscerator",
+     "name": {
+      "en": "Khornate eviscerator"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Blood Surge"
+     },
+     "text": {
+      "en": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2\"."
+     }
+    },
+    {
+     "name": {
+      "en": "Murderous Charge"
+     },
+     "text": {
+      "en": "If this unit made a charge move this turn, this unit’s melee attacks have +1 S."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Khorne-Berzerkers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Icon of Khorne"
+     },
+     "text": {
+      "en": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Khorne Berzerker Champion’s bolt pistol can be replaced with 1 plasma pistol.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Khorne Berzerker’s bolt pistol can be replaced with 1 plasma pistol.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Khorne Berzerker’s chainblade can be replaced with 1 Khornate eviscerator.",
+     "choices": []
+    },
+    {
+     "text": "1 model can be equipped with 1 icon of Khorne.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Khorne Berzerker Champion",
+    "9-19 Khorne Berzerkers"
+   ],
+   "equipped": [
+    "Every model is equipped with: bolt pistol; chainblade."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 10,
+      "chainblade": 10
+     }
+    },
+    {
+     "models": 20,
+     "loadout": {
+      "bolt-pistol": 20,
+      "chainblade": 20
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Khorne Berzerker Champion: Bolt pistol",
+      "es": "Khorne Berzerker Champion: Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Khorne Berzerker Champion",
+     "labels": {
+      "plasma-pistol": "Plasma pistol",
+      "": "Bolt pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Khorne Berzerker: replace Bolt pistol",
+      "es": "Khorne Berzerker: sustituir Bolt pistol"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2,
+      "20": 4
+     },
+     "owner": "Khorne Berzerker",
+     "labels": {
+      "plasma-pistol": "Plasma pistol"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Khorne Berzerker: replace Chainblade",
+      "es": "Khorne Berzerker: sustituir Chainblade"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "chainblade",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "khornate-eviscerator"
+     ],
+     "packages": {
+      "khornate-eviscerator": [
+       {
+        "item": "khornate-eviscerator",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2,
+      "20": 4
+     },
+     "owner": "Khorne Berzerker",
+     "labels": {
+      "khornate-eviscerator": "Khornate eviscerator"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "add Icon of khorne",
+      "es": "añadir Icon of khorne"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:icon-of-khorne",
+     "packages": {
+      "gear:icon-of-khorne": [
+       {
+        "item": "gear:icon-of-khorne",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 1
+     },
+     "labels": {
+      "gear:icon-of-khorne": "Icon of khorne"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "chainblade"
+   ]
+  },
+  {
+   "id": "chaos-spawn",
+   "name": {
+    "en": "Chaos Spawn",
+    "es": "Chaos Spawn"
+   },
+   "keywords": [
+    "BEAST",
+    "CHAOS",
+    "KHORNE",
+    "SPAWN"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "5",
+     "Sv": "4+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hideous-mutations",
+     "name": {
+      "en": "Hideous mutations"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "D6+4",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "To Slake its Rage"
+     },
+     "text": {
+      "en": "This unit is eligible to declare a charge in a turn in which it Advanced."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+",
+    "Scouts 8\""
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Spawn",
+   "composition": [
+    "2 Chaos Spawn"
+   ],
+   "equipped": [
+    "Every model is equipped with: hideous mutations."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 2,
+     "loadout": {
+      "hideous-mutations": 2
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hideous-mutations"
+   ]
+  },
+  {
+   "id": "chaos-terminators",
+   "name": {
+    "en": "Chaos Terminators",
+    "es": "Chaos Terminators"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAOS",
+    "KHORNE",
+    "TERMINATOR",
+    "TERMINATOR SQUAD"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-autocannon",
+     "name": {
+      "en": "Reaper autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "4",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Rapid Fire 2",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "accursed-weapon",
+     "name": {
+      "en": "Accursed weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "chainfist",
+     "name": {
+      "en": "Chainfist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Anti-vehicle 3+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paired-accursed-weapons",
+     "name": {
+      "en": "Paired accursed weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bloody Fury"
+     },
+     "text": {
+      "en": "This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls. When this unit declares a charge, you can use this part of this ability. If you do: This unit can re-roll that charge roll. This unit must end that charge move engaged with the closest charge target."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Terminators",
+   "wargearOptions": [
+    {
+     "text": "For every 5 models in this unit, 1 Chaos Terminator’s combi-bolter can be replaced with one of the following:",
+     "choices": [
+      "1 heavy flamer",
+      "1 reaper autocannon"
+     ]
+    },
+    {
+     "text": "Any number of models can each have their combi-bolter replaced with 1 combi-weapon.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 model’s combi-bolter and accursed weapon can be replaced with 1 paired accursed weapons.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, up to 3 models can each have their accursed weapon replaced with 1 power fist.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 model’s accursed weapon can be replaced with 1 chainfist.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Terminator Champion",
+    "4-9 Chaos Terminators"
+   ],
+   "equipped": [
+    "Every model is equipped with: combi-bolter; accursed weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "combi-bolter": 5,
+      "accursed-weapon": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "combi-bolter": 10,
+      "accursed-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Chaos Terminator: replace Combi-bolter",
+      "es": "Chaos Terminator: sustituir Combi-bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "combi-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "heavy-flamer",
+      "reaper-autocannon"
+     ],
+     "packages": {
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ],
+      "reaper-autocannon": [
+       {
+        "item": "reaper-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Chaos Terminator",
+     "labels": {
+      "heavy-flamer": "Heavy flamer",
+      "reaper-autocannon": "Reaper autocannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "replace Combi-bolter",
+      "es": "sustituir Combi-bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "combi-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 5,
+      "10": 10
+     },
+     "labels": {
+      "combi-weapon": "Combi-weapon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "replace Combi-bolter + Accursed weapon",
+      "es": "sustituir Combi-bolter + Accursed weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "combi-bolter",
+       "n": 1
+      },
+      {
+       "item": "accursed-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "paired-accursed-weapons"
+     ],
+     "packages": {
+      "paired-accursed-weapons": [
+       {
+        "item": "paired-accursed-weapons",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "labels": {
+      "paired-accursed-weapons": "Paired accursed weapons"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "replace Accursed weapon",
+      "es": "sustituir Accursed weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "accursed-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "power-fist"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 3,
+      "10": 6
+     },
+     "labels": {
+      "power-fist": "Power fist"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "replace Accursed weapon",
+      "es": "sustituir Accursed weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "accursed-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "chainfist"
+     ],
+     "packages": {
+      "chainfist": [
+       {
+        "item": "chainfist",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "labels": {
+      "chainfist": "Chainfist"
+     }
+    }
+   ],
+   "loadout": [
+    "accursed-weapon",
+    "combi-bolter"
+   ]
+  },
+  {
+   "id": "eightbound",
+   "name": {
+    "en": "Eightbound",
+    "es": "Eightbound"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "POSSESSED",
+    "EIGHTBOUND"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "chainblades",
+     "name": {
+      "en": "Chainblades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Beacons of Rage (Aura)"
+     },
+     "text": {
+      "en": "While a friendly WORLD EATERS unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Eightbound",
+   "composition": [
+    "1 Eightbound Champion",
+    "2-5 Eightbound"
+   ],
+   "equipped": [
+    "Every model is equipped with: chainblades."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "chainblades": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "chainblades": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "chainblades"
+   ]
+  },
+  {
+   "id": "exalted-eightbound",
+   "name": {
+    "en": "Exalted Eightbound",
+    "es": "Exalted Eightbound"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "POSSESSED",
+    "EXALTED EIGHTBOUND"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "chainblades",
+     "name": {
+      "en": "Chainblades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Anti-monster 3+",
+        "Anti-vehicle 3+"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rend and Tear"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Exalted-Eightbound",
+   "composition": [
+    "1 Exalted Eightbound Champion",
+    "2-5 Exalted Eightbound"
+   ],
+   "equipped": [
+    "Every model is equipped with: chainblades."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "chainblades": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "chainblades": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "chainblades"
+   ]
+  },
+  {
+   "id": "goremongers",
+   "name": {
+    "en": "Goremongers",
+    "es": "Goremongers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHAOS",
+    "KHORNE",
+    "GOREMONGERS"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "4",
+     "Sv": "6+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "autopistol",
+     "name": {
+      "en": "Autopistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blood-harpoon",
+     "name": {
+      "en": "Blood harpoon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Assault",
+        "Sustained Hits D3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chainblade",
+     "name": {
+      "en": "Chainblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Lance"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Loping Speed"
+     },
+     "text": {
+      "en": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\"."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Goremongers",
+   "wargearOptions": [
+    {
+     "text": "1 Goremonger’s chainblade can be replaced with 1 autopistol.",
+     "choices": []
+    },
+    {
+     "text": "1 Goremonger’s chainblade can be replaced with 1 blood harpoon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Blood Herald",
+    "7 Goremongers"
+   ],
+   "equipped": [
+    "Every model is equipped with: autopistol; chainblade; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 8,
+     "loadout": {
+      "autopistol": 8,
+      "chainblade": 8,
+      "close-combat-weapon": 8
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Goremonger: Chainblade",
+      "es": "Goremonger: Chainblade"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "chainblade",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "autopistol"
+     ],
+     "packages": {
+      "autopistol": [
+       {
+        "item": "autopistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Goremonger",
+     "labels": {
+      "autopistol": "Autopistol",
+      "": "Chainblade"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Goremonger: Chainblade",
+      "es": "Goremonger: Chainblade"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "chainblade",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "blood-harpoon"
+     ],
+     "packages": {
+      "blood-harpoon": [
+       {
+        "item": "blood-harpoon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Goremonger",
+     "labels": {
+      "blood-harpoon": "Blood harpoon",
+      "": "Chainblade"
+     }
+    }
+   ],
+   "loadout": [
+    "autopistol",
+    "chainblade",
+    "close-combat-weapon"
+   ]
+  },
+  {
+   "id": "jakhals",
+   "name": {
+    "en": "Jakhals",
+    "es": "Jakhals"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHAOS",
+    "KHORNE",
+    "JAKHALS"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "4",
+     "Sv": "6+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "autopistol",
+     "name": {
+      "en": "Autopistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chainblades",
+     "name": {
+      "en": "Chainblades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "paired-manglers",
+     "name": {
+      "en": "Paired manglers"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "mauler-chainblade",
+     "name": {
+      "en": "Mauler chainblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "5+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "skullsmasher-and-mangler",
+     "name": {
+      "en": "Skullsmasher and mangler"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Objective Ravaged"
+     },
+     "text": {
+      "en": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Jakhals",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Icon of Khorne"
+     },
+     "text": {
+      "en": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "For every 10 models in this unit, 1 Jakhal’s chainblades can be replaced with 1 mauler chainblade.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Dishonoured models can each have their paired manglers replaced with 1 skullsmasher and mangler.",
+     "choices": []
+    },
+    {
+     "text": "For every 10 models in this unit, 1 Jakhal can be equipped with 1 icon of Khorne.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Jakhal Pack Leader, 1 Dishonoured and 8 Jakhals",
+    "1 Jakhal Pack Leader, 2 Dishonoured and 17 Jakhals"
+   ],
+   "equipped": [
+    "The Jakhal Pack Leader and every Jakhal is equipped with: autopistol; chainblades.",
+    "Every Dishonoured is equipped with: paired manglers."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "autopistol": 8,
+      "chainblades": 8,
+      "paired-manglers": 1
+     }
+    },
+    {
+     "models": 20,
+     "loadout": {
+      "autopistol": 17,
+      "chainblades": 17,
+      "paired-manglers": 2
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Jakhal: replace Chainblades",
+      "es": "Jakhal: sustituir Chainblades"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "chainblades",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "mauler-chainblade"
+     ],
+     "packages": {
+      "mauler-chainblade": [
+       {
+        "item": "mauler-chainblade",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 2
+     },
+     "owner": "Jakhal",
+     "labels": {
+      "mauler-chainblade": "Mauler chainblade"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Dishonoured models: replace Paired manglers",
+      "es": "Dishonoured models: sustituir Paired manglers"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "paired-manglers",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "skullsmasher-and-mangler"
+     ],
+     "packages": {
+      "skullsmasher-and-mangler": [
+       {
+        "item": "skullsmasher-and-mangler",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 2
+     },
+     "owner": "Dishonoured models",
+     "labels": {
+      "skullsmasher-and-mangler": "Skullsmasher and mangler"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Jakhal: add Icon of khorne",
+      "es": "Jakhal: añadir Icon of khorne"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:icon-of-khorne",
+     "packages": {
+      "gear:icon-of-khorne": [
+       {
+        "item": "gear:icon-of-khorne",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 2
+     },
+     "owner": "Jakhal",
+     "labels": {
+      "gear:icon-of-khorne": "Icon of khorne"
+     }
+    }
+   ],
+   "loadout": [
+    "autopistol",
+    "chainblades",
+    "paired-manglers"
+   ]
+  },
+  {
+   "id": "chaos-predator-annihilator",
+   "name": {
+    "en": "Chaos Predator Annihilator",
+    "es": "Chaos Predator Annihilator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "KHORNE",
+    "PREDATOR ANNIHILATOR"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "6+",
+     "OC": "3"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 2",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lascannon",
+     "name": {
+      "en": "Lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "predator-twin-lascannon",
+     "name": {
+      "en": "Predator twin lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Rapid Fire 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Blood-hungry Annihilator"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets the closest eligible MONSTER or VEHICLE target within 18\", you can re-roll the Wound roll and you can re-roll the Damage roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Predator-Annihilator",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "2 heavy bolters",
+      "2 lascannons"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 combi-bolter",
+      "1 combi-weapon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Chaos Predator Annihilator"
+   ],
+   "equipped": [
+    "This model is equipped with: Predator twin lascannon; armoured tracks."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "predator-twin-lascannon": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "2xheavy-bolter",
+      "2xlascannon"
+     ],
+     "packages": {
+      "2xheavy-bolter": [
+       {
+        "item": "heavy-bolter",
+        "n": 2
+       }
+      ],
+      "2xlascannon": [
+       {
+        "item": "lascannon",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xheavy-bolter": "2× Heavy bolter",
+      "2xlascannon": "2× Lascannon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "combi-weapon": "Combi-weapon",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "predator-twin-lascannon"
+   ]
+  },
+  {
+   "id": "chaos-predator-destructor",
+   "name": {
+    "en": "Chaos Predator Destructor",
+    "es": "Chaos Predator Destructor"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "KHORNE",
+    "PREDATOR DESTRUCTOR"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "6+",
+     "OC": "3"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 2",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lascannon",
+     "name": {
+      "en": "Lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "predator-autocannon",
+     "name": {
+      "en": "Predator autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Rapid Fire 6"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Punishing Suppression"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks (excluding MONSTERS and VEHICLES). Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Predator-Destructor",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "2 heavy bolters",
+      "2 lascannons"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 combi-bolter",
+      "1 combi-weapon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Chaos Predator Destructor"
+   ],
+   "equipped": [
+    "This model is equipped with: Predator autocannon; armoured tracks."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "predator-autocannon": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "2xheavy-bolter",
+      "2xlascannon"
+     ],
+     "packages": {
+      "2xheavy-bolter": [
+       {
+        "item": "heavy-bolter",
+        "n": 2
+       }
+      ],
+      "2xlascannon": [
+       {
+        "item": "lascannon",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xheavy-bolter": "2× Heavy bolter",
+      "2xlascannon": "2× Lascannon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "combi-weapon": "Combi-weapon",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "predator-autocannon"
+   ]
+  },
+  {
+   "id": "defiler",
+   "name": {
+    "en": "Defiler",
+    "es": "Defiler"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "DEFILER"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ectoplasma-destructor",
+     "name": {
+      "en": "Ectoplasma destructor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "excruciator-cannon",
+     "name": {
+      "en": "Excruciator cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-baleflamer",
+     "name": {
+      "en": "Heavy baleflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-battle-cannon",
+     "name": {
+      "en": "Hades battle cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+3",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-lascannon",
+     "name": {
+      "en": "Hades lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-missile-launcher",
+     "name": {
+      "en": "Heavy missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "krak"
+       }
+      },
+      {
+       "range": "48\"",
+       "A": "2D6",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 3"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      }
+     ]
+    },
+    {
+     "id": "heavy-reaper-autocannon",
+     "name": {
+      "en": "Heavy reaper autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Rapid Fire 2",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "magma-cutters",
+     "name": {
+      "en": "Magma cutters"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "electroscourge",
+     "name": {
+      "en": "Electroscourge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks",
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shearing-claws",
+     "name": {
+      "en": "Shearing claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "16",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Scuttling Walker"
+     },
+     "text": {
+      "en": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+     }
+    },
+    {
+     "name": {
+      "en": "Unleash Wrath"
+     },
+     "text": {
+      "en": "At the end of your opponent’s Movement phase, you can select one enemy unit that was set up on the battlefield within 12\" of this model; this model can then either: Shoot at that unit, but only if it is an eligible target. Declare a charge. This unit must end that charge move engaged with the enemy unit you selected (note that even if this charge is successful, this unit does not receive any Charge bonus this turn)."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Defiler",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Hades battle cannon can be replaced with 1 ectoplasma destructor.",
+     "choices": []
+    },
+    {
+     "text": "This model’s excruciator cannons can be replaced with 2 magma cutters.",
+     "choices": []
+    },
+    {
+     "text": "This model’s heavy baleflamer can be replaced with one of the following:",
+     "choices": [
+      "1 Hades lascannon",
+      "1 heavy reaper autocannon",
+      "1 electroscourge (a model cannot be equipped with more than one electroscourge)"
+     ]
+    },
+    {
+     "text": "This model’s heavy missile launcher can be replaced with one of the following:",
+     "choices": [
+      "1 Hades lascannon",
+      "1 heavy reaper autocannon",
+      "1 electroscourge (a model cannot be equipped with more than one electroscourge)"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Defiler"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Hades battle cannon; 2 excruciator cannons; 1 heavy missile launcher; 1 heavy baleflamer; 1 shearing claws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-battle-cannon": 1,
+      "excruciator-cannon": 2,
+      "heavy-missile-launcher": 1,
+      "heavy-baleflamer": 1,
+      "shearing-claws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Hades battle cannon",
+      "es": "Hades battle cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-battle-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "ectoplasma-destructor"
+     ],
+     "packages": {
+      "ectoplasma-destructor": [
+       {
+        "item": "ectoplasma-destructor",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ectoplasma-destructor": "Ectoplasma destructor",
+      "": "Hades battle cannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Excruciator cannon",
+      "es": "Excruciator cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "excruciator-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "2xmagma-cutters"
+     ],
+     "packages": {
+      "2xmagma-cutters": [
+       {
+        "item": "magma-cutters",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xmagma-cutters": "2× Magma cutters",
+      "": "Excruciator cannon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Heavy baleflamer",
+      "es": "Heavy baleflamer"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-baleflamer",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hades-lascannon",
+      "heavy-reaper-autocannon",
+      "electroscourge"
+     ],
+     "packages": {
+      "hades-lascannon": [
+       {
+        "item": "hades-lascannon",
+        "n": 1
+       }
+      ],
+      "heavy-reaper-autocannon": [
+       {
+        "item": "heavy-reaper-autocannon",
+        "n": 1
+       }
+      ],
+      "electroscourge": [
+       {
+        "item": "electroscourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hades-lascannon": "Hades lascannon",
+      "heavy-reaper-autocannon": "Heavy reaper autocannon",
+      "electroscourge": "Electroscourge",
+      "": "Heavy baleflamer"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Heavy missile launcher",
+      "es": "Heavy missile launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-missile-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hades-lascannon",
+      "heavy-reaper-autocannon",
+      "electroscourge"
+     ],
+     "packages": {
+      "hades-lascannon": [
+       {
+        "item": "hades-lascannon",
+        "n": 1
+       }
+      ],
+      "heavy-reaper-autocannon": [
+       {
+        "item": "heavy-reaper-autocannon",
+        "n": 1
+       }
+      ],
+      "electroscourge": [
+       {
+        "item": "electroscourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hades-lascannon": "Hades lascannon",
+      "heavy-reaper-autocannon": "Heavy reaper autocannon",
+      "electroscourge": "Electroscourge",
+      "": "Heavy missile launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "excruciator-cannon",
+    "hades-battle-cannon",
+    "heavy-baleflamer",
+    "heavy-missile-launcher",
+    "shearing-claws"
+   ]
+  },
+  {
+   "id": "forgefiend",
+   "name": {
+    "en": "Forgefiend",
+    "es": "Forgefiend"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "FORGEFIEND"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "12",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ectoplasma-cannon",
+     "name": {
+      "en": "Ectoplasma cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D3",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-autocannon",
+     "name": {
+      "en": "Hades autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "forgefiend-claws",
+     "name": {
+      "en": "Forgefiend claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "forgefiend-jaws",
+     "name": {
+      "en": "Forgefiend jaws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Furious Onslaught"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Forgefiend",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s 2 Hades autocannons can be replaced with 2 ectoplasma cannons.",
+     "choices": []
+    },
+    {
+     "text": "This model’s Forgefiend jaws can be replaced with 1 ectoplasma cannon and 1 Forgefiend claws.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Forgefiend"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 Hades autocannons; 1 Forgefiend jaws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-autocannon": 2,
+      "forgefiend-jaws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "2× Hades autocannon",
+      "es": "2× Hades autocannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-autocannon",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "",
+      "2xectoplasma-cannon"
+     ],
+     "packages": {
+      "2xectoplasma-cannon": [
+       {
+        "item": "ectoplasma-cannon",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xectoplasma-cannon": "2× Ectoplasma cannon",
+      "": "2× Hades autocannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Forgefiend jaws",
+      "es": "Forgefiend jaws"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "forgefiend-jaws",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "ectoplasma-cannon+forgefiend-claws"
+     ],
+     "packages": {
+      "ectoplasma-cannon+forgefiend-claws": [
+       {
+        "item": "ectoplasma-cannon",
+        "n": 1
+       },
+       {
+        "item": "forgefiend-claws",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ectoplasma-cannon+forgefiend-claws": "Ectoplasma cannon + Forgefiend claws",
+      "": "Forgefiend jaws"
+     }
+    }
+   ],
+   "loadout": [
+    "forgefiend-jaws",
+    "hades-autocannon"
+   ]
+  },
+  {
+   "id": "helbrute",
+   "name": {
+    "en": "Helbrute",
+    "es": "Helbrute"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "KHORNE",
+    "HELBRUTE"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "9",
+     "Sv": "2+",
+     "W": "8",
+     "Ld": "6+",
+     "OC": "3"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-cannon",
+     "name": {
+      "en": "Plasma cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D3",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Hazardous",
+        "Rapid Fire D3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "missile-launcher",
+     "name": {
+      "en": "Missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 3"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      },
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "multi-melta",
+     "name": {
+      "en": "Multi-melta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-autocannon",
+     "name": {
+      "en": "Twin autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Rapid Fire 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-heavy-bolter",
+     "name": {
+      "en": "Twin heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 2",
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-lascannon",
+     "name": {
+      "en": "Twin lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Rapid Fire 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "helbrute-fist",
+     "name": {
+      "en": "Helbrute fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "helbrute-hammer",
+     "name": {
+      "en": "Helbrute hammer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "4+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-scourge",
+     "name": {
+      "en": "Power scourge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Devoted to Destruction"
+     },
+     "text": {
+      "en": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons."
+     }
+    },
+    {
+     "name": {
+      "en": "Frenzy"
+     },
+     "text": {
+      "en": "(Once per turn, per unit) In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Helbrute",
+   "wargearOptions": [
+    {
+     "text": "This model’s multi-melta can be replaced with one of the following:",
+     "choices": [
+      "1 plasma cannon",
+      "1 twin autocannon",
+      "1 twin heavy bolter",
+      "1 twin lascannon",
+      "1 Helbrute fist"
+     ]
+    },
+    {
+     "text": "This model’s missile launcher can be replaced with one of the following:",
+     "choices": [
+      "1 Helbrute fist",
+      "1 Helbrute hammer",
+      "1 power scourge"
+     ]
+    },
+    {
+     "text": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:",
+     "choices": [
+      "1 combi-bolter",
+      "1 heavy flamer"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Helbrute"
+   ],
+   "equipped": [
+    "This model is equipped with: missile launcher; multi-melta; close combat weapon."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "missile-launcher": 1,
+      "multi-melta": 1,
+      "close-combat-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Multi-melta",
+      "es": "Multi-melta"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "multi-melta",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-cannon",
+      "twin-autocannon",
+      "twin-heavy-bolter",
+      "twin-lascannon",
+      "helbrute-fist"
+     ],
+     "packages": {
+      "plasma-cannon": [
+       {
+        "item": "plasma-cannon",
+        "n": 1
+       }
+      ],
+      "twin-autocannon": [
+       {
+        "item": "twin-autocannon",
+        "n": 1
+       }
+      ],
+      "twin-heavy-bolter": [
+       {
+        "item": "twin-heavy-bolter",
+        "n": 1
+       }
+      ],
+      "twin-lascannon": [
+       {
+        "item": "twin-lascannon",
+        "n": 1
+       }
+      ],
+      "helbrute-fist": [
+       {
+        "item": "helbrute-fist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "plasma-cannon": "Plasma cannon",
+      "twin-autocannon": "Twin autocannon",
+      "twin-heavy-bolter": "Twin heavy bolter",
+      "twin-lascannon": "Twin lascannon",
+      "helbrute-fist": "Helbrute fist",
+      "": "Multi-melta"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Missile launcher",
+      "es": "Missile launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "missile-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "helbrute-fist",
+      "helbrute-hammer",
+      "power-scourge"
+     ],
+     "packages": {
+      "helbrute-fist": [
+       {
+        "item": "helbrute-fist",
+        "n": 1
+       }
+      ],
+      "helbrute-hammer": [
+       {
+        "item": "helbrute-hammer",
+        "n": 1
+       }
+      ],
+      "power-scourge": [
+       {
+        "item": "power-scourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "helbrute-fist": "Helbrute fist",
+      "helbrute-hammer": "Helbrute hammer",
+      "power-scourge": "Power scourge",
+      "": "Missile launcher"
+     }
+    },
+    {
+     "id": "o3a",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "heavy-flamer"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "needs": [
+      {
+       "item": "helbrute-fist",
+       "n": 1
+      }
+     ],
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "heavy-flamer": "Heavy flamer",
+      "": "—"
+     }
+    },
+    {
+     "id": "o3b",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "heavy-flamer"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "needs": [
+      {
+       "item": "helbrute-fist",
+       "n": 2
+      }
+     ],
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "heavy-flamer": "Heavy flamer",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "missile-launcher",
+    "multi-melta"
+   ]
+  },
+  {
+   "id": "heldrake",
+   "name": {
+    "en": "Heldrake",
+    "es": "Heldrake"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FLY",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "HELDRAKE"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "12",
+     "Ld": "6+",
+     "OC": "0",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "baleflamer",
+     "name": {
+      "en": "Baleflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-autocannon",
+     "name": {
+      "en": "Hades autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heldrake-claws",
+     "name": {
+      "en": "Heldrake claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Airborne Predator"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets a unit that can FLY, add 1 to the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Hover"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Heldrake",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Hades autocannon can be replaced with 1 baleflamer.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Heldrake"
+   ],
+   "equipped": [
+    "This model is equipped with: Hades autocannon; Heldrake claws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-autocannon": 1,
+      "heldrake-claws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Hades autocannon",
+      "es": "Hades autocannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-autocannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "baleflamer"
+     ],
+     "packages": {
+      "baleflamer": [
+       {
+        "item": "baleflamer",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "baleflamer": "Baleflamer",
+      "": "Hades autocannon"
+     }
+    }
+   ],
+   "loadout": [
+    "hades-autocannon",
+    "heldrake-claws"
+   ]
+  },
+  {
+   "id": "maulerfiend",
+   "name": {
+    "en": "Maulerfiend",
+    "es": "Maulerfiend"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "MAULERFIEND"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "12",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "magma-cutter",
+     "name": {
+      "en": "Magma cutter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lasher-tendrils",
+     "name": {
+      "en": "Lasher tendrils"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "maulerfiend-fists",
+     "name": {
+      "en": "Maulerfiend fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "The Scent of Blood"
+     },
+     "text": {
+      "en": "In the Charge phase, when this unit declares a charge: If an enemy unit below starting strength is within 9\" of this unit, this unit has +1 to charge rolls. Or: If an enemy unit below half strength is within 9\" of this unit, this unit has +2 to charge rolls."
+     }
+    },
+    {
+     "name": {
+      "en": "Savage Exaltation"
+     },
+     "text": {
+      "en": "Each time this model makes a melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll and, if that attack targets an enemy unit that is Below Half-strength, add 1 to the Wound roll as well."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Maulerfiend",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s lasher tendrils can be replaced with 2 magma cutters.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Maulerfiend"
+   ],
+   "equipped": [
+    "This model is equipped with: lasher tendrils; Maulerfiend fists."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "lasher-tendrils": 1,
+      "maulerfiend-fists": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Lasher tendrils",
+      "es": "Lasher tendrils"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "lasher-tendrils",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "2xmagma-cutter"
+     ],
+     "packages": {
+      "2xmagma-cutter": [
+       {
+        "item": "magma-cutter",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xmagma-cutter": "2× Magma cutter",
+      "": "Lasher tendrils"
+     }
+    }
+   ],
+   "loadout": [
+    "lasher-tendrils",
+    "maulerfiend-fists"
+   ]
+  },
+  {
+   "id": "chaos-land-raider",
+   "name": {
+    "en": "Chaos Land Raider",
+    "es": "Chaos Land Raider"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "KHORNE",
+    "LAND RAIDER"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "12",
+     "Sv": "2+",
+     "W": "16",
+     "Ld": "6+",
+     "OC": "5"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "soulshatter-lascannon",
+     "name": {
+      "en": "Soulshatter lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-heavy-bolter",
+     "name": {
+      "en": "Twin heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 2",
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "9",
+       "skill": "3+",
+       "S": "8",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Assault Ramp"
+     },
+     "text": {
+      "en": "Each time a unit disembarks from this model after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Land-Raider",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 combi-bolter",
+      "1 combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Land Raider"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 soulshatter lascannons; twin heavy bolter; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 14 WORLD EATERS INFANTRY models. Each POSSESSED and TERMINATOR model takes up the space of 2 models."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "soulshatter-lascannon": 2,
+      "twin-heavy-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "combi-weapon": "Combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "soulshatter-lascannon",
+    "twin-heavy-bolter"
+   ]
+  },
+  {
+   "id": "chaos-rhino",
+   "name": {
+    "en": "Chaos Rhino",
+    "es": "Chaos Rhino"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FRAME",
+    "DEDICATED TRANSPORT",
+    "SMOKE",
+    "CHAOS",
+    "KHORNE",
+    "RHINO"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Meet Any Challenge"
+     },
+     "text": {
+      "en": "In your opponent’s Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8\" of this model, any units embarked within it can disembark."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Firing Deck 2"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Rhino",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 additional combi-bolter",
+      "1 combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Rhino"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 combi-bolter; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 12 WORLD EATERS INFANTRY models. It cannot transport POSSESSED or TERMINATOR models."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "combi-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "combi-weapon": "Combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "combi-bolter"
+   ]
+  },
+  {
+   "id": "khorne-lord-of-skulls",
+   "name": {
+    "en": "Khorne Lord of Skulls",
+    "es": "Khorne Lord of Skulls"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FRAME",
+    "TITANIC",
+    "TOWERING",
+    "CHAOS",
+    "KHORNE",
+    "DAEMON",
+    "LORD OF SKULLS"
+   ],
+   "factionKeywords": [
+    "WORLD EATERS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "13",
+     "Sv": "3+",
+     "W": "24",
+     "Ld": "6+",
+     "OC": "8",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "daemongore-cannon",
+     "name": {
+      "en": "Daemongore cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "14",
+       "AP": "-4",
+       "D": "D6+2",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gorestorm-cannon",
+     "name": {
+      "en": "Gorestorm cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6+3",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-gatling-cannon",
+     "name": {
+      "en": "Hades gatling cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "12",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 6",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ichor-cannon",
+     "name": {
+      "en": "Ichor cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2D6",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Blast",
+        "Rapid Fire 4"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "skullhurler",
+     "name": {
+      "en": "Skullhurler"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "60\"",
+       "A": "2D6",
+       "skill": "4+",
+       "S": "14",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Rapid Fire 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "great-cleaver-of-khorne",
+     "name": {
+      "en": "Great cleaver of Khorne"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "16",
+       "AP": "-4",
+       "D": "8",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "18",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Idol of Blessed Blood"
+     },
+     "text": {
+      "en": "At the start of the battle round, if this model is on the battlefield, when you make a Blessings of Khorne roll, roll one additional D6."
+     }
+    },
+    {
+     "name": {
+      "en": "Super-heavy War Engine"
+     },
+     "text": {
+      "en": "Each time this model makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height. When doing so it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them. It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a roll of 1, this model is Battle-shocked."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6+2"
+   ],
+   "factionAbilities": [
+    "Blessings of Khorne"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Khorne-Lord-of-Skulls",
+   "damaged": {
+    "name": {
+     "en": "1-8 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s gorestorm cannon can be replaced with one of the following:",
+     "choices": [
+      "1 daemongore cannon",
+      "1 ichor cannon"
+     ]
+    },
+    {
+     "text": "This model’s Hades gatling cannon can be replaced with 1 skullhurler.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Khorne Lord of Skulls"
+   ],
+   "equipped": [
+    "This model is equipped with: gorestorm cannon; Hades gatling cannon; great cleaver of Khorne."
+   ],
+   "role": "titanic",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "gorestorm-cannon": 1,
+      "hades-gatling-cannon": 1,
+      "great-cleaver-of-khorne": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Gorestorm cannon",
+      "es": "Gorestorm cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "gorestorm-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "daemongore-cannon",
+      "ichor-cannon"
+     ],
+     "packages": {
+      "daemongore-cannon": [
+       {
+        "item": "daemongore-cannon",
+        "n": 1
+       }
+      ],
+      "ichor-cannon": [
+       {
+        "item": "ichor-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "daemongore-cannon": "Daemongore cannon",
+      "ichor-cannon": "Ichor cannon",
+      "": "Gorestorm cannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Hades gatling cannon",
+      "es": "Hades gatling cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-gatling-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "skullhurler"
+     ],
+     "packages": {
+      "skullhurler": [
+       {
+        "item": "skullhurler",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "skullhurler": "Skullhurler",
+      "": "Hades gatling cannon"
+     }
+    }
+   ],
+   "loadout": [
+    "gorestorm-cannon",
+    "great-cleaver-of-khorne",
+    "hades-gatling-cannon"
+   ]
+  }
+ ]
+}

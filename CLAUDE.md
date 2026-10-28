@@ -39,7 +39,9 @@ js/main.js       routing (#/, #/list/<id>, #/list/<id>/view), actions, drag & dr
 data/editions/11th.json                 battle sizes and recruitment rules (Onslaught values unconfirmed)
 data/editions/11th.i18n.es.json         core stratagems + texts shared by several factions + glossary "terms"
 data/factions/index.json                factions: alliance (imperium/chaos/xenos), color, unit/detachment counts,
-                                        "parent" for a Space Marine Chapter
+                                        "parent" for a Space Marine Chapter, "group" for a faction shown
+                                        with another in the picker (the Chaos Legions with the Chaos Space
+                                        Marines: their data is their own; no emblem → the group's)
 data/factions/<f>/                      faction.json, units.json, weapons.json, points.json, rules.json,
                                         stratagems.json, images.json, i18n.es.json, emblem.svg
 tools/                                  importers, audit and checks (see below)
@@ -135,6 +137,16 @@ base faction (`bootstrap_faction.py space-marines --chapter-bit 10`) and each Ch
   Enhancements and be Warlord (`canBeCharacter`), and validation counts the ones that do. `minUnits`: "Your army
   must include three or more WAR DOG units". Detachment `tags` come from the heading or from "has the X tag and
   cannot be taken with another X detachment".
+- Detachment `unitKeywordChoice` (Pactbound Zealots "Marks of Chaos"): each unit without one of the keywords (and
+  not excluded) picks one in the builder (`ru.detachmentKeywords[detachment id]`, `unitKeywordChoices`); `forbidden`
+  picks and `sameForAttached` (a CHARACTER shares its unit's pick) are validated.
+- Enhancement requirements (`requires` groups of words, `excludes`, `requiresAbility` from "… model with the Deep Strike
+  ability only", checked against `core`): a group matches when its words split into whole keywords of the unit (its
+  `factionKeywords` and datasheet name count) or all sit in one of them; "CHAOS LORD" is not CHAOS + LORD DISCORDANT.
+  Faction keywords are dropped from requirements as whole phrases (HERETIC ASTARTES), never word by word.
+- Every army rule of the page is kept: the first is `armyRule`, the others `extraRules` (FAQ/Errata headings skipped).
+- Wargear options can be limited to unit sizes: `minModels` ("If this unit contains 10 models, …") and `maxModels`
+  ("If this unit contains only 3 models, …"); `sizeAllows` in js/rules.js.
 - Saved lists store ids only; on load the app drops unknown units and invalid wargear choices.
 
 ## Checks (run before reporting a task as done)
@@ -161,7 +173,9 @@ python3 tools/check_app.py                                  # 0 failures (ES + E
 ## Known gaps
 
 - Allies (Deathwatch Support, Imperial Agents, Freeblades, the HERETIC ASTARTES units of the Chaos Daemons Shadow
-  Legion, the DAMNED units of the Chaos Knights Iconoclast Fiefdom) are not modelled.
+  Legion, the DAMNED units of the Chaos Knights Iconoclast Fiefdom, the daemon pacts of the Chaos Daemons and the
+  Chaos Legions) are not modelled.
+- Detachment rules that grant abilities to picked units (Deceptors: Infiltrators for up to N units) are not validated.
 - Onslaught (3000 pts) limits in `11th.json` are unconfirmed; wargear costs on default equipment unconfirmed.
 - Some units have no store picture (sold only in boxes or not sold).
 - Chapter emblems of Ultramarines, Imperial Fists, Iron Hands, Raven Guard, Salamanders and White Scars are hand-drawn

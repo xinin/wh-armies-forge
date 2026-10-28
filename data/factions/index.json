@@ -259,6 +259,75 @@
       "color": "#4a3b2e",
       "units": 11,
       "detachments": 8
+    },
+    {
+      "id": "chaos-space-marines",
+      "name": {
+        "en": "Chaos Space Marines",
+        "es": "Marines Espaciales del Caos"
+      },
+      "edition": "11th",
+      "alliance": "chaos",
+      "path": "chaos-space-marines",
+      "color": "#8a6d2b",
+      "units": 58,
+      "detachments": 17
+    },
+    {
+      "id": "death-guard",
+      "name": {
+        "en": "Death Guard",
+        "es": "Guardia de la Muerte"
+      },
+      "edition": "11th",
+      "alliance": "chaos",
+      "path": "death-guard",
+      "color": "#6b7a3a",
+      "group": "chaos-space-marines",
+      "units": 30,
+      "detachments": 9
+    },
+    {
+      "id": "thousand-sons",
+      "name": {
+        "en": "Thousand Sons",
+        "es": "Mil Hijos"
+      },
+      "edition": "11th",
+      "alliance": "chaos",
+      "path": "thousand-sons",
+      "color": "#1f5f8b",
+      "group": "chaos-space-marines",
+      "units": 28,
+      "detachments": 9
+    },
+    {
+      "id": "world-eaters",
+      "name": {
+        "en": "World Eaters",
+        "es": "Devoradores de Mundos"
+      },
+      "edition": "11th",
+      "alliance": "chaos",
+      "path": "world-eaters",
+      "color": "#b02a1e",
+      "group": "chaos-space-marines",
+      "units": 25,
+      "detachments": 8
+    },
+    {
+      "id": "emperors-children",
+      "name": {
+        "en": "Emperor’s Children",
+        "es": "Hijos del Emperador"
+      },
+      "edition": "11th",
+      "alliance": "chaos",
+      "path": "emperors-children",
+      "color": "#8b3a8b",
+      "group": "chaos-space-marines",
+      "units": 18,
+      "detachments": 10
     }
   ]
 }

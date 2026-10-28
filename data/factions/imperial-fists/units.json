@@ -142,6 +142,10 @@
     "IMPERIUM",
     "TERMINATOR"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "IMPERIAL FISTS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -242,6 +246,10 @@
     "EPIC HERO",
     "GRAVIS",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "IMPERIAL FISTS"
    ],
    "stats": [
     {

@@ -269,6 +269,7 @@ body[data-view=home] { overflow-y: auto; }
 .det-ability b { color: var(--gold-2); font-family: var(--display); text-transform: uppercase; letter-spacing: .04em; }
 .ru-controls select { min-height: 30px; padding: 3px 6px; font-size: 12px; max-width: 100%; }
 .ru-controls select.has-enh { border-color: var(--gold); color: var(--gold-2); }
+.ru-controls select.needs-choice { border-color: var(--red); }
 .ru-actions { display: flex; flex-direction: column; gap: 4px; }
 .loadout { display: flex; flex-wrap: wrap; gap: 4px; }
 .weapon { font-size: 11px; background: #1b1f25; border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; color: #c8ccd2; }

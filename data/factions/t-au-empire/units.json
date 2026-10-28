@@ -41,6 +41,9 @@
     "GRENADES",
     "CADRE FIREBLADE"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -271,6 +274,9 @@
     "BATTLESUIT",
     "COMMANDER FARSIGHT"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -403,6 +409,9 @@
     "CHARACTER",
     "BATTLESUIT",
     "COMMANDER IN COLDSTAR BATTLESUIT"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -1057,6 +1066,9 @@
     "BATTLESUIT",
     "COMMANDER IN ENFORCER BATTLESUIT"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -1683,6 +1695,9 @@
     "BATTLESUIT",
     "COMMANDER SHADOWSUN"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -1880,6 +1895,9 @@
     "MARKERLIGHT",
     "DARKSTRIDER"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -1994,6 +2012,9 @@
     "INFANTRY",
     "CHARACTER",
     "ETHEREAL"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -2237,6 +2258,9 @@
     "MARKERLIGHT",
     "FIRESIGHT TEAM"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2364,6 +2388,9 @@
     "SHAPER",
     "FLESH SHAPER"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -2481,6 +2508,9 @@
     "CHARACTER",
     "KROOT",
     "LONE-SPEAR"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -2697,6 +2727,9 @@
     "SHAPER",
     "TRAIL SHAPER"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -2813,6 +2846,9 @@
     "KROOT",
     "SHAPER",
     "WAR SHAPER"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -3013,6 +3049,9 @@
     "EPIC HERO",
     "BATTLESUIT",
     "THE TWIN LANCE"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -3305,6 +3344,9 @@
     "MARKERLIGHT",
     "FIRE WARRIOR",
     "BREACHER TEAM"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -3600,6 +3642,9 @@
     "MARKERLIGHT",
     "FIRE WARRIOR",
     "STRIKE TEAM"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -3948,6 +3993,9 @@
     "KROOT",
     "CARNIVORES"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -4192,6 +4240,9 @@
     "KROOT",
     "GRENADES",
     "FARSTALKERS"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -4547,6 +4598,9 @@
     "KROOT",
     "HOUNDS"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -4638,6 +4692,9 @@
     "GRENADES",
     "MARKERLIGHT",
     "PATHFINDER TEAM"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -5144,6 +5201,9 @@
     "MARKERLIGHT",
     "STEALTH"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -5496,6 +5556,9 @@
     "FLY",
     "VESPID STINGWINGS"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -5810,6 +5873,9 @@
     "KROOT",
     "KROOTOX RAMPAGERS"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -5942,6 +6008,9 @@
     "GRENADES",
     "KROOT",
     "KROOTOX RIDERS"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -6140,6 +6209,9 @@
     "WALKER",
     "BATTLESUIT",
     "BROADSIDE"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -6614,6 +6686,9 @@
     "CRISIS",
     "FIREKNIFE"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -6928,6 +7003,9 @@
     "BATTLESUIT",
     "CRISIS",
     "STARSCYTHE"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -7247,6 +7325,9 @@
     "CRISIS",
     "SUNFORGE"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -7466,6 +7547,9 @@
     "SMOKE",
     "BATTLESUIT",
     "GHOSTKEEL"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -7798,6 +7882,9 @@
     "FLY",
     "FRAME",
     "HAMMERHEAD GUNSHIP"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -8143,6 +8230,9 @@
     "FRAME",
     "PIRANHAS"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -8390,6 +8480,9 @@
     "FLY",
     "BATTLESUIT",
     "RIPTIDE"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -8763,6 +8856,9 @@
     "MARKERLIGHT",
     "SKY RAY GUNSHIP"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -8990,6 +9086,9 @@
     "TRANSPORT",
     "DEDICATED TRANSPORT",
     "DEVILFISH"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -9220,6 +9319,9 @@
     "FRAME",
     "RAZORSHARK STRIKE FIGHTER"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "-",
@@ -9442,6 +9544,9 @@
     "FLY",
     "FRAME",
     "SUN SHARK BOMBER"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -9667,6 +9772,9 @@
     "TITANIC",
     "TOWERING",
     "STORMSURGE"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {
@@ -10053,6 +10161,9 @@
     "FRAME",
     "TIDEWALL DRONEPORT"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "4\"",
@@ -10155,6 +10266,9 @@
     "FRAME",
     "TIDEWALL GUNRIG"
    ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
+   ],
    "stats": [
     {
      "M": "4\"",
@@ -10248,6 +10362,9 @@
     "FRAME",
     "FLY",
     "TIDEWALL SHIELDLINE"
+   ],
+   "factionKeywords": [
+    "T’AU EMPIRE"
    ],
    "stats": [
     {

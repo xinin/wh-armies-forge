@@ -169,10 +169,10 @@ def faction_wargear(faction_page):
 
 
 def faction_keywords(page):
-    """FACTION KEYWORDS of a datasheet page: {'ADEPTUS ASTARTES', 'SPACE WOLVES'}"""
+    """FACTION KEYWORDS of a datasheet page, in order: ['ADEPTUS ASTARTES', 'SPACE WOLVES']"""
     i = page.find('<div class="dsRight', page.find('<div class="ds2colKWFlat'))
     t = text(page[i:page.find('</div>', page.find('FACTION KEYWORDS', i))]).replace('FACTION KEYWORDS:', '')
-    return {k.strip().upper() for k in re.split(r'[;,\n]', t) if k.strip()}
+    return list(dict.fromkeys(k.strip().upper() for k in re.split(r'[;,\n]', t) if k.strip()))
 
 
 def parse(page, ds_slug):
@@ -263,7 +263,7 @@ def parse(page, ds_slug):
     keywords = list(dict.fromkeys(k.strip().upper() for line in kw_lines for k in re.split(r'[;,]', line) if k.strip()))
 
     unit = {
-        'id': slug(name), 'name': {'en': name}, 'keywords': keywords, 'stats': stats,
+        'id': slug(name), 'name': {'en': name}, 'keywords': keywords, 'factionKeywords': faction_keywords(page), 'stats': stats,
         'weapons': list(weapons.values()), 'abilities': named,
         'core': core, 'factionAbilities': faction, 'source': f'wahapedia.ru/wh40k11ed/factions/.../{ds_slug}',
     }
@@ -288,13 +288,20 @@ def parse(page, ds_slug):
         if bg: unit['bodyguard'] = bg
     if transport: unit['transport'] = {'en': transport}
     # "DAEMONIC ALLEGIANCE: … you must select one of the keywords below. Until the end of the battle, this model has
-    # that keyword and the additional wargear stated for that keyword": a required choice (tools/wargear.py)
+    # that keyword and the additional wargear stated for that keyword": a required choice (tools/wargear.py). The
+    # choices give wargear ("KHORNE – This model is additionally equipped with: …") or an effect ("Khorne: Add 2 to
+    # the Strength characteristic of this model's hellforged weapons.")
     choice = next(((k, v) for k, v in sec.items() if 'must select one of the keywords below' in v), None)
     if choice:
-        opts = re.findall(r'^([A-Z][A-Z’\' ]+?)\s+–\s+This model is additionally equipped with:\s*(.+?)\.?$', text(choice[1]), re.M)
+        body = text(choice[1])
+        opts = [{'keyword': k.strip(), 'equipment': e.strip()}
+                for k, e in re.findall(r'^([A-Z][A-Z’\' ]+?)\s+–\s+This model is additionally equipped with:\s*(.+?)\.?$', body, re.M)]
+        if not opts:
+            opts = [{'keyword': k.strip().upper(), 'effect': {'en': e.strip()}}
+                    for k, e in re.findall(r'(?:^|(?<=\. ))([A-Z][a-z’\']+(?: [A-Z][a-z’\']+)*): (.+?\.)(?= [A-Z][a-z’\']+(?: [A-Z][a-z’\']+)*: |\s*$)',
+                                           body.split('keywords below.', 1)[-1].split('stated for that keyword below.', 1)[-1].strip(), re.M)]
         if opts:
-            unit['keywordChoice'] = {'name': {'en': choice[0].title()},
-                                     'options': [{'keyword': k.strip(), 'equipment': e.strip()} for k, e in opts]}
+            unit['keywordChoice'] = {'name': {'en': choice[0].title()}, 'options': opts}
     if lead_key == 'SUPPORT' and leader_targets: unit['leader'] = {'support': True}
     leader_targets = [(t, t in legends_targets) for t in leader_targets]
     return unit, leader_targets, costs, extra, gear_costs
@@ -347,7 +354,7 @@ def main():
             pages[ds] = fetch(f'{BASE}/{source}/{ds}')
             if '<div class="dsOuterFrame datasheet' not in pages[ds]:
                 continue  # not a datasheet page
-            tags.setdefault(scope.classify(source_tag(pages[ds]), faction_keywords(pages[ds])), []).append(ds)
+            tags.setdefault(scope.classify(source_tag(pages[ds]), set(faction_keywords(pages[ds]))), []).append(ds)
         for tag, names in tags.items():
             print(f'{tag.upper()} ({len(names)}): {", ".join(names)}')
         if args.list:

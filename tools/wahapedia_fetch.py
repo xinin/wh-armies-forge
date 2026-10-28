@@ -4,6 +4,7 @@ Set REFRESH = True (the importers' --refresh flag) to ignore the cache, e.g. aft
 """
 import re
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -18,7 +19,14 @@ def fetch(url):
     if path.exists() and not REFRESH:
         return path.read_text(encoding='utf-8')
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (army-forge importer)'})
-    html = urllib.request.urlopen(req).read().decode('utf-8')
+    for attempt in range(4):  # the site sometimes stops answering for a while: wait and try again
+        try:
+            html = urllib.request.urlopen(req, timeout=60).read().decode('utf-8')
+            break
+        except (urllib.error.URLError, TimeoutError) as e:
+            if attempt == 3 or getattr(e, 'code', None) == 404:
+                raise
+            time.sleep(15 * (attempt + 1))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(html, encoding='utf-8')
     time.sleep(0.5)  # be gentle with Wahapedia

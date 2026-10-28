@@ -1,0 +1,565 @@
+{
+ "id": "world-eaters",
+ "name": {
+  "en": "World Eaters",
+  "es": "Devoradores de Mundos"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/world-eaters/",
+ "armyRule": {
+  "name": {
+   "en": "Pact of Blood"
+  },
+  "text": {
+   "en": "When mustering your army, unless specifically stated otherwise, you cannot select BLOOD LEGIONS as your Army Faction."
+  }
+ },
+ "extraRules": [
+  {
+   "name": {
+    "en": "Blessings of Khorne"
+   },
+   "text": {
+    "en": "If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\nExample: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1,2, 2, 2, 3, 4. They then use the two 2s to activate Unbridled Bloodlust. Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded."
+   },
+   "items": [
+    {
+     "name": {
+      "en": "UNBRIDLED BLOODLUST"
+     },
+     "text": {
+      "en": "This unit has +1 to charge rolls"
+     }
+    },
+    {
+     "name": {
+      "en": "RAGE-FUELLED INVIGORATION"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\"."
+     }
+    },
+    {
+     "name": {
+      "en": "TOTAL CARNAGE"
+     },
+     "text": {
+      "en": "Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+     }
+    },
+    {
+     "name": {
+      "en": "MARTIAL EXCELLENCE"
+     },
+     "text": {
+      "en": "Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "WARP BLADES"
+     },
+     "text": {
+      "en": "Melee weapons equipped by models in this unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "DECAPITATING STRIKES"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability."
+     }
+    }
+   ]
+  }
+ ],
+ "wahapedia": {
+  "faction": "world-eaters",
+  "otherFactions": [
+   "BLOOD LEGIONS"
+  ]
+ },
+ "detachments": [
+  {
+   "id": "cult-of-blood",
+   "cost": 2,
+   "name": {
+    "en": "Cult of Blood"
+   },
+   "rule": {
+    "name": {
+     "en": "Idols of Khorne"
+    },
+    "text": {
+     "en": "At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below. Until the start of your next Command phase, that ability is active and its effects apply to all WORLD EATERS TITANIC and WORLD EATERS MONSTER units from your army. You can only select each Idols of Khorne ability once…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "chosen-of-the-blood-god",
+     "requires": [
+      [
+       "MONSTER"
+      ]
+     ],
+     "name": {
+      "en": "Chosen of the Blood God"
+     },
+     "text": {
+      "en": "WORLD EATERS MONSTER model only. Add 3\" to the range of the bearers Aura abilities."
+     }
+    },
+    {
+     "id": "butcher-lord",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Butcher Lord"
+     },
+     "text": {
+      "en": "WORLD EATERS INFANTRY model only. The bearer has the Infiltrators ability."
+     },
+     "grantsLead": [
+      "goremongers",
+      "jakhals"
+     ]
+    },
+    {
+     "id": "brazen-form",
+     "requires": [
+      [
+       "MONSTER"
+      ]
+     ],
+     "name": {
+      "en": "Brazen Form"
+     },
+     "text": {
+      "en": "WORLD EATERS MONSTER model only. Add 1 to the bearer’s Toughness characteristic and the bearer has the Feel No Pain 5+ ability."
+     }
+    },
+    {
+     "id": "strategic-slaughter",
+     "requires": [],
+     "name": {
+      "en": "Strategic Slaughter"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. After both players have deployed their armies, select up to three JAKHALS and/or GOREMONGERS units from your army and redeploy them. When doing so, you can set those units up…"
+     }
+    }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BATTLELINE",
+     "units": [
+      [
+       "JAKHALS"
+      ],
+      [
+       "GOREMONGERS"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "berzerker-warband",
+   "cost": 2,
+   "name": {
+    "en": "Berzerker Warband"
+   },
+   "rule": {
+    "name": {
+     "en": "Relentless Rage"
+    },
+    "text": {
+     "en": "Friendly WORLD EATERS units’ melee attacks have +1 A."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "berzerker-glaive",
+     "requires": [],
+     "name": {
+      "en": "Berzerker Glaive"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer."
+     }
+    },
+    {
+     "id": "helm-of-brazen-ire",
+     "requires": [],
+     "name": {
+      "en": "Helm of Brazen Ire"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
+     }
+    },
+    {
+     "id": "favoured-of-khorne",
+     "requires": [],
+     "name": {
+      "en": "Favoured of Khorne"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. Each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll up to two of the D6 rolled."
+     }
+    },
+    {
+     "id": "battle-lust",
+     "requires": [],
+     "name": {
+      "en": "Battle-lust"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "possessed-slaughterband",
+   "cost": 2,
+   "name": {
+    "en": "Possessed Slaughterband"
+   },
+   "rule": {
+    "name": {
+     "en": "Brazen Fury"
+    },
+    "text": {
+     "en": "WORLD EATERS POSSESSED units from your army have the following ability: Brazen Fury: In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6\". That surge move is a Brazen Fury move."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "malicious-vigour",
+     "requires": [
+      [
+       "SLAUGHTERBOUND"
+      ]
+     ],
+     "name": {
+      "en": "Malicious Vigour"
+     },
+     "text": {
+      "en": "SLAUGHTERBOUND model only. Each time the bearer’s unit makes a Brazen Fury move, it is treated as having rolled a 6 for the distance the unit can be moved."
+     }
+    },
+    {
+     "id": "killing-clarity",
+     "requires": [
+      [
+       "DAEMON"
+      ]
+     ],
+     "name": {
+      "en": "Killing Clarity"
+     },
+     "text": {
+      "en": "WORLD EATERS DAEMON model only. Each time the bearer’s unit destroys an enemy unit, roll one D6: on a 4+, you gain 1CP."
+     }
+    },
+    {
+     "id": "frenzied-focus",
+     "requires": [
+      [
+       "DAEMON"
+      ]
+     ],
+     "name": {
+      "en": "Frenzied Focus"
+     },
+     "text": {
+      "en": "WORLD EATERS DAEMON model only. Each time a model in the bearer’s unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6."
+     }
+    },
+    {
+     "id": "violent-demise",
+     "requires": [
+      [
+       "DAEMON"
+      ]
+     ],
+     "name": {
+      "en": "Violent Demise"
+     },
+     "text": {
+      "en": "WORLD EATERS DAEMON model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, the bearer has the Deadly Demise D3+1 ability, instead of…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "khorne-daemonkin",
+   "cost": 2,
+   "name": {
+    "en": "Khorne Daemonkin"
+   },
+   "rule": {
+    "name": {
+     "en": "Blood Tithe"
+    },
+    "text": {
+     "en": "Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle: Enraged Abjuration [2BTP]…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "icon-of-war",
+     "requires": [],
+     "name": {
+      "en": "Icon of War"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. While a friendly BLOOD LEGIONS unit is within 6\" of the bearer, that unit has the Blessings of Khorne ability. If the Might of Khorne ability is active for your army, then…"
+     }
+    },
+    {
+     "id": "blood-forged-armour",
+     "requires": [],
+     "name": {
+      "en": "Blood-forged Armour"
+     },
+     "text": {
+      "en": "BLOOD LEGIONS or WORLD EATERS model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point."
+     }
+    },
+    {
+     "id": "disciple-of-khorne",
+     "requires": [
+      [
+       "LORD",
+       "ON",
+       "JUGGERNAUT"
+      ]
+     ],
+     "name": {
+      "en": "Disciple of Khorne"
+     },
+     "text": {
+      "en": "LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword."
+     },
+     "grantsLead": [
+      "flesh-hounds",
+      "bloodcrushers"
+     ]
+    },
+    {
+     "id": "blade-of-endless-bloodshed",
+     "requires": [],
+     "name": {
+      "en": "Blade of Endless Bloodshed"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearers melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "goretrack-onslaught",
+   "cost": 2,
+   "name": {
+    "en": "Goretrack Onslaught"
+   },
+   "rule": {
+    "name": {
+     "en": "Rush to the Fray"
+    },
+    "text": {
+     "en": "Each time a WORLD EATERS unit from your army disembarks from a TRANSPORT, until the end of the turn, add 1 to Charge rolls made for that unit and that unit’s melee weapons have the [lance] ability."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "murderous-onslaught",
+     "requires": [],
+     "name": {
+      "en": "Murderous Onslaught"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. If the bearer’s unit disembarked from a TRANSPORT this turn, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
+     }
+    },
+    {
+     "id": "aggressive-deployment",
+     "requires": [],
+     "name": {
+      "en": "Aggressive Deployment"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a DEDICATED TRANSPORT, that DEDICATED TRANSPORT has the Scouts 9\" ability."
+     }
+    },
+    {
+     "id": "unleash-hell",
+     "requires": [],
+     "name": {
+      "en": "Unleash Hell"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. At the start of your Shooting phase, you can select one VEHICLE model within 6\" of the bearer or, if the bearer is embarked within a TRANSPORT, you can select that TRANSPORT…"
+     }
+    },
+    {
+     "id": "infernal-infusion",
+     "requires": [],
+     "name": {
+      "en": "Infernal Infusion"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer’s unit has the Fights First ability."
+     }
+    }
+   ]
+  },
+  {
+   "id": "brazen-engines",
+   "cost": 1,
+   "tags": [
+    "ONSLAUGHT"
+   ],
+   "name": {
+    "en": "Brazen Engines"
+   },
+   "rule": {
+    "name": {
+     "en": "Rampaging Terrors"
+    },
+    "text": {
+     "en": "Friendly DAEMON VEHICLE units have the following ability: Terror of Khorne: At the start of the Fight phase, you can select one enemy unit engaged with this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll. You cannot select the same enemy unit for this effect more than once per…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "talons-of-butchery",
+     "requires": [
+      [
+       "MAULERFIEND"
+      ]
+     ],
+     "name": {
+      "en": "Talons of Butchery"
+     },
+     "text": {
+      "en": "MAULERFIEND unit only. This unit’s Maulerfiend Fists have [CLEAVE 2]."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "murder-forged-entity",
+     "requires": [
+      [
+       "VEHICLE"
+      ]
+     ],
+     "name": {
+      "en": "Murder-Forged Entity"
+     },
+     "text": {
+      "en": "WORLD EATERS VEHICLE unit only. This unit has DAEMON"
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "vessels-of-wrath",
+   "cost": 1,
+   "name": {
+    "en": "Vessels of Wrath"
+   },
+   "rule": {
+    "name": {
+     "en": "Wrath of Khorne"
+    },
+    "text": {
+     "en": "When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have: [CLEAVE 1]. Or: +1 AP."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "archslaughterer",
+     "requires": [],
+     "name": {
+      "en": "Archslaughterer"
+     },
+     "text": {
+      "en": "WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn."
+     }
+    },
+    {
+     "id": "gateways-to-glory",
+     "requires": [
+      [
+       "DAEMON",
+       "PRINCE"
+      ]
+     ],
+     "name": {
+      "en": "Gateways to Glory"
+     },
+     "text": {
+      "en": "WORLD EATERS DAEMON PRINCE model only. This model has: MOBILE. +1 to charge rolls."
+     }
+    }
+   ]
+  },
+  {
+   "id": "butchers-of-khorne",
+   "cost": 1,
+   "name": {
+    "en": "Butchers of Khorne"
+   },
+   "rule": {
+    "name": {
+     "en": "Adamantine Avalanche"
+    },
+    "text": {
+     "en": "At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the phase, that Blessing of Khorne is active for friendly TERMINATOR SQUAD units in addition to any other Blessings of Khorne that…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "sanctified-in-slaughter",
+     "requires": [
+      [
+       "TERMINATOR",
+       "SQUAD"
+      ]
+     ],
+     "name": {
+      "en": "Sanctified in Slaughter"
+     },
+     "text": {
+      "en": "TERMINATOR SQUAD unit only. This unit has +1 OC."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "gore-stained-veterans",
+     "requires": [
+      [
+       "TERMINATOR",
+       "SQUAD"
+      ]
+     ],
+     "name": {
+      "en": "Gore-Stained Veterans"
+     },
+     "text": {
+      "en": "TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS."
+     },
+     "type": "upgrade"
+    }
+   ]
+  }
+ ]
+}

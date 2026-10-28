@@ -1,0 +1,790 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-28",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/",
+ "verified": [
+  "all-enhancements",
+  "abaddon-the-despoiler",
+  "accursed-cultists",
+  "chaos-bikers",
+  "chaos-land-raider",
+  "chaos-lord",
+  "chaos-lord-in-terminator-armour",
+  "chaos-lord-with-jump-pack",
+  "chaos-predator-annihilator",
+  "chaos-predator-destructor",
+  "chaos-rhino",
+  "chaos-spawn",
+  "chaos-terminator-squad",
+  "chaos-vindicator",
+  "chosen",
+  "cultist-firebrand",
+  "cultist-mob",
+  "cypher",
+  "dark-apostle",
+  "dark-commune",
+  "defiler",
+  "fabius-bile",
+  "fellgor-beastmen",
+  "forgefiend",
+  "haarken-worldclaimer",
+  "havocs",
+  "helbrute",
+  "heldrake",
+  "heretic-astartes-daemon-prince",
+  "heretic-astartes-daemon-prince-with-wings",
+  "huron-blackheart",
+  "khorne-berzerkers",
+  "khorne-lord-of-skulls",
+  "kravek-morne",
+  "legionaries",
+  "lord-discordant-on-helstalker",
+  "master-of-executions",
+  "master-of-possession",
+  "masters-of-the-maelstrom",
+  "maulerfiend",
+  "mutilators",
+  "nemesis-claw",
+  "noctilith-crown",
+  "noise-marines",
+  "obliterators",
+  "plague-marines",
+  "possessed",
+  "raptors",
+  "red-corsairs-raiders",
+  "red-corsairs-reave-captain",
+  "rubric-marines",
+  "sorcerer",
+  "sorcerer-in-terminator-armour",
+  "traitor-enforcer",
+  "traitor-guardsmen-squad",
+  "vashtorr-the-arkifane",
+  "venomcrawler",
+  "warp-talons",
+  "warpsmith"
+ ],
+ "units": {
+  "abaddon-the-despoiler": [
+   {
+    "models": 1,
+    "points": 300
+   }
+  ],
+  "accursed-cultists": [
+   {
+    "models": 8,
+    "points": 90
+   },
+   {
+    "models": 16,
+    "points": 185
+   }
+  ],
+  "chaos-bikers": [
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 150
+   }
+  ],
+  "chaos-land-raider": [
+   {
+    "models": 1,
+    "points": 220
+   }
+  ],
+  "chaos-lord": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "chaos-lord-in-terminator-armour": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "chaos-lord-with-jump-pack": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "chaos-predator-annihilator": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "chaos-predator-destructor": [
+   {
+    "models": 1,
+    "points": 145
+   }
+  ],
+  "chaos-rhino": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "chaos-spawn": [
+   {
+    "models": 2,
+    "points": 60
+   }
+  ],
+  "chaos-terminator-squad": [
+   {
+    "models": 5,
+    "points": 185
+   },
+   {
+    "models": 10,
+    "points": 370
+   }
+  ],
+  "chaos-vindicator": [
+   {
+    "models": 1,
+    "points": 180
+   }
+  ],
+  "chosen": [
+   {
+    "models": 5,
+    "points": 140
+   },
+   {
+    "models": 10,
+    "points": 280
+   }
+  ],
+  "cultist-firebrand": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "cultist-mob": [
+   {
+    "models": 10,
+    "points": 50
+   },
+   {
+    "models": 20,
+    "points": 90
+   }
+  ],
+  "cypher": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "dark-apostle": [
+   {
+    "models": 3,
+    "points": 70
+   }
+  ],
+  "dark-commune": [
+   {
+    "models": 5,
+    "points": 90
+   }
+  ],
+  "defiler": [
+   {
+    "models": 1,
+    "points": 300
+   }
+  ],
+  "fabius-bile": [
+   {
+    "models": 2,
+    "points": 110
+   }
+  ],
+  "fellgor-beastmen": [
+   {
+    "models": 10,
+    "points": 60
+   }
+  ],
+  "forgefiend": [
+   {
+    "models": 1,
+    "points": 155
+   }
+  ],
+  "haarken-worldclaimer": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "havocs": [
+   {
+    "models": 5,
+    "points": 135
+   }
+  ],
+  "helbrute": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "heldrake": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "heretic-astartes-daemon-prince": [
+   {
+    "models": 1,
+    "points": 155
+   }
+  ],
+  "heretic-astartes-daemon-prince-with-wings": [
+   {
+    "models": 1,
+    "points": 170
+   }
+  ],
+  "huron-blackheart": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "khorne-berzerkers": [
+   {
+    "models": 10,
+    "points": 170
+   },
+   {
+    "models": 20,
+    "points": 330
+   }
+  ],
+  "khorne-lord-of-skulls": [
+   {
+    "models": 1,
+    "points": 450
+   }
+  ],
+  "kravek-morne": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "legionaries": [
+   {
+    "models": 5,
+    "points": 95
+   },
+   {
+    "models": 10,
+    "points": 180
+   }
+  ],
+  "lord-discordant-on-helstalker": [
+   {
+    "models": 1,
+    "points": 155
+   }
+  ],
+  "master-of-executions": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "master-of-possession": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "masters-of-the-maelstrom": [
+   {
+    "models": 5,
+    "points": 150
+   }
+  ],
+  "maulerfiend": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "mutilators": [
+   {
+    "models": 3,
+    "points": 165
+   }
+  ],
+  "nemesis-claw": [
+   {
+    "models": 5,
+    "points": 105
+   },
+   {
+    "models": 10,
+    "points": 190
+   }
+  ],
+  "noctilith-crown": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "noise-marines": [
+   {
+    "models": 6,
+    "points": 160
+   }
+  ],
+  "obliterators": [
+   {
+    "models": 2,
+    "points": 160
+   }
+  ],
+  "plague-marines": [
+   {
+    "models": 5,
+    "points": 90
+   },
+   {
+    "models": 7,
+    "points": 125
+   },
+   {
+    "models": 10,
+    "points": 175
+   }
+  ],
+  "possessed": [
+   {
+    "models": 5,
+    "points": 130
+   },
+   {
+    "models": 10,
+    "points": 260
+   }
+  ],
+  "raptors": [
+   {
+    "models": 5,
+    "points": 115
+   },
+   {
+    "models": 10,
+    "points": 225
+   }
+  ],
+  "red-corsairs-raiders": [
+   {
+    "models": 5,
+    "points": 120
+   },
+   {
+    "models": 10,
+    "points": 220
+   }
+  ],
+  "red-corsairs-reave-captain": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "rubric-marines": [
+   {
+    "models": 5,
+    "points": 115
+   },
+   {
+    "models": 10,
+    "points": 210
+   }
+  ],
+  "sorcerer": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "sorcerer-in-terminator-armour": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "traitor-enforcer": [
+   {
+    "models": 2,
+    "points": 70
+   }
+  ],
+  "traitor-guardsmen-squad": [
+   {
+    "models": 10,
+    "points": 65
+   }
+  ],
+  "vashtorr-the-arkifane": [
+   {
+    "models": 1,
+    "points": 220
+   }
+  ],
+  "venomcrawler": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "warp-talons": [
+   {
+    "models": 5,
+    "points": 130
+   },
+   {
+    "models": 10,
+    "points": 290
+   }
+  ],
+  "warpsmith": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ]
+ },
+ "enhancements": {
+  "eye-of-tzeentch": 15,
+  "intoxicating-elixir": 15,
+  "orbs-of-unlife": 15,
+  "talisman-of-burning-blood": 15,
+  "voice-of-the-tyrant": 25,
+  "raid-leader": 20,
+  "dread-reputation": 25,
+  "eager-for-bloodshed": 30,
+  "despots-claim": 15,
+  "dread-reaver": 15,
+  "mark-of-the-hound": 25,
+  "tyrants-lash": 20,
+  "surgical-precision": 10,
+  "living-carapace": 15,
+  "helm-of-all-seeing": 25,
+  "prime-test-subject": 35,
+  "cursed-fang": 10,
+  "falsehood": 10,
+  "shroud-of-obfuscation": 15,
+  "soul-link": 5,
+  "eater-of-dread": 15,
+  "nights-shroud": 10,
+  "warp-fuelled-thrusters": 20,
+  "willbreaker": 10,
+  "greyveil-hex": 25,
+  "warp-fuelled-thrusters-nightmare-hunt": 20,
+  "terrorglut-parasite": 20,
+  "sorrowscent-vulture": 35,
+  "infernal-fulgurite": 20,
+  "eye-of-the-warp": 15,
+  "akshurs-binding-runes": 20,
+  "tzagulla": 25,
+  "amulet-of-tainted-vigour": 20,
+  "cultists-brand": 30,
+  "incendiary-goad": 25,
+  "warped-foresight": 10,
+  "wyredjinn": 25,
+  "cybinfernal-font": 20,
+  "mark-of-the-soul-forges": 20,
+  "crown-of-worms": 15,
+  "weaponised-hatred": 35,
+  "eyes-of-the-hunter": 15,
+  "fratricidal-trophies": 5,
+  "empyric-symbiote": 15,
+  "bastion-plate": 10,
+  "iron-artifice": 10,
+  "ironbound-enmity": 15,
+  "warp-tracer": 20,
+  "forges-blessing": 20,
+  "invigorated-mechatendrils": 15,
+  "tempting-addendum": 40,
+  "soul-harvester": 15,
+  "eager-for-vengeance": 20,
+  "eye-of-abaddon": 15,
+  "mark-of-legend": 10,
+  "warmasters-gift": 15,
+  "touched-by-the-warp": 10,
+  "conduit-of-chaos": 20,
+  "pact-of-destruction": 15,
+  "eye-of-oblivion": 20,
+  "shadowcowl-talisman": 20,
+  "pact-of-cursed-pinions": 20
+ },
+ "unitsExtraCopies": {
+  "accursed-cultists": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 8,
+     "points": 110
+    },
+    {
+     "models": 16,
+     "points": 205
+    }
+   ]
+  },
+  "chaos-land-raider": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 240
+    }
+   ]
+  },
+  "chaos-predator-annihilator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 150
+    }
+   ]
+  },
+  "chaos-predator-destructor": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 155
+    }
+   ]
+  },
+  "chaos-rhino": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 75
+    }
+   ]
+  },
+  "chaos-terminator-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 215
+    },
+    {
+     "models": 10,
+     "points": 400
+    }
+   ]
+  },
+  "chaos-vindicator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 190
+    }
+   ]
+  },
+  "chosen": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 150
+    },
+    {
+     "models": 10,
+     "points": 290
+    }
+   ]
+  },
+  "cultist-firebrand": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 50
+    }
+   ]
+  },
+  "dark-commune": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 100
+    }
+   ]
+  },
+  "defiler": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 350
+    }
+   ]
+  },
+  "forgefiend": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 165
+    }
+   ]
+  },
+  "havocs": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 145
+    }
+   ]
+  },
+  "khorne-lord-of-skulls": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 475
+    }
+   ]
+  },
+  "mutilators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 185
+    }
+   ]
+  },
+  "noise-marines": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 6,
+     "points": 175
+    }
+   ]
+  },
+  "obliterators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 2,
+     "points": 170
+    }
+   ]
+  },
+  "possessed": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 150
+    },
+    {
+     "models": 10,
+     "points": 280
+    }
+   ]
+  },
+  "raptors": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 125
+    },
+    {
+     "models": 10,
+     "points": 235
+    }
+   ]
+  },
+  "red-corsairs-raiders": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 130
+    },
+    {
+     "models": 10,
+     "points": 230
+    }
+   ]
+  },
+  "rubric-marines": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 125
+    },
+    {
+     "models": 10,
+     "points": 220
+    }
+   ]
+  },
+  "venomcrawler": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 130
+    }
+   ]
+  },
+  "warp-talons": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 140
+    },
+    {
+     "models": 10,
+     "points": 300
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "defiler": {
+   "hades-lascannon": 15,
+   "heavy-reaper-autocannon": 15
+  },
+  "forgefiend": {
+   "ectoplasma-cannon": 5
+  }
+ }
+}

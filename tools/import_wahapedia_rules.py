@@ -45,7 +45,7 @@ def section_at(sec, pos):
 def rule_lines(rule_html):
     """Detachment rule lines without the "Detachment Rule" heading and the "If your Army Faction is X, you can use
     this … Detachment rule." preamble: the first line is the rule's name."""
-    lines = clean(strip_fluff(rule_html)).split('\n')[1:]
+    lines = strip_errata(clean(strip_fluff(rule_html))).split('\n')[1:]
     return lines[1:] if lines and re.match(r'^If your Army Faction is .*Detachment rule\.?$', lines[0]) else lines
 
 
@@ -90,8 +90,12 @@ def clean(x):
     return re.sub(r'\s*\n\s*', '\n', x).strip()
 
 
+# the "Errata" / "FAQ" / "FAQ / Errata" box after a rule (Wahapedia folds it behind a "Show" link)
+ERRATA = r'(?:^|\n)(?:Errata|FAQ)(?: / (?:Errata|FAQ))?(?:\n|$)'
+
+
 def strip_errata(x):
-    return re.split(r'\n(?:Errata|FAQ)\n', x)[0].strip()
+    return re.split(ERRATA, x)[0].strip()
 
 
 def strip_fluff(x):

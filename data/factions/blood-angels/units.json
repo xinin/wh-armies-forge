@@ -132,6 +132,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -230,6 +234,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {
@@ -490,6 +498,9 @@
     "IMPERIUM",
     "JUMP PACK",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -888,6 +899,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -1015,6 +1029,9 @@
     "JUMP PACK",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -1137,6 +1154,10 @@
     "PSYKER",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {
@@ -1314,6 +1335,10 @@
     "TACTICUS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -1439,6 +1464,10 @@
     "DEATH COMPANY",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {
@@ -1705,6 +1734,10 @@
     "DEATH COMPANY",
     "FLY",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {
@@ -2131,6 +2164,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -2251,6 +2288,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {
@@ -2377,6 +2418,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -2469,6 +2514,10 @@
     "DEATH COMPANY",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {
@@ -3047,6 +3096,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -3521,6 +3574,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -3700,6 +3757,10 @@
     "FRAME",
     "IMPERIUM",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {
@@ -4043,6 +4104,10 @@
     "DREADNOUGHT",
     "DEATH COMPANY",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "BLOOD ANGELS"
    ],
    "stats": [
     {

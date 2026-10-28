@@ -146,6 +146,10 @@
     "SMOKE",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "RAVEN GUARD"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -266,6 +270,10 @@
     "JUMP PACK",
     "PHOBOS",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "RAVEN GUARD"
    ],
    "stats": [
     {

@@ -55,13 +55,14 @@ class PageScope:
         """core / legends / fw → 'other factions' for a core datasheet of a faction in other_factions."""
         return 'other factions' if tag == 'core' and faction_keywords & set(self.other_factions) else tag
 
-    def faction_words(self, name):
-        """Faction keywords dropped from requirements ("ASTRA MILITARUM INFANTRY model only" → INFANTRY)."""
-        return set(name.upper().split())
+    def faction_keywords(self, name):
+        """Faction keywords (whole phrases) dropped from requirements ("ASTRA MILITARUM INFANTRY model only" →
+        INFANTRY); the page's own faction keyword ("If your Army Faction is HERETIC ASTARTES") is added by the caller."""
+        return {name.upper()}
 
-    def config(self):
-        """faction.json → wahapedia (None: nothing to store)."""
-        return Source(self.page, other_factions=self.other_factions) if self.other_factions else None
+    def config(self, faction_id):
+        """faction.json → wahapedia (None: nothing to store: the faction is the page of the same name)."""
+        return Source(self.page, other_factions=self.other_factions) if self.other_factions or self.page != faction_id else None
 
 
 class ChapterBase(PageScope):
@@ -90,10 +91,10 @@ class ChapterBase(PageScope):
             return 'other chapters'
         return super().classify(tag, faction_keywords)
 
-    def faction_words(self, name):
-        return super().faction_words(name) | set(ASTARTES.split())
+    def faction_keywords(self, name):
+        return super().faction_keywords(name) | {ASTARTES}
 
-    def config(self):
+    def config(self, faction_id):
         return Source(self.page, chapter_bit=f'{self.bit:x}', other_factions=self.other_factions)
 
 
@@ -117,7 +118,7 @@ class Chapter(ChapterBase):
     def allowed(self):
         return {ASTARTES, self.chapter}
 
-    def config(self):
+    def config(self, faction_id):
         return Source(self.page, chapter=self.chapter, chapter_bit=f'{self.bit:x}', other_factions=self.other_factions)
 
 

@@ -141,13 +141,18 @@
     },
     {
      "id": "deathwing-assault",
-     "requires": [],
+     "requires": [
+      [
+       "DEATHWING"
+      ]
+     ],
      "name": {
       "en": "Deathwing Assault"
      },
      "text": {
       "en": "DEATHWING model with the Deep Strike ability only. In your first Movement phase, this unit can make an ingress move."
-     }
+     },
+     "requiresAbility": "Deep Strike"
     },
     {
      "id": "ancient-weapons",

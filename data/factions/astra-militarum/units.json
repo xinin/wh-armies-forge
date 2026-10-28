@@ -89,6 +89,9 @@
     "OFFICER",
     "CADIAN CASTELLAN"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -450,6 +453,9 @@
     "COMMAND SQUAD",
     "CHARACTER",
     "OFFICER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -1161,6 +1167,9 @@
     "COMMAND SQUAD",
     "CHARACTER",
     "OFFICER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -1897,6 +1906,9 @@
     "OFFICER",
     "COMMISSAR"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2152,6 +2164,9 @@
     "OFFICER",
     "COMMISSAR GRAVES"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -2346,6 +2361,9 @@
     "OFFICER",
     "COMMISSAR GRAVES ON FOOT"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2471,6 +2489,9 @@
     "IMPERIUM",
     "OFFICER",
     "COMMISSAR YARRICK"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -2662,6 +2683,9 @@
     "CHARACTER",
     "EPIC HERO",
     "OFFICER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -2947,6 +2971,9 @@
     "COMMAND SQUAD",
     "CHARACTER",
     "OFFICER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -3628,6 +3655,9 @@
     "OFFICER",
     "FRAME",
     "LEMAN RUSS COMMANDER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -4323,6 +4353,9 @@
     "OFFICER",
     "LORD MARSHAL DREIR"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -4468,6 +4501,9 @@
     "IMPERIUM",
     "OFFICER",
     "LORD SOLAR LEONTUS"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -4618,6 +4654,9 @@
     "COMMAND SQUAD",
     "CHARACTER",
     "OFFICER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -5256,6 +5295,9 @@
     "IMPERIUM",
     "MINISTORUM PRIEST"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -5462,6 +5504,9 @@
     "OGRYN",
     "NORK DEDDOG"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -5573,6 +5618,9 @@
     "LOYAL PROTECTOR",
     "OGRYN",
     "BODYGUARD"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -5867,6 +5915,9 @@
     "IMPERIUM",
     "PRIMARIS PSYKER"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -6033,6 +6084,9 @@
     "IMPERIUM",
     "OFFICER",
     "ROGAL DORN COMMANDER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -6474,6 +6528,9 @@
     "REGIMENT",
     "SLY MARBO"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -6587,6 +6644,9 @@
     "CHARACTER",
     "IMPERIUM",
     "TECH-PRIEST ENGINSEER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -6738,6 +6798,9 @@
     "OFFICER",
     "URSULA CREED"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -6860,6 +6923,9 @@
     "REGIMENT",
     "PLATOON",
     "CADIAN SHOCK TROOPS"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -7371,6 +7437,9 @@
     "PLATOON",
     "CATACHAN JUNGLE FIGHTERS"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -7612,6 +7681,9 @@
     "REGIMENT",
     "PLATOON",
     "DEATH KORPS OF KRIEG"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -8297,6 +8369,9 @@
     "REGIMENT",
     "ARTILLERY TEAM"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "3\"",
@@ -8544,6 +8619,9 @@
     "OGRYN",
     "BULLGRYN SQUAD"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -8768,6 +8846,9 @@
     "IMPERIUM",
     "REGIMENT",
     "CADIAN HEAVY WEAPONS SQUAD"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -9057,6 +9138,9 @@
     "IMPERIUM",
     "REGIMENT",
     "CADIAN RECON SQUAD"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -9550,6 +9634,9 @@
     "REGIMENT",
     "CATACHAN HEAVY WEAPONS SQUAD"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -9841,6 +9928,9 @@
     "REGIMENT",
     "FIELD ORDNANCE BATTERY"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "3\"",
@@ -10074,6 +10164,9 @@
     "IMPERIUM",
     "REGIMENT",
     "KASRKIN"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -10733,6 +10826,9 @@
     "REGIMENT",
     "KRIEG COMBAT ENGINEERS"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -11264,6 +11360,9 @@
     "REGIMENT",
     "KRIEG HEAVY WEAPONS SQUAD"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "4\"",
@@ -11482,6 +11581,9 @@
     "OGRYN",
     "OGRYN SQUAD"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -11590,6 +11692,9 @@
     "INFANTRY",
     "IMPERIUM",
     "RATLINGS"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -11837,6 +11942,9 @@
     "REGIMENT",
     "MILITARUM TEMPESTUS",
     "TEMPESTUS AQUILONS"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -12480,6 +12588,9 @@
     "MILITARUM TEMPESTUS",
     "TEMPESTUS SCIONS"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -13094,6 +13205,9 @@
     "REGIMENT",
     "ATTILAN ROUGH RIDERS"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -13372,6 +13486,9 @@
     "REGIMENT",
     "DEATH RIDERS"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -13525,6 +13642,9 @@
     "REGIMENT",
     "SQUADRON",
     "ARMOURED SENTINELS"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -13937,6 +14057,9 @@
     "BASILISK",
     "FRAME"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -14174,6 +14297,9 @@
     "DEATHSTRIKE",
     "FRAME"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -14408,6 +14534,9 @@
     "SQUADRON",
     "HELLHOUND",
     "FRAME"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -14763,6 +14892,9 @@
     "SQUADRON",
     "HIPPOGRIFF AFV"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -15073,6 +15205,9 @@
     "HYDRA",
     "FRAME"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -15308,6 +15443,9 @@
     "SQUADRON",
     "FRAME",
     "LEMAN RUSS BATTLE TANK"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -15769,6 +15907,9 @@
     "FRAME",
     "LEMAN RUSS DEMOLISHER"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -16228,6 +16369,9 @@
     "SQUADRON",
     "FRAME",
     "LEMAN RUSS ERADICATOR"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -16689,6 +16833,9 @@
     "SQUADRON",
     "FRAME",
     "LEMAN RUSS EXECUTIONER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -17168,6 +17315,9 @@
     "FRAME",
     "LEMAN RUSS EXTERMINATOR"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -17629,6 +17779,9 @@
     "FRAME",
     "LEMAN RUSS PUNISHER"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -18086,6 +18239,9 @@
     "SQUADRON",
     "FRAME",
     "LEMAN RUSS VANQUISHER"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -18548,6 +18704,9 @@
     "SQUADRON",
     "MANTICORE"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -18784,6 +18943,9 @@
     "SQUADRON",
     "FRAME",
     "ROGAL DORN BATTLE TANK"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -19211,6 +19373,9 @@
     "SQUADRON",
     "SCOUT SENTINELS"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -19623,6 +19788,9 @@
     "SQUADRON",
     "WYVERN"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -19862,6 +20030,9 @@
     "DEDICATED TRANSPORT",
     "CENTAUR RSV"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -19968,6 +20139,9 @@
     "DEDICATED TRANSPORT",
     "CHIMERA",
     "FRAME"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -20349,6 +20523,9 @@
     "DEDICATED TRANSPORT",
     "TAUROX"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -20504,6 +20681,9 @@
     "TRANSPORT",
     "DEDICATED TRANSPORT",
     "TAUROX PRIME"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -20840,6 +21020,9 @@
     "TRANSPORT",
     "VALKYRIE"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -21129,6 +21312,9 @@
     "IMPERIUM",
     "BANEBLADE",
     "FRAME"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -21456,6 +21642,9 @@
     "BANEHAMMER",
     "FRAME"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -21721,6 +21910,9 @@
     "BANESWORD",
     "FRAME"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -21983,6 +22175,9 @@
     "TRANSPORT",
     "DOOMHAMMER",
     "FRAME"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -22249,6 +22444,9 @@
     "IMPERIUM",
     "HELLHAMMER",
     "FRAME"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -22576,6 +22774,9 @@
     "FRAME",
     "SHADOWSWORD"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -22838,6 +23039,9 @@
     "TRANSPORT",
     "FRAME",
     "STORMLORD"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {
@@ -23126,6 +23330,9 @@
     "FRAME",
     "STORMSWORD"
    ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -23385,6 +23592,9 @@
     "IMPERIUM",
     "AEGIS DEFENCE LINE",
     "FRAME"
+   ],
+   "factionKeywords": [
+    "ASTRA MILITARUM"
    ],
    "stats": [
     {

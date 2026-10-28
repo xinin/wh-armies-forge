@@ -58,10 +58,19 @@ class Item(Json):
 
 
 @dataclass
+class PointsCap(Json):
+    """Units an army rule lets the army include, up to some points per battle size ("Cult of the Dark Gods":
+    KHORNE BERZERKERS, … "Incursion: Up to 250 pts")."""
+    units: list[list[str]]
+    max: dict[str, int]             # battle size id → points
+
+
+@dataclass
 class Rule(Json):
     name: Text
     text: Text
     items: list[Item] = opt_list()
+    points_cap: PointsCap = opt()
 
 
 @dataclass
@@ -73,6 +82,7 @@ class Enhancement(Json):
     excludes: list[list[str]] = opt_list()
     grants_lead: list[str] = opt_list()  # datasheet ids the bearer can also be attached to
     type: str = opt()               # "upgrade": for a unit, not a CHARACTER
+    requires_ability: str = opt()   # "… model with the Deep Strike ability only"
 
 
 @dataclass
@@ -102,6 +112,23 @@ class MinUnits(Json):
 
 
 @dataclass
+class ForbiddenChoice(Json):
+    """"You cannot select the KHORNE keyword for a PSYKER unit"."""
+    keyword: str
+    units: list[list[str]]
+
+
+@dataclass
+class UnitKeywordChoice(Json):
+    """Pactbound Zealots "Marks of Chaos": each unit of the army that is not excluded and has none of the keywords
+    must take one of them ("… you must select one for that unit and note it on your Army Roster: KHORNE, …")."""
+    keywords: list[str]
+    excludes: list[list[str]] = opt_list()
+    forbidden: list[ForbiddenChoice] = opt_list()
+    same_for_attached: bool = opt(False)  # a CHARACTER can only be attached to a unit with the same keyword
+
+
+@dataclass
 class Detachment(Json):
     id: str
     cost: int                       # detachment points
@@ -112,6 +139,7 @@ class Detachment(Json):
     unit_abilities: list[UnitAbility] = opt_list()
     keyword_grants: list[KeywordGrant] = opt_list()
     min_units: list[MinUnits] = opt_list()
+    unit_keyword_choice: UnitKeywordChoice = opt()
 
 
 @dataclass

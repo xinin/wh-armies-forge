@@ -13,6 +13,16 @@
    "en": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\nEach time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\nEach time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
   }
  },
+ "extraRules": [
+  {
+   "name": {
+    "en": "Shadow in the Warp"
+   },
+   "text": {
+    "en": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test."
+   }
+  }
+ ],
  "detachments": [
   {
    "id": "invasion-fleet",
@@ -114,7 +124,8 @@
      },
      "text": {
       "en": "TYRANIDS model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of…"
-     }
+     },
+     "requiresAbility": "Deep Strike"
     },
     {
      "id": "trygon-prime",
@@ -441,7 +452,7 @@
      "en": "Insurmountable Odds"
     },
     "text": {
-     "en": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model from a friendly ENDLESS MULTITUDE unit was destroyed as a result of those attacks, that friendly unit can make a surge move of up to D6\". Errata Show Insurmountable Odds Detachment Rule Change to: 'In your opponent’s Shooting phase, when an…"
+     "en": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model from a friendly ENDLESS MULTITUDE unit was destroyed as a result of those attacks, that friendly unit can make a surge move of up to D6\"."
     }
    },
    "enhancements": [

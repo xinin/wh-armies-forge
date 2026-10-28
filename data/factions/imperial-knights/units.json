@@ -29,6 +29,9 @@
     "SKITARII",
     "MARSHAL"
    ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -147,6 +150,9 @@
     "CULT MECHANICUS",
     "TECH-PRIEST",
     "DOMINUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
    ],
    "stats": [
     {
@@ -413,6 +419,9 @@
     "TECH-PRIEST",
     "MANIPULUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -587,6 +596,9 @@
     "IMPERIUM",
     "SKITARII",
     "RANGERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
    ],
    "stats": [
     {
@@ -1041,6 +1053,9 @@
     "SKITARII",
     "VANGUARD"
    ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -1494,6 +1509,9 @@
     "ARMIGER",
     "HELVERIN"
    ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -1681,6 +1699,9 @@
     "IMPERIUM",
     "ARMIGER",
     "WARGLAIVE"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {
@@ -1891,6 +1912,9 @@
     "IMPERIUM",
     "CANIS REX"
    ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -2073,6 +2097,9 @@
     "CHARACTER",
     "IMPERIUM",
     "KNIGHT CASTELLAN"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {
@@ -2350,6 +2377,9 @@
     "CHARACTER",
     "IMPERIUM",
     "KNIGHT CRUSADER"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {
@@ -2767,6 +2797,9 @@
     "IMPERIUM",
     "KNIGHT DEFENDER"
    ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -2976,6 +3009,9 @@
     "CHARACTER",
     "IMPERIUM",
     "KNIGHT DESTRIER"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {
@@ -3320,6 +3356,9 @@
     "CHARACTER",
     "IMPERIUM",
     "KNIGHT ERRANT"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {
@@ -3715,6 +3754,9 @@
     "IMPERIUM",
     "KNIGHT GALLANT"
    ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -4061,6 +4103,9 @@
     "CHARACTER",
     "IMPERIUM",
     "KNIGHT PALADIN"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {
@@ -4457,6 +4502,9 @@
     "CHARACTER",
     "IMPERIUM",
     "KNIGHT PRECEPTOR"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {
@@ -4897,6 +4945,9 @@
     "IMPERIUM",
     "KNIGHT VALIANT"
    ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -5157,6 +5208,9 @@
     "CHARACTER",
     "IMPERIUM",
     "KNIGHT WARDEN"
+   ],
+   "factionKeywords": [
+    "IMPERIAL KNIGHTS"
    ],
    "stats": [
     {

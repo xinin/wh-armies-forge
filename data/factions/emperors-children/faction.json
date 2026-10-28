@@ -1,0 +1,614 @@
+{
+ "id": "emperors-children",
+ "name": {
+  "en": "Emperor’s Children",
+  "es": "Hijos del Emperador"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/",
+ "armyRule": {
+  "name": {
+   "en": "Thrill Seekers"
+  },
+  "text": {
+   "en": "If your Army Faction is EMPEROR’S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\nIt cannot target a unit it was within Engagement Range of at the start of the turn.\nIt cannot target a unit that was the target of another units charge or attack this phase."
+  }
+ },
+ "extraRules": [
+  {
+   "name": {
+    "en": "Pact of Excess"
+   },
+   "text": {
+    "en": "When mustering your army, unless specifically stated otherwise, you cannot select LEGIONS OF EXCESS as your Army Faction."
+   }
+  }
+ ],
+ "wahapedia": {
+  "faction": "emperor-s-children",
+  "otherFactions": [
+   "LEGIONS OF EXCESS"
+  ]
+ },
+ "detachments": [
+  {
+   "id": "carnival-of-excess",
+   "cost": 3,
+   "name": {
+    "en": "Carnival of Excess"
+   },
+   "rule": {
+    "name": {
+     "en": "Daemonic Empowerment"
+    },
+    "text": {
+     "en": "While an EMPEROR’S CHILDREN unit from your army is within 6\" of one or more friendly LEGIONS OF EXCESS units, it is Empowered. While a LEGIONS OF EXCESS unit from your army is within 6\" of one or more friendly EMPEROR’S CHILDREN units, it is Empowered. While a unit from your army is Empowered, weapons equipped by…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "empyric-suffusion",
+     "requires": [],
+     "name": {
+      "en": "Empyric Suffusion"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP."
+     }
+    },
+    {
+     "id": "dark-blessings",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Dark Blessings"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, just after an enemy unit has selected its targets, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer has…"
+     }
+    },
+    {
+     "id": "possessed-blade",
+     "requires": [],
+     "name": {
+      "en": "Possessed Blade"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. At the start of the battle, select one melee weapon equipped by the bearer; add 1 to the Attacks characteristic of that weapon. In addition, each time the bearer is…"
+     }
+    },
+    {
+     "id": "warp-walker",
+     "requires": [],
+     "name": {
+      "en": "Warp Walker"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN or KEEPER OF SECRETS model only. Each time the bearer’s unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "coterie-of-the-conceited",
+   "cost": 3,
+   "name": {
+    "en": "Coterie of the Conceited"
+   },
+   "rule": {
+    "name": {
+     "en": "Pledges to the Dark Prince"
+    },
+    "text": {
+     "en": "At the start of the battle round, if your WARLORD is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "pledge-of-eternal-servitude",
+     "requires": [],
+     "name": {
+      "en": "Pledge of Eternal Servitude"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the…"
+     }
+    },
+    {
+     "id": "pledge-of-dark-glory",
+     "requires": [],
+     "name": {
+      "en": "Pledge of Dark Glory"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1."
+     }
+    },
+    {
+     "id": "pledge-of-mortal-pain",
+     "requires": [],
+     "name": {
+      "en": "Pledge of Mortal Pain"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. That unit must take a Leadership test, subtracting 2 from the result…"
+     }
+    },
+    {
+     "id": "pledge-of-unholy-fortune",
+     "requires": [],
+     "name": {
+      "en": "Pledge of Unholy Fortune"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked, it can use this…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "rapid-evisceration",
+   "cost": 2,
+   "name": {
+    "en": "Rapid Evisceration"
+   },
+   "rule": {
+    "name": {
+     "en": "Mechanised Murder"
+    },
+    "text": {
+     "en": "Each time an EMPEROR’S CHILDREN model from your army makes an attack, if it is a TRANSPORT model or disembarked from a TRANSPORT this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "sublime-prescience",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Sublime Prescience"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly EMPEROR’S CHILDREN TRANSPORT that is in Strategic…"
+     }
+    },
+    {
+     "id": "spearhead-striker",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Spearhead Striker"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT, until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use…"
+     }
+    },
+    {
+     "id": "accomplished-tactician",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Accomplished Tactician"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your opponent’s Shooting phase, just after an enemy unit has shot, you can select one friendly EMPEROR’S CHILDREN unit within 9\" of the…"
+     }
+    },
+    {
+     "id": "heretek-adept",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Heretek Adept"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle round, when a saving throw is failed for a friendly EMPEROR’S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "peerless-bladesmen",
+   "cost": 2,
+   "name": {
+    "en": "Peerless Bladesmen"
+   },
+   "rule": {
+    "name": {
+     "en": "Exquisite Swordsmanship"
+    },
+    "text": {
+     "en": "Each time an EMPEROR’S CHILDREN unit from your army is selected to fight, if it made a Charge move this turn, select one of the abilities below. While resolving those attacks, melee weapons equipped by models in that unit have that ability: [LETHAL HITS] [SUSTAINED HITS 1]"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "faultless-opportunist",
+     "requires": [],
+     "name": {
+      "en": "Faultless Opportunist"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does…"
+     }
+    },
+    {
+     "id": "blinding-speed",
+     "requires": [],
+     "name": {
+      "en": "Blinding Speed"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the…"
+     }
+    },
+    {
+     "id": "distortion",
+     "requires": [],
+     "name": {
+      "en": "Distortion"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer."
+     }
+    },
+    {
+     "id": "rise-to-the-challenge",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Rise to the Challenge"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, it can use this Enhancement. If it…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "court-of-the-phoenician",
+   "cost": 2,
+   "name": {
+    "en": "Court of the Phoenician"
+   },
+   "rule": {
+    "name": {
+     "en": "Sensational Performance"
+    },
+    "text": {
+     "en": "EMPEROR’S CHILDREN units from your army have the following ability: Sensational Performance: Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase: This unit cannot target a unit it was within Engagement Range of at the…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "tears-of-the-phoenix",
+     "requires": [],
+     "name": {
+      "en": "Tears of the Phoenix"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers…"
+     }
+    },
+    {
+     "id": "exalted-patron",
+     "requires": [
+      [
+       "LORD",
+       "EXULTANT"
+      ]
+     ],
+     "name": {
+      "en": "Exalted Patron"
+     },
+     "text": {
+      "en": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer."
+     },
+     "grantsLead": [
+      "flawless-blades"
+     ]
+    },
+    {
+     "id": "soulstain-made-manifest",
+     "requires": [],
+     "name": {
+      "en": "Soulstain Made Manifest"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle-shock test, subtracting 1 from the…"
+     }
+    },
+    {
+     "id": "spiritsliver",
+     "requires": [
+      [
+       "DAEMON",
+       "PRINCE"
+      ]
+     ],
+     "name": {
+      "en": "Spiritsliver"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons."
+     }
+    }
+   ]
+  },
+  {
+   "id": "mercurial-host",
+   "cost": 2,
+   "name": {
+    "en": "Mercurial Host"
+   },
+   "rule": {
+    "name": {
+     "en": "Quicksilver Grace"
+    },
+    "text": {
+     "en": "You can re-roll Advance rolls made for EMPEROR’S CHILDREN units from your army."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "steeped-in-suffering",
+     "requires": [],
+     "name": {
+      "en": "Steeped in Suffering"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit below its Starting Strength, add 1 to the Hit roll. If that target is also Below…"
+     }
+    },
+    {
+     "id": "intoxicating-musk",
+     "requires": [],
+     "name": {
+      "en": "Intoxicating Musk"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Each time a melee attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1…"
+     }
+    },
+    {
+     "id": "tactical-perfection",
+     "requires": [],
+     "name": {
+      "en": "Tactical Perfection"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. After both players have deployed their armies, select up to two EMPEROR’S CHILDREN units from your army and redeploy them. When doing so, you can set those units up in…"
+     }
+    },
+    {
+     "id": "loathsome-dexterity",
+     "requires": [],
+     "name": {
+      "en": "Loathsome Dexterity"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a Normal, Advance or Fall Back move, it can move through enemy models. When doing so, it can move within Engagement Range…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "spectacle-of-slaughter",
+   "cost": 1,
+   "name": {
+    "en": "Spectacle of Slaughter"
+   },
+   "rule": {
+    "name": {
+     "en": "Entitled to Victory"
+    },
+    "text": {
+     "en": "Friendly FLAWLESS BLADES units have Fights First"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eager-patrons",
+     "requires": [
+      [
+       "FLAWLESS",
+       "BLADES"
+      ]
+     ],
+     "name": {
+      "en": "Eager Patrons"
+     },
+     "text": {
+      "en": "FLAWLESS BLADES unit only. This unit has +2\" M."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "beguiling-grotesquerie",
+     "requires": [
+      [
+       "FLAWLESS",
+       "BLADES"
+      ]
+     ],
+     "name": {
+      "en": "Beguiling Grotesquerie"
+     },
+     "text": {
+      "en": "FLAWLESS BLADES unit only. Enemy units cannot target this unit with snap shooting attacks."
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "slaaneshs-chosen",
+   "cost": 1,
+   "name": {
+    "en": "Slaanesh’s Chosen"
+   },
+   "rule": {
+    "name": {
+     "en": "Internal Rivalries"
+    },
+    "text": {
+     "en": "EMPEROR’S CHILDREN CHARACTER units from your army can ignore any or all modifiers to their Move characteristic and any or all modifiers to Advance and Charge rolls made for them. At the start of the battle, your WARLORD’s unit is your army’s Favoured Champions. The first time in each player’s turn that an EMPEROR’S…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eager-to-prove",
+     "requires": [],
+     "name": {
+      "en": "Eager to Prove"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. You can re-roll Charge rolls made for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions, add 2\" to the Move characteristic of models in that…"
+     }
+    },
+    {
+     "id": "repulsed-by-weakness",
+     "requires": [],
+     "name": {
+      "en": "Repulsed by Weakness"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer’s unit Falls Back, models in that enemy unit must take Desperate Escape…"
+     }
+    },
+    {
+     "id": "proud-and-vainglorious",
+     "requires": [],
+     "name": {
+      "en": "Proud and Vainglorious"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. You can re-roll Battle-shock and Leadership tests taken for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions, add 1 to the Objective Control…"
+     }
+    },
+    {
+     "id": "slayer-of-champions",
+     "requires": [],
+     "name": {
+      "en": "Slayer of Champions"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN model only. The bearer’s melee weapons have the [PRECISION] ability, and each time the bearer makes a melee attack that targets a CHARACTER unit, improve the Strength and Armour…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "frenzied-host",
+   "cost": 1,
+   "name": {
+    "en": "Frenzied Host"
+   },
+   "rule": {
+    "name": {
+     "en": "Frantic Focus"
+    },
+    "text": {
+     "en": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s BATTLELINE models’ attacks have [SUSTAINED HITS 1] until the end of the turn."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "euphoric-crown",
+     "requires": [
+      [
+       "LORD",
+       "EXULTANT"
+      ]
+     ],
+     "name": {
+      "en": "Euphoric Crown"
+     },
+     "text": {
+      "en": "LORD EXULTANT model only. This model’s melee attacks have +1 S."
+     }
+    },
+    {
+     "id": "howling-plate",
+     "requires": [
+      [
+       "LORD",
+       "EXULTANT"
+      ]
+     ],
+     "name": {
+      "en": "Howling Plate"
+     },
+     "text": {
+      "en": "LORD EXULTANT model only. This unit’s ranged attacks have +1 AP."
+     }
+    }
+   ]
+  },
+  {
+   "id": "elegant-brutes",
+   "cost": 1,
+   "name": {
+    "en": "Elegant Brutes"
+   },
+   "rule": {
+    "name": {
+     "en": "Eager to Kill"
+    },
+    "text": {
+     "en": "When a friendly EMPEROR’S CHILDREN TERMINATOR unit is set up, that unit has +1 to charge rolls until the end of the turn."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "cacophonic-accompaniment",
+     "requires": [
+      [
+       "LORD",
+       "KAKOPHONIST"
+      ]
+     ],
+     "name": {
+      "en": "Cacophonic Accompaniment"
+     },
+     "text": {
+      "en": "LORD KAKOPHONIST model only. This model has Deep Strike. This unit’s ranged attacks have [IGNORES COVER]"
+     }
+    },
+    {
+     "id": "frenzied-ferocity",
+     "requires": [
+      [
+       "TERMINATOR",
+       "SQUAD"
+      ]
+     ],
+     "name": {
+      "en": "Frenzied Ferocity"
+     },
+     "text": {
+      "en": "EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1]."
+     },
+     "type": "upgrade"
+    }
+   ]
+  }
+ ]
+}

@@ -127,6 +127,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -346,6 +349,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -465,6 +471,9 @@
     "CHARACTER",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -606,6 +615,10 @@
     "DEATHWING",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -751,6 +764,10 @@
     "DEATHWING",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -902,6 +919,10 @@
     "DEATHWING",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -1022,6 +1043,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -1379,6 +1403,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -1639,6 +1666,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "RAVENWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -1911,6 +1941,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2035,6 +2068,9 @@
     "IMPERIUM",
     "TERMINATOR",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -2206,6 +2242,9 @@
     "IMPERIUM",
     "RAVENWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -2351,6 +2390,10 @@
     "DEATHWING",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -2532,6 +2575,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2652,6 +2698,10 @@
     "DEATHWING",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -2778,6 +2828,9 @@
     "IMPERIUM",
     "PSYKER",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -2945,6 +2998,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -3108,6 +3164,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -3591,6 +3650,10 @@
     "MOBILE",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -3764,6 +3827,10 @@
     "EXPLOSIVES",
     "RAVENWING",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -4039,6 +4106,10 @@
     "RAVENWING",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -4202,6 +4273,10 @@
     "TERMINATOR",
     "DEATHWING",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -4469,6 +4544,10 @@
     "TERMINATOR",
     "DEATHWING",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -4935,6 +5014,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -5067,6 +5150,10 @@
     "EXPLOSIVES",
     "RAVENWING",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -5300,6 +5387,10 @@
     "RAVENWING",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -5505,6 +5596,10 @@
     "RAVENWING",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -5667,6 +5762,10 @@
     "RAVENWING",
     "FLY",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {
@@ -5872,6 +5971,10 @@
     "FLY",
     "RAVENWING",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "DARK ANGELS"
    ],
    "stats": [
     {

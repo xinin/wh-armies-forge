@@ -123,6 +123,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -242,6 +245,10 @@
     "EPIC HERO",
     "TERMINATOR",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -367,6 +374,10 @@
     "DREADNOUGHT",
     "IMPERIUM",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -606,6 +617,9 @@
     "IMPERIUM",
     "PHOBOS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -757,6 +771,9 @@
     "IMPERIUM",
     "TERMINATOR",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -1018,6 +1035,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -1185,6 +1205,10 @@
     "TECHMARINE",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -1330,6 +1354,9 @@
     "IMPERIUM",
     "PHOBOS",
     "PSYKER"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -1500,6 +1527,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -1663,6 +1693,9 @@
     "IMPERIUM",
     "PHOBOS",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -1847,6 +1880,10 @@
     "TERMINATOR",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2008,6 +2045,10 @@
     "WULFEN",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
+   ],
    "stats": [
     {
      "M": "9\"",
@@ -2146,6 +2187,10 @@
     "PSYKER",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -2315,6 +2360,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -2433,6 +2482,10 @@
     "WOLF PRIEST",
     "EXPLOSIVES",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -2574,6 +2627,10 @@
     "CHARACTER",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -2814,6 +2871,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
+   ],
    "stats": [
     {
      "M": "7\"",
@@ -2934,6 +2995,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -3174,6 +3239,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -3462,6 +3531,10 @@
     "BEASTS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -3552,6 +3625,10 @@
     "BEASTS",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -3796,6 +3873,10 @@
     "INFANTRY",
     "TERMINATOR",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -4129,6 +4210,10 @@
     "IMPERIUM",
     "PHOBOS",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -4601,6 +4686,10 @@
     "WULFEN",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
+   ],
    "stats": [
     {
      "M": "9\"",
@@ -4758,6 +4847,10 @@
     "INFANTRY",
     "WULFEN",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -4931,6 +5024,10 @@
     "MOUNTED",
     "EXPLOSIVES",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -5212,6 +5309,10 @@
     "DREADNOUGHT",
     "IMPERIUM",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {
@@ -5576,6 +5677,10 @@
     "DREADNOUGHT",
     "WULFEN",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "SPACE WOLVES"
    ],
    "stats": [
     {

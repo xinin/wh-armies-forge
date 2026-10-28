@@ -33,6 +33,9 @@
     "FRAME",
     "CATACOMB COMMAND BARGE"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -316,6 +319,9 @@
     "CRYPTEK",
     "CHRONOMANCER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -434,6 +440,9 @@
     "FLY",
     "C’TAN SHARD OF THE DECEIVER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -549,6 +558,9 @@
     "EPIC HERO",
     "FLY",
     "C’TAN SHARD OF THE NIGHTBRINGER"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -677,6 +689,9 @@
     "EPIC HERO",
     "FLY",
     "C’TAN SHARD OF THE VOID DRAGON"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -852,6 +867,9 @@
     "CRYPTEK",
     "GEOMANCER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -987,6 +1005,9 @@
     "DESTROYER CULT",
     "HEXMARK DESTROYER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -1098,6 +1119,9 @@
     "EPIC HERO",
     "CRYPTEK",
     "ILLUMINOR SZERAS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -1237,6 +1261,9 @@
     "EPIC HERO",
     "NOBLE",
     "IMOTEKH THE STORMLORD"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -1378,6 +1405,9 @@
     "FLY",
     "DESTROYER CULT",
     "LOKHUST LORD"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -1613,6 +1643,9 @@
     "DESTROYER CULT",
     "NEKROSOR AMMENTAR"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -1770,6 +1803,9 @@
     "CHRONOMANCER",
     "ORIKAN THE DIVINER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -1866,6 +1902,9 @@
     "CHARACTER",
     "NOBLE",
     "OVERLORD"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -2141,6 +2180,9 @@
     "OVERLORD",
     "OVERLORD WITH TRANSLOCATION SHROUD"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -2249,6 +2291,9 @@
     "CHARACTER",
     "CRYPTEK",
     "PLASMANCER"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -2364,6 +2409,9 @@
     "CRYPTEK",
     "PSYCHOMANCER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -2476,6 +2524,9 @@
     "INFANTRY",
     "CHARACTER",
     "ROYAL WARDEN"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -2592,6 +2643,9 @@
     "CHARACTER",
     "DESTROYER CULT",
     "SKORPEKH LORD"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -2729,6 +2783,9 @@
     "FLY",
     "TECHNOMANCER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -2844,6 +2901,9 @@
     "TRIARCH",
     "CHARACTER",
     "THE SILENT KING"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -3032,6 +3092,9 @@
     "FLY",
     "TRANSCENDENT C’TAN"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -3148,6 +3211,9 @@
     "NOBLE",
     "TRAZYN THE INFINITE"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -3243,6 +3309,9 @@
     "INFANTRY",
     "BATTLELINE",
     "IMMORTALS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -3407,6 +3476,9 @@
     "INFANTRY",
     "BATTLELINE",
     "NECRON WARRIORS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -3573,6 +3645,9 @@
     "FLY",
     "CANOPTEK",
     "MACROCYTES"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -3842,6 +3917,9 @@
     "CANOPTEK",
     "SCARAB SWARMS"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -3933,6 +4011,9 @@
     "BEASTS",
     "CANOPTEK",
     "TOMB CRAWLERS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -4088,6 +4169,9 @@
     "FLY",
     "CANOPTEK",
     "WRAITHS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -4306,6 +4390,9 @@
     "INFANTRY",
     "CRYPTOTHRALLS"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -4408,6 +4495,9 @@
    "keywords": [
     "INFANTRY",
     "DEATHMARKS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -4516,6 +4606,9 @@
     "INFANTRY",
     "FLAYED ONES"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -4602,6 +4695,9 @@
    "keywords": [
     "INFANTRY",
     "LYCHGUARD"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -4757,6 +4853,9 @@
     "DESTROYER CULT",
     "OPHYDIAN DESTROYERS"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -4883,6 +4982,9 @@
     "DESTROYER CULT",
     "SKORPEKH DESTROYERS"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -5007,6 +5109,9 @@
     "FLY",
     "TRIARCH",
     "PRAETORIANS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -5199,6 +5304,9 @@
     "DESTROYER CULT",
     "LOKHUST DESTROYERS"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -5318,6 +5426,9 @@
     "FLY",
     "DESTROYER CULT",
     "LOKHUST HEAVY DESTROYERS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -5493,6 +5604,9 @@
     "MOUNTED",
     "FLY",
     "TOMB BLADES"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -5790,6 +5904,9 @@
     "FRAME",
     "ANNIHILATION BARGE"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -5972,6 +6089,9 @@
     "CANOPTEK",
     "DOOMSTALKER"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -6107,6 +6227,9 @@
     "CANOPTEK",
     "REANIMATOR"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -6205,6 +6328,9 @@
     "FLY",
     "CANOPTEK",
     "SPYDERS"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -6420,6 +6546,9 @@
     "FRAME",
     "DOOMSDAY ARK"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -6554,6 +6683,9 @@
     "TRIARCH",
     "FRAME",
     "STALKER"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -6767,6 +6899,9 @@
     "DEDICATED TRANSPORT",
     "GHOST ARK"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -6872,6 +7007,9 @@
     "FLY",
     "TRANSPORT",
     "NIGHT SCYTHE"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -6995,6 +7133,9 @@
     "AIRCRAFT",
     "FLY",
     "DOOM SCYTHE"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -7129,6 +7270,9 @@
     "FRAME",
     "TOWERING",
     "MONOLITH"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -7323,6 +7467,9 @@
     "TOWERING",
     "OBELISK"
    ],
+   "factionKeywords": [
+    "NECRONS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -7435,6 +7582,9 @@
     "FRAME",
     "TOWERING",
     "TESSERACT VAULT"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {
@@ -7625,6 +7775,9 @@
     "FRAME",
     "VEHICLE",
     "CONVERGENCE OF DOMINION"
+   ],
+   "factionKeywords": [
+    "NECRONS"
    ],
    "stats": [
     {

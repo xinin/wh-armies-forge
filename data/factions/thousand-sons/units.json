@@ -1,0 +1,6530 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World and Warhammer Legends datasheets: never imported.",
+  "ids": [
+   "blue-horrors",
+   "cerberus",
+   "chaos-lord-on-disc-of-tzeentch",
+   "chaos-thunderhawk",
+   "falchion",
+   "flamers",
+   "hell-blade",
+   "hell-talon",
+   "kairos-fateweaver",
+   "kratos",
+   "lord-of-change",
+   "mastodon",
+   "pink-horrors",
+   "rapier-carrier",
+   "screamers",
+   "terrax-pattern-termite",
+   "typhon"
+  ]
+ },
+ "units": [
+  {
+   "id": "ahriman",
+   "name": {
+    "en": "Ahriman",
+    "es": "Ahriman"
+   },
+   "keywords": [
+    "INFANTRY",
+    "MOUNTED",
+    "CHARACTER",
+    "EPIC HERO",
+    "FLY",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "AHRIMAN"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "inferno-bolt-pistol",
+     "name": {
+      "en": "Inferno bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "transmogrifying-blast",
+     "name": {
+      "en": "Transmogrifying Blast"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6+1",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Blast",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "black-staff-of-ahriman",
+     "name": {
+      "en": "Black Staff of Ahriman"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Scryer of Fates (Psychic)"
+     },
+     "text": {
+      "en": "If your army includes this model, after both players have deployed their armies, you can select up to three THOUSAND SONS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+     }
+    },
+    {
+     "name": {
+      "en": "Arch-Sorcerer of Tzeentch (Psychic)"
+     },
+     "text": {
+      "en": "Each time this model attempts a Ritual, add 1 to the Psychic test result."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Ahriman",
+   "composition": [
+    "1 Ahriman – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: inferno bolt pistol; Transmogrifying Blast; Black Staff of Ahriman."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "rubric-marines",
+     "tzaangor-enlightened",
+     "tzaangor-enlightened-with-fatecaster-greatbows"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "inferno-bolt-pistol": 1,
+      "transmogrifying-blast": 1,
+      "black-staff-of-ahriman": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "black-staff-of-ahriman",
+    "inferno-bolt-pistol",
+    "transmogrifying-blast"
+   ]
+  },
+  {
+   "id": "daemon-prince-of-tzeentch",
+   "name": {
+    "en": "Daemon Prince of Tzeentch",
+    "es": "Daemon Prince of Tzeentch"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "DAEMON",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "DAEMON PRINCE"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "10",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "dark-blessing",
+     "name": {
+      "en": "Dark Blessing"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "9",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Servile Pawns"
+     },
+     "text": {
+      "en": "While this model is within 3\" of one or more friendly THOUSAND SONS INFANTRY units, this model has the Lone Operative ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Spirit Snare"
+     },
+     "text": {
+      "en": "Each time a friendly THOUSAND SONS PSYKER model with the Cabal of Sorcerers ability is destroyed while within 9\" of one or more models with this ability, select one of those models with this ability: until the end of the battle, each time the selected model attempts a Ritual, add 1 to the Psychic test result (to a maximum of +2)."
+     }
+    },
+    {
+     "name": {
+      "en": "Glamour of Tzeentch (Aura, Psychic)"
+     },
+     "text": {
+      "en": "While a friendly THOUSAND SONS INFANTRY unit is within 6\" of this model, models in that unit have the Stealth ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-of-Tzeentch",
+   "composition": [
+    "1 Daemon Prince of Tzeentch"
+   ],
+   "equipped": [
+    "This model is equipped with: Dark Blessing; infernal cannon; heliforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "dark-blessing": 1,
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "dark-blessing",
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "daemon-prince-of-tzeentch-with-wings",
+   "name": {
+    "en": "Daemon Prince of Tzeentch with Wings",
+    "es": "Daemon Prince of Tzeentch with Wings"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "DAEMON",
+    "FLY",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "DAEMON PRINCE"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "13\"",
+     "T": "9",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "dark-blessing",
+     "name": {
+      "en": "Dark Blessing"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "9",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Hunter of Souls"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER unit, this model regains up to 3 lost wounds instead)."
+     }
+    },
+    {
+     "name": {
+      "en": "Aetherstride (Psychic)"
+     },
+     "text": {
+      "en": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does: It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units. Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability. Until the end of the turn, it is not eligible to declare a charge."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-of-Tzeentch-with-Wings",
+   "composition": [
+    "1 Daemon Prince of Tzeentch with Wings"
+   ],
+   "equipped": [
+    "This model is equipped with: Dark Blessing; infernal cannon; heliforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "dark-blessing": 1,
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "dark-blessing",
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "exalted-sorcerer",
+   "name": {
+    "en": "Exalted Sorcerer",
+    "es": "Exalted Sorcerer"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "GRENADES",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "EXALTED SORCERER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "astral-blast",
+     "name": {
+      "en": "Astral Blast"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Blast",
+        "Devastating Wounds",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-bolt-pistol",
+     "name": {
+      "en": "Inferno bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "prosperine-khopesh",
+     "name": {
+      "en": "Prosperine khopesh"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Arcane Shield (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have a 4+ invulnerable save."
+     }
+    },
+    {
+     "name": {
+      "en": "Rebind Rubricae (Psychic)"
+     },
+     "text": {
+      "en": "In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Exalted-Sorcerer",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with 1 Prosperine khopesh.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Exalted Sorcerer"
+   ],
+   "equipped": [
+    "This model is equipped with: Astral Blast; inferno bolt pistol; force weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "rubric-marines"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "astral-blast": 1,
+      "inferno-bolt-pistol": 1,
+      "force-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Prosperine khopesh",
+      "es": "añadir Prosperine khopesh"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "prosperine-khopesh",
+     "packages": {
+      "prosperine-khopesh": [
+       {
+        "item": "prosperine-khopesh",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "prosperine-khopesh": "Prosperine khopesh"
+     }
+    }
+   ],
+   "loadout": [
+    "astral-blast",
+    "force-weapon",
+    "inferno-bolt-pistol"
+   ]
+  },
+  {
+   "id": "exalted-sorcerer-on-disc-of-tzeentch",
+   "name": {
+    "en": "Exalted Sorcerer on Disc of Tzeentch",
+    "es": "Exalted Sorcerer on Disc of Tzeentch"
+   },
+   "keywords": [
+    "INFANTRY",
+    "MOUNTED",
+    "CHARACTER",
+    "FLY",
+    "GRENADES",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "EXALTED SORCERER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "arcane-fire",
+     "name": {
+      "en": "Arcane Fire"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Ignores Cover",
+        "Psychic",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-bolt-pistol",
+     "name": {
+      "en": "Inferno bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "prosperine-khopesh",
+     "name": {
+      "en": "Prosperine khopesh"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Illusions of Tzeentch (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+     }
+    },
+    {
+     "name": {
+      "en": "Binding Tendrils (Psychic)"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Exalted-Sorcerer-on-Disc-of-Tzeentch",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with 1 Prosperine khopesh.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Exalted Sorcerer"
+   ],
+   "equipped": [
+    "This model is equipped with: Arcane Fire; inferno bolt pistol; force weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "rubric-marines",
+     "tzaangor-enlightened",
+     "tzaangor-enlightened-with-fatecaster-greatbows"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "arcane-fire": 1,
+      "inferno-bolt-pistol": 1,
+      "force-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Prosperine khopesh",
+      "es": "añadir Prosperine khopesh"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "prosperine-khopesh",
+     "packages": {
+      "prosperine-khopesh": [
+       {
+        "item": "prosperine-khopesh",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "prosperine-khopesh": "Prosperine khopesh"
+     }
+    }
+   ],
+   "loadout": [
+    "arcane-fire",
+    "force-weapon",
+    "inferno-bolt-pistol"
+   ]
+  },
+  {
+   "id": "infernal-master",
+   "name": {
+    "en": "Infernal Master",
+    "es": "Infernal Master"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "GRENADES",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "INFERNAL MASTER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "inferno-bolt-pistol",
+     "name": {
+      "en": "Inferno bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fires-of-the-abyss",
+     "name": {
+      "en": "Fires of the Abyss"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Psychic",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Hazardous",
+        "Psychic",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Malefic Maelstrom (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Glimpse of Eternity (Psychic)"
+     },
+     "text": {
+      "en": "Once per turn, you can change the result of one Hit roll, one Wound roll or one saving throw made for this model to an unmodified 6."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Infernal-Master",
+   "composition": [
+    "1 Infernal Master"
+   ],
+   "equipped": [
+    "This model is equipped with: inferno bolt pistol; Fires of the Abyss; force weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "rubric-marines"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "inferno-bolt-pistol": 1,
+      "fires-of-the-abyss": 1,
+      "force-weapon": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "fires-of-the-abyss",
+    "force-weapon",
+    "inferno-bolt-pistol"
+   ]
+  },
+  {
+   "id": "magnus-the-red",
+   "name": {
+    "en": "Magnus The Red",
+    "es": "Magnus The Red"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "EPIC HERO",
+    "FLY",
+    "DAEMON",
+    "PRIMARCH",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "MAGNUS THE RED"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "11",
+     "Sv": "2+",
+     "W": "16",
+     "Ld": "5+",
+     "OC": "6",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "gaze-of-magnus",
+     "name": {
+      "en": "Gaze of Magnus"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3D3",
+       "skill": "2+",
+       "S": "11",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tzeentchs-firestorm",
+     "name": {
+      "en": "Tzeentch’s Firestorm"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6+3",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Blast",
+        "Ignores Cover",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blade-of-magnus",
+     "name": {
+      "en": "Blade of Magnus"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "7",
+       "skill": "2+",
+       "S": "16",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Unearthly Power"
+     },
+     "text": {
+      "en": "At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Lord of the Planet of the Sorcerers (Psychic)"
+     },
+     "text": {
+      "en": "This model can attempt up to two Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Magnus-The-Red",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Magnus the Red – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Gaze of Magnus; Tzeentch’s Firestorm; blade of Magnus."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "gaze-of-magnus": 1,
+      "tzeentchs-firestorm": 1,
+      "blade-of-magnus": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blade-of-magnus",
+    "gaze-of-magnus",
+    "tzeentchs-firestorm"
+   ]
+  },
+  {
+   "id": "sorcerer",
+   "name": {
+    "en": "Sorcerer",
+    "es": "Sorcerer"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "PSYKER",
+    "GRENADES",
+    "CHAOS",
+    "TZEENTCH",
+    "SORCERER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "inferno-bolt-pistol",
+     "name": {
+      "en": "Inferno bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pandaemonic-delusion",
+     "name": {
+      "en": "Pandaemonic Delusion"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Psychic",
+        "Sustained Hits 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "prosperine-khopesh",
+     "name": {
+      "en": "Prosperine khopesh"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Empyric Guidance (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Twisted Sorceries (Psychic)"
+     },
+     "text": {
+      "en": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristics of Psychic weapons equipped by this model by 3."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sorcerer",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with 1 Prosperine khopesh.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sorcerer"
+   ],
+   "equipped": [
+    "This model is equipped with: inferno bolt pistol; Pandaemonic Delusion; force weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "rubric-marines"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "inferno-bolt-pistol": 1,
+      "pandaemonic-delusion": 1,
+      "force-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Prosperine khopesh",
+      "es": "añadir Prosperine khopesh"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "prosperine-khopesh",
+     "packages": {
+      "prosperine-khopesh": [
+       {
+        "item": "prosperine-khopesh",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "prosperine-khopesh": "Prosperine khopesh"
+     }
+    }
+   ],
+   "loadout": [
+    "force-weapon",
+    "inferno-bolt-pistol",
+    "pandaemonic-delusion"
+   ]
+  },
+  {
+   "id": "sorcerer-in-terminator-armour",
+   "name": {
+    "en": "Sorcerer In Terminator Armour",
+    "es": "Sorcerer In Terminator Armour"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "PSYKER",
+    "TERMINATOR",
+    "CHAOS",
+    "TZEENTCH",
+    "SORCERER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "gaze-of-hate",
+     "name": {
+      "en": "Gaze of Hate"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Anti-monster 4+",
+        "Anti-vehicle 4+",
+        "Devastating Wounds",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-weapon",
+     "name": {
+      "en": "Inferno combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Empyric Guidance (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Marked by Fate (Psychic)"
+     },
+     "text": {
+      "en": "At the start of your Shooting phase, select one enemy unit that is visible to this PSYKER model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sorcerer-In-Terminator-Armour",
+   "wargearOptions": [
+    {
+     "text": "This model’s inferno combi-bolter can be replaced with 1 inferno combi-weapon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sorcerer In Terminator Armour"
+   ],
+   "equipped": [
+    "This model is equipped with: Gaze of Hate; inferno combi-bolter; force weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "scarab-occult-terminators"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "gaze-of-hate": 1,
+      "inferno-combi-bolter": 1,
+      "force-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Inferno combi-bolter",
+      "es": "Inferno combi-bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "inferno-combi-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "inferno-combi-weapon"
+     ],
+     "packages": {
+      "inferno-combi-weapon": [
+       {
+        "item": "inferno-combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "inferno-combi-weapon": "Inferno combi-weapon",
+      "": "Inferno combi-bolter"
+     }
+    }
+   ],
+   "loadout": [
+    "force-weapon",
+    "gaze-of-hate",
+    "inferno-combi-bolter"
+   ]
+  },
+  {
+   "id": "tzaangor-shaman",
+   "name": {
+    "en": "Tzaangor Shaman",
+    "es": "Tzaangor Shaman"
+   },
+   "keywords": [
+    "INFANTRY",
+    "MOUNTED",
+    "CHARACTER",
+    "FLY",
+    "PSYKER",
+    "CHAOS",
+    "TZEENTCH",
+    "MUTANT",
+    "TZAANGOR SHAMAN"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "4",
+     "Sv": "5+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "baleful-devolution",
+     "name": {
+      "en": "Baleful Devolution"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "9",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Devastating Wounds",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-stave",
+     "name": {
+      "en": "Force stave"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bestial Prophet"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Sacrificial Blessing"
+     },
+     "text": {
+      "en": "While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tzaangor-Shaman",
+   "composition": [
+    "1 Tzaangor Shaman"
+   ],
+   "equipped": [
+    "This model is equipped with: Baleful Devolution; force stave."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "tzaangor-enlightened",
+     "tzaangor-enlightened-with-fatecaster-greatbows",
+     "tzaangors"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "baleful-devolution": 1,
+      "force-stave": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "baleful-devolution",
+    "force-stave"
+   ]
+  },
+  {
+   "id": "rubric-marines",
+   "name": {
+    "en": "Rubric Marines",
+    "es": "Rubric Marines"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "CHAOS",
+    "TZEENTCH",
+    "RUBRICAE",
+    "RUBRIC MARINES",
+    "PSYKER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "2",
+     "name": {
+      "en": "Aspiring Sorcerer(⌀32mm)"
+     },
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "inferno-bolt-pistol",
+     "name": {
+      "en": "Inferno bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-boltgun",
+     "name": {
+      "en": "Inferno boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "malefic-curse",
+     "name": {
+      "en": "Malefic Curse"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-3",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "soulreaper-cannon",
+     "name": {
+      "en": "Soulreaper cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "warpflame-pistol",
+     "name": {
+      "en": "Warpflame pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "warpflamer",
+     "name": {
+      "en": "Warpflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bringers of Change"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Cabal of Sorcerers (Aspiring Sorcerer only)"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Rubric-Marines",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Icon of Flame"
+     },
+     "text": {
+      "en": "Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Aspiring Sorcerer’s inferno bolt pistol can be replaced with 1 warpflame pistol.",
+     "choices": []
+    },
+    {
+     "text": "1 Rubric Marine’s inferno boltgun can be replaced with 1 soulreaper cannon.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Rubric Marines can each have their inferno boltgun replaced with 1 warpflamer.",
+     "choices": []
+    },
+    {
+     "text": "1 Rubric Marine can be equipped with 1 icon of flame.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Aspiring Sorcerer",
+    "4-9 Rubric Marines"
+   ],
+   "equipped": [
+    "The Aspiring Sorcerer is equipped with: inferno bolt pistol; Malefic Curse; force weapon.",
+    "Every Rubric Marine is equipped with: inferno boltgun; close combat weapon."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "inferno-bolt-pistol": 1,
+      "malefic-curse": 1,
+      "force-weapon": 1,
+      "inferno-boltgun": 4,
+      "close-combat-weapon": 4
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "inferno-bolt-pistol": 1,
+      "malefic-curse": 1,
+      "force-weapon": 1,
+      "inferno-boltgun": 9,
+      "close-combat-weapon": 9
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Aspiring Sorcerer: Inferno bolt pistol",
+      "es": "Aspiring Sorcerer: Inferno bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "inferno-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "warpflame-pistol"
+     ],
+     "packages": {
+      "warpflame-pistol": [
+       {
+        "item": "warpflame-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Aspiring Sorcerer",
+     "labels": {
+      "warpflame-pistol": "Warpflame pistol",
+      "": "Inferno bolt pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Rubric Marine: Inferno boltgun",
+      "es": "Rubric Marine: Inferno boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "inferno-boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "soulreaper-cannon"
+     ],
+     "packages": {
+      "soulreaper-cannon": [
+       {
+        "item": "soulreaper-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Rubric Marine",
+     "labels": {
+      "soulreaper-cannon": "Soulreaper cannon",
+      "": "Inferno boltgun"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Rubric Marines: replace Inferno boltgun",
+      "es": "Rubric Marines: sustituir Inferno boltgun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "inferno-boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "warpflamer"
+     ],
+     "packages": {
+      "warpflamer": [
+       {
+        "item": "warpflamer",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 4,
+      "10": 9
+     },
+     "owner": "Rubric Marines",
+     "labels": {
+      "warpflamer": "Warpflamer"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Rubric Marine: add Icon of flame",
+      "es": "Rubric Marine: añadir Icon of flame"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:icon-of-flame",
+     "packages": {
+      "gear:icon-of-flame": [
+       {
+        "item": "gear:icon-of-flame",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 1
+     },
+     "owner": "Rubric Marine",
+     "labels": {
+      "gear:icon-of-flame": "Icon of flame"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "force-weapon",
+    "inferno-bolt-pistol",
+    "inferno-boltgun",
+    "malefic-curse"
+   ]
+  },
+  {
+   "id": "chaos-spawn",
+   "name": {
+    "en": "Chaos Spawn",
+    "es": "Chaos Spawn"
+   },
+   "keywords": [
+    "BEAST",
+    "CHAOS",
+    "TZEENTCH",
+    "MUTANT",
+    "CHAOS SPAWN"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "5",
+     "Sv": "4+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hideous-mutations",
+     "name": {
+      "en": "Hideous mutations"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "D6+2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Regenerating Monstrosities"
+     },
+     "text": {
+      "en": "At the start of each player’s Command phase, one model in this unit regains up to 3 lost wounds."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Spawn",
+   "composition": [
+    "2 Chaos Spawn"
+   ],
+   "equipped": [
+    "Every model is equipped with: hideous mutations."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 2,
+     "loadout": {
+      "hideous-mutations": 2
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hideous-mutations"
+   ]
+  },
+  {
+   "id": "scarab-occult-terminators",
+   "name": {
+    "en": "Scarab Occult Terminators",
+    "es": "Scarab Occult Terminators"
+   },
+   "keywords": [
+    "INFANTRY",
+    "TERMINATOR",
+    "CHAOS",
+    "TZEENTCH",
+    "RUBRICAE",
+    "SCARAB OCCULT",
+    "PSYKER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Scarab Occult Sorcerer(⌀40mm)"
+     },
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-warpflamer",
+     "name": {
+      "en": "Heavy warpflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hellfyre-missile-rack",
+     "name": {
+      "en": "Hellfyre missile rack"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "malefic-curse",
+     "name": {
+      "en": "Malefic Curse"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-3",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "soulreaper-cannon",
+     "name": {
+      "en": "Soulreaper cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "prosperine-khopesh",
+     "name": {
+      "en": "Prosperine khopesh"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rites of Coalescence"
+     },
+     "text": {
+      "en": "While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Cabal of Sorcerers (Scarab Occult Sorcerer only)"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Scarab-Occult-Terminators",
+   "wargearOptions": [
+    {
+     "text": "The Scarab Occult Sorcerer’s inferno combi-bolter can be replaced with 1 Prosperine khopesh.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Scarab Occult Terminator’s inferno combi-bolter can be replaced with one of the following:",
+     "choices": [
+      "1 heavy warpflamer",
+      "1 soulreaper cannon"
+     ]
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Scarab Occult Terminator can be equipped with 1 hellfyre missile rack.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Scarab Occult Sorcerer",
+    "4-9 Scarab Occult Terminators"
+   ],
+   "equipped": [
+    "The Scarab Occult Sorcerer is equipped with: inferno combi-bolter; Malefic Curse; force weapon.",
+    "Every Scarab Occult Terminator is equipped with: inferno combi-bolter; Prosperine khopesh."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "inferno-combi-bolter": 5,
+      "malefic-curse": 1,
+      "force-weapon": 1,
+      "prosperine-khopesh": 4
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "inferno-combi-bolter": 10,
+      "malefic-curse": 1,
+      "force-weapon": 1,
+      "prosperine-khopesh": 9
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Scarab Occult Sorcerer: Inferno combi-bolter",
+      "es": "Scarab Occult Sorcerer: Inferno combi-bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "inferno-combi-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "prosperine-khopesh"
+     ],
+     "packages": {
+      "prosperine-khopesh": [
+       {
+        "item": "prosperine-khopesh",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Scarab Occult Sorcerer",
+     "labels": {
+      "prosperine-khopesh": "Prosperine khopesh",
+      "": "Inferno combi-bolter"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Scarab Occult Terminator: replace Inferno combi-bolter",
+      "es": "Scarab Occult Terminator: sustituir Inferno combi-bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "inferno-combi-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "heavy-warpflamer",
+      "soulreaper-cannon"
+     ],
+     "packages": {
+      "heavy-warpflamer": [
+       {
+        "item": "heavy-warpflamer",
+        "n": 1
+       }
+      ],
+      "soulreaper-cannon": [
+       {
+        "item": "soulreaper-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Scarab Occult Terminator",
+     "labels": {
+      "heavy-warpflamer": "Heavy warpflamer",
+      "soulreaper-cannon": "Soulreaper cannon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Scarab Occult Terminator: add Hellfyre missile rack",
+      "es": "Scarab Occult Terminator: añadir Hellfyre missile rack"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "hellfyre-missile-rack",
+     "packages": {
+      "hellfyre-missile-rack": [
+       {
+        "item": "hellfyre-missile-rack",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Scarab Occult Terminator",
+     "labels": {
+      "hellfyre-missile-rack": "Hellfyre missile rack"
+     }
+    }
+   ],
+   "loadout": [
+    "force-weapon",
+    "inferno-combi-bolter",
+    "malefic-curse",
+    "prosperine-khopesh"
+   ]
+  },
+  {
+   "id": "tzaangors",
+   "name": {
+    "en": "Tzaangors",
+    "es": "Tzaangors"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAOS",
+    "TZEENTCH",
+    "MUTANT",
+    "TZAANGORS"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "6+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "autopistol",
+     "name": {
+      "en": "Autopistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "tzaangor-blades",
+     "name": {
+      "en": "Tzaangor blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ambushing Hunters"
+     },
+     "text": {
+      "en": "At the end of your opponent’s turn, if this unit is more than 6\" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 6\""
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tzaangors",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Brayhorn"
+     },
+     "text": {
+      "en": "You can re-roll Advance and Charge rolls made for the bearer’s unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Herd Banner"
+     },
+     "text": {
+      "en": "While the bearer’s unit is within range of one or more objective markers you control, improve the Leadership characteristic of models in the bearer’s unit by 1."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their Tzaangor blades replaced with 1 autopistol and 1 chainsword.",
+     "choices": []
+    },
+    {
+     "text": "1 Tzaangor not equipped with a herd banner can be equipped with 1 brayhorn.",
+     "choices": []
+    },
+    {
+     "text": "1 Tzaangor not equipped with a brayhorn can be equipped with 1 herd banner.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Twistbray",
+    "9-19 Tzaangors"
+   ],
+   "equipped": [
+    "Every model is equipped with: Tzaangor blades."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "tzaangor-blades": 10
+     }
+    },
+    {
+     "models": 20,
+     "loadout": {
+      "tzaangor-blades": 20
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Tzaangor blades",
+      "es": "sustituir Tzaangor blades"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "tzaangor-blades",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "autopistol+chainsword"
+     ],
+     "packages": {
+      "autopistol+chainsword": [
+       {
+        "item": "autopistol",
+        "n": 1
+       },
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 10,
+      "20": 20
+     },
+     "labels": {
+      "autopistol+chainsword": "Autopistol + Chainsword"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Tzaangor: add Brayhorn",
+      "es": "Tzaangor: añadir Brayhorn"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:brayhorn",
+     "packages": {
+      "gear:brayhorn": [
+       {
+        "item": "gear:brayhorn",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 1
+     },
+     "owner": "Tzaangor",
+     "labels": {
+      "gear:brayhorn": "Brayhorn"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Tzaangor: add Herd banner",
+      "es": "Tzaangor: añadir Herd banner"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:herd-banner",
+     "packages": {
+      "gear:herd-banner": [
+       {
+        "item": "gear:herd-banner",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1,
+      "20": 1
+     },
+     "owner": "Tzaangor",
+     "labels": {
+      "gear:herd-banner": "Herd banner"
+     }
+    }
+   ],
+   "loadout": [
+    "tzaangor-blades"
+   ]
+  },
+  {
+   "id": "tzaangor-enlightened",
+   "name": {
+    "en": "Tzaangor Enlightened",
+    "es": "Tzaangor Enlightened"
+   },
+   "keywords": [
+    "MOUNTED",
+    "FLY",
+    "CHAOS",
+    "TZEENTCH",
+    "MUTANT",
+    "TZAANGOR ENLIGHTENED"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "4",
+     "Sv": "5+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "autopistol",
+     "name": {
+      "en": "Autopistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "divining-spear",
+     "name": {
+      "en": "Divining spear"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Lance",
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Prophesied Doom"
+     },
+     "text": {
+      "en": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tzaangor-Enlightened",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their divining spear replaced with 1 autopistol and 1 chainsword.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Aviarch",
+    "2-5 Enlightened"
+   ],
+   "equipped": [
+    "Every model is equipped with: divining spear."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "divining-spear": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "divining-spear": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Divining spear",
+      "es": "sustituir Divining spear"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "divining-spear",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "autopistol+chainsword"
+     ],
+     "packages": {
+      "autopistol+chainsword": [
+       {
+        "item": "autopistol",
+        "n": 1
+       },
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "autopistol+chainsword": "Autopistol + Chainsword"
+     }
+    }
+   ],
+   "loadout": [
+    "divining-spear"
+   ]
+  },
+  {
+   "id": "tzaangor-enlightened-with-fatecaster-greatbows",
+   "name": {
+    "en": "Tzaangor Enlightened with Fatecaster Greatbows",
+    "es": "Tzaangor Enlightened with Fatecaster Greatbows"
+   },
+   "keywords": [
+    "MOUNTED",
+    "FLY",
+    "CHAOS",
+    "TZEENTCH",
+    "MUTANT",
+    "TZAANGOR ENLIGHTENED",
+    "TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "4",
+     "Sv": "5+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "fatecaster-greatbow",
+     "name": {
+      "en": "Fatecaster greatbow"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Lethal Hits",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Malign Trickery"
+     },
+     "text": {
+      "en": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tzaangor-Enlightened-with-Fatecaster-Greatbows",
+   "composition": [
+    "1 Aviarch",
+    "2-5 Enlightened"
+   ],
+   "equipped": [
+    "Every model is equipped with: fatecaster greatbow; close combat weapon."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "fatecaster-greatbow": 3,
+      "close-combat-weapon": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "fatecaster-greatbow": 6,
+      "close-combat-weapon": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "close-combat-weapon",
+    "fatecaster-greatbow"
+   ]
+  },
+  {
+   "id": "mutalith-vortex-beast",
+   "name": {
+    "en": "Mutalith Vortex Beast",
+    "es": "Mutalith Vortex Beast"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHAOS",
+    "TZEENTCH",
+    "MUTANT",
+    "MUTALITH VORTEX BEAST"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "4+",
+     "W": "13",
+     "Ld": "6+",
+     "OC": "4",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "warp-vortex",
+     "name": {
+      "en": "Warp vortex"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "blast"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "18",
+       "AP": "-3",
+       "D": "D6+6",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "beam"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ],
+       "mode": {
+        "en": "torrent"
+       }
+      }
+     ]
+    },
+    {
+     "id": "betentacled-maw",
+     "name": {
+      "en": "Betentacled maw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "15",
+       "skill": "3+",
+       "S": "7",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "mutalith-claws",
+     "name": {
+      "en": "Mutalith claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Mutating Vortex (Aura)"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds. Each enemy unit within range of this ability must then take a Battle-shock test."
+     }
+    },
+    {
+     "name": {
+      "en": "Immaterial Flare (Aura)"
+     },
+     "text": {
+      "en": "While a friendly THOUSAND SONS PSYKER model is within 6\" of this model, each time that model Channels the Warp, add 1 to the Psychic test result. This is not cumulative with any other modifiers to the Psychic test result."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Mutalith-Vortex-Beast",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Mutalith Vortex Beast"
+   ],
+   "equipped": [
+    "This model is equipped with: warp vortex; betentacled maw; Mutalith claws."
+   ],
+   "role": "monster",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "warp-vortex": 1,
+      "betentacled-maw": 1,
+      "mutalith-claws": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "betentacled-maw",
+    "mutalith-claws",
+    "warp-vortex"
+   ]
+  },
+  {
+   "id": "chaos-predator-annihilator",
+   "name": {
+    "en": "Chaos Predator Annihilator",
+    "es": "Chaos Predator Annihilator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "TZEENTCH",
+    "PREDATOR ANNIHILATOR"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "6+",
+     "OC": "3"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-weapon",
+     "name": {
+      "en": "Inferno combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-heavy-bolter",
+     "name": {
+      "en": "Inferno heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lascannon",
+     "name": {
+      "en": "Lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "predator-twin-lascannon",
+     "name": {
+      "en": "Predator twin lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ensorcelled Annihilation"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets a MONSTER or VEHICLE unit that was hit by one or more Psychic Attacks made by a THOUSAND SONS PSYKER model from your army this phase (including the Doombolt Ritual), you can re-roll the Hit roll and you can re-roll the Damage roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Predator-Annihilator",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "2 lascannons",
+      "2 inferno heavy bolters"
+     ]
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 inferno combi-bolter",
+      "1 inferno combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Predator Annihilator"
+   ],
+   "equipped": [
+    "This model is equipped with: Predator twin lascannon; armoured tracks."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "predator-twin-lascannon": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "2xlascannon",
+      "2xinferno-heavy-bolter"
+     ],
+     "packages": {
+      "2xlascannon": [
+       {
+        "item": "lascannon",
+        "n": 2
+       }
+      ],
+      "2xinferno-heavy-bolter": [
+       {
+        "item": "inferno-heavy-bolter",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xlascannon": "2× Lascannon",
+      "2xinferno-heavy-bolter": "2× Inferno heavy bolter",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "inferno-combi-bolter",
+      "inferno-combi-weapon"
+     ],
+     "packages": {
+      "inferno-combi-bolter": [
+       {
+        "item": "inferno-combi-bolter",
+        "n": 1
+       }
+      ],
+      "inferno-combi-weapon": [
+       {
+        "item": "inferno-combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "inferno-combi-bolter": "Inferno combi-bolter",
+      "inferno-combi-weapon": "Inferno combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "predator-twin-lascannon"
+   ]
+  },
+  {
+   "id": "chaos-predator-destructor",
+   "name": {
+    "en": "Chaos Predator Destructor",
+    "es": "Chaos Predator Destructor"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "TZEENTCH",
+    "PREDATOR DESTRUCTOR"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "6+",
+     "OC": "3"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-weapon",
+     "name": {
+      "en": "Inferno combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-heavy-bolter",
+     "name": {
+      "en": "Inferno heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lascannon",
+     "name": {
+      "en": "Lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "predator-autocannon",
+     "name": {
+      "en": "Predator autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ensorcelled Destruction"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets a unit (excluding MONSTERS and VEHICLES) that was hit by one or more Psychic Attacks made by a THOUSAND SONS PSYKER model from your army this phase (including the Doombolt Ritual), improve the Strength and Armour Penetration characteristics of that attack by 1."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Predator-Destructor",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "2 lascannons",
+      "2 inferno heavy bolters"
+     ]
+    },
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 inferno combi-bolter",
+      "1 inferno combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Predator Destructor"
+   ],
+   "equipped": [
+    "This model is equipped with: Predator autocannon; armoured tracks."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "predator-autocannon": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "2xlascannon",
+      "2xinferno-heavy-bolter"
+     ],
+     "packages": {
+      "2xlascannon": [
+       {
+        "item": "lascannon",
+        "n": 2
+       }
+      ],
+      "2xinferno-heavy-bolter": [
+       {
+        "item": "inferno-heavy-bolter",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xlascannon": "2× Lascannon",
+      "2xinferno-heavy-bolter": "2× Inferno heavy bolter",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "inferno-combi-bolter",
+      "inferno-combi-weapon"
+     ],
+     "packages": {
+      "inferno-combi-bolter": [
+       {
+        "item": "inferno-combi-bolter",
+        "n": 1
+       }
+      ],
+      "inferno-combi-weapon": [
+       {
+        "item": "inferno-combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "inferno-combi-bolter": "Inferno combi-bolter",
+      "inferno-combi-weapon": "Inferno combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "predator-autocannon"
+   ]
+  },
+  {
+   "id": "chaos-vindicator",
+   "name": {
+    "en": "Chaos Vindicator",
+    "es": "Chaos Vindicator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "TZEENTCH",
+    "VINDICATOR"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "9\"",
+     "T": "11",
+     "Sv": "2+",
+     "W": "11",
+     "Ld": "6+",
+     "OC": "3"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "demolisher-cannon",
+     "name": {
+      "en": "Demolisher cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-weapon",
+     "name": {
+      "en": "Inferno combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Siege Shield"
+     },
+     "text": {
+      "en": "When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Vindicator",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 inferno combi-bolter",
+      "1 inferno combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Vindicator"
+   ],
+   "equipped": [
+    "This model is equipped with: demolisher cannon; armoured tracks."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "demolisher-cannon": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "inferno-combi-bolter",
+      "inferno-combi-weapon"
+     ],
+     "packages": {
+      "inferno-combi-bolter": [
+       {
+        "item": "inferno-combi-bolter",
+        "n": 1
+       }
+      ],
+      "inferno-combi-weapon": [
+       {
+        "item": "inferno-combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "inferno-combi-bolter": "Inferno combi-bolter",
+      "inferno-combi-weapon": "Inferno combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "demolisher-cannon"
+   ]
+  },
+  {
+   "id": "defiler",
+   "name": {
+    "en": "Defiler",
+    "es": "Defiler"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "TZEENTCH",
+    "DAEMON",
+    "DEFILER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ectoplasma-destructor",
+     "name": {
+      "en": "Ectoplasma destructor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "excruciator-cannon",
+     "name": {
+      "en": "Excruciator cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hades-battle-cannon",
+     "name": {
+      "en": "Hades battle cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-lascannon",
+     "name": {
+      "en": "Hades lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "heavy-baleflamer",
+     "name": {
+      "en": "Heavy baleflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-missile-launcher",
+     "name": {
+      "en": "Heavy missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": [],
+       "mode": {
+        "en": "krak"
+       }
+      },
+      {
+       "range": "48\"",
+       "A": "2D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      }
+     ]
+    },
+    {
+     "id": "heavy-reaper-autocannon",
+     "name": {
+      "en": "Heavy reaper autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pyraflux-magma-cutters",
+     "name": {
+      "en": "Pyraflux magma cutters"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "electroscourge",
+     "name": {
+      "en": "Electroscourge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks",
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shearing-claws",
+     "name": {
+      "en": "Shearing claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "16",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Scuttling Walker"
+     },
+     "text": {
+      "en": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+     }
+    },
+    {
+     "name": {
+      "en": "Destroyer of Futures (Once per phase, per unit)"
+     },
+     "text": {
+      "en": "You can target this unit with the Counter-offensive stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is ‐1 CP. That use does not prevent any uses of that stratagem on other units this phase."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Defiler",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Hades battle cannon can be replaced with 1 ectoplasma destructor.",
+     "choices": []
+    },
+    {
+     "text": "This model’s excruciator cannons can be replaced with 2 pyraflux magma cutters",
+     "choices": []
+    },
+    {
+     "text": "This model’s heavy baleflamer can be replaced with one of the following:",
+     "choices": [
+      "1 Hades lascannon",
+      "1 heavy reaper autocannon",
+      "1 electroscourge (a model cannot be equipped with more than one electroscourge)"
+     ]
+    },
+    {
+     "text": "This model’s heavy missile launcher can be replaced with one of the following:",
+     "choices": [
+      "1 Hades lascannon",
+      "1 heavy reaper autocannon",
+      "1 electroscourge (a model cannot be equipped with more than one electroscourge)"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Defiler"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Hades battle cannon; 2 excruciator cannons; 1 heavy missile launcher; 1 heavy baleflamer; 1 shearing claws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-battle-cannon": 1,
+      "excruciator-cannon": 2,
+      "heavy-missile-launcher": 1,
+      "heavy-baleflamer": 1,
+      "shearing-claws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Hades battle cannon",
+      "es": "Hades battle cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-battle-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "ectoplasma-destructor"
+     ],
+     "packages": {
+      "ectoplasma-destructor": [
+       {
+        "item": "ectoplasma-destructor",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ectoplasma-destructor": "Ectoplasma destructor",
+      "": "Hades battle cannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Excruciator cannon",
+      "es": "Excruciator cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "excruciator-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "2xpyraflux-magma-cutters"
+     ],
+     "packages": {
+      "2xpyraflux-magma-cutters": [
+       {
+        "item": "pyraflux-magma-cutters",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xpyraflux-magma-cutters": "2× Pyraflux magma cutters",
+      "": "Excruciator cannon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Heavy baleflamer",
+      "es": "Heavy baleflamer"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-baleflamer",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hades-lascannon",
+      "heavy-reaper-autocannon",
+      "electroscourge"
+     ],
+     "packages": {
+      "hades-lascannon": [
+       {
+        "item": "hades-lascannon",
+        "n": 1
+       }
+      ],
+      "heavy-reaper-autocannon": [
+       {
+        "item": "heavy-reaper-autocannon",
+        "n": 1
+       }
+      ],
+      "electroscourge": [
+       {
+        "item": "electroscourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hades-lascannon": "Hades lascannon",
+      "heavy-reaper-autocannon": "Heavy reaper autocannon",
+      "electroscourge": "Electroscourge",
+      "": "Heavy baleflamer"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Heavy missile launcher",
+      "es": "Heavy missile launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-missile-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hades-lascannon",
+      "heavy-reaper-autocannon",
+      "electroscourge"
+     ],
+     "packages": {
+      "hades-lascannon": [
+       {
+        "item": "hades-lascannon",
+        "n": 1
+       }
+      ],
+      "heavy-reaper-autocannon": [
+       {
+        "item": "heavy-reaper-autocannon",
+        "n": 1
+       }
+      ],
+      "electroscourge": [
+       {
+        "item": "electroscourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hades-lascannon": "Hades lascannon",
+      "heavy-reaper-autocannon": "Heavy reaper autocannon",
+      "electroscourge": "Electroscourge",
+      "": "Heavy missile launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "excruciator-cannon",
+    "hades-battle-cannon",
+    "heavy-baleflamer",
+    "heavy-missile-launcher",
+    "shearing-claws"
+   ]
+  },
+  {
+   "id": "forgefiend",
+   "name": {
+    "en": "Forgefiend",
+    "es": "Forgefiend"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "DAEMON",
+    "CHAOS",
+    "TZEENTCH",
+    "FORGEFIEND"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "12",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ectoplasma-cannon",
+     "name": {
+      "en": "Ectoplasma cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-autocannon",
+     "name": {
+      "en": "Hades autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "forgefiend-claws",
+     "name": {
+      "en": "Forgefiend claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "forgefiend-jaws",
+     "name": {
+      "en": "Forgefiend jaws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "7",
+       "AP": "0",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Blazing Salvoes"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Forgefiend",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s 2 Hades autocannons can be replaced with 2 ectoplasma cannons.",
+     "choices": []
+    },
+    {
+     "text": "This model’s Forgefiend jaws can be replaced with 1 ectoplasma cannon and 1 Forgefiend claws.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Forgefiend"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 Hades autocannons; 1 Forgefiend jaws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-autocannon": 2,
+      "forgefiend-jaws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "2× Hades autocannon",
+      "es": "2× Hades autocannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-autocannon",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "",
+      "2xectoplasma-cannon"
+     ],
+     "packages": {
+      "2xectoplasma-cannon": [
+       {
+        "item": "ectoplasma-cannon",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xectoplasma-cannon": "2× Ectoplasma cannon",
+      "": "2× Hades autocannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Forgefiend jaws",
+      "es": "Forgefiend jaws"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "forgefiend-jaws",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "ectoplasma-cannon+forgefiend-claws"
+     ],
+     "packages": {
+      "ectoplasma-cannon+forgefiend-claws": [
+       {
+        "item": "ectoplasma-cannon",
+        "n": 1
+       },
+       {
+        "item": "forgefiend-claws",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ectoplasma-cannon+forgefiend-claws": "Ectoplasma cannon + Forgefiend claws",
+      "": "Forgefiend jaws"
+     }
+    }
+   ],
+   "loadout": [
+    "forgefiend-jaws",
+    "hades-autocannon"
+   ]
+  },
+  {
+   "id": "helbrute",
+   "name": {
+    "en": "Helbrute",
+    "es": "Helbrute"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "TZEENTCH",
+    "HELBRUTE"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "9",
+     "Sv": "2+",
+     "W": "8",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "helbrute-plasma-cannon",
+     "name": {
+      "en": "Helbrute plasma cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Hazardous"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "missile-launcher",
+     "name": {
+      "en": "Missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      },
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": [],
+       "mode": {
+        "en": "krak"
+       }
+      }
+     ]
+    },
+    {
+     "id": "multi-melta",
+     "name": {
+      "en": "Multi-melta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-autocannon",
+     "name": {
+      "en": "Twin autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-inferno-heavy-bolter",
+     "name": {
+      "en": "Twin inferno heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-lascannon",
+     "name": {
+      "en": "Twin lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "helbrute-fist",
+     "name": {
+      "en": "Helbrute fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "helbrute-hammer",
+     "name": {
+      "en": "Helbrute hammer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "4+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-scourge",
+     "name": {
+      "en": "Power scourge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Terrifying Assault"
+     },
+     "text": {
+      "en": "In your Shooting phase and the Fight phase, after this model has shot or fought, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test, subtracting 1 from that test if it is within 9\" of one or more THOUSAND SONS PSYKER units from your army."
+     }
+    },
+    {
+     "name": {
+      "en": "Devoted to Destruction"
+     },
+     "text": {
+      "en": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Helbrute",
+   "wargearOptions": [
+    {
+     "text": "This model’s multi-melta can be replaced with one of the following:",
+     "choices": [
+      "1 Helbrute plasma cannon",
+      "1 twin autocannon",
+      "1 twin inferno heavy bolter",
+      "1 twin lascannon",
+      "1 Helbrute fist"
+     ]
+    },
+    {
+     "text": "This model’s missile launcher can be replaced with one of the following:",
+     "choices": [
+      "1 Helbrute fist",
+      "1 Helbrute hammer",
+      "1 power scourge"
+     ]
+    },
+    {
+     "text": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:",
+     "choices": [
+      "1 inferno combi-bolter",
+      "1 heavy flamer"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Helbrute"
+   ],
+   "equipped": [
+    "This model is equipped with: missile launcher; multi-melta; close combat weapon."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "missile-launcher": 1,
+      "multi-melta": 1,
+      "close-combat-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Multi-melta",
+      "es": "Multi-melta"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "multi-melta",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "helbrute-plasma-cannon",
+      "twin-autocannon",
+      "twin-inferno-heavy-bolter",
+      "twin-lascannon",
+      "helbrute-fist"
+     ],
+     "packages": {
+      "helbrute-plasma-cannon": [
+       {
+        "item": "helbrute-plasma-cannon",
+        "n": 1
+       }
+      ],
+      "twin-autocannon": [
+       {
+        "item": "twin-autocannon",
+        "n": 1
+       }
+      ],
+      "twin-inferno-heavy-bolter": [
+       {
+        "item": "twin-inferno-heavy-bolter",
+        "n": 1
+       }
+      ],
+      "twin-lascannon": [
+       {
+        "item": "twin-lascannon",
+        "n": 1
+       }
+      ],
+      "helbrute-fist": [
+       {
+        "item": "helbrute-fist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "helbrute-plasma-cannon": "Helbrute plasma cannon",
+      "twin-autocannon": "Twin autocannon",
+      "twin-inferno-heavy-bolter": "Twin inferno heavy bolter",
+      "twin-lascannon": "Twin lascannon",
+      "helbrute-fist": "Helbrute fist",
+      "": "Multi-melta"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Missile launcher",
+      "es": "Missile launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "missile-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "helbrute-fist",
+      "helbrute-hammer",
+      "power-scourge"
+     ],
+     "packages": {
+      "helbrute-fist": [
+       {
+        "item": "helbrute-fist",
+        "n": 1
+       }
+      ],
+      "helbrute-hammer": [
+       {
+        "item": "helbrute-hammer",
+        "n": 1
+       }
+      ],
+      "power-scourge": [
+       {
+        "item": "power-scourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "helbrute-fist": "Helbrute fist",
+      "helbrute-hammer": "Helbrute hammer",
+      "power-scourge": "Power scourge",
+      "": "Missile launcher"
+     }
+    },
+    {
+     "id": "o3a",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "inferno-combi-bolter",
+      "heavy-flamer"
+     ],
+     "packages": {
+      "inferno-combi-bolter": [
+       {
+        "item": "inferno-combi-bolter",
+        "n": 1
+       }
+      ],
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "needs": [
+      {
+       "item": "helbrute-fist",
+       "n": 1
+      }
+     ],
+     "labels": {
+      "inferno-combi-bolter": "Inferno combi-bolter",
+      "heavy-flamer": "Heavy flamer",
+      "": "—"
+     }
+    },
+    {
+     "id": "o3b",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "inferno-combi-bolter",
+      "heavy-flamer"
+     ],
+     "packages": {
+      "inferno-combi-bolter": [
+       {
+        "item": "inferno-combi-bolter",
+        "n": 1
+       }
+      ],
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "needs": [
+      {
+       "item": "helbrute-fist",
+       "n": 2
+      }
+     ],
+     "labels": {
+      "inferno-combi-bolter": "Inferno combi-bolter",
+      "heavy-flamer": "Heavy flamer",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "missile-launcher",
+    "multi-melta"
+   ]
+  },
+  {
+   "id": "heldrake",
+   "name": {
+    "en": "Heldrake",
+    "es": "Heldrake"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FLY",
+    "DAEMON",
+    "CHAOS",
+    "TZEENTCH",
+    "HELDRAKE"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "12",
+     "Ld": "6+",
+     "OC": "0",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "baleflamer",
+     "name": {
+      "en": "Baleflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-autocannon",
+     "name": {
+      "en": "Hades autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "heldrake-claws",
+     "name": {
+      "en": "Heldrake claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Flame-wreathed"
+     },
+     "text": {
+      "en": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move. Until the end of the turn, models in that unit cannot have the Benefit of Cover."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Hover"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Heldrake",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Hades autocannon can be replaced with 1 baleflamer.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Heldrake"
+   ],
+   "equipped": [
+    "This model is equipped with: Hades autocannon; Heldrake claws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-autocannon": 1,
+      "heldrake-claws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Hades autocannon",
+      "es": "Hades autocannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-autocannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "baleflamer"
+     ],
+     "packages": {
+      "baleflamer": [
+       {
+        "item": "baleflamer",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "baleflamer": "Baleflamer",
+      "": "Hades autocannon"
+     }
+    }
+   ],
+   "loadout": [
+    "hades-autocannon",
+    "heldrake-claws"
+   ]
+  },
+  {
+   "id": "maulerfiend",
+   "name": {
+    "en": "Maulerfiend",
+    "es": "Maulerfiend"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "DAEMON",
+    "CHAOS",
+    "TZEENTCH",
+    "MAULERFIEND"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "12",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "magma-cutter",
+     "name": {
+      "en": "Magma cutter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lasher-tendrils",
+     "name": {
+      "en": "Lasher tendrils"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "maulerfiend-fists",
+     "name": {
+      "en": "Maulerfiend fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Snarling Protector"
+     },
+     "text": {
+      "en": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase. When this unit declares a charge, If a friendly engaged PSYKER unit is within 12\" of this unit, you can use this part of this ability. If you do: This unit can re-roll that charge roll. This unit must end that charge move engaged with an enemy unit engaged with that friendly PSYKER unit."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Maulerfiend",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s lasher tendrils can be replaced with 2 magma cutters.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Maulerfiend"
+   ],
+   "equipped": [
+    "This model is equipped with: lasher tendrils; Maulerfiend fists."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "lasher-tendrils": 1,
+      "maulerfiend-fists": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Lasher tendrils",
+      "es": "Lasher tendrils"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "lasher-tendrils",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "2xmagma-cutter"
+     ],
+     "packages": {
+      "2xmagma-cutter": [
+       {
+        "item": "magma-cutter",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xmagma-cutter": "2× Magma cutter",
+      "": "Lasher tendrils"
+     }
+    }
+   ],
+   "loadout": [
+    "lasher-tendrils",
+    "maulerfiend-fists"
+   ]
+  },
+  {
+   "id": "sekhetar-robots",
+   "name": {
+    "en": "Sekhetar Robots",
+    "es": "Sekhetar Robots"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "TZEENTCH",
+    "SEKHETAR ROBOTS"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-warpflamer",
+     "name": {
+      "en": "Heavy warpflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hellfyre-missile-rack",
+     "name": {
+      "en": "Hellfyre missile rack"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "pyreflux-meltagun",
+     "name": {
+      "en": "Pyreflux meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "warpflame-projector",
+     "name": {
+      "en": "Warpflame projector"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D3",
+       "skill": "-",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-claw",
+     "name": {
+      "en": "Power claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Prophetic Sentinels"
+     },
+     "text": {
+      "en": "Once per turn, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators",
+    "Stealth"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sekhetar-Robots",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their pyreflux meltagun replaced with 1 warpflame projector and 1 power claw.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "2-4 Sekhetar Robots"
+   ],
+   "equipped": [
+    "Every model is equipped with: heavy warpflamer; hellfyre missile rack; pyreflux meltagun; close combat weapon."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 2,
+     "loadout": {
+      "heavy-warpflamer": 2,
+      "hellfyre-missile-rack": 2,
+      "pyreflux-meltagun": 2,
+      "close-combat-weapon": 2
+     }
+    },
+    {
+     "models": 4,
+     "loadout": {
+      "heavy-warpflamer": 4,
+      "hellfyre-missile-rack": 4,
+      "pyreflux-meltagun": 4,
+      "close-combat-weapon": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Pyreflux meltagun",
+      "es": "sustituir Pyreflux meltagun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "pyreflux-meltagun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "warpflame-projector+power-claw"
+     ],
+     "packages": {
+      "warpflame-projector+power-claw": [
+       {
+        "item": "warpflame-projector",
+        "n": 1
+       },
+       {
+        "item": "power-claw",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "2": 2,
+      "4": 4
+     },
+     "labels": {
+      "warpflame-projector+power-claw": "Warpflame projector + Power claw"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "heavy-warpflamer",
+    "hellfyre-missile-rack",
+    "pyreflux-meltagun"
+   ]
+  },
+  {
+   "id": "chaos-land-raider",
+   "name": {
+    "en": "Chaos Land Raider",
+    "es": "Chaos Land Raider"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "TZEENTCH",
+    "LAND RAIDER"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "12",
+     "Sv": "2+",
+     "W": "16",
+     "Ld": "6+",
+     "OC": "5"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-weapon",
+     "name": {
+      "en": "Inferno combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "soulshatter-lascannon",
+     "name": {
+      "en": "Soulshatter lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-inferno-heavy-bolter",
+     "name": {
+      "en": "Twin inferno heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "4+",
+       "S": "8",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Assault Ramp"
+     },
+     "text": {
+      "en": "Each time a unit disembarks from this TRANSPORT after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Land-Raider",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 inferno combi-bolter",
+      "1 inferno combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Land Raider"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 soulshatter lascannons; twin inferno heavy bolter; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 14 THOUSAND SONS INFANTRY models. Each TERMINATOR model takes up the space of 2 models."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "soulshatter-lascannon": 2,
+      "twin-inferno-heavy-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "inferno-combi-bolter",
+      "inferno-combi-weapon"
+     ],
+     "packages": {
+      "inferno-combi-bolter": [
+       {
+        "item": "inferno-combi-bolter",
+        "n": 1
+       }
+      ],
+      "inferno-combi-weapon": [
+       {
+        "item": "inferno-combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "inferno-combi-bolter": "Inferno combi-bolter",
+      "inferno-combi-weapon": "Inferno combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "soulshatter-lascannon",
+    "twin-inferno-heavy-bolter"
+   ]
+  },
+  {
+   "id": "chaos-rhino",
+   "name": {
+    "en": "Chaos Rhino",
+    "es": "Chaos Rhino"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FRAME",
+    "DEDICATED TRANSPORT",
+    "SMOKE",
+    "CHAOS",
+    "TZEENTCH",
+    "RHINO"
+   ],
+   "factionKeywords": [
+    "THOUSAND SONS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-bolter",
+     "name": {
+      "en": "Inferno combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-combi-weapon",
+     "name": {
+      "en": "Inferno combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Sorcerous Support"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes a Psychic Attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Firing Deck 2"
+   ],
+   "factionAbilities": [],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Rhino",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 additional inferno combi-bolter",
+      "1 inferno combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher or can replace 1 inferno combi-bolter with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Rhino"
+   ],
+   "equipped": [
+    "This model is equipped with: inferno combi-bolter; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 12 THOUSAND SONS INFANTRY models (excluding TERMINATOR models)."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "inferno-combi-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "inferno-combi-bolter",
+      "inferno-combi-weapon"
+     ],
+     "packages": {
+      "inferno-combi-bolter": [
+       {
+        "item": "inferno-combi-bolter",
+        "n": 1
+       }
+      ],
+      "inferno-combi-weapon": [
+       {
+        "item": "inferno-combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "inferno-combi-bolter": "Inferno combi-bolter",
+      "inferno-combi-weapon": "Inferno combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "inferno-combi-bolter"
+   ]
+  }
+ ]
+}

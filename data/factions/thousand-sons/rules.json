@@ -1,0 +1,293 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/thousand-sons/",
+ "detachments": {
+  "grand-coven": {
+   "rule": {
+    "name": {
+     "en": "Kindred Sorcery"
+    },
+    "text": {
+     "en": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation\nAdd 6\" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.\nPsychic Maelstrom\nEach time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.\nWrath of the Immaterium\nPsychic weapons equipped by THOUSAND SONS models from your army have the [devastating wounds] ability."
+    }
+   },
+   "enhancements": {
+    "lord-of-forbidden-lore": {
+     "text": {
+      "en": "THOUSAND SONS model only. Each time the bearer manifests a Ritual, while resolving that Ritual, add 6\" to its range."
+     },
+     "points": 20
+    },
+    "incandaeum": {
+     "text": {
+      "en": "EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase."
+     },
+     "points": 15
+    },
+    "umbralefic-crystal": {
+     "text": {
+      "en": "THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:\nPlace this unit in strategic reserves.\nThis unit has Deep Strike until the start of your next Shooting phase.\nThis unit must make an ingress move in your next Movement phase (including in your first turn)."
+     },
+     "points": 30
+    },
+    "eldritch-vortex-of-etaph": {
+     "text": {
+      "en": "THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer."
+     },
+     "points": 35
+    }
+   }
+  },
+  "changehost-of-deceit": {
+   "rule": {
+    "name": {
+     "en": "Infernal Pacts"
+    },
+    "text": {
+     "en": "SCINTILLATING LEGIONS units from your army have the following the ability:\nDaemonic Illusions (Aura): While a friendly THOUSAND SONS PSYKER unit is within 6\" of and visible to this unit, models in that unit have a 4+ invulnerable save against ranged attacks.\nTHOUSAND SONS units from your army have the following ability:\nMortal Sorcery (Aura): While a friendly SCINTILLATING LEGIONS PSYKER unit is within 6\" of and visible to this unit, that SCINTILLATING LEGIONS unit has the Cabal of Sorcerers ability.\nRESTRICTIONS\nYou can include SCINTILLATING LEGIONS units in your army, even though they do not have the THOUSAND SONS Faction keyword. The combined points cost of such units you can include in your army is:\nIncursion: Up to 500 pts\nStrike Force: Up to 1000 pts\nOnslaught: Up to 1500 pts\nNo SCINTILLATING LEGIONS models from your army can be your WARLORD."
+    }
+   },
+   "enhancements": {
+    "nethershriek-mind-eater": {
+     "text": {
+      "en": "THOUSAND SONS or LORD OF CHANGE model only. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. That unit must take a Battle-shock test; if that test is failed, that unit suffers 3 mortal wounds."
+     },
+     "points": 10
+    },
+    "diabolic-savant": {
+     "text": {
+      "en": "THOUSAND SONS INFANTRY model only. While the bearer is within 6\" of one or more friendly SCINTILLATING LEGIONS units, each time the bearer Channels the Warp, add 1 to the Psychic test result."
+     },
+     "points": 20
+    },
+    "duplicitous-malediction": {
+     "text": {
+      "en": "THOUSAND SONS or LORD OF CHANGE model only. After both players have deployed their armies, select up to three THOUSAND SONS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+     },
+     "points": 15
+    },
+    "tome-of-true-names": {
+     "text": {
+      "en": "THOUSAND SONS INFANTRY model only. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer has a 2+ invulnerable save."
+     },
+     "points": 20
+    }
+   }
+  },
+  "warpmeld-pact": {
+   "rule": {
+    "name": {
+     "en": "Warpmeld Sacrifice"
+    },
+    "text": {
+     "en": "Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks, each of those TZEENTCH MUTANT units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.\nEach time a TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.\nKEYWORDS\nTZAANGORS units from your army have the BATTLELINE keyword, and while such a unit is not Battle-shocked, add 1 to the Objective Control characteristic of TZAANGOR models in that unit."
+    }
+   },
+   "enhancements": {
+    "warpmeld-dagger": {
+     "text": {
+      "en": "TZAANGOR SHAMAN model only. Each time the bearer attempts a Ritual, just before determining the Psychic test result, the bearer can use this Enhancement. If it does, the bearer suffers D3 mortal wounds; if it is not destroyed as a result, add 1 to that Psychic test result for each of those mortal wounds suffered."
+     },
+     "points": 10
+    },
+    "diamond-of-distortion": {
+     "text": {
+      "en": "TZAANGOR SHAMAN model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll."
+     },
+     "points": 20
+    },
+    "bray-lord": {
+     "text": {
+      "en": "LEADER: TZAANGORS\nSORCERER or INFERNAL MASTER model only. The bearer has the Scouts 6\" ability."
+     },
+     "points": 15
+    },
+    "flowing-flesh": {
+     "text": {
+      "en": "TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5."
+     },
+     "points": 10
+    }
+   }
+  },
+  "rubricae-phalanx": {
+   "rule": {
+    "name": {
+     "en": "All is Dust"
+    },
+    "text": {
+     "en": "Each time an attack with an unmodified Damage characteristic of 1 is allocated to a RUBRICAE model from your army, add 1 to any armour saving throw made against that attack."
+    }
+   },
+   "enhancements": {
+    "risen-rubricae": {
+     "text": {
+      "en": "THOUSAND SONS model only. At the start of the Declare Battle Formations step, select either two RUBRICAE BATTLELINE units from your army or one other RUBRICAE unit from your army; models in the selected units have the Infiltrators ability."
+     },
+     "points": 30
+    },
+    "arcane-thralls": {
+     "text": {
+      "en": "THOUSAND SONS model only. While a friendly RUBRICAE unit is within 9\" of the bearer, you can re-roll Battle-shock tests taken for that unit."
+     },
+     "points": 5
+    },
+    "lord-of-the-rubricae": {
+     "text": {
+      "en": "THOUSAND SONS model only. While the bearer is leading a unit, each time a RUBRICAE model in that unit makes an attack, add 1 to the Hit roll."
+     },
+     "points": 15
+    },
+    "the-stave-abominus": {
+     "text": {
+      "en": "THOUSAND SONS INFANTRY model only. The bearer’s melee weapons have the [sustained hits D3] and [devastating wounds] abilities."
+     },
+     "points": 20
+    }
+   }
+  },
+  "warpforged-cabal": {
+   "rule": {
+    "name": {
+     "en": "Warpfire Infusion"
+    },
+    "text": {
+     "en": "Each time a THOUSAND SONS VEHICLE unit from your army is selected to shoot or fight, apply one of the following when resolving those attacks:\nIf that VEHICLE unit is within 6\" of one or more friendly THOUSAND SONS PSYKER models, you can re-roll one Hit roll, one Wound roll and one Damage roll.\nOtherwise, you can re-roll one Hit roll, one Wound roll or one Damage roll.\nEach time a THOUSAND SONS VEHICLE model from your army with the Deadly Demise ability is destroyed while it is within 6\" of one or more friendly THOUSAND SONS PSYKER models, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 5+ instead of only a 6."
+    }
+   },
+   "enhancements": {
+    "warp-syphon": {
+     "text": {
+      "en": "THOUSAND SONS model only. While the bearer is within 6\" of one or more friendly THOUSAND SONS VEHICLE units, each time the bearer Channels the Warp, after you roll that additional D6 but before checking for doubles or triples, the bearer can use this Enhancement. If it does, select one of those VEHICLE units; that VEHICLE unit suffers 1 mortal wound and you can re-roll that additional D6."
+     },
+     "points": 5
+    },
+    "the-perplexing-cloak": {
+     "text": {
+      "en": "THOUSAND SONS INFANTRY model only. While the bearer is within 3\" of one or more friendly THOUSAND SONS VEHICLE units, the bearer has the Lone Operative ability."
+     },
+     "points": 20
+    },
+    "biomechanical-mutation": {
+     "text": {
+      "en": "THOUSAND SONS model only. In your Command phase, you can select one friendly THOUSAND SONS VEHICLE model within 6\" of this model. That model regains up to D3 lost wounds."
+     },
+     "points": 15
+    },
+    "warp-cursed-runemaster": {
+     "text": {
+      "en": "THOUSAND SONS model only. While the bearer is within 6\" of one or more friendly THOUSAND SONS VEHICLE units, each time the bearer manifests a Ritual, while resolving that Ritual, add 6\" to its range."
+     },
+     "points": 10
+    }
+   }
+  },
+  "ritual-of-regeneration": {
+   "rule": {
+    "name": {
+     "en": "Sorcerous Invigoration"
+    },
+    "text": {
+     "en": "(Once per turn, per unit) When a friendly THOUSAND SONS PSYKER unit (excluding MONSTER units) successfully manifests a Ritual, that unit heals D3 wounds."
+    }
+   },
+   "enhancements": {
+    "eruption-of-vitality": {
+     "text": {
+      "en": "INFANTRY/MOUNTED THOUSAND SONS PSYKER model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\nOn a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining."
+     },
+     "points": 35
+    },
+    "curse-of-life": {
+     "text": {
+      "en": "INFANTRY/MOUNTED THOUSAND SONS PSYKER model only. When this model heals as a result of the Sorcerous Invigoration detachment rule, you can add 3 to the number of wounds healed."
+     },
+     "points": 20
+    }
+   }
+  },
+  "sekhetar-cohort": {
+   "rule": {
+    "name": {
+     "en": "Ensorcelled Animus"
+    },
+    "text": {
+     "en": "Friendly SEKHETAR ROBOTS units’ attacks have [PSYCHIC].\nFriendly THOUSAND SONS PSYKER units have the following ability:\nInfusion (Aura): While a friendly SEKHETAR ROBOTS unit is within 12\" of this unit, that unit’s melee attacks have +1 WS."
+    }
+   },
+   "enhancements": {
+    "walking-rampart": {
+     "text": {
+      "en": "SORCERER/EXALTED SORCERER model only. This model has the following abilities:\nSoul Bound: In your Movement phase, at the start or end of this unit’s move, you can select one friendly SEKHETAR ROBOTS unit within 3\" of this model. That SEKHETAR ROBOTS unit heals D3+1 wounds.\nKine-shielded Guardians: While this model is within 3\" of a friendly SEKHETAR ROBOTS unit, this model has Lone Operative"
+     },
+     "points": 30
+    },
+    "occulus-infernum": {
+     "text": {
+      "en": "SORCERER/EXALTED SORCERER model only. In your Movement phase, at the start or end of this unit’s move, you can select one friendly SEKHETAR ROBOTS unit within 6\" of this unit. That unit’s ranged attacks have +1 BS until the start of your next turn."
+     },
+     "points": 20
+    }
+   }
+  },
+  "servants-of-change": {
+   "rule": {
+    "name": {
+     "en": "All-Seeing Mutant Hordes"
+    },
+    "text": {
+     "en": "Friendly TZAANGORS units have BATTLELINE.\nIn your Shooting phase, while a friendly MUTANT unit is shooting, enemy units have +6\" detection range.\nThis detachment has the MUTANT tag and cannot be taken with another MUTANT detachment."
+    }
+   },
+   "enhancements": {
+    "unravelled-fates": {
+     "text": {
+      "en": "TZAANGOR SHAMAN model only. In your Movement phase, at the start or end of this unit’s move, you can select one friendly battle-shocked MUTANT unit within 6\" of this model. That unit is no longer battle-shocked."
+     },
+     "points": 15
+    },
+    "thicket-of-bladed-bone": {
+     "text": {
+      "en": "SPAWN unit only. This unit’s melee attacks have:\n+1 AP.\n[CLEAVE 1]."
+     },
+     "points": 10
+    }
+   }
+  },
+  "hexwarp-thrallband": {
+   "rule": {
+    "name": {
+     "en": "Flow of Magic"
+    },
+    "text": {
+     "en": "Certain areas of the battlefield are within your army’s Flow of Magic, as follows:\nYour deployment zone is always within your army’s Flow of Magic.\nAt the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Flow of Magic.\nAt the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Flow of Magic.\nEach time a THOUSAND SONS model from your army makes a Psychic Attack, re-roll a Wound roll of 1. If such a model is wholly within your army’s Flow of Magic, each time it makes a Psychic Attack, add 1 to the Wound roll instead."
+    }
+   },
+   "enhancements": {
+    "arcane-might": {
+     "text": {
+      "en": "THOUSAND SONS model only. Add 1 to the Strength characteristic of Psychic weapons equipped by models in the bearer’s unit. While the bearer’s unit is wholly within your army’s Flow of Magic, add 2 to the Strength characteristic of Psychic weapons equipped by models in that unit instead."
+     },
+     "points": 20
+    },
+    "empowered-manifestation": {
+     "text": {
+      "en": "THOUSAND SONS model only. While the bearer’s unit is wholly within your army’s Flow of Magic, you can add 6\" to the range of Psychic abilities the bearer has that specify a range (including Rituals) and each time a model in the bearer’s unit takes a Hazardous test for a Psychic weapon, you can re-roll the result."
+     },
+     "points": 20
+    },
+    "empyric-onslaught": {
+     "text": {
+      "en": "THOUSAND SONS model only. While the bearer’s unit is wholly within your army’s Flow of Magic, add 3 to the Attacks characteristic of ranged Psychic weapons equipped by the bearer."
+     },
+     "points": 25
+    },
+    "noctilith-mantle": {
+     "text": {
+      "en": "THOUSAND SONS model only. While the bearer’s unit is on the battlefield, it is wholly within your army’s Flow of Magic. Models in that unit cannot be selected to use any Rituals."
+     },
+     "points": 15
+    }
+   }
+  }
+ }
+}

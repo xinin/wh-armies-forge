@@ -135,6 +135,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -492,6 +495,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -647,6 +654,10 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
    ],
    "stats": [
     {
@@ -807,6 +818,10 @@
     "PSYKER",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -955,6 +970,10 @@
     "EXPLOSIVES",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -1094,6 +1113,10 @@
     "EPIC HERO",
     "IMPERIUM",
     "TERMINATOR"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
    ],
    "stats": [
     {
@@ -1252,6 +1275,10 @@
     "MOBILE",
     "PRIMARCH"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -1406,6 +1433,10 @@
     "ANCIENT",
     "EPIC HERO",
     "CHAMPION"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
    ],
    "stats": [
     {
@@ -1625,6 +1656,10 @@
     "IMPERIUM",
     "TACTICUS",
     "PSYKER"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "ULTRAMARINES"
    ],
    "stats": [
     {

@@ -88,6 +88,8 @@ def collect():
                     add(f, 'model-type', o['owner'])
                 if o.get('name'):
                     add(f, 'wargear-option', o['name'])
+                for effect in o.get('effects', {}).values():
+                    add(f, 'wargear-choice', effect)
             for c in u.get('composition', []) + u.get('equipped', []):
                 add(f, 'composition', c)
             if u.get('attachRule'):

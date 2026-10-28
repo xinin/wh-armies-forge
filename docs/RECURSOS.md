@@ -84,7 +84,7 @@ Dependencias: `tools/requirements.txt`. Usa **CPython** (`/usr/bin/python3`), po
 | `faction_model.py` | El esquema de `faction.json` como clases (`Faction`, `Detachment`, `Enhancement`, `KeywordGrant`…): `bootstrap_faction.py` construye una `Faction` y la escribe con `to_json()`, con un orden de campos fijo | (usado por `bootstrap_faction.py`) |
 | `check_app.py` (+ `check_app.html`) | Abre la app en Chrome headless con una lista de prueba por facción y comprueba cada vista en español e inglés (errores, textos sin traducir, «undefined») | La app |
 | `translations.py` | Lista los textos de juego sin traducir (`pending`) y guarda las traducciones (`apply`) en los `i18n.es.json` | Datos importados |
-| `wahapedia_fetch.py` | Descarga con caché local (`.cache/wahapedia/`) para los importadores | Wahapedia |
+| `wahapedia_fetch.py` | Descarga con caché local (`.cache/wahapedia/`) para los importadores; si Wahapedia deja de responder, espera y reintenta (timeout de 60 s, 3 reintentos) | Wahapedia |
 | `import_wahapedia_rules.py` | Textos completos de reglas y mejoras, estratagemas de destacamento y Core | Wahapedia |
 | `store_images.py` | Abre la tienda en Chrome, recoge los productos y asigna fotos a las unidades | warhammer.com |
 | `download_drive_folder.py` | Descarga una carpeta pública de Drive | Google Drive |

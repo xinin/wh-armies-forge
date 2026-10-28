@@ -28,6 +28,9 @@
     "VANGUARD INVADER",
     "BROODLORD"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -128,6 +131,9 @@
     "VANGUARD INVADER",
     "DEATHLEAPER"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -222,6 +228,9 @@
     "GREAT DEVOURER",
     "SYNAPSE",
     "HIVE TYRANT"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -490,6 +499,9 @@
     "CHARACTER",
     "SYNAPSE"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -645,6 +657,9 @@
     "SYNAPSE",
     "NEUROTYRANT"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -774,6 +789,9 @@
     "GREAT DEVOURER",
     "OLD ONE EYE"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -884,6 +902,9 @@
     "GREAT DEVOURER",
     "VANGUARD INVADER",
     "PARASITE OF MORTREX"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -999,6 +1020,9 @@
     "GREAT DEVOURER",
     "SYNAPSE",
     "TERVIGON"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -1190,6 +1214,9 @@
     "VANGUARD INVADER",
     "THE RED TERROR"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -1304,6 +1331,9 @@
     "SYNAPSE",
     "HIVE TYRANT",
     "THE SWARMLORD"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -1433,6 +1463,9 @@
     "GREAT DEVOURER",
     "SYNAPSE",
     "TYRANID PRIME WITH LASH WHIP"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -1576,6 +1609,9 @@
     "VANGUARD INVADER",
     "HIVE TYRANT",
     "WINGED HIVE TYRANT"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -1809,6 +1845,9 @@
     "VANGUARD INVADER",
     "WINGED TYRANID PRIME"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -1907,6 +1946,9 @@
     "ENDLESS MULTITUDE",
     "VANGUARD INVADER",
     "GARGOYLES"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -2017,6 +2059,9 @@
     "ENDLESS MULTITUDE",
     "HORMAGAUNTS"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -2100,6 +2145,9 @@
     "GREAT DEVOURER",
     "ENDLESS MULTITUDE",
     "TERMAGANTS"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -2490,6 +2538,9 @@
     "GREAT DEVOURER",
     "BARBGAUNTS"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2595,6 +2646,9 @@
     "INFANTRY",
     "GREAT DEVOURER",
     "BIOVORES"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -2714,6 +2768,9 @@
     "VANGUARD INVADER",
     "GENESTEALERS"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -2798,6 +2855,9 @@
     "INFANTRY",
     "GREAT DEVOURER",
     "HIVE GUARD"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -2965,6 +3025,9 @@
     "VANGUARD INVADER",
     "LICTOR"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -3057,6 +3120,9 @@
     "GREAT DEVOURER",
     "MUCOLID SPORES"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "4\"",
@@ -3124,6 +3190,9 @@
     "GREAT DEVOURER",
     "ENDLESS MULTITUDE",
     "NEUROGAUNTS"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -3215,6 +3284,9 @@
     "VANGUARD INVADER",
     "SYNAPSE",
     "NEUROLICTOR"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -3316,6 +3388,9 @@
     "GREAT DEVOURER",
     "HARVESTER",
     "PYROVORES"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -3435,6 +3510,9 @@
     "BURROWERS",
     "RAVENERS"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -3515,6 +3593,9 @@
     "GREAT DEVOURER",
     "HARVESTER",
     "RIPPER SWARMS"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -3663,6 +3744,9 @@
     "GREAT DEVOURER",
     "SPORE MINES"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "4\"",
@@ -3730,6 +3814,9 @@
     "GREAT DEVOURER",
     "SYNAPSE",
     "TYRANID WARRIORS WITH MELEE BIO-WEAPONS"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -3817,6 +3904,9 @@
     "GREAT DEVOURER",
     "SYNAPSE",
     "TYRANID WARRIORS WITH RANGED BIO-WEAPONS"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -4125,6 +4215,9 @@
     "GREAT DEVOURER",
     "TYRANT GUARD"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -4296,6 +4389,9 @@
     "GREAT DEVOURER",
     "VENOMTHROPES"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -4382,6 +4478,9 @@
     "GREAT DEVOURER",
     "VANGUARD INVADER",
     "VON RYAN’S LEAPERS"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -4472,6 +4571,9 @@
     "GREAT DEVOURER",
     "SYNAPSE",
     "ZOANTHROPES"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -4607,6 +4709,9 @@
     "MONSTER",
     "GREAT DEVOURER",
     "CARNIFEXES"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -5062,6 +5167,9 @@
     "GREAT DEVOURER",
     "EXOCRINE"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -5171,6 +5279,9 @@
     "GREAT DEVOURER",
     "HARVESTER",
     "HARUSPEX"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -5304,6 +5415,9 @@
     "SYNAPSE",
     "MALECEPTOR"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -5432,6 +5546,9 @@
     "BURROWER",
     "MAWLOC"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -5543,6 +5660,9 @@
     "SYNAPSE",
     "HARVESTER",
     "NORN ASSIMILATOR"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -5682,6 +5802,9 @@
     "GREAT DEVOURER",
     "SYNAPSE",
     "NORN EMISSARY"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -5859,6 +5982,9 @@
     "SMOKE",
     "PSYCHOPHAGE"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -5972,6 +6098,9 @@
     "GREAT DEVOURER",
     "SCREAMER-KILLER"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -6072,6 +6201,9 @@
     "MONSTER",
     "GREAT DEVOURER",
     "SPOROCYST"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -6179,6 +6311,9 @@
     "GREAT DEVOURER",
     "FRAME",
     "TOXICRENE"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -6292,6 +6427,9 @@
     "BURROWER",
     "TRYGON"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -6400,6 +6538,9 @@
     "GREAT DEVOURER",
     "FRAME",
     "TYRANNOFEX"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -6624,6 +6765,9 @@
     "VANGUARD INVADER",
     "TYRANNOCYTE"
    ],
+   "factionKeywords": [
+    "TYRANIDS"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -6728,6 +6872,9 @@
     "GREAT DEVOURER",
     "VANGUARD INVADER",
     "HARPY"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {
@@ -6918,6 +7065,9 @@
     "GREAT DEVOURER",
     "VANGUARD INVADER",
     "HIVE CRONE"
+   ],
+   "factionKeywords": [
+    "TYRANIDS"
    ],
    "stats": [
     {

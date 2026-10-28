@@ -40,11 +40,14 @@ export const loadEdition = id => cached(editionCache, id, async () => {
   return { ...edition, coreStratagems: strats.stratagems };
 });
 
-// The faction's emblem as inline SVG (null: the app's default emblem). The faction picker only needs this.
+// The faction's emblem as inline SVG; without one, its parent's or group's (a Chapter, a Chaos Legion), else null
+// (the app's default emblem). The faction picker only needs this.
 const emblemCache = new Map();
 export const loadEmblem = entry => cached(emblemCache, entry.id, async () => {
   const raw = await fetch(`data/factions/${entry.path}/emblem.svg`).then(r => (r.ok ? r.text() : null)).catch(() => null);
-  return raw?.includes('<svg') ? prepareSvg(raw) : null;
+  if (raw?.includes('<svg')) return prepareSvg(raw);
+  const family = factionEntries.find(f => f.id === (entry.parent ?? entry.group));
+  return family ? loadEmblem(family) : null;
 });
 
 const factionCache = new Map();

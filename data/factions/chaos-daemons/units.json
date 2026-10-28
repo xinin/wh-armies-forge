@@ -71,6 +71,9 @@
     "BE’LAKOR",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -235,6 +238,9 @@
     "BLOODMASTER",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -332,6 +338,9 @@
     "KHORNE",
     "BLOODTHIRSTER",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -607,6 +616,9 @@
     "CHANGECASTER",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -748,6 +760,9 @@
     "CONTORTED EPITOME",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "9\"",
@@ -869,6 +884,9 @@
     "DAEMON",
     "DAEMON PRINCE OF CHAOS WITH WINGS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -995,6 +1013,9 @@
     "DAEMON",
     "DAEMON PRINCE OF CHAOS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -1131,6 +1152,9 @@
     "NURGLE",
     "EPIDEMIUS"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -1230,6 +1254,9 @@
     "TZEENTCH",
     "EXALTED FLAMER",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -1371,6 +1398,9 @@
     "TZEENTCH",
     "FATESKIMMER",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -1538,6 +1568,9 @@
     "FLUXMASTER",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -1679,6 +1712,9 @@
     "NURGLE",
     "GREAT UNCLEAN ONE",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -1963,6 +1999,9 @@
     "NURGLE",
     "HORTICULOUS SLIMUX"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2084,6 +2123,9 @@
     "SLAANESH",
     "INFERNAL ENRAPTURESS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -2225,6 +2267,9 @@
     "DAEMON",
     "TZEENTCH",
     "KAIROS FATEWEAVER"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -2380,6 +2425,9 @@
     "KHORNE",
     "KARANAK"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -2515,6 +2563,9 @@
     "SLAANESH",
     "KEEPER OF SECRETS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -2793,6 +2844,9 @@
     "LORD OF CHANGE",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -3027,6 +3081,9 @@
     "POXBRINGER",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -3126,6 +3183,9 @@
     "KHORNE",
     "RENDMASTER ON BLOOD THRONE",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -3240,6 +3300,9 @@
     "DAEMON",
     "NURGLE",
     "ROTIGUS"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -3395,6 +3458,9 @@
     "DAEMON",
     "SLAANESH",
     "SHALAXI HELBANE"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -3594,6 +3660,9 @@
     "KHORNE",
     "SKARBRAND"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -3740,6 +3809,9 @@
     "SKULLMASTER",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -3860,6 +3932,9 @@
     "KHORNE",
     "SKULLTAKER"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -3960,6 +4035,9 @@
     "SLOPPITY BILEPIPER",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -4058,6 +4136,9 @@
     "NURGLE",
     "SPOILPOX SCRIVENER",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -4181,6 +4262,9 @@
     "DAEMON",
     "SLAANESH",
     "SYLL’ESSKE"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -4370,6 +4454,9 @@
     "TZEENTCH",
     "THE BLUE SCRIBES"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -4464,6 +4551,9 @@
     "DAEMON",
     "TZEENTCH",
     "THE CHANGELING"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -4605,6 +4695,9 @@
     "SLAANESH",
     "THE MASQUE OF SLAANESH"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "9\"",
@@ -4700,6 +4793,9 @@
     "SLAANESH",
     "TORMENTBRINGER ON EXALTED SEEKER CHARIOT",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -4870,6 +4966,9 @@
     "TRANCEWEAVER",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "9\"",
@@ -4970,6 +5069,9 @@
     "BLOODLETTERS",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -5066,16 +5168,16 @@
     {
      "id": "o1",
      "label": {
-      "en": "Bloodletter: add Instrument of chao",
-      "es": "Bloodletter: añadir Instrument of chao"
+      "en": "Bloodletter: add Instrument of chaos",
+      "es": "Bloodletter: añadir Instrument of chaos"
      },
      "type": "toggle",
      "replaces": [],
-     "gives": "gear:instrument-of-chao",
+     "gives": "gear:instrument-of-chaos",
      "packages": {
-      "gear:instrument-of-chao": [
+      "gear:instrument-of-chaos": [
        {
-        "item": "gear:instrument-of-chao",
+        "item": "gear:instrument-of-chaos",
         "n": 1
        }
       ]
@@ -5085,7 +5187,7 @@
      },
      "owner": "Bloodletter",
      "labels": {
-      "gear:instrument-of-chao": "Instrument of chao"
+      "gear:instrument-of-chaos": "Instrument of chaos"
      }
     },
     {
@@ -5133,6 +5235,9 @@
     "HORRORS",
     "BLUE",
     "BRIMSTONE: SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -5301,6 +5406,9 @@
     "DAEMONETTES",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "9\"",
@@ -5400,16 +5508,16 @@
     {
      "id": "o1",
      "label": {
-      "en": "Daemonette: add Instrument of chao",
-      "es": "Daemonette: añadir Instrument of chao"
+      "en": "Daemonette: add Instrument of chaos",
+      "es": "Daemonette: añadir Instrument of chaos"
      },
      "type": "toggle",
      "replaces": [],
-     "gives": "gear:instrument-of-chao",
+     "gives": "gear:instrument-of-chaos",
      "packages": {
-      "gear:instrument-of-chao": [
+      "gear:instrument-of-chaos": [
        {
-        "item": "gear:instrument-of-chao",
+        "item": "gear:instrument-of-chaos",
         "n": 1
        }
       ]
@@ -5419,7 +5527,7 @@
      },
      "owner": "Daemonette",
      "labels": {
-      "gear:instrument-of-chao": "Instrument of chao"
+      "gear:instrument-of-chaos": "Instrument of chaos"
      }
     },
     {
@@ -5466,6 +5574,9 @@
     "NURGLE",
     "NURGLINGS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -5560,6 +5671,9 @@
     "PINK",
     "BLUE",
     "BRIMSTONE: SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -5765,16 +5879,16 @@
     {
      "id": "o1",
      "label": {
-      "en": "Pink Horror: add Instrument of chao",
-      "es": "Pink Horror: añadir Instrument of chao"
+      "en": "Pink Horror: add Instrument of chaos",
+      "es": "Pink Horror: añadir Instrument of chaos"
      },
      "type": "toggle",
      "replaces": [],
-     "gives": "gear:instrument-of-chao",
+     "gives": "gear:instrument-of-chaos",
      "packages": {
-      "gear:instrument-of-chao": [
+      "gear:instrument-of-chaos": [
        {
-        "item": "gear:instrument-of-chao",
+        "item": "gear:instrument-of-chaos",
         "n": 1
        }
       ]
@@ -5784,7 +5898,7 @@
      },
      "owner": "Pink Horror",
      "labels": {
-      "gear:instrument-of-chao": "Instrument of chao"
+      "gear:instrument-of-chaos": "Instrument of chaos"
      }
     },
     {
@@ -5836,6 +5950,9 @@
     "NURGLE",
     "PLAGUEBEARERS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -5935,16 +6052,16 @@
     {
      "id": "o1",
      "label": {
-      "en": "Plaguebearer: add Instrument of chao",
-      "es": "Plaguebearer: añadir Instrument of chao"
+      "en": "Plaguebearer: add Instrument of chaos",
+      "es": "Plaguebearer: añadir Instrument of chaos"
      },
      "type": "toggle",
      "replaces": [],
-     "gives": "gear:instrument-of-chao",
+     "gives": "gear:instrument-of-chaos",
      "packages": {
-      "gear:instrument-of-chao": [
+      "gear:instrument-of-chaos": [
        {
-        "item": "gear:instrument-of-chao",
+        "item": "gear:instrument-of-chaos",
         "n": 1
        }
       ]
@@ -5954,7 +6071,7 @@
      },
      "owner": "Plaguebearer",
      "labels": {
-      "gear:instrument-of-chao": "Instrument of chao"
+      "gear:instrument-of-chaos": "Instrument of chaos"
      }
     },
     {
@@ -6000,6 +6117,9 @@
     "NURGLE",
     "BEASTS OF NURGLE",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -6093,6 +6213,9 @@
     "FIENDS",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -6184,6 +6307,9 @@
     "TZEENTCH",
     "FLAMERS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -6298,6 +6424,9 @@
     "KHORNE",
     "FLESH HOUNDS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -6427,6 +6556,9 @@
     "SCREAMERS",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -6517,6 +6649,9 @@
     "KHORNE",
     "BLOODCRUSHERS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -6643,16 +6778,16 @@
     {
      "id": "o1",
      "label": {
-      "en": "Bloodcrusher: add Instrument of chao",
-      "es": "Bloodcrusher: añadir Instrument of chao"
+      "en": "Bloodcrusher: add Instrument of chaos",
+      "es": "Bloodcrusher: añadir Instrument of chaos"
      },
      "type": "toggle",
      "replaces": [],
-     "gives": "gear:instrument-of-chao",
+     "gives": "gear:instrument-of-chaos",
      "packages": {
-      "gear:instrument-of-chao": [
+      "gear:instrument-of-chaos": [
        {
-        "item": "gear:instrument-of-chao",
+        "item": "gear:instrument-of-chaos",
         "n": 1
        }
       ]
@@ -6663,7 +6798,7 @@
      },
      "owner": "Bloodcrusher",
      "labels": {
-      "gear:instrument-of-chao": "Instrument of chao"
+      "gear:instrument-of-chaos": "Instrument of chaos"
      }
     },
     {
@@ -6712,6 +6847,9 @@
     "TZEENTCH",
     "BURNING CHARIOT",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -6860,6 +6998,9 @@
     "SLAANESH",
     "HELLFLAYERS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -7025,6 +7166,9 @@
     "PLAGUE DRONES",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -7175,16 +7319,16 @@
     {
      "id": "o1",
      "label": {
-      "en": "Plague Drone: add Instrument of chao",
-      "es": "Plague Drone: añadir Instrument of chao"
+      "en": "Plague Drone: add Instrument of chaos",
+      "es": "Plague Drone: añadir Instrument of chaos"
      },
      "type": "toggle",
      "replaces": [],
-     "gives": "gear:instrument-of-chao",
+     "gives": "gear:instrument-of-chaos",
      "packages": {
-      "gear:instrument-of-chao": [
+      "gear:instrument-of-chaos": [
        {
-        "item": "gear:instrument-of-chao",
+        "item": "gear:instrument-of-chaos",
         "n": 1
        }
       ]
@@ -7195,7 +7339,7 @@
      },
      "owner": "Plague Drone",
      "labels": {
-      "gear:instrument-of-chao": "Instrument of chao"
+      "gear:instrument-of-chaos": "Instrument of chaos"
      }
     },
     {
@@ -7244,6 +7388,9 @@
     "SLAANESH",
     "SEEKERS",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -7373,16 +7520,16 @@
     {
      "id": "o1",
      "label": {
-      "en": "Seeker: add Instrument of chao",
-      "es": "Seeker: añadir Instrument of chao"
+      "en": "Seeker: add Instrument of chaos",
+      "es": "Seeker: añadir Instrument of chaos"
      },
      "type": "toggle",
      "replaces": [],
-     "gives": "gear:instrument-of-chao",
+     "gives": "gear:instrument-of-chaos",
      "packages": {
-      "gear:instrument-of-chao": [
+      "gear:instrument-of-chaos": [
        {
-        "item": "gear:instrument-of-chao",
+        "item": "gear:instrument-of-chaos",
         "n": 1
        }
       ]
@@ -7393,7 +7540,7 @@
      },
      "owner": "Seeker",
      "labels": {
-      "gear:instrument-of-chao": "Instrument of chao"
+      "gear:instrument-of-chaos": "Instrument of chaos"
      }
     },
     {
@@ -7441,6 +7588,9 @@
     "KHORNE",
     "SKULL CANNON",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -7567,6 +7717,9 @@
     "DAEMON",
     "SOUL GRINDER",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {
@@ -7924,6 +8077,9 @@
     "FECULENT GNARLMAW",
     "SHADOW LEGION"
    ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
+   ],
    "stats": [
     {
      "M": "-",
@@ -7998,6 +8154,9 @@
     "KHORNE",
     "SKULL ALTAR",
     "SHADOW LEGION"
+   ],
+   "factionKeywords": [
+    "LEGIONES DAEMONICA"
    ],
    "stats": [
     {

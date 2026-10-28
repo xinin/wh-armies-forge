@@ -478,7 +478,7 @@
      "en": "Masters of Camouflage"
     },
     "text": {
-     "en": "Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth. Errata Show Recon Element Detachment, Masters of Camouflage Detachment Rule Change to: ‘Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth.’"
+     "en": "Friendly ASTRA MILITARUM units (excluding TITANIC units) have Stealth."
     }
    },
    "enhancements": [
@@ -719,6 +719,7 @@
      "id": "bombast-class-vox-array",
      "requires": [
       [
+       "MILITARUM",
        "TEMPESTUS",
        "OFFICER"
       ]
@@ -734,6 +735,7 @@
      "id": "priority-drop-beacon",
      "requires": [
       [
+       "MILITARUM",
        "TEMPESTUS",
        "OFFICER"
       ]

@@ -1,0 +1,628 @@
+{
+ "id": "death-guard",
+ "name": {
+  "en": "Death Guard",
+  "es": "Guardia de la Muerte"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+ "armyRule": {
+  "name": {
+   "en": "Nurgle’s Gift (Aura)"
+  },
+  "text": {
+   "en": "If your Army Faction is DEATH GUARD, while an enemy unit is within Contagion Range of one or more DEATH GUARD models from your army, it is Afflicted (see below).\nCONTAGION RANGE\nContagion Range changes over the course of the battle:\nContagion Range cannot be greater than 12\" after modifiers.\nAFFLICTED\nDuring the Declare Battle Formations step, select one of the Plagues below. Until the end of the battle, while an enemy unit is Afflicted, subtract 1 from the Toughness characteristic of models in that unit, and that unit has the effect of your chosen Plague."
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Skullsquirm Blight\nThis horrifying affliction sees the minds and senses of the victim gnawed gradually away from within."
+    },
+    "text": {
+     "en": "Each time a model in this unit makes a ranged attack, enemy units have the benefit of cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
+    }
+   },
+   {
+    "name": {
+     "en": "Rattlejoint Ague\nLimbs shuddering with fever palsy, bones turned brittle as glass, these warriors can barely act to defend themselves."
+    },
+    "text": {
+     "en": "Worsen the Save characteristic of models in this unit by 1."
+    }
+   },
+   {
+    "name": {
+     "en": "Scabrous Soulrot\nVictims of this insidious ailment become glassy eyed and morose as their very animus and essence decay."
+    },
+    "text": {
+     "en": "Worsen the Move, Leadership, and Objective Control characteristics of models in this unit by 1 (this rule can only worsen a model’s Objective Control characteristic to a minimum of 1)."
+    }
+   }
+  ]
+ },
+ "wahapedia": {
+  "faction": "death-guard",
+  "otherFactions": [
+   "PLAGUE LEGIONS"
+  ]
+ },
+ "detachments": [
+  {
+   "id": "virulent-vectorium",
+   "cost": 3,
+   "name": {
+    "en": "Virulent Vectorium"
+   },
+   "rule": {
+    "name": {
+     "en": "Worldblight"
+    },
+    "text": {
+     "en": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "daemon-weapon-of-nurgle",
+     "requires": [],
+     "name": {
+      "en": "Daemon Weapon of Nurgle"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. Each time the bearer makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+     }
+    },
+    {
+     "id": "furnace-of-plagues",
+     "requires": [],
+     "name": {
+      "en": "Furnace of Plagues"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. Add 1 to the Strength and Attacks characteristics of the bearers melee weapons, and the bearer’s melee weapons have the [DEVASTATING WOUNDS] ability."
+     }
+    },
+    {
+     "id": "arch-contaminator",
+     "requires": [],
+     "name": {
+      "en": "Arch Contaminator"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. While the bearer’s unit is within range of an objective marker you control, each time a model in the bearer’s unit makes an attack, you can re-roll the Wound roll."
+     }
+    },
+    {
+     "id": "revolting-regeneration",
+     "requires": [],
+     "name": {
+      "en": "Revolting Regeneration"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. The bearer has the Feel No Pain 5+ ability."
+     }
+    }
+   ]
+  },
+  {
+   "id": "shamblerot-vectorium",
+   "cost": 2,
+   "name": {
+    "en": "Shamblerot Vectorium"
+   },
+   "rule": {
+    "name": {
+     "en": "Numberless Horde"
+    },
+    "text": {
+     "en": "In your Command phase in each of the following battle rounds, depending on your chosen battle size, add a new POXWALKERS unit with a Starting Strength of 10 to your army, in Strategic Reserves. BATTLE SIZE BATTLE ROUNDS Incursion 2,3 Strike Force 2, 3, 4 Onslaught 2, 3, 4, 5 KEYWORDS POXWALKERS units from your army…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "witherbone-pipes",
+     "requires": [
+      [
+       "NOXIOUS",
+       "BLIGHTBRINGER"
+      ]
+     ],
+     "name": {
+      "en": "Witherbone Pipes"
+     },
+     "text": {
+      "en": "NOXIOUS BLIGHTBRINGER only. While the bearer is leading a POXWALKERS unit, add 1 to the Objective Control characteristic of models in that unit, and each time that unit takes a Battle-shock or…"
+     }
+    },
+    {
+     "id": "lord-of-the-walking-pox",
+     "requires": [],
+     "name": {
+      "en": "Lord of the Walking Pox"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. If the bearer is leading a POXWALKER unit, and is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as the…"
+     }
+    },
+    {
+     "id": "sorrowsyphon",
+     "requires": [
+      [
+       "MALIGNANT",
+       "PLAGUECASTER"
+      ]
+     ],
+     "name": {
+      "en": "Sorrowsyphon"
+     },
+     "text": {
+      "en": "MALIGNANT PLAGUECASTER only. While the bearer is leading a POXWALKERS unit, add 1 to the Damage characteristic of the bearer’s Plague Wind weapon. Each time the bearer makes one or more attacks with…"
+     }
+    },
+    {
+     "id": "talisman-of-burgeoning",
+     "requires": [],
+     "name": {
+      "en": "Talisman of Burgeoning"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. While the bearer is leading a unit, add 1 to the Toughness characteristic of POXWALKERS models in that unit."
+     }
+    }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BATTLELINE",
+     "units": [
+      [
+       "POXWALKERS"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tallyband-summoners",
+   "cost": 2,
+   "name": {
+    "en": "Tallyband Summoners"
+   },
+   "rule": {
+    "name": {
+     "en": "Reverberant Rancidity"
+    },
+    "text": {
+     "en": "While a PLAGUE LEGIONS unit from your army is within 7\" of one or more DEATH GUARD units from your army, that PLAGUE LEGIONS unit has the Nurgle’s Gift ability. While a DEATH GUARD unit from your army is within 7\" of one or more PLAGUE LEGIONS units from your army, add 3\" to that DEATH GUARD units Contagion Range.…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "beckoning-blight",
+     "requires": [],
+     "name": {
+      "en": "Beckoning Blight"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. Each time a PLAGUE LEGIONS unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within 12\" of the bearer, it can be set up…"
+     }
+    },
+    {
+     "id": "fell-harvester",
+     "requires": [],
+     "name": {
+      "en": "Fell Harvester"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. Add 2 to the Attacks characteristic of the bearer’s melee weapons."
+     }
+    },
+    {
+     "id": "entropic-knell",
+     "requires": [
+      [
+       "GREAT",
+       "UNCLEAN",
+       "ONE"
+      ]
+     ],
+     "name": {
+      "en": "Entropic Knell"
+     },
+     "text": {
+      "en": "GREAT UNCLEAN ONE only. In the Battle-shock step of your opponent’s Command phase, each enemy unit within 6\" of the bearer that is below its Starting Strength must take a Battle-shock test,…"
+     }
+    },
+    {
+     "id": "tome-of-bounteous-blessings",
+     "requires": [
+      [
+       "MALIGNANT",
+       "PLAGUECASTER"
+      ]
+     ],
+     "name": {
+      "en": "Tome of Bounteous Blessings"
+     },
+     "text": {
+      "en": "MALIGNANT PLAGUECASTER only. Each time a PLAGUE LEGIONS unit within 12\" of the bearer takes a Battle-shock test, add 1 to that test and, if that test is passed, one model in that unit regains up to…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "death-lords-chosen",
+   "cost": 2,
+   "name": {
+    "en": "Death Lord’s Chosen"
+   },
+   "rule": {
+    "name": {
+     "en": "Deadly Vectors"
+    },
+    "text": {
+     "en": "In your opponent’s Command phase, roll 2D6 for each Afflicted enemy unit, subtracting 1 from the result if that unit is Below Half-strength. If the result is 6 or less, that enemy unit suffers D3 mortal wounds."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "face-of-death",
+     "requires": [
+      [
+       "TERMINATOR"
+      ]
+     ],
+     "name": {
+      "en": "Face of Death"
+     },
+     "text": {
+      "en": "TERMINATOR model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle-shock test."
+     }
+    },
+    {
+     "id": "vile-vigour",
+     "requires": [
+      [
+       "TERMINATOR"
+      ]
+     ],
+     "name": {
+      "en": "Vile Vigour"
+     },
+     "text": {
+      "en": "TERMINATOR model only. While the bearer is leading a unit, add 1\" to the Movement characteristic of models in that unit and you can re-roll Advance rolls made for that unit."
+     }
+    },
+    {
+     "id": "warprot-talisman",
+     "requires": [
+      [
+       "TERMINATOR"
+      ]
+     ],
+     "name": {
+      "en": "Warprot Talisman"
+     },
+     "text": {
+      "en": "TERMINATOR model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and…"
+     }
+    },
+    {
+     "id": "helm-of-the-fly-king",
+     "requires": [
+      [
+       "TERMINATOR"
+      ]
+     ],
+     "name": {
+      "en": "Helm of the Fly King"
+     },
+     "text": {
+      "en": "TERMINATOR model only. While the bearer is leading a unit, models in that unit cannot be targeted by ranged attacks unless the attacking model is within 18\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "mortarions-hammer",
+   "cost": 2,
+   "name": {
+    "en": "Mortarion’s Hammer"
+   },
+   "rule": {
+    "name": {
+     "en": "Miasmic Bombardment"
+    },
+    "text": {
+     "en": "At the start of the battle round, select a number of enemy units more than 12\" away from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below. BATTLE…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eye-of-affliction",
+     "requires": [],
+     "name": {
+      "en": "Eye of Affliction"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. Ranged weapons equipped by models in the bearer’s unit have the [ignores cover] ability while targeting an Afflicted enemy unit."
+     }
+    },
+    {
+     "id": "bilemaw-blight",
+     "requires": [
+      [
+       "MALIGNANT",
+       "PLAGUECASTER"
+      ]
+     ],
+     "name": {
+      "en": "Bilemaw Blight"
+     },
+     "text": {
+      "en": "MALIGNANT PLAGUECASTER only. At the start of your Shooting phase, until the end of the phase, add 12\" to the Range characteristics of the bearer’s Plague Wind weapon."
+     }
+    },
+    {
+     "id": "shriekworm-familiar",
+     "requires": [],
+     "name": {
+      "en": "Shriekworm Familiar"
+     },
+     "text": {
+      "en": "DEATH GUARD model only. Once per battle round, you can target the bearer’s unit with the Fire Overwatch Stratagem for 0CP."
+     }
+    },
+    {
+     "id": "tendrilous-emissions",
+     "requires": [
+      [
+       "LORD",
+       "OF",
+       "VIRULENCE"
+      ]
+     ],
+     "name": {
+      "en": "Tendrilous Emissions"
+     },
+     "text": {
+      "en": "LORD OF VIRULENCE only. While the bearer is within 3\" of one or more friendly DEATH GUARD VEHICLE units, the bearer has the Lone Operative ability, and each time one of those VEHICLE units makes a…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "champions-of-contagion",
+   "cost": 2,
+   "name": {
+    "en": "Champions of Contagion"
+   },
+   "rule": {
+    "name": {
+     "en": "Manifold Maladies"
+    },
+    "text": {
+     "en": "At the start of the battle round, you can select one of the Plagues listed in Nurgle’s Gift. Until the end of the battle, that is your chosen Plague instead of any previously chosen Plague."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "final-ingredient",
+     "requires": [
+      [
+       "BIOLOGUS",
+       "PUTRIFIER"
+      ]
+     ],
+     "name": {
+      "en": "Final Ingredient"
+     },
+     "text": {
+      "en": "BIOLOGUS PUTRIFIER only. Once per battle, after the bearers unit has fought, if one or more CHARACTER models were destroyed as a result of those attacks, select one Plague. Until the end of the…"
+     }
+    },
+    {
+     "id": "visions-of-virulence",
+     "requires": [
+      [
+       "MALIGNANT",
+       "PLAGUECASTER"
+      ]
+     ],
+     "name": {
+      "en": "Visions of Virulence"
+     },
+     "text": {
+      "en": "MALIGNANT PLAGUECASTER only. While an enemy unit is enfeebled by the bearer’s Pestilent Fallout ability, that unit is also Afflicted."
+     }
+    },
+    {
+     "id": "needle-of-nurgle",
+     "requires": [
+      [
+       "PLAGUE",
+       "SURGEON"
+      ]
+     ],
+     "name": {
+      "en": "Needle of Nurgle"
+     },
+     "text": {
+      "en": "PLAGUE SURGEON only. Each time the bearer uses its Tainted Narthecium ability, you can return up to D3 destroyed models to the bearer’s unit (instead of 1)."
+     }
+    },
+    {
+     "id": "cornucophagus",
+     "requires": [
+      [
+       "LORD",
+       "OF",
+       "POXES"
+      ]
+     ],
+     "name": {
+      "en": "Cornucophagus"
+     },
+     "text": {
+      "en": "LORD OF POXES only. In the Declare Battle Formations step select one Plague. Until the end of the battle, while an enemy unit is within Contagion Range of the bearer, that enemy unit has the effect…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "paragons-of-putrescence",
+   "cost": 1,
+   "name": {
+    "en": "Paragons of Putrescence"
+   },
+   "rule": {
+    "name": {
+     "en": "Hypervirulent Strains"
+    },
+    "text": {
+     "en": "Friendly DEATH GUARD CHARACTER units have +3\" to their Contagion Range (to a maximum of 12\")."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "rejuvenating-swarm",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Rejuvenating Swarm"
+     },
+     "text": {
+      "en": "DEATH GUARD INFANTRY model only (excluding TERMINATOR models). Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
+     },
+     "excludes": [
+      [
+       "TERMINATOR"
+      ]
+     ]
+    },
+    {
+     "id": "host-of-the-hybridised-pox",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Host of the Hybridised Pox"
+     },
+     "text": {
+      "en": "DEATH GUARD INFANTRY model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plague listed in Nurgle’s Gift. Enemy units within Contagion…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "contagion-engines",
+   "cost": 1,
+   "tags": [
+    "ENGINES"
+   ],
+   "name": {
+    "en": "Contagion Engines"
+   },
+   "rule": {
+    "name": {
+     "en": "Warped and Rusted Animus"
+    },
+    "text": {
+     "en": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. This detachment has the ENGINES tag and cannot be taken with another ENGINES detachment."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "parasitic-woe-reaper",
+     "requires": [
+      [
+       "CONTAGION",
+       "ENGINE"
+      ]
+     ],
+     "name": {
+      "en": "Parasitic Woe-Reaper"
+     },
+     "text": {
+      "en": "CONTAGION ENGINE unit only. When this unit has fought, one model in this unit heals D3 wounds."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "lancet-of-the-worldsore",
+     "requires": [
+      [
+       "HELBRUTE"
+      ],
+      [
+       "MYPHITIC",
+       "BLIGHT-HAULER"
+      ]
+     ],
+     "name": {
+      "en": "Lancet of the Worldsore"
+     },
+     "text": {
+      "en": "Friendly HELBRUTE/MYPHITIC BLIGHT-HAULER unit only. This unit has MOBILE."
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "flyblown-host",
+   "cost": 1,
+   "tags": [
+    "FLYBLOWN"
+   ],
+   "name": {
+    "en": "Flyblown Host"
+   },
+   "rule": {
+    "name": {
+     "en": "Verminous Haze"
+    },
+    "text": {
+     "en": "In the Declare Battle Formations step, you can select up to two friendly PLAGUE MARINES units. Those units have Infiltrators. This detachment has the FLYBLOWN tag and cannot be taken with another FLYBLOWN detachment."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "insectile-murmuration",
+     "requires": [
+      [
+       "PLAGUE",
+       "MARINES"
+      ]
+     ],
+     "name": {
+      "en": "Insectile Murmuration"
+     },
+     "text": {
+      "en": "PLAGUE MARINES unit only. When this unit’s attacks target a unit within Contagion Range of a friendly unit, those attacks can re-roll wound rolls of 1."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "plagueveil",
+     "requires": [
+      [
+       "PLAGUE",
+       "MARINES"
+      ]
+     ],
+     "name": {
+      "en": "Plagueveil"
+     },
+     "text": {
+      "en": "PLAGUE MARINES unit only. This unit has -3\" detection range."
+     },
+     "type": "upgrade"
+    }
+   ]
+  }
+ ]
+}

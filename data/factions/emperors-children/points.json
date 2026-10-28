@@ -1,0 +1,264 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-28",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/",
+ "verified": [
+  "all-enhancements",
+  "chaos-land-raider",
+  "chaos-rhino",
+  "chaos-spawn",
+  "chaos-terminators",
+  "daemon-prince-of-slaanesh",
+  "daemon-prince-of-slaanesh-with-wings",
+  "defiler",
+  "flawless-blades",
+  "fulgrim",
+  "heldrake",
+  "infractors",
+  "lord-exultant",
+  "lord-kakophonist",
+  "lucius-the-eternal",
+  "maulerfiend",
+  "noise-marines",
+  "sorcerer",
+  "tormentors"
+ ],
+ "units": {
+  "chaos-land-raider": [
+   {
+    "models": 1,
+    "points": 210
+   }
+  ],
+  "chaos-rhino": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "chaos-spawn": [
+   {
+    "models": 2,
+    "points": 70
+   }
+  ],
+  "chaos-terminators": [
+   {
+    "models": 5,
+    "points": 155
+   }
+  ],
+  "daemon-prince-of-slaanesh": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "daemon-prince-of-slaanesh-with-wings": [
+   {
+    "models": 1,
+    "points": 205
+   }
+  ],
+  "defiler": [
+   {
+    "models": 1,
+    "points": 300
+   }
+  ],
+  "flawless-blades": [
+   {
+    "models": 3,
+    "points": 95
+   },
+   {
+    "models": 6,
+    "points": 190
+   }
+  ],
+  "fulgrim": [
+   {
+    "models": 1,
+    "points": 340
+   }
+  ],
+  "heldrake": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "infractors": [
+   {
+    "models": 5,
+    "points": 95
+   },
+   {
+    "models": 10,
+    "points": 175
+   }
+  ],
+  "lord-exultant": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "lord-kakophonist": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "lucius-the-eternal": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "maulerfiend": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "noise-marines": [
+   {
+    "models": 6,
+    "points": 160
+   }
+  ],
+  "sorcerer": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ],
+  "tormentors": [
+   {
+    "models": 5,
+    "points": 85
+   },
+   {
+    "models": 10,
+    "points": 170
+   }
+  ]
+ },
+ "enhancements": {
+  "empyric-suffusion": 15,
+  "dark-blessings": 10,
+  "possessed-blade": 35,
+  "warp-walker": 35,
+  "pledge-of-eternal-servitude": 25,
+  "pledge-of-dark-glory": 25,
+  "pledge-of-mortal-pain": 15,
+  "pledge-of-unholy-fortune": 30,
+  "sublime-prescience": 25,
+  "spearhead-striker": 20,
+  "accomplished-tactician": 35,
+  "heretek-adept": 35,
+  "faultless-opportunist": 15,
+  "blinding-speed": 25,
+  "distortion": 25,
+  "rise-to-the-challenge": 30,
+  "tears-of-the-phoenix": 25,
+  "exalted-patron": 15,
+  "soulstain-made-manifest": 15,
+  "spiritsliver": 20,
+  "steeped-in-suffering": 20,
+  "intoxicating-musk": 20,
+  "tactical-perfection": 15,
+  "loathsome-dexterity": 10,
+  "eager-patrons": 20,
+  "beguiling-grotesquerie": 15,
+  "eager-to-prove": 15,
+  "repulsed-by-weakness": 25,
+  "proud-and-vainglorious": 20,
+  "slayer-of-champions": 15,
+  "euphoric-crown": 20,
+  "howling-plate": 20,
+  "cacophonic-accompaniment": 20,
+  "frenzied-ferocity": 15
+ },
+ "unitsExtraCopies": {
+  "chaos-land-raider": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 230
+    }
+   ]
+  },
+  "chaos-rhino": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 80
+    }
+   ]
+  },
+  "daemon-prince-of-slaanesh": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 180
+    }
+   ]
+  },
+  "daemon-prince-of-slaanesh-with-wings": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 225
+    }
+   ]
+  },
+  "defiler": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 350
+    }
+   ]
+  },
+  "lord-exultant": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 105
+    }
+   ]
+  },
+  "maulerfiend": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 130
+    }
+   ]
+  },
+  "noise-marines": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 6,
+     "points": 175
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "defiler": {
+   "hades-lascannon": 15,
+   "heavy-reaper-autocannon": 15
+  }
+ }
+}

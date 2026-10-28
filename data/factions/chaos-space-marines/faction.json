@@ -1,0 +1,1297 @@
+{
+ "id": "chaos-space-marines",
+ "name": {
+  "en": "Chaos Space Marines",
+  "es": "Marines Espaciales del Caos"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/",
+ "armyRule": {
+  "name": {
+   "en": "Dark Pacts"
+  },
+  "text": {
+   "en": "If your Army Faction is HERETIC ASTARTES, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n[LETHAL HITS]\n[SUSTAINED HITS 1]"
+  }
+ },
+ "extraRules": [
+  {
+   "name": {
+    "en": "Cult of the Dark Gods"
+   },
+   "text": {
+    "en": "If your Army Faction is HERETIC ASTARTES, you can include any of the following units in your army, and when you do so their Faction keywords are replaced with HERETIC ASTARTES:\nKHORNE BERZERKERS (see World Eaters)\nRUBRIC MARINES (see Thousand Sons)\nPLAGUE MARINES (see Death Guard)\nNOISE MARINES (see Emperor’s Children)\nThe combined points value of such units you can include in your army depends on the battle size, as follows:\nIncursion: Up to 250 pts\nStrike Force: Up to 500 pts\nOnslaught: Up to 750 pts"
+   },
+   "pointsCap": {
+    "units": [
+     [
+      "KHORNE",
+      "BERZERKERS"
+     ],
+     [
+      "RUBRIC",
+      "MARINES"
+     ],
+     [
+      "PLAGUE",
+      "MARINES"
+     ],
+     [
+      "NOISE",
+      "MARINES"
+     ]
+    ],
+    "max": {
+     "incursion": 250,
+     "strike-force": 500,
+     "onslaught": 750
+    }
+   }
+  }
+ ],
+ "detachments": [
+  {
+   "id": "pactbound-zealots",
+   "cost": 3,
+   "name": {
+    "en": "Pactbound Zealots"
+   },
+   "rule": {
+    "name": {
+     "en": "Marks of Chaos"
+    },
+    "text": {
+     "en": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE. TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eye-of-tzeentch",
+     "requires": [
+      [
+       "TZEENTCH"
+      ]
+     ],
+     "name": {
+      "en": "Eye of Tzeentch"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES TZEENTCH model only. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP."
+     }
+    },
+    {
+     "id": "intoxicating-elixir",
+     "requires": [
+      [
+       "SLAANESH"
+      ]
+     ],
+     "name": {
+      "en": "Intoxicating Elixir"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES SLAANESH model only. The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer’s unit made a Dark Pact this phase and did not fail the…"
+     }
+    },
+    {
+     "id": "orbs-of-unlife",
+     "requires": [
+      [
+       "NURGLE"
+      ]
+     ],
+     "name": {
+      "en": "Orbs of Unlife"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES NURGLE model only. At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer’s unit made a Dark Pact that phase…"
+     }
+    },
+    {
+     "id": "talisman-of-burning-blood",
+     "requires": [
+      [
+       "KHORNE"
+      ]
+     ],
+     "name": {
+      "en": "Talisman of Burning Blood"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES KHORNE model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting…"
+     }
+    }
+   ],
+   "unitKeywordChoice": {
+    "keywords": [
+     "KHORNE",
+     "TZEENTCH",
+     "NURGLE",
+     "SLAANESH",
+     "CHAOS UNDIVIDED"
+    ],
+    "excludes": [
+     [
+      "EPIC",
+      "HERO"
+     ]
+    ],
+    "forbidden": [
+     {
+      "keyword": "KHORNE",
+      "units": [
+       [
+        "PSYKER"
+       ]
+      ]
+     }
+    ],
+    "sameForAttached": true
+   }
+  },
+  {
+   "id": "hurons-marauders",
+   "cost": 3,
+   "name": {
+    "en": "Huron’s Marauders"
+   },
+   "rule": {
+    "name": {
+     "en": "Tyrannical Motivation"
+    },
+    "text": {
+     "en": "In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "voice-of-the-tyrant",
+     "requires": [],
+     "name": {
+      "en": "Voice of the Tyrant"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule."
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "raid-leader",
+     "requires": [],
+     "name": {
+      "en": "Raid Leader"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer’s unit is set up after disembarking from a TRANSPORT that has made a Normal move this turn, the bearer’s unit makes an…"
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "dread-reputation",
+     "requires": [],
+     "name": {
+      "en": "Dread Reputation"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6\" of the bearer’s unit (or within 12\" if the bearer’s unit was…"
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "eager-for-bloodshed",
+     "requires": [],
+     "name": {
+      "en": "Eager for Bloodshed"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. The bearer has the Infiltrators ability."
+     }
+    }
+   ]
+  },
+  {
+   "id": "renegade-raiders",
+   "cost": 3,
+   "name": {
+    "en": "Renegade Raiders"
+   },
+   "rule": {
+    "name": {
+     "en": "Raiders and Reavers"
+    },
+    "text": {
+     "en": "Ranged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability, and each time a HERETIC ASTARTES model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "despots-claim",
+     "requires": [],
+     "name": {
+      "en": "Despot’s Claim"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is wholly within 12\" of your opponent’s…"
+     }
+    },
+    {
+     "id": "dread-reaver",
+     "requires": [],
+     "name": {
+      "en": "Dread Reaver"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent’s deployment zone, you can re-roll the Hit roll and you can re-roll the…"
+     }
+    },
+    {
+     "id": "mark-of-the-hound",
+     "requires": [],
+     "name": {
+      "en": "Mark of the Hound"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. Models in the bearers unit have the Scouts 6\" ability."
+     }
+    },
+    {
+     "id": "tyrants-lash",
+     "requires": [],
+     "name": {
+      "en": "Tyrant’s Lash"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. You can re-roll Advance rolls made for the bearer’s unit, and the bearer’s unit is eligible to shoot in a turn in which it Fell Back."
+     }
+    }
+   ]
+  },
+  {
+   "id": "creations-of-bile",
+   "cost": 3,
+   "name": {
+    "en": "Creations of Bile"
+   },
+   "rule": {
+    "name": {
+     "en": "Experimental Augmentations"
+    },
+    "text": {
+     "en": "At the start of the battle, select which augmentations are active for HERETIC ASTARTES INFANTRY models (excluding DAMNED models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If FABIUS BILE is your WARLORD, when randomly…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "surgical-precision",
+     "requires": [],
+     "name": {
+      "en": "Surgical Precision"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model (excluding DAMNED models) only. The bearer’s melee weapons have the [PRECISION] ability."
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "living-carapace",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD"
+      ]
+     ],
+     "name": {
+      "en": "Living Carapace"
+     },
+     "text": {
+      "en": "CHAOS LORD model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability."
+     }
+    },
+    {
+     "id": "helm-of-all-seeing",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Helm of All-seeing"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer."
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "prime-test-subject",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Prime Test Subject"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re-roll…"
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deceptors",
+   "cost": 2,
+   "name": {
+    "en": "Deceptors"
+   },
+   "rule": {
+    "name": {
+     "en": "Masters of Misdirection"
+    },
+    "text": {
+     "en": "In the Declare Battle Formations step, you can select a number of LEGIONARIES and CULTIST MOB units from your army: until the end of the battle, those units, and any CHARACTER units attached to them (excluding EPIC HEROES), have the Infiltrators ability. The maximum number of units you can select in this way depends…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "cursed-fang",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Cursed Fang"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES INFANTRY model only. Improve the Armour Penetration characteristic of the bearer’s melee weapons by 1, and the bearer’s melee weapons have the [PRECISION] ability."
+     }
+    },
+    {
+     "id": "falsehood",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD"
+      ]
+     ],
+     "name": {
+      "en": "Falsehood"
+     },
+     "text": {
+      "en": "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models). In the Declare Battle Formations step, you can set the bearer up in Reserves instead of setting it up on the battlefield. If you do,…"
+     },
+     "excludes": [
+      [
+       "TERMINATOR"
+      ],
+      [
+       "JUMP",
+       "PACK"
+      ]
+     ]
+    },
+    {
+     "id": "shroud-of-obfuscation",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Shroud of Obfuscation"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES INFANTRY model only. The bearer has the Stealth and Lone Operative abilities."
+     }
+    },
+    {
+     "id": "soul-link",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Soul Link"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES INFANTRY model only. At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dread-talons",
+   "cost": 2,
+   "name": {
+    "en": "Dread Talons"
+   },
+   "rule": {
+    "name": {
+     "en": "Terror Descends (Aura)"
+    },
+    "text": {
+     "en": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eater-of-dread",
+     "requires": [],
+     "name": {
+      "en": "Eater of Dread"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the…"
+     }
+    },
+    {
+     "id": "nights-shroud",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD"
+      ]
+     ],
+     "name": {
+      "en": "Night’s Shroud"
+     },
+     "text": {
+      "en": "CHAOS LORD model only (excluding TERMINATOR models). Models in the bearer’s unit have the Stealth ability."
+     },
+     "excludes": [
+      [
+       "TERMINATOR"
+      ]
+     ]
+    },
+    {
+     "id": "warp-fuelled-thrusters",
+     "requires": [
+      [
+       "JUMP",
+       "PACK",
+       "CHAOS",
+       "LORD"
+      ]
+     ],
+     "name": {
+      "en": "Warp-fuelled Thrusters"
+     },
+     "text": {
+      "en": "JUMP PACK CHAOS LORD model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the…"
+     }
+    },
+    {
+     "id": "willbreaker",
+     "requires": [],
+     "name": {
+      "en": "Willbreaker"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+     }
+    }
+   ]
+  },
+  {
+   "id": "nightmare-hunt",
+   "cost": 2,
+   "tags": [
+    "NIGHTMARE"
+   ],
+   "name": {
+    "en": "Nightmare Hunt"
+   },
+   "rule": {
+    "name": {
+     "en": "Terror Made Manifest"
+    },
+    "text": {
+     "en": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "greyveil-hex",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD"
+      ]
+     ],
+     "name": {
+      "en": "Greyveil Hex"
+     },
+     "text": {
+      "en": "CHAOS LORD model only. Models in the bearer’s unit have the Stealth ability. While the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as…"
+     }
+    },
+    {
+     "id": "warp-fuelled-thrusters-nightmare-hunt",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD",
+       "JUMP",
+       "PACK"
+      ]
+     ],
+     "name": {
+      "en": "Warp-fuelled Thrusters"
+     },
+     "text": {
+      "en": "CHAOS LORD JUMP PACK model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the…"
+     }
+    },
+    {
+     "id": "terrorglut-parasite",
+     "requires": [],
+     "name": {
+      "en": "Terrorglut Parasite"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test, subtracting 1 from the result."
+     }
+    },
+    {
+     "id": "sorrowscent-vulture",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD",
+       "JUMP",
+       "PACK"
+      ]
+     ],
+     "name": {
+      "en": "Sorrowscent Vulture"
+     },
+     "text": {
+      "en": "CHAOS LORD JUMP PACK model only. Models in the bearer’s unit have the Scouts 6\" ability. In the Declare Battle Formations step, the bearer can be attached to a WARP TALONS unit."
+     },
+     "grantsLead": [
+      "warp-talons"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "warpstrike-champions",
+   "cost": 2,
+   "name": {
+    "en": "Warpstrike Champions"
+   },
+   "rule": {
+    "name": {
+     "en": "Warp Portals"
+    },
+    "text": {
+     "en": "At the end of your opponent’s turn, you can select a number of HERETIC ASTARTES TERMINATOR, OBLITERATORS and MUTILATORS units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "infernal-fulgurite",
+     "requires": [],
+     "name": {
+      "en": "Infernal Fulgurite"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a…"
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "eye-of-the-warp",
+     "requires": [],
+     "name": {
+      "en": "Eye of the Warp"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model with the Deep Strike ability only. Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re-roll Charge rolls made for that unit."
+     },
+     "requiresAbility": "Deep Strike"
+    },
+    {
+     "id": "akshurs-binding-runes",
+     "requires": [],
+     "name": {
+      "en": "Akshur’s Binding Runes"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase,…"
+     },
+     "requiresAbility": "Deep Strike"
+    },
+    {
+     "id": "tzagulla",
+     "requires": [],
+     "name": {
+      "en": "Tzagulla"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model with the Deep Strike ability only. Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit…"
+     },
+     "requiresAbility": "Deep Strike"
+    }
+   ]
+  },
+  {
+   "id": "chaos-cult",
+   "cost": 2,
+   "name": {
+    "en": "Chaos Cult"
+   },
+   "rule": {
+    "name": {
+     "en": "Desperate Devotion"
+    },
+    "text": {
+     "en": "Each time a DAMNED unit from your army with the Dark Pacts ability is selected to make a Normal or Advance move or declare a charge (excluding units that arrived from Reserves this turn), it can make a Desperate Pact (see below). If it does, until the end of the phase, add 2 to the Move characteristic of models in…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "amulet-of-tainted-vigour",
+     "requires": [
+      [
+       "DARK",
+       "APOSTLE"
+      ]
+     ],
+     "name": {
+      "en": "Amulet of Tainted Vigour"
+     },
+     "text": {
+      "en": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer’s unit."
+     }
+    },
+    {
+     "id": "cultists-brand",
+     "requires": [
+      [
+       "DARK",
+       "APOSTLE"
+      ],
+      [
+       "DAMNED"
+      ]
+     ],
+     "name": {
+      "en": "Cultist’s Brand"
+     },
+     "text": {
+      "en": "DARK APOSTLE or DAMNED model only. If every other model in the bearer’s unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer’s unit."
+     }
+    },
+    {
+     "id": "incendiary-goad",
+     "requires": [
+      [
+       "DARK",
+       "APOSTLE"
+      ],
+      [
+       "DAMNED"
+      ]
+     ],
+     "name": {
+      "en": "Incendiary Goad"
+     },
+     "text": {
+      "en": "DARK APOSTLE or DAMNED model only. While the bearer’s unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that…"
+     }
+    },
+    {
+     "id": "warped-foresight",
+     "requires": [
+      [
+       "DARK",
+       "APOSTLE"
+      ],
+      [
+       "DAMNED"
+      ]
+     ],
+     "name": {
+      "en": "Warped Foresight"
+     },
+     "text": {
+      "en": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer’s unit has the Scouts 6\" ability."
+     }
+    }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BATTLELINE",
+     "units": [
+      [
+       "TRAITOR",
+       "GUARDSMEN",
+       "SQUAD"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cult-of-the-arkifane",
+   "cost": 2,
+   "name": {
+    "en": "Cult of the Arkifane"
+   },
+   "rule": {
+    "name": {
+     "en": "Soul Forge Boons"
+    },
+    "text": {
+     "en": "HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword. HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword. SOUL FORGE units from your army have a 5+ invulnerable save."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "wyredjinn",
+     "requires": [],
+     "name": {
+      "en": "Wyredjinn"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an…"
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "cybinfernal-font",
+     "requires": [],
+     "name": {
+      "en": "Cybinfernal Font"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). Models in the bearer’s unit have the SOUL FORGE keyword."
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "mark-of-the-soul-forges",
+     "requires": [],
+     "name": {
+      "en": "Mark of the Soul Forges"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "crown-of-worms",
+     "requires": [
+      [
+       "WARPSMITH"
+      ]
+     ],
+     "name": {
+      "en": "Crown of Worms"
+     },
+     "text": {
+      "en": "WARPSMITH model only. Add 3\" to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities."
+     }
+    }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "DAEMON",
+     "units": [
+      [
+       "VEHICLE"
+      ]
+     ]
+    },
+    {
+     "keyword": "SOUL FORGE",
+     "units": [
+      [
+       "VEHICLE"
+      ],
+      [
+       "LORD",
+       "DISCORDANT"
+      ],
+      [
+       "VASHTORR",
+       "THE",
+       "ARKIFANE"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "renegade-warband",
+   "cost": 2,
+   "name": {
+    "en": "Renegade Warband"
+   },
+   "rule": {
+    "name": {
+     "en": "Slaves to None"
+    },
+    "text": {
+     "en": "HERETIC ASTARTES models from your army lose the Dark Pacts ability. Ranged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. Vendetta At the start of your Command phase, select one unit from your opponent’s…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "weaponised-hatred",
+     "requires": [],
+     "name": {
+      "en": "Weaponised Hatred"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit…"
+     }
+    },
+    {
+     "id": "eyes-of-the-hunter",
+     "requires": [],
+     "name": {
+      "en": "Eyes of the Hunter"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+     }
+    },
+    {
+     "id": "fratricidal-trophies",
+     "requires": [
+      [
+       "TERMINATOR"
+      ]
+     ],
+     "name": {
+      "en": "Fratricidal Trophies"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES TERMINATOR model only. In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re-roll…"
+     }
+    },
+    {
+     "id": "empyric-symbiote",
+     "requires": [],
+     "name": {
+      "en": "Empyric Symbiote"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. Add 1 to Advance and Charge rolls made for the bearer’s unit."
+     }
+    }
+   ]
+  },
+  {
+   "id": "fellhammer-siege-host",
+   "cost": 2,
+   "name": {
+    "en": "Fellhammer Siege-Host"
+   },
+   "rule": {
+    "name": {
+     "en": "Iron Fortitude"
+    },
+    "text": {
+     "en": "Each time a ranged attack targets a HERETIC ASTARTES unit from your army (excluding DAMNED units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "bastion-plate",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD"
+      ]
+     ],
+     "name": {
+      "en": "Bastion Plate"
+     },
+     "text": {
+      "en": "CHAOS LORD model only (excluding JUMP PACK models). Once per battle round, when a saving throw is failed for the bearer’s unit, you can change the Damage characteristic of that attack to 0."
+     },
+     "excludes": [
+      [
+       "JUMP",
+       "PACK"
+      ]
+     ]
+    },
+    {
+     "id": "iron-artifice",
+     "requires": [
+      [
+       "INFANTRY"
+      ]
+     ],
+     "name": {
+      "en": "Iron Artifice"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES INFANTRY model only. The bearers weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities."
+     }
+    },
+    {
+     "id": "ironbound-enmity",
+     "requires": [],
+     "name": {
+      "en": "Ironbound Enmity"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll."
+     }
+    },
+    {
+     "id": "warp-tracer",
+     "requires": [],
+     "name": {
+      "en": "Warp Tracer"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "soulforged-warpack",
+   "cost": 2,
+   "name": {
+    "en": "Soulforged Warpack"
+   },
+   "rule": {
+    "name": {
+     "en": "Debt to the Soul Forge"
+    },
+    "text": {
+     "en": "Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army makes a Dark Pact, it can invoke its contract. If it does, subtract 1 from the resulting Leadership test when making that Dark Pact, and until the end of the phase: Each time a model in that unit makes a ranged attack, add 1 to the Wound roll. Add 2 to…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "forges-blessing",
+     "requires": [],
+     "name": {
+      "en": "Forge’s Blessing"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No…"
+     }
+    },
+    {
+     "id": "invigorated-mechatendrils",
+     "requires": [
+      [
+       "WARPSMITH"
+      ]
+     ],
+     "name": {
+      "en": "Invigorated Mechatendrils"
+     },
+     "text": {
+      "en": "WARPSMITH model only. Add 4\" to the bearer’s Move characteristic."
+     }
+    },
+    {
+     "id": "tempting-addendum",
+     "requires": [],
+     "name": {
+      "en": "Tempting Addendum"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army invokes its contract while within 3\" of the bearer: If it suffers one or more mortal wounds as a result of…"
+     }
+    },
+    {
+     "id": "soul-harvester",
+     "requires": [],
+     "name": {
+      "en": "Soul Harvester"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ]
+  },
+  {
+   "id": "veterans-of-the-long-war",
+   "cost": 2,
+   "name": {
+    "en": "Veterans of the Long War"
+   },
+   "rule": {
+    "name": {
+     "en": "Focus of Hatred"
+    },
+    "text": {
+     "en": "At the start of your Command phase, select one unit from your opponents army to be your focus of hatred. Until the start of your next Command phase, each time a HERETIC ASTARTES model from your army (excluding DAMNED models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eager-for-vengeance",
+     "requires": [],
+     "name": {
+      "en": "Eager for Vengeance"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Each time a model in the bearer’s unit makes an…"
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "eye-of-abaddon",
+     "requires": [],
+     "name": {
+      "en": "Eye of Abaddon"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6: on a 4+, you gain 1CP."
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "mark-of-legend",
+     "requires": [],
+     "name": {
+      "en": "Mark of Legend"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding DAMNED models). Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer."
+     },
+     "excludes": [
+      [
+       "DAMNED"
+      ]
+     ]
+    },
+    {
+     "id": "warmasters-gift",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD"
+      ]
+     ],
+     "name": {
+      "en": "Warmaster’s Gift"
+     },
+     "text": {
+      "en": "CHAOS LORD model only. Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful Wound roll of 5+ scores a Critical Wound."
+     }
+    }
+   ]
+  },
+  {
+   "id": "cabal-of-chaos",
+   "cost": 1,
+   "name": {
+    "en": "Cabal of Chaos"
+   },
+   "rule": {
+    "name": {
+     "en": "Empyric Wellspring"
+    },
+    "text": {
+     "en": "In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is selected…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "touched-by-the-warp",
+     "requires": [],
+     "name": {
+      "en": "Touched by the Warp"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES model only (excluding KHORNE models). This model has PSYKER. This model’s weapons have [PSYCHIC]."
+     },
+     "excludes": [
+      [
+       "KHORNE"
+      ]
+     ]
+    },
+    {
+     "id": "conduit-of-chaos",
+     "requires": [
+      [
+       "DAEMON"
+      ]
+     ],
+     "name": {
+      "en": "Conduit of Chaos"
+     },
+     "text": {
+      "en": "HERETIC ASTARTES DAEMON model only (excluding KHORNE models). This model’s melee attacks have [LANCE]."
+     },
+     "excludes": [
+      [
+       "KHORNE"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "devotees-of-destruction",
+   "cost": 1,
+   "name": {
+    "en": "Devotees of Destruction"
+   },
+   "rule": {
+    "name": {
+     "en": "Rain of Ruin"
+    },
+    "text": {
+     "en": "Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY]."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "pact-of-destruction",
+     "requires": [
+      [
+       "WARPSMITH"
+      ]
+     ],
+     "name": {
+      "en": "Pact of Destruction"
+     },
+     "text": {
+      "en": "WARPSMITH model only. When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and…"
+     }
+    },
+    {
+     "id": "eye-of-oblivion",
+     "requires": [
+      [
+       "WARPSMITH"
+      ]
+     ],
+     "name": {
+      "en": "Eye of Oblivion"
+     },
+     "text": {
+      "en": "WARPSMITH model only. When this unit is selected to shoot, select one enemy unit within 24\" of this unit. That enemy unit has +6\" detection range until this unit has shot."
+     }
+    }
+   ]
+  },
+  {
+   "id": "murdertalon-raiders",
+   "cost": 1,
+   "tags": [
+    "NIGHTMARE"
+   ],
+   "name": {
+    "en": "Murdertalon Raiders"
+   },
+   "rule": {
+    "name": {
+     "en": "Prey on the Weak"
+    },
+    "text": {
+     "en": "Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "shadowcowl-talisman",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD",
+       "WITH",
+       "JUMP",
+       "PACK"
+      ]
+     ],
+     "name": {
+      "en": "Shadowcowl Talisman"
+     },
+     "text": {
+      "en": "CHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv."
+     }
+    },
+    {
+     "id": "pact-of-cursed-pinions",
+     "requires": [
+      [
+       "CHAOS",
+       "LORD",
+       "WITH",
+       "JUMP",
+       "PACK"
+      ]
+     ],
+     "name": {
+      "en": "Pact of Cursed Pinions"
+     },
+     "text": {
+      "en": "CHAOS LORD WITH JUMP PACK model only. This model has DAEMON. This model’s melee attacks have +1 A."
+     },
+     "grantsLead": [
+      "warp-talons"
+     ]
+    }
+   ]
+  }
+ ]
+}

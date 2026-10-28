@@ -7,7 +7,7 @@ import {
 import { renderHome, renderHomeHeader, renderFactionPicker } from './home.js';
 import { setFactionEmblem } from './icons.js';
 import { renderOverview, renderOverviewHeader, OV_TABS } from './overview.js';
-import { validate, canAttach, isLeader, battleSizeOf, optionMax, optionMaxEach, tagRival } from './rules.js';
+import { validate, canAttach, isLeader, battleSizeOf, optionMax, optionMaxEach, tagRival, sizeAllows } from './rules.js';
 import {
   renderHeader, renderCatalog, renderCatalogItems, renderRoster, renderSidebar, renderModal, sheetState,
 } from './render.js';
@@ -376,6 +376,10 @@ async function onChange(e) {
       const bg = ru.attachedTo && findRu(list, ru.attachedTo);
       if (bg && !canAttach(ru, bg, list, data, edition)) ru.attachedTo = null;
     });
+    case 'det-keyword': return withList(list => {
+      const ru = findRu(list, uid);
+      ru.detachmentKeywords = { ...ru.detachmentKeywords, [el.dataset.det]: el.value || undefined };
+    });
     case 'attach': return el.value && attach(uid, el.value);
     case 'wg-swap': return withList(list => { findRu(list, uid).wargear[opt] = el.value; });
     case 'wg-toggle': return withList(list => {
@@ -406,7 +410,7 @@ function clampWargear(ru, lastChanged) {
     const v = ru.wargear?.[opt.id];
     const max = optionMax(opt, models);
     if (opt.type === 'swap') {
-      next[opt.id] = opt.choices.includes(v) && !(opt.minModels && models < opt.minModels) ? v : '';
+      next[opt.id] = opt.choices.includes(v) && sizeAllows(opt, models) ? v : '';
     } else if (opt.type === 'toggle') {
       next[opt.id] = Math.min(Number(v) || 0, opt.scope === 'all' ? 1 : max);
     } else if (opt.type === 'pool') {

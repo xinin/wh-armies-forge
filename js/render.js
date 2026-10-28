@@ -5,7 +5,7 @@ import { icon } from './icons.js';
 import {
   battleSizeOf, unitPoints, listPoints, detachmentPointsUsed, availableEnhancements,
   isLeader, isSupport, leadersOf, canAttach, detachmentAbilities, optionMax, optionMaxEach, hasKw, bodyguardLimits, isExtraCopy,
-  loadoutCounts, itemName, gearSlug, sharedTag, tagRival, canBeCharacter, unitDef,
+  loadoutCounts, itemName, gearSlug, sharedTag, tagRival, canBeCharacter, unitDef, unitKeywordChoices, sizeAllows,
 } from './rules.js';
 
 export const ROLES = ['character', 'battleline', 'infantry', 'mounted', 'monster', 'vehicle', 'transport', 'aircraft', 'titanic', 'fortification'];
@@ -197,6 +197,10 @@ function renderUnitCore(ru, def, list, data, edition, customImages, attached) {
           ${enhs.map(e => `<option value="${e.id}" ${e.id === ru.enhancement ? 'selected' : ''}>${e.type === 'upgrade' ? '⬆ ' : '✦ '}${esc(tr(e.name))} (+${e.points})</option>`).join('')}
           ${ru.enhancement && !enhs.some(e => e.id === ru.enhancement) ? `<option value="${ru.enhancement}" selected>⚠ ${esc(tr(data.enhancements.get(ru.enhancement)?.name))}</option>` : ''}
         </select>` : ''}
+        ${unitKeywordChoices(ru, list, data).map(c => `<select data-action="det-keyword" data-uid="${ru.uid}" data-det="${c.det.id}" class="${c.value ? 'has-enh' : 'needs-choice'}">
+          <option value="">${esc(tr(c.det.rule.name))}: ${t('unit.choose')}</option>
+          ${c.options.map(kw => `<option value="${esc(kw)}" ${kw === c.value ? 'selected' : ''}>${esc(kw)}</option>`).join('')}
+        </select>`).join('')}
         ${isChar ? `<button class="btn small ${ru.warlord ? 'on' : ''}" data-action="warlord" data-uid="${ru.uid}" title="${t('unit.warlord')}">${icon('emblem')}</button>` : ''}
         ${targets.length ? `<select data-action="attach" data-uid="${ru.uid}"><option value="">${t('unit.attachTo')}</option>
           ${targets.map(b => `<option value="${b.uid}">${esc(tr(data.unitsById.get(b.unitId).name))}</option>`).join('')}</select>` : ''}
@@ -223,7 +227,7 @@ const packageLabel = (def, items) => {
 
 function choiceLabel(def, opt, key) {
   if (key === '') return opt.replaces?.length ? packageLabel(def, opt.replaces) : '—';
-  if (opt.keywords?.[key]) return `${opt.keywords[key]}: ${packageLabel(def, opt.packages?.[key] ?? [])}`;
+  if (opt.keywords?.[key]) return `${opt.keywords[key]}: ${opt.effects?.[key] ? tr(opt.effects[key]) : packageLabel(def, opt.packages?.[key] ?? [])}`;
   return packageLabel(def, opt.packages?.[key] ?? []) || key;
 }
 
@@ -318,8 +322,9 @@ function renderWargear(ru, def, data) {
   const models = def.sizes[ru.sizeIdx]?.models ?? 1;
   const { inactive } = loadoutCounts(ru, def);
   const rows = def.wargear.map(opt => {
-    if (opt.minModels && models < opt.minModels) {
-      return `<div class="wg-row off"><span>${esc(optionLabel(def, opt))}</span><small>${t('wargear.minModels', { n: opt.minModels })}</small></div>`;
+    if (!sizeAllows(opt, models)) {
+      const note = opt.maxModels === opt.minModels ? t('wargear.onlyModels', { n: opt.minModels }) : t('wargear.minModels', { n: opt.minModels });
+      return `<div class="wg-row off"><span>${esc(optionLabel(def, opt))}</span><small>${note}</small></div>`;
     }
     // "if this model is (not) equipped with …": disabled while the condition is not met (the choice is kept)
     const off = inactive.has(opt.id);

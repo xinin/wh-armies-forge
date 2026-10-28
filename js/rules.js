@@ -39,7 +39,7 @@ export function loadoutCounts(ru, def) {
   const available = opt => (opt.replaces?.length
     ? Math.min(...opt.replaces.map(r => Math.floor((counts[r.item] ?? 0) / r.n)))
     : models);
-  const options = (def.wargear ?? []).filter(o => !(o.minModels && models < o.minModels));
+  const options = (def.wargear ?? []).filter(o => sizeAllows(o, models));
   const inactive = new Set();
   for (const opt of [...options.filter(o => o.scope !== 'all'), ...options.filter(o => o.scope === 'all')]) {
     const v = ru.wargear?.[opt.id];
@@ -102,8 +102,11 @@ export const detachmentPointsUsed = (list, data) =>
 
 // Max count for a 'pool' or 'toggle' option, scaling with model count when `per` is set.
 // How many models can take a pool/toggle option at this unit size (0 when the size doesn't allow it).
+// Options only for some unit sizes ("If this unit contains 10 models", "… contains only 3 models").
+export const sizeAllows = (opt, models) => !(opt.minModels && models < opt.minModels) && !(opt.maxModels && models > opt.maxModels);
+
 export function optionMax(opt, models) {
-  if (opt.minModels && models < opt.minModels) return 0;
+  if (!sizeAllows(opt, models)) return 0;
   return opt.maxBySize?.[models] ?? 1;
 }
 
@@ -115,7 +118,7 @@ export const optionMaxEach = (opt, models, key = null) =>
 // Keywords the list's detachments give ("WAR DOG units from your army have the BATTLELINE keyword"); `chosen` ones
 // only go to the units the player picks ("select three WAR DOG units … those units have the CHARACTER keyword").
 const detachmentGrants = (list, data) => list.detachments.flatMap(id => data.detachmentsById.get(id)?.keywordGrants ?? []);
-const matchesGroups = (def, groups) => groups.some(group => group.every(kw => kwMatch(def, kw)));
+const matchesGroups = (def, groups) => groups.some(group => groupMatch(def, group));
 
 // A CHARACTER, or a unit the detachment lets the player make one (it can then take Enhancements and be Warlord).
 export function canBeCharacter(def, list, data) {
@@ -128,30 +131,40 @@ export function enhancementFits(enh, def, list, data) {
     if (!canBeCharacter(def, list, data) || hasKw(def, 'EPIC HERO')) return false;
   }
   // "… (excluding KROOT SHAPER models)"
-  if (enh.excludes?.some(group => group.every(kw => kwMatch(def, kw)))) return false;
+  if (enh.excludes?.some(group => groupMatch(def, group))) return false;
+  // "… model with the Deep Strike ability only"
+  if (enh.requiresAbility && !(def.core ?? []).some(a => a.startsWith(enh.requiresAbility))) return false;
   if (!enh.requires?.length) return true;
   // "TITANIC CHARACTER model only": CHARACTER also covers the units a detachment lets the player make CHARACTERs
-  return enh.requires.some(group => group.every(kw => kw === 'CHARACTER' ? canBeCharacter(def, list, data) : kwMatch(def, kw)));
+  return enh.requires.some(group => (!group.includes('CHARACTER') || canBeCharacter(def, list, data)) &&
+    groupMatch(def, group.filter(kw => kw !== 'CHARACTER')));
 }
 
-// Requirements imported from "X Y model only" are split into words; a word also matches when it is part of a
-// multi-word keyword ("VON RYAN'S LEAPERS", "VANGUARD INVADER"), its plural ("STEALTH BATTLESUITS" units) or its
-// singular ("SCOUT SENTINEL model only": keyword SCOUT SENTINELS). The datasheet name counts as a keyword too
-// ("WOLF PRIEST model only": 11th-edition datasheets omit it).
-const kwMatch = (def, kw) => {
-  const w = normKw(kw);
-  const words = kwWords(def);
-  return hasKw(def, kw) || words.has(w) || (w.endsWith('S') && words.has(w.slice(0, -1))) || words.has(w + 'S');
-};
-const normKw = kw => kw.toUpperCase().replace(/[’‘]/g, "'");
-const kwWordCache = new WeakMap();
-function kwWords(def) {
-  if (!kwWordCache.has(def)) kwWordCache.set(def, new Set([...def.keywords, def.name.en].flatMap(k => normKw(k).split(/\s+/))));
-  return kwWordCache.get(def);
+// Requirements imported from "X Y model only" are groups of words (faction keywords dropped). A group matches a unit
+// when its words, in order, split into whole keywords of the unit ("JUMP PACK" + "CHAOS LORD"), or when they all sit
+// in one of them ("ANCIENT": CRUSADE ANCIENT). Faction keywords and the datasheet name count as keywords ("WOLF PRIEST
+// model only": 11th-edition datasheets omit it). Plurals match singulars ("STEALTH BATTLESUITS", "SCOUT SENTINEL"
+// for SCOUT SENTINELS). Pieces of different keywords do not: "CHAOS LORD" is not CHAOS + LORD DISCORDANT.
+const normKw = kw => kw.toUpperCase().replace(/[’‘]/g, "'").split(/\s+/).filter(Boolean)
+  .map(w => (w.endsWith('IES') ? `${w.slice(0, -3)}Y` : w.replace(/S$/, ''))).join(' ');
+const phraseCache = new WeakMap();
+function phrases(def) {
+  if (!phraseCache.has(def)) phraseCache.set(def, [...def.keywords, ...(def.factionKeywords ?? []), def.name.en].map(normKw));
+  return phraseCache.get(def);
+}
+function groupMatch(def, group) {
+  const words = normKw(group.join(' ')).split(' ').filter(Boolean);
+  if (!words.length) return true;
+  const known = phrases(def);
+  if (known.some(p => ` ${p} `.includes(` ${words.join(' ')} `))) return true;
+  const whole = new Set(known);
+  const split = i => i === words.length ||
+    words.slice(i).some((_, n) => whole.has(words.slice(i, i + n + 1).join(' ')) && split(i + n + 1));
+  return split(0);
 }
 
-// The datasheet as this roster unit is in this list: with the keyword of its choice ("Daemonic Allegiance": KHORNE…)
-// and the keywords its detachments give it, if any.
+// The datasheet as this roster unit is in this list: with the keyword of its choice ("Daemonic Allegiance": KHORNE…),
+// the keywords its detachments give it and the one picked for it by a detachment ("Marks of Chaos"), if any.
 export function unitDef(ru, data, list) {
   const def = data.unitsById.get(ru.unitId);
   if (!def) return def;
@@ -159,9 +172,30 @@ export function unitDef(ru, data, list) {
   for (const g of detachmentGrants(list, data)) {
     if (!g.chosen && matchesGroups(def, g.units)) extra.push(g.keyword);
   }
+  for (const c of unitKeywordChoices(ru, list, data)) if (c.value) extra.push(c.value);
   const keywords = [...new Set(extra)].filter(kw => !def.keywords.includes(kw));
   return keywords.length ? { ...def, keywords: [...def.keywords, ...keywords] } : def;
 }
+
+// Keywords a detachment makes each unit take ("Marks of Chaos": KHORNE, TZEENTCH…), for the units that need one: not
+// excluded (EPIC HERO) and without one of those keywords on the datasheet or among its own choices (a Daemon Prince's
+// allegiance). → [{det, options (allowed for this unit), value (the unit's pick, if valid)}]
+export function unitKeywordChoices(ru, list, data) {
+  const def = data.unitsById.get(ru.unitId);
+  if (!def) return [];
+  return list.detachments.map(id => data.detachmentsById.get(id)).filter(det => det?.unitKeywordChoice).flatMap(det => {
+    const c = det.unitKeywordChoice;
+    const own = (def.wargear ?? []).flatMap(o => Object.values(o.keywords ?? {}));
+    if (matchesGroups(def, c.excludes ?? []) || [...def.keywords, ...own].some(kw => c.keywords.includes(kw))) return [];
+    const options = c.keywords.filter(kw => !(c.forbidden ?? []).some(f => f.keyword === kw && matchesGroups(def, f.units)));
+    const value = ru.detachmentKeywords?.[det.id];
+    return [{ det, options, value: options.includes(value) ? value : null }];
+  });
+}
+
+// The keywords of a detachment's choice list a unit has ("both units share the same keyword from the list above").
+const choiceKeywords = (ru, det, list, data) =>
+  unitDef(ru, data, list).keywords.filter(kw => det.unitKeywordChoice.keywords.includes(kw));
 
 export function availableEnhancements(ru, list, data) {
   const def = unitDef(ru, data, list);
@@ -312,6 +346,32 @@ export function validate(list, data, edition) {
     }
     const enhs = [bg, ...leaders].filter(u => u.enhancement && data.enhancements.get(u.enhancement)?.type !== 'upgrade');
     if (enhs.length > edition.rules.maxEnhancementsPerUnit) err('err.enhPerUnit', { unit: nameOf(bg) }, enhs.map(u => u.uid));
+  }
+
+  // Units an army rule allows up to some points ("Cult of the Dark Gods": 500 pts of them in Strike Force)
+  for (const rule of [data.faction.armyRule, ...(data.faction.extraRules ?? [])].filter(r => r?.pointsCap)) {
+    const max = rule.pointsCap.max[list.battleSize];
+    const those = list.units.filter(ru => { const def = unitDef(ru, data, list); return def && matchesGroups(def, rule.pointsCap.units); });
+    const n = those.reduce((sum, ru) => sum + unitPoints(ru, data, list), 0);
+    if (max != null && n > max) err('err.pointsCap', { rule: tr(rule.name), n, max }, those.map(r => r.uid));
+  }
+
+  // Detachment keyword choices ("Marks of Chaos"): every unit that needs one has one, and a CHARACTER attached to a
+  // unit shares it
+  for (const ru of list.units) {
+    for (const c of unitKeywordChoices(ru, list, data)) {
+      if (!c.value) err('err.choiceRequired', { unit: nameOf(ru), choice: tr(c.det.rule.name) }, [ru.uid]);
+    }
+  }
+  for (const det of list.detachments.map(id => data.detachmentsById.get(id)).filter(d => d?.unitKeywordChoice?.sameForAttached)) {
+    for (const l of list.units.filter(u => u.attachedTo)) {
+      const bg = list.units.find(u => u.uid === l.attachedTo);
+      if (!bg || !data.unitsById.get(l.unitId) || !data.unitsById.get(bg.unitId)) continue;
+      const a = choiceKeywords(l, det, list, data), b = choiceKeywords(bg, det, list, data);
+      if (a.length && b.length && !a.some(kw => b.includes(kw))) {
+        err('err.choiceAttached', { leader: nameOf(l), unit: nameOf(bg), choice: tr(det.rule.name) }, [l.uid]);
+      }
+    }
   }
 
   // Detachments: units the player picks to gain a keyword ("select three WAR DOG units … CHARACTER": those with an

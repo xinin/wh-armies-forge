@@ -143,6 +143,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -361,6 +364,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -478,6 +484,9 @@
     "CHARACTER",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -616,6 +625,9 @@
     "GRAVIS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -728,6 +740,9 @@
     "IMPERIUM",
     "TACTICUS",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -845,6 +860,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -1201,6 +1219,9 @@
     "GRAVIS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -1507,6 +1528,9 @@
     "IMPERIUM",
     "PHOBOS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -1657,6 +1681,9 @@
     "IMPERIUM",
     "TERMINATOR",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -1916,6 +1943,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "RAVENWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -2189,6 +2219,9 @@
     "IMPERIUM",
     "JUMP PACK",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -2586,6 +2619,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -2709,6 +2745,9 @@
     "IMPERIUM",
     "TERMINATOR",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -2878,6 +2917,9 @@
     "IMPERIUM",
     "RAVENWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -3022,6 +3064,9 @@
     "JUMP PACK",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -3143,6 +3188,9 @@
     "ANCIENT",
     "CHARACTER",
     "CHAMPION"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -3330,6 +3378,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -3447,6 +3498,9 @@
     "IMPERIUM",
     "PSYKER",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -3612,6 +3666,9 @@
     "IMPERIUM",
     "PHOBOS",
     "PSYKER"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -3781,6 +3838,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -3942,6 +4002,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -4424,6 +4487,9 @@
     "PHOBOS",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -4606,6 +4672,9 @@
     "PHOBOS",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -4740,6 +4809,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -4880,6 +4952,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -5211,6 +5286,9 @@
     "GRAVIS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -5407,6 +5485,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -5898,6 +5979,9 @@
     "GRAVIS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -6115,6 +6199,9 @@
     "IMPERIUM",
     "JUMP PACK",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -6456,6 +6543,9 @@
     "TACTICUS",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -6674,6 +6764,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -6974,6 +7067,9 @@
     "PHOBOS",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -7236,6 +7332,9 @@
     "GRAVIS",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -7370,6 +7469,9 @@
     "EXPLOSIVES",
     "GRAVIS",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -7591,6 +7693,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "TACTICUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -7822,6 +7927,9 @@
     "IMPERIUM",
     "JUMP PACK"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -8026,6 +8134,9 @@
     "PHOBOS",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -8172,6 +8283,9 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -8306,6 +8420,9 @@
     "IMPERIUM",
     "PHOBOS",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -8485,6 +8602,9 @@
     "IMPERIUM",
     "PHOBOS",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -8711,6 +8831,9 @@
     "EXPLOSIVES",
     "IMPERIUM",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -9162,6 +9285,9 @@
     "TACTICUS",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -9527,6 +9653,9 @@
     "TERMINATOR",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -9699,6 +9828,9 @@
     "IMPERIUM",
     "TERMINATOR",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -10098,6 +10230,9 @@
     "TACTICUS",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -10476,6 +10611,9 @@
     "IMPERIUM",
     "RAVENWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -10773,6 +10911,9 @@
     "WALKER",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "8\"",
@@ -10932,6 +11073,9 @@
     "IMPERIUM",
     "WALKER",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -11201,6 +11345,9 @@
     "ARTILLERY",
     "IMPERIUM"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "5\"",
@@ -11367,6 +11514,9 @@
     "IMPERIUM",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -11491,6 +11641,9 @@
     "IMPERIUM",
     "SMOKE"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -11614,6 +11767,9 @@
     "FRAME",
     "IMPERIUM",
     "SMOKE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -11761,6 +11917,9 @@
     "FRAME",
     "IMPERIUM",
     "RAVENWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -11971,6 +12130,9 @@
     "IMPERIUM",
     "PHOBOS",
     "WALKER"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -12202,6 +12364,9 @@
     "SPEEDER",
     "RAVENWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -12401,6 +12566,9 @@
     "IMPERIUM",
     "WALKER",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -12778,6 +12946,9 @@
     "SPEEDER",
     "RAVENWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -12928,6 +13099,9 @@
     "SPEEDER",
     "RAVENWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "14\"",
@@ -13071,6 +13245,9 @@
     "IMPERIUM",
     "SPEEDER",
     "RAVENWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -13223,6 +13400,9 @@
     "IMPERIUM",
     "TRANSPORT"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "-",
@@ -13288,6 +13468,9 @@
     "FRAME",
     "IMPERIUM",
     "TRANSPORT"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -13646,6 +13829,9 @@
     "TRANSPORT",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -13930,6 +14116,9 @@
     "SMOKE",
     "TRANSPORT",
     "DEATHWING"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {
@@ -14218,6 +14407,9 @@
     "TRANSPORT",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "12\"",
@@ -14504,6 +14696,9 @@
     "TRANSPORT",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -14785,6 +14980,9 @@
     "TRANSPORT",
     "DEATHWING"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
+   ],
    "stats": [
     {
      "M": "10\"",
@@ -15031,6 +15229,9 @@
     "IMPERIUM",
     "SMOKE",
     "TRANSPORT"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES"
    ],
    "stats": [
     {

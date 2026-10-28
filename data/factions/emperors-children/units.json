@@ -1,0 +1,4265 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World and Warhammer Legends datasheets: never imported.",
+  "ids": [
+   "daemonettes",
+   "fiends",
+   "keeper-of-secrets",
+   "seekers",
+   "shalaxi-helbane"
+  ]
+ },
+ "units": [
+  {
+   "id": "daemon-prince-of-slaanesh",
+   "name": {
+    "en": "Daemon Prince of Slaanesh",
+    "es": "Daemon Prince of Slaanesh"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "DAEMON PRINCE"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Lord of Excess"
+     },
+     "text": {
+      "en": "While this model is within 3\" of one or more friendly SLAANESH INFANTRY units, this model has the Lone Operative ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Excessive Vigour (Aura)"
+     },
+     "text": {
+      "en": "While a friendly SLAANESH unit is within 6\" of this model, if that unit made a Charge move this turn, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+     }
+    },
+    {
+     "name": {
+      "en": "Ecstatic Death"
+     },
+     "text": {
+      "en": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-of-Slaanesh",
+   "composition": [
+    "1 Daemon Prince of Slaanesh"
+   ],
+   "equipped": [
+    "This model is equipped with: infernal cannon; hellforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "daemon-prince-of-slaanesh-with-wings",
+   "name": {
+    "en": "Daemon Prince of Slaanesh with Wings",
+    "es": "Daemon Prince of Slaanesh with Wings"
+   },
+   "keywords": [
+    "MONSTER",
+    "FLY",
+    "CHARACTER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "DAEMON PRINCE WITH WINGS"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "9",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "infernal-cannon",
+     "name": {
+      "en": "Infernal cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hellforged-weapons",
+     "name": {
+      "en": "Hellforged weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "14",
+       "skill": "2+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Daemonic Destruction"
+     },
+     "text": {
+      "en": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+     }
+    },
+    {
+     "name": {
+      "en": "Stimulated by Pain"
+     },
+     "text": {
+      "en": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemon-Prince-of-Slaanesh-with-Wings",
+   "composition": [
+    "1 Daemon Prince of Slaanesh with Wings"
+   ],
+   "equipped": [
+    "This model is equipped with: infernal cannon; hellforged weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "infernal-cannon": 1,
+      "hellforged-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hellforged-weapons",
+    "infernal-cannon"
+   ]
+  },
+  {
+   "id": "fulgrim",
+   "name": {
+    "en": "Fulgrim",
+    "es": "Fulgrim"
+   },
+   "keywords": [
+    "MONSTER",
+    "MOBILE",
+    "FLY",
+    "CHARACTER",
+    "EPIC HERO",
+    "DAEMON",
+    "CHAOS",
+    "SLAANESH",
+    "PRIMARCH",
+    "FULGRIM"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "16\"",
+     "T": "11",
+     "Sv": "2+",
+     "W": "16",
+     "Ld": "5+",
+     "OC": "6",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "malefic-lash",
+     "name": {
+      "en": "Malefic lash"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "daemonic-blades",
+     "name": {
+      "en": "Daemonic blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "serpentine-tail",
+     "name": {
+      "en": "Serpentine tail"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Daemonic Poisons"
+     },
+     "text": {
+      "en": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 mortal wounds."
+     }
+    },
+    {
+     "name": {
+      "en": "Daemon Primarch of Slaanesh"
+     },
+     "text": {
+      "en": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6",
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Fulgrim",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "composition": [
+    "1 Fulgrim – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: malefic lash; daemonic blades; serpentine tail."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "malefic-lash": 1,
+      "daemonic-blades": 1,
+      "serpentine-tail": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "daemonic-blades",
+    "malefic-lash",
+    "serpentine-tail"
+   ]
+  },
+  {
+   "id": "lord-exultant",
+   "name": {
+    "en": "Lord Exultant",
+    "es": "Lord Exultant"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "GRENADES",
+    "CHAOS",
+    "SLAANESH",
+    "LORD EXULTANT"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "screamer-pistol",
+     "name": {
+      "en": "Screamer pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "master-crafted-power-sword",
+     "name": {
+      "en": "Master-crafted power sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phoenix-power-spear",
+     "name": {
+      "en": "Phoenix power spear"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lance"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "rapture-lash",
+     "name": {
+      "en": "Rapture lash"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Perfectionists"
+     },
+     "text": {
+      "en": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Euphoric Strikes"
+     },
+     "text": {
+      "en": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lord-Exultant",
+   "wargearOptions": [
+    {
+     "text": "This model’s plasma pistol can be replaced with one of the following:",
+     "choices": [
+      "1 power fist",
+      "1 rapture lash"
+     ]
+    },
+    {
+     "text": "This model’s Phoenix power spear can be replaced with one of the following:",
+     "choices": [
+      "1 master-crafted power sword",
+      "1 screamer pistol"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Lord Exultant"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; plasma pistol; Phoenix power spear; close combat weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "infractors",
+     "tormentors"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "plasma-pistol": 1,
+      "phoenix-power-spear": 1,
+      "close-combat-weapon": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Plasma pistol",
+      "es": "Plasma pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "plasma-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "power-fist",
+      "rapture-lash"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ],
+      "rapture-lash": [
+       {
+        "item": "rapture-lash",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "power-fist": "Power fist",
+      "rapture-lash": "Rapture lash",
+      "": "Plasma pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Phoenix power spear",
+      "es": "Phoenix power spear"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "phoenix-power-spear",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "master-crafted-power-sword",
+      "screamer-pistol"
+     ],
+     "packages": {
+      "master-crafted-power-sword": [
+       {
+        "item": "master-crafted-power-sword",
+        "n": 1
+       }
+      ],
+      "screamer-pistol": [
+       {
+        "item": "screamer-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "master-crafted-power-sword": "Master-crafted power sword",
+      "screamer-pistol": "Screamer pistol",
+      "": "Phoenix power spear"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "close-combat-weapon",
+    "phoenix-power-spear",
+    "plasma-pistol"
+   ]
+  },
+  {
+   "id": "lord-kakophonist",
+   "name": {
+    "en": "Lord Kakophonist",
+    "es": "Lord Kakophonist"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "GRENADES",
+    "CHAOS",
+    "SLAANESH",
+    "LORD KAKOPHONIST"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "screamer-pistol",
+     "name": {
+      "en": "Screamer pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-sword",
+     "name": {
+      "en": "Power sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Obsessive Annunciation"
+     },
+     "text": {
+      "en": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Doom Siren"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model’s unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks and roll three D6: for each 4+, that enemy unit suffers 1 mortal wound. If an enemy unit suffers one or more mortal wounds as a result of this ability, it must take a Battle-shock test."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lord-Kakophonist",
+   "wargearOptions": [
+    {
+     "text": "This model’s power sword can be replaced with 1 screamer pistol and 1 close combat weapon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Lord Kakophonist"
+   ],
+   "equipped": [
+    "This model is equipped with: screamer pistol; power sword."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "chaos-terminators",
+     "noise-marines"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "screamer-pistol": 1,
+      "power-sword": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Power sword",
+      "es": "Power sword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "power-sword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "screamer-pistol+close-combat-weapon"
+     ],
+     "packages": {
+      "screamer-pistol+close-combat-weapon": [
+       {
+        "item": "screamer-pistol",
+        "n": 1
+       },
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "screamer-pistol+close-combat-weapon": "Screamer pistol + Close combat weapon",
+      "": "Power sword"
+     }
+    }
+   ],
+   "loadout": [
+    "power-sword",
+    "screamer-pistol"
+   ]
+  },
+  {
+   "id": "lucius-the-eternal",
+   "name": {
+    "en": "Lucius the Eternal",
+    "es": "Lucius the Eternal"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "EPIC HERO",
+    "CHAOS",
+    "SLAANESH",
+    "LUCIUS THE ETERNAL"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "6",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "blade-of-the-laer",
+     "name": {
+      "en": "Blade of the Laer"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lash-of-torment",
+     "name": {
+      "en": "Lash of Torment"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "A Challenge Worthy of Skill"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Duellist’s Hubris"
+     },
+     "text": {
+      "en": "At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+",
+    "Leader",
+    "Lone Operative"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Lucius-the-Eternal",
+   "composition": [
+    "1 Lucius the Eternal – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Blade of the Laer; Lash of Torment."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "flawless-blades"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "blade-of-the-laer": 1,
+      "lash-of-torment": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blade-of-the-laer",
+    "lash-of-torment"
+   ]
+  },
+  {
+   "id": "sorcerer",
+   "name": {
+    "en": "Sorcerer",
+    "es": "Sorcerer"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "PSYKER",
+    "GRENADES",
+    "CHAOS",
+    "SLAANESH",
+    "SORCERER"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "agonising-energies",
+     "name": {
+      "en": "Agonising Energies"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ],
+       "mode": {
+        "en": "witchfire"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Devastating Wounds",
+        "Hazardous",
+        "Psychic"
+       ],
+       "mode": {
+        "en": "focused witchfire"
+       }
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "force-weapon",
+     "name": {
+      "en": "Force weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Psychic"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Warped Interference (Psychic)"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack."
+     }
+    },
+    {
+     "name": {
+      "en": "Wracking Agonies (Psychic)"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sorcerer",
+   "composition": [
+    "1 Sorcerer"
+   ],
+   "equipped": [
+    "This model is equipped with: Agonising Energies; bolt pistol; force weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "infractors",
+     "noise-marines",
+     "tormentors"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "agonising-energies": 1,
+      "bolt-pistol": 1,
+      "force-weapon": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "agonising-energies",
+    "bolt-pistol",
+    "force-weapon"
+   ]
+  },
+  {
+   "id": "infractors",
+   "name": {
+    "en": "Infractors",
+    "es": "Infractors"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "GRENADES",
+    "CHAOS",
+    "SLAANESH",
+    "INFRACTORS"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "6+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "duelling-sabre",
+     "name": {
+      "en": "Duelling sabre"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-sword",
+     "name": {
+      "en": "Power sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rapture-lash",
+     "name": {
+      "en": "Rapture lash"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Excessive Assault"
+     },
+     "text": {
+      "en": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Infractors",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Icon of Excess"
+     },
+     "text": {
+      "en": "At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Obsessionist’s bolt pistol can be replaced with 1 plasma pistol.",
+     "choices": []
+    },
+    {
+     "text": "The Obsessionist’s power sword can be replaced with 1 rapture lash.",
+     "choices": []
+    },
+    {
+     "text": "1 Infractor can be equipped with 1 icon of excess.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Obsessionist",
+    "4-9 Infractors"
+   ],
+   "equipped": [
+    "The Obsessionist is equipped with: bolt pistol; power sword.",
+    "Every Infractor is equipped with: bolt pistol; duelling sabre."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 5,
+      "power-sword": 1,
+      "duelling-sabre": 4
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 10,
+      "power-sword": 1,
+      "duelling-sabre": 9
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Obsessionist: Bolt pistol",
+      "es": "Obsessionist: Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Obsessionist",
+     "labels": {
+      "plasma-pistol": "Plasma pistol",
+      "": "Bolt pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Obsessionist: Power sword",
+      "es": "Obsessionist: Power sword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "power-sword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "rapture-lash"
+     ],
+     "packages": {
+      "rapture-lash": [
+       {
+        "item": "rapture-lash",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Obsessionist",
+     "labels": {
+      "rapture-lash": "Rapture lash",
+      "": "Power sword"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Infractor: add Icon of excess",
+      "es": "Infractor: añadir Icon of excess"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:icon-of-excess",
+     "packages": {
+      "gear:icon-of-excess": [
+       {
+        "item": "gear:icon-of-excess",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 1
+     },
+     "owner": "Infractor",
+     "labels": {
+      "gear:icon-of-excess": "Icon of excess"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "duelling-sabre",
+    "power-sword"
+   ]
+  },
+  {
+   "id": "tormentors",
+   "name": {
+    "en": "Tormentors",
+    "es": "Tormentors"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "GRENADES",
+    "CHAOS",
+    "SLAANESH",
+    "TORMENTORS"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "6+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-gun",
+     "name": {
+      "en": "Plasma gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Precision",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Precision",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Precision"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol",
+        "Precision"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-sword",
+     "name": {
+      "en": "Power sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "rapture-lash",
+     "name": {
+      "en": "Rapture lash"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Objective Defiled"
+     },
+     "text": {
+      "en": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tormentors",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Icon of Excess"
+     },
+     "text": {
+      "en": "At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Obsessionist’s bolt pistol can be replaced with 1 plasma pistol.",
+     "choices": []
+    },
+    {
+     "text": "The Obsessionist’s power sword can be replaced with 1 rapture lash.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Tormentor’s boltgun can be replaced with 1 meltagun.",
+     "choices": []
+    },
+    {
+     "text": "For every 5 models in this unit, 1 Tormentor’s boltgun can be replaced with 1 plasma gun.",
+     "choices": []
+    },
+    {
+     "text": "1 Tormentor can be equipped with 1 icon of excess.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Obsessionist",
+    "4-9 Tormentors"
+   ],
+   "equipped": [
+    "The Obsessionist is equipped with: bolt pistol; power sword.",
+    "Every Tormentor is equipped with: boltgun; close combat weapon."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 1,
+      "power-sword": 1,
+      "boltgun": 4,
+      "close-combat-weapon": 4
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 1,
+      "power-sword": 1,
+      "boltgun": 9,
+      "close-combat-weapon": 9
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Obsessionist: Bolt pistol",
+      "es": "Obsessionist: Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Obsessionist",
+     "labels": {
+      "plasma-pistol": "Plasma pistol",
+      "": "Bolt pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Obsessionist: Power sword",
+      "es": "Obsessionist: Power sword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "power-sword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "rapture-lash"
+     ],
+     "packages": {
+      "rapture-lash": [
+       {
+        "item": "rapture-lash",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Obsessionist",
+     "labels": {
+      "rapture-lash": "Rapture lash",
+      "": "Power sword"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Tormentor: replace Boltgun",
+      "es": "Tormentor: sustituir Boltgun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "meltagun"
+     ],
+     "packages": {
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Tormentor",
+     "labels": {
+      "meltagun": "Meltagun"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Tormentor: replace Boltgun",
+      "es": "Tormentor: sustituir Boltgun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "plasma-gun"
+     ],
+     "packages": {
+      "plasma-gun": [
+       {
+        "item": "plasma-gun",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 2
+     },
+     "owner": "Tormentor",
+     "labels": {
+      "plasma-gun": "Plasma gun"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Tormentor: add Icon of excess",
+      "es": "Tormentor: añadir Icon of excess"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:icon-of-excess",
+     "packages": {
+      "gear:icon-of-excess": [
+       {
+        "item": "gear:icon-of-excess",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 1
+     },
+     "owner": "Tormentor",
+     "labels": {
+      "gear:icon-of-excess": "Icon of excess"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "boltgun",
+    "close-combat-weapon",
+    "power-sword"
+   ]
+  },
+  {
+   "id": "chaos-spawn",
+   "name": {
+    "en": "Chaos Spawn",
+    "es": "Chaos Spawn"
+   },
+   "keywords": [
+    "BEAST",
+    "CHAOS",
+    "SLAANESH",
+    "CHAOS SPAWN"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "5",
+     "Sv": "4+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hideous-mutations",
+     "name": {
+      "en": "Hideous mutations"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "D6+2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Scuttling Horrors"
+     },
+     "text": {
+      "en": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6\"."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Spawn",
+   "composition": [
+    "2 Chaos Spawn"
+   ],
+   "equipped": [
+    "Every model is equipped with: hideous mutations."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 2,
+     "loadout": {
+      "hideous-mutations": 2
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "hideous-mutations"
+   ]
+  },
+  {
+   "id": "chaos-terminators",
+   "name": {
+    "en": "Chaos Terminators",
+    "es": "Chaos Terminators"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAOS",
+    "SLAANESH",
+    "TERMINATOR",
+    "TERMINATOR SQUAD"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "6",
+     "Sv": "2+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-flamer",
+     "name": {
+      "en": "Heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reaper-autocannon",
+     "name": {
+      "en": "Reaper autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "accursed-weapon",
+     "name": {
+      "en": "Accursed weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "chainfist",
+     "name": {
+      "en": "Chainfist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-vehicle 3+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paired-accursed-weapons",
+     "name": {
+      "en": "Paired accursed weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Lethal Obsession"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this unit has shot, you can use this ability. If you do, select one enemy unit hit by those ranged attacks. Until the end of the turn, when this unit declares a charge: This unit can re-roll that charge roll. This unit must end that charge move engaged with that enemy unit."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Terminators",
+   "wargearOptions": [
+    {
+     "text": "1 Chaos Terminator’s combi-bolter can be replaced with one of the following:",
+     "choices": [
+      "1 heavy flamer",
+      "1 reaper autocannon"
+     ]
+    },
+    {
+     "text": "Any number of models can each have their combi-bolter replaced with 1 combi-weapon.",
+     "choices": []
+    },
+    {
+     "text": "1 model’s combi-bolter and accursed weapon can be replaced with 1 paired accursed weapons.",
+     "choices": []
+    },
+    {
+     "text": "Up to 3 models can each have their accursed weapon replaced with 1 power fist.",
+     "choices": []
+    },
+    {
+     "text": "1 model’s accursed weapon can be replaced with 1 chainfist.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Terminator Champion",
+    "4 Chaos Terminators"
+   ],
+   "equipped": [
+    "Every model is equipped with: combi-bolter; accursed weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "combi-bolter": 5,
+      "accursed-weapon": 5
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Chaos Terminator: Combi-bolter",
+      "es": "Chaos Terminator: Combi-bolter"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "combi-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "heavy-flamer",
+      "reaper-autocannon"
+     ],
+     "packages": {
+      "heavy-flamer": [
+       {
+        "item": "heavy-flamer",
+        "n": 1
+       }
+      ],
+      "reaper-autocannon": [
+       {
+        "item": "reaper-autocannon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Chaos Terminator",
+     "labels": {
+      "heavy-flamer": "Heavy flamer",
+      "reaper-autocannon": "Reaper autocannon",
+      "": "Combi-bolter"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "replace Combi-bolter",
+      "es": "sustituir Combi-bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "combi-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 5
+     },
+     "labels": {
+      "combi-weapon": "Combi-weapon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Combi-bolter + Accursed weapon",
+      "es": "Combi-bolter + Accursed weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "combi-bolter",
+       "n": 1
+      },
+      {
+       "item": "accursed-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "paired-accursed-weapons"
+     ],
+     "packages": {
+      "paired-accursed-weapons": [
+       {
+        "item": "paired-accursed-weapons",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "paired-accursed-weapons": "Paired accursed weapons",
+      "": "Combi-bolter + Accursed weapon"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "replace Accursed weapon",
+      "es": "sustituir Accursed weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "accursed-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "power-fist"
+     ],
+     "packages": {
+      "power-fist": [
+       {
+        "item": "power-fist",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 3
+     },
+     "labels": {
+      "power-fist": "Power fist"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Accursed weapon",
+      "es": "Accursed weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "accursed-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "chainfist"
+     ],
+     "packages": {
+      "chainfist": [
+       {
+        "item": "chainfist",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "chainfist": "Chainfist",
+      "": "Accursed weapon"
+     }
+    }
+   ],
+   "loadout": [
+    "accursed-weapon",
+    "combi-bolter"
+   ]
+  },
+  {
+   "id": "flawless-blades",
+   "name": {
+    "en": "Flawless Blades",
+    "es": "Flawless Blades"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHAOS",
+    "SLAANESH",
+    "FLAWLESS BLADES"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blissblade",
+     "name": {
+      "en": "Blissblade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-3",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Daemonic Patrons"
+     },
+     "text": {
+      "en": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Flawless-Blades",
+   "composition": [
+    "3-6 Flawless Blades"
+   ],
+   "equipped": [
+    "Every model is equipped with: bolt pistol; blissblade."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "bolt-pistol": 3,
+      "blissblade": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "bolt-pistol": 6,
+      "blissblade": 6
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blissblade",
+    "bolt-pistol"
+   ]
+  },
+  {
+   "id": "noise-marines",
+   "name": {
+    "en": "Noise Marines",
+    "es": "Noise Marines"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHAOS",
+    "SLAANESH",
+    "NOISE MARINES"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "5",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "blastmaster",
+     "name": {
+      "en": "Blastmaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Ignores Cover"
+       ],
+       "mode": {
+        "en": "single frequency"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover"
+       ],
+       "mode": {
+        "en": "varied frequency"
+       }
+      }
+     ]
+    },
+    {
+     "id": "screamer-pistol",
+     "name": {
+      "en": "Screamer pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sonic-blaster",
+     "name": {
+      "en": "Sonic blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-sword",
+     "name": {
+      "en": "Power sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Terrifying Crescendo"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Noise-Marines",
+   "wargearOptions": [
+    {
+     "text": "The Disharmonist’s sonic blaster can be replaced with 1 screamer pistol and 1 power sword.",
+     "choices": []
+    },
+    {
+     "text": "Up to 2 Noise Marines can each replace their sonic blaster with 1 blastmaster.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Disharmonist",
+    "5 Noise Marines"
+   ],
+   "equipped": [
+    "Every model is equipped with: sonic blaster; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 6,
+     "loadout": {
+      "sonic-blaster": 6,
+      "close-combat-weapon": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Disharmonist: Sonic blaster",
+      "es": "Disharmonist: Sonic blaster"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "sonic-blaster",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "screamer-pistol+power-sword"
+     ],
+     "packages": {
+      "screamer-pistol+power-sword": [
+       {
+        "item": "screamer-pistol",
+        "n": 1
+       },
+       {
+        "item": "power-sword",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Disharmonist",
+     "labels": {
+      "screamer-pistol+power-sword": "Screamer pistol + Power sword",
+      "": "Sonic blaster"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Noise Marines: replace Sonic blaster",
+      "es": "Noise Marines: sustituir Sonic blaster"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "sonic-blaster",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "blastmaster"
+     ],
+     "packages": {
+      "blastmaster": [
+       {
+        "item": "blastmaster",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "6": 2
+     },
+     "owner": "Noise Marines",
+     "labels": {
+      "blastmaster": "Blastmaster"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "sonic-blaster"
+   ]
+  },
+  {
+   "id": "defiler",
+   "name": {
+    "en": "Defiler",
+    "es": "Defiler"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "SLAANESH",
+    "DAEMON",
+    "DEFILER"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "11",
+     "Sv": "3+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "5",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hades-battle-cannon",
+     "name": {
+      "en": "Hades battle cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ectoplasma-destructor",
+     "name": {
+      "en": "Ectoplasma destructor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "excruciator-cannon",
+     "name": {
+      "en": "Excruciator cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "magma-cutters",
+     "name": {
+      "en": "Magma cutters"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-baleflamer",
+     "name": {
+      "en": "Heavy baleflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-lascannon",
+     "name": {
+      "en": "Hades lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "heavy-reaper-autocannon",
+     "name": {
+      "en": "Heavy reaper autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-missile-launcher",
+     "name": {
+      "en": "Heavy missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": [],
+       "mode": {
+        "en": "krak"
+       }
+      },
+      {
+       "range": "48\"",
+       "A": "2D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "frag"
+       }
+      }
+     ]
+    },
+    {
+     "id": "shearing-claws",
+     "name": {
+      "en": "Shearing claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "16",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Precision"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "electroscourge",
+     "name": {
+      "en": "Electroscourge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks",
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Scuttling Walker"
+     },
+     "text": {
+      "en": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+     }
+    },
+    {
+     "name": {
+      "en": "Revel in Desecration"
+     },
+     "text": {
+      "en": "Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Defiler",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Hades battle cannon can be replaced with 1 ectoplasma destructor.",
+     "choices": []
+    },
+    {
+     "text": "This model’s excruciator cannons can be replaced with 2 magma cutters",
+     "choices": []
+    },
+    {
+     "text": "This model’s heavy baleflamer can be replaced with one of the following:",
+     "choices": [
+      "1 Hades lascannon",
+      "1 heavy reaper autocannon",
+      "1 electroscourge (a model cannot be equipped with more than one electroscourge)"
+     ]
+    },
+    {
+     "text": "This model’s heavy missile launcher can be replaced with one of the following:",
+     "choices": [
+      "1 Hades lascannon",
+      "1 heavy reaper autocannon",
+      "1 electroscourge (a model cannot be equipped with more than one electroscourge)"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Defiler"
+   ],
+   "equipped": [
+    "This model is equipped with: 1 Hades battle cannon; 2 excruciator cannons; 1 heavy missile launcher; 1 heavy baleflamer; 1 shearing claws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-battle-cannon": 1,
+      "excruciator-cannon": 2,
+      "heavy-missile-launcher": 1,
+      "heavy-baleflamer": 1,
+      "shearing-claws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Hades battle cannon",
+      "es": "Hades battle cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-battle-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "ectoplasma-destructor"
+     ],
+     "packages": {
+      "ectoplasma-destructor": [
+       {
+        "item": "ectoplasma-destructor",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ectoplasma-destructor": "Ectoplasma destructor",
+      "": "Hades battle cannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Excruciator cannon",
+      "es": "Excruciator cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "excruciator-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "2xmagma-cutters"
+     ],
+     "packages": {
+      "2xmagma-cutters": [
+       {
+        "item": "magma-cutters",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xmagma-cutters": "2× Magma cutters",
+      "": "Excruciator cannon"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Heavy baleflamer",
+      "es": "Heavy baleflamer"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-baleflamer",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hades-lascannon",
+      "heavy-reaper-autocannon",
+      "electroscourge"
+     ],
+     "packages": {
+      "hades-lascannon": [
+       {
+        "item": "hades-lascannon",
+        "n": 1
+       }
+      ],
+      "heavy-reaper-autocannon": [
+       {
+        "item": "heavy-reaper-autocannon",
+        "n": 1
+       }
+      ],
+      "electroscourge": [
+       {
+        "item": "electroscourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hades-lascannon": "Hades lascannon",
+      "heavy-reaper-autocannon": "Heavy reaper autocannon",
+      "electroscourge": "Electroscourge",
+      "": "Heavy baleflamer"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Heavy missile launcher",
+      "es": "Heavy missile launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "heavy-missile-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "hades-lascannon",
+      "heavy-reaper-autocannon",
+      "electroscourge"
+     ],
+     "packages": {
+      "hades-lascannon": [
+       {
+        "item": "hades-lascannon",
+        "n": 1
+       }
+      ],
+      "heavy-reaper-autocannon": [
+       {
+        "item": "heavy-reaper-autocannon",
+        "n": 1
+       }
+      ],
+      "electroscourge": [
+       {
+        "item": "electroscourge",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "hades-lascannon": "Hades lascannon",
+      "heavy-reaper-autocannon": "Heavy reaper autocannon",
+      "electroscourge": "Electroscourge",
+      "": "Heavy missile launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "excruciator-cannon",
+    "hades-battle-cannon",
+    "heavy-baleflamer",
+    "heavy-missile-launcher",
+    "shearing-claws"
+   ]
+  },
+  {
+   "id": "heldrake",
+   "name": {
+    "en": "Heldrake",
+    "es": "Heldrake"
+   },
+   "keywords": [
+    "VEHICLE",
+    "FLY",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "HELDRAKE"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "14",
+     "Ld": "7+",
+     "OC": "0",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "baleflamer",
+     "name": {
+      "en": "Baleflamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6+3",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hades-autocannon",
+     "name": {
+      "en": "Hades autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "6",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "heldrake-claws",
+     "name": {
+      "en": "Heldrake claws"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 2+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Airborne Predator"
+     },
+     "text": {
+      "en": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll two D6, adding 1 to each result if that enemy unit can FLY: for each 4+, that enemy unit suffers D3 mortal wounds."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Hover"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Heldrake",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Hades autocannon can be replaced with 1 baleflamer.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Heldrake"
+   ],
+   "equipped": [
+    "This model is equipped with: Hades autocannon; Heldrake claws."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "hades-autocannon": 1,
+      "heldrake-claws": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Hades autocannon",
+      "es": "Hades autocannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hades-autocannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "baleflamer"
+     ],
+     "packages": {
+      "baleflamer": [
+       {
+        "item": "baleflamer",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "baleflamer": "Baleflamer",
+      "": "Hades autocannon"
+     }
+    }
+   ],
+   "loadout": [
+    "hades-autocannon",
+    "heldrake-claws"
+   ]
+  },
+  {
+   "id": "maulerfiend",
+   "name": {
+    "en": "Maulerfiend",
+    "es": "Maulerfiend"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHAOS",
+    "DAEMON",
+    "SLAANESH",
+    "MAULERFIEND"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "12",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "magma-cutters",
+     "name": {
+      "en": "Magma cutters"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lasher-tendrils",
+     "name": {
+      "en": "Lasher tendrils"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "maulerfiend-fists",
+     "name": {
+      "en": "Maulerfiend fists"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "3+",
+       "S": "14",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Glutton for Punishment"
+     },
+     "text": {
+      "en": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Maulerfiend",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s lasher tendrils can be replaced with 2 magma cutters.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Maulerfiend"
+   ],
+   "equipped": [
+    "This model is equipped with: lasher tendrils; Maulerfiend fists."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "lasher-tendrils": 1,
+      "maulerfiend-fists": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Lasher tendrils",
+      "es": "Lasher tendrils"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "lasher-tendrils",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "2xmagma-cutters"
+     ],
+     "packages": {
+      "2xmagma-cutters": [
+       {
+        "item": "magma-cutters",
+        "n": 2
+       }
+      ]
+     },
+     "labels": {
+      "2xmagma-cutters": "2× Magma cutters",
+      "": "Lasher tendrils"
+     }
+    }
+   ],
+   "loadout": [
+    "lasher-tendrils",
+    "maulerfiend-fists"
+   ]
+  },
+  {
+   "id": "chaos-land-raider",
+   "name": {
+    "en": "Chaos Land Raider",
+    "es": "Chaos Land Raider"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FRAME",
+    "SMOKE",
+    "CHAOS",
+    "SLAANESH",
+    "LAND RAIDER"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "12",
+     "Sv": "2+",
+     "W": "16",
+     "Ld": "6+",
+     "OC": "5"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "soulshatter-lascannon",
+     "name": {
+      "en": "Soulshatter lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-heavy-bolter",
+     "name": {
+      "en": "Twin heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "4+",
+       "S": "8",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Assault Ramp"
+     },
+     "text": {
+      "en": "Each time a unit disembarks from this model after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D6"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Land-Raider",
+   "damaged": {
+    "name": {
+     "en": "1-5 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 combi-bolter",
+      "1 combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Land Raider"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 soulshatter lascannons; twin heavy bolter; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 14 EMPEROR’S CHILDREN INFANTRY models. Each TERMINATOR and FLAWLESS BLADE model takes up the space of 2 models."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "soulshatter-lascannon": 2,
+      "twin-heavy-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "combi-weapon": "Combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "soulshatter-lascannon",
+    "twin-heavy-bolter"
+   ]
+  },
+  {
+   "id": "chaos-rhino",
+   "name": {
+    "en": "Chaos Rhino",
+    "es": "Chaos Rhino"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FRAME",
+    "DEDICATED TRANSPORT",
+    "SMOKE",
+    "CHAOS",
+    "SLAANESH",
+    "RHINO"
+   ],
+   "factionKeywords": [
+    "EMPEROR’S CHILDREN"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "combi-bolter",
+     "name": {
+      "en": "Combi-bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "havoc-launcher",
+     "name": {
+      "en": "Havoc launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Assault Vehicle"
+     },
+     "text": {
+      "en": "Units can disembark from this TRANSPORT after it has Advanced. Units that do so make a shock disembark move (Core Rules, 18.07) for that disembarkation."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Firing Deck 2"
+   ],
+   "factionAbilities": [
+    "Thrill Seekers"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Chaos-Rhino",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with one of the following:",
+     "choices": [
+      "1 combi-bolter",
+      "1 combi-weapon"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Chaos Rhino"
+   ],
+   "equipped": [
+    "This model is equipped with: combi-bolter; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models)."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "combi-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "combi-bolter",
+      "combi-weapon"
+     ],
+     "packages": {
+      "combi-bolter": [
+       {
+        "item": "combi-bolter",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "combi-bolter": "Combi-bolter",
+      "combi-weapon": "Combi-weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Havoc launcher",
+      "es": "añadir Havoc launcher"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "havoc-launcher",
+     "packages": {
+      "havoc-launcher": [
+       {
+        "item": "havoc-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "havoc-launcher": "Havoc launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "combi-bolter"
+   ]
+  }
+ ]
+}

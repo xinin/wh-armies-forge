@@ -13,6 +13,40 @@
    "en": "At the start of your Command phase, friendly ADEPTUS CUSTODES units with this ability are readied. While a friendly unit is readied, you can select one of the ka’tah abilities presented below for that unit to use. If you do, that unit is no longer readied.\nEach ka’tah ability will tell you when that ka’tah ability can be used, and the effects that ka’tah ability has on the unit using it.\nWe recommend placing a token next to each readied unit, removing it when that unit is no longer readied.\nFavoured Ka’tah\nAll detachments tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these detachments, the ka’tah ability that is the Favoured Ka’tah of that detachment grants the additional effect listed in that detachment.\nExample: If you selected the Solar Watch detachment, when you select the Calistus ka’tah ability for a readied unit, that unit has +2\" M in addition to the normal effect of Calistus.\nCONSERVAI\nKA’TAH ABILITY\nWHEN: Your Command phase.\nTARGET: One friendly readied unit.\nEFFECT: Until the end of the turn:\nBeing engaged/battle-shocked does not prevent your unit from being eligible to start an action.\nStarting an action does not prevent your unit from being eligible to shoot.\nCALISTUS\nKA’TAH ABILITY\nWHEN: Your Movement phase, when a friendly readied unit is selected to move.\nTARGET: That readied unit.\nEFFECT: When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.\nSALVUS\nKA’TAH ABILITY\nWHEN: Your Shooting phase, when a friendly readied unit is selected to shoot.\nTARGET: That readied unit.\nEFFECT: Your unit can ignore modifiers to your unit’s:\nBS.\nHit rolls and wound rolls.\nDACATARAI\nKA’TAH ABILITY\nWHEN: Start of the Fight phase.\nTARGET: One friendly readied unit.\nEFFECT: Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.\nKAPTARIS\nKA’TAH ABILITY\nWHEN: Start of the Fight phase.\nTARGET: One friendly readied unit.\nEFFECT: Melee attacks that target your unit have -1 to hit rolls.\nRENDAX\nKA’TAH ABILITY\nWHEN: Fight phase, when a friendly readied unit is selected to fight.\nTARGET: One friendly readied unit.\nEFFECT: Your unit’s melee attacks have [Lethal Hits: Monster/Vehicle]."
   }
  },
+ "extraRules": [
+  {
+   "name": {
+    "en": "Aegis of the Emperor"
+   },
+   "text": {
+    "en": "Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds."
+   }
+  },
+  {
+   "name": {
+    "en": "Aquila Commander"
+   },
+   "text": {
+    "en": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+   }
+  },
+  {
+   "name": {
+    "en": "Daughters of the Abyss"
+   },
+   "text": {
+    "en": "Friendly ANATHEMA PSYKANA units with this ability have Feel No Pain 3+ against psychic attacks.\nFriendly ANATHEMA PSYKANA units with this ability have the following ability:\nPsychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.\nAnathema Psykana\nYou can include ANATHEMA PSYKANA units in your army, even though they do not have the ADEPTUS CUSTODES faction keyword.\nWhen mustering your army, unless otherwise stated:\nYou cannot select ANATHEMA PSYKANA as your army faction.\nYou cannot select an ANATHEMA PSYKANA model to be your WARLORD."
+   }
+  },
+  {
+   "name": {
+    "en": "Special Move Types"
+   },
+   "text": {
+    "en": "The following are special move types that certain or all of your units are eligible to make.\nSHOCK DISEMBARK MOVE18.07\nSET-UP DISTANCE: 3\"\nELIGIBLE IF:\nEmbarked within a TRANSPORT on the battlefield\nDid not embark within that TRANSPORT this phase\nEFFECT: Set up as described in Set Up (03.02).\nWHILE MOVING: Set up each model wholly within the set-up distance of that TRANSPORT.\nAFTER MOVING: Your unit is not eligible to declare a charge until the end of the turn."
+   }
+  }
+ ],
  "detachments": [
   {
    "id": "guardians-of-the-throne",

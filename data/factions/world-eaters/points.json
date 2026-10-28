@@ -1,0 +1,355 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-28",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/world-eaters/",
+ "verified": [
+  "all-enhancements",
+  "angron",
+  "chaos-land-raider",
+  "chaos-predator-annihilator",
+  "chaos-predator-destructor",
+  "chaos-rhino",
+  "chaos-spawn",
+  "chaos-terminators",
+  "daemon-prince-of-khorne",
+  "daemon-prince-of-khorne-with-wings",
+  "defiler",
+  "eightbound",
+  "exalted-eightbound",
+  "forgefiend",
+  "goremongers",
+  "helbrute",
+  "heldrake",
+  "jakhals",
+  "kh-rn-the-betrayer",
+  "khorne-berzerkers",
+  "khorne-lord-of-skulls",
+  "lord-invocatus",
+  "lord-on-juggernaut",
+  "master-of-executions",
+  "maulerfiend",
+  "slaughterbound"
+ ],
+ "units": {
+  "angron": [
+   {
+    "models": 1,
+    "points": 330
+   }
+  ],
+  "chaos-land-raider": [
+   {
+    "models": 1,
+    "points": 200
+   }
+  ],
+  "chaos-predator-annihilator": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "chaos-predator-destructor": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "chaos-rhino": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "chaos-spawn": [
+   {
+    "models": 2,
+    "points": 95
+   }
+  ],
+  "chaos-terminators": [
+   {
+    "models": 5,
+    "points": 175
+   },
+   {
+    "models": 10,
+    "points": 350
+   }
+  ],
+  "daemon-prince-of-khorne": [
+   {
+    "models": 1,
+    "points": 200
+   }
+  ],
+  "daemon-prince-of-khorne-with-wings": [
+   {
+    "models": 1,
+    "points": 170
+   }
+  ],
+  "defiler": [
+   {
+    "models": 1,
+    "points": 270
+   }
+  ],
+  "eightbound": [
+   {
+    "models": 3,
+    "points": 125
+   },
+   {
+    "models": 6,
+    "points": 250
+   }
+  ],
+  "exalted-eightbound": [
+   {
+    "models": 3,
+    "points": 130
+   },
+   {
+    "models": 6,
+    "points": 260
+   }
+  ],
+  "forgefiend": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "goremongers": [
+   {
+    "models": 8,
+    "points": 70
+   }
+  ],
+  "helbrute": [
+   {
+    "models": 1,
+    "points": 120
+   }
+  ],
+  "heldrake": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "jakhals": [
+   {
+    "models": 10,
+    "points": 65
+   },
+   {
+    "models": 20,
+    "points": 120
+   }
+  ],
+  "kh-rn-the-betrayer": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "khorne-berzerkers": [
+   {
+    "models": 10,
+    "points": 170
+   },
+   {
+    "models": 20,
+    "points": 330
+   }
+  ],
+  "khorne-lord-of-skulls": [
+   {
+    "models": 1,
+    "points": 505
+   }
+  ],
+  "lord-invocatus": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "lord-on-juggernaut": [
+   {
+    "models": 1,
+    "points": 95
+   }
+  ],
+  "master-of-executions": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "maulerfiend": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "slaughterbound": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ]
+ },
+ "enhancements": {
+  "chosen-of-the-blood-god": 15,
+  "butcher-lord": 10,
+  "brazen-form": 25,
+  "strategic-slaughter": 20,
+  "berzerker-glaive": 35,
+  "helm-of-brazen-ire": 30,
+  "favoured-of-khorne": 20,
+  "battle-lust": 20,
+  "malicious-vigour": 30,
+  "killing-clarity": 15,
+  "frenzied-focus": 20,
+  "violent-demise": 10,
+  "icon-of-war": 25,
+  "blood-forged-armour": 20,
+  "disciple-of-khorne": 15,
+  "blade-of-endless-bloodshed": 30,
+  "murderous-onslaught": 5,
+  "aggressive-deployment": 20,
+  "unleash-hell": 10,
+  "infernal-infusion": 25,
+  "talons-of-butchery": 20,
+  "murder-forged-entity": 15,
+  "archslaughterer": 30,
+  "gateways-to-glory": 10,
+  "sanctified-in-slaughter": 15,
+  "gore-stained-veterans": 20
+ },
+ "unitsExtraCopies": {
+  "chaos-land-raider": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 220
+    }
+   ]
+  },
+  "chaos-predator-annihilator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 140
+    }
+   ]
+  },
+  "chaos-predator-destructor": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 140
+    }
+   ]
+  },
+  "chaos-rhino": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 85
+    }
+   ]
+  },
+  "chaos-terminators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 185
+    },
+    {
+     "models": 10,
+     "points": 360
+    }
+   ]
+  },
+  "defiler": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 310
+    }
+   ]
+  },
+  "eightbound": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 140
+    },
+    {
+     "models": 6,
+     "points": 265
+    }
+   ]
+  },
+  "exalted-eightbound": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 145
+    },
+    {
+     "models": 6,
+     "points": 275
+    }
+   ]
+  },
+  "forgefiend": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 155
+    }
+   ]
+  },
+  "khorne-lord-of-skulls": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 535
+    }
+   ]
+  },
+  "maulerfiend": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 150
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "defiler": {
+   "hades-lascannon": 15,
+   "heavy-reaper-autocannon": 15
+  },
+  "forgefiend": {
+   "ectoplasma-cannon": 5
+  }
+ }
+}

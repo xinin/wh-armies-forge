@@ -143,6 +143,10 @@
     "IMPERIUM",
     "TACTICUS"
    ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "WHITE SCARS"
+   ],
    "stats": [
     {
      "M": "6\"",
@@ -292,6 +296,10 @@
     "EPIC HERO",
     "EXPLOSIVES",
     "IMPERIUM"
+   ],
+   "factionKeywords": [
+    "ADEPTUS ASTARTES",
+    "WHITE SCARS"
    ],
    "stats": [
     {

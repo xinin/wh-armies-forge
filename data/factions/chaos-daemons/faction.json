@@ -31,6 +31,16 @@
    }
   ]
  },
+ "extraRules": [
+  {
+   "name": {
+    "en": "Daemonic Pact"
+   },
+   "text": {
+    "en": "If every model from your army has the CHAOS KNIGHTS or HERETIC ASTARTES keyword, you can include LEGIONES DAEMONICA units in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. The combined points cost of such units you can include depends on your battle size, as shown below.\nIncursion Up to 250 pts\nStrike Force Up to 500 pts\nOnslaught Up to 750 pts\nNone of these models can be your WARLORD, and they cannot be given Enhancements.\nIn addition, for each of the following keywords, the number of non-BATTLELINE units with that keyword you include in this way cannot be greater than the number of BATTLELINE units with that keyword you include in this way:\nKHORNE\nTZEENTCH\nNURGLE\nSLAANESH"
+   }
+  }
+ ],
  "wahapedia": {
   "faction": "chaos-daemons",
   "otherFactions": [
@@ -272,7 +282,7 @@
      "en": "Murdercall"
     },
     "text": {
-     "en": "In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8\" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6\". Errata Show Blood Legion Detachment, Murdercall Detachment Rule Change…"
+     "en": "In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8\" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6\"."
     }
    },
    "enhancements": [

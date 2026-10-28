@@ -1,0 +1,390 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-28",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+ "verified": [
+  "all-enhancements",
+  "biologus-putrifier",
+  "blightlord-terminators",
+  "chaos-land-raider",
+  "chaos-predator-annihilator",
+  "chaos-predator-destructor",
+  "chaos-rhino",
+  "chaos-spawn",
+  "daemon-prince-of-nurgle",
+  "daemon-prince-of-nurgle-with-wings",
+  "deathshroud-terminators",
+  "defiler",
+  "foetid-bloat-drone",
+  "foetid-bloat-drone-with-heavy-blight-launcher",
+  "foul-blightspawn",
+  "helbrute",
+  "icon-bearer",
+  "lord-of-contagion",
+  "lord-of-poxes",
+  "lord-of-virulence",
+  "malignant-plaguecaster",
+  "miasmic-malignifier",
+  "mortarion",
+  "myphitic-blight-hauler",
+  "noxious-blightbringer",
+  "plague-marines",
+  "plague-surgeon",
+  "plagueburst-crawler",
+  "poxwalkers",
+  "tallyman",
+  "typhus"
+ ],
+ "units": {
+  "biologus-putrifier": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "blightlord-terminators": [
+   {
+    "models": 3,
+    "points": 115
+   },
+   {
+    "models": 5,
+    "points": 185
+   },
+   {
+    "models": 10,
+    "points": 370
+   }
+  ],
+  "chaos-land-raider": [
+   {
+    "models": 1,
+    "points": 220
+   }
+  ],
+  "chaos-predator-annihilator": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "chaos-predator-destructor": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "chaos-rhino": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "chaos-spawn": [
+   {
+    "models": 2,
+    "points": 80
+   }
+  ],
+  "daemon-prince-of-nurgle": [
+   {
+    "models": 1,
+    "points": 185
+   }
+  ],
+  "daemon-prince-of-nurgle-with-wings": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "deathshroud-terminators": [
+   {
+    "models": 3,
+    "points": 150
+   },
+   {
+    "models": 6,
+    "points": 305
+   }
+  ],
+  "defiler": [
+   {
+    "models": 1,
+    "points": 300
+   }
+  ],
+  "foetid-bloat-drone": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "foetid-bloat-drone-with-heavy-blight-launcher": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "foul-blightspawn": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "helbrute": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ],
+  "icon-bearer": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "lord-of-contagion": [
+   {
+    "models": 1,
+    "points": 110
+   }
+  ],
+  "lord-of-poxes": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "lord-of-virulence": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "malignant-plaguecaster": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "miasmic-malignifier": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ],
+  "mortarion": [
+   {
+    "models": 1,
+    "points": 375
+   }
+  ],
+  "myphitic-blight-hauler": [
+   {
+    "models": 1,
+    "points": 95
+   },
+   {
+    "models": 2,
+    "points": 190
+   }
+  ],
+  "noxious-blightbringer": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "plague-marines": [
+   {
+    "models": 5,
+    "points": 90
+   },
+   {
+    "models": 7,
+    "points": 125
+   },
+   {
+    "models": 10,
+    "points": 175
+   }
+  ],
+  "plague-surgeon": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "plagueburst-crawler": [
+   {
+    "models": 1,
+    "points": 170
+   }
+  ],
+  "poxwalkers": [
+   {
+    "models": 10,
+    "points": 65
+   },
+   {
+    "models": 20,
+    "points": 130
+   }
+  ],
+  "tallyman": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "typhus": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ]
+ },
+ "enhancements": {
+  "daemon-weapon-of-nurgle": 10,
+  "furnace-of-plagues": 25,
+  "arch-contaminator": 25,
+  "revolting-regeneration": 30,
+  "witherbone-pipes": 25,
+  "lord-of-the-walking-pox": 15,
+  "sorrowsyphon": 10,
+  "talisman-of-burgeoning": 25,
+  "beckoning-blight": 20,
+  "fell-harvester": 10,
+  "entropic-knell": 15,
+  "tome-of-bounteous-blessings": 20,
+  "face-of-death": 10,
+  "vile-vigour": 15,
+  "warprot-talisman": 30,
+  "helm-of-the-fly-king": 20,
+  "eye-of-affliction": 20,
+  "bilemaw-blight": 10,
+  "shriekworm-familiar": 15,
+  "tendrilous-emissions": 30,
+  "final-ingredient": 20,
+  "visions-of-virulence": 15,
+  "needle-of-nurgle": 25,
+  "cornucophagus": 35,
+  "rejuvenating-swarm": 20,
+  "host-of-the-hybridised-pox": 40,
+  "parasitic-woe-reaper": 15,
+  "lancet-of-the-worldsore": 15,
+  "insectile-murmuration": 15,
+  "plagueveil": 15
+ },
+ "unitsExtraCopies": {
+  "blightlord-terminators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 145
+    },
+    {
+     "models": 5,
+     "points": 215
+    },
+    {
+     "models": 10,
+     "points": 400
+    }
+   ]
+  },
+  "chaos-land-raider": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 240
+    }
+   ]
+  },
+  "chaos-predator-annihilator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 140
+    }
+   ]
+  },
+  "chaos-predator-destructor": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 150
+    }
+   ]
+  },
+  "chaos-rhino": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 85
+    }
+   ]
+  },
+  "deathshroud-terminators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 160
+    },
+    {
+     "models": 6,
+     "points": 315
+    }
+   ]
+  },
+  "defiler": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 350
+    }
+   ]
+  },
+  "foetid-bloat-drone": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 110
+    }
+   ]
+  },
+  "foetid-bloat-drone-with-heavy-blight-launcher": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 135
+    }
+   ]
+  },
+  "plagueburst-crawler": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 200
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "defiler": {
+   "hades-lascannon": 15,
+   "heavy-reaper-autocannon": 15
+  }
+ }
+}
