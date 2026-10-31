@@ -21,14 +21,14 @@
   "helbrute",
   "heldrake",
   "jakhals",
-  "kh-rn-the-betrayer",
   "khorne-berzerkers",
   "khorne-lord-of-skulls",
   "lord-invocatus",
   "lord-on-juggernaut",
   "master-of-executions",
   "maulerfiend",
-  "slaughterbound"
+  "slaughterbound",
+  "kharn-the-betrayer"
  ],
  "units": {
   "angron": [
@@ -149,12 +149,6 @@
     "points": 120
    }
   ],
-  "kh-rn-the-betrayer": [
-   {
-    "models": 1,
-    "points": 115
-   }
-  ],
   "khorne-berzerkers": [
    {
     "models": 10,
@@ -199,6 +193,12 @@
    {
     "models": 1,
     "points": 90
+   }
+  ],
+  "kharn-the-betrayer": [
+   {
+    "models": 1,
+    "points": 115
    }
   ]
  },

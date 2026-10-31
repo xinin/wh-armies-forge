@@ -35,12 +35,14 @@ Option texts that do not fit a known pattern stay as text only (wargearOptions) 
 tools/audit_units.py.
 """
 import re
+import unicodedata
 
 NUMBERS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'a': 1, 'an': 1}
 
 
 def slug(s):
-    s = s.lower().replace('’', '').replace('‘', '').replace("'", '').replace('é', 'e')
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()  # "Kâhl" → "kahl"
+    s = s.lower().replace('’', '').replace('‘', '').replace("'", '')
     return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
 
 
@@ -224,7 +226,7 @@ def base_loadout(equipped, counts, models, resolve):
     """'Every Heavy Weapons Gunner is equipped with: lascannon; laspistol …' → {'lascannon': 3, …}"""
     out = {}
     for sentence in equipped:
-        m = re.match(r'^(.*?)\s+(?:is|are)\s+equipped with:?\s*(.*)$', sentence.strip().rstrip('.'), re.S)
+        m = re.match(r'^(.*?)\s+(?:is|are)\s+(?:additionally\s+)?equipped with:?\s*(.*)$', sentence.strip().rstrip('.'), re.S)
         if not m:
             continue
         k = count_of(m.group(1), counts, models)
@@ -238,7 +240,7 @@ def base_loadout(equipped, counts, models, resolve):
 
 FOLLOWING = r'(?:one|1) of the following(?: options)?'
 NO_DUPLICATES = r'\s*\((?:duplicates are not allowed|you cannot select the same option more than once)\)'
-OWNER = r"(?:This model's|(?P<n1>\d+|One|one) (?:other )?(?P<o2>[^']+?)'s|The (?P<o1>[^']+?)'s|(?P<o3>one model)'s)"
+OWNER = r"(?:This model's|(?P<n1>\d+|One|one) (?:other )?(?P<o2>[^']+?)'s|The (?P<o1>[^']+?)(?:'s|(?<=s)')|(?P<o3>one model)'s)"
 COND = r"(?:If this unit contains (?P<only>only )?(?P<min>\d+) models, )?"
 
 
@@ -273,7 +275,9 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
     t = re.sub(r'\*+', '', text.replace('’', "'").replace('\u2011', '-')).strip()
     t = re.sub(r'\s+', ' ', t)
     t = re.sub(r'have their (.+?) can be replaced with', r'have their \1 replaced with', t)  # GW typo (Piranhas)
-    t = re.sub(r"^(?:1|One|one) of this model's ", "This model's ", t)  # "1 of this model's Helbrute fists can be replaced" 
+    t = re.sub(r"^(?:1|One|one) of this model's ", "This model's ", t)
+    t = re.sub(r'^For every (\d+) models in the unit,', r'For every \1 models in this unit,', t)  # "in the unit" (Seraphim)
+    t = t.replace('-pattem ', '-pattern ').replace('::', ':')  # GW typos ("Autoch-pattem combi-bolter", "following::")  # "1 of this model's Helbrute fists can be replaced" 
     t = re.sub(r"\.\s*(?:That|This) model's .+? cannot be replaced\.?$", '.', t)  # restriction already implied by the option
     # "(duplicates are not allowed)": each choice at most once in the unit
     no_duplicates = bool(re.search(NO_DUPLICATES, t))
@@ -372,7 +376,8 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
     pool = [
         (r'^Any number of models can each have their (?P<x>.+?) replaced with (?P<y>.*)$', 'items'),
         (r'^Any number of (?P<t>.+?) can each (?:have their (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'type'),
-        (r'^For every (?P<per>\d+) models in this unit, (?:up to )?(?P<k>\w+) (?P<t>.+?)(?: equipped with [^,]+?)? can (?:each )?(?:have (?:their|its) (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'per'),
+        (r"^(?:Each|Every) (?P<t>.+?)'s (?P<x>.+?) can be replaced with (?P<y>.*)$", 'type'),  # "Each Retributor's heavy bolter …"
+        (r'^For every (?P<per>\d+) models in this unit, (?:up to )?(?P<k>\w+) (?P<t>.+?)(?: (?:that is (?:not )?)?equipped with [^,]+?)? can (?:each )?(?:have (?:their|its) (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'per'),
         (r"^For every (?P<per>\d+) models in this unit, (?:up to )?(?P<k>\w+) (?P<t>.+?)'s? (?P<x>.+?) can (?:each )?be replaced with (?P<y>.*)$", 'per'),
         (rf'^{COND}[Uu]p to (?P<k>\w+) (?:additional )?(?P<t>.+?) can (?:each )?(?:have their (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'upto'),
         (r'^(?P<k>\d+|Two|two|Three|three|Four|four) (?P<t>.+?) can each (?:have their (?P<x>.+?) replaced with|replace their (?P<x2>.+?) with) (?P<y>.*)$', 'upto'),
@@ -381,7 +386,8 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
         m = re.match(pat, t)
         if not m:
             continue
-        x = items_of(m.groupdict().get('x') or m.groupdict().get('x2') or '', resolve)
+        # "their Autoch-pattern bolter or ion blaster": the one the models carry by default
+        x = replaced(m.groupdict().get('x') or m.groupdict().get('x2') or '')
         keys, packages = pack(targets(m.group('y')))
         if not keys:
             return None
@@ -408,16 +414,17 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
 
     # add-ons; "If this model is equipped with X, it can be equipped with Y" needs X
     needs = None
-    nm = re.match(r'^If this model is (?P<neg>not )?equipped with (?P<c>[^,]+), (?P<rest>it can be equipped with .*)$', t)
-    if nm:
+    nm = re.match(r'^If this model is (?P<neg>not )?equipped with (?P<c>[^,]+), it can be equipped with:? ?(?P<rest>.*)$', t)
+    if nm:  # "… equipped with a plasma pistol and a power weapon, it can be equipped with: 1 rod of office"
         needs = ('needsNot' if nm.group('neg') else 'needs', items_of(nm.group('c'), resolve))
-        t = 'This model can be equipped with ' + nm.group('rest').removeprefix('it can be equipped with ')
+        t = 'This model can be equipped with ' + (nm.group('rest') or 'one of the following:')
     adds = [
         (r'^This unit can be equipped with (?P<y>.*)$', 'one'),
         (r'^Any number of models can (?:each )?be equipped with (?P<y>.*)$', 'all'),
-        (r'^For every (?P<per>\d+) models in this unit, (?P<k>\w+) (?P<t>.+?)(?: equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'per'),
+        (r'^For every (?P<per>\d+) models in this unit, (?P<k>\w+) (?P<t>.+?)(?: (?:that is (?:not )?)?equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'per'),
         (r'^For every (?P<per>\d+) models in this unit, this unit can have (?P<y>.*)$', 'per'),
         (r'^Any number of (?P<t>.+?) can (?:each )?be equipped with (?P<y>.*)$', 'type'),
+        (r'^Up to (?P<k>\w+) (?P<t>.+?)(?: models)? can (?:each )?be equipped with (?P<y>.*)$', 'one'),  # "Up to 2 Kommando models …"
         (rf'^{COND}(?:This model|it|one model|The (?P<o1>.+?)|(?P<k>\d+|One|one) (?P<t>.+?))(?: (?:that|who) (?:is|are))?(?: (?:not )?equipped with [^,(]+?)? can (?:each )?be equipped (?:with )?(?P<y>.*)$', 'one'),
     ]
     for pat, kind in adds:
@@ -458,6 +465,9 @@ def parse_option(text, choices, resolve, sizes_counts, base_by_size, notes=()):
                 return None
             if re.match(r'^(?:one|1) of the following', y.strip(), re.I) and kind == 'one':
                 opt = {'type': 'swap', 'replaces': [], 'choices': [''] + keys, 'packages': packages}
+            elif len(keys) > 1:  # "For every 3 models in this unit, 1 model can be equipped with one of the following"
+                opt = {'type': 'pool', 'replaces': [], 'choices': keys, 'packages': packages,
+                       'maxBySize': by_size(lambda mm, c: k * per_model(mm, c))}
             else:
                 opt = {'type': 'toggle', 'replaces': [], 'gives': keys[0], 'packages': packages,
                        'maxBySize': by_size(lambda mm, c: k * per_model(mm, c))}
@@ -649,6 +659,14 @@ def build(unit, model_sizes, global_weapons=(), faction_gear=None):
                 merged[x['item']] = merged.get(x['item'], 0) + x['n']
         return ' + '.join(f'{n}× {item_name(i)}' if n > 1 else item_name(i) for i, n in merged.items() if n > 0)
 
+    # the same piece of wargear spelled two ways ("pan spectral scanner" / "panspectral scanner"): its ability's id
+    gear_ids = {compact(gear_id(a['name']['en'])): gear_id(a['name']['en']) for a in unit.get('wargearAbilities', [])}
+    def canon(item):
+        return gear_ids.get(compact(item), item) if item.startswith('gear:') else item
+    for b in base.values():
+        for i in [i for i in b if canon(i) != i]:
+            b[canon(i)] = b.get(canon(i), 0) + b.pop(i)
+
     options, unparsed = [], []
     for oid, o in raw_options:
         opt = parse_option(o['text'], o['choices'], resolve, sizes_counts, base, unit.get('wargearNotes', []))
@@ -657,6 +675,8 @@ def build(unit, model_sizes, global_weapons=(), faction_gear=None):
             continue
         if o.get('needs'):
             opt['needs'] = o['needs']
+        for x in opt['replaces'] + [x for pk in opt['packages'].values() for x in pk]:
+            x['item'] = canon(x['item'])
         if opt.get('owner', '').lower() in ('model', 'models'):
             opt.pop('owner')
         for r in opt['replaces']:

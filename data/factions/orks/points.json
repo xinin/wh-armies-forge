@@ -1,0 +1,805 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-31",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/orks/",
+ "verified": [
+  "all-enhancements",
+  "bannernob",
+  "battlewagon",
+  "beast-snagga-boyz",
+  "beastboss",
+  "beastboss-on-squigosaur",
+  "big-mek",
+  "big-mek-dakkarig",
+  "big-mek-in-mega-armour",
+  "big-mek-with-shokk-attack-gun",
+  "biged-bossbunka",
+  "bigboss",
+  "blitza-bommer",
+  "boss-snikrot",
+  "boyz",
+  "breaka-boyz",
+  "burna-bommer",
+  "dakkajet",
+  "deff-dread",
+  "deffkilla-wartrike",
+  "deffkoptas",
+  "flash-gitz",
+  "ghazghkull-thraka",
+  "gorkanaut",
+  "gretchin",
+  "gunwagon",
+  "hunta-rig",
+  "kill-rig",
+  "killa-kans",
+  "kommandos",
+  "meganobz",
+  "mek",
+  "mek-gunz",
+  "morkanaut",
+  "mozrog-skragbad",
+  "nazdreg",
+  "nobz",
+  "painboss",
+  "painboy",
+  "rukkatrukk-squigbuggies",
+  "runtherd",
+  "squighog-boyz",
+  "stompa",
+  "stormboyz",
+  "tankbustas",
+  "trukk",
+  "warbikers",
+  "warboss",
+  "warboss-in-mega-armour",
+  "warbuggies",
+  "wartrakks",
+  "wazbom-blastajet",
+  "wazdakka-gutsmek",
+  "weirdboy",
+  "zodgrod-wortsnagga"
+ ],
+ "units": {
+  "bannernob": [
+   {
+    "models": 1,
+    "points": 30
+   }
+  ],
+  "battlewagon": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "beast-snagga-boyz": [
+   {
+    "models": 10,
+    "points": 80
+   },
+   {
+    "models": 20,
+    "points": 160
+   }
+  ],
+  "beastboss": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "beastboss-on-squigosaur": [
+   {
+    "models": 1,
+    "points": 140
+   }
+  ],
+  "big-mek": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "big-mek-dakkarig": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "big-mek-in-mega-armour": [
+   {
+    "models": 1,
+    "points": 90
+   }
+  ],
+  "big-mek-with-shokk-attack-gun": [
+   {
+    "models": 1,
+    "points": 110
+   }
+  ],
+  "biged-bossbunka": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "bigboss": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "blitza-bommer": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "boss-snikrot": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "boyz": [
+   {
+    "models": 10,
+    "points": 85
+   },
+   {
+    "models": 20,
+    "points": 170
+   }
+  ],
+  "breaka-boyz": [
+   {
+    "models": 6,
+    "points": 120
+   }
+  ],
+  "burna-bommer": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "dakkajet": [
+   {
+    "models": 1,
+    "points": 125
+   }
+  ],
+  "deff-dread": [
+   {
+    "models": 1,
+    "points": 130
+   }
+  ],
+  "deffkilla-wartrike": [
+   {
+    "models": 1,
+    "points": 80
+   }
+  ],
+  "deffkoptas": [
+   {
+    "models": 3,
+    "points": 85
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "flash-gitz": [
+   {
+    "models": 5,
+    "points": 110
+   },
+   {
+    "models": 10,
+    "points": 220
+   }
+  ],
+  "ghazghkull-thraka": [
+   {
+    "models": 1,
+    "points": 290
+   }
+  ],
+  "gorkanaut": [
+   {
+    "models": 1,
+    "points": 325
+   }
+  ],
+  "gretchin": [
+   {
+    "models": 10,
+    "points": 45
+   },
+   {
+    "models": 20,
+    "points": 80
+   }
+  ],
+  "gunwagon": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "hunta-rig": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "kill-rig": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "killa-kans": [
+   {
+    "models": 3,
+    "points": 130
+   },
+   {
+    "models": 6,
+    "points": 275
+   }
+  ],
+  "kommandos": [
+   {
+    "models": 10,
+    "points": 125
+   }
+  ],
+  "meganobz": [
+   {
+    "models": 2,
+    "points": 70
+   },
+   {
+    "models": 3,
+    "points": 105
+   },
+   {
+    "models": 5,
+    "points": 175
+   },
+   {
+    "models": 6,
+    "points": 210
+   }
+  ],
+  "mek": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ],
+  "mek-gunz": [
+   {
+    "models": 1,
+    "points": 55
+   },
+   {
+    "models": 2,
+    "points": 110
+   },
+   {
+    "models": 3,
+    "points": 165
+   }
+  ],
+  "morkanaut": [
+   {
+    "models": 1,
+    "points": 345
+   }
+  ],
+  "mozrog-skragbad": [
+   {
+    "models": 1,
+    "points": 170
+   }
+  ],
+  "nazdreg": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "nobz": [
+   {
+    "models": 5,
+    "points": 115
+   },
+   {
+    "models": 10,
+    "points": 230
+   }
+  ],
+  "painboss": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "painboy": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "rukkatrukk-squigbuggies": [
+   {
+    "models": 1,
+    "points": 85
+   },
+   {
+    "models": 2,
+    "points": 160
+   }
+  ],
+  "runtherd": [
+   {
+    "models": 1,
+    "points": 10
+   }
+  ],
+  "squighog-boyz": [
+   {
+    "models": 4,
+    "points": 130
+   },
+   {
+    "models": 8,
+    "points": 260
+   }
+  ],
+  "stompa": [
+   {
+    "models": 1,
+    "points": 700
+   }
+  ],
+  "stormboyz": [
+   {
+    "models": 5,
+    "points": 70
+   },
+   {
+    "models": 10,
+    "points": 140
+   }
+  ],
+  "tankbustas": [
+   {
+    "models": 6,
+    "points": 160
+   }
+  ],
+  "trukk": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "warbikers": [
+   {
+    "models": 3,
+    "points": 75
+   },
+   {
+    "models": 6,
+    "points": 140
+   }
+  ],
+  "warboss": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "warboss-in-mega-armour": [
+   {
+    "models": 1,
+    "points": 115
+   }
+  ],
+  "warbuggies": [
+   {
+    "models": 1,
+    "points": 70
+   },
+   {
+    "models": 2,
+    "points": 130
+   }
+  ],
+  "wartrakks": [
+   {
+    "models": 1,
+    "points": 70
+   },
+   {
+    "models": 2,
+    "points": 130
+   }
+  ],
+  "wazbom-blastajet": [
+   {
+    "models": 1,
+    "points": 215
+   }
+  ],
+  "wazdakka-gutsmek": [
+   {
+    "models": 1,
+    "points": 200
+   }
+  ],
+  "weirdboy": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "zodgrod-wortsnagga": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ]
+ },
+ "enhancements": {
+  "headwoppas-killchoppa": 15,
+  "da-boss-is-watchin": 25,
+  "kunnin-but-brutal": 20,
+  "follow-me-ladz": 20,
+  "mekwaaagh-mastermind": 30,
+  "temperamental-shokka": 20,
+  "enhanced-runt-maw": 10,
+  "da-krunch": 10,
+  "eadbanger": 15,
+  "warphead": 25,
+  "extra-sneaky": 10,
+  "minefield-detail": 10,
+  "kaptins-hat": 25,
+  "supa-snazz-dakka": 25,
+  "surly-as-a-squiggoth": 25,
+  "brutal-but-kunnin": 30,
+  "blitzboss": 20,
+  "proper-killy": 15,
+  "morgogs-finkin-cap": 50,
+  "da-gobshot-thunderbuss": 20,
+  "wimp-kickaz": 15,
+  "tellyporta-boss": 20,
+  "glory-hog": 25,
+  "it-came-from-da-drops": 20,
+  "cybork-boosta": 10,
+  "dreadherder": 30,
+  "supa-glowy-fing": 25,
+  "targetin-squigs": 20,
+  "flyboss": 20,
+  "impulsive-recon": 15,
+  "smoky-gubbinz": 10,
+  "competitive-streak": 15,
+  "targetin-gizmos": 25,
+  "boss-boomer": 10,
+  "ferocious-show-off": 15,
+  "ardboyz": 25,
+  "kill-kommanda": 20,
+  "throat-slittas": 15
+ },
+ "unitsExtraCopies": {
+  "battlewagon": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 180
+    }
+   ]
+  },
+  "beast-snagga-boyz": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 10,
+     "points": 90
+    },
+    {
+     "models": 20,
+     "points": 170
+    }
+   ]
+  },
+  "beastboss-on-squigosaur": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 155
+    }
+   ]
+  },
+  "big-mek": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 115
+    }
+   ]
+  },
+  "big-mek-dakkarig": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 180
+    }
+   ]
+  },
+  "big-mek-with-shokk-attack-gun": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 125
+    }
+   ]
+  },
+  "boyz": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 10,
+     "points": 95
+    },
+    {
+     "models": 20,
+     "points": 180
+    }
+   ]
+  },
+  "breaka-boyz": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 6,
+     "points": 130
+    }
+   ]
+  },
+  "deff-dread": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 140
+    }
+   ]
+  },
+  "deffkoptas": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 95
+    },
+    {
+     "models": 6,
+     "points": 180
+    }
+   ]
+  },
+  "flash-gitz": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 150
+    },
+    {
+     "models": 10,
+     "points": 260
+    }
+   ]
+  },
+  "gorkanaut": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 355
+    }
+   ]
+  },
+  "gunwagon": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 160
+    }
+   ]
+  },
+  "hunta-rig": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 185
+    }
+   ]
+  },
+  "kill-rig": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 195
+    }
+   ]
+  },
+  "killa-kans": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 170
+    },
+    {
+     "models": 6,
+     "points": 315
+    }
+   ]
+  },
+  "meganobz": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 2,
+     "points": 110
+    },
+    {
+     "models": 3,
+     "points": 145
+    },
+    {
+     "models": 5,
+     "points": 215
+    },
+    {
+     "models": 6,
+     "points": 250
+    }
+   ]
+  },
+  "mek-gunz": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 65
+    },
+    {
+     "models": 2,
+     "points": 120
+    },
+    {
+     "models": 3,
+     "points": 175
+    }
+   ]
+  },
+  "morkanaut": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 375
+    }
+   ]
+  },
+  "nobz": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 145
+    },
+    {
+     "models": 10,
+     "points": 260
+    }
+   ]
+  },
+  "painboss": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 70
+    }
+   ]
+  },
+  "squighog-boyz": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 4,
+     "points": 160
+    },
+    {
+     "models": 8,
+     "points": 290
+    }
+   ]
+  },
+  "stompa": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 800
+    }
+   ]
+  },
+  "tankbustas": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 6,
+     "points": 170
+    }
+   ]
+  },
+  "trukk": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 70
+    }
+   ]
+  },
+  "warboss-in-mega-armour": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 130
+    }
+   ]
+  },
+  "wazbom-blastajet": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 235
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "gunwagon": {
+   "zzap-gun": 10
+  },
+  "meganobz": {
+   "killsaw": 5,
+   "twin-killsaws": 5
+  },
+  "nobz": {
+   "gear:paired-krumpa": 5
+  }
+ }
+}

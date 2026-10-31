@@ -853,6 +853,24 @@
      ],
      "type": "upgrade"
     }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "ABHUMAN",
+     "units": [
+      [
+       "BULLGRYN",
+       "SQUAD"
+      ],
+      [
+       "OGRYN",
+       "SQUAD"
+      ],
+      [
+       "RATLINGS"
+      ]
+     ]
+    }
    ]
   }
  ]

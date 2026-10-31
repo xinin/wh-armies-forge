@@ -5,6 +5,7 @@ Set REFRESH = True (the importers' --refresh flag) to ignore the cache, e.g. aft
 import re
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -18,6 +19,7 @@ def fetch(url):
     path = CACHE / f'{rel}.html'
     if path.exists() and not REFRESH:
         return path.read_text(encoding='utf-8')
+    url = urllib.parse.quote(url, safe=':/?#=&')  # "…/Ûthar-the-Destined"
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (army-forge importer)'})
     for attempt in range(4):  # the site sometimes stops answering for a while: wait and try again
         try:

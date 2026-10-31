@@ -13,6 +13,7 @@ import argparse
 import html
 import json
 import re
+import unicodedata
 import sys
 from pathlib import Path
 
@@ -29,6 +30,7 @@ TURNS = {'str11Either': 'either', 'str11Your': 'your', 'str11Enemy': 'enemy'}
 
 
 def slug(s):
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()  # "Dêlve" → "delve"
     return re.sub(r'[^a-z0-9]+', '-', s.lower().replace('’', '').replace("'", '')).strip('-')
 
 

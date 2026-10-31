@@ -309,7 +309,7 @@ def parse(page, ds_slug):
 
 def datasheet_links(faction_page, faction):
     """Every datasheet linked from the faction page (the keyword lists alone miss some units)."""
-    return sorted(set(re.findall(rf'href="/wh40k11ed/factions/{faction}/([A-Za-z0-9][A-Za-z0-9-]*)"', faction_page)))
+    return sorted(set(re.findall(rf'href="/wh40k11ed/factions/{faction}/([^"/#?\s]+)"', faction_page)))  # also "Ûthar-the-Destined"
 
 
 def source_tag(page):
@@ -476,6 +476,8 @@ def main():
         print(f'{len(inherited)} generic datasheets inherited from {parent}; overrides: '
               f'{", ".join(sorted(u for u in existing if u in {p["id"] for p in factions.raw(parent)["units"]})) or "none"}')
     units_file['units'] = sorted(existing.values(), key=lambda u: (order.index(u['role']) if u['role'] in order else 99, u['name']['en']))
+    if args.all:  # "verified" only lists units that still have points (and "all-enhancements")
+        points['verified'] = [v for v in points.get('verified', []) if v == 'all-enhancements' or v in points['units']]
     if args.check:
         changes = report_changes(fdir, units_file, points)
         print(f'{args.faction}: {changes} changes' if changes else f'{args.faction}: no changes')

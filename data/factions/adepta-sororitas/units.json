@@ -1,0 +1,9058 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World and Warhammer Legends datasheets: never imported.",
+  "ids": [
+   "battle-sanctum",
+   "celestian-sacresant-aveline",
+   "crusaders",
+   "death-cult-assassins",
+   "repressor"
+  ]
+ },
+ "units": [
+  {
+   "id": "aestred-thurga-and-agathae-dolan",
+   "name": {
+    "en": "Aestred Thurga And Agathae Dolan",
+    "es": "Aestred Thurga And Agathae Dolan"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHARACTER",
+    "EPIC HERO",
+    "IMPERIUM",
+    "AESTRED THURGA",
+    "AGATHAE DOLAN"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "2+",
+     "W": "4",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Agathae Dolan(⌀25mm)"
+     },
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blade-of-vigil",
+     "name": {
+      "en": "Blade of Vigil"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "scribes-staff",
+     "name": {
+      "en": "Scribe’s staff"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Auto-Tapestry of the Emperor’s Judgement"
+     },
+     "text": {
+      "en": "While this unit is leading a unit and contains an Aestred Thurga model, weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability"
+     }
+    },
+    {
+     "name": {
+      "en": "Recount the Deeds of the Saints"
+     },
+     "text": {
+      "en": "While this unit is leading a unit and contains an Agathae Dolan model, each time that unit destroys an enemy unit, you gain 1 Miracle dice. When that Agathae Dolan model is destroyed, you gain D3 Miracle dice."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Aestred-Thurga-And-Agathae-Dolan",
+   "composition": [
+    "1 Aestred Thurga – EPIC HERO",
+    "1 Agathae Dolan – EPIC HERO"
+   ],
+   "equipped": [
+    "Aestred Thurga is equipped with: bolt pistol; Blade of Vigil.",
+    "Agathae Dolan is equipped with: bolt pistol; scribe’s staff."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers",
+     "sisters-novitiate-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 2,
+     "loadout": {
+      "bolt-pistol": 2,
+      "blade-of-vigil": 1,
+      "scribes-staff": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "blade-of-vigil",
+    "bolt-pistol",
+    "scribes-staff"
+   ]
+  },
+  {
+   "id": "canoness",
+   "name": {
+    "en": "Canoness",
+    "es": "Canoness"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "GRENADES",
+    "IMPERIUM",
+    "CANONESS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "brazier-of-holy-fire",
+     "name": {
+      "en": "Brazier of holy fire"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "condemnor-boltgun",
+     "name": {
+      "en": "Condemnor boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-psyker 2+",
+        "Devastating Wounds",
+        "Precision",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-pistol",
+     "name": {
+      "en": "Inferno pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-4",
+       "D": "D3",
+       "keywords": [
+        "Melta 2",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "blessed-blade",
+     "name": {
+      "en": "Blessed blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hallowed-chainsword",
+     "name": {
+      "en": "Hallowed Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Sacred Command"
+     },
+     "text": {
+      "en": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "The Emperor’s Grace"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Canoness",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Null Rod"
+     },
+     "text": {
+      "en": "Models in the bearer’s unit have the Feel No Pain 4+ ability against mortal wounds and Psychic Attacks."
+     }
+    },
+    {
+     "name": {
+      "en": "Rod of Office"
+     },
+     "text": {
+      "en": "Each time a model in the bearer’s unit makes an attack, re-roll a Hit roll of 1."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s bolt pistol can be replaced with one of the following:",
+     "choices": [
+      "1 condemnor boltgun",
+      "1 inferno pistol",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "This model’s hallowed chainsword can be replaced with one of the following:",
+     "choices": [
+      "1 blessed blade",
+      "1 power weapon"
+     ]
+    },
+    {
+     "text": "If this model is equipped with a hallowed chainsword, it can be equipped with one of the following:",
+     "choices": [
+      "1 brazier of holy fire",
+      "1 null rod"
+     ]
+    },
+    {
+     "text": "If this model is equipped with a plasma pistol and a power weapon, it can be equipped with:",
+     "choices": [
+      "1 rod of office"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Canoness"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; hallowed chainsword."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers",
+     "sisters-novitiate-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "hallowed-chainsword": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Bolt pistol",
+      "es": "Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "condemnor-boltgun",
+      "inferno-pistol",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "condemnor-boltgun": [
+       {
+        "item": "condemnor-boltgun",
+        "n": 1
+       }
+      ],
+      "inferno-pistol": [
+       {
+        "item": "inferno-pistol",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "condemnor-boltgun": "Condemnor boltgun",
+      "inferno-pistol": "Inferno pistol",
+      "plasma-pistol": "Plasma pistol",
+      "": "Bolt pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Hallowed Chainsword",
+      "es": "Hallowed Chainsword"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hallowed-chainsword",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "blessed-blade",
+      "power-weapon"
+     ],
+     "packages": {
+      "blessed-blade": [
+       {
+        "item": "blessed-blade",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "blessed-blade": "Blessed blade",
+      "power-weapon": "Power weapon",
+      "": "Hallowed Chainsword"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "brazier-of-holy-fire",
+      "gear:null-rod"
+     ],
+     "packages": {
+      "brazier-of-holy-fire": [
+       {
+        "item": "brazier-of-holy-fire",
+        "n": 1
+       }
+      ],
+      "gear:null-rod": [
+       {
+        "item": "gear:null-rod",
+        "n": 1
+       }
+      ]
+     },
+     "needs": [
+      {
+       "item": "hallowed-chainsword",
+       "n": 1
+      }
+     ],
+     "labels": {
+      "brazier-of-holy-fire": "Brazier of holy fire",
+      "gear:null-rod": "Null rod",
+      "": "—"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "optional",
+      "es": "opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "gear:rod-of-office"
+     ],
+     "packages": {
+      "gear:rod-of-office": [
+       {
+        "item": "gear:rod-of-office",
+        "n": 1
+       }
+      ]
+     },
+     "needs": [
+      {
+       "item": "plasma-pistol",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "labels": {
+      "gear:rod-of-office": "Rod of office",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "hallowed-chainsword"
+   ]
+  },
+  {
+   "id": "canoness-with-jump-pack",
+   "name": {
+    "en": "Canoness with jump pack",
+    "es": "Canoness with jump pack"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "JUMP PACK",
+    "FLY",
+    "GRENADES",
+    "IMPERIUM",
+    "CANONESS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blessed-halberd",
+     "name": {
+      "en": "Blessed halberd"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "holy-eviscerator",
+     "name": {
+      "en": "Holy Eviscerator"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Sacred Command"
+     },
+     "text": {
+      "en": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Divine Deliverance"
+     },
+     "text": {
+      "en": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Canoness-with-Jump-Pack",
+   "wargearOptions": [
+    {
+     "text": "This model’s blessed halberd can be replaced with one of the following:",
+     "choices": [
+      "1 holy eviscerator",
+      "1 Ministorum hand flamer and 1 power weapon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Canoness With Jump Pack"
+   ],
+   "equipped": [
+    "This model is equipped with: blessed halberd."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "seraphim-squad",
+     "zephyrim-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "blessed-halberd": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Blessed halberd",
+      "es": "Blessed halberd"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "blessed-halberd",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "holy-eviscerator",
+      "ministorum-hand-flamer+power-weapon"
+     ],
+     "packages": {
+      "holy-eviscerator": [
+       {
+        "item": "holy-eviscerator",
+        "n": 1
+       }
+      ],
+      "ministorum-hand-flamer+power-weapon": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 1
+       },
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "holy-eviscerator": "Holy Eviscerator",
+      "ministorum-hand-flamer+power-weapon": "Ministorum hand flamer + Power weapon",
+      "": "Blessed halberd"
+     }
+    }
+   ],
+   "loadout": [
+    "blessed-halberd"
+   ]
+  },
+  {
+   "id": "daemonifuge",
+   "name": {
+    "en": "Daemonifuge",
+    "es": "Daemonifuge"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHARACTER",
+    "EPIC HERO",
+    "IMPERIUM",
+    "DAEMONIFUGE"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Kyganil of the Bloody Tears(⌀32mm)"
+     },
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sanctity",
+     "name": {
+      "en": "Sanctity"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-chaos 2+",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "the-outcasts-weapons",
+     "name": {
+      "en": "The Outcast’s Weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Holy Judgement"
+     },
+     "text": {
+      "en": "At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this unit's Ephrael Stern model. That unit must take a Battle-shock test, subtracting 2 from the result if it is a CHAOS unit. If the test is failed, that enemy unit suffers 3 mortal wounds."
+     }
+    },
+    {
+     "name": {
+      "en": "Mysterious Saviours"
+     },
+     "text": {
+      "en": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Fights First",
+    "Lone Operative"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Daemonifuge",
+   "composition": [
+    "1 Ephrael Stern – EPIC HERO",
+    "1 Kyganil of the Bloody Tears – EPIC HERO"
+   ],
+   "equipped": [
+    "Ephrael Stern is equipped with: bolt pistol; Sanctity.",
+    "Kyganil of the Bloody Tears is equipped with: the Outcast’s Weapons."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 2,
+     "loadout": {
+      "bolt-pistol": 1,
+      "sanctity": 1,
+      "the-outcasts-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "sanctity",
+    "the-outcasts-weapons"
+   ]
+  },
+  {
+   "id": "dialogus",
+   "name": {
+    "en": "Dialogus",
+    "es": "Dialogus"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "DIALOGUS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dialogus-staff",
+     "name": {
+      "en": "Dialogus staff"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Laud Hailer"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, you can select one friendly ADEPTA SORORITAS unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+     }
+    },
+    {
+     "name": {
+      "en": "Stirring Rhetoric"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time this model’s unit performs an Act of Faith, the value of one of the Miracle dice used in that Act of Faith is first changed to a 6."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Dialogus",
+   "composition": [
+    "1 Dialogus"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; Dialogus staff."
+   ],
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers",
+     "sisters-novitiate-squad"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "dialogus-staff": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "dialogus-staff"
+   ]
+  },
+  {
+   "id": "dogmata",
+   "name": {
+    "en": "Dogmata",
+    "es": "Dogmata"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHARACTER",
+    "IMPERIUM",
+    "DOGMATA"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mace-of-the-righteous",
+     "name": {
+      "en": "Mace of the righteous"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Executioner of Heretics (Aura)"
+     },
+     "text": {
+      "en": "While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1."
+     }
+    },
+    {
+     "name": {
+      "en": "Unflinching Determination"
+     },
+     "text": {
+      "en": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Dogmata",
+   "composition": [
+    "1 Dogmata"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; mace of the righteous."
+   ],
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "mace-of-the-righteous": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "mace-of-the-righteous"
+   ]
+  },
+  {
+   "id": "hospitaller",
+   "name": {
+    "en": "Hospitaller",
+    "es": "Hospitaller"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "HOSPITALLER"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "chirurgeons-tools",
+     "name": {
+      "en": "Chirurgeon’s tools"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Medicus Ministorum"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Sacred Healing"
+     },
+     "text": {
+      "en": "While this model is leading a unit, in your Command phase, you can return up to 1 destroyed model (excluding CHARACTER models) to that unit. If you wish, you can first discard 1 Miracle dice; if you do, you can return up to D3+1 destroyed models (excluding CHARACTER models) to that unit instead."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Hospitaller",
+   "composition": [
+    "1 Hospitaller"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; chirurgeon’s tools."
+   ],
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers",
+     "sisters-novitiate-squad"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "chirurgeons-tools": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "chirurgeons-tools"
+   ]
+  },
+  {
+   "id": "imagifier",
+   "name": {
+    "en": "Imagifier",
+    "es": "Imagifier"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHARACTER",
+    "IMPERIUM",
+    "IMAGIFIER"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Litany of Deeds"
+     },
+     "text": {
+      "en": "Each time you gain a Miracle dice as the result of an ADEPTA SORORITAS unit or model from your army being destroyed, if that unit or model was destroyed within 12\" of this model, you can re-roll the result of that Miracle dice before adding it to your Miracle dice pool."
+     }
+    },
+    {
+     "name": {
+      "en": "Stanchion of Holy Martyrs"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have a Save characteristic of 2+ and a 4+ invulnerable save."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Imagifier",
+   "composition": [
+    "1 Imagifier"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; boltgun; close combat weapon."
+   ],
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "boltgun": 1,
+      "close-combat-weapon": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "boltgun",
+    "close-combat-weapon"
+   ]
+  },
+  {
+   "id": "intranzia-fraye",
+   "name": {
+    "en": "Intranzia Fraye",
+    "es": "Intranzia Fraye"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "CHARACTER",
+    "PENITENT",
+    "EPIC HERO",
+    "INTRANZIA FRAYE"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "7",
+     "Sv": "3+",
+     "W": "8",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "melta-missile-array",
+     "name": {
+      "en": "Melta missile array"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-heavy-flamer",
+     "name": {
+      "en": "Ministorum heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mace-of-saint-praxedes",
+     "name": {
+      "en": "Mace of Saint Praxedes"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "throne-of-blame",
+     "name": {
+      "en": "Throne of Blame"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Righteous Denunciation"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test."
+     }
+    },
+    {
+     "name": {
+      "en": "Judged for Execution"
+     },
+     "text": {
+      "en": "At the end of your Movement phase, you can select one enemy unit within 18\" of and visible to this model. Until the start of your next Command phase, each time a friendly ADEPTA SORORITAS model makes an attack that targets that enemy unit, that attack has the [LETHAL HITS] ability."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Intranzia-Fraye",
+   "composition": [
+    "1 Intranzia Fraye – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 heavy bolters, 2 Ministorum heavy flamers; 1 melta missile array; 1 Mace of Saint Praxedes; 1 Throne of Blame."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "heavy-bolter": 2,
+      "ministorum-heavy-flamer": 2,
+      "melta-missile-array": 1,
+      "mace-of-saint-praxedes": 1,
+      "throne-of-blame": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "heavy-bolter",
+    "mace-of-saint-praxedes",
+    "melta-missile-array",
+    "ministorum-heavy-flamer",
+    "throne-of-blame"
+   ]
+  },
+  {
+   "id": "junith-eruita",
+   "name": {
+    "en": "Junith Eruita",
+    "es": "Junith Eruita"
+   },
+   "keywords": [
+    "MOUNTED",
+    "CHARACTER",
+    "FLY",
+    "EPIC HERO",
+    "IMPERIUM",
+    "JUNITH ERUITA"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "5",
+     "Sv": "2+",
+     "W": "8",
+     "Ld": "6+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "twin-ministorum-heavy-flamer",
+     "name": {
+      "en": "Twin Ministorum heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mace-of-castigation",
+     "name": {
+      "en": "Mace of Castigation"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "The Pulpit of Saint Holline’s Basilica"
+     },
+     "text": {
+      "en": "This unit has Stealth Melee attacks that target this unit have -1 to hit rolls"
+     }
+    },
+    {
+     "name": {
+      "en": "Fiery Conviction"
+     },
+     "text": {
+      "en": "If this model is on the battlefield at the start of your Command phase, you can choose one of the following: Discard 1 Miracle dice and gain 1CP. Take a Leadership test for this model, if that test is passed, gain 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Junith-Eruita",
+   "composition": [
+    "1 Junith Eruita – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: twin Ministorum heavy flamer; Mace of Castigation."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers",
+     "sisters-novitiate-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "twin-ministorum-heavy-flamer": 1,
+      "mace-of-castigation": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "mace-of-castigation",
+    "twin-ministorum-heavy-flamer"
+   ]
+  },
+  {
+   "id": "ministorum-priest",
+   "name": {
+    "en": "Ministorum Priest",
+    "es": "Ministorum Priest"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "PENITENT",
+    "MINISTORUM PRIEST"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "6+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "holy-pistol",
+     "name": {
+      "en": "Holy pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "zealots-vindictor",
+     "name": {
+      "en": "Zealot’s vindictor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power Weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "zealots-vindictor-melee",
+     "name": {
+      "en": "Zealot’s vindictor"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Righteous Smiting"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Zealot"
+     },
+     "text": {
+      "en": "Once per battle, in the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristics of melee weapons equipped by this model by 3."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Ministorum-Priest",
+   "wargearOptions": [
+    {
+     "text": "This model’s zealot’s vindictor can be replaced with 1 holy pistol and 1 power weapon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Ministorum Priest"
+   ],
+   "equipped": [
+    "This model is equipped with: zealot’s vindictor."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "arco-flagellants",
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "dominion-squad",
+     "sanctifiers",
+     "sisters-novitiate-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "zealots-vindictor": 1,
+      "zealots-vindictor-melee": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Zealot’s vindictor + Zealot’s vindictor",
+      "es": "Zealot’s vindictor + Zealot’s vindictor"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "zealots-vindictor",
+       "n": 1
+      },
+      {
+       "item": "zealots-vindictor-melee",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "holy-pistol+power-weapon"
+     ],
+     "packages": {
+      "holy-pistol+power-weapon": [
+       {
+        "item": "holy-pistol",
+        "n": 1
+       },
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "holy-pistol+power-weapon": "Holy pistol + Power Weapon",
+      "": "Zealot’s vindictor + Zealot’s vindictor"
+     }
+    }
+   ],
+   "loadout": [
+    "zealots-vindictor",
+    "zealots-vindictor-melee"
+   ]
+  },
+  {
+   "id": "morvenn-vahl",
+   "name": {
+    "en": "Morvenn Vahl",
+    "es": "Morvenn Vahl"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "CHARACTER",
+    "EPIC HERO",
+    "IMPERIUM",
+    "MORVENN VAHL"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "7",
+     "Sv": "2+",
+     "W": "8",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "fidelis",
+     "name": {
+      "en": "Fidelis"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paragon-missile-launcher",
+     "name": {
+      "en": "Paragon missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": [],
+       "mode": {
+        "en": "prioris"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "2D6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast"
+       ],
+       "mode": {
+        "en": "sanctorum"
+       }
+      }
+     ]
+    },
+    {
+     "id": "lance-of-illumination",
+     "name": {
+      "en": "Lance of Illumination"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "10",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Abbess Sanctorum"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll and you can re-roll the Wound roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Righteous Repugnance"
+     },
+     "text": {
+      "en": "Each time this model’s unit is selected to shoot or fight, you can discard 1 Miracle dice. If you do, until the end of the phase, add 3 to the Attacks characteristic of Fidelis and the Lance of Illumination. Each time an enemy unit is destroyed by this model, you gain 1 Miracle dice."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Morvenn-Vahl",
+   "composition": [
+    "1 Morvenn Vahl – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Fidelis; Paragon missile launcher; Lance of Illumination."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "paragon-warsuits"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "fidelis": 1,
+      "paragon-missile-launcher": 1,
+      "lance-of-illumination": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "fidelis",
+    "lance-of-illumination",
+    "paragon-missile-launcher"
+   ]
+  },
+  {
+   "id": "palatine",
+   "name": {
+    "en": "Palatine",
+    "es": "Palatine"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "GRENADES",
+    "IMPERIUM",
+    "PALATINE"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "palatine-blade",
+     "name": {
+      "en": "Palatine blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Fury of the Righteous"
+     },
+     "text": {
+      "en": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Rapturous Blows"
+     },
+     "text": {
+      "en": "Each time this model’s unit is selected to fight, you can discard 1 Miracle dice. If you do, then until the end of the phase, each time a melee attack made by this model scores a wound, the target of that attack suffers 1 mortal wound in addition to any normal damage."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Palatine",
+   "wargearOptions": [
+    {
+     "text": "This model’s bolt pistol can be replaced with 1 plasma pistol.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Palatine"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistol; Palatine blade."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "celestian-insidiants",
+     "celestian-sacresants",
+     "dominion-squad",
+     "retributor-squad",
+     "sanctifiers",
+     "sisters-novitiate-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistol": 1,
+      "palatine-blade": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Bolt pistol",
+      "es": "Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "plasma-pistol": "Plasma pistol",
+      "": "Bolt pistol"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "palatine-blade"
+   ]
+  },
+  {
+   "id": "saint-celestine",
+   "name": {
+    "en": "Saint Celestine",
+    "es": "Saint Celestine"
+   },
+   "keywords": [
+    "INFANTRY",
+    "JUMP PACK",
+    "FLY",
+    "GRENADES",
+    "IMPERIUM",
+    "CHARACTER",
+    "EPIC HERO",
+    "SAINT CELESTINE"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "3",
+     "Sv": "2+",
+     "W": "5",
+     "Ld": "6+",
+     "OC": "1",
+     "name": {
+      "en": "Geminae Superia(⌀32mm)"
+     },
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "the-ardent-blade",
+     "name": {
+      "en": "The Ardent Blade"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "the-ardent-blade-melee",
+     "name": {
+      "en": "The Ardent Blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Healing Tears"
+     },
+     "text": {
+      "en": "While this unit contains a Celestine model, in your Command phase, you can return 1 destroyed Geminae Superia model to this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Lifewards"
+     },
+     "text": {
+      "en": "While this unit contains one or more Geminae Superia models, Celestine has the Feel No Pain 4+ ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Miraculous Intervention"
+     },
+     "text": {
+      "en": "The first time this unit’s Celestine model is destroyed, roll one D6 at the end of the phase. On a 2+, set that Celestine model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike",
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Saint-Celestine",
+   "composition": [
+    "1 Celestine – EPIC HERO",
+    "2 Geminae Superia"
+   ],
+   "equipped": [
+    "Saint Celestine is equipped with: the Ardent Blade.",
+    "Each Geminae Superia is equipped with: bolt pistol; power weapon."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "seraphim-squad",
+     "zephyrim-squad"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "the-ardent-blade": 1,
+      "the-ardent-blade-melee": 1,
+      "bolt-pistol": 2,
+      "power-weapon": 2
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "power-weapon",
+    "the-ardent-blade",
+    "the-ardent-blade-melee"
+   ]
+  },
+  {
+   "id": "triumph-of-saint-katherine",
+   "name": {
+    "en": "Triumph Of Saint Katherine",
+    "es": "Triumph Of Saint Katherine"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "CHARACTER",
+    "EPIC HERO",
+    "IMPERIUM",
+    "TRIUMPH OF SAINT KATHERINE"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "18",
+     "Ld": "6+",
+     "OC": "6",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistols",
+     "name": {
+      "en": "Bolt pistols"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "6",
+       "skill": "2+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "relic-weapons",
+     "name": {
+      "en": "Relic weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "18",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Relics of the Matriarchs"
+     },
+     "text": {
+      "en": "At the start of the battle round, select up to two of the abilities in the Relics of the Matriarchs section (see left). Until the start of the next battle round, this model has those abilities."
+     }
+    },
+    {
+     "name": {
+      "en": "Solemn Procession"
+     },
+     "text": {
+      "en": "Each time you gain 1 Miracle dice at the start of your turn, if this model is on the battlefield, do not roll one D6 to determine the value of that Miracle dice; it has a value of 6."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Triumph-Of-Saint-Katherine",
+   "damaged": {
+    "name": {
+     "en": "1-6 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-6 wounds remaining, the Attacks characteristics of all of its weapons are halved, and you can only select one ability when using its Relics of the Matriarchs ability, instead of up to two."
+    }
+   },
+   "composition": [
+    "1 Triumph of Saint Katherine – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: bolt pistols; relic weapons."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "battle-sisters-squad",
+     "sanctifiers"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "bolt-pistols": 1,
+      "relic-weapons": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistols",
+    "relic-weapons"
+   ]
+  },
+  {
+   "id": "battle-sisters-squad",
+   "name": {
+    "en": "Battle Sisters Squad",
+    "es": "Battle Sisters Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "BATTLELINE",
+    "IMPERIUM",
+    "BATTLE SISTERS SQUAD"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "artificer-crafted-storm-bolter",
+     "name": {
+      "en": "Artificer-crafted storm bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "condemnor-boltgun",
+     "name": {
+      "en": "Condemnor boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-psyker 2+",
+        "Devastating Wounds",
+        "Precision",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-pistol",
+     "name": {
+      "en": "Inferno pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-4",
+       "D": "D3",
+       "keywords": [
+        "Melta 2",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-flamer",
+     "name": {
+      "en": "Ministorum flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-heavy-flamer",
+     "name": {
+      "en": "Ministorum heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "multi-melta",
+     "name": {
+      "en": "Multi-melta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Heavy",
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Cherub"
+     },
+     "text": {
+      "en": "Once per battle, after this unit has performed an Act of Faith, you gain 1 Miracle dice. Designer’s Note: Place a Cherub token next to the unit, removing it once this ability has been used."
+     }
+    },
+    {
+     "name": {
+      "en": "Defenders of the Faith"
+     },
+     "text": {
+      "en": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Battle-Sisters-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Simulacrum Imperialis"
+     },
+     "text": {
+      "en": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: on a 4+, you gain 1 Miracle dice showing a value equal to that result."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Sister Superior’s boltgun can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol",
+      "1 combi-weapon",
+      "1 condemnor boltgun",
+      "1 inferno pistol",
+      "1 Ministorum hand flamer",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "The Sister Superior can be equipped with one of the following:",
+     "choices": [
+      "1 chainsword",
+      "1 power weapon"
+     ]
+    },
+    {
+     "text": "1 Battle Sister’s boltgun can be replaced with one of the following:",
+     "choices": [
+      "1 artificer-crafted storm bolter",
+      "1 meltagun",
+      "1 Ministorum flamer"
+     ]
+    },
+    {
+     "text": "1 Battle Sister’s boltgun can be replaced with one of the following:",
+     "choices": [
+      "1 artificer-crafted storm bolter",
+      "1 heavy bolter",
+      "1 meltagun",
+      "1 Ministorum flamer",
+      "1 Ministorum heavy flamer",
+      "1 multi-melta"
+     ]
+    },
+    {
+     "text": "1 Battle Sister equipped with 1 boltgun can be equipped with 1 simulacrum imperialis (that model’s boltgun cannot be replaced).",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sister Superior",
+    "9 Battle Sisters"
+   ],
+   "equipped": [
+    "Every model is equipped with: bolt pistol; boltgun; close combat weapon."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 10,
+      "boltgun": 10,
+      "close-combat-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Sister Superior: Boltgun",
+      "es": "Sister Superior: Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol",
+      "combi-weapon",
+      "condemnor-boltgun",
+      "inferno-pistol",
+      "ministorum-hand-flamer",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "bolt-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ],
+      "condemnor-boltgun": [
+       {
+        "item": "condemnor-boltgun",
+        "n": 1
+       }
+      ],
+      "inferno-pistol": [
+       {
+        "item": "inferno-pistol",
+        "n": 1
+       }
+      ],
+      "ministorum-hand-flamer": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sister Superior",
+     "labels": {
+      "bolt-pistol": "Bolt pistol",
+      "combi-weapon": "Combi-weapon",
+      "condemnor-boltgun": "Condemnor boltgun",
+      "inferno-pistol": "Inferno pistol",
+      "ministorum-hand-flamer": "Ministorum hand flamer",
+      "plasma-pistol": "Plasma pistol",
+      "": "Boltgun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Sister Superior: optional",
+      "es": "Sister Superior: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "chainsword",
+      "power-weapon"
+     ],
+     "packages": {
+      "chainsword": [
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sister Superior",
+     "labels": {
+      "chainsword": "Chainsword",
+      "power-weapon": "Power weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Battle Sister: Boltgun",
+      "es": "Battle Sister: Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "artificer-crafted-storm-bolter",
+      "meltagun",
+      "ministorum-flamer"
+     ],
+     "packages": {
+      "artificer-crafted-storm-bolter": [
+       {
+        "item": "artificer-crafted-storm-bolter",
+        "n": 1
+       }
+      ],
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "ministorum-flamer": [
+       {
+        "item": "ministorum-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Battle Sister",
+     "labels": {
+      "artificer-crafted-storm-bolter": "Artificer-crafted storm bolter",
+      "meltagun": "Meltagun",
+      "ministorum-flamer": "Ministorum flamer",
+      "": "Boltgun"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Battle Sister: Boltgun",
+      "es": "Battle Sister: Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "artificer-crafted-storm-bolter",
+      "heavy-bolter",
+      "meltagun",
+      "ministorum-flamer",
+      "ministorum-heavy-flamer",
+      "multi-melta"
+     ],
+     "packages": {
+      "artificer-crafted-storm-bolter": [
+       {
+        "item": "artificer-crafted-storm-bolter",
+        "n": 1
+       }
+      ],
+      "heavy-bolter": [
+       {
+        "item": "heavy-bolter",
+        "n": 1
+       }
+      ],
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "ministorum-flamer": [
+       {
+        "item": "ministorum-flamer",
+        "n": 1
+       }
+      ],
+      "ministorum-heavy-flamer": [
+       {
+        "item": "ministorum-heavy-flamer",
+        "n": 1
+       }
+      ],
+      "multi-melta": [
+       {
+        "item": "multi-melta",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Battle Sister",
+     "labels": {
+      "artificer-crafted-storm-bolter": "Artificer-crafted storm bolter",
+      "heavy-bolter": "Heavy bolter",
+      "meltagun": "Meltagun",
+      "ministorum-flamer": "Ministorum flamer",
+      "ministorum-heavy-flamer": "Ministorum heavy flamer",
+      "multi-melta": "Multi-melta",
+      "": "Boltgun"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Battle Sister: add Simulacrum imperiali",
+      "es": "Battle Sister: añadir Simulacrum imperiali"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:simulacrum-imperiali",
+     "packages": {
+      "gear:simulacrum-imperiali": [
+       {
+        "item": "gear:simulacrum-imperiali",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Battle Sister",
+     "labels": {
+      "gear:simulacrum-imperiali": "Simulacrum imperiali"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "boltgun",
+    "close-combat-weapon"
+   ]
+  },
+  {
+   "id": "arco-flagellants",
+   "name": {
+    "en": "Arco-flagellants",
+    "es": "Arco-flagellants"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "PENITENT",
+    "ARCO-FLAGELLANTS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "2",
+     "Ld": "8+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "arco-flails",
+     "name": {
+      "en": "Arco-flails"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Extremis Trigger Word"
+     },
+     "text": {
+      "en": "Each time this unit is selected to fight, you can choose to invoke its extremis trigger word. If you do, then until the end of the phase, arco-flails equipped by models in this unit have an Attacks characteristic of 6 and the [HAZARDOUS] ability."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Arco-flagellants",
+   "composition": [
+    "3-10 Arco-flagellants"
+   ],
+   "equipped": [
+    "Every model is equipped with: arco-flails."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "arco-flails": 3
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "arco-flails": 10
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "arco-flails"
+   ]
+  },
+  {
+   "id": "celestian-insidiants",
+   "name": {
+    "en": "Celestian Insidiants",
+    "es": "Celestian Insidiants"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "CELESTIAN",
+    "CELESTIAN INSIDIANTS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "condemnor-bolt-pistol",
+     "name": {
+      "en": "Condemnor bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-psyker 4+",
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-pistol",
+     "name": {
+      "en": "Inferno pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-4",
+       "D": "D3",
+       "keywords": [
+        "Melta 2",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blessed-sword",
+     "name": {
+      "en": "Blessed sword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "null-mace",
+     "name": {
+      "en": "Null mace"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-psyker 4+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "virge-of-admonition",
+     "name": {
+      "en": "Virge of admonition"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Anti-psyker 4+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rituale Nullificatus"
+     },
+     "text": {
+      "en": "Models in this unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds."
+     }
+    },
+    {
+     "name": {
+      "en": "Virtue of Intolerance"
+     },
+     "text": {
+      "en": "At the start of the battle, select one unit from your opponent’s army to be this unit’s quarry. Each time a model in this unit makes an attack that targets its quarry, that attack has the [PRECISION] ability and you can re-roll the Hit roll. This ability can be used even if this unit is embarked within a TRANSPORT."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Celestian-Insidiants",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Simulacrum Imperialis"
+     },
+     "text": {
+      "en": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: on a 4+, you gain 1 Miracle dice showing a value equal to that result."
+     }
+    },
+    {
+     "name": {
+      "en": "Denuncia Oratory"
+     },
+     "text": {
+      "en": "Each time the bearer’s unit’s quarry is destroyed, you can select a new unit from your opponent’s army to be its quarry."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Celestian Insidiant Superior’s condemnor bolt pistol can be replaced with 1 inferno pistol.",
+     "choices": []
+    },
+    {
+     "text": "Up to 2 Celestian Insidiants can each have their condemnor bolt pistol replaced with 1 Ministorum hand flamer.",
+     "choices": []
+    },
+    {
+     "text": "Up to 2 Celestian Insidiants can each have their condemnor bolt pistol and null mace replaced with 1 blessed sword.",
+     "choices": []
+    },
+    {
+     "text": "One Celestian Insidiant’s condemnor bolt pistol and null mace can be replaced with 1 virge of admonition.",
+     "choices": []
+    },
+    {
+     "text": "One Celestian Insidiant’s condemnor bolt pistol can be replaced with 1 denuncia oratory.",
+     "choices": []
+    },
+    {
+     "text": "One Celestian Insidiant equipped with 1 condemnor bolt pistol can be equipped with 1 simulacrum imperialis (that model’s condemnor bolt pistol cannot be replaced).",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Celestian Insidiant Superior",
+    "9 Celestian Insidiants"
+   ],
+   "equipped": [
+    "Each model is equipped with: condemnor bolt pistol; null mace."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "condemnor-bolt-pistol": 10,
+      "null-mace": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Celestian Insidiant Superior: Condemnor bolt pistol",
+      "es": "Celestian Insidiant Superior: Condemnor bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "condemnor-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "inferno-pistol"
+     ],
+     "packages": {
+      "inferno-pistol": [
+       {
+        "item": "inferno-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Celestian Insidiant Superior",
+     "labels": {
+      "inferno-pistol": "Inferno pistol",
+      "": "Condemnor bolt pistol"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Celestian Insidiants: replace Condemnor bolt pistol",
+      "es": "Celestian Insidiants: sustituir Condemnor bolt pistol"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "condemnor-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "ministorum-hand-flamer"
+     ],
+     "packages": {
+      "ministorum-hand-flamer": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Celestian Insidiants",
+     "labels": {
+      "ministorum-hand-flamer": "Ministorum hand flamer"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Celestian Insidiants: replace Condemnor bolt pistol + Null mace",
+      "es": "Celestian Insidiants: sustituir Condemnor bolt pistol + Null mace"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "condemnor-bolt-pistol",
+       "n": 1
+      },
+      {
+       "item": "null-mace",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "blessed-sword"
+     ],
+     "packages": {
+      "blessed-sword": [
+       {
+        "item": "blessed-sword",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Celestian Insidiants",
+     "labels": {
+      "blessed-sword": "Blessed sword"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Celestian Insidiant: Condemnor bolt pistol + Null mace",
+      "es": "Celestian Insidiant: Condemnor bolt pistol + Null mace"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "condemnor-bolt-pistol",
+       "n": 1
+      },
+      {
+       "item": "null-mace",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "virge-of-admonition"
+     ],
+     "packages": {
+      "virge-of-admonition": [
+       {
+        "item": "virge-of-admonition",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Celestian Insidiant",
+     "labels": {
+      "virge-of-admonition": "Virge of admonition",
+      "": "Condemnor bolt pistol + Null mace"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Celestian Insidiant: Condemnor bolt pistol",
+      "es": "Celestian Insidiant: Condemnor bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "condemnor-bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:denuncia-oratory"
+     ],
+     "packages": {
+      "gear:denuncia-oratory": [
+       {
+        "item": "gear:denuncia-oratory",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Celestian Insidiant",
+     "labels": {
+      "gear:denuncia-oratory": "Denuncia oratory",
+      "": "Condemnor bolt pistol"
+     }
+    },
+    {
+     "id": "o6",
+     "label": {
+      "en": "Celestian Insidiant: add Simulacrum imperiali",
+      "es": "Celestian Insidiant: añadir Simulacrum imperiali"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:simulacrum-imperiali",
+     "packages": {
+      "gear:simulacrum-imperiali": [
+       {
+        "item": "gear:simulacrum-imperiali",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Celestian Insidiant",
+     "labels": {
+      "gear:simulacrum-imperiali": "Simulacrum imperiali"
+     }
+    }
+   ],
+   "loadout": [
+    "condemnor-bolt-pistol",
+    "null-mace"
+   ]
+  },
+  {
+   "id": "celestian-sacresants",
+   "name": {
+    "en": "Celestian Sacresants",
+    "es": "Celestian Sacresants"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "CELESTIAN",
+    "CELESTIAN SACRESANTS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-pistol",
+     "name": {
+      "en": "Inferno pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-4",
+       "D": "D3",
+       "keywords": [
+        "Melta 2",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "anointed-halberd",
+     "name": {
+      "en": "Anointed halberd"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hallowed-mace",
+     "name": {
+      "en": "Hallowed mace"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Lethal Hits"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "spear-of-the-faithful",
+     "name": {
+      "en": "Spear of the faithful"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Sworn Protectors"
+     },
+     "text": {
+      "en": "While an ADEPTA SORORITAS CHARACTER is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Celestian-Sacresants",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their hallowed mace replaced with 1 anointed halberd.",
+     "choices": []
+    },
+    {
+     "text": "The Sacresant Superior’s bolt pistol can be replaced with one of the following:",
+     "choices": [
+      "1 inferno pistol",
+      "1 Ministorum hand flamer",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "The Sacresant Superior’s hallowed mace can be replaced with 1 spear of the faithful.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sacresant Superior",
+    "4-9 Celestian Sacresants"
+   ],
+   "equipped": [
+    "Every model is equipped with: bolt pistol; hallowed mace."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 5,
+      "hallowed-mace": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 10,
+      "hallowed-mace": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Hallowed mace",
+      "es": "sustituir Hallowed mace"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "hallowed-mace",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "anointed-halberd"
+     ],
+     "packages": {
+      "anointed-halberd": [
+       {
+        "item": "anointed-halberd",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 5,
+      "10": 10
+     },
+     "labels": {
+      "anointed-halberd": "Anointed halberd"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Sacresant Superior: Bolt pistol",
+      "es": "Sacresant Superior: Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "inferno-pistol",
+      "ministorum-hand-flamer",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "inferno-pistol": [
+       {
+        "item": "inferno-pistol",
+        "n": 1
+       }
+      ],
+      "ministorum-hand-flamer": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sacresant Superior",
+     "labels": {
+      "inferno-pistol": "Inferno pistol",
+      "ministorum-hand-flamer": "Ministorum hand flamer",
+      "plasma-pistol": "Plasma pistol",
+      "": "Bolt pistol"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Sacresant Superior: Hallowed mace",
+      "es": "Sacresant Superior: Hallowed mace"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "hallowed-mace",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "spear-of-the-faithful"
+     ],
+     "packages": {
+      "spear-of-the-faithful": [
+       {
+        "item": "spear-of-the-faithful",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sacresant Superior",
+     "labels": {
+      "spear-of-the-faithful": "Spear of the faithful",
+      "": "Hallowed mace"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "hallowed-mace"
+   ]
+  },
+  {
+   "id": "dominion-squad",
+   "name": {
+    "en": "Dominion Squad",
+    "es": "Dominion Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "DOMINION SQUAD"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "artificer-crafted-storm-bolter",
+     "name": {
+      "en": "Artificer-crafted storm bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Assault",
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "condemnor-boltgun",
+     "name": {
+      "en": "Condemnor boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-psyker 2+",
+        "Devastating Wounds",
+        "Precision",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-pistol",
+     "name": {
+      "en": "Inferno pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-4",
+       "D": "D3",
+       "keywords": [
+        "Melta 2",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Assault",
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-flamer",
+     "name": {
+      "en": "Ministorum flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Cherub"
+     },
+     "text": {
+      "en": "Once per battle, after this unit has performed an Act of Faith, you gain 1 Miracle dice. Designer’s Note: Place a Cherub token next to the unit, removing it once this ability has been used."
+     }
+    },
+    {
+     "name": {
+      "en": "Righteous Awareness"
+     },
+     "text": {
+      "en": "In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units it can make a Normal move of up to D6\"."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Dominion-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Simulacrum Imperialis"
+     },
+     "text": {
+      "en": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: on a 4+, you gain 1 Miracle dice showing a value equal to that result."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Dominion Superior’s boltgun can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol",
+      "1 combi-weapon",
+      "1 condemnor boltgun",
+      "1 inferno pistol",
+      "1 Ministorum hand flamer",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "The Dominion Superior can be equipped with one of the following:",
+     "choices": [
+      "1 chainsword",
+      "1 power weapon"
+     ]
+    },
+    {
+     "text": "Up to 4 Dominions can each have their boltgun replaced with one of the following:",
+     "choices": [
+      "1 artificer-crafted storm bolter",
+      "1 meltagun",
+      "1 Ministorum flamer"
+     ]
+    },
+    {
+     "text": "1 Dominion equipped with 1 boltgun can be equipped with 1 simulacrum imperialis (that model’s boltgun cannot be replaced).",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Dominion Superior",
+    "9 Dominions"
+   ],
+   "equipped": [
+    "Every model is equipped with: bolt pistol; boltgun; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 10,
+      "boltgun": 10,
+      "close-combat-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Dominion Superior: Boltgun",
+      "es": "Dominion Superior: Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol",
+      "combi-weapon",
+      "condemnor-boltgun",
+      "inferno-pistol",
+      "ministorum-hand-flamer",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "bolt-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ],
+      "condemnor-boltgun": [
+       {
+        "item": "condemnor-boltgun",
+        "n": 1
+       }
+      ],
+      "inferno-pistol": [
+       {
+        "item": "inferno-pistol",
+        "n": 1
+       }
+      ],
+      "ministorum-hand-flamer": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Dominion Superior",
+     "labels": {
+      "bolt-pistol": "Bolt pistol",
+      "combi-weapon": "Combi-weapon",
+      "condemnor-boltgun": "Condemnor boltgun",
+      "inferno-pistol": "Inferno pistol",
+      "ministorum-hand-flamer": "Ministorum hand flamer",
+      "plasma-pistol": "Plasma pistol",
+      "": "Boltgun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Dominion Superior: optional",
+      "es": "Dominion Superior: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "chainsword",
+      "power-weapon"
+     ],
+     "packages": {
+      "chainsword": [
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Dominion Superior",
+     "labels": {
+      "chainsword": "Chainsword",
+      "power-weapon": "Power weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Dominions: replace Boltgun",
+      "es": "Dominions: sustituir Boltgun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "artificer-crafted-storm-bolter",
+      "meltagun",
+      "ministorum-flamer"
+     ],
+     "packages": {
+      "artificer-crafted-storm-bolter": [
+       {
+        "item": "artificer-crafted-storm-bolter",
+        "n": 1
+       }
+      ],
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ],
+      "ministorum-flamer": [
+       {
+        "item": "ministorum-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 4
+     },
+     "owner": "Dominions",
+     "labels": {
+      "artificer-crafted-storm-bolter": "Artificer-crafted storm bolter",
+      "meltagun": "Meltagun",
+      "ministorum-flamer": "Ministorum flamer"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Dominion: add Simulacrum imperiali",
+      "es": "Dominion: añadir Simulacrum imperiali"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:simulacrum-imperiali",
+     "packages": {
+      "gear:simulacrum-imperiali": [
+       {
+        "item": "gear:simulacrum-imperiali",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Dominion",
+     "labels": {
+      "gear:simulacrum-imperiali": "Simulacrum imperiali"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "boltgun",
+    "close-combat-weapon"
+   ]
+  },
+  {
+   "id": "repentia-squad",
+   "name": {
+    "en": "Repentia Squad",
+    "es": "Repentia Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "PENITENT",
+    "REPENTIA SQUAD"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "7\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Sisters Repentia(⌀28.5mm)"
+     },
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "neural-whips",
+     "name": {
+      "en": "Neural whips"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "penitent-eviscerator",
+     "name": {
+      "en": "Penitent eviscerator"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Overseer of Redemption"
+     },
+     "text": {
+      "en": "While this unit contains a Repentia Superior model, each time a Sisters Repentia model in this unit makes a melee attack, you can re-roll the Hit roll and you can re-roll the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Repentia-Squad",
+   "composition": [
+    "1 Repentia Superior",
+    "4-9 Sisters Repentia"
+   ],
+   "equipped": [
+    "The Repentia Superior is equipped with: bolt pistol; neural whips.",
+    "Each Sister Repentia is equipped with: penitent eviscerator."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 1,
+      "neural-whips": 1,
+      "penitent-eviscerator": 4
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 1,
+      "neural-whips": 1,
+      "penitent-eviscerator": 9
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "bolt-pistol",
+    "neural-whips",
+    "penitent-eviscerator"
+   ]
+  },
+  {
+   "id": "retributor-squad",
+   "name": {
+    "en": "Retributor Squad",
+    "es": "Retributor Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "RETRIBUTOR SQUAD"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "combi-weapon",
+     "name": {
+      "en": "Combi-weapon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "condemnor-boltgun",
+     "name": {
+      "en": "Condemnor boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-psyker 2+",
+        "Devastating Wounds",
+        "Precision",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-pistol",
+     "name": {
+      "en": "Inferno pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-4",
+       "D": "D3",
+       "keywords": [
+        "Melta 2",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-heavy-flamer",
+     "name": {
+      "en": "Ministorum heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "multi-melta",
+     "name": {
+      "en": "Multi-melta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Heavy",
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Cherubs"
+     },
+     "text": {
+      "en": "Twice per battle, after this unit has performed an Act of Faith, you gain 1 Miracle dice. Designer’s Note: Place two Cherub tokens next to the unit, removing one each time this ability has been used."
+     }
+    },
+    {
+     "name": {
+      "en": "Storm of Retribution"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes a ranged attack, that model can re-roll a Hit roll of 1 and re-roll a Wound roll of 1. If such an attack targets an enemy unit that has destroyed one or more ADEPTA SORORITAS units from your army during the battle, add 1 to the Hit roll and add 1 to the Wound roll as well."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Retributor-Squad",
+   "wargearOptions": [
+    {
+     "text": "The Retributor Superior’s boltgun can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol",
+      "1 combi-weapon",
+      "1 condemnor boltgun",
+      "1 inferno pistol",
+      "1 Ministorum hand flamer",
+      "1 plasma pistol"
+     ]
+    },
+    {
+     "text": "The Retributor Superior can be equipped with one of the following:",
+     "choices": [
+      "1 chainsword",
+      "1 power weapon"
+     ]
+    },
+    {
+     "text": "Each Retributor’s heavy bolter can be replaced with one of the following:",
+     "choices": [
+      "1 Ministorum heavy flamer",
+      "1 multi-melta"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Retributor Superior",
+    "4 Retributors"
+   ],
+   "equipped": [
+    "The Retributor Superior is equipped with: bolt pistol; boltgun; close combat weapon.",
+    "Each Retributor is equipped with: bolt pistol; heavy bolter; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 5,
+      "boltgun": 1,
+      "close-combat-weapon": 5,
+      "heavy-bolter": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Retributor Superior: Boltgun",
+      "es": "Retributor Superior: Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol",
+      "combi-weapon",
+      "condemnor-boltgun",
+      "inferno-pistol",
+      "ministorum-hand-flamer",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "bolt-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       }
+      ],
+      "combi-weapon": [
+       {
+        "item": "combi-weapon",
+        "n": 1
+       }
+      ],
+      "condemnor-boltgun": [
+       {
+        "item": "condemnor-boltgun",
+        "n": 1
+       }
+      ],
+      "inferno-pistol": [
+       {
+        "item": "inferno-pistol",
+        "n": 1
+       }
+      ],
+      "ministorum-hand-flamer": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 1
+       }
+      ],
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Retributor Superior",
+     "labels": {
+      "bolt-pistol": "Bolt pistol",
+      "combi-weapon": "Combi-weapon",
+      "condemnor-boltgun": "Condemnor boltgun",
+      "inferno-pistol": "Inferno pistol",
+      "ministorum-hand-flamer": "Ministorum hand flamer",
+      "plasma-pistol": "Plasma pistol",
+      "": "Boltgun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Retributor Superior: optional",
+      "es": "Retributor Superior: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "chainsword",
+      "power-weapon"
+     ],
+     "packages": {
+      "chainsword": [
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "power-weapon": [
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Retributor Superior",
+     "labels": {
+      "chainsword": "Chainsword",
+      "power-weapon": "Power weapon",
+      "": "—"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Retributor: replace Heavy bolter",
+      "es": "Retributor: sustituir Heavy bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "heavy-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "ministorum-heavy-flamer",
+      "multi-melta"
+     ],
+     "packages": {
+      "ministorum-heavy-flamer": [
+       {
+        "item": "ministorum-heavy-flamer",
+        "n": 1
+       }
+      ],
+      "multi-melta": [
+       {
+        "item": "multi-melta",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 4
+     },
+     "owner": "Retributor",
+     "labels": {
+      "ministorum-heavy-flamer": "Ministorum heavy flamer",
+      "multi-melta": "Multi-melta"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "boltgun",
+    "close-combat-weapon",
+    "heavy-bolter"
+   ]
+  },
+  {
+   "id": "sanctifiers",
+   "name": {
+    "en": "Sanctifiers",
+    "es": "Sanctifiers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "SANCTIFIERS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "6+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "holy-fire",
+     "name": {
+      "en": "Holy fire"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-flamer",
+     "name": {
+      "en": "Ministorum flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-gun",
+     "name": {
+      "en": "Plasma gun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Rapid Fire 1"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "burning-hands",
+     "name": {
+      "en": "Burning hands"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "death-cult-blades",
+     "name": {
+      "en": "Death Cult blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sanctifier-melee-weapon",
+     "name": {
+      "en": "Sanctifier melee weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ministorum Sermon"
+     },
+     "text": {
+      "en": "While this unit contains a MINISTORUM PRIEST, melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Cherub"
+     },
+     "text": {
+      "en": "Once per battle, after this unit has performed an Act of Faith, you gain 1 Miracle dice. Designer’s Note: Place a Cherub token next to the unit, removing it once this ability has been used."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sanctifiers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Salvationist Medikit"
+     },
+     "text": {
+      "en": "In your Command phase, if the bearer is on the battlefield, you can return up to D3 destroyed models (excluding CHARACTER models) to this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Simulacrum Imperialis"
+     },
+     "text": {
+      "en": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: on a 4+, you gain 1 Miracle dice showing a value equal to that result."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Missionary model can have its 1 plasma gun replaced with 1 meltagun.",
+     "choices": []
+    },
+    {
+     "text": "1 Missionary model equipped with 1 plasma gun can be equipped with 1 holy fire (this model’s plasma gun cannot be replaced).",
+     "choices": []
+    },
+    {
+     "text": "1 Sanctifier model can have its 1 Sanctifier melee weapon replaced with 1 Ministorum hand flamer and 1 close combat weapon.",
+     "choices": []
+    },
+    {
+     "text": "1 Sanctifier model can have its 1 Sanctifier melee weapon replaced with 1 close combat weapon and 1 simulacrum imperialis.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Miraculist",
+    "1 Salvationist",
+    "1 Death Cult Assassin",
+    "2 Missionaries",
+    "4 Sanctifiers"
+   ],
+   "equipped": [
+    "The Miraculist is equipped with: holy fire; burning hands.",
+    "The Salvationist is equipped with: close combat weapon; Salvationist medikit.",
+    "The Death Cult Assassin is equipped with: Death Cult blades.",
+    "1 Missionary is equipped with: plasma gun; Sanctifier melee weapon.",
+    "1 Missionary is equipped with: Ministorum flamer; Sanctifier melee weapon.",
+    "Every Sanctifier is equipped with: Ministorum hand flamer; Sanctifier melee weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 9,
+     "loadout": {
+      "holy-fire": 1,
+      "burning-hands": 1,
+      "close-combat-weapon": 1,
+      "gear:salvationist-medikit": 1,
+      "death-cult-blades": 1,
+      "plasma-gun": 1,
+      "sanctifier-melee-weapon": 6,
+      "ministorum-flamer": 1,
+      "ministorum-hand-flamer": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Missionary model: Plasma gun",
+      "es": "Missionary model: Plasma gun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "plasma-gun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "meltagun"
+     ],
+     "packages": {
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Missionary model",
+     "labels": {
+      "meltagun": "Meltagun",
+      "": "Plasma gun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Missionary model: add Holy fire",
+      "es": "Missionary model: añadir Holy fire"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "holy-fire",
+     "packages": {
+      "holy-fire": [
+       {
+        "item": "holy-fire",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "9": 1
+     },
+     "owner": "Missionary model",
+     "labels": {
+      "holy-fire": "Holy fire"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Sanctifier model: Sanctifier melee weapon",
+      "es": "Sanctifier model: Sanctifier melee weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "sanctifier-melee-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "ministorum-hand-flamer+close-combat-weapon"
+     ],
+     "packages": {
+      "ministorum-hand-flamer+close-combat-weapon": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 1
+       },
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sanctifier model",
+     "labels": {
+      "ministorum-hand-flamer+close-combat-weapon": "Ministorum hand flamer + Close combat weapon",
+      "": "Sanctifier melee weapon"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Sanctifier model: Sanctifier melee weapon",
+      "es": "Sanctifier model: Sanctifier melee weapon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "sanctifier-melee-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "close-combat-weapon+gear:simulacrum-imperiali"
+     ],
+     "packages": {
+      "close-combat-weapon+gear:simulacrum-imperiali": [
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       },
+       {
+        "item": "gear:simulacrum-imperiali",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sanctifier model",
+     "labels": {
+      "close-combat-weapon+gear:simulacrum-imperiali": "Close combat weapon + Simulacrum imperiali",
+      "": "Sanctifier melee weapon"
+     }
+    }
+   ],
+   "loadout": [
+    "burning-hands",
+    "close-combat-weapon",
+    "death-cult-blades",
+    "gear:salvationist-medikit",
+    "holy-fire",
+    "ministorum-flamer",
+    "ministorum-hand-flamer",
+    "plasma-gun",
+    "sanctifier-melee-weapon"
+   ]
+  },
+  {
+   "id": "seraphim-squad",
+   "name": {
+    "en": "Seraphim Squad",
+    "es": "Seraphim Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "JUMP PACK",
+    "FLY",
+    "GRENADES",
+    "IMPERIUM",
+    "SERAPHIM SQUAD"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inferno-pistol",
+     "name": {
+      "en": "Inferno pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "6\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-4",
+       "D": "D3",
+       "keywords": [
+        "Melta 2",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-hand-flamer",
+     "name": {
+      "en": "Ministorum hand flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "chainsword",
+     "name": {
+      "en": "Chainsword"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Angelic Ascent"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Seraphim-Squad",
+   "wargearOptions": [
+    {
+     "text": "For every 5 models in the unit, up to 2 Seraphim can each have their 2 bolt pistols replaced with one of the following:",
+     "choices": [
+      "2 inferno pistols",
+      "2 Ministorum hand flamers"
+     ]
+    },
+    {
+     "text": "The Seraphim Superior’s 2 bolt pistols can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol and 1 chainsword",
+      "1 bolt pistol and 1 plasma pistol",
+      "1 bolt pistol and 1 power weapon",
+      "1 plasma pistol and 1 chainsword",
+      "1 plasma pistol and 1 power weapon"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Seraphim Superior",
+    "4-9 Seraphim"
+   ],
+   "equipped": [
+    "Every model is equipped with: 2 bolt pistols; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 10,
+      "close-combat-weapon": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 20,
+      "close-combat-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Seraphim: replace 2× Bolt pistol",
+      "es": "Seraphim: sustituir 2× Bolt pistol"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "2xinferno-pistol",
+      "2xministorum-hand-flamer"
+     ],
+     "packages": {
+      "2xinferno-pistol": [
+       {
+        "item": "inferno-pistol",
+        "n": 2
+       }
+      ],
+      "2xministorum-hand-flamer": [
+       {
+        "item": "ministorum-hand-flamer",
+        "n": 2
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 2,
+      "10": 4
+     },
+     "owner": "Seraphim",
+     "labels": {
+      "2xinferno-pistol": "2× Inferno pistol",
+      "2xministorum-hand-flamer": "2× Ministorum hand flamer"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Seraphim Superior: 2× Bolt pistol",
+      "es": "Seraphim Superior: 2× Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol+chainsword",
+      "bolt-pistol+plasma-pistol",
+      "bolt-pistol+power-weapon",
+      "plasma-pistol+chainsword",
+      "plasma-pistol+power-weapon"
+     ],
+     "packages": {
+      "bolt-pistol+chainsword": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       },
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "bolt-pistol+plasma-pistol": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       },
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ],
+      "bolt-pistol+power-weapon": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       },
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ],
+      "plasma-pistol+chainsword": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       },
+       {
+        "item": "chainsword",
+        "n": 1
+       }
+      ],
+      "plasma-pistol+power-weapon": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       },
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Seraphim Superior",
+     "labels": {
+      "bolt-pistol+chainsword": "Bolt pistol + Chainsword",
+      "bolt-pistol+plasma-pistol": "Bolt pistol + Plasma pistol",
+      "bolt-pistol+power-weapon": "Bolt pistol + Power weapon",
+      "plasma-pistol+chainsword": "Plasma pistol + Chainsword",
+      "plasma-pistol+power-weapon": "Plasma pistol + Power weapon",
+      "": "2× Bolt pistol"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "close-combat-weapon"
+   ]
+  },
+  {
+   "id": "sisters-novitiate-squad",
+   "name": {
+    "en": "Sisters Novitiate Squad",
+    "es": "Sisters Novitiate Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "SISTERS NOVITIATE SQUAD"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "name": {
+      "en": "Sister Novitiate(⌀28.5mm)"
+     },
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "autopistol",
+     "name": {
+      "en": "Autopistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "autogun",
+     "name": {
+      "en": "Autogun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boltgun",
+     "name": {
+      "en": "Boltgun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-flamer",
+     "name": {
+      "en": "Ministorum flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "novitiate-melee-weapons",
+     "name": {
+      "en": "Novitiate melee weapons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Impetuous Fervour"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Hit roll instead."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sisters-Novitiate-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Sacred Banner"
+     },
+     "text": {
+      "en": "You can re-roll Advance and Charge rolls made for the bearer’s unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Simulacrum Imperialis"
+     },
+     "text": {
+      "en": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: on a 4+, you gain 1 Miracle dice showing a value equal to that result."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Novitiate Superior’s bolt pistol and boltgun can be replaced with one of the following:",
+     "choices": [
+      "1 bolt pistol and 1 power weapon",
+      "1 plasma pistol and 1 power weapon"
+     ]
+    },
+    {
+     "text": "1 Sister Novitiate’s autogun can be replaced with 1 sacred banner.",
+     "choices": []
+    },
+    {
+     "text": "1 Sister Novitiate’s autogun can be replaced with 1 simulacrum imperialis.",
+     "choices": []
+    },
+    {
+     "text": "Up to 2 Sisters Novitiate can each have their autogun replaced with 1 Ministorum flamer.",
+     "choices": []
+    },
+    {
+     "text": "Any number of Sisters Novitiate can each have their autogun and close combat weapon replaced with 1 Novitiate melee weapons.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Novitiate Superior",
+    "9 Sisters Novitiate"
+   ],
+   "equipped": [
+    "The Novitiate Superior is equipped with: bolt pistol; boltgun; close combat weapon.",
+    "Each Sister Novitiate is equipped with: autopistol; autogun; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 1,
+      "boltgun": 1,
+      "close-combat-weapon": 10,
+      "autopistol": 9,
+      "autogun": 9
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Novitiate Superior: Bolt pistol + Boltgun",
+      "es": "Novitiate Superior: Bolt pistol + Boltgun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      },
+      {
+       "item": "boltgun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "bolt-pistol+power-weapon",
+      "plasma-pistol+power-weapon"
+     ],
+     "packages": {
+      "bolt-pistol+power-weapon": [
+       {
+        "item": "bolt-pistol",
+        "n": 1
+       },
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ],
+      "plasma-pistol+power-weapon": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       },
+       {
+        "item": "power-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Novitiate Superior",
+     "labels": {
+      "bolt-pistol+power-weapon": "Bolt pistol + Power weapon",
+      "plasma-pistol+power-weapon": "Plasma pistol + Power weapon",
+      "": "Bolt pistol + Boltgun"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Sister Novitiate: Autogun",
+      "es": "Sister Novitiate: Autogun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "autogun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:sacred-banner"
+     ],
+     "packages": {
+      "gear:sacred-banner": [
+       {
+        "item": "gear:sacred-banner",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sister Novitiate",
+     "labels": {
+      "gear:sacred-banner": "Sacred banner",
+      "": "Autogun"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Sister Novitiate: Autogun",
+      "es": "Sister Novitiate: Autogun"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "autogun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:simulacrum-imperiali"
+     ],
+     "packages": {
+      "gear:simulacrum-imperiali": [
+       {
+        "item": "gear:simulacrum-imperiali",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sister Novitiate",
+     "labels": {
+      "gear:simulacrum-imperiali": "Simulacrum imperiali",
+      "": "Autogun"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Sisters Novitiate: replace Autogun",
+      "es": "Sisters Novitiate: sustituir Autogun"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "autogun",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "ministorum-flamer"
+     ],
+     "packages": {
+      "ministorum-flamer": [
+       {
+        "item": "ministorum-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 2
+     },
+     "owner": "Sisters Novitiate",
+     "labels": {
+      "ministorum-flamer": "Ministorum flamer"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Sisters Novitiate: replace Autogun + Close combat weapon",
+      "es": "Sisters Novitiate: sustituir Autogun + Close combat weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "autogun",
+       "n": 1
+      },
+      {
+       "item": "close-combat-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "novitiate-melee-weapons"
+     ],
+     "packages": {
+      "novitiate-melee-weapons": [
+       {
+        "item": "novitiate-melee-weapons",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 9
+     },
+     "owner": "Sisters Novitiate",
+     "labels": {
+      "novitiate-melee-weapons": "Novitiate melee weapons"
+     }
+    }
+   ],
+   "loadout": [
+    "autogun",
+    "autopistol",
+    "bolt-pistol",
+    "boltgun",
+    "close-combat-weapon"
+   ]
+  },
+  {
+   "id": "zephyrim-squad",
+   "name": {
+    "en": "Zephyrim Squad",
+    "es": "Zephyrim Squad"
+   },
+   "keywords": [
+    "INFANTRY",
+    "JUMP PACK",
+    "FLY",
+    "GRENADES",
+    "IMPERIUM",
+    "ZEPHYRIM SQUAD"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "3",
+     "Sv": "3+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-pistol",
+     "name": {
+      "en": "Plasma pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous",
+        "Pistol"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Embodied Prophecy"
+     },
+     "text": {
+      "en": "Each time this unit is selected to fight, select one of the following abilities to apply to melee weapons equipped by models in this unit until the end of the phase: [SUSTAINED HITS 1] [LETHAL HITS] If this unit made a Charge move this turn, until the end of the phase, select both abilities above to apply to melee weapons equipped by models in this unit instead."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Zephyrim-Squad",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Sacred Banner"
+     },
+     "text": {
+      "en": "You can re-roll Advance and Charge rolls made for the bearer’s unit."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Zephyrim Superior can be equipped with 1 sacred banner.",
+     "choices": []
+    },
+    {
+     "text": "The Zephyrim Superior’s bolt pistol can be replaced with 1 plasma pistol.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Zephyrim Superior",
+    "4-9 Zephyrim"
+   ],
+   "equipped": [
+    "Every model is equipped with: bolt pistol; power weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "bolt-pistol": 5,
+      "power-weapon": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "bolt-pistol": 10,
+      "power-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Zephyrim Superior: add Sacred banner",
+      "es": "Zephyrim Superior: añadir Sacred banner"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:sacred-banner",
+     "packages": {
+      "gear:sacred-banner": [
+       {
+        "item": "gear:sacred-banner",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 1,
+      "10": 1
+     },
+     "owner": "Zephyrim Superior",
+     "labels": {
+      "gear:sacred-banner": "Sacred banner"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Zephyrim Superior: Bolt pistol",
+      "es": "Zephyrim Superior: Bolt pistol"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "bolt-pistol",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-pistol"
+     ],
+     "packages": {
+      "plasma-pistol": [
+       {
+        "item": "plasma-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Zephyrim Superior",
+     "labels": {
+      "plasma-pistol": "Plasma pistol",
+      "": "Bolt pistol"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "power-weapon"
+   ]
+  },
+  {
+   "id": "castigator",
+   "name": {
+    "en": "Castigator",
+    "es": "Castigator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "SMOKE",
+    "IMPERIUM",
+    "FRAME",
+    "CASTIGATOR"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "castigator-autocannons",
+     "name": {
+      "en": "Castigator autocannons"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Rapid Fire 4",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "castigator-battle-cannon",
+     "name": {
+      "en": "Castigator battle cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "D6+3",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Ignores Cover"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hunter-killer-missile",
+     "name": {
+      "en": "Hunter-killer missile"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rites of Castigation"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly ADEPTA SORORITAS unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Castigator",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s Castigator autocannons can be replaced with 1 Castigator battle cannon.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with 1 hunter-killer missile.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with 1 storm bolter.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Castigator"
+   ],
+   "equipped": [
+    "This model is equipped with: Castigator autocannons; 3 heavy bolters; armoured tracks."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "castigator-autocannons": 1,
+      "heavy-bolter": 3,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Castigator autocannons",
+      "es": "Castigator autocannons"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "castigator-autocannons",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "castigator-battle-cannon"
+     ],
+     "packages": {
+      "castigator-battle-cannon": [
+       {
+        "item": "castigator-battle-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "castigator-battle-cannon": "Castigator battle cannon",
+      "": "Castigator autocannons"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Hunter-killer missile",
+      "es": "añadir Hunter-killer missile"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "hunter-killer-missile",
+     "packages": {
+      "hunter-killer-missile": [
+       {
+        "item": "hunter-killer-missile",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "hunter-killer-missile": "Hunter-killer missile"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "add Storm bolter",
+      "es": "añadir Storm bolter"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "storm-bolter",
+     "packages": {
+      "storm-bolter": [
+       {
+        "item": "storm-bolter",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "storm-bolter": "Storm bolter"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "castigator-autocannons",
+    "heavy-bolter"
+   ]
+  },
+  {
+   "id": "exorcist",
+   "name": {
+    "en": "Exorcist",
+    "es": "Exorcist"
+   },
+   "keywords": [
+    "VEHICLE",
+    "SMOKE",
+    "IMPERIUM",
+    "FRAME",
+    "EXORCIST"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "exorcist-conflagration-rockets",
+     "name": {
+      "en": "Exorcist conflagration rockets"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3D6",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Ignores Cover",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "exorcist-missile-launcher",
+     "name": {
+      "en": "Exorcist missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D6+2",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "D6",
+       "keywords": [
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hunter-killer-missile",
+     "name": {
+      "en": "Hunter-killer missile"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Devastating Refrain"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, if one or more of those attacks made with an Indirect Fire weapon scored a hit against an enemy unit, that unit must take a Battle-shock test. Each time such an attack destroys an enemy model that has the Deadly Demise ability, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 5+ instead of on a 6."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Exorcist",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with 1 hunter-killer missile.",
+     "choices": []
+    },
+    {
+     "text": "This model’s Exorcist missile launcher can be replaced with 1 Exorcist conflagration rockets.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Exorcist"
+   ],
+   "equipped": [
+    "This model is equipped with: Exorcist missile launcher; heavy bolter; armoured tracks."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "exorcist-missile-launcher": 1,
+      "heavy-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Hunter-killer missile",
+      "es": "añadir Hunter-killer missile"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "hunter-killer-missile",
+     "packages": {
+      "hunter-killer-missile": [
+       {
+        "item": "hunter-killer-missile",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "hunter-killer-missile": "Hunter-killer missile"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Exorcist missile launcher",
+      "es": "Exorcist missile launcher"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "exorcist-missile-launcher",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "exorcist-conflagration-rockets"
+     ],
+     "packages": {
+      "exorcist-conflagration-rockets": [
+       {
+        "item": "exorcist-conflagration-rockets",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "exorcist-conflagration-rockets": "Exorcist conflagration rockets",
+      "": "Exorcist missile launcher"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "exorcist-missile-launcher",
+    "heavy-bolter"
+   ]
+  },
+  {
+   "id": "mortifiers",
+   "name": {
+    "en": "Mortifiers",
+    "es": "Mortifiers"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "PENITENT",
+    "MORTIFIERS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "6",
+     "Sv": "4+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mortifier-flamer",
+     "name": {
+      "en": "Mortifier flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "penitent-buzz-blade",
+     "name": {
+      "en": "Penitent buzz-blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "penitent-flail",
+     "name": {
+      "en": "Penitent flail"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-penitent-buzz-blades",
+     "name": {
+      "en": "Twin penitent buzz-blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "10",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-penitent-flails",
+     "name": {
+      "en": "Twin penitent flails"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Anguish of the Unredeemed"
+     },
+     "text": {
+      "en": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; That destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Mortifiers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Anchorite Sarcophagus"
+     },
+     "text": {
+      "en": "The bearer has a Move characteristic of 7\" and a Save characteristic of 3+."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 model can be equipped with 1 anchorite sarcophagus.",
+     "choices": []
+    },
+    {
+     "text": "Any number of models can each have their 2 heavy bolters replaced with one of the following:",
+     "choices": [
+      "1 heavy bolter and 1 Mortifier flamer",
+      "2 Mortifier flamers"
+     ]
+    },
+    {
+     "text": "Any number of models can each have their twin penitent buzz-blades replaced with one of the following:",
+     "choices": [
+      "1 twin penitent flails",
+      "1 penitent buzz-blade and 1 penitent flail"
+     ]
+    }
+   ],
+   "composition": [
+    "1-2 Mortifiers"
+   ],
+   "equipped": [
+    "Every model is equipped with: 2 heavy bolters; twin penitent buzz-blades."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "heavy-bolter": 2,
+      "twin-penitent-buzz-blades": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "heavy-bolter": 4,
+      "twin-penitent-buzz-blades": 2
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Anchorite sarcophagu",
+      "es": "añadir Anchorite sarcophagu"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:anchorite-sarcophagu",
+     "packages": {
+      "gear:anchorite-sarcophagu": [
+       {
+        "item": "gear:anchorite-sarcophagu",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 1
+     },
+     "labels": {
+      "gear:anchorite-sarcophagu": "Anchorite sarcophagu"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "replace 2× Heavy bolter",
+      "es": "sustituir 2× Heavy bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "heavy-bolter",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "heavy-bolter+mortifier-flamer",
+      "2xmortifier-flamer"
+     ],
+     "packages": {
+      "heavy-bolter+mortifier-flamer": [
+       {
+        "item": "heavy-bolter",
+        "n": 1
+       },
+       {
+        "item": "mortifier-flamer",
+        "n": 1
+       }
+      ],
+      "2xmortifier-flamer": [
+       {
+        "item": "mortifier-flamer",
+        "n": 2
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2
+     },
+     "labels": {
+      "heavy-bolter+mortifier-flamer": "Heavy bolter + Mortifier flamer",
+      "2xmortifier-flamer": "2× Mortifier flamer"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "replace Twin penitent buzz-blades",
+      "es": "sustituir Twin penitent buzz-blades"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "twin-penitent-buzz-blades",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "twin-penitent-flails",
+      "penitent-buzz-blade+penitent-flail"
+     ],
+     "packages": {
+      "twin-penitent-flails": [
+       {
+        "item": "twin-penitent-flails",
+        "n": 1
+       }
+      ],
+      "penitent-buzz-blade+penitent-flail": [
+       {
+        "item": "penitent-buzz-blade",
+        "n": 1
+       },
+       {
+        "item": "penitent-flail",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2
+     },
+     "labels": {
+      "twin-penitent-flails": "Twin penitent flails",
+      "penitent-buzz-blade+penitent-flail": "Penitent buzz-blade + Penitent flail"
+     }
+    }
+   ],
+   "loadout": [
+    "heavy-bolter",
+    "twin-penitent-buzz-blades"
+   ]
+  },
+  {
+   "id": "paragon-warsuits",
+   "name": {
+    "en": "Paragon Warsuits",
+    "es": "Paragon Warsuits"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "GRENADES",
+    "IMPERIUM",
+    "PARAGON WARSUITS"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "7",
+     "Sv": "2+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "bolt-pistol",
+     "name": {
+      "en": "Bolt pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ministorum-heavy-flamer",
+     "name": {
+      "en": "Ministorum heavy flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "multi-melta",
+     "name": {
+      "en": "Multi-melta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paragon-grenade-launchers",
+     "name": {
+      "en": "Paragon grenade launchers"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paragon-storm-bolters",
+     "name": {
+      "en": "Paragon storm bolters"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paragon-war-blade",
+     "name": {
+      "en": "Paragon war blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "paragon-war-mace",
+     "name": {
+      "en": "Paragon war mace"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "3+",
+       "S": "12",
+       "AP": "-1",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Righteous Paragons"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Paragon-Warsuits",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their Paragon storm bolters replaced with 1 Paragon grenade launchers.",
+     "choices": []
+    },
+    {
+     "text": "Any number of models can each have their Paragon war blade replaced with 1 Paragon war mace.",
+     "choices": []
+    },
+    {
+     "text": "Any number of models can each have their heavy bolter replaced with one of the following:",
+     "choices": [
+      "1 Ministorum heavy flamer",
+      "1 multi-melta"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Paragon Superior",
+    "2 Paragons"
+   ],
+   "equipped": [
+    "Every model is equipped with: bolt pistol; heavy bolter; Paragon storm bolters; Paragon war blade."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "bolt-pistol": 3,
+      "heavy-bolter": 3,
+      "paragon-storm-bolters": 3,
+      "paragon-war-blade": 3
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Paragon storm bolters",
+      "es": "sustituir Paragon storm bolters"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "paragon-storm-bolters",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "paragon-grenade-launchers"
+     ],
+     "packages": {
+      "paragon-grenade-launchers": [
+       {
+        "item": "paragon-grenade-launchers",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3
+     },
+     "labels": {
+      "paragon-grenade-launchers": "Paragon grenade launchers"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "replace Paragon war blade",
+      "es": "sustituir Paragon war blade"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "paragon-war-blade",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "paragon-war-mace"
+     ],
+     "packages": {
+      "paragon-war-mace": [
+       {
+        "item": "paragon-war-mace",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3
+     },
+     "labels": {
+      "paragon-war-mace": "Paragon war mace"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "replace Heavy bolter",
+      "es": "sustituir Heavy bolter"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "heavy-bolter",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "ministorum-heavy-flamer",
+      "multi-melta"
+     ],
+     "packages": {
+      "ministorum-heavy-flamer": [
+       {
+        "item": "ministorum-heavy-flamer",
+        "n": 1
+       }
+      ],
+      "multi-melta": [
+       {
+        "item": "multi-melta",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3
+     },
+     "labels": {
+      "ministorum-heavy-flamer": "Ministorum heavy flamer",
+      "multi-melta": "Multi-melta"
+     }
+    }
+   ],
+   "loadout": [
+    "bolt-pistol",
+    "heavy-bolter",
+    "paragon-storm-bolters",
+    "paragon-war-blade"
+   ]
+  },
+  {
+   "id": "penitent-engines",
+   "name": {
+    "en": "Penitent Engines",
+    "es": "Penitent Engines"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "PENITENT",
+    "PENITENT ENGINES"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "6",
+     "Sv": "4+",
+     "W": "5",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "penitent-flamers",
+     "name": {
+      "en": "Penitent flamers"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Assault",
+        "Ignores Cover",
+        "Torrent",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "penitent-buzz-blade",
+     "name": {
+      "en": "Penitent buzz-blade"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "penitent-flail",
+     "name": {
+      "en": "Penitent flail"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-penitent-buzz-blades",
+     "name": {
+      "en": "Twin penitent buzz-blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-penitent-flails",
+     "name": {
+      "en": "Twin penitent flails"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "8",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Endless Suffering"
+     },
+     "text": {
+      "en": "This unit is eligible to declare a charge in a turn in which it Advanced."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Penitent-Engines",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their twin penitent buzz-blades replaced with one of the following:",
+     "choices": [
+      "1 penitent buzz-blade and 1 penitent flail",
+      "1 twin penitent flails"
+     ]
+    }
+   ],
+   "composition": [
+    "1-2 Penitent Engines"
+   ],
+   "equipped": [
+    "Every model is equipped with: penitent flamers; twin penitent buzz-blades."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "penitent-flamers": 1,
+      "twin-penitent-buzz-blades": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "penitent-flamers": 2,
+      "twin-penitent-buzz-blades": 2
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Twin penitent buzz-blades",
+      "es": "sustituir Twin penitent buzz-blades"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "twin-penitent-buzz-blades",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "penitent-buzz-blade+penitent-flail",
+      "twin-penitent-flails"
+     ],
+     "packages": {
+      "penitent-buzz-blade+penitent-flail": [
+       {
+        "item": "penitent-buzz-blade",
+        "n": 1
+       },
+       {
+        "item": "penitent-flail",
+        "n": 1
+       }
+      ],
+      "twin-penitent-flails": [
+       {
+        "item": "twin-penitent-flails",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2
+     },
+     "labels": {
+      "penitent-buzz-blade+penitent-flail": "Penitent buzz-blade + Penitent flail",
+      "twin-penitent-flails": "Twin penitent flails"
+     }
+    }
+   ],
+   "loadout": [
+    "penitent-flamers",
+    "twin-penitent-buzz-blades"
+   ]
+  },
+  {
+   "id": "immolator",
+   "name": {
+    "en": "Immolator",
+    "es": "Immolator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "SMOKE",
+    "TRANSPORT",
+    "DEDICATED TRANSPORT",
+    "IMPERIUM",
+    "FRAME",
+    "IMMOLATOR"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "10",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hunter-killer-missile",
+     "name": {
+      "en": "Hunter-killer missile"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "immolation-flamers",
+     "name": {
+      "en": "Immolation flamers"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-heavy-bolter",
+     "name": {
+      "en": "Twin heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Sustained Hits 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-multi-melta",
+     "name": {
+      "en": "Twin multi-melta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Purge and Cleanse"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Immolator",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with 1 hunter-killer missile.",
+     "choices": []
+    },
+    {
+     "text": "This model’s immolation flamers can be replaced with one of the following:",
+     "choices": [
+      "1 twin heavy bolter",
+      "1 twin multi-melta"
+     ]
+    }
+   ],
+   "composition": [
+    "1 Immolator"
+   ],
+   "equipped": [
+    "This model is equipped with: heavy bolter; immolation flamers; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 6 ADEPTA SORORITAS INFANTRY models. It cannot transport JUMP PACK models or the TRIUMPH OF SAINT KATHERINE. At the start of the Declare Battle Formations step, you can select one BATTLE SISTERS SQUAD, DOMINION SQUAD or SISTERS NOVITIATE SQUAD from your army. If you do, that unit is split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units. If you are splitting a unit that has the Cherub ability, only one of the new units can use that ability during the battle – make a note of which of the new units this will be). One of these units must start the battle embarked within this TRANSPORT; the other can start the battle embarked within another TRANSPORT, or it can be deployed as a separate unit."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "heavy-bolter": 1,
+      "immolation-flamers": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Hunter-killer missile",
+      "es": "añadir Hunter-killer missile"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "hunter-killer-missile",
+     "packages": {
+      "hunter-killer-missile": [
+       {
+        "item": "hunter-killer-missile",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "hunter-killer-missile": "Hunter-killer missile"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Immolation flamers",
+      "es": "Immolation flamers"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "immolation-flamers",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "twin-heavy-bolter",
+      "twin-multi-melta"
+     ],
+     "packages": {
+      "twin-heavy-bolter": [
+       {
+        "item": "twin-heavy-bolter",
+        "n": 1
+       }
+      ],
+      "twin-multi-melta": [
+       {
+        "item": "twin-multi-melta",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "twin-heavy-bolter": "Twin heavy bolter",
+      "twin-multi-melta": "Twin multi-melta",
+      "": "Immolation flamers"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "heavy-bolter",
+    "immolation-flamers"
+   ]
+  },
+  {
+   "id": "sororitas-rhino",
+   "name": {
+    "en": "Sororitas Rhino",
+    "es": "Sororitas Rhino"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "DEDICATED TRANSPORT",
+    "SMOKE",
+    "IMPERIUM",
+    "FRAME",
+    "SORORITAS RHINO"
+   ],
+   "factionKeywords": [
+    "ADEPTA SORORITAS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hunter-killer-missile",
+     "name": {
+      "en": "Hunter-killer missile"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-3",
+       "D": "D6",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "storm-bolter",
+     "name": {
+      "en": "Storm bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-tracks",
+     "name": {
+      "en": "Armoured tracks"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Self Repair"
+     },
+     "text": {
+      "en": "At the start of your Command phase, this model regains 1 lost wound."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Firing Deck 2"
+   ],
+   "factionAbilities": [
+    "Acts of Faith"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sororitas-Rhino",
+   "wargearOptions": [
+    {
+     "text": "This model can be equipped with 1 hunter-killer missile.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sororitas Rhino"
+   ],
+   "equipped": [
+    "This model is equipped with: storm bolter; armoured tracks."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 12 ADEPTA SORORITAS INFANTRY models. It cannot transport JUMP PACK models or the TRIUMPH OF SAINT KATHERINE."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "storm-bolter": 1,
+      "armoured-tracks": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "add Hunter-killer missile",
+      "es": "añadir Hunter-killer missile"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "hunter-killer-missile",
+     "packages": {
+      "hunter-killer-missile": [
+       {
+        "item": "hunter-killer-missile",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "hunter-killer-missile": "Hunter-killer missile"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-tracks",
+    "storm-bolter"
+   ]
+  }
+ ]
+}

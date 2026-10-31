@@ -328,6 +328,58 @@
       "group": "chaos-space-marines",
       "units": 18,
       "detachments": 10
+    },
+    {
+      "id": "adepta-sororitas",
+      "name": {
+        "en": "Adepta Sororitas",
+        "es": "Adepta Sororitas"
+      },
+      "edition": "11th",
+      "alliance": "imperium",
+      "path": "adepta-sororitas",
+      "color": "#9e2a2b",
+      "units": 33,
+      "detachments": 8
+    },
+    {
+      "id": "orks",
+      "name": {
+        "en": "Orks",
+        "es": "Orkos"
+      },
+      "edition": "11th",
+      "alliance": "xenos",
+      "path": "orks",
+      "color": "#4e7a2a",
+      "units": 54,
+      "detachments": 15
+    },
+    {
+      "id": "adeptus-mechanicus",
+      "name": {
+        "en": "Adeptus Mechanicus",
+        "es": "Adeptus Mechanicus"
+      },
+      "edition": "11th",
+      "alliance": "imperium",
+      "path": "adeptus-mechanicus",
+      "color": "#a0302a",
+      "units": 34,
+      "detachments": 10
+    },
+    {
+      "id": "leagues-of-votann",
+      "name": {
+        "en": "Leagues of Votann",
+        "es": "Ligas de Votann"
+      },
+      "edition": "11th",
+      "alliance": "xenos",
+      "path": "leagues-of-votann",
+      "color": "#c27a1e",
+      "units": 22,
+      "detachments": 10
     }
   ]
 }

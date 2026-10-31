@@ -132,7 +132,7 @@ base faction (`bootstrap_faction.py space-marines --chapter-bit 10`) and each Ch
 - 11th edition SUPPORT datasheets: `leader.support: true`; a bodyguard takes its Leader(s) plus one Support unit.
 - Detachment `unitAbilities` (Pantheon of Woe): automatic abilities for named datasheets with extra points.
 - Detachment `keywordGrants` (parsed by `bootstrap_faction.py` → `detachment_keywords`): "WAR DOG units from your
-  army have the BATTLELINE keyword" → `{keyword, units}`, added by `unitDef(ru, data, list)` (unit limits,
+  army have the BATTLELINE keyword" (or "Friendly GRETCHIN units have BATTLELINE") → `{keyword, units}`, added by `unitDef(ru, data, list)` (unit limits,
   enhancement requirements); "select three WAR DOG units … CHARACTER" → `chosen: true, max: 3`: those units can take
   Enhancements and be Warlord (`canBeCharacter`), and validation counts the ones that do. `minUnits`: "Your army
   must include three or more WAR DOG units". Detachment `tags` come from the heading or from "has the X tag and
@@ -147,6 +147,8 @@ base faction (`bootstrap_faction.py space-marines --chapter-bit 10`) and each Ch
 - Every army rule of the page is kept: the first is `armyRule`, the others `extraRules` (FAQ/Errata headings skipped).
 - Wargear options can be limited to unit sizes: `minModels` ("If this unit contains 10 models, …") and `maxModels`
   ("If this unit contains only 3 models, …"); `sizeAllows` in js/rules.js.
+- Ids are slugs of the English names with accents transliterated (`Khârn` → `kharn-the-betrayer`, `Dêlve` → `delve-…`);
+  datasheet links with accents (`Ûthar-the-Destined`) are read and fetched URL-encoded.
 - Saved lists store ids only; on load the app drops unknown units and invalid wargear choices.
 
 ## Checks (run before reporting a task as done)

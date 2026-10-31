@@ -19,6 +19,7 @@ import argparse
 import itertools
 import json
 import re
+import unicodedata
 import shutil
 import subprocess
 import sys
@@ -39,6 +40,7 @@ SIZE = '?fm=webp&w=480&h=495'
 
 
 def slug(s):
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()
     return re.sub(r'[^a-z0-9]+', '-', s.lower().replace('’', '').replace("'", '')).strip('-')
 
 

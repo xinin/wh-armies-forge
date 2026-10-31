@@ -203,6 +203,17 @@
       "en": "ANATHEMA PSYKANA model only. In your Movement phase, you can select one visible enemy unit within 12\" of this unit. That unit makes a battle-shock roll, with -1 to that battle-shock roll."
      }
     }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BATTLELINE",
+     "units": [
+      [
+       "PROSECUTOR",
+       "SQUAD"
+      ]
+     ]
+    }
    ]
   },
   {

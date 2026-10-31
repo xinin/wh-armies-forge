@@ -1,0 +1,251 @@
+{
+ "source": "https://wahapedia.ru/wh40k11ed/factions/adepta-sororitas/",
+ "detachments": {
+  "hallowed-martyrs": {
+   "rule": {
+    "name": {
+     "en": "The Blood of Martyrs"
+    },
+    "text": {
+     "en": "Each time an ADEPTA SORORITAS model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength."
+    }
+   },
+   "enhancements": {
+    "saintly-example": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. When the bearer is destroyed, you gain an additional D3 Miracle dice."
+     },
+     "points": 10
+    },
+    "through-suffering-strength": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. If the bearer has lost one or more wounds, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead."
+     },
+     "points": 25
+    },
+    "chaplet-of-sacrifice": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. At the end of your Command phase, if the bearer is on the battlefield, you can re-roll 1 Miracle dice from your Miracle dice pool and return it to your Miracle dice pool showing the new result you rolled. When doing so, if the bearer's unit is below its Starting Strength, you can re-roll up to 3 Miracle dice in this way instead."
+     },
+     "points": 25
+    },
+    "mantle-of-ophelia": {
+     "text": {
+      "en": "CANONESS or PALATINE model only. Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1."
+     },
+     "points": 20
+    }
+   }
+  },
+  "penitent-host": {
+   "rule": {
+    "name": {
+     "en": "Desperate for Redemption"
+    },
+    "text": {
+     "en": "At the start of your Command phase, you can select one of the following Vows of Atonement to be active for your army until the start of your next Command phase. You can only select each Vow of Atonement once per battle.\nThe Path of the Penitent\nAdd 3\" to the Move characteristic of PENITENT models from your army.\nAbsolution in Battle\nEach time a unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by PENITENT models in that unit.\nDeath Before Disgrace\nEach time a PENITENT model from your army is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+    }
+   },
+   "enhancements": {
+    "psalm-of-righteous-judgement": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. While the bearer is on the battlefield, each time an enemy unit is destroyed by a PENITENT unit from you army, you can discard 1 Miracle dice then gain 1 Miracle dice showing a value of 6."
+     },
+     "points": 20
+    },
+    "verse-of-holy-piety": {
+     "text": {
+      "en": "PENITENT model only. Once per battle, at the start of the battle round, select one Vow of Atonement. Until the start of the next battle round, that Vow of Atonement is active for the bearer’s unit in addition to any that is active for your army, even if you have already selected that Vow of Atonement this battle."
+     },
+     "points": 15
+    },
+    "refrain-of-enduring-faith": {
+     "text": {
+      "en": "PENITENT model only. While the bearer is leading a unit, models in that unit have a 5+ invulnerable save."
+     },
+     "points": 15
+    },
+    "catechism-of-divine-penitence": {
+     "text": {
+      "en": "LEADER: REPENTIA SQUAD\nCANONESS, PALATINE or MINISTORUM PRIEST model only. The bearer gains the PENITENT keyword."
+     },
+     "points": 15
+    }
+   }
+  },
+  "bringers-of-flame": {
+   "rule": {
+    "name": {
+     "en": "Fervent Purgation"
+    },
+    "text": {
+     "en": "Ranged weapons equipped by ADEPTA SORORITAS models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 6\", add 1 to the Strength characteristic of that attack."
+    }
+   },
+   "enhancements": {
+    "righteous-rage": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. Each time the bearer is selected to fight, you can first discard up to 3 Miracle dice. For each Miracle dice just discarded, until the end of the phase, add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons."
+     },
+     "points": 15
+    },
+    "manual-of-saint-griselda": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. At the start of your Command phase, you can discard up to 2 Miracle dice. Then, add 1 Miracle dice to your Miracle Dice pool showing a value equal to the sum of the two Miracle dice you just discarded (to a maximum of 6)."
+     },
+     "points": 20
+    },
+    "fire-and-fury": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. While the bearer is leading a unit, add 1 to the Attacks characteristic of Torrent weapons equipped by models in that unit, and all other ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+     },
+     "points": 30
+    },
+    "iron-surplice-of-saint-istalela": {
+     "text": {
+      "en": "CANONESS or PALATINE model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability."
+     },
+     "points": 10
+    }
+   }
+  },
+  "army-of-faith": {
+   "rule": {
+    "name": {
+     "en": "Sacred Rites"
+    },
+    "text": {
+     "en": "Each ADEPTA SORORITAS unit from your army can perform up to two Acts of Faith per phase, instead of just one."
+    }
+   },
+   "enhancements": {
+    "litanies-of-faith": {
+     "text": {
+      "en": "CANONESS or PALATINE model only. At the start of your Command phase, if the bearer is on the battlefield, take a Leadership test for the bearer. If that test is passed, you gain 1 Miracle dice."
+     },
+     "points": 10
+    },
+    "blade-of-saint-ellynor": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1, and those weapons have the [PRECISION] ability. In addition, each time the bearer fights, if one or more enemy models are destroyed by those attacks, you gain 1 Miracle dice."
+     },
+     "points": 15
+    },
+    "divine-aspect": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. In your Movement phase, you can select one enemy unit within 12\" of the bearer; that unit must take a Battle-shock test. If that test is failed, you gain 1 Miracle dice."
+     },
+     "points": 5
+    },
+    "triptych-of-the-macharian-crusade": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. Each time the bearer uses an Act of Faith to substitute a saving throw, that saving throw is successful, irrespective of the value of the Miracle dice used."
+     },
+     "points": 20
+    }
+   }
+  },
+  "champions-of-faith": {
+   "rule": {
+    "name": {
+     "en": "Righteous Purpose"
+    },
+    "text": {
+     "en": "In your Command phase, you can select up to 3 ADEPTA SORORITAS units from your army (including units that are embarked within TRANSPORTS), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\nAdd 1\" to the Move characteristic of models in that unit.\nImprove the Leadership characteristic of models in that unit by 1.\nImprove the Weapon Skill and Ballistic Skill characteristics of weapons equipped by BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS and PARAGON WARSUITS models in that unit by 1.\nKeywords\nWhile a CELESTIAN SACRESANTS unit from your army is not Battle-shocked, add 1 to the Objective Control characteristic of Celestian Sacresants models in that unit."
+    }
+   },
+   "enhancements": {
+    "triptych-of-judgement": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. Each time a model in the bearer’s unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll."
+     },
+     "points": 15
+    },
+    "mark-of-devotion": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. While the bearer’s unit is Righteous, add 2 to the Attacks characteristic and add 1 to the Damage characteristic of the bearer’s melee weapons instead."
+     },
+     "points": 30
+    },
+    "eyes-of-the-oracle": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. The bearer’s weapons have the [PRECISION] ability. Each time the bearer’s unit destroys an enemy CHARACTER model, you gain 1CP."
+     },
+     "points": 10
+    },
+    "sanctified-amulet": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer."
+     },
+     "points": 25
+    }
+   }
+  },
+  "chorus-of-condemnation": {
+   "rule": {
+    "name": {
+     "en": "Angelic Judgement"
+    },
+    "text": {
+     "en": "Friendly ADEPTA SORORITAS INFANTRY FLY units have the following ability:\nCondemnatory Psalms: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is condemned:\nWhile a unit is condemned, that unit has +3\" detection range."
+    }
+   },
+   "enhancements": {
+    "clarion-of-urgency": {
+     "text": {
+      "en": "CANONESS WITH JUMP PACK model only. At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves."
+     },
+     "points": 15
+    },
+    "symphonic-payload": {
+     "text": {
+      "en": "EXORCIST unit only. This unit can re-roll rolls to determine the A of a weapon."
+     },
+     "points": 10
+    }
+   }
+  },
+  "sacred-champions": {
+   "rule": {
+    "name": {
+     "en": "Holy Quest"
+    },
+    "text": {
+     "en": "Friendly CELESTIAN units’ attacks have +1 BS and WS.\nThis detachment has the REVEREND tag and cannot be taken with another REVEREND detachment."
+    }
+   },
+   "enhancements": {
+    "writ-of-compunction": {
+     "text": {
+      "en": "CELESTIAN SACRESANTS unit only. This unit has +1 OC."
+     },
+     "points": 20
+    },
+    "perfervid-haste": {
+     "text": {
+      "en": "ADEPTA SORORITAS model only. This unit has +1\" M."
+     },
+     "points": 10
+    }
+   }
+  },
+  "sanctified-orators": {
+   "rule": {
+    "name": {
+     "en": "Hymns of Battle"
+    },
+    "text": {
+     "en": "Enhancements selected from this detachment do not count towards the total number of enhancements in your army.\nFriendly ADEPTA SORORITAS CHARACTER units have +1 Ld."
+    }
+   },
+   "enhancements": {
+    "hagiomnifex": {
+     "text": {
+      "en": "ADEPTA SORORITAS CHARACTER model only (excluding PENITENT units). (Once per turn, per unit) At the start of a phase, you can use this ability. If you do, select one of the abilities below:\nRite of Revelation: While this unit is shooting, enemy units have +6\" detection range.\nSermon of Intolerance: This unit’s battle-shock rolls automatically succeed.\nCatechism of Raging Fervour: This unit has +1\" M.\nPsalm of Righteous Smiting: This unit’s attacks have +1 S.\nChorus of Repudiation: Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
+     },
+     "points": 25
+    }
+   }
+  }
+ }
+}

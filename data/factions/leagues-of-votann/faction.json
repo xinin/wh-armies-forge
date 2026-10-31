@@ -1,0 +1,628 @@
+{
+ "id": "leagues-of-votann",
+ "name": {
+  "en": "Leagues of Votann",
+  "es": "Ligas de Votann"
+ },
+ "source": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/",
+ "armyRule": {
+  "name": {
+   "en": "Prioritised Efficiency"
+  },
+  "text": {
+   "en": "If your Army Faction is LEAGUES OF VOTANN, LEAGUES OF VOTANN units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those LEAGUES OF VOTANN units have will change depending on how many Yield points (YP) you currently have:\nAt the start of the battle, your units have Hostile Acquisition until the start of your next Command phase.\nAt the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase.\nAt the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase.\nHostile Acquisition\nEach time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll.\nYou can re-roll Advance and Charge rolls made for this unit.\nFortify Takeover\nEach time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll.\nEach time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a VEHICLE, subtract 1 from the Wound roll.\nYield Points\nAt the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy:\nYou control one or more objective markers not within your deployment zone.\nYou control two or more objective markers not within your deployment zone.\nYou control more objective markers than your opponent.\nIn your turn, YP gained in this way are always gained before checking which ability LEAGUES OF VOTANN units from your army have.\nWhenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule.\nDesigner’s Note: This means you can use rules that let you gain or spend YP to influence which ability your units have - Hostile Acquisition or Fortify Takeover - depending on which will be most beneficial to you. Remember that your army only changes ability at the end of your Command phase, so you will - sometimes need to plan ahead if you want your army to stay in or change ability.\nExample: In her third turn, Freida’s units had the Hostile Acquisition ability, as she had 6YP at the end of her Command phase. In her fourth turn, at the end of her Command phase, she controls one objective marker within her deployment zone, and one objective marker not within her deployment zone, and her opponent controls two objective markers. Freida gains 2YP, so she now has 8YP, and her units now have the Fortify Takeover ability instead.\nDuring her turn, Freida uses a Stratagem that allows her to spend YP. She spends 2YP, bringing her total down to 6YP. However, units from her army still have Fortify Takeover - it will only change if, at the end of her next Command phase, she still has fewer than 7YP."
+  }
+ },
+ "detachments": [
+  {
+   "id": "hearthband",
+   "cost": 3,
+   "tags": [
+    "HEARTHBAND"
+   ],
+   "name": {
+    "en": "Hearthband"
+   },
+   "rule": {
+    "name": {
+     "en": "Methodical Annihilation"
+    },
+    "text": {
+     "en": "Each time a LEAGUES OF VOTANN model from your army makes an attack with a weapon that targets the closest eligible target or a target that is within Engagement Range of that model’s unit: Re-roll a Wound roll of 1. If your unit is a KÂHL, EINHYR HEARTHGUARD or ÛTHAR THE DESTINED unit, improve the Armour Penetration…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "bastion-shield",
+     "requires": [],
+     "name": {
+      "en": "Bastion Shield"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Each time a ranged attack targets the bearer’s unit, if the attacking model is within 12\" of the bearer’s unit, worsen the Armour Penetration characteristic of that…"
+     }
+    },
+    {
+     "id": "quake-multigenerator",
+     "requires": [
+      [
+       "KÂHL"
+      ]
+     ],
+     "name": {
+      "en": "Quake Multigenerator"
+     },
+     "text": {
+      "en": "KÂHL model only. In your Shooting phase, after the bearer has shot, select one enemy unit (excluding TITANIC units) hit by one or more of those attacks. Until the start of your next turn, that enemy…"
+     }
+    },
+    {
+     "id": "ironskein",
+     "requires": [],
+     "name": {
+      "en": "Ironskein"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Add 2 to the bearer’s Wounds characteristic."
+     }
+    },
+    {
+     "id": "high-kahl",
+     "requires": [
+      [
+       "KÂHL"
+      ]
+     ],
+     "name": {
+      "en": "High Kâhl"
+     },
+     "text": {
+      "en": "KÂHL model only. Each time a model in the bearer’s unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "persecution-prospect",
+   "cost": 2,
+   "name": {
+    "en": "Persecution Prospect"
+   },
+   "rule": {
+    "name": {
+     "en": "Assailed From Every Angle"
+    },
+    "text": {
+     "en": "LEAGUES OF VOTANN units from your army have the following ability: Guerrilla Adepts: In your Shooting phase, just after this unit is selected to shoot, this unit can use this ability. If it does, select one enemy unit (excluding MONSTERS and VEHICLES). Until the end of the phase, attacks made by models in this unit…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "eye-for-weakness",
+     "requires": [],
+     "name": {
+      "en": "Eye for Weakness"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Each time a model in the bearer’s unit makes an attack that targets an assailed unit, add 1 to the Wound roll."
+     }
+    },
+    {
+     "id": "writ-of-acquisition",
+     "requires": [],
+     "name": {
+      "en": "Writ of Acquisition"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. In your Shooting phase, after the bearer’s unit has shot, you gain 1YP for each assailed enemy unit hit by one or more of those attacks (to a maximum of 3YP)."
+     }
+    },
+    {
+     "id": "surgical-saboteur",
+     "requires": [],
+     "name": {
+      "en": "Surgical Saboteur"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. In your Shooting phase, after the bearer’s unit has shot, select one MONSTER or VEHICLE unit hit by one or more of those attacks; until the start of your next Shooting…"
+     }
+    },
+    {
+     "id": "nomad-strategist",
+     "requires": [],
+     "name": {
+      "en": "Nomad Strategist"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Once per battle, at the end of your opponent’s Fight phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, you can spend up to 4YP. Select…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hearthfyre-arsenal",
+   "cost": 2,
+   "name": {
+    "en": "Hearthfyre Arsenal"
+   },
+   "rule": {
+    "name": {
+     "en": "Optimal Application"
+    },
+    "text": {
+     "en": "At the end of your Command phase, you gain 1YP for each objective marker you control that is not within your deployment zone and has one or more IRON-MASTER and/or MEMNYR STRATEGIST models from your army within range of it (to a maximum of 2YP gained from this Detachment rule per turn). In your Shooting phase, each…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "farstrydr-node",
+     "requires": [
+      [
+       "IRON-MASTER"
+      ],
+      [
+       "MEMNYR",
+       "STRATEGIST"
+      ]
+     ],
+     "name": {
+      "en": "Fârstrydr Node"
+     },
+     "text": {
+      "en": "IRON-MASTER or MEMNYR STRATEGIST model only. Models in the bearer’s unit have the Deep Strike ability."
+     }
+    },
+    {
+     "id": "calculated-tenacity",
+     "requires": [
+      [
+       "IRON-MASTER"
+      ],
+      [
+       "MEMNYR",
+       "STRATEGIST"
+      ]
+     ],
+     "name": {
+      "en": "Calculated Tenacity"
+     },
+     "text": {
+      "en": "IRON-MASTER or MEMNYR STRATEGIST model only. While the bearer is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+     }
+    },
+    {
+     "id": "mantle-of-elders",
+     "requires": [
+      [
+       "MEMNYR",
+       "STRATEGIST"
+      ]
+     ],
+     "name": {
+      "en": "Mantle of Elders"
+     },
+     "text": {
+      "en": "MEMNYR STRATEGIST model only. Each time the bearer’s unit is selected to shoot, if you spend YP using the Optimal Application Detachment rule when doing so, you can roll one D6: on a 2+, you gain 1YP."
+     }
+    },
+    {
+     "id": "graviton-vault",
+     "requires": [
+      [
+       "IRON-MASTER"
+      ]
+     ],
+     "name": {
+      "en": "Graviton Vault"
+     },
+     "text": {
+      "en": "IRON-MASTER model only. In your Shooting phase, after the bearer has shot, and in the Fight phase, after the bearer has fought, select one enemy MONSTER or VEHICLE unit hit by one or more of those…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "delve-assault-shift",
+   "cost": 2,
+   "name": {
+    "en": "Dêlve Assault Shift"
+   },
+   "rule": {
+    "name": {
+     "en": "Fury From The Dêlve"
+    },
+    "text": {
+     "en": "CTHONIAN BESERKS units from your army have the Deep Strike ability. KEYWORDS CTHONIAN BESERKS units from your army gain the BATTLELINE keyword."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "delvwerke-navigator",
+     "requires": [],
+     "name": {
+      "en": "Dêlvwerke Navigator"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. In the Reinforcements step of your Movement phase, the bearer can use this Enhancement. If it does, select one friendly CTHONIAN BESERKS unit visible to the bearer and…"
+     }
+    },
+    {
+     "id": "multiwave-system-jammer",
+     "requires": [],
+     "name": {
+      "en": "Multiwave System Jammer"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Once per battle, in your Movement phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, select one friendly CTHONIAN unit that is in…"
+     }
+    },
+    {
+     "id": "quake-supervisor",
+     "requires": [],
+     "name": {
+      "en": "Quake Supervisor"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. While the bearer is within 3\" of one or more friendly LEAGUES OF VOTANN ARTILLERY units, the bearer has the Lone Operative ability, and each time one of those ARTILLERY…"
+     }
+    },
+    {
+     "id": "piledriver",
+     "requires": [],
+     "name": {
+      "en": "Piledriver"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Each time the bearer’s unit is selected to fight, the bearer can use this Enhancement. If it does, spend up to 2YP and, until the end of the phase, add the number of YP…"
+     }
+    }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "BATTLELINE",
+     "units": [
+      [
+       "CTHONIAN",
+       "BESERKS"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "needgaard-oathband",
+   "cost": 2,
+   "name": {
+    "en": "Needgaârd Oathband"
+   },
+   "rule": {
+    "name": {
+     "en": "Martial Leverage"
+    },
+    "text": {
+     "en": "Each time an enemy unit is destroyed, you gain 1YP."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "oathbound-speculator",
+     "requires": [],
+     "name": {
+      "en": "Oathbound Speculator"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Each time a model in the bearer’s unit makes an attack, re-roll a Wound roll of 1. Each time the bearer’s unit is selected to shoot or fight, you can spend 3YP. If you…"
+     }
+    },
+    {
+     "id": "dead-reckoning",
+     "requires": [],
+     "name": {
+      "en": "Dead Reckoning"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. At the end of the turn, if the bearer is on the battlefield and you spent no YP in that turn, you can gain 1YP."
+     }
+    },
+    {
+     "id": "iron-ambassador",
+     "requires": [],
+     "name": {
+      "en": "Iron Ambassador"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model equipped with an Autoch-pattern combi-bolter only. Once per battle, when the bearer’s unit is selected to shoot, the bearer can use this Enhancement. If it does, spend up to…"
+     }
+    },
+    {
+     "id": "ancestral-crest",
+     "requires": [],
+     "name": {
+      "en": "Ancestral Crest"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Once per turn, when you target the bearer’s unit with the Command Re-roll Stratagem, the bearer can use this Enhancement. If it does, spend 1YP and reduce the CP cost of…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "brandfast-oathband",
+   "cost": 2,
+   "name": {
+    "en": "Brandfast Oathband"
+   },
+   "rule": {
+    "name": {
+     "en": "Mobile Sensor Relays"
+    },
+    "text": {
+     "en": "LEAGUES OF VOTANN TRANSPORT units from your army have the following ability: Firebase Control (Aura): While a friendly LEAGUES OF VOTANN INFANTRY unit is wholly within 6\" of this TRANSPORT, ranged weapons equipped by models in that INFANTRY unit have the [sustained hits 1] ability."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "tactical-alchemy",
+     "requires": [
+      [
+       "KÂHL"
+      ]
+     ],
+     "name": {
+      "en": "Tactical Alchemy"
+     },
+     "text": {
+      "en": "KÂHL model only. In your Command phase, if the bearer’s unit is within range of one or more objective markers you control that are not within your deployment zone, you can spend 1YP. If you do, roll…"
+     }
+    },
+    {
+     "id": "trivarg-cyber-implant",
+     "requires": [],
+     "name": {
+      "en": "Trivärg Cyber Implant"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a TRANSPORT this turn, or if you spend 2YP, until the end of the phase,…"
+     }
+    },
+    {
+     "id": "precursive-judgement",
+     "requires": [
+      [
+       "KÂHL"
+      ]
+     ],
+     "name": {
+      "en": "Precursive Judgement"
+     },
+     "text": {
+      "en": "KÂHL model only. While the bearer’s unit is wholly within 6\" of one or more friendly LEAGUES OF VOTANN TRANSPORT units, you can target the bearer’s unit with the Fire Overwatch Stratagem for 0CP and…"
+     }
+    },
+    {
+     "id": "signature-restoration",
+     "requires": [
+      [
+       "IRON-MASTER"
+      ]
+     ],
+     "name": {
+      "en": "Signature Restoration"
+     },
+     "text": {
+      "en": "IRON-MASTER model only. Each time a friendly LEAGUES OF VOTANN model is repaired using the bearer’s Forgewrought Expertise ability, that model regains 1 additional lost wound."
+     }
+    }
+   ]
+  },
+  {
+   "id": "mercenary-oathband",
+   "cost": 2,
+   "name": {
+    "en": "Mercenary Oathband"
+   },
+   "rule": {
+    "name": {
+     "en": "Ruthless Reinvestment"
+    },
+    "text": {
+     "en": "Your LEAGUES OF VOTANN units do not have the Hostile Acquisition or Fortify Takeover abilities except as described in this rule. At the start of the battle, your LEAGUES OF VOTANN units have the Hostile Acquisition ability. At the end of your Command phase, you can spend 3YP. If you do, LEAGUES OF VOTANN units from…"
+    }
+   },
+   "enhancements": [
+    {
+     "id": "mercenary-prospector",
+     "requires": [
+      [
+       "KÂHL"
+      ]
+     ],
+     "name": {
+      "en": "Mercenary Prospector"
+     },
+     "text": {
+      "en": "KÂHL model only. Each time an enemy unit is destroyed by the bearer’s unit, gain 2YP."
+     }
+    },
+    {
+     "id": "metaphysical-brokerage",
+     "requires": [
+      [
+       "MEMNYR",
+       "STRATEGIST"
+      ]
+     ],
+     "name": {
+      "en": "Metaphysical Brokerage"
+     },
+     "text": {
+      "en": "MEMNYR STRATEGIST model only. At the end of your turn, if the bearer is on the battlefield and you gained fewer than 3YP this turn, you gain an amount of YP equal to the difference."
+     }
+    },
+    {
+     "id": "etacarn-sb9-targeting-implant",
+     "requires": [],
+     "name": {
+      "en": "Etacarn SB9 Targeting Implant"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. Each time a model in the bearer’s unit makes an attack, re-roll a Hit roll of 1. Each time the bearer’s unit is selected to shoot or fight, you can spend 3YP. If you do,…"
+     }
+    },
+    {
+     "id": "asset-manipulator",
+     "requires": [],
+     "name": {
+      "en": "Asset Manipulator"
+     },
+     "text": {
+      "en": "LEAGUES OF VOTANN model only. At the start of the Command phase, you can spend 3YP. If you do, until the end of the turn, while an enemy unit is within 3\" of the bearer, subtract 1 from the Objective…"
+     }
+    }
+   ]
+  },
+  {
+   "id": "armoured-trailblazers",
+   "cost": 1,
+   "name": {
+    "en": "Armoured Trailblazers"
+   },
+   "rule": {
+    "name": {
+     "en": "Sagitaur Spearhead"
+    },
+    "text": {
+     "en": "Friendly SAGITAUR units have Scouts 6\"."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "saturation-rounds",
+     "requires": [
+      [
+       "SAGITAUR"
+      ]
+     ],
+     "name": {
+      "en": "Saturation Rounds"
+     },
+     "text": {
+      "en": "SAGITAUR unit only. This unit’s ranged attacks have [IGNORES COVER]."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "optimised-attack-lines",
+     "requires": [
+      [
+       "SAGITAUR"
+      ]
+     ],
+     "name": {
+      "en": "Optimised Attack Lines"
+     },
+     "text": {
+      "en": "SAGITAUR unit only. This unit has MOBILE."
+     },
+     "type": "upgrade"
+    }
+   ]
+  },
+  {
+   "id": "hearthguard-covenant",
+   "cost": 1,
+   "tags": [
+    "HEARTHBAND",
+    "HEARTHGUARD"
+   ],
+   "name": {
+    "en": "Hearthguard Covenant"
+   },
+   "rule": {
+    "name": {
+     "en": "Avatars of the Ancestors"
+    },
+    "text": {
+     "en": "Friendly KÂHL/EINHYR CHAMPION/EINHYR HEARTHGUARD/ÛTHAR THE DESTINED units’ ranged attacks that target a unit within 9\" can re-roll wound rolls of 1. This detachment has the HEARTHGUARD tag and cannot be taken with another HEARTHGUARD detachment."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "high-kahl-hearthguard-covenant",
+     "requires": [
+      [
+       "KÂHL"
+      ]
+     ],
+     "name": {
+      "en": "High Kâhl"
+     },
+     "text": {
+      "en": "KÂHL model only. In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6: on a 4+, do not remove that model from the…"
+     }
+    },
+    {
+     "id": "ironskein-hearthguard-covenant",
+     "requires": [
+      [
+       "KÂHL"
+      ]
+     ],
+     "name": {
+      "en": "Ironskein"
+     },
+     "text": {
+      "en": "KÂHL model only. This model has +2 W."
+     }
+    }
+   ]
+  },
+  {
+   "id": "farseekers",
+   "cost": 1,
+   "name": {
+    "en": "Farseekers"
+   },
+   "rule": {
+    "name": {
+     "en": "Eye of the Hunt"
+    },
+    "text": {
+     "en": "Friendly HERNKYN units’ ranged attacks that target a unit within 12\" have +1 to hit rolls."
+    }
+   },
+   "enhancements": [
+    {
+     "id": "pan-spectral-lockons",
+     "requires": [
+      [
+       "PIONEERS"
+      ]
+     ],
+     "name": {
+      "en": "Pan-Spectral Lockons"
+     },
+     "text": {
+      "en": "PIONEERS unit only. In your Shooting phase, you can select one visible enemy unit within 12\" of this unit. That enemy unit is spotted: While a unit is spotted, that unit has +3\" detection range."
+     },
+     "type": "upgrade"
+    },
+    {
+     "id": "shroudwerke-talismans",
+     "requires": [
+      [
+       "YAEGIRS"
+      ]
+     ],
+     "name": {
+      "en": "Shroudwërke Talismans"
+     },
+     "text": {
+      "en": "YAEGIRS unit only. This unit has -3\" detection range"
+     },
+     "type": "upgrade"
+    }
+   ]
+  }
+ ]
+}

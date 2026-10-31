@@ -92,7 +92,7 @@ def detachment_tags(page):
 
 NUMBERS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6}
 KW = r"[A-Z][A-Z’'-]*(?: [A-Z][A-Z’'-]*)*"
-NAMES = rf"{KW}(?:(?:, | and | or |/){KW})*"
+NAMES = rf"{KW}(?:(?:, | and | or |/ ?){KW})*"
 
 
 def without_faction(names, faction_keywords):
@@ -109,6 +109,7 @@ def detachment_keywords(rule, faction_keywords):
     words matches a unit with all of them in its keywords or name, as in requirements()).
     'WAR DOG units from your army have the BATTLELINE keyword.'      → KeywordGrant('BATTLELINE', [['WAR', 'DOG']])
     'MAWLOC and TRYGON units from your army have the BURROWER …'     → one group per name: [['MAWLOC'], ['TRYGON']]
+    'Friendly GRETCHIN units have BATTLELINE.'                       → KeywordGrant('BATTLELINE', [['GRETCHIN']])
     '… select three WAR DOG units from your army. … those units have the CHARACTER keyword.' (or "select one or more
     TITANIC units … to gain the CHARACTER keyword", "up to 2 TRYGON models … The selected units gain …")
                                                                      → KeywordGrant(…, chosen=True, max=3): the player
@@ -124,6 +125,9 @@ def detachment_keywords(rule, faction_keywords):
 
     grants, min_units = [], []
     for m in re.finditer(rf"({NAMES}) (?:units|models) from your army (?:have|gain) the ({KW}) keyword", rule):
+        grants.append(KeywordGrant(m.group(2), groups(m.group(1))))
+    # 'Friendly GRETCHIN units have BATTLELINE.'
+    for m in re.finditer(rf"Friendly ({NAMES}) units have ({KW})(?=[.,]|$)", rule, re.M):
         grants.append(KeywordGrant(m.group(2), groups(m.group(1))))
     for m in re.finditer(rf"select (one or more|up to \w+|\w+) ({NAMES}) (?:units|models) from your army"
                          rf"(?: to gain the ({KW}) keyword)?", rule):
@@ -189,7 +193,8 @@ def summary(text, limit=320):
 def requirements(body, faction_keywords):
     """Who can take an enhancement, from the start of its text. Faction keywords are dropped.
     'INFANTRY OFFICER model only.'              → requires [['INFANTRY', 'OFFICER']]
-    'GHOSTKEEL BATTLESUIT/PATHFINDER TEAM …'     → one alternative per '/' (or ' or ')
+    'GHOSTKEEL BATTLESUIT/PATHFINDER TEAM …'     → one alternative per '/' (or ' or ', or a comma: "CANONESS,
+                                                   PALATINE or MINISTORUM PRIEST model only")
     'Kroot War Shaper model only.'               → the datasheet name: [['KROOT', 'WAR', 'SHAPER']]
     '… only (excluding KROOT SHAPER models).'    → excludes [['KROOT', 'SHAPER']] (only right after "only": later
                                                    exclusions are about the units the rule affects); also before it
@@ -197,7 +202,7 @@ def requirements(body, faction_keywords):
     '… model with the Deep Strike ability only' → ability 'Deep Strike'
     Returns (requires, excludes, ability)."""
     def groups(names, requires=False):
-        alts = re.split(r'/| or | and ', names)
+        alts = re.split(r'/|, (?:or )?| or | and ', names)
         # "INFANTRY/MOUNTED THOUSAND SONS PSYKER": what follows the faction keyword applies to every alternative
         last = alts[-1].upper()
         for kw in faction_keywords:
@@ -210,7 +215,7 @@ def requirements(body, faction_keywords):
         if requires and any(not words for words in out):
             return []
         return [words for words in out if words]
-    name = r"[A-Z][\w'’-]*(?:(?:[ /]| or | and )[A-Z][\w'’-]*)*"
+    name = r"[A-Z][\w'’-]*(?:(?:[ /]|, (?:or )?| or | and )[A-Z][\w'’-]*)*"
     body = re.sub(r'^Friendly ', '', body)
     m = re.match(rf"^({name})\s+(?:(?:model|unit)s?\s+)?(?:\(excluding ({name}) (?:model|unit)s?\)\s+)?"
                  rf"(?:with the ([A-Z][\w ]*?) ability\s+)?only\b(?:\s*\(excluding ({name}) (?:model|unit)s?\))?", body)

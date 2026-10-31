@@ -1,0 +1,335 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-31",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/",
+ "verified": [
+  "all-enhancements",
+  "arkanyst-evaluator",
+  "berehk-stornbrow",
+  "brokhyr-iron-master",
+  "brokhyr-thunderkyn",
+  "buri-aegnirssen",
+  "cthonian-beserks",
+  "cthonian-earthshakers",
+  "einhyr-champion",
+  "einhyr-hearthguard",
+  "grimnyr",
+  "hearthkyn-warriors",
+  "hekaton-land-fortress",
+  "hernkyn-pioneers",
+  "hernkyn-yaegirs",
+  "ironkin-steeljacks-with-heavy-volkanite-disintegrators",
+  "ironkin-steeljacks-with-melee-weapons",
+  "kahl",
+  "kapricus-carrier",
+  "kapricus-defenders",
+  "memnyr-strategist",
+  "sagitaur",
+  "uthar-the-destined"
+ ],
+ "units": {
+  "arkanyst-evaluator": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "berehk-stornbrow": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "brokhyr-iron-master": [
+   {
+    "models": 5,
+    "points": 70
+   }
+  ],
+  "brokhyr-thunderkyn": [
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "buri-aegnirssen": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "cthonian-beserks": [
+   {
+    "models": 5,
+    "points": 90
+   },
+   {
+    "models": 10,
+    "points": 180
+   }
+  ],
+  "cthonian-earthshakers": [
+   {
+    "models": 2,
+    "points": 100
+   }
+  ],
+  "einhyr-champion": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "einhyr-hearthguard": [
+   {
+    "models": 5,
+    "points": 130
+   },
+   {
+    "models": 10,
+    "points": 270
+   }
+  ],
+  "grimnyr": [
+   {
+    "models": 3,
+    "points": 65
+   }
+  ],
+  "hearthkyn-warriors": [
+   {
+    "models": 10,
+    "points": 90
+   }
+  ],
+  "hekaton-land-fortress": [
+   {
+    "models": 1,
+    "points": 250
+   }
+  ],
+  "hernkyn-pioneers": [
+   {
+    "models": 3,
+    "points": 85
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "hernkyn-yaegirs": [
+   {
+    "models": 10,
+    "points": 90
+   }
+  ],
+  "ironkin-steeljacks-with-heavy-volkanite-disintegrators": [
+   {
+    "models": 3,
+    "points": 80
+   },
+   {
+    "models": 6,
+    "points": 170
+   }
+  ],
+  "ironkin-steeljacks-with-melee-weapons": [
+   {
+    "models": 3,
+    "points": 75
+   },
+   {
+    "models": 6,
+    "points": 150
+   }
+  ],
+  "kahl": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "kapricus-carrier": [
+   {
+    "models": 1,
+    "points": 70
+   }
+  ],
+  "kapricus-defenders": [
+   {
+    "models": 1,
+    "points": 75
+   },
+   {
+    "models": 2,
+    "points": 150
+   }
+  ],
+  "memnyr-strategist": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "sagitaur": [
+   {
+    "models": 1,
+    "points": 85
+   }
+  ],
+  "uthar-the-destined": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ]
+ },
+ "enhancements": {
+  "bastion-shield": 25,
+  "quake-multigenerator": 15,
+  "ironskein": 10,
+  "high-kahl": 30,
+  "eye-for-weakness": 25,
+  "writ-of-acquisition": 10,
+  "surgical-saboteur": 10,
+  "nomad-strategist": 20,
+  "farstrydr-node": 20,
+  "calculated-tenacity": 15,
+  "mantle-of-elders": 10,
+  "graviton-vault": 5,
+  "delvwerke-navigator": 25,
+  "multiwave-system-jammer": 10,
+  "quake-supervisor": 20,
+  "piledriver": 15,
+  "oathbound-speculator": 30,
+  "dead-reckoning": 10,
+  "iron-ambassador": 5,
+  "ancestral-crest": 15,
+  "tactical-alchemy": 10,
+  "trivarg-cyber-implant": 40,
+  "precursive-judgement": 15,
+  "signature-restoration": 5,
+  "mercenary-prospector": 20,
+  "metaphysical-brokerage": 20,
+  "etacarn-sb9-targeting-implant": 15,
+  "asset-manipulator": 25,
+  "saturation-rounds": 15,
+  "optimised-attack-lines": 15,
+  "high-kahl-hearthguard-covenant": 30,
+  "ironskein-hearthguard-covenant": 10,
+  "pan-spectral-lockons": 10,
+  "shroudwerke-talismans": 15
+ },
+ "unitsExtraCopies": {
+  "brokhyr-thunderkyn": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 90
+    },
+    {
+     "models": 6,
+     "points": 180
+    }
+   ]
+  },
+  "einhyr-hearthguard": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 140
+    },
+    {
+     "models": 10,
+     "points": 280
+    }
+   ]
+  },
+  "hekaton-land-fortress": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 270
+    }
+   ]
+  },
+  "hernkyn-pioneers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 95
+    },
+    {
+     "models": 6,
+     "points": 180
+    }
+   ]
+  },
+  "ironkin-steeljacks-with-heavy-volkanite-disintegrators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 90
+    },
+    {
+     "models": 6,
+     "points": 180
+    }
+   ]
+  },
+  "ironkin-steeljacks-with-melee-weapons": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 85
+    },
+    {
+     "models": 6,
+     "points": 160
+    }
+   ]
+  },
+  "kapricus-carrier": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 80
+    }
+   ]
+  },
+  "kapricus-defenders": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 95
+    },
+    {
+     "models": 2,
+     "points": 170
+    }
+   ]
+  },
+  "sagitaur": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 95
+    }
+   ]
+  }
+ }
+}

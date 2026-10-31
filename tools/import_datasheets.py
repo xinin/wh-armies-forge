@@ -15,6 +15,7 @@ import argparse
 import json
 import os
 import re
+import unicodedata
 import sys
 from pathlib import Path
 
@@ -35,7 +36,8 @@ TEMPLATE_IMAGE_SIZES = {(214, 214)}  # card textures; full-page backgrounds are 
 
 
 def slug(s):
-    s = s.lower().replace('’', '').replace('‘', '').replace("'", '').replace('é', 'e')
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()  # "Khârn" → "kharn"
+    s = s.lower().replace('’', '').replace('‘', '').replace("'", '')
     return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
 
 

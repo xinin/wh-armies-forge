@@ -1,0 +1,423 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-28",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/adepta-sororitas/",
+ "verified": [
+  "all-enhancements",
+  "aestred-thurga-and-agathae-dolan",
+  "arco-flagellants",
+  "battle-sisters-squad",
+  "canoness",
+  "canoness-with-jump-pack",
+  "castigator",
+  "celestian-insidiants",
+  "celestian-sacresants",
+  "daemonifuge",
+  "dialogus",
+  "dogmata",
+  "dominion-squad",
+  "exorcist",
+  "hospitaller",
+  "imagifier",
+  "immolator",
+  "intranzia-fraye",
+  "junith-eruita",
+  "ministorum-priest",
+  "mortifiers",
+  "morvenn-vahl",
+  "palatine",
+  "paragon-warsuits",
+  "penitent-engines",
+  "repentia-squad",
+  "retributor-squad",
+  "saint-celestine",
+  "sanctifiers",
+  "seraphim-squad",
+  "sisters-novitiate-squad",
+  "sororitas-rhino",
+  "triumph-of-saint-katherine",
+  "zephyrim-squad"
+ ],
+ "units": {
+  "aestred-thurga-and-agathae-dolan": [
+   {
+    "models": 2,
+    "points": 80
+   }
+  ],
+  "arco-flagellants": [
+   {
+    "models": 3,
+    "points": 50
+   },
+   {
+    "models": 10,
+    "points": 140
+   }
+  ],
+  "battle-sisters-squad": [
+   {
+    "models": 10,
+    "points": 100
+   }
+  ],
+  "canoness": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "canoness-with-jump-pack": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "castigator": [
+   {
+    "models": 1,
+    "points": 165
+   }
+  ],
+  "celestian-insidiants": [
+   {
+    "models": 10,
+    "points": 115
+   }
+  ],
+  "celestian-sacresants": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 150
+   }
+  ],
+  "daemonifuge": [
+   {
+    "models": 2,
+    "points": 85
+   }
+  ],
+  "dialogus": [
+   {
+    "models": 1,
+    "points": 40
+   }
+  ],
+  "dogmata": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "dominion-squad": [
+   {
+    "models": 10,
+    "points": 90
+   }
+  ],
+  "exorcist": [
+   {
+    "models": 1,
+    "points": 175
+   }
+  ],
+  "hospitaller": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "imagifier": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ],
+  "immolator": [
+   {
+    "models": 1,
+    "points": 100
+   }
+  ],
+  "intranzia-fraye": [
+   {
+    "models": 1,
+    "points": 135
+   }
+  ],
+  "junith-eruita": [
+   {
+    "models": 1,
+    "points": 105
+   }
+  ],
+  "ministorum-priest": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "mortifiers": [
+   {
+    "models": 1,
+    "points": 70
+   },
+   {
+    "models": 2,
+    "points": 130
+   }
+  ],
+  "morvenn-vahl": [
+   {
+    "models": 1,
+    "points": 215
+   }
+  ],
+  "palatine": [
+   {
+    "models": 1,
+    "points": 50
+   }
+  ],
+  "paragon-warsuits": [
+   {
+    "models": 3,
+    "points": 165
+   }
+  ],
+  "penitent-engines": [
+   {
+    "models": 1,
+    "points": 70
+   },
+   {
+    "models": 2,
+    "points": 140
+   }
+  ],
+  "repentia-squad": [
+   {
+    "models": 5,
+    "points": 70
+   },
+   {
+    "models": 10,
+    "points": 140
+   }
+  ],
+  "retributor-squad": [
+   {
+    "models": 5,
+    "points": 105
+   }
+  ],
+  "saint-celestine": [
+   {
+    "models": 3,
+    "points": 135
+   }
+  ],
+  "sanctifiers": [
+   {
+    "models": 9,
+    "points": 110
+   }
+  ],
+  "seraphim-squad": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 150
+   }
+  ],
+  "sisters-novitiate-squad": [
+   {
+    "models": 10,
+    "points": 90
+   }
+  ],
+  "sororitas-rhino": [
+   {
+    "models": 1,
+    "points": 65
+   }
+  ],
+  "triumph-of-saint-katherine": [
+   {
+    "models": 1,
+    "points": 245
+   }
+  ],
+  "zephyrim-squad": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 150
+   }
+  ]
+ },
+ "enhancements": {
+  "saintly-example": 10,
+  "through-suffering-strength": 25,
+  "chaplet-of-sacrifice": 25,
+  "mantle-of-ophelia": 20,
+  "triptych-of-judgement": 15,
+  "mark-of-devotion": 30,
+  "eyes-of-the-oracle": 10,
+  "sanctified-amulet": 25,
+  "righteous-rage": 15,
+  "manual-of-saint-griselda": 20,
+  "fire-and-fury": 30,
+  "iron-surplice-of-saint-istalela": 10,
+  "psalm-of-righteous-judgement": 20,
+  "verse-of-holy-piety": 15,
+  "refrain-of-enduring-faith": 15,
+  "catechism-of-divine-penitence": 15,
+  "litanies-of-faith": 10,
+  "blade-of-saint-ellynor": 15,
+  "divine-aspect": 5,
+  "triptych-of-the-macharian-crusade": 20,
+  "hagiomnifex": 25,
+  "clarion-of-urgency": 15,
+  "symphonic-payload": 10,
+  "writ-of-compunction": 20,
+  "perfervid-haste": 10
+ },
+ "unitsExtraCopies": {
+  "castigator": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 185
+    }
+   ]
+  },
+  "celestian-sacresants": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 160
+    }
+   ]
+  },
+  "dominion-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 10,
+     "points": 100
+    }
+   ]
+  },
+  "exorcist": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 215
+    }
+   ]
+  },
+  "hospitaller": {
+   "from": 2,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 75
+    }
+   ]
+  },
+  "immolator": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 115
+    }
+   ]
+  },
+  "paragon-warsuits": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 3,
+     "points": 175
+    }
+   ]
+  },
+  "retributor-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 115
+    }
+   ]
+  },
+  "seraphim-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 160
+    }
+   ]
+  },
+  "sororitas-rhino": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 75
+    }
+   ]
+  },
+  "zephyrim-squad": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 160
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "dominion-squad": {
+   "meltagun": 5
+  },
+  "immolator": {
+   "twin-multi-melta": 15
+  },
+  "paragon-warsuits": {
+   "multi-melta": 10
+  },
+  "retributor-squad": {
+   "multi-melta": 5
+  }
+ }
+}

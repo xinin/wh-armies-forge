@@ -570,6 +570,32 @@
      },
      "type": "upgrade"
     }
+   ],
+   "keywordGrants": [
+    {
+     "keyword": "CONTAGION ENGINE",
+     "units": [
+      [
+       "FOETID",
+       "BLOAT-DRONE"
+      ],
+      [
+       "FOETID",
+       "BLOAT-DRONE",
+       "WITH",
+       "HEAVY",
+       "BLIGHT",
+       "LAUNCHER"
+      ],
+      [
+       "HELBRUTE"
+      ],
+      [
+       "MYPHITIC",
+       "BLIGHT-HAULER"
+      ]
+     ]
+    }
    ]
   },
   {

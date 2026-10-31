@@ -1,0 +1,480 @@
+{
+ "_note": "Edit when a new Munitorum Field Manual comes out.",
+ "version": "2026-10-31",
+ "source": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/",
+ "verified": [
+  "all-enhancements",
+  "archaeopter-fusilave",
+  "archaeopter-stratoraptor",
+  "archaeopter-transvector",
+  "belisarius-cawl",
+  "corpuscarii-electro-priests",
+  "cybernetica-datasmith",
+  "fulgurite-electro-priests",
+  "hastarii-exterminators",
+  "hastarii-fusiliers",
+  "ironstrider-ballistarii",
+  "kastelan-robots",
+  "kataphron-breachers",
+  "kataphron-destroyers",
+  "onager-dunecrawler",
+  "pteraxii-skystalkers",
+  "pteraxii-sterylizors",
+  "serberys-raiders",
+  "serberys-sulphurhounds",
+  "servitor-battleclade",
+  "sicarian-infiltrators",
+  "sicarian-ruststalkers",
+  "skitarii-marshal",
+  "skitarii-rangers",
+  "skitarii-vanguard",
+  "skorpius-disintegrator",
+  "skorpius-dunerider",
+  "sydonian-dragoons-with-radium-jezzails",
+  "sydonian-dragoons-with-taser-lances",
+  "sydonian-skatros",
+  "tech-priest-dominus",
+  "tech-priest-enginseer",
+  "tech-priest-manipulus",
+  "technoarcheologist",
+  "thulia-ghuld"
+ ],
+ "units": {
+  "archaeopter-fusilave": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "archaeopter-stratoraptor": [
+   {
+    "models": 1,
+    "points": 185
+   }
+  ],
+  "archaeopter-transvector": [
+   {
+    "models": 1,
+    "points": 145
+   }
+  ],
+  "belisarius-cawl": [
+   {
+    "models": 1,
+    "points": 220
+   }
+  ],
+  "corpuscarii-electro-priests": [
+   {
+    "models": 5,
+    "points": 60
+   },
+   {
+    "models": 10,
+    "points": 120
+   }
+  ],
+  "cybernetica-datasmith": [
+   {
+    "models": 1,
+    "points": 20
+   }
+  ],
+  "fulgurite-electro-priests": [
+   {
+    "models": 5,
+    "points": 65
+   },
+   {
+    "models": 10,
+    "points": 130
+   }
+  ],
+  "hastarii-exterminators": [
+   {
+    "models": 5,
+    "points": 100
+   }
+  ],
+  "hastarii-fusiliers": [
+   {
+    "models": 5,
+    "points": 105
+   }
+  ],
+  "ironstrider-ballistarii": [
+   {
+    "models": 1,
+    "points": 80
+   },
+   {
+    "models": 2,
+    "points": 160
+   },
+   {
+    "models": 3,
+    "points": 250
+   }
+  ],
+  "kastelan-robots": [
+   {
+    "models": 2,
+    "points": 150
+   },
+   {
+    "models": 4,
+    "points": 300
+   }
+  ],
+  "kataphron-breachers": [
+   {
+    "models": 3,
+    "points": 140
+   },
+   {
+    "models": 6,
+    "points": 290
+   }
+  ],
+  "kataphron-destroyers": [
+   {
+    "models": 3,
+    "points": 100
+   },
+   {
+    "models": 6,
+    "points": 200
+   }
+  ],
+  "onager-dunecrawler": [
+   {
+    "models": 1,
+    "points": 150
+   }
+  ],
+  "pteraxii-skystalkers": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 150
+   }
+  ],
+  "pteraxii-sterylizors": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 150
+   }
+  ],
+  "serberys-raiders": [
+   {
+    "models": 3,
+    "points": 60
+   },
+   {
+    "models": 6,
+    "points": 105
+   }
+  ],
+  "serberys-sulphurhounds": [
+   {
+    "models": 3,
+    "points": 55
+   },
+   {
+    "models": 6,
+    "points": 95
+   }
+  ],
+  "servitor-battleclade": [
+   {
+    "models": 9,
+    "points": 75
+   }
+  ],
+  "sicarian-infiltrators": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 155
+   }
+  ],
+  "sicarian-ruststalkers": [
+   {
+    "models": 5,
+    "points": 75
+   },
+   {
+    "models": 10,
+    "points": 160
+   }
+  ],
+  "skitarii-marshal": [
+   {
+    "models": 1,
+    "points": 35
+   }
+  ],
+  "skitarii-rangers": [
+   {
+    "models": 10,
+    "points": 85
+   }
+  ],
+  "skitarii-vanguard": [
+   {
+    "models": 10,
+    "points": 85
+   }
+  ],
+  "skorpius-disintegrator": [
+   {
+    "models": 1,
+    "points": 160
+   }
+  ],
+  "skorpius-dunerider": [
+   {
+    "models": 1,
+    "points": 75
+   }
+  ],
+  "sydonian-dragoons-with-radium-jezzails": [
+   {
+    "models": 1,
+    "points": 55
+   },
+   {
+    "models": 2,
+    "points": 95
+   },
+   {
+    "models": 3,
+    "points": 140
+   }
+  ],
+  "sydonian-dragoons-with-taser-lances": [
+   {
+    "models": 1,
+    "points": 60
+   },
+   {
+    "models": 2,
+    "points": 120
+   },
+   {
+    "models": 3,
+    "points": 170
+   }
+  ],
+  "sydonian-skatros": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "tech-priest-dominus": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "tech-priest-enginseer": [
+   {
+    "models": 1,
+    "points": 55
+   }
+  ],
+  "tech-priest-manipulus": [
+   {
+    "models": 1,
+    "points": 60
+   }
+  ],
+  "technoarcheologist": [
+   {
+    "models": 1,
+    "points": 45
+   }
+  ],
+  "thulia-ghuld": [
+   {
+    "models": 1,
+    "points": 180
+   }
+  ]
+ },
+ "enhancements": {
+  "transoracular-dyad-wafers": 15,
+  "cognitive-reinforcement": 30,
+  "sanctified-ordnance": 10,
+  "inloaded-lethality": 15,
+  "mechanicus-locum": 5,
+  "mantle-of-the-gnosticarch": 10,
+  "data-blessed-autosermon": 15,
+  "temporcopia": 20,
+  "magos": 10,
+  "genetor": 20,
+  "logis": 15,
+  "artisan": 10,
+  "vinghs-wafers-of-dynamism": 25,
+  "tl-49": 30,
+  "omnicogitator": 25,
+  "martial-signatum-amplificator": 15,
+  "belicosa-class-capacitor-vanes": 25,
+  "omnissiahs-fury": 10,
+  "cantic-thrallnet": 25,
+  "clandestine-infiltrator": 15,
+  "veiled-hunter": 10,
+  "battle-sphere-uplink": 25,
+  "radial-suffusion": 25,
+  "malphonic-susurrus": 20,
+  "peerless-eradicator": 20,
+  "autoclavic-denunciation": 15,
+  "voltagheist-reliquary": 15,
+  "electromiasmic-brazier": 10,
+  "explorator-dispensation": 20,
+  "stealth-screened-cybercanids": 15,
+  "necromechanic": 20,
+  "lord-of-machines": 15,
+  "emotionless-clarity": 10,
+  "arch-negator": 5
+ },
+ "unitsExtraCopies": {
+  "hastarii-exterminators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 115
+    }
+   ]
+  },
+  "hastarii-fusiliers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 120
+    }
+   ]
+  },
+  "ironstrider-ballistarii": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 95
+    },
+    {
+     "models": 2,
+     "points": 175
+    },
+    {
+     "models": 3,
+     "points": 265
+    }
+   ]
+  },
+  "kastelan-robots": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 2,
+     "points": 180
+    },
+    {
+     "models": 4,
+     "points": 330
+    }
+   ]
+  },
+  "pteraxii-skystalkers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 160
+    }
+   ]
+  },
+  "pteraxii-sterylizors": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 160
+    }
+   ]
+  },
+  "servitor-battleclade": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 9,
+     "points": 85
+    }
+   ]
+  },
+  "sicarian-infiltrators": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 165
+    }
+   ]
+  },
+  "sicarian-ruststalkers": {
+   "from": 3,
+   "sizes": [
+    {
+     "models": 5,
+     "points": 85
+    },
+    {
+     "models": 10,
+     "points": 170
+    }
+   ]
+  },
+  "skorpius-dunerider": {
+   "from": 4,
+   "sizes": [
+    {
+     "models": 1,
+     "points": 85
+    }
+   ]
+  }
+ },
+ "wargearCosts": {
+  "ironstrider-ballistarii": {
+   "twin-cognis-lascannon": 10
+  },
+  "skorpius-disintegrator": {
+   "ferrumite-cannon": 10
+  }
+ }
+}

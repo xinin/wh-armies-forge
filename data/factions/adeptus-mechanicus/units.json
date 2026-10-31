@@ -1,0 +1,7028 @@
+{
+ "_note": "Datasheets. Points live in points.json.",
+ "excluded": {
+  "_note": "Forge World and Warhammer Legends datasheets: never imported.",
+  "ids": [
+   "secutarii-hoplites",
+   "secutarii-peltasts",
+   "terrax-pattern-termite",
+   "x-101"
+  ]
+ },
+ "units": [
+  {
+   "id": "belisarius-cawl",
+   "name": {
+    "en": "Belisarius Cawl",
+    "es": "Belisarius Cawl"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "MOBILE",
+    "EPIC HERO",
+    "IMPERIUM",
+    "TECH-PRIEST",
+    "CULT MECHANICUS",
+    "BELISARIUS CAWL"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "8",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "solar-atomiser",
+     "name": {
+      "en": "Solar atomiser"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "2+",
+       "S": "14",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "arc-scourge",
+     "name": {
+      "en": "Arc scourge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cawls-omnissian-axe",
+     "name": {
+      "en": "Cawl’s Omnissian axe"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "2+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "mechadendrite-hive",
+     "name": {
+      "en": "Mechadendrite hive"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2D6",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Canticles of the Omnissiah"
+     },
+     "text": {
+      "en": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Mechanicus Bodyguard"
+     },
+     "text": {
+      "en": "While this model is within 3\" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Self-repair Mechanisms"
+     },
+     "text": {
+      "en": "At the start of your Command phase, this model regains up to D3 lost wounds."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Belisarius-Cawl",
+   "composition": [
+    "1 Belisarius Cawl – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: solar atomiser; arc scourge; Cawl’s Omnissian axe; mechadendrite hive."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "solar-atomiser": 1,
+      "arc-scourge": 1,
+      "cawls-omnissian-axe": 1,
+      "mechadendrite-hive": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "arc-scourge",
+    "cawls-omnissian-axe",
+    "mechadendrite-hive",
+    "solar-atomiser"
+   ]
+  },
+  {
+   "id": "cybernetica-datasmith",
+   "name": {
+    "en": "Cybernetica Datasmith",
+    "es": "Cybernetica Datasmith"
+   },
+   "keywords": [
+    "VEHICLE",
+    "CHARACTER",
+    "IMPERIUM",
+    "LEGIO CYBERNETICA",
+    "TECH-PRIEST",
+    "CYBERNETICA DATASMITH"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "2+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-fist",
+     "name": {
+      "en": "Power fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Battle Protocols"
+     },
+     "text": {
+      "en": "At the start of the battle, if this model is leading a KASTELAN ROBOTS unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one. Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit. Conqueror Protocol: Add 2 to the Attacks characteristic of melee weapons equipped by KASTELAN ROBOT models in that unit. Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Data-severed"
+     },
+     "text": {
+      "en": "If there are no KASTELAN ROBOT models in this unit: This unit loses VEHICLE. This unit has INFANTRY."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Cybernetica-Datasmith",
+   "composition": [
+    "1 Cybernetica Datasmith"
+   ],
+   "equipped": [
+    "This model is equipped with: Mechanicus pistol; power fist."
+   ],
+   "leader": {
+    "canLead": [
+     "kastelan-robots"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "power-fist": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "mechanicus-pistol",
+    "power-fist"
+   ]
+  },
+  {
+   "id": "skitarii-marshal",
+   "name": {
+    "en": "Skitarii Marshal",
+    "es": "Skitarii Marshal"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "SKITARII",
+    "MARSHAL"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "3",
+     "Ld": "6+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "control-stave",
+     "name": {
+      "en": "Control stave"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Control Edict"
+     },
+     "text": {
+      "en": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Servo-skull Uplink"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, you can select one friendly SKITARII unit that is Battle-shocked and within 6\" of this model. That unit is no longer Battle-shocked."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Marshal",
+   "composition": [
+    "1 Skitarii Marshal"
+   ],
+   "equipped": [
+    "This model is equipped with: Mechanicus pistol; control stave."
+   ],
+   "leader": {
+    "canLead": [
+     "hastarii-exterminators",
+     "hastarii-fusiliers",
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "control-stave": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "control-stave",
+    "mechanicus-pistol"
+   ]
+  },
+  {
+   "id": "sydonian-skatros",
+   "name": {
+    "en": "Sydonian Skatros",
+    "es": "Sydonian Skatros"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "SKITARII",
+    "SYDONIAN",
+    "SKATROS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "radium-jezzail",
+     "name": {
+      "en": "Radium jezzail"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "skatros-transuranic-arquebus",
+     "name": {
+      "en": "Skatros transuranic arquebus"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Anti-monster 4+",
+        "Anti-vehicle 4+",
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sydonian-feet",
+     "name": {
+      "en": "Sydonian feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Dread Snipers"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+     }
+    },
+    {
+     "name": {
+      "en": "Achillan Eye"
+     },
+     "text": {
+      "en": "Each time this model makes an attack with a radium jezzail that targets an INFANTRY unit, you can re-roll the Wound roll. Each time this model makes an attack with a Skatros transuranic arquebus that targets a MONSTER or VEHICLE unit, you can re-roll the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Lone Operative",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sydonian-Skatros",
+   "wargearOptions": [
+    {
+     "text": "This model’s radium jezzail can be replaced with 1 Skatros transuranic arquebus.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sydonian Skatros"
+   ],
+   "equipped": [
+    "This model is equipped with: Mechanicus pistol; radium jezzail; Sydonian feet."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "radium-jezzail": 1,
+      "sydonian-feet": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Radium jezzail",
+      "es": "Radium jezzail"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "radium-jezzail",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "skatros-transuranic-arquebus"
+     ],
+     "packages": {
+      "skatros-transuranic-arquebus": [
+       {
+        "item": "skatros-transuranic-arquebus",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "skatros-transuranic-arquebus": "Skatros transuranic arquebus",
+      "": "Radium jezzail"
+     }
+    }
+   ],
+   "loadout": [
+    "mechanicus-pistol",
+    "radium-jezzail",
+    "sydonian-feet"
+   ]
+  },
+  {
+   "id": "tech-priest-dominus",
+   "name": {
+    "en": "Tech-priest Dominus",
+    "es": "Tech-priest Dominus"
+   },
+   "keywords": [
+    "IMPERIUM",
+    "INFANTRY",
+    "CHARACTER",
+    "CULT MECHANICUS",
+    "TECH-PRIEST",
+    "DOMINUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "2+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "eradication-ray",
+     "name": {
+      "en": "Eradication ray"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "dissipated"
+       }
+      },
+      {
+       "range": "12\"",
+       "A": "D3",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [],
+       "mode": {
+        "en": "focused"
+       }
+      }
+     ]
+    },
+    {
+     "id": "macrostubber",
+     "name": {
+      "en": "Macrostubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "5",
+       "skill": "3+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phosphor-serpenta",
+     "name": {
+      "en": "Phosphor serpenta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "volkite-blaster",
+     "name": {
+      "en": "Volkite blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "omnissian-axe",
+     "name": {
+      "en": "Omnissian axe"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Lord of the Machine Cult"
+     },
+     "text": {
+      "en": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the ELECTRO-PRIESTS keyword, models in that unit have the Feel No Pain 4+ ability instead."
+     }
+    },
+    {
+     "name": {
+      "en": "Data-spike"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, you can select one enemy VEHICLE unit within Engagement Range of this model’s unit and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds and, until the end of the phase, the Weapon Skill characteristic of melee weapons equipped by that enemy unit is worsened by 1."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tech-priest-Dominus",
+   "wargearOptions": [
+    {
+     "text": "This model’s macrostubber can be replaced with 1 phosphor serpenta.",
+     "choices": []
+    },
+    {
+     "text": "This model’s volkite blaster can be replaced with 1 eradication ray.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Tech-Priest Dominus"
+   ],
+   "equipped": [
+    "This model is equipped with: macrostubber; volkite blaster; Omnissian axe."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "corpuscarii-electro-priests",
+     "fulgurite-electro-priests",
+     "hastarii-exterminators",
+     "hastarii-fusiliers",
+     "kataphron-breachers",
+     "kataphron-destroyers",
+     "servitor-battleclade",
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "macrostubber": 1,
+      "volkite-blaster": 1,
+      "omnissian-axe": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Macrostubber",
+      "es": "Macrostubber"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "macrostubber",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "phosphor-serpenta"
+     ],
+     "packages": {
+      "phosphor-serpenta": [
+       {
+        "item": "phosphor-serpenta",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "phosphor-serpenta": "Phosphor serpenta",
+      "": "Macrostubber"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Volkite blaster",
+      "es": "Volkite blaster"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "volkite-blaster",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "eradication-ray"
+     ],
+     "packages": {
+      "eradication-ray": [
+       {
+        "item": "eradication-ray",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "eradication-ray": "Eradication ray",
+      "": "Volkite blaster"
+     }
+    }
+   ],
+   "loadout": [
+    "macrostubber",
+    "omnissian-axe",
+    "volkite-blaster"
+   ]
+  },
+  {
+   "id": "tech-priest-enginseer",
+   "name": {
+    "en": "Tech-priest Enginseer",
+    "es": "Tech-priest Enginseer"
+   },
+   "keywords": [
+    "IMPERIUM",
+    "INFANTRY",
+    "CHARACTER",
+    "CULT MECHANICUS",
+    "TECH-PRIEST",
+    "ENGINSEER"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "omnissian-axe",
+     "name": {
+      "en": "Omnissian axe"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "servo-arm",
+     "name": {
+      "en": "Servo-arm"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Extra Attacks"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Enginseer"
+     },
+     "text": {
+      "en": "While this model is within 3\" of one or more friendly ADEPTUS MECHANICUS VEHICLE units, unless it is leading a unit, this model has the Lone Operative ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Omnissiah’s Blessing"
+     },
+     "text": {
+      "en": "In your Command phase, select one friendly ADEPTUS MECHANICUS model within 3\" of this model. That model regains up to D3 lost wounds and, if it is a VEHICLE model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase."
+     }
+    },
+    {
+     "name": {
+      "en": "Vengeance for the Omnissiah"
+     },
+     "text": {
+      "en": "If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tech-priest-Enginseer",
+   "composition": [
+    "1 Tech-Priest Enginseer"
+   ],
+   "equipped": [
+    "This model is equipped with: Mechanicus pistol; Omnissian axe; servo-arm."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "corpuscarii-electro-priests",
+     "fulgurite-electro-priests",
+     "hastarii-exterminators",
+     "hastarii-fusiliers",
+     "kataphron-breachers",
+     "kataphron-destroyers",
+     "servitor-battleclade",
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "omnissian-axe": 1,
+      "servo-arm": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "mechanicus-pistol",
+    "omnissian-axe",
+    "servo-arm"
+   ]
+  },
+  {
+   "id": "tech-priest-manipulus",
+   "name": {
+    "en": "Tech-priest Manipulus",
+    "es": "Tech-priest Manipulus"
+   },
+   "keywords": [
+    "IMPERIUM",
+    "INFANTRY",
+    "CHARACTER",
+    "CULT MECHANICUS",
+    "TECH-PRIEST",
+    "MANIPULUS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "2+",
+     "W": "4",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "magnarail-lance",
+     "name": {
+      "en": "Magnarail lance"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "7",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "transonic-cannon",
+     "name": {
+      "en": "Transonic cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "omnissian-staff",
+     "name": {
+      "en": "Omnissian staff"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Galvanic Field"
+     },
+     "text": {
+      "en": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Defend the Divine Work"
+     },
+     "text": {
+      "en": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, all models in this model’s unit have a 4+ invulnerable save."
+     }
+    }
+   ],
+   "core": [
+    "Leader"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Tech-priest-Manipulus",
+   "wargearOptions": [
+    {
+     "text": "This model’s magnarail lance can be replaced with 1 transonic cannon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Tech-Priest Manipulus"
+   ],
+   "equipped": [
+    "This model is equipped with: magnarail lance; Omnissian staff."
+   ],
+   "role": "character",
+   "leader": {
+    "canLead": [
+     "corpuscarii-electro-priests",
+     "fulgurite-electro-priests",
+     "hastarii-exterminators",
+     "hastarii-fusiliers",
+     "kataphron-breachers",
+     "kataphron-destroyers",
+     "servitor-battleclade",
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ]
+   },
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "magnarail-lance": 1,
+      "omnissian-staff": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Magnarail lance",
+      "es": "Magnarail lance"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "magnarail-lance",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "transonic-cannon"
+     ],
+     "packages": {
+      "transonic-cannon": [
+       {
+        "item": "transonic-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "transonic-cannon": "Transonic cannon",
+      "": "Magnarail lance"
+     }
+    }
+   ],
+   "loadout": [
+    "magnarail-lance",
+    "omnissian-staff"
+   ]
+  },
+  {
+   "id": "technoarcheologist",
+   "name": {
+    "en": "Technoarcheologist",
+    "es": "Technoarcheologist"
+   },
+   "keywords": [
+    "INFANTRY",
+    "CHARACTER",
+    "IMPERIUM",
+    "CULT MECHANICUS",
+    "TECH-PRIEST",
+    "TECHNOARCHEOLOGIST"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "servo-arc-claw",
+     "name": {
+      "en": "Servo-arc claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Seekers of Divine Arcana"
+     },
+     "text": {
+      "en": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Cogitative Instincts"
+     },
+     "text": {
+      "en": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of this model."
+     }
+    }
+   ],
+   "core": [
+    "Support"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Technoarcheologist",
+   "composition": [
+    "1 Technoarcheologist"
+   ],
+   "equipped": [
+    "This model is equipped with: Mechanicus pistol; servo-arc claw."
+   ],
+   "leader": {
+    "canLead": [
+     "corpuscarii-electro-priests",
+     "fulgurite-electro-priests",
+     "hastarii-exterminators",
+     "hastarii-fusiliers",
+     "kataphron-breachers",
+     "kataphron-destroyers",
+     "servitor-battleclade",
+     "skitarii-rangers",
+     "skitarii-vanguard"
+    ],
+    "support": true
+   },
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "servo-arc-claw": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "mechanicus-pistol",
+    "servo-arc-claw"
+   ]
+  },
+  {
+   "id": "thulia-ghuld",
+   "name": {
+    "en": "Thulia Ghuld",
+    "es": "Thulia Ghuld"
+   },
+   "keywords": [
+    "MONSTER",
+    "CHARACTER",
+    "MOBILE",
+    "EPIC HERO",
+    "IMPERIUM",
+    "CULT MECHANICUS",
+    "TECH-PRIEST",
+    "THULIA GHULD"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "8",
+     "Sv": "2+",
+     "W": "10",
+     "Ld": "6+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "jericho-class-conversion-resonator",
+     "name": {
+      "en": "Jericho-class conversion resonator"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "2",
+       "skill": "2+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+2",
+       "keywords": [
+        "Devastating Wounds"
+       ],
+       "mode": {
+        "en": "titanic impact"
+       }
+      },
+      {
+       "range": "24\"",
+       "A": "D6+2",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "shockwave"
+       }
+      }
+     ]
+    },
+    {
+     "id": "rod-of-the-war-forge",
+     "name": {
+      "en": "Rod of the War Forge"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "6",
+       "skill": "2+",
+       "S": "10",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [],
+       "mode": {
+        "en": "strike"
+       }
+      },
+      {
+       "range": "Melee",
+       "A": "12",
+       "skill": "2+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "sweep"
+       }
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rod of the War Forge"
+     },
+     "text": {
+      "en": "In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Mechanicus Bodyguard"
+     },
+     "text": {
+      "en": "While this model is within 3\" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Secutor of Olympus"
+     },
+     "text": {
+      "en": "At the start of your Shooting phase, select one enemy VEHICLE unit within 12\" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 mortal wounds."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Thulia-Ghuld",
+   "composition": [
+    "1 Archmagos Terminus Thulia Ghuld – EPIC HERO"
+   ],
+   "equipped": [
+    "This model is equipped with: Jericho-class conversion resonator; Rod of the War Forge."
+   ],
+   "role": "character",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "jericho-class-conversion-resonator": 1,
+      "rod-of-the-war-forge": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "jericho-class-conversion-resonator",
+    "rod-of-the-war-forge"
+   ]
+  },
+  {
+   "id": "skitarii-rangers",
+   "name": {
+    "en": "Skitarii Rangers",
+    "es": "Skitarii Rangers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "IMPERIUM",
+    "SKITARII",
+    "RANGERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "arc-rifle",
+     "name": {
+      "en": "Arc rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "galvanic-rifle",
+     "name": {
+      "en": "Galvanic rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "plasma-caliver",
+     "name": {
+      "en": "Plasma caliver"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "transuranic-arquebus",
+     "name": {
+      "en": "Transuranic arquebus"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "alpha-combat-weapon",
+     "name": {
+      "en": "Alpha combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Objective Scouted"
+     },
+     "text": {
+      "en": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 6\""
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Rangers",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Enhanced data-tether"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Omnispex"
+     },
+     "text": {
+      "en": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Skitarii Ranger Alpha can be equipped with 1 Alpha combat weapon.",
+     "choices": []
+    },
+    {
+     "text": "The Skitarii Ranger Alpha’s galvanic rifle can be replaced with 1 Mechanicus pistol.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 arc rifle.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 plasma caliver.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 transuranic arquebus.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Ranger equipped with a galvanic rifle can be equipped with one of the following:",
+     "choices": [
+      "1 enhanced data-tether*",
+      "1 omnispex*"
+     ]
+    }
+   ],
+   "wargearNotes": [
+    "* That model’s galvanic rifle cannot be replaced."
+   ],
+   "composition": [
+    "1 Skitarii Ranger Alpha",
+    "9 Skitarii Rangers"
+   ],
+   "equipped": [
+    "Every model is equipped with: galvanic rifle; close combat weapon."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "galvanic-rifle": 10,
+      "close-combat-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Skitarii Ranger Alpha: add Alpha combat weapon",
+      "es": "Skitarii Ranger Alpha: añadir Alpha combat weapon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "alpha-combat-weapon",
+     "packages": {
+      "alpha-combat-weapon": [
+       {
+        "item": "alpha-combat-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Skitarii Ranger Alpha",
+     "labels": {
+      "alpha-combat-weapon": "Alpha combat weapon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Skitarii Ranger Alpha: Galvanic rifle",
+      "es": "Skitarii Ranger Alpha: Galvanic rifle"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "mechanicus-pistol"
+     ],
+     "packages": {
+      "mechanicus-pistol": [
+       {
+        "item": "mechanicus-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger Alpha",
+     "labels": {
+      "mechanicus-pistol": "Mechanicus pistol",
+      "": "Galvanic rifle"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Skitarii Ranger: Galvanic rifle",
+      "es": "Skitarii Ranger: Galvanic rifle"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "arc-rifle"
+     ],
+     "packages": {
+      "arc-rifle": [
+       {
+        "item": "arc-rifle",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "arc-rifle": "Arc rifle",
+      "": "Galvanic rifle"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Skitarii Ranger: Galvanic rifle",
+      "es": "Skitarii Ranger: Galvanic rifle"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-caliver"
+     ],
+     "packages": {
+      "plasma-caliver": [
+       {
+        "item": "plasma-caliver",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "plasma-caliver": "Plasma caliver",
+      "": "Galvanic rifle"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Skitarii Ranger: Galvanic rifle",
+      "es": "Skitarii Ranger: Galvanic rifle"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "galvanic-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "transuranic-arquebus"
+     ],
+     "packages": {
+      "transuranic-arquebus": [
+       {
+        "item": "transuranic-arquebus",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "transuranic-arquebus": "Transuranic arquebus",
+      "": "Galvanic rifle"
+     }
+    },
+    {
+     "id": "o6",
+     "label": {
+      "en": "Skitarii Ranger: optional",
+      "es": "Skitarii Ranger: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "gear:enhanced-data-tether",
+      "gear:omnispex"
+     ],
+     "packages": {
+      "gear:enhanced-data-tether": [
+       {
+        "item": "gear:enhanced-data-tether",
+        "n": 1
+       }
+      ],
+      "gear:omnispex": [
+       {
+        "item": "gear:omnispex",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Ranger",
+     "labels": {
+      "gear:enhanced-data-tether": "Enhanced data tether",
+      "gear:omnispex": "Omnispex",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "galvanic-rifle"
+   ]
+  },
+  {
+   "id": "skitarii-vanguard",
+   "name": {
+    "en": "Skitarii Vanguard",
+    "es": "Skitarii Vanguard"
+   },
+   "keywords": [
+    "INFANTRY",
+    "BATTLELINE",
+    "IMPERIUM",
+    "SKITARII",
+    "VANGUARD"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "4+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "arc-rifle",
+     "name": {
+      "en": "Arc rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "D3",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "plasma-caliver",
+     "name": {
+      "en": "Plasma caliver"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "radium-carbine",
+     "name": {
+      "en": "Radium carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 4+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "transuranic-arquebus",
+     "name": {
+      "en": "Transuranic arquebus"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "D3",
+       "keywords": [
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "alpha-combat-weapon",
+     "name": {
+      "en": "Alpha combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Rad-saturation (Aura)"
+     },
+     "text": {
+      "en": "While an enemy unit (excluding VEHICLE units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that unit."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skitarii-Vanguard",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Enhanced data-tether"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Omnispex"
+     },
+     "text": {
+      "en": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "The Skitarii Vanguard Alpha can be equipped with 1 Alpha combat weapon.",
+     "choices": []
+    },
+    {
+     "text": "The Skitarii Vanguard Alpha’s radium carbine can be replaced with 1 Mechanicus pistol.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard’s radium carbine can be replaced with 1 arc rifle.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard’s radium carbine can be replaced with 1 plasma caliver.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard’s radium carbine can be replaced with 1 transuranic arquebus.",
+     "choices": []
+    },
+    {
+     "text": "1 Skitarii Vanguard equipped with a radium carbine can be equipped with one of the following:",
+     "choices": [
+      "1 enhanced data-tether*",
+      "1 omnispex*"
+     ]
+    }
+   ],
+   "wargearNotes": [
+    "* That model’s radium carbine cannot be replaced."
+   ],
+   "composition": [
+    "1 Skitarii Vanguard Alpha",
+    "9 Skitarii Vanguard"
+   ],
+   "equipped": [
+    "Every model is equipped with: radium carbine; close combat weapon."
+   ],
+   "role": "battleline",
+   "sizes": [
+    {
+     "models": 10,
+     "loadout": {
+      "radium-carbine": 10,
+      "close-combat-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Skitarii Vanguard Alpha: add Alpha combat weapon",
+      "es": "Skitarii Vanguard Alpha: añadir Alpha combat weapon"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "alpha-combat-weapon",
+     "packages": {
+      "alpha-combat-weapon": [
+       {
+        "item": "alpha-combat-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "10": 1
+     },
+     "owner": "Skitarii Vanguard Alpha",
+     "labels": {
+      "alpha-combat-weapon": "Alpha combat weapon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Skitarii Vanguard Alpha: Radium carbine",
+      "es": "Skitarii Vanguard Alpha: Radium carbine"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "mechanicus-pistol"
+     ],
+     "packages": {
+      "mechanicus-pistol": [
+       {
+        "item": "mechanicus-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard Alpha",
+     "labels": {
+      "mechanicus-pistol": "Mechanicus pistol",
+      "": "Radium carbine"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "Skitarii Vanguard: Radium carbine",
+      "es": "Skitarii Vanguard: Radium carbine"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "arc-rifle"
+     ],
+     "packages": {
+      "arc-rifle": [
+       {
+        "item": "arc-rifle",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "arc-rifle": "Arc rifle",
+      "": "Radium carbine"
+     }
+    },
+    {
+     "id": "o4",
+     "label": {
+      "en": "Skitarii Vanguard: Radium carbine",
+      "es": "Skitarii Vanguard: Radium carbine"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "plasma-caliver"
+     ],
+     "packages": {
+      "plasma-caliver": [
+       {
+        "item": "plasma-caliver",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "plasma-caliver": "Plasma caliver",
+      "": "Radium carbine"
+     }
+    },
+    {
+     "id": "o5",
+     "label": {
+      "en": "Skitarii Vanguard: Radium carbine",
+      "es": "Skitarii Vanguard: Radium carbine"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "radium-carbine",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "transuranic-arquebus"
+     ],
+     "packages": {
+      "transuranic-arquebus": [
+       {
+        "item": "transuranic-arquebus",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "transuranic-arquebus": "Transuranic arquebus",
+      "": "Radium carbine"
+     }
+    },
+    {
+     "id": "o6",
+     "label": {
+      "en": "Skitarii Vanguard: optional",
+      "es": "Skitarii Vanguard: opcional"
+     },
+     "type": "swap",
+     "replaces": [],
+     "choices": [
+      "",
+      "gear:enhanced-data-tether",
+      "gear:omnispex"
+     ],
+     "packages": {
+      "gear:enhanced-data-tether": [
+       {
+        "item": "gear:enhanced-data-tether",
+        "n": 1
+       }
+      ],
+      "gear:omnispex": [
+       {
+        "item": "gear:omnispex",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Skitarii Vanguard",
+     "labels": {
+      "gear:enhanced-data-tether": "Enhanced data tether",
+      "gear:omnispex": "Omnispex",
+      "": "—"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "radium-carbine"
+   ]
+  },
+  {
+   "id": "corpuscarii-electro-priests",
+   "name": {
+    "en": "Corpuscarii Electro-priests",
+    "es": "Corpuscarii Electro-priests"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "CULT MECHANICUS",
+    "CORPUSCARII",
+    "ELECTRO-PRIESTS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "electrostatic-gauntlets",
+     "name": {
+      "en": "Electrostatic gauntlets"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "3+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "electrostatic-gauntlets-melee",
+     "name": {
+      "en": "Electrostatic gauntlets"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Electro-shock"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this unit has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks. Until the end of your opponent’s next turn, that enemy unit is shocked. While a unit is shocked, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Corpuscarii-Electro-priests",
+   "composition": [
+    "5-10 Corpuscarii Electro-Priests"
+   ],
+   "equipped": [
+    "Every model is equipped with: electrostatic gauntlets."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "electrostatic-gauntlets": 5,
+      "electrostatic-gauntlets-melee": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "electrostatic-gauntlets": 10,
+      "electrostatic-gauntlets-melee": 10
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "electrostatic-gauntlets",
+    "electrostatic-gauntlets-melee"
+   ]
+  },
+  {
+   "id": "fulgurite-electro-priests",
+   "name": {
+    "en": "Fulgurite Electro-priests",
+    "es": "Fulgurite Electro-priests"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "CULT MECHANICUS",
+    "ELECTRO-PRIESTS",
+    "FULGURITE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "3",
+     "Sv": "7+",
+     "W": "1",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "electroleech-stave",
+     "name": {
+      "en": "Electroleech stave"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "3+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Electro-infusion"
+     },
+     "text": {
+      "en": "While a CHARACTER model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Feel No Pain 5+"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Fulgurite-Electro-priests",
+   "composition": [
+    "5-10 Fulgurite Electro-Priests"
+   ],
+   "equipped": [
+    "Every model is equipped with: electroleech stave."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "electroleech-stave": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "electroleech-stave": 10
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "electroleech-stave"
+   ]
+  },
+  {
+   "id": "hastarii-exterminators",
+   "name": {
+    "en": "Hastarii Exterminators",
+    "es": "Hastarii Exterminators"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "SKITARII",
+    "HASTARII",
+    "EXTERMINATORS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "hastarii-arc-blaster",
+     "name": {
+      "en": "Hastarii arc blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "eradication-caster",
+     "name": {
+      "en": "Eradication caster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 4+"
+       ],
+       "mode": {
+        "en": "dissipated"
+       }
+      },
+      {
+       "range": "15\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 4+"
+       ],
+       "mode": {
+        "en": "focused"
+       }
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close-combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Broad-spectrum Targeting Augurs"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes an attack with an eradication caster that targets a unit (excluding MONSTER and VEHICLE units), that attack has the [SUSTAINED HITS 1] ability."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Hastarii-Exterminators",
+   "composition": [
+    "1 Hastarii Exterminator Alpha",
+    "4 Hastarii Exterminators"
+   ],
+   "equipped": [
+    "The Hastarii Exterminator Alpha is equipped with: Hastarii arc blaster; eradication caster; power weapon.",
+    "Every Hastarii Exterminator is equipped with: Hastarii arc blaster; eradication caster; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "hastarii-arc-blaster": 5,
+      "eradication-caster": 5,
+      "power-weapon": 1,
+      "close-combat-weapon": 4
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "close-combat-weapon",
+    "eradication-caster",
+    "hastarii-arc-blaster",
+    "power-weapon"
+   ]
+  },
+  {
+   "id": "hastarii-fusiliers",
+   "name": {
+    "en": "Hastarii Fusiliers",
+    "es": "Hastarii Fusiliers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "SKITARII",
+    "HASTARII",
+    "FUSILIERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "4",
+     "Sv": "3+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "neutron-fusil",
+     "name": {
+      "en": "Neutron fusil"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "hastarii-phosphor-blaster",
+     "name": {
+      "en": "Hastarii phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close-combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Monocular Targeting Helms"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes an attack with a neutron fusil against a MONSTER or VEHICLE unit, that attack has the [IGNORES COVER] ability."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Hastarii-Fusiliers",
+   "composition": [
+    "1 Hastarii Fusilier Alpha",
+    "4 Hastarii Fusiliers"
+   ],
+   "equipped": [
+    "The Hastarii Fusilier Alpha is equipped with: neutron fusil; Hastarii phosphor blaster; power weapon.",
+    "Every Hastarii Fusiller is equipped with: neutron fusil; Hastarii phosphor blaster; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "neutron-fusil": 2,
+      "hastarii-phosphor-blaster": 2,
+      "power-weapon": 1,
+      "close-combat-weapon": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "close-combat-weapon",
+    "hastarii-phosphor-blaster",
+    "neutron-fusil",
+    "power-weapon"
+   ]
+  },
+  {
+   "id": "kataphron-breachers",
+   "name": {
+    "en": "Kataphron Breachers",
+    "es": "Kataphron Breachers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "CULT MECHANICUS",
+    "KATAPHRON",
+    "BREACHERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "7",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-arc-rifle",
+     "name": {
+      "en": "Heavy arc rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Rapid Fire 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "torsion-cannon",
+     "name": {
+      "en": "Torsion cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "D3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 2+",
+        "Blast"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "arc-claw",
+     "name": {
+      "en": "Arc claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-vehicle 4+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hydraulic-claw",
+     "name": {
+      "en": "Hydraulic claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Breaching Command"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. While this unit is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, you can re-roll the Hit roll instead."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Kataphron-Breachers",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their heavy arc rifle replaced with 1 torsion cannon.",
+     "choices": []
+    },
+    {
+     "text": "Any number of models can each have their arc claw replaced with 1 hydraulic claw.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "3-6 Kataphron Breachers"
+   ],
+   "equipped": [
+    "Every model is equipped with: heavy arc rifle; arc claw."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "heavy-arc-rifle": 3,
+      "arc-claw": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "heavy-arc-rifle": 6,
+      "arc-claw": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Heavy arc rifle",
+      "es": "sustituir Heavy arc rifle"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "heavy-arc-rifle",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "torsion-cannon"
+     ],
+     "packages": {
+      "torsion-cannon": [
+       {
+        "item": "torsion-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "torsion-cannon": "Torsion cannon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "replace Arc claw",
+      "es": "sustituir Arc claw"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "arc-claw",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "hydraulic-claw"
+     ],
+     "packages": {
+      "hydraulic-claw": [
+       {
+        "item": "hydraulic-claw",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "hydraulic-claw": "Hydraulic claw"
+     }
+    }
+   ],
+   "loadout": [
+    "arc-claw",
+    "heavy-arc-rifle"
+   ]
+  },
+  {
+   "id": "kataphron-destroyers",
+   "name": {
+    "en": "Kataphron Destroyers",
+    "es": "Kataphron Destroyers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "CULT MECHANICUS",
+    "KATAPHRON",
+    "DESTROYERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "5\"",
+     "T": "6",
+     "Sv": "3+",
+     "W": "3",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "cognis-flamer",
+     "name": {
+      "en": "Cognis flamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-grav-cannon",
+     "name": {
+      "en": "Heavy grav-cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "4",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-vehicle 2+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kataphron-plasma-culverin",
+     "name": {
+      "en": "Kataphron plasma culverin"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "4",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [],
+       "mode": {
+        "en": "standard"
+       }
+      },
+      {
+       "range": "36\"",
+       "A": "4",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-3",
+       "D": "2",
+       "keywords": [
+        "Hazardous"
+       ],
+       "mode": {
+        "en": "supercharge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "phosphor-blaster",
+     "name": {
+      "en": "Phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Sentinel Directives"
+     },
+     "text": {
+      "en": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Kataphron-Destroyers",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their heavy grav-cannon replaced with 1 Kataphron plasma culverin.",
+     "choices": []
+    },
+    {
+     "text": "Any number of models can each have their phosphor blaster replaced with 1 cognis flamer.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "3-6 Kataphron Destroyers"
+   ],
+   "equipped": [
+    "Every model is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "heavy-grav-cannon": 3,
+      "phosphor-blaster": 3,
+      "close-combat-weapon": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "heavy-grav-cannon": 6,
+      "phosphor-blaster": 6,
+      "close-combat-weapon": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Heavy grav-cannon",
+      "es": "sustituir Heavy grav-cannon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "heavy-grav-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "kataphron-plasma-culverin"
+     ],
+     "packages": {
+      "kataphron-plasma-culverin": [
+       {
+        "item": "kataphron-plasma-culverin",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "kataphron-plasma-culverin": "Kataphron plasma culverin"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "replace Phosphor blaster",
+      "es": "sustituir Phosphor blaster"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "phosphor-blaster",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "cognis-flamer"
+     ],
+     "packages": {
+      "cognis-flamer": [
+       {
+        "item": "cognis-flamer",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 3,
+      "6": 6
+     },
+     "labels": {
+      "cognis-flamer": "Cognis flamer"
+     }
+    }
+   ],
+   "loadout": [
+    "close-combat-weapon",
+    "heavy-grav-cannon",
+    "phosphor-blaster"
+   ]
+  },
+  {
+   "id": "pteraxii-skystalkers",
+   "name": {
+    "en": "Pteraxii Skystalkers",
+    "es": "Pteraxii Skystalkers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "FLY",
+    "JUMP PACK",
+    "GRENADES",
+    "IMPERIUM",
+    "SKITARII",
+    "PTERAXII",
+    "SKYSTALKERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "flechette-blaster",
+     "name": {
+      "en": "Flechette blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "5",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flechette-carbine",
+     "name": {
+      "en": "Flechette carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "6",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "taser-goad",
+     "name": {
+      "en": "Taser goad"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Ride the Thermals"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of one or more enemy units, it can do one of the following: Make a Normal move of up to 6\". Make a Normal move of up to 12\", provided every model in this unit ends that move wholly within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units. In either case, if it does, until the end of the turn, this unit is not eligible to declare a charge."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Pteraxii-Skystalkers",
+   "composition": [
+    "1 Pteraxii Skystalker Alpha",
+    "4-9 Pteraxii Skystalkers"
+   ],
+   "equipped": [
+    "The Pteraxii Skystalker Alpha model is equipped with: flechette blaster; taser goad.",
+    "Every Pteraxii Skystalker model is equipped with: flechette carbine; close combat weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "flechette-blaster": 1,
+      "taser-goad": 1,
+      "flechette-carbine": 4,
+      "close-combat-weapon": 4
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "flechette-blaster": 1,
+      "taser-goad": 1,
+      "flechette-carbine": 9,
+      "close-combat-weapon": 9
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "close-combat-weapon",
+    "flechette-blaster",
+    "flechette-carbine",
+    "taser-goad"
+   ]
+  },
+  {
+   "id": "pteraxii-sterylizors",
+   "name": {
+    "en": "Pteraxii Sterylizors",
+    "es": "Pteraxii Sterylizors"
+   },
+   "keywords": [
+    "INFANTRY",
+    "FLY",
+    "JUMP PACK",
+    "IMPERIUM",
+    "SKITARII",
+    "PTERAXII",
+    "STERYLIZORS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "flechette-blaster",
+     "name": {
+      "en": "Flechette blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "5",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phosphor-torch",
+     "name": {
+      "en": "Phosphor torch"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pteraxii-talons",
+     "name": {
+      "en": "Pteraxii talons"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "taser-goad",
+     "name": {
+      "en": "Taser goad"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Searing Conflagration"
+     },
+     "text": {
+      "en": "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, each time such an attack targets such a unit, you can re-roll the Wound roll instead."
+     }
+    }
+   ],
+   "core": [
+    "Deep Strike"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Pteraxii-Sterylizors",
+   "composition": [
+    "1 Pteraxii Sterylizor Alpha",
+    "4-9 Pteraxii Sterylizors"
+   ],
+   "equipped": [
+    "The Pteraxii Sterylizor Alpha model is equipped with: flechette blaster; Pteraxii talons; taser goad.",
+    "Every Pteraxii Sterylizor model is equipped with: phosphor torch; Pteraxii talons."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "flechette-blaster": 1,
+      "pteraxii-talons": 5,
+      "taser-goad": 1,
+      "phosphor-torch": 4
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "flechette-blaster": 1,
+      "pteraxii-talons": 10,
+      "taser-goad": 1,
+      "phosphor-torch": 9
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "flechette-blaster",
+    "phosphor-torch",
+    "pteraxii-talons",
+    "taser-goad"
+   ]
+  },
+  {
+   "id": "servitor-battleclade",
+   "name": {
+    "en": "Servitor Battleclade",
+    "es": "Servitor Battleclade"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "CULT MECHANICUS",
+    "SERVITOR BATTLECLADE",
+    "TECH-PRIEST"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "name": {
+      "en": "Combat Servitors and Gun Servitors(⌀25mmgun Servitors 32mm)"
+     },
+     "inv": "6+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-arc-rifle",
+     "name": {
+      "en": "Heavy arc rifle"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "30\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-bolter",
+     "name": {
+      "en": "Heavy bolter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Heavy",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "incendine-igniter",
+     "name": {
+      "en": "Incendine igniter"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meltagun",
+     "name": {
+      "en": "Meltagun"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-4",
+       "D": "D6",
+       "keywords": [
+        "Melta 2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phosphor-blaster",
+     "name": {
+      "en": "Phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Rapid Fire 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dataspikes",
+     "name": {
+      "en": "Dataspikes"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "servo-claw",
+     "name": {
+      "en": "Servo-claw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "2",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Network Override"
+     },
+     "text": {
+      "en": "While this unit contains one or more Tech-Priest models, this unit is: Eligible to perform an Action in a turn in which it Advanced. Eligible to shoot in a turn in which it started an Action."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Servitor-Battleclade",
+   "wargearOptions": [
+    {
+     "text": "1 Combat Servitor model can have its 1 phosphor blaster replaced with 1 meltagun.",
+     "choices": []
+    },
+    {
+     "text": "Up to 3 Combat Servitor models can each have their 1 phosphor blaster replaced with 1 incendine igniter.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Servitor Underseer",
+    "2 Gun Servitors",
+    "6 Combat Servitors"
+   ],
+   "equipped": [
+    "The Servitor Underseer is equipped with: Mechanicus pistol; dataspikes.",
+    "1 Gun Servitor is equipped with: heavy arc rifle; servo-claw.",
+    "1 Gun Servitor is equipped with: heavy bolter; servo-claw.",
+    "Every Combat Servitor is equipped with: phosphor blaster; servo-claw."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 9,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "dataspikes": 1,
+      "heavy-arc-rifle": 1,
+      "servo-claw": 8,
+      "heavy-bolter": 1,
+      "phosphor-blaster": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Combat Servitor model: Phosphor blaster",
+      "es": "Combat Servitor model: Phosphor blaster"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "phosphor-blaster",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "meltagun"
+     ],
+     "packages": {
+      "meltagun": [
+       {
+        "item": "meltagun",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Combat Servitor model",
+     "labels": {
+      "meltagun": "Meltagun",
+      "": "Phosphor blaster"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Combat Servitor models: replace Phosphor blaster",
+      "es": "Combat Servitor models: sustituir Phosphor blaster"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "phosphor-blaster",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "incendine-igniter"
+     ],
+     "packages": {
+      "incendine-igniter": [
+       {
+        "item": "incendine-igniter",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "9": 3
+     },
+     "owner": "Combat Servitor models",
+     "labels": {
+      "incendine-igniter": "Incendine igniter"
+     }
+    }
+   ],
+   "loadout": [
+    "dataspikes",
+    "heavy-arc-rifle",
+    "heavy-bolter",
+    "mechanicus-pistol",
+    "phosphor-blaster",
+    "servo-claw"
+   ]
+  },
+  {
+   "id": "sicarian-infiltrators",
+   "name": {
+    "en": "Sicarian Infiltrators",
+    "es": "Sicarian Infiltrators"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "SKITARII",
+    "SICARIAN",
+    "INFILTRATORS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "flechette-blaster",
+     "name": {
+      "en": "Flechette blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "5",
+       "skill": "4+",
+       "S": "3",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stubcarbine",
+     "name": {
+      "en": "Stubcarbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power-weapon",
+     "name": {
+      "en": "Power weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-2",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "taser-goad",
+     "name": {
+      "en": "Taser goad"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Voices in the Code"
+     },
+     "text": {
+      "en": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test."
+     }
+    },
+    {
+     "name": {
+      "en": "Neurostatic Interference (Aura)"
+     },
+     "text": {
+      "en": "While an enemy unit is within 6\" of this unit, each time a Battle-shock or Leadership test is taken for that unit, subtract 1 from that test. While this unit is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 2 from that test instead."
+     }
+    }
+   ],
+   "core": [
+    "Infiltrators",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sicarian-Infiltrators",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their stubcarbine and power weapon replaced with 1 flechette blaster and 1 taser goad.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sicarian Infiltrator Princeps",
+    "4-9 Sicarian Infiltrators"
+   ],
+   "equipped": [
+    "Every model is equipped with: stubcarbine; power weapon."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "stubcarbine": 5,
+      "power-weapon": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "stubcarbine": 10,
+      "power-weapon": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Stubcarbine + Power weapon",
+      "es": "sustituir Stubcarbine + Power weapon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "stubcarbine",
+       "n": 1
+      },
+      {
+       "item": "power-weapon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "flechette-blaster+taser-goad"
+     ],
+     "packages": {
+      "flechette-blaster+taser-goad": [
+       {
+        "item": "flechette-blaster",
+        "n": 1
+       },
+       {
+        "item": "taser-goad",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 5,
+      "10": 10
+     },
+     "labels": {
+      "flechette-blaster+taser-goad": "Flechette blaster + Taser goad"
+     }
+    }
+   ],
+   "loadout": [
+    "power-weapon",
+    "stubcarbine"
+   ]
+  },
+  {
+   "id": "sicarian-ruststalkers",
+   "name": {
+    "en": "Sicarian Ruststalkers",
+    "es": "Sicarian Ruststalkers"
+   },
+   "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "SKITARII",
+    "SICARIAN",
+    "RUSTSTALKERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "1",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "transonic-blades",
+     "name": {
+      "en": "Transonic blades"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "transonic-blades-and-chordclaw",
+     "name": {
+      "en": "Transonic blades and chordclaw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "5",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Devastating Wounds",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "transonic-razor-and-chordclaw",
+     "name": {
+      "en": "Transonic razor and chordclaw"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Precision"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Optimised Gait"
+     },
+     "text": {
+      "en": "Add 1 to Advance and Charge rolls made for this unit. While this unit is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, add 2 to Advance and Charge rolls made for this unit instead."
+     }
+    }
+   ],
+   "core": [
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sicarian-Ruststalkers",
+   "wargearOptions": [
+    {
+     "text": "Any number of Sicarian Ruststalkers can each have their transonic razor and chordclaw replaced with 1 transonic blades.",
+     "choices": []
+    },
+    {
+     "text": "The Sicarian Ruststalker Princeps’ transonic razor and chordclaw can be replaced with 1 transonic blades and chordclaw.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Sicarian Ruststalker Princeps",
+    "4-9 Sicarian Ruststalkers"
+   ],
+   "equipped": [
+    "Every model is equipped with: transonic razor and chordclaw."
+   ],
+   "role": "infantry",
+   "sizes": [
+    {
+     "models": 5,
+     "loadout": {
+      "transonic-razor-and-chordclaw": 5
+     }
+    },
+    {
+     "models": 10,
+     "loadout": {
+      "transonic-razor-and-chordclaw": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Sicarian Ruststalkers: replace Transonic razor and chordclaw",
+      "es": "Sicarian Ruststalkers: sustituir Transonic razor and chordclaw"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "transonic-razor-and-chordclaw",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "transonic-blades"
+     ],
+     "packages": {
+      "transonic-blades": [
+       {
+        "item": "transonic-blades",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "5": 4,
+      "10": 9
+     },
+     "owner": "Sicarian Ruststalkers",
+     "labels": {
+      "transonic-blades": "Transonic blades"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "Sicarian Ruststalker Princeps: Transonic razor and chordclaw",
+      "es": "Sicarian Ruststalker Princeps: Transonic razor and chordclaw"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "transonic-razor-and-chordclaw",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "transonic-blades-and-chordclaw"
+     ],
+     "packages": {
+      "transonic-blades-and-chordclaw": [
+       {
+        "item": "transonic-blades-and-chordclaw",
+        "n": 1
+       }
+      ]
+     },
+     "owner": "Sicarian Ruststalker Princeps",
+     "labels": {
+      "transonic-blades-and-chordclaw": "Transonic blades and chordclaw",
+      "": "Transonic razor and chordclaw"
+     }
+    }
+   ],
+   "loadout": [
+    "transonic-razor-and-chordclaw"
+   ]
+  },
+  {
+   "id": "serberys-raiders",
+   "name": {
+    "en": "Serberys Raiders",
+    "es": "Serberys Raiders"
+   },
+   "keywords": [
+    "MOUNTED",
+    "IMPERIUM",
+    "SKITARII",
+    "SERBERYS RAIDERS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "galvanic-carbine",
+     "name": {
+      "en": "Galvanic carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cavalry-sabre-and-clawed-limbs",
+     "name": {
+      "en": "Cavalry sabre and clawed limbs"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "4",
+       "AP": "-1",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Tactica Obliqua"
+     },
+     "text": {
+      "en": "In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following: Make a Normal move of up to D6\" Make a Normal move of up to 6\" provided every model in this unit ends that move wholly within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units."
+     }
+    }
+   ],
+   "core": [
+    "Scouts 9\""
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Serberys-Raiders",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Enhanced data-tether"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "1 Serberys Raider can be equipped with 1 enhanced data-tether.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Serberys Raider Alpha",
+    "2-5 Serberys Raiders"
+   ],
+   "equipped": [
+    "The Serberys Raider Alpha model is equipped with: Mechanicus pistol; galvanic carbine; cavalry sabre and clawed limbs.",
+    "Every Serberys Raider model is equipped with: galvanic carbine; cavalry sabre and clawed limbs."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "galvanic-carbine": 3,
+      "cavalry-sabre-and-clawed-limbs": 3
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "galvanic-carbine": 6,
+      "cavalry-sabre-and-clawed-limbs": 6
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Serberys Raider: add Enhanced data tether",
+      "es": "Serberys Raider: añadir Enhanced data tether"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:enhanced-data-tether",
+     "packages": {
+      "gear:enhanced-data-tether": [
+       {
+        "item": "gear:enhanced-data-tether",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 1
+     },
+     "owner": "Serberys Raider",
+     "labels": {
+      "gear:enhanced-data-tether": "Enhanced data tether"
+     }
+    }
+   ],
+   "loadout": [
+    "cavalry-sabre-and-clawed-limbs",
+    "galvanic-carbine",
+    "mechanicus-pistol"
+   ]
+  },
+  {
+   "id": "serberys-sulphurhounds",
+   "name": {
+    "en": "Serberys Sulphurhounds",
+    "es": "Serberys Sulphurhounds"
+   },
+   "keywords": [
+    "MOUNTED",
+    "IMPERIUM",
+    "SKITARII",
+    "SERBERYS SULPHURHOUNDS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "4",
+     "Sv": "4+",
+     "W": "2",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "mechanicus-pistol",
+     "name": {
+      "en": "Mechanicus pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Pistol",
+        "Devastating Wounds"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phosphor-blast-carbine",
+     "name": {
+      "en": "Phosphor blast carbine"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "D6",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Ignores Cover"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phosphor-pistol",
+     "name": {
+      "en": "Phosphor pistol"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sulphur-breath",
+     "name": {
+      "en": "Sulphur breath"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "9\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "3",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cavalry-arc-maul",
+     "name": {
+      "en": "Cavalry arc maul"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Anti-vehicle 4+",
+        "Devastating Wounds",
+        "Extra Attacks"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "clawed-limbs",
+     "name": {
+      "en": "Clawed limbs"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Line-breakers"
+     },
+     "text": {
+      "en": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units. For each 4+, that enemy unit suffers 1 mortal wound."
+     }
+    }
+   ],
+   "core": [],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Serberys-Sulphurhounds",
+   "wargearOptions": [
+    {
+     "text": "For every 3 models in this unit, 1 Serberys Sulphurhound’s 2 phosphor pistols can be replaced with 1 phosphor blast carbine and 1 phosphor pistol.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Serberys Sulphurhound Alpha",
+    "2-5 Serberys Sulphurhounds"
+   ],
+   "equipped": [
+    "The Serberys Sulphurhound Alpha model is equipped with: Mechanicus pistol; sulphur breath; cavalry arc maul; clawed limbs.",
+    "Every Serberys Sulphurhound model is equipped with: 2 phosphor pistols; sulphur breath; clawed limbs."
+   ],
+   "role": "mounted",
+   "sizes": [
+    {
+     "models": 3,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "sulphur-breath": 3,
+      "cavalry-arc-maul": 1,
+      "clawed-limbs": 3,
+      "phosphor-pistol": 4
+     }
+    },
+    {
+     "models": 6,
+     "loadout": {
+      "mechanicus-pistol": 1,
+      "sulphur-breath": 6,
+      "cavalry-arc-maul": 1,
+      "clawed-limbs": 6,
+      "phosphor-pistol": 10
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Serberys Sulphurhound: replace 2× Phosphor pistol",
+      "es": "Serberys Sulphurhound: sustituir 2× Phosphor pistol"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "phosphor-pistol",
+       "n": 2
+      }
+     ],
+     "choices": [
+      "phosphor-blast-carbine+phosphor-pistol"
+     ],
+     "packages": {
+      "phosphor-blast-carbine+phosphor-pistol": [
+       {
+        "item": "phosphor-blast-carbine",
+        "n": 1
+       },
+       {
+        "item": "phosphor-pistol",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "3": 1,
+      "6": 2
+     },
+     "owner": "Serberys Sulphurhound",
+     "labels": {
+      "phosphor-blast-carbine+phosphor-pistol": "Phosphor blast carbine + Phosphor pistol"
+     }
+    }
+   ],
+   "loadout": [
+    "cavalry-arc-maul",
+    "clawed-limbs",
+    "mechanicus-pistol",
+    "phosphor-pistol",
+    "sulphur-breath"
+   ]
+  },
+  {
+   "id": "ironstrider-ballistarii",
+   "name": {
+    "en": "Ironstrider Ballistarii",
+    "es": "Ironstrider Ballistarii"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "SMOKE",
+    "IMPERIUM",
+    "SKITARII",
+    "IRONSTRIDER BALLISTARII"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "7",
+     "Sv": "3+",
+     "W": "7",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "twin-cognis-autocannon",
+     "name": {
+      "en": "Twin cognis autocannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "4",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-1",
+       "D": "3",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-cognis-lascannon",
+     "name": {
+      "en": "Twin cognis lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ironstrider-feet",
+     "name": {
+      "en": "Ironstrider feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Elevated Strider"
+     },
+     "text": {
+      "en": "This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Broad Spectrum Data-tether"
+     },
+     "text": {
+      "en": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Ironstrider-Ballistarii",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their twin cognis autocannon replaced with 1 twin cognis lascannon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1-3 Ironstrider Ballistarii"
+   ],
+   "equipped": [
+    "Every model is equipped with: twin cognis autocannon; Ironstrider feet."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "twin-cognis-autocannon": 1,
+      "ironstrider-feet": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "twin-cognis-autocannon": 2,
+      "ironstrider-feet": 2
+     }
+    },
+    {
+     "models": 3,
+     "loadout": {
+      "twin-cognis-autocannon": 3,
+      "ironstrider-feet": 3
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Twin cognis autocannon",
+      "es": "sustituir Twin cognis autocannon"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "twin-cognis-autocannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "twin-cognis-lascannon"
+     ],
+     "packages": {
+      "twin-cognis-lascannon": [
+       {
+        "item": "twin-cognis-lascannon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1,
+      "2": 2,
+      "3": 3
+     },
+     "labels": {
+      "twin-cognis-lascannon": "Twin cognis lascannon"
+     }
+    }
+   ],
+   "loadout": [
+    "ironstrider-feet",
+    "twin-cognis-autocannon"
+   ]
+  },
+  {
+   "id": "kastelan-robots",
+   "name": {
+    "en": "Kastelan Robots",
+    "es": "Kastelan Robots"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "LEGIO CYBERNETICA",
+    "KASTELAN ROBOTS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "6\"",
+     "T": "9",
+     "Sv": "2+",
+     "W": "7",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "heavy-phosphor-blaster",
+     "name": {
+      "en": "Heavy phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "incendine-combustor",
+     "name": {
+      "en": "Incendine combustor"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "12\"",
+       "A": "D6",
+       "skill": "-",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Torrent"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kastelan-phosphor-blaster",
+     "name": {
+      "en": "Kastelan phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-kastelan-phosphor-blaster",
+     "name": {
+      "en": "Twin Kastelan phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "24\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "1",
+       "keywords": [
+        "Ignores Cover",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "close-combat-weapon",
+     "name": {
+      "en": "Close combat weapon"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "kastelan-fist",
+     "name": {
+      "en": "Kastelan fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-2",
+       "D": "3",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "twin-kastelan-fist",
+     "name": {
+      "en": "Twin Kastelan fist"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Robotic Bodyguard"
+     },
+     "text": {
+      "en": "While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability."
+     }
+    },
+    {
+     "name": {
+      "en": "Repulsor Grid"
+     },
+     "text": {
+      "en": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Kastelan-Robots",
+   "wargearOptions": [
+    {
+     "text": "Any number of models can each have their twin Kastelan fist replaced with one of the following:",
+     "choices": [
+      "1 Kastelan phosphor blaster and 1 Kastelan fist",
+      "1 twin Kastelan phosphor blaster and 1 close combat weapon"
+     ]
+    },
+    {
+     "text": "Any number of models can each have their incendine combustor replaced with 1 heavy phosphor blaster.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "2-4 Kastelan Robots"
+   ],
+   "equipped": [
+    "Every model is equipped with: incendine combustor; twin Kastelan fist."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 2,
+     "loadout": {
+      "incendine-combustor": 2,
+      "twin-kastelan-fist": 2
+     }
+    },
+    {
+     "models": 4,
+     "loadout": {
+      "incendine-combustor": 4,
+      "twin-kastelan-fist": 4
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "replace Twin Kastelan fist",
+      "es": "sustituir Twin Kastelan fist"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "twin-kastelan-fist",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "kastelan-phosphor-blaster+kastelan-fist",
+      "twin-kastelan-phosphor-blaster+close-combat-weapon"
+     ],
+     "packages": {
+      "kastelan-phosphor-blaster+kastelan-fist": [
+       {
+        "item": "kastelan-phosphor-blaster",
+        "n": 1
+       },
+       {
+        "item": "kastelan-fist",
+        "n": 1
+       }
+      ],
+      "twin-kastelan-phosphor-blaster+close-combat-weapon": [
+       {
+        "item": "twin-kastelan-phosphor-blaster",
+        "n": 1
+       },
+       {
+        "item": "close-combat-weapon",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "2": 2,
+      "4": 4
+     },
+     "labels": {
+      "kastelan-phosphor-blaster+kastelan-fist": "Kastelan phosphor blaster + Kastelan fist",
+      "twin-kastelan-phosphor-blaster+close-combat-weapon": "Twin Kastelan phosphor blaster + Close combat weapon"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "replace Incendine combustor",
+      "es": "sustituir Incendine combustor"
+     },
+     "type": "pool",
+     "replaces": [
+      {
+       "item": "incendine-combustor",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "heavy-phosphor-blaster"
+     ],
+     "packages": {
+      "heavy-phosphor-blaster": [
+       {
+        "item": "heavy-phosphor-blaster",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "2": 2,
+      "4": 4
+     },
+     "labels": {
+      "heavy-phosphor-blaster": "Heavy phosphor blaster"
+     }
+    }
+   ],
+   "loadout": [
+    "incendine-combustor",
+    "twin-kastelan-fist"
+   ]
+  },
+  {
+   "id": "onager-dunecrawler",
+   "name": {
+    "en": "Onager Dunecrawler",
+    "es": "Onager Dunecrawler"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "SKITARII",
+    "SMOKE",
+    "ONAGER DUNECRAWLER"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "8\"",
+     "T": "10",
+     "Sv": "2+",
+     "W": "11",
+     "Ld": "7+",
+     "OC": "3",
+     "inv": "4+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "cognis-heavy-stubber",
+     "name": {
+      "en": "Cognis heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "daedalus-missile-launcher",
+     "name": {
+      "en": "Daedalus missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "2",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-2",
+       "D": "D6+1",
+       "keywords": [
+        "Anti-fly 2+"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "eradication-beamer",
+     "name": {
+      "en": "Eradication beamer"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3D3",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Blast",
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "dissipated"
+       }
+      },
+      {
+       "range": "18\"",
+       "A": "3D3",
+       "skill": "4+",
+       "S": "10",
+       "AP": "-3",
+       "D": "3",
+       "keywords": [
+        "Blast",
+        "Sustained Hits 1"
+       ],
+       "mode": {
+        "en": "focused"
+       }
+      }
+     ]
+    },
+    {
+     "id": "neutron-laser",
+     "name": {
+      "en": "Neutron laser"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "16",
+       "AP": "-4",
+       "D": "D6+2",
+       "keywords": [
+        "Heavy"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "icarus-array",
+     "name": {
+      "en": "Icarus array"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "6",
+       "skill": "4+",
+       "S": "8",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Anti-fly 4+",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-onager-heavy-phosphor-blaster",
+     "name": {
+      "en": "Twin Onager heavy phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "12",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dunecrawler-legs",
+     "name": {
+      "en": "Dunecrawler legs"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Emanatus Force Field (Aura)"
+     },
+     "text": {
+      "en": "While a friendly ADEPTUS MECHANICUS BATTLELINE model is wholly within 6\" of this model, that BATTLELINE model has a 4+ invulnerable save against ranged attacks."
+     }
+    },
+    {
+     "name": {
+      "en": "Scuttling Walker"
+     },
+     "text": {
+      "en": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly MONSTER and VEHICLE models and sections of terrain features that are 4\" or less in height."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Onager-Dunecrawler",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Broad spectrum data-tether"
+     },
+     "text": {
+      "en": "The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s eradication beamer can be replaced with one of the following:",
+     "choices": [
+      "1 daedalus missile launcher and 1 Icarus array",
+      "1 neutron laser and 1 cognis heavy stubber",
+      "1 twin Onager heavy phosphor blaster"
+     ]
+    },
+    {
+     "text": "This model can be equipped with 1 additional cognis heavy stubber.",
+     "choices": []
+    },
+    {
+     "text": "This model can be equipped with 1 broad spectrum data-tether.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Onager Dunecrawler"
+   ],
+   "equipped": [
+    "This model is equipped with: eradication beamer; Dunecrawler legs."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "eradication-beamer": 1,
+      "dunecrawler-legs": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Eradication beamer",
+      "es": "Eradication beamer"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "eradication-beamer",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "daedalus-missile-launcher+icarus-array",
+      "neutron-laser+cognis-heavy-stubber",
+      "twin-onager-heavy-phosphor-blaster"
+     ],
+     "packages": {
+      "daedalus-missile-launcher+icarus-array": [
+       {
+        "item": "daedalus-missile-launcher",
+        "n": 1
+       },
+       {
+        "item": "icarus-array",
+        "n": 1
+       }
+      ],
+      "neutron-laser+cognis-heavy-stubber": [
+       {
+        "item": "neutron-laser",
+        "n": 1
+       },
+       {
+        "item": "cognis-heavy-stubber",
+        "n": 1
+       }
+      ],
+      "twin-onager-heavy-phosphor-blaster": [
+       {
+        "item": "twin-onager-heavy-phosphor-blaster",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "daedalus-missile-launcher+icarus-array": "Daedalus missile launcher + Icarus array",
+      "neutron-laser+cognis-heavy-stubber": "Neutron laser + Cognis heavy stubber",
+      "twin-onager-heavy-phosphor-blaster": "Twin Onager heavy phosphor blaster",
+      "": "Eradication beamer"
+     }
+    },
+    {
+     "id": "o2",
+     "label": {
+      "en": "add Cognis heavy stubber",
+      "es": "añadir Cognis heavy stubber"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "cognis-heavy-stubber",
+     "packages": {
+      "cognis-heavy-stubber": [
+       {
+        "item": "cognis-heavy-stubber",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "cognis-heavy-stubber": "Cognis heavy stubber"
+     }
+    },
+    {
+     "id": "o3",
+     "label": {
+      "en": "add Broad spectrum data tether",
+      "es": "añadir Broad spectrum data tether"
+     },
+     "type": "toggle",
+     "replaces": [],
+     "gives": "gear:broad-spectrum-data-tether",
+     "packages": {
+      "gear:broad-spectrum-data-tether": [
+       {
+        "item": "gear:broad-spectrum-data-tether",
+        "n": 1
+       }
+      ]
+     },
+     "maxBySize": {
+      "1": 1
+     },
+     "labels": {
+      "gear:broad-spectrum-data-tether": "Broad spectrum data tether"
+     }
+    }
+   ],
+   "loadout": [
+    "dunecrawler-legs",
+    "eradication-beamer"
+   ]
+  },
+  {
+   "id": "skorpius-disintegrator",
+   "name": {
+    "en": "Skorpius Disintegrator",
+    "es": "Skorpius Disintegrator"
+   },
+   "keywords": [
+    "VEHICLE",
+    "IMPERIUM",
+    "FRAME",
+    "SKITARII",
+    "SMOKE",
+    "SKORPIUS DISINTEGRATOR"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "10",
+     "Sv": "2+",
+     "W": "12",
+     "Ld": "7+",
+     "OC": "3"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "belleros-energy-cannon",
+     "name": {
+      "en": "Belleros energy cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "2D6",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "1",
+       "keywords": [
+        "Blast",
+        "Indirect Fire"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cognis-heavy-stubber",
+     "name": {
+      "en": "Cognis heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disruptor-missile-launcher",
+     "name": {
+      "en": "Disruptor missile launcher"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "9",
+       "AP": "-2",
+       "D": "D6",
+       "keywords": [
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ferrumite-cannon",
+     "name": {
+      "en": "Ferrumite cannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": []
+      }
+     ]
+    },
+    {
+     "id": "armoured-hull",
+     "name": {
+      "en": "Armoured hull"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Broad Spectrum Data-tether"
+     },
+     "text": {
+      "en": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Blistering Salvoes"
+     },
+     "text": {
+      "en": "Each time this model makes an attack with a belleros energy cannon that targets an INFANTRY unit, add 1 to the Hit roll. Each time this model makes an attack with a ferrumite cannon that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skorpius-Disintegrator",
+   "damaged": {
+    "name": {
+     "en": "1-4 wounds remaining"
+    },
+    "text": {
+     "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+    }
+   },
+   "wargearOptions": [
+    {
+     "text": "This model’s belleros energy cannon can be replaced with 1 ferrumite cannon.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Skorpius Disintegrator"
+   ],
+   "equipped": [
+    "This model is equipped with: belleros energy cannon; 3 cognis heavy stubbers; disruptor missile launcher; armoured hull."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "belleros-energy-cannon": 1,
+      "cognis-heavy-stubber": 3,
+      "disruptor-missile-launcher": 1,
+      "armoured-hull": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Belleros energy cannon",
+      "es": "Belleros energy cannon"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "belleros-energy-cannon",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "ferrumite-cannon"
+     ],
+     "packages": {
+      "ferrumite-cannon": [
+       {
+        "item": "ferrumite-cannon",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "ferrumite-cannon": "Ferrumite cannon",
+      "": "Belleros energy cannon"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "belleros-energy-cannon",
+    "cognis-heavy-stubber",
+    "disruptor-missile-launcher"
+   ]
+  },
+  {
+   "id": "sydonian-dragoons-with-radium-jezzails",
+   "name": {
+    "en": "Sydonian Dragoons With Radium Jezzails",
+    "es": "Sydonian Dragoons With Radium Jezzails"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "SMOKE",
+    "IMPERIUM",
+    "SKITARII",
+    "SYDONIAN",
+    "DRAGOONS WITH RADIUM JEZZAILS"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "7",
+     "Sv": "3+",
+     "W": "7",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "phosphor-serpenta",
+     "name": {
+      "en": "Phosphor serpenta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "radium-jezzail",
+     "name": {
+      "en": "Radium jezzail"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-2",
+       "D": "3",
+       "keywords": [
+        "Anti-infantry 3+",
+        "Heavy",
+        "Precision"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ironstrider-feet",
+     "name": {
+      "en": "Ironstrider feet"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "5",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Focused Hunters"
+     },
+     "text": {
+      "en": "At the start of the battle, select one unit from your opponent’s army. Until the end of the battle, each time a model in this unit makes an attack that targets that unit, you can re-roll the Hit roll."
+     }
+    },
+    {
+     "name": {
+      "en": "Broad Spectrum Data-tether"
+     },
+     "text": {
+      "en": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sydonian-Dragoons-With-Radium-Jezzails",
+   "composition": [
+    "1-3 Sydonian Dragoons"
+   ],
+   "equipped": [
+    "Every model is equipped with: phosphor serpenta; radium jezzail; Ironstrider feet."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "phosphor-serpenta": 1,
+      "radium-jezzail": 1,
+      "ironstrider-feet": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "phosphor-serpenta": 2,
+      "radium-jezzail": 2,
+      "ironstrider-feet": 2
+     }
+    },
+    {
+     "models": 3,
+     "loadout": {
+      "phosphor-serpenta": 3,
+      "radium-jezzail": 3,
+      "ironstrider-feet": 3
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "ironstrider-feet",
+    "phosphor-serpenta",
+    "radium-jezzail"
+   ]
+  },
+  {
+   "id": "sydonian-dragoons-with-taser-lances",
+   "name": {
+    "en": "Sydonian Dragoons With Taser Lances",
+    "es": "Sydonian Dragoons With Taser Lances"
+   },
+   "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "SMOKE",
+    "IMPERIUM",
+    "SKITARII",
+    "SYDONIAN",
+    "DRAGOONS WITH TASER LANCES"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "10\"",
+     "T": "7",
+     "Sv": "3+",
+     "W": "7",
+     "Ld": "7+",
+     "OC": "2",
+     "inv": "5+"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "phosphor-serpenta",
+     "name": {
+      "en": "Phosphor serpenta"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "18\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "5",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover",
+        "Pistol"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "taser-lance",
+     "name": {
+      "en": "Taser lance"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "4",
+       "skill": "4+",
+       "S": "7",
+       "AP": "-2",
+       "D": "2",
+       "keywords": [
+        "Anti-walker 2+",
+        "Lance",
+        "Sustained Hits 2"
+       ]
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Dynamic Efficiency"
+     },
+     "text": {
+      "en": "This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back, and you can re-roll Desperate Escape tests taken for models in this unit."
+     }
+    },
+    {
+     "name": {
+      "en": "Broad Spectrum Data-tether"
+     },
+     "text": {
+      "en": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise 1",
+    "Stealth"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Sydonian-Dragoons-With-Taser-Lances",
+   "composition": [
+    "1-3 Sydonian Dragoons"
+   ],
+   "equipped": [
+    "Every model is equipped with: phosphor serpenta; taser lance."
+   ],
+   "role": "vehicle",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "phosphor-serpenta": 1,
+      "taser-lance": 1
+     }
+    },
+    {
+     "models": 2,
+     "loadout": {
+      "phosphor-serpenta": 2,
+      "taser-lance": 2
+     }
+    },
+    {
+     "models": 3,
+     "loadout": {
+      "phosphor-serpenta": 3,
+      "taser-lance": 3
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "phosphor-serpenta",
+    "taser-lance"
+   ]
+  },
+  {
+   "id": "archaeopter-transvector",
+   "name": {
+    "en": "Archaeopter Transvector",
+    "es": "Archaeopter Transvector"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "FLY",
+    "IMPERIUM",
+    "SKITARII",
+    "ARCHAEOPTER TRANSVECTOR"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "14\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "7+",
+     "OC": "0"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "cognis-heavy-stubber-array",
+     "name": {
+      "en": "Cognis heavy stubber array"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "9",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 9",
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-hull",
+     "name": {
+      "en": "Armoured hull"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Aerial Deployment"
+     },
+     "text": {
+      "en": "In your first Movement phase, this unit can make an ingress move."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Deep Strike",
+    "Hover"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Archaeopter-Transvector",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Chaff Launcher"
+     },
+     "text": {
+      "en": "The bearer has the SMOKE keyword."
+     }
+    },
+    {
+     "name": {
+      "en": "Command Uplink"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s command uplink can be replaced with 1 chaff launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Archaeopter Transvector"
+   ],
+   "equipped": [
+    "This model is equipped with: cognis heavy stubber array; armoured hull; command uplink."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 11 SKITARII INFANTRY or TECH-PRIEST INFANTRY models. It cannot transport JUMP PACK, KATAPHRON or SYDONIAN SKATROS models."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "cognis-heavy-stubber-array": 1,
+      "armoured-hull": 1,
+      "gear:command-uplink": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Command uplink",
+      "es": "Command uplink"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "gear:command-uplink",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:chaff-launcher"
+     ],
+     "packages": {
+      "gear:chaff-launcher": [
+       {
+        "item": "gear:chaff-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "gear:chaff-launcher": "Chaff launcher",
+      "": "Command uplink"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "cognis-heavy-stubber-array",
+    "gear:command-uplink"
+   ]
+  },
+  {
+   "id": "skorpius-dunerider",
+   "name": {
+    "en": "Skorpius Dunerider",
+    "es": "Skorpius Dunerider"
+   },
+   "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "DEDICATED TRANSPORT",
+    "IMPERIUM",
+    "FRAME",
+    "SKITARII",
+    "SMOKE",
+    "SKORPIUS DUNERIDER"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "12\"",
+     "T": "9",
+     "Sv": "3+",
+     "W": "11",
+     "Ld": "7+",
+     "OC": "2"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "cognis-heavy-stubber-array",
+     "name": {
+      "en": "Cognis heavy stubber array"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "9",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 9",
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-hull",
+     "name": {
+      "en": "Armoured hull"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Broad Spectrum Data-tether"
+     },
+     "text": {
+      "en": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    },
+    {
+     "name": {
+      "en": "Fire Support"
+     },
+     "text": {
+      "en": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3",
+    "Firing Deck 2"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Skorpius-Dunerider",
+   "composition": [
+    "1 Skorpius Dunerider"
+   ],
+   "equipped": [
+    "This model is equipped with: cognis heavy stubber array; armoured hull."
+   ],
+   "transport": {
+    "en": "This model has a transport capacity of 12 ADEPTUS MECHANICUS INFANTRY models. It cannot transport JUMP PACK, KATAPHRON or SYDONIAN SKATROS models."
+   },
+   "role": "transport",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "cognis-heavy-stubber-array": 1,
+      "armoured-hull": 1
+     }
+    }
+   ],
+   "wargear": [],
+   "loadout": [
+    "armoured-hull",
+    "cognis-heavy-stubber-array"
+   ]
+  },
+  {
+   "id": "archaeopter-fusilave",
+   "name": {
+    "en": "Archaeopter Fusilave",
+    "es": "Archaeopter Fusilave"
+   },
+   "keywords": [
+    "VEHICLE",
+    "AIRCRAFT",
+    "FLY",
+    "IMPERIUM",
+    "SKITARII",
+    "ARCHAEOPTER FUSILAVE"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "-",
+     "T": "9",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "7+",
+     "OC": "-"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "cognis-heavy-stubber-array",
+     "name": {
+      "en": "Cognis heavy stubber array"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "9",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 9",
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-hull",
+     "name": {
+      "en": "Armoured hull"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Bomb Rack"
+     },
+     "text": {
+      "en": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Archaeopter-Fusilave",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Chaff Launcher"
+     },
+     "text": {
+      "en": "The bearer has the SMOKE keyword."
+     }
+    },
+    {
+     "name": {
+      "en": "Command Uplink"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s command uplink can be replaced with 1 chaff launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Archaeopter Fusilave"
+   ],
+   "equipped": [
+    "This model is equipped with: cognis heavy stubber array; armoured hull; command uplink."
+   ],
+   "role": "aircraft",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "cognis-heavy-stubber-array": 1,
+      "armoured-hull": 1,
+      "gear:command-uplink": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Command uplink",
+      "es": "Command uplink"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "gear:command-uplink",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:chaff-launcher"
+     ],
+     "packages": {
+      "gear:chaff-launcher": [
+       {
+        "item": "gear:chaff-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "gear:chaff-launcher": "Chaff launcher",
+      "": "Command uplink"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "cognis-heavy-stubber-array",
+    "gear:command-uplink"
+   ]
+  },
+  {
+   "id": "archaeopter-stratoraptor",
+   "name": {
+    "en": "Archaeopter Stratoraptor",
+    "es": "Archaeopter Stratoraptor"
+   },
+   "keywords": [
+    "VEHICLE",
+    "AIRCRAFT",
+    "FLY",
+    "IMPERIUM",
+    "SKITARII",
+    "ARCHAEOPTER STRATORAPTOR"
+   ],
+   "factionKeywords": [
+    "ADEPTUS MECHANICUS"
+   ],
+   "stats": [
+    {
+     "M": "-",
+     "T": "9",
+     "Sv": "3+",
+     "W": "10",
+     "Ld": "7+",
+     "OC": "-"
+    }
+   ],
+   "weapons": [
+    {
+     "id": "cognis-heavy-stubber",
+     "name": {
+      "en": "Cognis heavy stubber"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "4",
+       "AP": "0",
+       "D": "1",
+       "keywords": [
+        "Rapid Fire 3",
+        "Sustained Hits 1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "heavy-phosphor-blaster",
+     "name": {
+      "en": "Heavy phosphor blaster"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "36\"",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "-1",
+       "D": "2",
+       "keywords": [
+        "Ignores Cover"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "twin-cognis-lascannon",
+     "name": {
+      "en": "Twin cognis lascannon"
+     },
+     "type": "ranged",
+     "profiles": [
+      {
+       "range": "48\"",
+       "A": "1",
+       "skill": "4+",
+       "S": "12",
+       "AP": "-3",
+       "D": "D6+1",
+       "keywords": [
+        "Sustained Hits 1",
+        "Twin-linked"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "armoured-hull",
+     "name": {
+      "en": "Armoured hull"
+     },
+     "type": "melee",
+     "profiles": [
+      {
+       "range": "Melee",
+       "A": "3",
+       "skill": "4+",
+       "S": "6",
+       "AP": "0",
+       "D": "1",
+       "keywords": []
+      }
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": {
+      "en": "Strafing Run"
+     },
+     "text": {
+      "en": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can FLY), add 1 to the Hit roll."
+     }
+    }
+   ],
+   "core": [
+    "Deadly Demise D3"
+   ],
+   "factionAbilities": [
+    "Doctrina Imperatives"
+   ],
+   "source": "wahapedia.ru/wh40k11ed/factions/.../Archaeopter-Stratoraptor",
+   "wargearAbilities": [
+    {
+     "name": {
+      "en": "Chaff Launcher"
+     },
+     "text": {
+      "en": "The bearer has the SMOKE keyword."
+     }
+    },
+    {
+     "name": {
+      "en": "Command Uplink"
+     },
+     "text": {
+      "en": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+     }
+    }
+   ],
+   "wargearOptions": [
+    {
+     "text": "This model’s command uplink can be replaced with 1 chaff launcher.",
+     "choices": []
+    }
+   ],
+   "composition": [
+    "1 Archaeopter Stratoraptor"
+   ],
+   "equipped": [
+    "This model is equipped with: 2 cognis heavy stubbers; 2 heavy phosphor blasters; twin cognis lascannon; armoured hull; command uplink."
+   ],
+   "role": "aircraft",
+   "sizes": [
+    {
+     "models": 1,
+     "loadout": {
+      "cognis-heavy-stubber": 2,
+      "heavy-phosphor-blaster": 2,
+      "twin-cognis-lascannon": 1,
+      "armoured-hull": 1,
+      "gear:command-uplink": 1
+     }
+    }
+   ],
+   "wargear": [
+    {
+     "id": "o1",
+     "label": {
+      "en": "Command uplink",
+      "es": "Command uplink"
+     },
+     "type": "swap",
+     "replaces": [
+      {
+       "item": "gear:command-uplink",
+       "n": 1
+      }
+     ],
+     "choices": [
+      "",
+      "gear:chaff-launcher"
+     ],
+     "packages": {
+      "gear:chaff-launcher": [
+       {
+        "item": "gear:chaff-launcher",
+        "n": 1
+       }
+      ]
+     },
+     "labels": {
+      "gear:chaff-launcher": "Chaff launcher",
+      "": "Command uplink"
+     }
+    }
+   ],
+   "loadout": [
+    "armoured-hull",
+    "cognis-heavy-stubber",
+    "gear:command-uplink",
+    "heavy-phosphor-blaster",
+    "twin-cognis-lascannon"
+   ]
+  }
+ ]
+}

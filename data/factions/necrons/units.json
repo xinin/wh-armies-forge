@@ -4314,12 +4314,15 @@
     {
      "id": "o1",
      "label": {
-      "en": "add Particle caster",
-      "es": "añadir Particle caster"
+      "en": "add",
+      "es": "añadir"
      },
-     "type": "toggle",
+     "type": "pool",
      "replaces": [],
-     "gives": "particle-caster",
+     "choices": [
+      "particle-caster",
+      "transdimensional-beamer"
+     ],
      "packages": {
       "particle-caster": [
        {
@@ -5857,12 +5860,15 @@
     {
      "id": "o3",
      "label": {
-      "en": "add Nebuloscope",
-      "es": "añadir Nebuloscope"
+      "en": "add",
+      "es": "añadir"
      },
-     "type": "toggle",
+     "type": "pool",
      "replaces": [],
-     "gives": "gear:nebuloscope",
+     "choices": [
+      "gear:nebuloscope",
+      "gear:shadowloom"
+     ],
      "packages": {
       "gear:nebuloscope": [
        {
